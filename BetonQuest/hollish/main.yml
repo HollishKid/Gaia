@@ -1,0 +1,150 @@
+static:
+  '23:59': daily_mine_reset
+  '05:05': daily_mine_reset
+  '12:12': daily_mine_reset
+  '20:20': daily_mine_reset
+global_locations: sanctuary_door,biblio_door,castle_door
+npcs:
+  '120': aiguilleur_village
+  '126': aiguilleur_nains
+  '183': mageentry
+  '186': eruditterre
+  '187': eruditeau
+  '188': eruditair
+  '189': eruditfeu
+  '190': ardere
+  '209': orno
+  '210': bibliothecaire
+  '298': aiguilleur_sanctuary
+  '301': gardien
+  '327': moineair
+  '328': aang
+  '335': apprenti
+  '349': aiguilleur
+  '351': aiguilleur
+  '352': aiguilleur
+  '353': aiguilleur
+  '354': aiguilleur
+  '355': aiguilleur
+  '356': aiguilleur
+  '357': aiguilleur
+  '358': butler
+  '381': appa
+  '383': appa
+  '410': maitrejeux
+  '426': nauco
+  '427': norno
+  '428': casar
+effects:
+  Helix:
+    class: HelixEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 3
+  BigBang:
+    class: BigBangEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 30
+  Arc:
+    class: ArcEffect
+    iterations: 100
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 30
+  Atom:
+    class: AtomEffect
+    iterations: 7
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 2
+  Cone:
+    class: ConeEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5
+  Earth:
+    class: EarthEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5
+  Dna:
+    class: DnaEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5
+  Fountain:
+    class: FountainEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 10
+  Star:
+    class: StarEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5
+  Text:
+    class: TextEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5
+  Wave:
+    class: WaveEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5
+cancel: {}
+variables:
+  uhc11: Hollish
+  random1: '201343679852'
+  uhc12: vide
+  uhc13: vide
+  uhc14: vide
+  uhc15: vide
+  uhc21: vide
+  uhc22: vide
+  uhc23: vide
+  uhc24: vide
+  uhc25: vide
+  uhc31: vide
+  uhc32: vide
+  uhc33: vide
+  uhc34: vide
+  uhc35: vide
+  uhc41: vide
+  uhc42: vide
+  uhc43: vide
+  uhc44: vide
+  uhc45: vide
+journal_main_page: {}

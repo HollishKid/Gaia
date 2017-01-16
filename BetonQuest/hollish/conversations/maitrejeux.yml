@@ -1,0 +1,17 @@
+quester: Maître de Jeu
+first: welcome
+stop: 'false'
+#        #
+#   PNJ  #
+#        #
+NPC_options:
+  welcome:
+    text: Salut, &2%player% &a&o! \nTu es venu pour jouer ?
+    pointer: games_create
+#        #
+# Joueur #
+#        #
+player_options:
+  games_create:
+    text: Je voudrais voir les parties disponibles !
+    events: jeu_creator

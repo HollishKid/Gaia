@@ -1,0 +1,142 @@
+quester: 'Aiguilleur'
+first: hello
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  hello:
+    text: Bonjour &2%player% &a&o! En quoi puis-je vous aider ?
+    pointer: voyage,aide
+#
+# AIDE
+#
+  aide_rep:
+    text: Que voulez vous savoir ?
+    pointer: more,ticket,train
+  more_rep:
+    text: Depuis les gares locales, vous pourrez voyager uniquement à l'intérieur d'Athelas. Pour des destinations lointaines, addressez vous à la Gare Centrale d'Athelas.
+  ticket_rep:
+    text: Il vous suffit de me demander de voyager ! Votre ticket sera valable 15 minutes sur tout le réseau au sein d'Athelas. Parlez à un Aiguilleur avant de monter dans un train.
+  train_rep:
+    text: Il fonctionne avec un système mécanique complexe... légèrement aidé par un peu de magie bien dosé...
+#
+# DESTINATIONS
+#
+  voyage_rep:
+    text: Le prix du ticket valable pendant &d15 minutes &a&oest de &f¤ &d50&a&o. Où souhaiteriez vous aller ?
+    condition: '!train_ticket'
+    pointer: gare,guilde,porteo,chateau,porten
+  voyage_rep_ticket:
+    text: Votre billet est valable pendant encore &2%objective.ticket_timer.left%&a&o, où voulez vous aller ?
+    condition: train_ticket
+    pointer: gare1,guilde1,porteo1,chateau1,porten1
+#
+# New Ticket
+#
+  gare_pay:
+    text: Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !
+    condition: money_50
+    event: tag_train_remover,ticket_pay,depart_gare,gm_summon
+  guilde_pay:
+    text: Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !
+    condition: money_50
+    event: tag_train_remover,ticket_pay,depart_guilde,gm_summon
+  porteo_pay:
+    text: Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !
+    condition: money_50
+    event: tag_train_remover,ticket_pay,depart_porteo,gm_summon
+  chateau_pay:
+    text: Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !
+    condition: money_50
+    event: tag_train_remover,ticket_pay,depart_chateau,gm_summon
+  porten_pay:
+    text: Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !
+    condition: money_50
+    event: tag_train_remover,ticket_pay,depart_porten,gm_summon
+  no_fund:
+    text: Il semblerait que vous n'ayez pas assez d'argent pour payer le billet...
+    condition: '!money_50'
+#
+# Valid Ticket
+#
+  gare12:
+    text: Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !
+    event: tag_train_remover,depart_gare,gm_summon
+  guilde12:
+    text: Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !
+    event: tag_train_remover,depart_guilde,gm_summon
+  porteo12:
+    text: Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !
+    event: tag_train_remover,depart_porteo,gm_summon
+  chateau12:
+    text: Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !
+    event: tag_train_remover,depart_chateau,gm_summon
+  porten12:
+    text: Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !
+    event: tag_train_remover,depart_porten,gm_summon
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+#
+# AIDE
+#
+  aide:
+    text: Je voudrais un renseignement sur les trains.
+    pointer: aide_rep
+  more:
+    text: Comment avoir plus de destinations !
+    pointer: more_rep
+  ticket:
+    text: Comment acheter un ticket ?
+    pointer: ticket_rep
+  train:
+    text: Comment fonctionne votre train ?
+    pointer: train_rep
+#
+# DESTINATIONS
+#
+  voyage:
+    text: Je voudrais voyager en train.
+    pointer: voyage_rep,voyage_rep_ticket
+#
+# New Ticket
+#
+  gare:
+    text: A la Gare
+    pointer: gare_pay,no_fund
+  guilde:
+    text: A la Guilde
+    pointer: guilde_pay,no_fund
+  porteo:
+    text: A la Porte Ouest d'Athelas
+    pointer: porteo_pay,no_fund
+  chateau:
+    text: Au Château Royal d'Athelas
+    pointer: chateau_pay,no_fund
+  porten:
+    text: A la Porte Nord d'Athelas
+    pointer: porten_pay,no_fund
+#
+# Valid Ticket
+#
+  gare1:
+    text: A la Gare
+    pointer: gare12
+  guilde1:
+    text: A la Guilde
+    pointer: guilde12
+  porteo1:
+    text: A la porte Ouest d'Athelas
+    pointer: porteo12
+  chateau1:
+    text: Au Château Royal d'Athelas
+    pointer: chateau12
+  porten1:
+    text: A la porte Nord d'Athelas
+    pointer: porten12

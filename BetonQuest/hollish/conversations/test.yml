@@ -1,0 +1,16 @@
+quester: Ardere
+first: welcome
+stop: 'false'
+NPC_options:
+  welcome:
+    text: Que Gaïa vous guide, &2%player%&a&o!
+    pointer: merci,milo
+  milo_rep:
+    text: Hmmmm ... Ca fait longtemps que je n'ai pas entendu de Milo! Cette fiole est agitée en effet ...
+player_options:
+  merci:
+    text: Merci!
+  milo:
+    text: Milo m'a envoyé avec cette fiole agitée. Il m'a dit que je pourrais canaliser son énergie ici.
+    conditions: tag_milo_ardere
+    pointer: milo_rep

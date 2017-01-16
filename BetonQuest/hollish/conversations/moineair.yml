@@ -1,0 +1,42 @@
+quester: 'Moine Air'
+first: hello,again
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  hello:
+    text: Bonjour à vous &2%player% &a&o!
+    condition: '!tag_moine_air'
+    events: tag_moine_air
+    pointer: qui,quel,comment
+  again:
+    text: Vous revoilà &2%player% &a&o! Content de vous revoir ! Allez retrouver Aang désormais !
+    condition: tag_moine_air
+#
+  qui_rep:
+    text: Je suis un des habitants du Temple de l'Air, avec les autres moines, sous la direction de &2Aang&a&o. Vous devriez aller le voir, au coeur de l'Arbre Central. Je vous ouvre la voie à l'Est, empruntez les marches blanches !
+    event: air_mill_begin
+  quel_rep:
+    text: Vous êtes sur un des lopins de terre constituant le &dTemple de l'Air&a&o. Allez retrouver &2Aang&a&o, notre leader spirituel, au coeur de l'Arbre Central. Je vous ouvre la voie à l'Est, empruntez les marches blanches !
+    event: air_mill_begin
+  comment_rep:
+    text: C'est grâce à &2Aang&a&o, le plus puissant de notre communauté. Vous devriez aller le voir, au coeur de l'Arbre Central. Je vous ouvre la voie à l'Est, empruntez les marches blanches !
+    event: air_mill_begin
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  qui:
+    text: Qui êtes vous ?
+    pointer: qui_rep
+  quel:
+    text: Quel est cet endroit ?
+    pointer: quel_rep
+  comment:
+    text: Comment est-ce possible ?! Des Îles Flottantes ?!
+    pointer: comment_rep

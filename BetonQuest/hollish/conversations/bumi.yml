@@ -1,0 +1,23 @@
+quester: Bumi
+first: welcome
+stop: 'false'
+#                #
+
+#  Options NPC   #
+
+#                #
+NPC_options:
+  welcome:
+    text: Bonjour &2%player%&a&o! 
+    pointer: bonjour,apprentissage
+#                #
+
+# Options Joueur #
+
+#                #
+player_options:
+  bonjour:
+    text: Bonjour à vous Bumi!
+  apprentissage:
+    text: Pourriez vous m'enseigner des choses sur la Magie de l'Air?
+    conditions: airtemple_magic_learning
