@@ -1,0 +1,30 @@
+quester: 'Commandant'
+first: waiter
+stop: 'false'
+############
+#          #
+#   NPC    #
+#          #
+############
+NPC_options:
+#Joueurs sans la quête Transport auprès de l'Intendant
+  'waiter':
+    text: 'Oyé jeune voyageur!'
+    pointer: 'quand,ou'
+  'quand_rep':
+    text: 'Si tu perds ta patience en mer, tu es foutu mon jeune matelot!'
+  'ou_rep':
+    text: Quelque part en plein milieu du vaste océan ...
+############
+#          #
+#  JOUEUR  #
+#          #
+############
+player_options:
+#Autres
+  'quand':
+    text: 'Quand est-ce qu''on arrive?'
+    pointer: 'quand_rep'
+  'ou':
+    text: 'Où sommes nous?'
+    pointer: 'ou_rep'

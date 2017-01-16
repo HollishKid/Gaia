@@ -1,0 +1,140 @@
+quester: Ermite
+first: unknown,hello
+stop: 'false'
+############
+#          #
+#   NPC    #
+#          #
+############
+NPC_options:
+  unknown:
+    text: Même moi je n'ai jamais entendu parler de vous... Parlez à l'&2Intendant &a&o!
+    conditions: '!intendant_done'
+  hello:
+    text: Salutations, &2%player%&a&o.
+    condition: intendant_done
+    pointer: qui,pourquoi,jacopo,air_temple,tarte_have,air_temple_loser,voyage_air,back
+#
+#
+#
+  qui_rep:
+    text: Qui je suis importe peu...
+  pourquoi_rep:
+    text: La tranquilité, le son de l'eau... ma canne à pêche...
+#
+# JACOPO
+#
+  jacopo_rep:
+    text: Ah ! Il m'envoie toujours ses apprentis naviguer sur les abords de l'île. Je lui envoie un pigeon pour l'informer que vous avez survécu jusqu'ici !
+    event: journal_ermite_back,tag_ermite,tag_remove_jacopo_ermite,journal_jacopo_ermite_del
+#
+# Temple de l'Air - Tentative de convaincre Ermite
+#
+  air_temple_rep:
+    text: Ah ! Oui, je savais que si je lui disais, il allait s'y intéresser davantage, ce vieux curieux !
+    pointer: vieux,vu,amener
+  vieux_rep:
+    text: Oh oui jeune Aventurier ! Ce n'est pas comme s'il m'était étranger !
+    pointer: vieux_why
+  vu_rep:
+    text: Si vous ne me croyez pas, ne me dérangez pas à propos de ce sujet !
+  amener_rep:
+    text: Ce n'est pas comme si c'était la porte d'à côté! C'était un rude voyage...
+    pointer: rude,ou,please
+  vieux_why_rep:
+    text: Nos chemins se sont croisés à de multiples reprises...
+  rude_rep:
+    text: Cette partie de la mer est très agressive, beaucoup de tempêtes et de très grosses vagues...
+  ou_rep:
+    text: Je ne saurais pas exactement le dire, mais je pense que je saurais retrouver la direction, à peu près...
+    pointer: jetrouve,prov
+  please_rep:
+    text: Je ne suis vraiment pas convaincu de votre demande...
+  tarte:
+    text: Je pense que si vous amenez une &dTarte à la Citrouille &a&oje serais prêt à vous accompagner. J'ai tellement de mal à faire pousser du vert sur ce sable !
+    event: 'tag_ermite_tarteur,hollish.journal_erudit_airtemple_del,hollish.journal_ermite_tarte'
+  tarte_have_rep:
+    text: Il m'est impossible de refuser devant une telle tarte ! Merci beaucoup ! Attendez moi dans le bâteau devant la maison !
+    event: 'take_tarte_ermite,tag_tarteur_remove,tag_voyage_air,obj_ermite_bat,hollish.journal_ermite_tarte_del,hollish.journal_ermite_bateau,hollish.journal_erudit_airtemple_del'
+  air_temple_loser_rep:
+    text: Au vu de la tarte que vous m'avez faite, je ne peux pas vous refuser cela ! Attendez moi dans le bâteau !
+    event: obj_ermite_bat
+  voyage_air_rep:
+    text: J'arrive tout de suite, attendez moi dans le bâteau devant la maison !
+  back_rep:
+    text: J'ai été mis au courant, félicitations !
+############
+#          #
+#  JOUEUR  #
+#          #
+############
+player_options:
+  qui:
+    text: Qui êtes vous ?
+    pointer: qui_rep
+  pourquoi:
+    text: Pourquoi êtes vous ici, tout seul ?
+    pointer: pourquoi_rep
+#
+# JACOPO
+#
+  jacopo:
+    text: Jacopo m'envoie pour vous retrouver ici.
+    conditions: jacopo_ermite
+    pointer: jacopo_rep
+#
+# Temple de l'Air - Tentative de convaincre Ermite
+#
+  air_temple:
+    text: J'ai été envoyé par l'Erudit de l'Air. Il me dit que vous auriez vu une chute d'eau du ciel ?
+    conditions: 'erudit_air_student,!tag_air_temple_loser,!tag_voyage_air,!tag_aang'
+    pointer: air_temple_rep
+  vieux:
+    text: Vieux curieux? Vous parlez comme ça d'un Erudit ?
+    pointer: vieux_rep
+  vu:
+    text: Une chute d'eau qui tombe du ciel ? Vous vous moquez non ?!
+    pointer: vu_rep
+  amener:
+    text: Vous m'amenez pour voir cette chute d'eau ?
+    pointer: amener_rep
+  vieux_why:
+    text: Comment ça? Vous le connaissez ?
+    pointer: vieux_why_rep
+  rude:
+    text: Rude voyage? Comment ça ?
+    pointer: rude_rep
+  ou:
+    text: Où se trouve cette chute d'eau finalement ?
+    pointer: ou_rep
+  please:
+    text: Amenez moi à cette chute, s'il vous plaît !
+    pointer: please_rep
+  jetrouve:
+    text: Je trouverais, ne vous en faites pas !
+    pointer: please_rep
+  prov:
+    text: Et si je me propose de me charger des provisions pour le voyage ... Je ramènerais mon meilleur pain !
+    pointer: tarte
+  tarte_have:
+    text: J'ai une tarte à la citrouille! Vous êtes prêt à embarquer pour me montrer cette chute d'eau ?
+    conditions: ermite_tarte,tag_ermite_tarteur,!tag_aang
+    pointer: tarte_have_rep
+  voyage_air:
+    text: Vous m'emmenez voir cette chute alors ?
+    condition: tag_voyage_air,!tag_aang
+    pointer: voyage_air_rep
+#
+# Loser
+#
+  air_temple_loser:
+    text: Je n'ai pas réussi à atteindre le coeur du Temple de l'Air, pouvez vous m'y amener à nouveau ?
+    conditions: or_loser_or_backer,!tag_aang
+    pointer: air_temple_loser_rep
+#
+# Back
+#
+  back:
+    text: J'ai trouvé le Temple de l'Air !
+    conditions: tag_aang
+    pointer: back_rep

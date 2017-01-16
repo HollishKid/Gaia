@@ -1,0 +1,125 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dRéseaux'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 4
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+  
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&6Retour'
+  ID: stick
+  LORE:
+    - 'Retour au menu basique des Aventuriers'
+  POSITION-X: 8
+  POSITION-Y: 1
+  
+advids:
+  COMMAND: 'ad'
+  NAME: '&aSoutenez Gaïa !'
+  LORE:
+    - '&fGagnez &22 &fpoints de vote'
+    - '&fen donnant 30 secondes'
+    - '&fde votre temps !'
+    - ' '
+    - 'Utilisation illimitée'
+    - ' '
+    - '&fMerci de votre générosité !'
+  ID: book
+  ENCHANTMENT: 'fire aspect, 1'
+  POSITION-X: 5
+  POSITION-Y: 2
+
+site:
+  COMMAND: 'tell: &awww.gaia-minecraft.enjin.com'
+  NAME: '&6Site Officiel'
+  ID: map
+  LORE:
+    - 'Affiche un lien direct vers'
+    - 'le Site dans le tchat.'
+  POSITION-X: 1
+  POSITION-Y: 3
+
+discord:
+  COMMAND: 'tell: &a https://discord.gg/012juEmGJcE3dXOzv'
+  NAME: '&aDiscord Officiel'
+  LORE:
+    - 'Affiche un lien direct vers'
+    - 'le Discord dans le tchat.'
+  ID: '25'
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+votegui:
+  COMMAND: 'thisistheopenvotemenucommand'
+  NAME: '&aVotez pour Gaïa'
+  LORE:
+    - '&fGagnez &21 &fpoint de vote'
+    - '&fen votant pour le serveur'
+    - ' '
+    - 'Utilisation limitée'
+    - ' '
+    - '&fMerci de votre soutien !'
+  ID: book
+  POSITION-X: 5
+  POSITION-Y: 3
+  
+facebook:
+  COMMAND: 'tell: &2FaceBook &f-&a https://www.facebook.com/Ga%C3%8Fa-Serveur-Minecraft-Mmorpg-1183732731697812/'
+  NAME: '&9Page FaceBook'
+  ID: '35:11'
+  LORE:
+  - 'Affiche un lien direct vers'
+  - 'la page FaceBook dans le tchat.'
+  POSITION-X: 7
+  POSITION-Y: 3
+
+twitter:
+  COMMAND: 'tell: &2Twitter &f-&a https://twitter.com/Gaia_MMORPG'
+  NAME: '&bTwitter'
+  ID: '35:3'
+  LORE:
+  - 'Affiche un lien direct vers'
+  - 'le Twitter dans le tchat.'
+  POSITION-X: 9
+  POSITION-Y: 3
+ 

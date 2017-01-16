@@ -1,0 +1,39 @@
+quester: 'Ranger Snow'
+unknown: '...'
+first: 'inconnu,access_south'
+final_events: ''
+stop: 'false'
+NPC_options:
+#Joueurs sans la quête Transport auprès de l'Intendant
+  'inconnu':
+    text: 'Je ne vous ai jamais vu dans ces contrées.'
+    conditions: '!access_south'
+    events: ''
+    pointer: ''
+  'access_south':
+    text: 'Ah, c''est Moncul qui vous envoi!'
+    conditions: 'access_south'
+    events: ''
+    pointer: 'oui,non'
+  'rep_oui':
+    text: 'En avant Guingamp!'
+    conditions: ''
+    events: 'winter_is_coming'
+    pointer: ''
+  'rep_non':
+    text: 'Petite bite!'
+    conditions: ''
+    events: ''
+    pointer: ''
+#Joueurs autorisés à voyager, arbre de possibilté des destinations (arbre à finir!)
+player_options:
+  'oui':
+    text: 'J''suis chaud patate moi!'
+    conditions: ''
+    events: ''
+    pointer: 'rep_oui'
+  'non':
+    text: 'fleme...'
+    conditions: ''
+    events: ''
+    pointer: 'rep_non'

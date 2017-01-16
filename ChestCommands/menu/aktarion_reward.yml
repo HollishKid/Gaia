@@ -1,0 +1,49 @@
+menu-settings:
+  name: '&2Récompenses'
+  rows: 1
+  command: ''
+  auto-refresh: 10
+  open-action: 'sound: block note pling'
+  open-with-item: ''
+korutsu_sword:
+  COMMAND: 'console: bq event {player} Mysteria.akt_rew1'
+  NAME: '&4Epée enflamée de &cKorutsu'
+  LORE:
+  - '&712 à 19 de dégâts'
+  - '&8&oArme naissante des flammes'
+  - '&a&oEn souvenir de son amie'
+  - ''
+  - '&7&oRareté : &9Rare'
+  ID: 276
+  POSITION-X: 3
+  POSITION-Y: 1
+  KEEP_OPEN: true
+
+ardenko_axe:
+  COMMAND: 'console: bq event {player} Mysteria.akt_rew2'
+  NAME: '&bHache foudroyante d''&3Ardenko'
+  LORE:
+  - '&714 à 21 de dégâts (Main principale)'
+  - '&77 à 9 de dégâts (Main secondaire)'
+  - '&8&oCette hache n''est pas'
+  - '&8&oun outil de destruction'
+  - ''
+  - '&7&oRareté : &9Rare'
+  ID: 279
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP_OPEN: true
+  
+imiko_bow:
+  COMMAND: 'console: bq event {player} Mysteria.akt_rew3'
+  NAME: '&9Arc celeste d''&bImiko'
+  LORE:
+  - '&7Dégâts d''origine'
+  - '&8&oCet arc est une union'
+  - '&8&ode la terre et du ciel'
+  - ''
+  - '&7&oRareté : &9Rare'
+  ID: 261
+  POSITION-X: 7
+  POSITION-Y: 1
+  KEEP_OPEN: true

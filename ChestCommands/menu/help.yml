@@ -1,0 +1,376 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dCompte & Aide'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 5
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 5
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  #open-with-item:
+  #  id: wool:1
+  #  left-click: false
+  #  right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+menu-close:
+  NAME: '&6&lFermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+menu-retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&6&lRetour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal'
+  POSITION-X: 8
+  POSITION-Y: 1
+  
+account:
+  NAME: '&2&lGestion de votre Compte'
+  LORE:
+    - 'Dans cette colonne'
+    - 'vous trouverez les options'
+    - 'de gestion de votre compte.'
+    - ' '
+    - '&cPensez à ajouter une adresse'
+    - '&cmail pour pouvoir récupérer'
+    - '&cvotre compte en cas de perte de'
+    - '&cvotre mot de passe !'
+  ID: 'wool:5, 1'
+  POSITION-X: 1
+  POSITION-Y: 1 
+  KEEP-OPEN: true
+  
+addrecovery:
+  COMMAND: 'thisistheaddrecoverycommand'
+  NAME: '&a&lAjouter une adresse mail'
+  LORE:
+    - 'En cas de perte de Mot de Passe'
+    - 'vous pourrez vous envoyer un mail'
+    - 'avec un nouveau mot de passe.'
+    - ' '
+    - '&aPour l''ajouter correctement'
+    - '&acliquez ici et tapez:'
+    - '&2[votreadressemail] [votreadressemail]'
+    - ' '
+    - '&cSi votre adresse est trop longue pour'
+    - '&cla pancarte, continuez sur la ligne'
+    - '&csuivante ! Pensez à bien ajouter'
+    - '&cun espace entre les adresses !'
+  ID: map
+  POSITION-X: 1
+  POSITION-Y: 3 
+
+changerecovery:
+  COMMAND: 'thisisthechangerecoverycommand'
+  NAME: '&a&lChanger votre adresse mail'
+  LORE:
+    - 'En cas de perte de Mot de Passe'
+    - 'vous pourrez vous envoyer un mail'
+    - 'avec un nouveau mot de passe.'
+    - ' '
+    - '&aPour le modifier correctement'
+    - '&acliquez ici et tapez:'
+    - '&2[ancienne_adressemail]'
+    - '&2[nouvelle_adressemail]'
+    - ' '
+    - '&cSi votre adresse est trop longue pour'
+    - '&cla pancarte, continuez sur la ligne'
+    - '&csuivante ! Pensez à bien ajouter'
+    - '&cun espace entre les adresses !'
+  ID: map
+  POSITION-X: 1
+  POSITION-Y: 4  
+  
+sendrecovery:
+  COMMAND: 'thisisthesendrecoverycommand'
+  NAME: '&a&lEnvoyer un nouveau Mot de Passe'
+  LORE:
+    - 'Si vous avez ajouté une adresse mail'
+    - 'vous pouvez vous envoyer un mail'
+    - 'avec un nouveau mot de passe.'
+    - ' '
+    - '&aPour vous l''envoyer correctement'
+    - '&acliquez ici et tapez:'
+    - '&2[votre_adresse_mail]'
+    - ' '
+    - '&cSi votre adresse est trop longue pour'
+    - '&cla pancarte, continuez sur la ligne'
+    - '&csuivante !'
+    - ' '
+    - '&aUtilisez la commande'
+    - '&2/email recover [votre_adresse_mail]'
+    - '&asi vous n''avez pas accès au Menu'
+    - '(lorsque vous n''êtes pas encore identifié)'
+  ID: map
+  POSITION-X: 1
+  POSITION-Y: 5
+  
+changepassword:
+  COMMAND: 'thisisthepasswordchangercommand'
+  NAME: '&2&lChanger de Mot de Passe'
+  LORE:
+    - 'Modifiez votre mot de passe en tapant'
+    - 'sur la pancarte qui apparaît:'
+    - ' '
+    - 'votre mot de passe actuel (première ligne)'
+    - 'nouveau mot de passe       (deuxième ligne)'
+    - ' '
+    - '&4ATTENTION :'
+    - '&cvous devez PRÉCÉDER votre nouveau'
+    - '&cmot de passe par un ESPACE !'
+  ID: map
+  POSITION-X: 1
+  POSITION-Y: 2  
+  
+options:
+  NAME: '&a&lOptions de Jeu'
+  LORE:
+    - 'Dans cette colonne'
+    - 'Aide avec le Jeu'
+  ID: 'wool:13, 1'
+  POSITION-X: 3
+  POSITION-Y: 1 
+  KEEP-OPEN: true
+
+lag:
+  COMMAND: 'thisisthelagcommand'
+  NAME: '&a&lLags'
+  LORE:
+    - 'Si vous êtes victimes de lag'
+    - 'Cliquez ici pour afficher une aide réduite'
+    - 'dans votre tchat.'
+    - ' '
+    - 'Une aide complète est disponible:'
+    - 'http://gaia-minecraft.enjin.com/guide'
+  ID: map
+  POSITION-X: 3
+  POSITION-Y: 4
+
+dyn:
+  COMMAND: 'tell: &dCarte Dynamique: &awww.gaia-minecraft.enjin.com/gallery'
+  NAME: '&a&lCarte Dynamique'
+  ID: map
+  LORE:
+    - 'Affiche un lien direct vers'
+    - 'la Carte Dynamique dans le tchat.'
+  POSITION-X: 3
+  POSITION-Y: 2
+
+site:
+  COMMAND: 'tell: &dGuide Complet: &awww.gaia-minecraft.enjin.com/guide'
+  NAME: '&a&lGuide Complet'
+  ID: map
+  LORE:
+    - 'Affiche un lien direct vers'
+    - 'le Guide complet dans le tchat.'
+  POSITION-X: 3
+  POSITION-Y: 3
+
+jeu:
+  NAME: '&c&lModes de Jeu'
+  LORE:
+    - 'Dans cette colonne'
+    - 'Aide avec les Modes de Jeu'
+  ID: 'wool:6, 2'
+  POSITION-X: 4
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+survie:
+  COMMAND: 'tell: &dPour une aide complète avec la Survie, rendez vous sur: &a http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Continent_Est'
+  NAME: '&c&lSurvie'
+  ID: map
+  LORE:
+    - 'Affiche une aide au Continent'
+    - 'de l''Est et à la survie'
+    - 'dans votre tchat.'
+  POSITION-X: 4
+  POSITION-Y: 2
+
+maison:
+  COMMAND: 'tell: &dPour une aide complète avec la location de maisons, rendez vous sur: http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Economie_et_Locations'
+  NAME: '&c&lMaisons'
+  ID: map
+  LORE:
+    - 'Affiche l''aide pour les'
+    - 'maisons dans votre tchat.'
+  POSITION-X: 4
+  POSITION-Y: 3
+
+quetes:
+  COMMAND: 'tell: &dPour une aide complète sur les Quêtes, rendez vous sur: http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Quetes'
+  NAME: '&c&lQuêtes'
+  ID: map
+  LORE:
+    - 'Affiche l''aide pour les'
+    - 'quêtes dans votre tchat.'
+  POSITION-X: 4
+  POSITION-Y: 4 
+
+autres:
+  COMMAND: 'journal'
+  NAME: '&4&lAutres formes d''Aide'
+  LORE:
+    - 'Dans cette colonne'
+    - 'Autres formes d''Aide'
+  ID: 'wool:14, 3'
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+staff:
+  COMMAND: 'staff'
+  NAME: '&a&lStaff en Ligne'
+  LORE:
+    - 'Permet d''afficher toutes'
+    - 'les personnes habilitées à'
+    - 'vous répondre.'
+  ID: map
+  POSITION-X: 5
+  POSITION-Y: 2
+  
+direct:
+  COMMAND: 'thisisthehelpopcommand'
+  NAME: '&4&lDemander de l''aide au Staff'
+  LORE:
+    - 'J''ai lu tous les guides'
+    - 'qui me sont proposés,'
+    - 'mais rien n''y fait.'
+    - 'J''ai besoin d''une aide directe.'
+    - ' '
+    - '&cTapez votre demande sur la'
+    - '&cpancarte qui apparaît en'
+    - '&ccliquant ici.'
+  ID: map
+  POSITION-X: 5
+  POSITION-Y: 3
+
+forum:
+  COMMAND: 'tell: &dPour poster un ticket cliquez sur le lien suivant:&a http://gaia-minecraft.enjin.com/forum/m/37263426/viewforum/6946642'
+  NAME: '&4&lForum'
+  ID: map
+  LORE:
+    - 'Je veux poser ma'
+    - 'question sur le forum.'
+    - ' '
+    - '&cCliquez ici pour demander'
+    - '&cde l''aide sur le'
+    - '&cForum Officiel.'
+  POSITION-X: 5
+  POSITION-Y: 4
+  
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 6
+  KEEP-OPEN: true

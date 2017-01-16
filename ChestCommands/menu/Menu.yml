@@ -1,0 +1,453 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dMenu'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: 'menu; m'
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+
+spawn:
+  COMMAND: 'spawn'
+  NAME: '&eSpawn'
+  LORE:
+    - 'Vous amène au Spawn'
+    - ' '
+    - 'Utilisation: /spawn'
+  ID: torch
+  POSITION-X: 4
+  POSITION-Y: 1  
+  
+sethome:
+  COMMAND: 'sethome'
+  NAME: '&eDéfinir Maison'
+  LORE:
+    - 'Définit un emplacement auquel'
+    - 'vous pourrez vous téléporter'
+    - 'en cliquant sur l''icône, "Maison"'
+  ID: redstone_torch
+  POSITION-X: 6
+  POSITION-Y: 1
+  
+home:
+  COMMAND: 'home'
+  NAME: '&eMaison'
+  LORE:
+    - 'Vous amène à l''endroit où'
+    - 'vous avez défini votre maison'
+  ID: bed
+  POSITION-X: 5
+  POSITION-Y: 1
+  
+competences:
+  COMMAND: 'open: competences.yml'
+  NAME: '&6Compétences'
+  LORE:
+    - 'Gestionnaire des Compétences'
+    - ' '
+    - 'Utilisation: &l/competences'
+    - '(alias: /compet, /c)'
+  ID: diamond axe
+  POSITION-X: 5
+  POSITION-Y: 3
+
+journal:
+  COMMAND: 'journal'
+  NAME: '&6Journal de Progression'
+  LORE:
+    - 'Vous redonne ou'
+    - 'actualise le Journal.'
+    - ' '
+    - '&lDocument Important'
+    - '&là Consulter!'
+    - ' '
+    - 'Utilisation: &l/journal'
+  ID: book
+  POSITION-X: 6
+  POSITION-Y: 3
+  
+sac:
+  COMMAND: 'thisisthesaccommand'
+  NAME: '&6Sac à Dos'
+  ID: chest
+  LORE:
+    - 'Ouvre votre Sac à Dos'
+    - 'Ce Sac contient vos Objets'
+    - 'de Quête si vous mourrez'
+    - ' '
+    - 'Vous pouvez placer vous même'
+    - 'vos Objets de Quête dedans'
+    - 'pour libérer de la place'
+    - 'dans votre inventaire'
+    - ' '
+    - 'Utilisation: &l/sac'
+  POSITION-X: 4
+  POSITION-Y: 3
+  
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+
+argent:
+  COMMAND: 'balance'
+  NAME: '&6Argent'
+  ID: gold_ingot
+  LORE:
+    - 'Affiche votre argent'
+    - 'en poche dans le tchat'
+  POSITION-X: 1
+  POSITION-Y: 1
+
+
+dyn:
+  COMMAND: 'tell: &awww.gaia-minecraft.enjin.com/gallery'
+  NAME: '&6Carte Dynamique'
+  ID: map
+  LORE:
+    - 'Affiche un lien direct vers'
+    - 'la Carte Dynamique dans le tchat'
+  POSITION-X: 1
+  POSITION-Y: 2
+
+site:
+  COMMAND: 'tell: &awww.gaia-minecraft.enjin.com/guide'
+  NAME: '&6Guide Complet'
+  ID: map
+  LORE:
+    - 'Affiche un lien direct vers'
+    - 'le Guide dans le tchat'
+  POSITION-X: 1
+  POSITION-Y: 3
+
+votegui:
+  COMMAND: 'open: network.yml'
+  NAME: '&aRéseaux de Gaïa'
+  LORE:
+    - 'Cliquez ici pour accéder'
+    - 'au Menu des réseaux de Gaïa'
+    - ' '
+    - '&lSite Officiel'
+    - '&lDiscord'
+    - '&lVotes'
+    - '&lTwitter'
+    - '&lFacebook'
+  ID: book
+  ENCHANTMENT: 'fire aspect, 1'
+  POSITION-X: 5
+  POSITION-Y: 6
+
+craft_custom:
+  COMMAND: 'open: craft_custom.yml'
+  NAME: '&6&oCrafts Spéciaux'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&cAttention :'
+  - '&oVous ne devez &lpas'
+  - '&odéjà avoir l''objet que'
+  - '&ovous craftez dans votre'
+  - '&oinventaire; &lmême'
+  - '&osous une autre forme !'
+  - ' '
+  - '&oUtilisation :&l/crafts'
+  ID: 58
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true  
+
+help:
+  COMMAND: 'open: help.yml'
+  NAME: '&cCOMPTE & AIDE'
+  ID: map
+  LORE:
+    - 'Modifiez vos options de Compte'
+    - 'Ou si vous avez besoin d''aide'
+  POSITION-X: 1
+  POSITION-Y: 6
+  
+admin:
+  COMMAND: 'tell: &aBienvenue dans le menu administrateur; open: admin.yml'
+  NAME: '&8Administrateurs - Développeurs'
+  LORE:
+    - 'Panel de Commandes et de Téléports'
+  ID: iron bar
+  POSITION-X: 9
+  POSITION-Y: 3
+  VIEW-PERMISSION: menu.admin
+  PERMISSION-MESSAGE: 'Ne tentez pas d''accéder à ce Menu sans permission!'
+  
+jarvis:
+  COMMAND: 'tell: &aBienvenue Hollish!; open: jarvis.yml'
+  NAME: '&6J.A.R.V.I.S.'
+  LORE:
+    - 'Just A Rather Very Intelligent System'
+  ID: nether star
+  POSITION-X: 9
+  POSITION-Y: 4
+  VIEW-PERMISSION: menu.jarvis
+  PERMISSION-MESSAGE: 'Ne tentez pas d''accéder à ce Menu sans permission!'
+  
+music:
+  COMMAND: 'open: music.yml'
+  NAME: '&6Lecteur de Musique'
+  LORE:
+    - 'Affichez le Menu Musique'
+    - 'qui permet de jouer la musique'
+    - 'en fonction de l''endroit où vous êtes'
+  ID: jukebox
+  POSITION-X: 9
+  POSITION-Y: 6
+
+party:
+  COMMAND: 'thisisthepartycommand'
+  NAME: '&aGroupe'
+  LORE:
+    - 'Affiche le Menu Groupe'
+    - '&opermet de constituer un Groupe'
+    - '&oavec d''autres aventuriers.'
+    - '&o(partage d''XP, d''objets, ...)'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 4
+  
+  
+location:
+  COMMAND: 'thisisthelocationcommand'
+  NAME: '&aLocations'
+  LORE:
+    - 'Affiche le Menu Locations'
+    - '&opermet de gérer votre location'
+    - '&odans la ville d''Athelas'
+  ID: paper
+  POSITION-X: 5
+  POSITION-Y: 4
+  
+villes:
+  COMMAND: 'open: villes.yml'
+  NAME: '&aVilles'
+  LORE:
+    - 'Affiche le Menu Villes'
+    - '&opermet de créer / gérer'
+    - '&oune ville.'
+    - ' '
+    - '&oUtilisable uniquement sur'
+    - '&ole Continent Est !'
+  ID: paper
+  POSITION-X: 6
+  POSITION-Y: 4
+  
+pets:
+  COMMAND: 'thisisthepetscommand'
+  NAME: '&aCompagnons & Créatures'
+  LORE:
+    - 'Possibilité d''avoir des'
+    - 'Compagnons qui vous suivent.'
+    - ' '
+    - '&oRequiert des points de votes.'
+    - '&oPour en obtenir, rendez-vous'
+    - '&odans la section &aRéseau de Gaïa&o.'
+  ID: 'skull:5'
+  POSITION-X: 7
+  POSITION-Y: 4
+
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker13:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker23:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker23:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+ 
+blocker23:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker14:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker24:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker34:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker44:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker54:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker64:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker55:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker65:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true

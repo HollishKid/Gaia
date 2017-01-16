@@ -1,0 +1,20 @@
+casque1_archer:
+  Id: 298
+  Data: 0
+  Display: '&6Casque 1er Âge'
+  Lore:
+  - '&6Ce casque fut porté par les'
+  - '&6premiers habitants de Gaïa.'
+  - ' '
+  - 'Rareté: &aLégendaire'
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 4
+      Health: 5
+      KnockbackResistance: 10%
+  Options:
+    Unbreakable: true
+    Color: 255,125,0
+  Enchantments:
+  - PROTECTION_PROJECTILE:5

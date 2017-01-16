@@ -1,0 +1,64 @@
+quester: Sorcière
+first: hello
+stop: 'false'
+#Options du NPC
+NPC_options:
+  hello:
+    text: Vous voulez voir le monde &2%player%&a&o?
+    pointer: oui,non,qui
+  oui_rep:
+    text: A n'importe quel &dAltar &a&osur le Continent de l'Est. Soit aléatoirement (&f¤ 100&a&o), soit je vous laisse choisir (&f¤ 250&a&o)!
+    pointer: random,choisir
+  qui_rep:
+    text: Disons que j'ai découvert une façon de voyager rapidement...
+    pointer: oui
+  random_rep:
+    text: Très bien, ça vous coutera &f¤ 100
+    condition: money_100
+    pointer: go,non
+  choisir_rep:
+    text: Très bien, ça vous coutera &f¤ 250
+    condition: money_250
+    pointer: go_choice1,go_choice2,go_choice3,go_choice4,go_choice5,go_choice6,go_choice7,non
+  no_fund:
+    text: Vous essayez de m'arnaquer?! Vous n'avez pas assez de sous!!
+#Options du joueur
+player_options:
+  oui:
+    text: Où m'amenez vous?
+    pointer: oui_rep
+  non:
+    text: Euh ... Non merci.
+  qui:
+    text: Qui êtes vous?
+    pointer: qui_rep
+  random:
+    text: Téléportez moi Aléatoirement!
+    pointer: random_rep,no_fund
+  choisir:
+    text: Je veux choisir l'endroit!
+    pointer: choisir_rep,no_fund
+  go:
+    text: Voici &f¤ 100
+    event: altar_go,money_100
+  go_choice1:
+    text: Je veux aller en &d(1002;65;6223)
+    event: altar1_go,money_250
+  go_choice2:
+    text: Je veux aller en &d(686;66;4119)
+    event: altar2_go,money_250  
+  go_choice3:
+    text: Je veux aller en &d(-1060;85;3303)
+    event: altar3_go,money_250  
+  go_choice4:
+    text: Je veux aller en &d(310;79;1198)
+    event: altar4_go,money_250  
+  go_choice5:
+    text: Je veux aller en &d(-2594;64;1264)
+    event: altar5_go,money_250  
+  go_choice6:
+    text: Je veux aller en &d(-4152;64;460)
+    event: altar6_go,money_250  
+  go_choice7:
+    text: Je veux aller en &d(-3430;64;-1701)
+    event: altar7_go,money_250

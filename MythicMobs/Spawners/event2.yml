@@ -1,0 +1,24 @@
+event2:
+  MobName: revarcher
+  World: Gaia
+  X: -7033
+  Y: 65
+  Z: 3226
+  Radius: 3
+  UseTimer: true
+  MaxMobs: 5
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 7
+  CooldownTimer: 0
+  Warmup: 7
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 15
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 4

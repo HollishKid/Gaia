@@ -1,0 +1,25 @@
+quester: Lauvel
+first: hello
+stop: 'false'
+#Options du NPC
+NPC_options:
+  hello:
+    text: Bonjour &2%player%&a&o, je suis &dLauvel&a&o, Créateur sur Gaïa.
+    pointer: role,citation,sens
+  role_rep: 
+    text: Je suis dans le codage, ou pour faire court dans la gestion des PNJ. \Je leur donne des missions pour vous crée une histoire passionnante ! 
+  citation_rep:
+    text: Hmm, je vais y réfléchir !
+  sens_rep:
+    text: Le sens de la vie ? alors là, je ne sais pas puisque je ne connais même pas le sens de la mienne. x)
+#Options du joueur
+player_options:
+  role:
+    text: Quel est ton rôle sur Gaïa ?
+    pointer: role_rep
+  citation:
+    text: Quelle est ta citation préférée ?
+    pointer: citation_rep
+  sens:
+    text: Quel est le Sens de la Vie ?
+    pointer: sens_rep

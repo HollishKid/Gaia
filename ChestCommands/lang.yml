@@ -1,0 +1,11 @@
+open-menu-others: '&aOuverture de "{menu}" pour {player}.'
+menu-not-found: '&dCe menu n''a pas été trouvé, contactez un Admin.'
+no-exp: '&dIl vous faut {levels} Expérience pour faire ça!'
+no-required-item: '&dIl vous faut &e{amount}x {material} &d(ID: {id}, data value:
+  {datavalue}) pour faire ça!'
+no-open-permission: '&dVous n''avez pas accès à ce menu.'
+open-menu: '&aOuverture de "{menu}".'
+any: any
+no-money: '&a&oVous n''avez pas &2{money} &a&oen poche.'
+default-no-icon-permission: '&dVous n''avez pas la permission pour cette icône.'
+no-points: '&dIl vous faut {points} points pour ça.'

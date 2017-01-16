@@ -1,0 +1,91 @@
+quester: Paul
+first: normal,occupe1,occupe2,occupe3,occupe_inprogress1,occupe_inprogress2,occupe_inprogress3
+stop: 'false'
+################
+#Options du NPC#
+################
+NPC_options:
+  normal:
+    text: Bonjour! Vous êtes à la recherche d'un bon pain ? Il vous coûtera seulement &f¤&2100 &a&o!
+    condition: timer_paul
+    pointer: pain,bonjour
+  pain_rep: 
+    text: Tenez, profitez en bien !
+    condition: money_100
+    event: give_bread_paul,money_p100
+  pain_rep_funds: 
+    text: Vous n'avez pas assez d'argent ...
+    condition: '!money_100'
+#
+  occupe_inprogress1:
+    text: J'espère que vous n'avez pas oublié de porter le pain au Chef du Château ?!
+    condition: '!timer_paul,tag_pain_paul'
+  occupe_inprogress2:
+    text: J'espère que vous n'avez pas oublié mon &d10 blé&a&o ?!
+    condition: '!timer_paul,paul_ble'
+    pointer: aide2_bis
+  occupe_inprogress3:
+    text: J'espère que vous êtes entrain de faire les &d3 pains&a&o ?!
+    condition: '!timer_paul,pain_urgent'
+    pointer: aide3_bis
+#
+  occupe1:
+    text: Je n'ai pas le temps, je dois livrer du pain au château !
+    condition: 'paul1,!timer_paul,!tag_pain_paul'
+    event: paul_cleaner
+    pointer: aide1,non
+  livraison_rep:
+    text: Ca m'arrange! Il faut amener ces 10 pains au Chef du Château, dans la cuisine.
+    event: paul_occupe1
+  occupe2:
+    text: Je suis trop occupé, j'ai besoin d'aller chercher le blé pour faire ma pâte !
+    condition: 'paul2,!timer_paul,!paul_ble'
+    event: paul_cleaner
+    pointer: aide2,aide2_bis,non
+  ressources_rep:
+    text: C'est gentil! Apportez moi &d10 blé &a&oalors !
+    event: paul_occupe2
+  aide2_bis_rep:
+    text: Merci beaucoup! Ca devrait me faire quelques pains !
+    event: paul_ressources_done
+  occupe3:
+    text: Je ne peux pas vous parler. J'ai du pain à faire en urgence !
+    condition: 'paul3,!timer_paul,!pain_urgent'
+    event: paul_cleaner
+    pointer: aide3,non
+  pain_rep:
+    text: Merci ! Il faut que les pains soient chauds, donc faites &d3 pains. \n&a&oUtilisez ma table de craft derrière si vous voulez.
+    event: paul_occupe3
+  aide3_bis_rep:
+    text: Merci beaucoup, je suis sauvé!
+    event: pain_urgent_done
+###################
+#Options du joueur#
+###################
+player_options:
+  bonjour:
+    text: Bonjour à vous! Et ... non merci !
+  pain:
+    text: Absolument!
+    pointer: pain_rep,pain_rep_funds
+#
+#
+  aide1:
+    text: Je peux y aller si vous voulez !
+    pointer: livraison_rep
+  aide2:
+    text: Je peux aller le chercher si vous voulez !
+    pointer: ressources_rep
+  aide2_bis:
+    text: J'ai le blé qu'il vous faut !
+    condition: paul_ble,paul_ble_have
+    pointer: aide2_bis_rep
+  aide3:
+    text: Je peux m'en occuper si vous voulez !
+    pointer: pain_rep
+  aide3_bis:
+    text: J'ai les pains qu'il vous faut !
+    condition: pain_urgent_done,pain_urgent_have
+    pointer: aide3_bis_rep
+  non:
+    text: Je reviendrais plus tard.

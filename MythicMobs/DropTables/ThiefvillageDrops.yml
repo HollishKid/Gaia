@@ -1,0 +1,12 @@
+banditDrops:
+  Drops:
+  - money 7-12 0.8
+  - stuff_leatherfeet 1 0.1
+  - 371 0-1 1
+  - exp 1-5
+moinevoleurDrops:
+  Drops:
+  - money 5-10 0.9
+  - stuff_leatherhead 1 0.08
+  - 371 0-3 1
+  - exp 1-5

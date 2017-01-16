@@ -1,0 +1,25 @@
+quester: Cubto_Mania
+first: hello
+stop: 'false'
+#Options du NPC
+NPC_options:
+  hello:
+    text: Bonjour &2%player%&a&o, je suis &dCubto_Mania&a&o, &2Modérateur en &4Chef &a&osur Gaïa.
+    pointer: role,citation,sens
+  role_rep: 
+    text: Je gère la modération sur Gaïa et je me fais un plaisir d'aider les joueurs.
+  citation_rep:
+    text: Qui ne tente rien n'a rien.
+  sens_rep:
+    text: Il y a toujours Espoir.
+#Options du joueur
+player_options:
+  role:
+    text: Quel est ton rôle sur Gaïa ?
+    pointer: role_rep
+  citation:
+    text: Quelle est ta citation préférée ?
+    pointer: citation_rep
+  sens:
+    text: Quel est le Sens de la Vie ?
+    pointer: sens_rep

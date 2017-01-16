@@ -1,0 +1,24 @@
+apigs:
+  MobName: apig
+  World: Gaia
+  X: -6968
+  Y: 65
+  Z: 3026
+  Radius: 3
+  UseTimer: true
+  MaxMobs: 5
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 7
+  CooldownTimer: 0
+  Warmup: 120
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 20
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 4

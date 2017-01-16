@@ -1,0 +1,40 @@
+quester: Madame
+first: first,second
+stop: 'false'
+################
+#Options du NPC#
+################
+NPC_options:
+  first:
+    text: Bonjour...
+    condition: '!madame_betteraves'
+    pointer: paulette,bonjour
+  second:
+    text: Re-bonjour ...
+    condition: madame_betteraves
+    pointer: quoi,betteraves
+  paulette_rep:
+    text: Ah! Je meurs de faim, nourrissez moi ! Amenez moi une &dsoupe de betteraves &a&o!
+    event: madame_betteraves
+  quoi_rep:
+    text: Une &dsoupe de betteraves &a&ovoyons ! Ce n'est pas compliqué !!
+  merci:
+    text: Il était temps, merci à vous ! Vous pouvez disposer !
+###################
+#Options du joueur#
+###################
+player_options:
+  bonjour:
+    text: Bonjour à vous ! Et ... aurevoir !
+  paulette:
+    text: Paulette m'envoie pour savoir ce que vous souhaiteriez manger...
+    condition: madame
+    pointer: paulette_rep
+  quoi:
+    text: C'est quoi exactement que désiriez ?
+    pointer: quoi_rep
+  betteraves:
+    text: Voici une soupe de betteraves pour Madame !
+    condition: madame_betteraves_have
+    event: betteraves_done
+    pointer: merci

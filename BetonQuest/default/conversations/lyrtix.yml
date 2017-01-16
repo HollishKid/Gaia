@@ -1,0 +1,25 @@
+quester: Lyrtix
+first: hello
+stop: 'false'
+#Options du NPC
+NPC_options:
+  hello:
+    text: Bonjour &2%player%&a&o, je suis &dLyrtix&a&o, Modérateur / Builder sur Gaïa.
+    pointer: role,citation,sens
+  role_rep: 
+    text: Je construits, je modère et je fais des pentacles.
+  citation_rep:
+    text: L'Humanité ne peut rien obtenir sans donner quelque chose en retour. Pour chaque chose reçue, il faut en abandonner une autre de même valeur.
+  sens_rep:
+    text: La Forge.
+#Options du joueur
+player_options:
+  role:
+    text: Quel est ton rôle sur Gaïa ?
+    pointer: role_rep
+  citation:
+    text: Quelle est ta citation préférée ?
+    pointer: citation_rep
+  sens:
+    text: Quel est le Sens de la Vie ?
+    pointer: sens_rep

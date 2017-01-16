@@ -1,0 +1,589 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dBoutique Charon'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 9
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 15
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+  
+menu-close:
+  NAME: '&6Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+skin_basic:
+  COMMAND: 'console: skinsrestorer set {player} {player}'
+  NAME: '&cRevenir à votre Skin'
+  ID: torch
+  LORE:
+    - 'Enlève votre skin actuel'
+    - 'et remet votre skin de base.'
+    - ' '
+    - '&aPrix: &fGratuit'
+  POSITION-X: 1
+  POSITION-Y: 1
+
+skin_link:
+  COMMAND: 'tell: &a http://mcskinsearch.com/browse'
+  NAME: '&6Navigateur de Skins'
+  ID: book
+  LORE:
+    - 'Affiche un lien vers le navigateur de'
+    - 'skins en Ligne qui permet de choisir'
+    - 'le skin de votre choix.'
+    - ' '
+    - 'Utilisez ensuite le bouton "Skin Personnalisé"'
+  POSITION-X: 4
+  POSITION-Y: 1
+
+
+#skin_perso:
+#  COMMAND: 'tell: &2Tapez &fskin: [nom de votre skin] &2dans le Tchat. Ensuite validez votre choix dans la boutique de &dCharon &2avec le bouton "&fValider Skin&2" (la torche en haut); console: bq event {player} default.skin_choisir'
+#  NAME: '&aCliquez ICI pour choisir votre Skin Personnalisé'
+#  ID: wool:13
+#  LORE:
+#    - 'Vous permet de choisir votre skin à partir'
+#    - 'du nom du skin. Utilisez le lien qui est donné'
+#    - 'par le bouquin sur la gauche pour choisir.'
+#    - ' '
+#    - 'Tapez ensuite ''&askin: [nom de votre skin]&f'''
+#    - 'dans le tchat. Puis validez votre choix avec le'
+#    - 'bouton "Valider Skin" (torche) à droite'
+#  POSITION-X: 5
+#  POSITION-Y: 1
+
+#skin_valider:
+#  COMMAND: 'console: bq event {player} default.skin_valider'
+#  NAME: '&2Valider Skin'
+#  ID: torch
+#  LORE:
+#    - 'Cliquer ici pour valider votre skin'
+#    - 'Choisi auparavant avec le bouton Laine Verte'
+#    - ' '
+#    - '&aPrix: &c3 Points de réputation'
+#    - '        &c10 Points de Vote'
+#    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+#    - '&fVous ne pouvez réclamer aucun remboursement à Charon'
+#    - '&fni au Staff de Gaïa.                          Merci.'
+#    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+#  POSITION-X: 6
+#  POSITION-Y: 1
+
+skin1:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/DreamWish'
+  NAME: '&6Skin Femme 1'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 1
+  POSITION-Y: 2
+  
+skin12:
+  COMMAND: 'console: bq event {player} default.skin_dreamwish'
+  NAME: '&2Acheter Skin DreamWish'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &aDreamWish'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 1
+  POSITION-Y: 3
+  
+skin2:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/Olyvia_'
+  NAME: '&6Skin Femme 2'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 2
+  POSITION-Y: 2
+  
+skin22:
+  COMMAND: 'console: bq event {player} default.skin_Olyvia_'
+  NAME: '&2Acheter Skin Olyvia_'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &aOlyvia_'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 2
+  POSITION-Y: 3
+
+skin3:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/kathythecat101'
+  NAME: '&6Skin Femme 3'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 3
+  POSITION-Y: 2
+  
+skin32:
+  COMMAND: 'console: bq event {player} default.skin_kathythecat101'
+  NAME: '&2Acheter Skin kathythecat101'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &akathythecat101'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+skin4:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/barrowsx'
+  NAME: '&6Skin Femme 4'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 4
+  POSITION-Y: 2
+  
+skin42:
+  COMMAND: 'console: bq event {player} default.skin_barrowsx'
+  NAME: '&2Acheter Skin barrowsx'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &abarrowsx'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 4
+  POSITION-Y: 3
+
+skin5:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/typical_savage'
+  NAME: '&6Skin Femme 5'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 5
+  POSITION-Y: 2
+  
+skin52:
+  COMMAND: 'console: bq event {player} default.skin_typical_savage'
+  NAME: '&2Acheter Skin typical_savage'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &atypical_savage'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 5
+  POSITION-Y: 3
+  
+skin6:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/Destati'
+  NAME: '&6Skin Femme 6'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 6
+  POSITION-Y: 2
+  
+skin62:
+  COMMAND: 'console: bq event {player} default.skin_Destati'
+  NAME: '&2Acheter Skin Destati'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &aDestati'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 6
+  POSITION-Y: 3
+  
+skin7:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/whoisyourmommy'
+  NAME: '&6Skin Femme 7'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 7
+  POSITION-Y: 2
+  
+skin72:
+  COMMAND: 'console: bq event {player} default.skin_whoisyourmommy'
+  NAME: '&2Acheter Skin whoisyourmommy'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &awhoisyourmommy'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 7
+  POSITION-Y: 3
+  
+skin8:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/MandiHikari'
+  NAME: '&6Skin Femme 8'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 8
+  POSITION-Y: 2
+  
+skin82:
+  COMMAND: 'console: bq event {player} default.skin_MandiHikari'
+  NAME: '&2Acheter Skin MandiHikari'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &aMandiHikari'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 8
+  POSITION-Y: 3
+  
+skin9:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/AncientRelyk'
+  NAME: '&6Skin Femme 9'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 9
+  POSITION-Y: 2
+  
+skin92:
+  COMMAND: 'console: bq event {player} default.skin_AncientRelyk'
+  NAME: '&2Acheter Skin AncientRelyk'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &aAncientRelyk'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 9
+  POSITION-Y: 3
+  
+skin10:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/Watanuki'
+  NAME: '&6Skin Homme 1'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 1
+  POSITION-Y: 5
+  
+skin101:
+  COMMAND: 'console: bq event {player} default.skin_Watanuki'
+  NAME: '&2Acheter Skin Watanuki'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &aWatanuki'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 1
+  POSITION-Y: 6
+  
+skin11:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/definitivDanny'
+  NAME: '&6Skin Homme 2'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 2
+  POSITION-Y: 5
+  
+skin111:
+  COMMAND: 'console: bq event {player} default.skin_definitivDanny'
+  NAME: '&2Acheter Skin definitivDanny'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &adefinitivDanny'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 2
+  POSITION-Y: 6
+  
+skin13:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/Oguzhan_TR'
+  NAME: '&6Skin Homme 3'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 3
+  POSITION-Y: 5
+  
+skin131:
+  COMMAND: 'console: bq event {player} default.skin_Oguzhan_TR'
+  NAME: '&2Acheter Skin Oguzhan_TR'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &aOguzhan_TR'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 3
+  POSITION-Y: 6
+  
+skin14:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/Gravn'
+  NAME: '&6Skin Homme 4'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 4
+  POSITION-Y: 5
+  
+skin141:
+  COMMAND: 'console: bq event {player} default.skin_Gravn'
+  NAME: '&2Acheter Skin Gravn'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &aGravn'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 4
+  POSITION-Y: 6
+  
+skin15:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/_K_O_T_'
+  NAME: '&6Skin Homme 5'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 5
+  POSITION-Y: 5
+  
+skin151:
+  COMMAND: 'console: bq event {player} default.skin__K_O_T_'
+  NAME: '&2Acheter Skin _K_O_T_'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &a_K_O_T_'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 5
+  POSITION-Y: 6
+  
+skin16:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/jeb_'
+  NAME: '&6Skin Homme 6'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 6
+  POSITION-Y: 5
+  
+skin161:
+  COMMAND: 'console: bq event {player} default.skin_jeb_'
+  NAME: '&2Acheter Skin jeb_'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &ajeb_'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 6
+  POSITION-Y: 6
+  
+skin17:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/SirFilesOG'
+  NAME: '&6Skin Homme 7'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 7
+  POSITION-Y: 5
+  
+skin171:
+  COMMAND: 'console: bq event {player} default.skin_SirFilesOG'
+  NAME: '&2Acheter Skin SirFilesOG'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &aSirFilesOG'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 7
+  POSITION-Y: 6
+  
+skin18:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/HellCatcher'
+  NAME: '&6Skin Homme 8'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 8
+  POSITION-Y: 5
+  
+skin181:
+  COMMAND: 'console: bq event {player} default.skin_HellCatcher'
+  NAME: '&2Acheter Skin HellCatcher'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &aHellCatcher'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 8
+  POSITION-Y: 6
+  
+skin19:
+  COMMAND: 'tell: &dLien:&a http://mcskinsearch.com/skin/_A7md'
+  NAME: '&6Skin Homme 9'
+  ID: wool:1
+  LORE:
+    - 'Cliquer ici pour afficher un lien qui permet'
+    - '          de visualiser le Skin.'
+  POSITION-X: 9
+  POSITION-Y: 5
+  
+skin191:
+  COMMAND: 'console: bq event {player} default.skin__A7md'
+  NAME: '&2Acheter Skin _A7md'
+  ID: wool:13
+  LORE:
+    - 'Cliquer ici pour acheter le skin'
+    - 'Nom: &a_A7md'
+    - ' '
+    - '&aPrix: &c2 Points de réputation'
+    - '        &c5 Points de Vote'
+    - '&4ATTENTION&f: Certains skins ne fonctionnent pas!'
+    - '&fVous ne pouvez réclamer aucun remboursement'
+    - '&fà Charon ni au Staff de Gaïa.            Merci.'
+    - '&c(Achat sousmis à l''acceptation de ces conditions.)'
+  POSITION-X: 9
+  POSITION-Y: 6

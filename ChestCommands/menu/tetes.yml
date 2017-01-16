@@ -1,0 +1,499 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dTêtes'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: 'testingtheheads'
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  #open-with-item:
+  #  id: wool:1
+  #  left-click: false
+  #  right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+
+Furby:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Furby"},SkullOwner:{Id:"742b729b-a919-4bc8-948d-fa2afdbc7067",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2JmZjUyNzU2Mjg4OWUxNmE1NDRmMmY5OTZmYmEzZDk1NDFkMGFhY2Y4MTQ2MmJmZmM5ZmI1Y2FkOGFlZGQ1In19fQ=="}]}}}'
+  NAME: '&eFurby'
+  LORE:
+    - 'Furbyyyyyyyyyyy'
+  ID: egg
+  POSITION-X: 1
+  POSITION-Y: 1  
+  
+Dragon_oriental:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Chinese Dragon"},SkullOwner:{Id:"d59d6bbe-4182-496e-95b0-bcd78c9dd084",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTE2NDFkMDM4ZWIzODYyYjFlMDIyYzVlMDU4OGQ5NjM2NmRhMWM5NDRlZTVlNmVlMTNlMGY1ZGQ3YjQyN2IifX19"}]}}}'
+  NAME: '&eDragon oriental'
+  LORE:
+    - 'GROOOOOARG'
+  ID: dragon_egg
+  POSITION-X: 2
+  POSITION-Y: 1
+  
+Ghast:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Ghast"},SkullOwner:{Id:"807f287f-6499-4e93-a887-0a298ab3091f",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGI2YTcyMTM4ZDY5ZmJiZDJmZWEzZmEyNTFjYWJkODcxNTJlNGYxYzk3ZTVmOTg2YmY2ODU1NzFkYjNjYzAifX19"}]}}}'
+  NAME: '&eGhast'
+  LORE:
+    - 'Ce visage'
+    - 'Vous remplie de tristesse'
+  ID: ghast_tear
+  POSITION-X: 3
+  POSITION-Y: 1
+  
+Blaze: 
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Blaze"},SkullOwner:{Id:"7ceb88b2-7f5f-4399-abb9-7068251baa9d",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjc4ZWYyZTRjZjJjNDFhMmQxNGJmZGU5Y2FmZjEwMjE5ZjViMWJmNWIzNWE0OWViNTFjNjQ2Nzg4MmNiNWYwIn19fQ=="}]}}}'
+  NAME: '&eBlaze'
+  LORE:
+    -'Buuuuuurn'
+  ID: blaze_powder
+  POSITION-X: 4  
+  POSITION-Y: 1  
+
+Cave_spider:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Cave Spider"},SkullOwner:{Id:"39173a7a-c957-4ec1-ac1a-43e5a64983df",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDE2NDVkZmQ3N2QwOTkyMzEwN2IzNDk2ZTk0ZWViNWMzMDMyOWY5N2VmYzk2ZWQ3NmUyMjZlOTgyMjQifX19"}]}}}'  
+  NAME: '&eAraignée des cavernes'
+  LORE:
+    - 'Le poisooooon'
+  ID: spider_eye
+  POSITION-X: 5
+  POSITION-Y: 1
+  
+Cochon_zombie:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Pigzombie"},SkullOwner:{Id:"6540c046-d6ea-4aff-9766-32a54ebe6958",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzRlOWM2ZTk4NTgyZmZkOGZmOGZlYjMzMjJjZDE4NDljNDNmYjE2YjE1OGFiYjExY2E3YjQyZWRhNzc0M2ViIn19fQ=="}]}}}'    
+  NAME: '&eCochon zombie'
+  LORE:
+    - 'Mon dieu il est laid'
+  ID: mycelium
+  POSITION-X: 6
+  POSITION-Y: 1
+  
+Enderman:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Enderman"},SkullOwner:{Id:"0de98464-1274-4dd6-bba8-370efa5d41a8",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2E1OWJiMGE3YTMyOTY1YjNkOTBkOGVhZmE4OTlkMTgzNWY0MjQ1MDllYWRkNGU2YjcwOWFkYTUwYjljZiJ9fX0="}]}}}'
+  NAME: '&eEnderman'
+  LORE:
+    - 'crshshshshcrshcrsh'
+  ID: paper
+  POSITION-X: 7
+  POSITION-Y: 1
+  
+Slime_de_magma:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Lava Slime"},SkullOwner:{Id:"96aced64-5b85-4b99-b825-53cd7a9f9726",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzg5NTdkNTAyM2M5MzdjNGM0MWFhMjQxMmQ0MzQxMGJkYTIzY2Y3OWE5ZjZhYjM2Yjc2ZmVmMmQ3YzQyOSJ9fX0="}]}}}'
+  NAME: '&eSlime de magma'
+  LORE:
+    - 'Plosh Plosh Plosh'
+  ID: magma_cream
+  POSITION-X: 8
+  POSITION-Y: 1
+  
+Slime:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Slime"},SkullOwner:{Id:"9aca565d-105c-4e8c-81fc-740545cb74b2",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTZhZDIwZmMyZDU3OWJlMjUwZDNkYjY1OWM4MzJkYTJiNDc4YTczYTY5OGI3ZWExMGQxOGM5MTYyZTRkOWI1In19fQ=="}]}}}'
+  NAME: '&eSlime'
+  LORE:
+    - 'Je rêve de'
+    - 'Gluants à la place'
+    - 'Des slimes'
+  ID: slime_ball
+  POSITION-X: 9
+  POSITION-Y: 1
+
+Araignée:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Spider"},SkullOwner:{Id:"8bdb71d0-4724-48b2-9344-e79480424798",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q1NDE1NDFkYWFmZjUwODk2Y2QyNThiZGJkZDRjZjgwYzNiYTgxNjczNTcyNjA3OGJmZTM5MzkyN2U1N2YxIn19fQ=="}]}}}'  
+  NAME: '&eAraignée'
+  LORE:
+    - 'AAAAAAAH'
+    - 'Désolé je suis arachophobe...'
+  ID: fermented_spider_eye
+  POSITION-X: 1
+  POSITION-Y: 2
+  
+Poulet:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Chicken"},SkullOwner:{Id:"7d3a8ace-e045-4eba-ab71-71dbf525daf1",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTYzODQ2OWE1OTljZWVmNzIwNzUzNzYwMzI0OGE5YWIxMWZmNTkxZmQzNzhiZWE0NzM1YjM0NmE3ZmFlODkzIn19fQ=="}]}}}'
+  NAME: '&ePoulet'
+  LORE:
+    - 'EL POLLO LOCO'
+  ID: cooked_chicken
+  POSITION-X: 2
+  POSITION-Y: 2
+
+Cochon:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Pig"},SkullOwner:{Id:"e1e1c2e4-1ed2-473d-bde2-3ec718535399",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0="}]}}}'  
+  NAME: '&eCochon'
+  LORE:
+    - 'Groink'
+  ID: cooked_porkchop
+  POSITION-X: 3
+  POSITION-Y: 2
+
+Sheep:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Sheep"},SkullOwner:{Id:"fa234925-9dbe-4b8f-a544-7c70fb6b6ac5",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMxZjljY2M2YjNlMzJlY2YxM2I4YTExYWMyOWNkMzNkMThjOTVmYzczZGI4YTY2YzVkNjU3Y2NiOGJlNzAifX19"}]}}}'
+  NAME: '&eMouton'
+  LORE:
+    - 'meeeh'
+  ID: cooked_mutton
+  POSITION-X: 4
+  POSITION-Y: 2
+  
+Cow:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Cow"},SkullOwner:{Id:"97ddf3b3-9dbe-4a3b-8a0f-1b19ddeac0bd",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19"}]}}}'
+  NAME: '&eVache'
+  LORE:
+    - 'Meeeuuuuh'
+  ID: cooked_beef
+  POSITION-X: 5
+  POSITION-Y: 2
+  
+Squid:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Squid"},SkullOwner:{Id:"f95d9504-ea2b-4b89-b2d0-d400654a7010",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMDE0MzNiZTI0MjM2NmFmMTI2ZGE0MzRiODczNWRmMWViNWIzY2IyY2VkZTM5MTQ1OTc0ZTljNDgzNjA3YmFjIn19fQ=="}]}}}'
+  NAME: '&ePOULPE !'
+  LORE:
+    - 'Splatoon <3'
+  ID: water_bucket
+  POSITION-X: 6
+  POSITION-Y: 2
+  
+Villager:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Villager"},SkullOwner:{Id:"0a9e8efb-9191-4c81-80f5-e27ca5433156",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODIyZDhlNzUxYzhmMmZkNGM4OTQyYzQ0YmRiMmY1Y2E0ZDhhZThlNTc1ZWQzZWIzNGMxOGE4NmU5M2IifX19"}]}}}'
+  NAME: '&eVillageois'
+  LORE:
+    - 'Hin Han Hen hin'
+  ID: emerald
+  POSITION-X: 7
+  POSITION-Y: 2
+  
+Golem:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Golem"},SkullOwner:{Id:"7cb6e9a5-994f-40d5-9bfc-4ba5d796d21e",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODkwOTFkNzllYTBmNTllZjdlZjk0ZDdiYmE2ZTVmMTdmMmY3ZDQ1NzJjNDRmOTBmNzZjNDgxOWE3MTQifX19"}]}}}'
+  NAME: '&eGolem de fer'
+  LORE:
+    - '<3 <3 <3'
+  ID: redstone_block
+  POSITION-X: 8
+  POSITION-Y: 2
+
+Herobrine:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Herobrine"},SkullOwner:{Id:"d0b15454-36fa-43e4-a247-f882bb9fe288",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOThiN2NhM2M3ZDMxNGE2MWFiZWQ4ZmMxOGQ3OTdmYzMwYjZlZmM4NDQ1NDI1YzRlMjUwOTk3ZTUyZTZjYiJ9fX0="}]}}}'
+  NAME: '&eHerobrine'
+  LORE:
+    - '&4Removed Herobrine'
+  ID: nether_wart
+  POSITION-X: 9
+  POSITION-Y: 2
+  
+Mushroom_cow:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Mushroom Cow"},SkullOwner:{Id:"e206ac29-ae69-475b-909a-fb523d894336",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDBiYzYxYjk3NTdhN2I4M2UwM2NkMjUwN2EyMTU3OTEzYzJjZjAxNmU3YzA5NmE0ZDZjZjFmZTFiOGRiIn19fQ=="}]}}}'
+  NAME: '&eVache champignon'
+  LORE:
+    - 'La soupe fait grandir'
+  ID: red_mushroom
+  POSITION-X: 1
+  POSITION-Y: 3
+  
+Ocelot:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Ocelot"},SkullOwner:{Id:"664dd492-3fcd-443b-9e61-4c7ebd9e4e10",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTY1N2NkNWMyOTg5ZmY5NzU3MGZlYzRkZGNkYzY5MjZhNjhhMzM5MzI1MGMxYmUxZjBiMTE0YTFkYjEifX19"}]}}}'
+  NAME: '&eOcelot'
+  LORE:
+    - 'bip bip pfiouuu'
+  ID: waterlily
+  POSITION-X: 2
+  POSITION-Y: 3
+  
+Horse:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Horse Head"},SkullOwner:{Id:"39023647-b293-4555-8b0f-b55157417a1a",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjE5MDI4OTgzMDg3MzBjNDc0NzI5OWNiNWE1ZGE5YzI1ODM4YjFkMDU5ZmU0NmZjMzY4OTZmZWU2NjI3MjkifX19"}]}}}'
+  NAME: '&eCheval'
+  LORE:
+    - 'Le cheval,le cheval,'
+    - 'Le cheval c''est génial'
+  ID: leather
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+Guardian:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Guardian"},SkullOwner:{Id:"2e9c0a67-92b3-4949-9be1-faf12318ee88",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTMyYzI0NTI0YzgyYWIzYjNlNTdjMjA1MmM1MzNmMTNkZDhjMGJlYjhiZGQwNjM2OWJiMjU1NGRhODZjMTIzIn19fQ=="}]}}}'
+  NAME: '&eGuardian'
+  LORE:
+    - 'splosh ?'
+  ID: prismarine_crystals
+  POSITION-X: 4
+  POSITION-Y: 3
+
+Monkey:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Monkey"},SkullOwner:{Id:"bf766742-b48b-4235-8fae-f608dc49a761",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQyOWNhOWM2YTJlOGJiMTYyNzU3ZjU0M2FkYjYyZWY1OGY2NjVkNGUwZGZjY2U1ZGFmNThkMjhmZDlkZmIifX19"}]}}}'  
+  NAME: '&eSinge'
+  LORE:
+    - 'Luffy ?'
+    - 'Donkey kong ?'
+    - 'Non juste un singe'
+  ID: pumpkin
+  POSITION-X: 5
+  POSITION-Y: 3
+
+Polar bear:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Polar Bear"},SkullOwner:{Id:"87324464-1700-468f-8333-e7779ec8c21e",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDQ2ZDIzZjA0ODQ2MzY5ZmEyYTM3MDJjMTBmNzU5MTAxYWY3YmZlODQxOTk2NjQyOTUzM2NkODFhMTFkMmIifX19"}]}}}'
+  NAME: '&eOurs polaire'
+  LORE:
+    - ' Kawaiiiiii'
+  ID: snowball
+  POSITION-X: 6
+  POSITION-Y: 3
+
+Penguin:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Penguin"},SkullOwner:{Id:"53c01f77-c4bd-458e-8fd8-70f7bb33dd5c",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDNjNTdmYWNiYjNhNGRiN2ZkNTViNWMwZGM3ZDE5YzE5Y2IwODEzYzc0OGNjYzk3MTBjNzE0NzI3NTUxZjViOSJ9fX0="}]}}}'
+  NAME: '&ePingouin'
+  LORE:
+    - 'Quand il marche'
+    - 'Il est mignon'
+  ID: snow
+  POSITION-X: 7
+  POSITION-Y: 3
+  
+Walrus:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Walrus"},SkullOwner:{Id:"a185ff1a-f32e-47e0-be61-5a612f130f33",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdiYWVkYWY5YWQ5NTQ3NGViMWJlNTg5MjQ0NDVkZmM3N2JiZGMyNTJjYzFjODE2NDRjZjcxNTRjNDQxIn19fQ=="}]}}}'
+  NAME: '&eMorse'
+  LORE:
+    - 'Non'
+    - 'Il ne parle pas en morse'
+  ID: packed_ice
+  POSITION-X: 8
+  POSITION-Y: 3
+
+Tiger:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Tiger"},SkullOwner:{Id:"44f40896-48d1-42cb-bfb6-8edace2241b1",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjZiOTZiYmM4YWQ5YmFlMGUyNTRkMzVmZGZiMWRiNDhlODIyZWQ5N2NmNWY3MzlkM2U5NTQ1ZGQ2Y2UifX19"}]}}}'
+  NAME: '&eTigre'
+  LORE:
+    - 'Furtif'
+    - 'Mortel'
+    - 'Ce n''est certainement pas vous'
+  ID: vine
+  POSITION-X: 9
+  POSITION-Y: 3
+  
+Panda:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Panda"},SkullOwner:{Id:"00d08322-5eb2-44be-b9a2-7921a9d54f97",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDE4OGM5ODBhYWNmYTk0Y2YzMzA4ODUxMmIxYjk1MTdiYTgyNmIxNTRkNGNhZmMyNjJhZmY2OTc3YmU4YSJ9fX0="}]}}}'
+  NAME: '&ePanda'
+  LORE:
+    - 'Never say no'
+    - 'to panda'
+  ID: chorus_plant
+  POSITION-X: 1
+  POSITION-Y: 4
+
+Cat:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Cat"},SkullOwner:{Id:"feb547f7-43e0-4ec4-a437-f0d57b11f4bf",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjVjOTVjMWYyYTUwYjM3ZDYxMjZmNzZlNDYxOGE0Y2M3OTI3OWE4Yzg0NDM3MjA1NGRjM2IyMmVhMWNlMjcifX19"}]}}}'
+  NAME: '&eChat'
+  LORE:
+    - 'Meow in english'
+    - 'Miaou en français'
+  ID: cake
+  POSITION-X: 2
+  POSITION-Y: 4
+
+Angry_Wolf: 
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Angry Wolf"},SkullOwner:{Id:"9a7c65fb-309f-4c1a-96a1-4522c197b7fe",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTk1Y2JiNGY3NWVhODc2MTdmMmY3MTNjNmQ0OWRhYzMyMDliYTFiZDRiOTM2OTY1NGIxNDU5ZWExNTMxNyJ9fX0="}]}}}'
+  NAME: '&eLoup en colère'
+  LORE:
+    - 'Aouuuuu'
+  ID: bone
+  POSITION-X: 3
+  POSITION-Y: 4
+  
+Rabbit:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Rabbit"},SkullOwner:{Id:"15908cee-0f9c-45ca-bf9c-fad9b05edded",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGM3YTMxN2VjNWMxZWQ3Nzg4Zjg5ZTdmMWE2YWYzZDJlZWI5MmQxZTk4NzljMDUzNDNjNTdmOWQ4NjNkZTEzMCJ9fX0="}]}}}'
+  NAME: '&eLapin'
+  LORE:
+    - 'Quoi d''neuf docteur'
+  ID: rabbit_foot
+  POSITION-X: 4
+  POSITION-Y: 4
+  
+Koala: 
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Koala"},SkullOwner:{Id:"10100199-d136-490d-9139-6ee644c219c9",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2EzNWViMTBiOTRlODg4NDI3ZmIyM2M3ODMwODI2NThjZWI4MWYzY2Y1ZDBhYWQyNWQ3ZDQxYTE5NGIyNiJ9fX0="}]}}}'
+  NAME: '&eKoala'
+  LORE:
+    - 'Comment ne pas craquer'
+  ID: chorus_fruit
+  POSITION-X: 5
+  POSITION-Y: 4
+
+Village_Head:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Villager head"},SkullOwner:{Id:"8b4c32c4-1280-444d-8e76-587ad9538baf",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzdlNTc1Y2ZmMTEwMTRhNWFjYWRmMzNlZTQ4ODU2OGNjODllNDMxOTM1MTFjYTc0ZWZjODNlZWJiNzZmNCJ9fX0="}]}}}'
+  NAME: '&eVillageois décapité'
+  LORE:
+    - 'Non...monsieur han...'
+    - 'Je n''ai pas pu te dire'
+    - 'que je t''aimais'
+  ID: redstone
+  POSITION-X: 6
+  POSITION-Y: 4
+
+Puffer_fish:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Pufferfish"},SkullOwner:{Id:"b4630012-0e65-4a3d-bfd6-5024b782ab69",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTk1NTkzODg5OTNmZTc4MmY2N2JkNThkOThjNGRmNTZiY2Q0MzBlZGNiMmY2NmVmNTc3N2E3M2MyN2RlMyJ9fX0="}]}}}'
+  NAME: '&ePoissons-globes'
+  LORE:
+    - '&4Attention'
+    - 'ça pique'
+  ID: gunpowder
+  POSITION-X: 7
+  POSITION-Y: 4
+  
+Wither_boss:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Wither Boss"},SkullOwner:{Id:"119c371b-ea16-47c9-ad7f-23b3d894520a",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2RmNzRlMzIzZWQ0MTQzNjk2NWY1YzU3ZGRmMjgxNWQ1MzMyZmU5OTllNjhmYmI5ZDZjZjVjOGJkNDEzOWYifX19"}]}}}'
+  NAME: '&eWither'
+  LORE:
+    - 'A-t-il seuleument'
+    - 'une âme ?'
+  ID: nether_star
+  POSITION-X: 8
+  POSITION-Y: 4
+  
+Snow_head:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Snowhead"},SkullOwner:{Id:"673db4c6-b7ea-421e-ae35-d7ab65e8b35e",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWZkZmQxZjc1MzhjMDQwMjU4YmU3YTkxNDQ2ZGE4OWVkODQ1Y2M1ZWY3MjhlYjVlNjkwNTQzMzc4ZmNmNCJ9fX0="}]}}}'
+  NAME: '&eBonhomme de neige pauvre'
+  LORE:
+    - 'Pas assez d''argent'
+    - 'Pour acheter une carotte'
+  ID: poisonous_potato
+  POSITION-X: 9
+  POSITION-Y: 4
+
+Snow_head_v2:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Snowhead"},SkullOwner:{Id:"0b5c7a8a-45bd-4054-8816-80291ac3316c",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTUyOGRmMTY1Mzk2MmU0ZTk5NWRmZDA2NGE3MmIyY2JmZjliNzE5NzkxMjg4MDE0M2Y5NDFhMzdkYjQ2YyJ9fX0="}]}}}'
+  NAME: '&eBonhomme de neige riche'
+  LORE:
+    - 'Quel gachis...'
+    - 'Une carrote pour ça pff'
+  ID: carrot
+  POSITION-X: 1
+  POSITION-Y: 5
+  
+Clownfish:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Clownfish"},SkullOwner:{Id:"7b314fba-09ab-4ab6-b956-cec6a5fcbed5",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzZkMTQ5ZTRkNDk5OTI5NjcyZTI3Njg5NDllNjQ3Nzk1OWMyMWU2NTI1NDYxM2IzMjdiNTM4ZGYxZTRkZiJ9fX0="}]}}}'
+  NAME: '&ePoisson clown'
+  LORE:
+    - 'NEMO !!'
+  ID: fishing_rod
+  POSITION-X: 2
+  POSITION-Y: 5
+
+Bird:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Bird"},SkullOwner:{Id:"db5caefc-65bd-484b-b1ff-24ccc48f66ae",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjk2MjczNzBmZWRiZDBiYWU3YmFlNmQ2Zjg1ODM1NTU3NjM3ODljMWJkOTNmYTYzOWNmYTNkZmQ0OGUzNDg1MCJ9fX0="}]}}}'
+  NAME: '&eOiseau'
+  LORE:
+    - 'Vole !'
+    - 'Soit libre petit cui cui'
+  ID: elytra
+  POSITION-X: 3
+  POSITION-Y: 5
+  
+Bee:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Bee"},SkullOwner:{Id:"bc1ca880-4dc5-4d17-9c05-027a7d3999b3",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQ3MzIyZjgzMWUzYzE2OGNmYmQzZTI4ZmU5MjUxNDRiMjYxZTc5ZWIzOWM3NzEzNDlmYWM1NWE4MTI2NDczIn19fQ=="}]}}}'
+  NAME: '&eAbeille'
+  LORE:
+    - 'Come along with me'
+    - 'And the butterflies and bee'
+  ID: spectral_arrow
+  POSITION-X: 4
+  POSITION-Y: 5
+
+Enderdragon: 
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Enderdragon"},SkullOwner:{Id:"433562fa-9e23-443e-93b0-d67228435e77",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzRlY2MwNDA3ODVlNTQ2NjNlODU1ZWYwNDg2ZGE3MjE1NGQ2OWJiNGI3NDI0YjczODFjY2Y5NWIwOTVhIn19fQ=="}]}}}'
+  NAME: '&eEnderdragon'
+  LORE:
+    - 'Il est moche quand même'
+  ID: dragon_egg
+  POSITION-X: 5
+  POSITION-Y: 5
+  
+Hermit_Crab:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Hermit Crab"},SkullOwner:{Id:"bc192f9d-fb89-4f75-ae7c-da701d3f7ea7",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTg1ZTY4MzRhNGJmMjZhNjUyNmY3Y2FjNGY2ZWFhOWY3ZmE3N2RiOGMxNDM1M2E4MTU4MmI1ZjY5OSJ9fX0="}]}}}'
+  NAME: '&ePagure'
+  LORE:
+    - 'Il peut transformer'
+    - 'N''importe quoi'
+  ID: chest
+  POSITION-X: 6
+  POSITION-Y: 5
+
+Regular_Fish:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Regular Fish"},SkullOwner:{Id:"8f718637-6901-4301-bd98-ebde0cc19ed8",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmY5OWI1ODBkNDVhNzg0ZTdhOTY0ZTdkM2IxZjk3Y2VjZTc0OTExMTczYmQyMWMxZDdjNTZhY2RjMzg1ZWQ1In19fQ=="}]}}}'
+  NAME: '&ePoisson'
+  LORE:
+    -'Poissssssooooonnnn'
+  ID: flower_pot
+  POSITION-X: 7
+  POSITION-Y: 5
+
+Salmon_fish:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Salmon Fish"},SkullOwner:{Id:"e246c06c-5d6a-4fd9-b600-c6bd71336b7a",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWRmYzU3ZDA5MDU5ZTQ3OTlmYTkyYzE1ZTI4NTEyYmNmYWExMzE1NTc3ZmUzYTI3YWVkMzg5ZTRmNzUyMjg5YSJ9fX0="}]}}}'
+  NAME: '&eSaumon'
+  LORE:
+    - 'Re Poissssssooooonnnn'
+  ID: leather_leggings
+  POSITION-X: 8
+  POSITION-Y: 5
+  
+Tortoise:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Tortoise"},SkullOwner:{Id:"ef56c7a3-a5e7-4a7f-9786-a4b6273a591d",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTJlNTQ4NDA4YWI3NWQ3ZGY4ZTZkNWQyNDQ2ZDkwYjZlYzYyYWE0ZjdmZWI3OTMwZDFlZTcxZWVmZGRmNjE4OSJ9fX0="}]}}}'
+  NAME: '&eTortue'
+  LORE:
+    - 'B...o...n...j...o...u...r'
+  ID: soul_sand
+  POSITION-X: 9
+  POSITION-Y: 5
+  
+Seagull:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Seagull"},SkullOwner:{Id:"14f316ce-9442-4884-8e43-5057451f104e",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzNiZGU0MzExMWY2OWE3ZmRhNmVjNmZhZjIyNjNjODI3OTYxZjM5MGQ3YzYxNjNlZDEyMzEwMzVkMWIwYjkifX19"}]}}}'
+  NAME: '&eMouette'
+  LORE:
+    - 'Encore heureux q''elle'
+    - 'Ne vous ais pas volé'
+    - 'Votre pique-nique'
+  ID: feather
+  POSITION-X: 1
+  POSITION-Y: 6
+  
+Ferret:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Ferret"},SkullOwner:{Id:"a6102422-04ff-4bad-a4a0-01000ea262bf",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjM2ZWRmN2RlOWFkY2E3MjMwOGE5NGQxYzM4YzM1OGFjYzgyOTE4ZmU4ZmNlZDI1ZDQ3NDgyMGY0Y2I3ODQifX19"}]}}}'
+  NAME: '&eFuret'
+  LORE:
+    - 'Lui aussi est trop mignon'
+  ID: hopper
+  POSITION-X: 2
+  POSITION-Y: 6
+  
+Elephant:
+  COMMAND: 'console: give {player} skull 1 3 {display:{Name:"Elephant"},SkullOwner:{Id:"9a58e25a-cf47-447d-b13c-3ea36eccfa31",Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzA3MWE3NmY2NjlkYjVlZDZkMzJiNDhiYjJkYmE1NWQ1MzE3ZDdmNDUyMjVjYjMyNjdlYzQzNWNmYTUxNCJ9fX0="}]}}}'
+  NAME: '&eElephant'
+  LORE:
+    - 'Ils ont une grande memoire'
+    - 'J''aimerais en rencontrer'
+    - 'un'
+  ID: stone
+  POSITION-X: 3
+  POSITION-Y: 6

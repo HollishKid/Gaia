@@ -1,0 +1,31 @@
+#Choses à savoir pour un livre, attention, le BQ prend la première pour marquer la date de l'entry
+#50 pages long, with up to 256 characters per page, with line breaks counting as two characters. 
+#No page may be longer than 14 lines and each line can have an average of 19 characters, determined by the width of the used characters.
+#Ne pas oublier d'enlever l'entry une fois terminée
+player_stats: 'Temps de Jeu: %ph.statistic_time_played% Connections: %ph.statistic_join_game% Kills: %ph.statistic_player_kills% Morts: %ph.statistic_deaths% Blocs cassés: %ph.statistic_mine_block% Voyagé: %ph.statistic_walk_one_cm% Coffres Ouverts: %ph.statistic_chest_opened%'
+admin_stats: '%ph.pluginscount% Unique Joins: %ph.server_unique_joins% Uptime: %ph.server_uptime% %ph.server_ram_used% / %ph.server_ram_total%' 
+#
+# Intendant
+#
+trouver_intendant: 'Je devrais retrouver rapidement l''Intendant au Château Royal d''Athelas. Coordonnées: -7035,70,2940'
+intendant_trouve: 'Je suis Citoyen de la Ville d''Athelas. Je devrais me faire une base et de la nourriture dans une maison de la Ville. Je devrais ensuite aller à la Guilde des Aventuriers (-6915,70,3165) et au Sanctuaire (-7110,70,2430).'
+gestionnaire: 'Il me faut trouver le Gestionnaire en (-7000,70,2965). Il pourra me renseigner sur comment louer une maison dans cette ville !'
+gestionnaire_progress_journal: 'Je dois planter 7 graines de blé que le Gestionnaire m''a donné. Soit dans ma propre maison en la louant (clic-droit sur le panneau de location) ou en utilisant la Ferme Communautaire au Sud du Château.'
+gestionnaire_progress_done_journal: 'J''ai planté assez de graines. Je devrais retourner vous le Gestionnaire (-7000,70,2965).'
+gestionnaire_found: 'J''ai fait ce que le Gestionnaire m''a demandé. Je devrais retourner voir l''Intendant (-7035,70,2940).'
+#
+journal_jacopo_go: 'L''Intendant m''a dit d''aller voir Jacopo sur les quais d''Athelas, à côté du bâteau de transport.'
+journal_jacopo_bat: 'Jacopo m''a demandé de fabriquer un bateau pour mon entraînement en mer. Une fois que je l''ai crafté, je devrais le lui apporter !'
+journal_jacopo_ermite: 'Jacopo m''a demandé de naviguer jusqu''à un Ermite sur une ile en sable au Sud-Est d''Athelas.'
+journal_ermite_back: 'J''ai navigué jusqu''à l''Ermite. Je devrais retourner voir Jacopo sur le port d''Athelas.'
+journal_jacopo_approuved: 'Ma formation auprès de Jacopo a été approuvée. Je devrais retourner voir l''Intendant.'
+#
+guilde1: 'La Guilde des Alchimistes est représentée par Curuvar, dans la Grande Tour au Sud-Ouest d''Athelas (-6901,114,3432). L''Intendant m''a dit d''aller le retrouver !'
+guilde2: 'La Guilde de l''Acrobatie est représentée par Larca, dans la Tour sur le port Central d''Athelas (-6621,78,3214). L''Intendant m''a dit d''aller le retrouver !'
+guilde3: 'La Guilde des Guerriers est représentée par Ingolmo, dans le Château Militaire au Sud d''Athelas (-6532,70,3224). L''Intendant m''a dit d''aller le retrouver !'
+guilde4: 'La Guilde des Pêcheurs est représentée par Halatir, dans la Tour sur le port Est d''Athelas (-6462,73,3037). L''Intendant m''a dit d''aller le retrouver !'
+guilde5: 'La Guilde des Mineurs est représentée par Felco, dans la Forge à côté de la mine d''Athelas (-6816,66,2880). L''Intendant m''a dit d''aller le retrouver !'
+guilde6: 'La Guilde des Apprivoiseurs est représentée par Kelva, dans les étables au Sud de la Ville, à côté de chez Paulette (-6730,63,3071). L''Intendant m''a dit d''aller la retrouver !'
+guilde7: 'La Guilde des Herbologistes est représentée par Pirindë, dans le jardin au Nord d''Athelas (-6805,64,2836). L''Intendant m''a dit d''aller le retrouver !'
+guilde8: 'La Guilde des Bûcherons est représentée par Tano, près de la forêt au Nord-Ouest d''Athelas (-7047,70,2800). L''Intendant m''a dit d''aller le retrouver !'
+guilds_found: 'J''ai trouvé tous les Maîtres de Guilde. Je devrais retourner voir l''Intendant pour l''en informer !'

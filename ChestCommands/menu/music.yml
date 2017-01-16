@@ -1,0 +1,139 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dMusique'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 5
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: 'musique'
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 5
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note harp'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+jukebox:
+  COMMAND: 'jukebox'
+  NAME: '&aLancer la Musique'
+  LORE:
+    - '&fAffiche le lien pour lancer la Musique'
+    - '&cLance une fênetre dans votre navigateur'
+    - '&cpour jouer la Musique de Gaïa'
+    - '&aCette musique évolue en fonction de'
+    - '&al''endroit où vous vous trouvez'
+    - ' '
+    - '&cIMPERATIF POUR LANCER LA MUSIQUE!'
+  ID: wool:13
+  POSITION-X: 5
+  POSITION-Y: 1
+
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&6Retour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+spawn:
+  COMMAND: 'console: jukebox music {player} https://clyp.it/gm3rdw2w.mp3'
+  NAME: '&6Spawn'
+  LORE:
+    - '&fMusique du Spawn'
+  ID: paper
+  POSITION-X: 1
+  POSITION-Y: 2 
+  
+athelas:
+  COMMAND: 'console: jukebox music {player} https://clyp.it/qtxzvpih.mp3'
+  NAME: '&6Athelas'
+  LORE:
+    - '&fMusique de la Ville'
+    - '&fd''Athelas'
+  ID: paper
+  POSITION-X: 2
+  POSITION-Y: 2 
+  
+gaia:
+  COMMAND: 'console: jukebox music {player} https://clyp.it/4ysxehyg.mp3'
+  NAME: '&6Extérieur'
+  LORE:
+    - '&fMusique de l''extérieur'
+    - '&fdes Villes.'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 2
+  
+eastcontinent:
+  COMMAND: 'console: jukebox music {player} https://clyp.it/g11xkxm1.mp3'
+  NAME: '&6Continent Est'
+  LORE:
+    - '&fMusique du Continent Est'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 2
+
+music1:
+  COMMAND: 'console: jukebox music {player} https://clyp.it/o4jmgotw.mp3'
+  NAME: '&aChopin'
+  LORE:
+    - '&fJoue 1h de Chopin'
+  ID: wool:14
+  POSITION-X: 1
+  POSITION-Y: 5
+
+music2:
+  COMMAND: 'console: jukebox music {player} https://clyp.it/03udq1oq.mp3'
+  NAME: '&aMozart'
+  LORE:
+    - '&fJoue 1h de Mozart'
+  ID: wool:14
+  POSITION-X: 2
+  POSITION-Y: 5
+  
+music3:
+  COMMAND: 'console: jukebox music {player} https://clyp.it/oe0rcv01.mp3'
+  NAME: '&aBeethoven'
+  LORE:
+    - '&fJoue 1h de Beethoven'
+  ID: wool:14
+  POSITION-X: 3
+  POSITION-Y: 5
+  
+music4:
+  COMMAND: 'console: jukebox music {player} https://clyp.it/bgxgkbqn.mp3'
+  NAME: '&aTchaikovsky'
+  LORE:
+    - '&fJoue 1h de Tchaikovsky'
+  ID: wool:14
+  POSITION-X: 4
+  POSITION-Y: 5
+
+

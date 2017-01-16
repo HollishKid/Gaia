@@ -1,0 +1,31 @@
+quester: arthus
+first: n0,n1
+stop: 'false'
+NPC_options:
+  n0:
+    text: Vous n'êtes pas de cette ville ! Parlez à l'&2Intendant &a&o!
+    conditions: '!intendant_done'
+  n1:
+    text: Salut ! Toi aussi tu aimes goûter de nouvelles choses ?
+    conditions: intendant_done
+    pointer: oui,non,temple
+  repoui:
+    text: C'est l'esprit ! Quand j'étais plus jeune j'ai vu une &6Carotte dorée &a&o! Je ne l'ai jamais gouté, mais il parait que cela fait un jus excellent !
+    conditions: '!gret_q2done'
+#    events: gret_cock2
+# Event non défini, je me suis permis de la #'er
+  repnon:
+    text: Ah, dommage...
+  rep1:
+    text: Jamais entendu parler, désolé...
+player_options:
+  oui:
+    text: Oui !
+    pointer: repoui
+  non:
+    text: Pas vraiment...
+    pointer: repnon
+  temple:
+    text: En fait, je suis à la recherche d'un temple souterrain, vous connaissez ?
+    conditions: Zedd.kal_q1start
+    pointer: rep1

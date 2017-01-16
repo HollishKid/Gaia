@@ -1,0 +1,38 @@
+quester: Milicien
+first: n1,n2
+stop: 'true'
+##########################
+#                        #
+#       NPC OPTIONS      #
+#                        #
+##########################
+NPC_options:
+  n1:
+    text: Qui va là?
+    conditions: '!succes'
+    pointer: moi
+  n2:
+    text: Tu as réussi? Bien, dépêche-toi de faire ton rapport au maître dans ce cas!
+    conditions: succes
+  next: 
+    text: Tu tombe bien, il y a justement une réunion cette nuit! Tu vois cette fenêtre avec les motifs rouge et blanc qui l'encadrent? C'est le lieu de la réunion. Tâche de l'atteindre sans te faire repérer!
+    event: folder_infilt
+    pointer: ok,cmt
+  cmt_rep:
+    text: Tu vas devoir passer par les toits de la ville. Tu peux y accèder un peu plus loin sur le chemin de ronde. Prend garde à ne pas tomber, si un autre garde te vois, il attaquera sans sommation!
+#
+##########################
+#                        #
+#     player OPTIONS     #
+#                        #
+##########################
+player_options:
+  moi:
+    text: Je suis envoyé par le maitre.
+    conditions: Zedd.maka_q1start
+    pointer: next
+  ok:
+    text: Pas de problèmes.
+  cmt:
+    text: Comment puis-je l'atteindre?
+    pointer: cmt_rep

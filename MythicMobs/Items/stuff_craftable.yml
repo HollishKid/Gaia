@@ -1,0 +1,390 @@
+#
+#
+#
+#  CUIR
+#
+#
+casque_cuir:
+  Id: 298
+  Data: 0
+  Display: '&aCasque Cuir Tanné'
+  Lore:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 2
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+plastron_cuir:
+  Id: 299
+  Data: 0
+  Display: '&aPlastron Cuir Tanné'
+  Lore:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 4
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+   - DURABILITY:1
+jambes_cuir:
+  Id: 300
+  Data: 0
+  Display: '&aBottes Cuir Tanné'
+  Lore:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 3
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+pieds_cuir:
+  Id: 301
+  Data: 0
+  Display: '&aBottes Cuir Tanné'
+  Lore:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 2
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+#
+#
+#
+#  MAILLE
+#
+#
+casque_maille:
+  Id: 302
+  Data: 0
+  Display: '&aCasque en Mailles'
+  Lore:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 3
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+plastron_maille:
+  Id: 303
+  Data: 0
+  Display: '&aPlastron en Mailles'
+  Lore:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 6
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+   - DURABILITY:1
+jambes_maille:
+  Id: 304
+  Data: 0
+  Display: '&aJambières en Mailles'
+  Lore:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 5
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+pieds_maille:
+  Id: 305
+  Data: 0
+  Display: '&aBottes en Mailles'
+  Lore:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 2
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+#
+#
+#
+#  FER
+#
+#
+casque_fer:
+  Id: 306
+  Data: 0
+  Display: '&aCasque Fer Forgé'
+  Lore:
+  - '&e&oCe fer forgé'
+  - '&e&oest très dense !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 3
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+plastron_fer:
+  Id: 307
+  Data: 0
+  Display: '&aPlastron Fer Forgé'
+  Lore:
+  - '&e&oCe fer forgé'
+  - '&e&oest très dense !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 7
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+   - DURABILITY:1
+jambes_fer:
+  Id: 308
+  Data: 0
+  Display: '&aJambières Fer Forgé'
+  Lore:
+  - '&e&oCe fer forgé'
+  - '&e&oest très dense !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 6
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+pieds_fer:
+  Id: 309
+  Data: 0
+  Display: '&aBottes Fer Forgé'
+  Lore:
+  - '&e&oCe fer forgé'
+  - '&e&oest très dense !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 3
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+#
+#
+#
+#  OR
+#
+#
+casque_or:
+  Id: 314
+  Data: 0
+  Display: '&aCasque Or Décoré'
+  Lore:
+  - '&e&oCet or est'
+  - '&e&ojoliment travaillé !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 3
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+plastron_or:
+  Id: 315
+  Data: 0
+  Display: '&aPlastron Or Décoré'
+  Lore:
+  - '&e&oCet or est'
+  - '&e&ojoliment travaillé !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 6
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+   - DURABILITY:1
+jambes_or:
+  Id: 316
+  Data: 0
+  Display: '&aJambières Or Décoré'
+  Lore:
+  - '&e&oCet or est'
+  - '&e&ojoliment travaillé !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 4
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+pieds_or:
+  Id: 317
+  Data: 0
+  Display: '&aBottes Or Décoré'
+  Lore:
+  - '&e&oCet or est'
+  - '&e&ojoliment travaillé !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 2
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+#
+#
+#
+#  DIAMANT
+#
+#
+casque_diamant:
+  Id: 310
+  Data: 0
+  Display: '&aCasque Diamant Noble'
+  Lore:
+  - '&e&oCe diamant est'
+  - '&e&od''une qualité rare !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 4
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+plastron_diamant:
+  Id: 311
+  Data: 0
+  Display: '&aPlastron Diamant Noble'
+  Lore:
+  - '&e&oCe diamant est'
+  - '&e&od''une qualité rare !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 9
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+   - DURABILITY:1
+jambes_diamant:
+  Id: 312
+  Data: 0
+  Display: '&aJambières Diamant Noble'
+  Lore:
+  - '&e&oCe diamant est'
+  - '&e&od''une qualité rare !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 7
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+pieds_diamant:
+  Id: 313
+  Data: 0
+  Display: '&aBottes Diamant Noble'
+  Lore:
+  - '&e&oCe diamant est'
+  - '&e&od''une qualité rare !'
+  - ' '
+  - '&7&oRareté : &aCommun'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 4
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1

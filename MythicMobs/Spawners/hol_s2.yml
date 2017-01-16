@@ -1,0 +1,24 @@
+hol_s2:
+  MobName: hol_add
+  World: Gaia
+  X: -7312
+  Y: 42
+  Z: 3270
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 3
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 60
+  CooldownTimer: 0
+  Warmup: 30
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 60
+  HealOnLeash: true
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

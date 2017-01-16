@@ -1,0 +1,9 @@
+Remove:
+  Type: ARMOR_STAND
+  Display: 'instant_remove'
+  Options:
+    Marker: true
+    Invisible: true
+    HasGravity: false
+  Skills:
+  - remove @Self ~onSpawn

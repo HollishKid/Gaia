@@ -1,0 +1,233 @@
+akttool:
+  Id: 257
+  Data: 0
+  Amount: 1
+  Display: '&eOutil fétiche d''Aktarion'
+  Lore:
+  - '&8&oCet outil ne ressemble'
+  - '&8&oà rien de connus'
+  - '&2Objet de Quête'
+kolysword:
+  Id: 276
+  Data: 0
+  Amount: 1
+  Display: '&6Kolysword'
+  Lore:
+  - '&726 à 61 de dégâts'
+  - '&3&oArme légendaire'
+  - '&3&ode l''ancien temps'
+  - ' '
+  - '&7&oRareté : &6Légendaire'
+  Attributes:
+    MainHand:
+      Damage: 26-61
+fandom:
+  Id: 369
+  Data: 0
+  Amount: 1
+  Display: '&aFandom'
+  Lore:
+  - '&4ModoStick'
+  - '&eSon utilisation n''est'
+  - '&equ''unique pour 2'
+  - '&6Supra Legendary'
+  Attributes:
+    MainHand:
+      Damage: 150-200
+    OffHand:
+      Damage: 100-150
+diamant_mal:
+  Id: 264
+  Data: 0
+  Amount: 1
+  Display: '&5Diamant Maléfique'
+  Lore:
+  - ' '
+  - '&e&oEmplie d''une force'
+  - '&e&omaléfique'
+  - ' '
+  - '&9Matériau de craft'
+haxori:
+  Id: 258
+  Data: 0
+  Amount: 1
+  Display: '&eHaxori'
+  Lore:
+  - '&775 à 100 de dégâts'
+  - '&3&oLe bois n''est pas'
+  - '&3&oque simple matériau'
+  - '&2Objet de Quête'
+  Attributes:
+    MainHand:
+      Damage: 75-100
+  Options:
+    Unbreakable: true
+claysaur:
+  Id: 276
+  Data: 0
+  Amount: 1
+  Display: '&2Claysaur'
+  Lore:
+  - '&730 à 50 de dégâts'
+  - '&3&oLa justice n''est faite'
+  - '&3&oqu''en ce lieu'
+  - '&2Objet de Quête'
+  Attributes:
+    MainHand:
+      Damage: 30-50
+  Options:
+    Unbreakable: true
+allyproc:
+  Id: 285
+  Data: 0
+  Amount: 1
+  Display: '&9Allyproc'
+  Lore:
+  - '&725 à 35 de dégâts'
+  - '&3&oL''amitié n''est pas'
+  - '&3&osuperficielle et'
+  - '&3&oimaginaire'
+  - '&2Objet de Quête'
+  Attributes:
+    MainHand:
+      Damage: 25-35
+  Options:
+    Unbreakable: true
+head_mal:
+  Id: 310
+  Data: 0
+  Amount: 1
+  Display: '&5Casque du seigneur Malkrick'
+  Lore:
+  - '&dSet Malsokrit :'
+  - '&6&oCasque du seigneur Malkrick'
+  - '&8&oPlastron du seigneur Malrick'
+  - '&8&oJambières du seigneur Malkrick'
+  - '&8&oBottes du seigneur Malkrick'
+  - ' '
+  - '&7&oRareté : &5Épique'
+  Attributes:
+    Head:
+      Armor: 8
+      Health: 6
+  Enchantments:
+  - DURABILITY:10
+chest_mal:
+  Id: 311
+  Data: 0
+  Amount: 1
+  Display: '&5Plastron du seigneur Malkrick'
+  Lore:
+  - '&dSet Malsokrit :'
+  - '&8&oCasque du seigneur Malkrick'
+  - '&6&oPlastron du seigneur Malrick'
+  - '&8&oJambières du seigneur Malkrick'
+  - '&8&oBottes du seigneur Malkrick'
+  - ' '
+  - '&7&oRareté : &5Épique'
+  Attributes:
+    Chest:
+      Armor: 20
+      Health: 8
+  Enchantments:
+  - DURABILITY:10
+legs_mal:
+  Id: 312
+  Data: 0
+  Amount: 1
+  Display: '&5Jambières du seigneur Malkrick'
+  Lore:
+  - '&dSet Malsokrit :'
+  - '&8&oCasque du seigneur Malkrick'
+  - '&8&oPlastron du seigneur Malkrick'
+  - '&6&oJambières du seigneur Malkrick'
+  - '&8&oBottes du seigneur Malkrick'
+  - ' '
+  - '&7&oRareté : &5Épique'
+  Attributes:
+    Legs:
+      Armor: 14
+      Health: 4
+  Enchantments:
+  - DURABILITY:10
+boots_mal:
+  Id: 313
+  Data: 0
+  Amount: 1
+  Display: '&5Bottes du seigneur Malkrick'
+  Lore:
+  - '&dSet Malsokrit :'
+  - '&8&oCasque du seigneur Malkrick'
+  - '&8&oPlastron du seigneur Malrick'
+  - '&8&oJambières du seigneur Malkrick'
+  - '&6&oBottes du seigneur Malkrick'
+  - ' '
+  - '&7&oRareté : &5Épique'
+  Attributes:
+    Feet:
+      Armor: 10
+      Health: 4
+  Enchantments:
+  - DURABILITY:10
+korutsu_sword:
+  Id: 276
+  Data: 0
+  Amount: 1
+  Display: '&4Epée enflamée de &cKorutsu'
+  Lore:
+  - '&712 à 19 de dégâts'
+  - '&8&oArme naissante des flammes'
+  - '&a&oEn souvenir de son amie'
+  - ''
+  - '&7&oRareté : &9Rare'
+  Attributes:
+    MainHand:
+      Damage: 12-19
+  Enchantments:
+    - FIRE_ASPECT:4
+ardenko_axe:
+  Id: 279
+  Data: 0
+  Amount: 1
+  Display: '&bHache foudroyante d''&3Ardenko'
+  Lore:
+  - '&714 à 21 de dégâts (Main principale)'
+  - '&77 à 9 de dégâts (Main secondaire)'
+  - '&8&oCette hache n''est pas'
+  - '&8&oun outil de destruction'
+  - ''
+  - '&7&oRareté : &9Rare'
+  Attributes:
+    MainHand:
+      Damage: 14-21
+    OffHand:
+      Damage: 7-9
+  Enchantments:
+    - DAMAGE_ALL:3
+    - DAMAGE_UNDEAD:1
+imiko_bow:
+  Id: 261
+  Data: 0
+  Amount: 1
+  Display: '&9Arc celeste d''&bImiko'
+  Lore:
+  - '&7Dégâts d''origine'
+  - '&8&oCet arc est une union'
+  - '&8&ode la terre et du ciel'
+  - ''
+  - '&7&oRareté : &9Rare'
+  Enchantments:
+    - ARROW_DAMAGE:3
+    - ARROW_INFINITE:1
+mineur:
+  Id: 278
+  Data: 0
+  Amount: 1
+  Display: '&cPioche ultime'
+  Lore:
+  - '&8La rapidité est un'
+  - '&8atout pour le minage'
+  Enchantments:
+  - DIG_SPEED:10
+  - DURABILITY:10
+  - LOOT_BONUS_BLOCKS:10

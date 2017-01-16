@@ -1,0 +1,6 @@
+amobspawner:
+  Cooldown: 240
+  Conditions:
+  - notinregion athelas_mobspawning
+  Skills:
+  - remove @self

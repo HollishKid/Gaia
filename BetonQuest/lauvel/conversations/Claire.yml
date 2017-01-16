@@ -1,0 +1,76 @@
+quester: Claire
+first: loyer,gentil,mechante,inconnue
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  inconnue:
+    text: Bonjour à vous !
+    conditions: 'Hist_Tag'
+  gentil:
+    text: Rebonjour ! Merci encore pour ton aide !
+    conditions: 'Bonter_Tag,!Cruel_Tag'
+  mechante:
+    text: Partez d'ici ! Je ne veux  plus vous revoier ici !
+    conditions: 'Cruel_Tag,!Bonter_Tag'
+  loyer:
+    text: Qu'est ce que vous voulez ? Vous venez encore pour le loyer ?
+    conditions: 'Quetes_Loyer,!Loyer_Done'
+    pointer: oui
+  alors:
+    text: alors ça ne changera pas ! Je ne payerais pas !
+    pointer: pourquoi
+  quoi:
+    text: Quoi, vous savez pas ?! Le roi à encore augmenter le loyer ! \nJ'aurais plus de quoi me nourrir mais aussi mes location.
+    pointer: desoler
+  prix:
+    text: Combien ? eh ben le loyer est monter à ¤1000.
+    pointer: payer,menacer
+  menace2:
+    text: Je ne payerais pas ! Vous pouvez toujour attendre !
+    pointer: menace3,payer
+  comment:
+    text: Comment ? Je ne peux accepter !
+    pointer: bonte
+  bonte2:
+    text: Alors, je ne peut qu'accepter, je vous remercie.
+    events: 'Verifier_Argent'
+  menace4:
+    text: Vous n'allez pas oser faire ça ! Non, vous le penser vraiment ?
+    pointer: cruel
+  cruel2:
+    text: Non, tenez et virer de chez moi !
+    events: 'Loyer_Payer_Cruel,Quetes_Loyer2'
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  oui:
+    text: Oui, toue à fais !
+    pointer: alors
+  pourquoi:
+    text: Pourquoi voulez vous pas payer votre loyer ?
+    pointer: quoi
+  desoler:
+    text: Désoler, je suis nouveau ! Et combien s'éleve votre loyer ?
+    pointer: prix
+  payer:
+    text: Je vais payer le loyer à votre place !
+    pointer: comment
+  menacer:
+    text: Vous allez quand même le payer !
+    pointer: menace2
+  menace3:
+    text: Si vous ne voulez pas payer, je pillerais votre auberge pour vendre au montant de votre loyer !
+    pointer: menace4
+  bonte:
+    text: bien sur que si ! laisse moi vous rendre service !
+    pointer: bonte2
+  cruel:
+    text: voulez vous tenter le coup ?!
+    pointer: cruel2

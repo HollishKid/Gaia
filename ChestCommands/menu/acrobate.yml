@@ -1,0 +1,198 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dGuilde Acrobates'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 7
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+metiers:
+  NAME: '&6Métiers Guilde Acrobates'
+  LORE:
+    - 'En colonne se trouvent'
+    - 'tous les métiers de la guilde.'
+    - ' '
+    - '&a&oEn cliquant sur une icône,'
+    - '&a&ovous renoncez à'
+    - '&a&ovotre métier actuel.'
+    - ' '
+    - 'Un métier permet de gagner plus'
+    - 'd''expérience et d''adopter les'
+    - 'grades du métier.'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: shield
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+acrobate:
+  COMMAND: 'console: bq event {player} default.metier_acrobate'
+  NAME: '&6Acrobate'
+  LORE:
+    - 'Accepter le métier Acrobate'
+    - ' '
+    - 'Vous gagnerez 10% d''expérience en plus'
+    - 'dans la Compétence Acrobatie !'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: leather_boots
+  POSITION-X: 2
+  POSITION-Y: 1
+
+acrobate1:
+  COMMAND: 'console: bq event {player} default.metier_acrobate1'
+  NAME: '&aGrade Acrobate'
+  LORE:
+    - 'Prendre le Grade d''Acrobate'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a1 &cCompétence Acrobatie'
+  ID: paper
+  POSITION-X: 2
+  POSITION-Y: 2
+ 
+acrobate2:
+  COMMAND: 'console: bq event {player} default.metier_acrobate2'
+  NAME: '&aGrade Bateleur'
+  LORE:
+    - 'Prendre le Grade de Bateleur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a25 &cCompétence Acrobatie'
+  ID: paper
+  POSITION-X: 2
+  POSITION-Y: 3
+  
+acrobate3:
+  COMMAND: 'console: bq event {player} default.metier_acrobate3'
+  NAME: '&aGrade Matassin'
+  LORE:
+    - 'Prendre le Grade de Matassin'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a50 &cCompétence Acrobatie'
+  ID: paper
+  POSITION-X: 2
+  POSITION-Y: 4
+
+acrobate4:
+  COMMAND: 'console: bq event {player} default.metier_acrobate4'
+  NAME: '&aGrade Funambule'
+  LORE:
+    - 'Prendre le Grade de Funambule'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a75 &cCompétence Acrobatie'
+  ID: paper
+  POSITION-X: 2
+  POSITION-Y: 5
+  
+acrobate5:
+  COMMAND: 'console: bq event {player} default.metier_acrobate5'
+  NAME: '&aGrade Baladin'
+  LORE:
+    - 'Prendre le Grade de Baladin'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a100 &cCompétence Acrobatie'
+  ID: paper
+  POSITION-X: 2
+  POSITION-Y: 6
+
+standardprefix:
+  COMMAND: 'console: bq event {player} default.basic_prefix'
+  NAME: '&6Retour Grade Habituel'
+  LORE:
+    - '&oCliquez ici pour'
+    - '&oremettre votre'
+    - '&opréfixe habituel.'
+    - ' '
+    - '&lVous serez toujours'
+    - '&lmembre de la guilde !'
+  ID: paper
+  POSITION-X: 9
+  POSITION-Y: 3
+
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - '&cFerme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+fullguide:
+  COMMAND: 'tell: &a&o http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Competences'
+  NAME: '&6Guide Complet'
+  ID: book
+  ENCHANTMENT: 'infinity, 1'
+  LORE:
+    - 'Affiche un lien vers le guide'
+    - ' complet de Compétences.'
+  POSITION-X: 9
+  POSITION-Y: 5
+  
+mcstats:
+  COMMAND: 'mcstats'
+  NAME: '&6Statistiques'
+  ID: paper
+  LORE:
+    - 'Affiche vos Statistiques'
+    - 'Individuelles Complètes'
+  POSITION-X: 7
+  POSITION-Y: 6 
+  
+mcrank:
+  COMMAND: 'mcrank'
+  NAME: '&6Classement Personnel'
+  ID: paper
+  LORE:
+    - 'Affiche votre Classement'
+    - 'des Compétences'
+  POSITION-X: 8
+  POSITION-Y: 6
+  
+mctop:
+  COMMAND: 'mctop'
+  NAME: '&6Classement Global'
+  ID: torch
+  LORE:
+    - 'Affiche le Classement'
+    - 'Global des Compétences'
+  POSITION-X: 9
+  POSITION-Y: 6 

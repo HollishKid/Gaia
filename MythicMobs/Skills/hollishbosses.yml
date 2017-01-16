@@ -1,0 +1,128 @@
+KarazschArcaneBolt:
+  Cooldown: 1
+  Skills:
+  - missile{ot=KAP_TICK;oh=KAP_HIT;v=4;i=1;hR=1;vR=1;in=0.75}
+KAP_TICK:
+  Skills:
+  - effect:particles{p=reddust;c=#5e11d8;a=10;hS=0.1;vS=0.1} @origin
+KAP_HIT:
+  Skills:
+  - effect:particles{p=reddust;c=#5e11d8;a=50;hS=1;vS=1}
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=0.01}
+  - damage{a=20;i=false}
+
+KarazschLaser:
+  Cooldown: 0.25
+  Conditions:
+  - targetinlineofsight false
+  Skills:
+  - missile{ot=KL_TICK;oh=KL_HIT;v=5;i=1;hR=1;vR=1;in=0.75}
+KL_TICK:
+  Skills:
+  - effect:particles{p=reddust;c=#f182ff;a=5;hS=0.1;vS=0.1} @origin
+KL_HIT:
+  Skills:
+  - heal{amount=10}
+  - effect:particles{p=reddust;c=#f182ff;a=30;hS=0.3;vS=0.8;y=1.0}
+  - effect:sound{s=entity.guardian.attack;v=0.2;p=2.0}
+
+MagicCloudEffect:
+  Cooldown: 0
+  Skills:
+  - skill{s=MCEffect}
+  - delay 3
+  - skill{s=MCEffect}
+  - delay 3
+  - skill{s=MCEffect}
+  - delay 3
+  - skill{s=MCEffect}
+  - delay 3
+  - skill{s=MCEffect}
+  - delay 3
+  - skill{s=MCEffect}
+  - delay 3
+  - skill{s=MCEffect}
+  - delay 3
+  - skill{s=MCEffect}
+  - delay 3
+  - skill{s=MCEffect}
+  - delay 3
+  - skill{s=MCEffect}
+MCEffect:
+  Cooldown: 0.01
+  Skills:
+  - effect:particles{p=reddust;c=#8ad9ff;a=10;hs=1.0;vs=0.5;s=0;y=1.0}
+  - effect:particles{p=reddust;c=#8ad9ff;a=10;hs=0.5;vs=1.0;s=0;y=1.0}
+  - damage{amount=0.1;ignoreArmor=true} @a[r=3]
+
+KarazschCloudDeath:
+  Skills:
+  - delay 600
+  - remove{m=KarazschCloud} @Self
+
+KarazschLaserDeath:
+  Cooldown: 0.01
+  Skills:
+  - DELAY 600
+  - remove{m=KarazschLaserMob} @Self
+
+#
+# Sancossi
+#
+SmashAttackII:
+  Cooldown: 12
+  Conditions:
+  - targetwithin 25
+  Skills:
+  - effect:particles{cooldown=5;particle=angryVillager;amount=20;vSpread=1;hSpread=2;Speed=0;yoffset=2} @target
+  - message{cooldown=30;m="&c<mob.name> &dCOUP SAUVAGE!"} @PlayersInRadius{r=40}
+  - teleport @target
+  - effect:sound{s=ENTITY_ZOMBIE_ATTACK_IRON_DOOR;volume=2.0;pitch=0.5}
+  - sendtitle{title="";subtitle="&cTouché par Coup Sauvage !";d=40} @PlayersNearOrigin{r=10}
+  - delay 10
+  - damage{amount=2;ignorearmor=true} @PlayersInRadius{r=5}
+  - throw{velocity=4;velocityY=4} @PlayersInRadius{r=5}
+  - effect:explosion @Self
+AngryAura:
+  Cooldown: 0.1
+  Skills:
+  - effect:sound{s=ZOMBIE_HORSE_DEATH;volume=2.0;pitch=0.5}
+  - sendtitle{title="";subtitle="&cTtouché par Aura Goblin!";d=40} @PlayersNearOrigin{r=10}
+  - potion{type=FIRE_RESISTANCE;lvl=1;duration=1900} @Self
+  - potion{type=SPEED;lvl=1;duration=1900} @Self
+  - potion{type=GLOWING;lvl=0;duration=30} @Self
+  - effect:particles{cooldown=5;particle=angryVillager;amount=100;vSpread=1;hSpread=2;Speed=0;yoffset=2} @self @onTimer:0.1
+FireResistanceSpeed:
+  Cooldown: 0.1
+  Skills:
+  - effect:sound{s=ENTITY_ZOMBIE_HORSE_HURT;volume=2.0;pitch=0.5}
+  - sendtitle{title="";subtitle="&cTouché par Aura de Rage !";d=40} @PlayersNearOrigin{r=10}
+  - potion{type=FIRE_RESISTANCE;lvl=1;duration=1800} @Self
+  - potion{type=SPEED;lvl=0;duration=1800} @Self
+  - potion{type=GLOWING;lvl=0;duration=20} @Self
+  - effect:particles{p=angryVillager;amount=10;hSpread=1;ySpread=1;speed=0;yOFfset=1} @Self
+Death:
+  Skills:
+  - effect:sound{s=entity.endermen.scream;v=.5;p=0.8} @Self ~onDeath
+  - delay 10
+  - effect:sound{s=entity.endermen.scream;v=.5;p=1.5} @Self ~onDeath
+  - delay 7
+  - effect:sound{s=entity.endermen.scream;v=.5;p=1.1} @Self ~onDeath
+  - delay 8
+  - effect:sound{s=entity.endermen.scream;v=.5;p=1.4} @Self ~onDeath
+  - delay 11
+  - effect:sound{s=entity.endermen.scream;v=.5;p=1.2} @Self ~onDeath
+  - delay 10
+  - effect:sound{s=entity.endermen.scream;v=.5;p=1.1} @Self ~onDeath
+CallPig:
+  Skills:
+  - mount{type=monturesancossi}
+  - delay 500
+SummonZombies:
+  Cooldown: 15
+  Skills:
+  - effect:sound{s=ENTITY_ZOMBIE_VILLAGER_CONVERTED ;volume=2.0;pitch=0.5}
+  - message{m="&c<mob.name> &dGardes ! Ralliez vous à moi !"} @PlayersInRadius{r=40}
+  - sendtitle{title="";subtitle="&cSancossi Appelle des Renforts !";d=40} @PlayersNearOrigin{r=10}
+  - delay 30
+  - summon{mob=gardessancossi;amount=1;noise=5} @Self

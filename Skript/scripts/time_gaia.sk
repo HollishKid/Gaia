@@ -1,0 +1,52 @@
+#
+#
+#
+# Skript for Gaïa Time
+#
+#
+#
+on load:
+	set {day.index::*} to contents from url "https://gaia-minecraft.000webhostapp.com/day.php/"
+#
+#
+# Restart at 5 o'clock
+#
+#
+every 52 minutes in "Gaia":
+	set {hour.system} to "%hour%"
+
+	if {hour.system} is "5":
+
+		if {day.index} is 7:
+			loop {place.location.1::*}:
+				set block at loop-value to air
+			wait 5 ticks
+			loop {break.location.1::*}:
+				set block at loop-value to {break.type.1::%loop-index%}
+			clear {break.location.1::*}
+			clear {break.type.1::*}
+			clear {place.location.1::*}
+			wait 5 ticks
+			
+		else:
+			set {day.index.temp} to {day.index::1} + 1
+			loop {place.location.%{day.index.temp}%::*}:
+				set block at loop-value to air
+			wait 5 ticks
+			loop {break.location.%{day.index.temp}%::*}:
+				set block at loop-value to {break.type.%{day.index.temp}%::%loop-index%}
+			clear {break.location.%{day.index.temp}%::*}
+			clear {break.type.%{day.index.temp}%::*}
+			clear {place.location.%{day.index.temp}%::*}
+			wait 5 ticks
+#
+# ADD IN SERVER RESTART
+
+#
+# Optionnal Testing Command
+#
+command /timetest:
+	trigger:
+		set {day.index::*} to contents from url "https://gaia-minecraft.000webhostapp.com/day.php/"
+		loop {day.index::*}:
+			message "%{day.index::1}%"

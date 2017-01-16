@@ -1,0 +1,45 @@
+quester: Physicien
+first: retour,venue
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  venue:
+    text: Oh bonjour, as-tu un instant à m'accorder ?
+    conditions: 'Besoin_Aide,!Physicien_Done'
+    pointer: non,oui
+  p1:
+    text: Voilà, je suis le physicien Drizz... Et j'étudis les portails dans lequels les serviteurs du mal ont passée pour nous envahir ! \nJ'ai entendu parler qu'à Athélas, il y avait un physicien de génie ayant écrit un livre sur c'est recherche ! \n Il se nomme "Heimer" et sont livre "Etudes des portails".
+    pointer: ou,biensur,ahnon
+  livre:
+    text: Il ce trouve à la blibliothèques d'Athélas, mais je ne sais pas où exactement! Alors, je te conseille de demander à la blibliotcaire si toi aussi tu ne sais pas.
+    pointer: biensur,ahnon
+  p2:
+    text: Je te remercie !
+    events: 'Quetes_Physicien'
+  retour:
+    conditions: 'Physicien_tag,physicien_book_tagged,!Physicien_Done'
+    text: Oh le voilà, merci beaucoup! Ah, mais les pages anexes sont déchiré ! \nComment vais-je faire ! Revenez plus tard, j'aurais encore besoin de vous ! \nMerci encore, je vous laisse l'original, je me suis fais une copie.
+    events: Physicien_end_chap1
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  non:
+    text: Non, désoler !
+  oui:
+    text: oui, bien sur !
+    pointer: p1
+  ou:
+    text: Et où ce trouve ce livre ?
+    pointer: livre
+  ahnon:
+    text: Rah, désoler, c'est trop loin !
+  biensur:
+    text: Bien sur !
+    pointer: p2

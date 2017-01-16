@@ -1,0 +1,179 @@
+# 
+# Name: CommandOverride
+# Author: mrCookieSlime
+# 
+# Do not modify the Config while the Server is running
+# otherwise bad things might happen!
+# 
+# This Plugin also requires CS-CoreLib to run!
+# If you don't have it installed already, its going to be
+# automatically installed for you
+# 
+# This Plugin utilises an Auto-Updater. If you want to turn that off,
+# simply set options -> auto-update to false
+options:
+  auto-update: true
+  use-unknown-command-message: false
+  unknown-command-message: '&7Sorry, I do not recognize this Command! Please type
+    &b/help &7for Help.'
+commands:
+  /example: []
+  /thisisthesignaturecommand:
+  - console:/bq event <player> default.navigation_signature
+  /thisisthekillercommand:
+  - console:/tellraw <arg 0> ["",{"text":"Vous avez tué ","color":"red"},{"text":"<arg 1>","color":"dark_green"},{"text":" !","color":"red"}]
+  - console:/cb var set killed_money <money>
+  /commands:
+  - '   &f---------------------- ~ ¤ ~ ----------------------'
+  - '&dPour une aide détaillée, visitez le site de Gaïa'
+  - '       &awww.gaia-minecraft.enjin.com'
+  - ' '
+  - '             &dCommande Unique:'
+  - '                     &a&l/menu'
+  - ' '
+  - '&dCe Menu répertorie toutes les commandes'
+  - '       &dque vous avez à disposition.'
+  - ' '
+  - '&dCarte Dynamique: &awww.gaia-minecraft.enjin.com/gallery'
+  - '&dGuide Complet: &awww.gaia-minecraft.enjin.com/guide'
+  - '&dContact: &agaia.minecraft.assistance@gmail.com'
+  - '   &f---------------------- ~ ¤ ~ ----------------------'
+  /pack:
+  - command:/backpack
+  /sanction:
+  - console:/bq event <arg 1> hollish.prison_god_tester<arg 0>
+  - '&2<arg 1> &d&oa été sanctionné niveau : &2<arg 0>'
+  - ' '
+  - '&d&oUtilisez &aliberer [nom du joueur] &d&opour la/le libérer prématurément,'
+  - '&d&oou lorsque la personne est bloquée en prison.'
+  /liberer:
+  - console:/bq event <arg 0> hollish.prison_free
+  - '&2<arg 0> &d&oa été libéré(e) de prison.'
+  /bug:
+  - console:/bq event <arg 0> hollish.bug_verified
+  /thisisthelagcommand:
+  - '   &f---------------------- ~ ¤ ~ ----------------------'
+  - '                   &fOptiFine - Guide'
+  - '&fOptifine est un stabilisateur de performances et améliore graphiquement tout
+    Pack de Ressources. Installation avec les étapes suivantes:'
+  - '&d1- Télécharger Optifine:&a http://optifine.net/downloads'
+  - '&d2- Votre Minecraft doit avoir été lancé au moins une fois dans la version correcte.'
+  - '&d3- Coupez complètement Minecraft. Même le laucher doit être fermé!'
+  - '&d4- Lancez le fichier .jar de l''installation d''Optifine.'
+  - '&d5- Relancez Minecraft. Sélectionnez la VERSION du jeu qui se nomme &f1.9.X-Optifine'
+  - '&d6- Une fois sélectionné vous pouvez lancer le jeu. Vous avez Optifine!'
+  - '&d&oPour la configuration complète:&a http://gaia-minecraft.enjin.com/guide/'
+  - '   &f---------------------- ~ ¤ ~ ----------------------'
+  /histoire:
+  - console:/bq event <arg 0> default.historique_folder
+  /staff:
+  - '&dStaff actuellement en ligne :'
+  - '&2[online: essentials.helpop.receive]'
+  /thisistheopenvotemenucommand:
+  - '   &f------- ~ ¤ ~ Votez Gaïa ~ ¤ ~ -------'
+  - '&dSite 1 &f:&a http://minecraft-mp.com/server/117210/vote/'
+  - '&dSite 2 &f:&a http://minelist.net/vote/1215'
+  - '&dSite 3 &f:&a https://mineliste.fr/?server=140'
+  - '&dSite 4 &f:&a http://www.serveursminecraft.org/serveur.php?id=778'
+  - '&dSite 5 &f:&a http://www.liste-serveur-minecraft.net/serveur-minecraft?Liste-Serveur-Minecraft=Ga%C3%AFa'
+  - '&dSite 6 &f:&a https://www.minestatus.net/144738-gaia'
+  - '&dSite 7 &f:&a http://www.serveurs-minecraft.org/vote.php?id=46115'
+  - '&dSite 8 &f:&a https://serveurs-minecraft.com/serveur-minecraft.php?Classement=Ga%C3%AFa%20MMORPG'
+  - '&dSite 9 &f:&a http://www.minetrack.net/vote/11840/'
+  - '&dSite 10 &f:&a http://minecraft-server-list.com/server/344780/vote/'
+  - '&dSite 11 &f:&a http://www.planetminecraft.com/server/gaia-3655242/vote/'
+  - '   &f---------------------- ~ ¤ ~ ----------------------'
+  /thisisthesaccommand:
+  - WAIT 1
+  - command:/sac
+  /thisisthelocationcommand:
+  - WAIT 1
+  - command:/location
+  /thisistheresidentcommand:
+  - WAIT 1
+  - command:/resident
+  /thisisthemairecommand:
+  - WAIT 1
+  - command:/maire
+  /thisisthenationcommand:
+  - WAIT 1
+  - command:/nation
+  /thisisthepartycommand:
+  - WAIT 1
+  - command:/groupe
+  /thisisthepetscommand:
+  - WAIT 1
+  - command:/pets
+  /closethisshit: []
+  /thisisthepasswordchangercommand:
+  - WAIT 1
+  - console:/vsign <player> changepassword {data}
+  /thisistheaddrecoverycommand:
+  - WAIT 1
+  - console:/vsign <player> email add {data}
+  /thisisthechangerecoverycommand:
+  - WAIT 1
+  - console:/vsign <player> email change {data}
+  /thisisthesendrecoverycommand:
+  - WAIT 1
+  - console:/vsign <player> email recover {data}
+  /thisisthehelpopcommand:
+  - WAIT 1
+  - console:/vsign <player> helpop {data}
+  /destconfig:
+  - command:/npc speed 0.7
+  - command:/trait npcdestinations
+  - WAIT 1
+  - command:/waypoint provider npcdestinations
+  /desthelper1:
+  - command:/npcdest addlocation 13000
+  - WAIT 1
+  - command:/npcdest locwand 0 5 7 12 --blocks
+  /desthelper2:
+  - command:/npcdest addlocation 21000
+  - WAIT 1
+  - command:/npcdest locwand 1 5 7 15 --blocks
+  - WAIT 1
+  - command:/npcdest locweather 1 clear
+  /desthelper3:
+  - command:/npcdest addlocation 11000
+  - WAIT 1
+  - command:/npcdest locwand 2 5 7 15 --blocks
+  - WAIT 1
+  - command:/npcdest locweather 2 clear
+  /desthelper4:
+  - command:/npcdest addlocation 23000
+  - WAIT 1
+  - command:/npcdest locwand 3 5 7 15 --blocks
+  - WAIT 1
+  - command:/npcdest locweather 3 clear
+  /renthelp:
+  - command:/region define <arg 0>
+  - WAIT 1
+  - command:/region setpriority <arg 0> 50
+  - WAIT 1
+  - command:/as add rent <arg 0>
+  - WAIT 1
+  - command:/as setprice <arg 1> <arg 0>
+  - WAIT 1
+  - command:/as addsign <arg 0>
+  /builderregionhelp:
+  - command:/region setpriority <arg 0> 50
+  - WAIT 1
+  - command:/region flag <arg 0> time-lock
+  - WAIT 1
+  - command:/region flag <arg 0> weather-lock
+  - WAIT 1
+  - command:/region flag <arg 0> mob-spawning deny
+  - WAIT 1
+  - command:/region flag <arg 0> mob-damage deny
+  - WAIT 1
+  - command:/region flag <arg 0> entry deny
+  - WAIT 1
+  - command:/region flag <arg 0> entry-deny-message &cZone en développement !
+  - WAIT 1
+  - command:/region removemember <arg 0> -a
+  - WAIT 1
+  - command:/region addmember <arg 0> g:builder
+  - WAIT 1
+  - command:/region addmember <arg 0> g:builder_est

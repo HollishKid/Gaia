@@ -1,0 +1,171 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dTrains'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 4
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 1
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+ticket_pay:
+  COMMAND: 'console: bq event {player} hollish.ticket_pay'
+  NAME: '&aAcheter un Ticket'
+  LORE:
+    - 'Valable 15 minutes'
+    - 'Uniquement pour les'
+    - 'destinations débloquées.'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+ticket_payed:
+  NAME: '&aVous avez un Ticket'
+  LORE:
+    - 'Vous disposez actuellement'
+    - 'd''un Ticket de Train valide.'
+    - ' '
+    - 'Choissez votre destination.'
+  ID: 'wool:5'
+  POSITION-X: 5
+  POSITION-Y: 1
+  VIEW-PERMISSION: 'train.ticket'
+  KEEP-OPEN: true
+
+destination_gare:
+  COMMAND: 'console: bq event {player} hollish.destination_gare'
+  NAME: '&2Gare Centrale'
+  LORE:
+    - 'Sélectionner destination :'
+    - ' Gare Centrale'
+  ID: 66
+  POSITION-X: 1
+  POSITION-Y: 3
+  VIEW-PERMISSION: 'train.ticket'
+
+destination_guilde:
+  COMMAND: 'console: bq event {player} hollish.destination_guilde'
+  NAME: '&2Guilde des Aventuriers'
+  LORE:
+    - 'Sélectionner destination :'
+    - ' Guilde des Aventuriers'
+  ID: 66
+  POSITION-X: 2
+  POSITION-Y: 3
+  VIEW-PERMISSION: 'train.ticket'
+  
+destination_porteo:
+  COMMAND: 'console: bq event {player} hollish.destination_porteo'
+  NAME: '&2Porte Ouest'
+  LORE:
+    - 'Sélectionner destination :'
+    - ' Porte Ouest de la'
+    - ' Ville d''Athelas'
+  ID: 66
+  POSITION-X: 3
+  POSITION-Y: 3
+  VIEW-PERMISSION: 'train.ticket'
+  
+destination_chateau:
+  COMMAND: 'console: bq event {player} hollish.destination_chateau'
+  NAME: '&2Château Royal'
+  LORE:
+    - 'Sélectionner destination :'
+    - ' Château Royal d''Athelas'
+  ID: 66
+  POSITION-X: 4
+  POSITION-Y: 3
+  VIEW-PERMISSION: 'train.ticket'
+  
+destination_porten:
+  COMMAND: 'console: bq event {player} hollish.destination_porten'
+  NAME: '&2Porte Nord'
+  LORE:
+    - 'Sélectionner destination :'
+    - ' Porte Nord de la'
+    - ' Ville d''Athelas'
+  ID: 66
+  POSITION-X: 5
+  POSITION-Y: 3
+  VIEW-PERMISSION: 'train.ticket'
+  
+destination_gm:
+  COMMAND: 'console: bq event {player} hollish.destination_gm'
+  NAME: '&2Grand Marché'
+  LORE:
+    - 'Sélectionner destination :'
+    - ' Grand Marché'
+  ID: 66
+  POSITION-X: 6
+  POSITION-Y: 3
+  VIEW-PERMISSION: 'train.ticket'
+  
+destination_dwarf:
+  COMMAND: 'console: bq event {player} hollish.destination_dwarf'
+  NAME: '&2Ingor - Ville des Nains'
+  LORE:
+    - 'Sélectionner destination :'
+    - ' Ingor la Ville des Nains'
+  ID: 66
+  POSITION-X: 1
+  POSITION-Y: 4
+  VIEW-PERMISSION: 'train.ticket'
+  
+destination_village:
+  COMMAND: 'console: bq event {player} hollish.destination_village'
+  NAME: '&2Village'
+  LORE:
+    - 'Sélectionner destination :'
+    - ' Village'
+  ID: 66
+  POSITION-X: 2
+  POSITION-Y: 4
+  VIEW-PERMISSION: 'train.ticket'
+  
+destination_sanctuary:
+  COMMAND: 'console: bq event {player} hollish.destination_sanctuary'
+  NAME: '&2Sanctuaire'
+  LORE:
+    - 'Sélectionner destination :'
+    - ' Sanctuaire'
+  ID: 66
+  POSITION-X: 3
+  POSITION-Y: 4
+  VIEW-PERMISSION: 'train.ticket'

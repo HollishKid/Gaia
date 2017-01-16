@@ -1,0 +1,20 @@
+quester: Garde Royal
+first: livraison
+stop: 'false'
+################
+#Options du NPC#
+################
+NPC_options:
+  livraison:
+    text: Bonjour !
+    pointer: bonjour
+  non:
+    text: Ah non, c'est mon collègue à côté... !
+###################
+#Options du joueur#
+###################
+player_options:
+  bonjour:
+    text: Vous êtes le fils de Paulette ? J'ai quelque chose  pour vous !
+    condition: gateau_paulette,tag_fils_paulette
+    pointer: non

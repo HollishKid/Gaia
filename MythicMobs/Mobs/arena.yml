@@ -1,0 +1,26 @@
+takeo:
+  Type: baby_zombie
+  Display: "&4Takeo"
+  Health: 75
+  Damage: 2
+  Disguise:
+    Type: player
+    Player: "&4Takeo"
+    Skin: Kerl
+  Drops:
+  - takeoDrops
+  AIGoalSelectors:
+  - 0 clear 
+  - 1 RandomStroll
+  - 2 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Options:
+    FollowRange: 30
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    ShowHealth: true

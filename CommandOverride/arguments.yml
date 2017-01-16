@@ -1,0 +1,15 @@
+/sanction:
+  min: '2'
+  message: '&4Utilisation correcte : &c/sanction [fer/or/diamant] [nom du joueur]'
+/liberer:
+  min: '1'
+  message: '&4Utilisation correcte : &c/liberer [nom du joueur]'
+/bug:
+  min: '1'
+  message: '&4Utilisation correcte : &c/bug [nom du joueur]'
+/histoire:
+  min: '1'
+  message: '&4Utilisation correcte : &c/histoire [nom du joueur]'
+/tell:
+  min: '2'
+  message: '&4Usage: &c /tell <player> <message>'

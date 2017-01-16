@@ -1,0 +1,53 @@
+quester: Banquier
+first: unknown,welcome,client
+stop: 'false'
+#Options du NPC
+NPC_options:
+  unknown:
+    text: Vous devez être Citoyen avant de pouvoir vous servir de la Banque !
+    conditions: '!intendant_done'
+  welcome:
+    text: Bienvenue dans la banque d'&dAthelas &2%player% &a&o! Je vois que vous n'avez pas de compte dans notre établissement, souhaitez vous en ouvrir un ?
+    conditions: '!client,intendant_done'
+    pointer: oui,non,compte
+  client:
+    text: 'Bienvenue &2%player% &a&o! En poche &f¤ &2%ph.vault_eco_balance_fixed% &a&oCompte &f¤ &2%point.compte.amount%'
+    conditions: client
+    pointer: depret,autre
+  autre_pointer:
+    text: Bien entendu, en quoi puis-je vous aider &2%player% &a&o?
+    pointer: acces,argent
+  argent_rep:
+    text: Votre argent est entreposé dans le coffre fort de la banque. Son emplacement est gardé secret et sa protection accrue par rapport aux coffres des clients.
+  acces_rep:
+    text: Bien entendu, veuillez vous adresser au &dMaître de Clé &a&oqui saura vous aiguiller davantage.
+  oui_rep:
+    text: Excellent ! Je vous inscrit dans nos registres immédiatement &2%player% &a&o! Vous pouvez aller parler au &dMaître des Clés &a&oqui vous expliquera comment fonctionne le coffre.
+  compte_rep:
+    text: Ouvrir un compte vous permet de déposer et retirer de l'argent et surtout d'avoir un coffre pour déposer vos objets précieux au sein de la banque. Elle offre sa protection ancienne et jamais brisée.
+  depret_open:
+    text: Tout à fait, voici vos possibilités.
+    event: depret_open
+#Options du joueur
+player_options:
+  oui:
+    text: Absolument !
+    events: client
+    pointer: oui_rep
+  non:
+    text: Non merci !
+  compte:
+    text: A quoi ça sert d'ouvrir un compte dans votre banque ?
+    pointer: compte_rep
+  depret:
+    text: Je veux déposer/retirer de l'argent.
+    pointer: depret_open
+  acces:
+    text: Je souhaiterais accéder à mon coffre.
+    pointer: acces_rep
+  argent:
+    text: Qu'est-ce qu'il se passe avec l'argent que je mets sur mon compte ?
+    pointer: argent_rep
+  autre:
+    text: Pouvez vous me renseigner sur autre chose ?
+    pointer: autre_pointer

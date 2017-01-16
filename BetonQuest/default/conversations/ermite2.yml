@@ -1,0 +1,17 @@
+quester: Ermite
+first: hello
+stop: 'false'
+############
+#          #
+#   NPC    #
+#          #
+############
+NPC_options:
+  hello:
+    text: Soyez patient, &2%player%&a&o, nous sommes bientôt arrivés ...
+############
+#          #
+#  JOUEUR  #
+#          #
+############
+player_options:

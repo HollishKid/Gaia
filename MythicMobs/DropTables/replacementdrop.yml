@@ -1,0 +1,189 @@
+#
+#
+# Replacement Drops
+#
+############################
+#
+# Zombie
+#
+zombie1drops:
+  Conditions:
+  - playerwithin 30
+  - targetwithin 30
+  - incombat
+  - level 1-3
+  Drops:
+  - mc_rotten_flesh 1 1
+  - mc_head_zombie 1 0.0001
+  DropsPerLevel:
+  - exp 1 1
+  - money 1 1
+  - 295 1-3 0.01
+  - 361 1 0.001
+  - mc_torch 1 0.01  
+  - coal 1-2 0.01
+  - iron_ingot 1 0.001
+zombie2drops:
+  Conditions:
+  - playerwithin 30
+  - targetwithin 30
+  - incombat
+  - level 4-5
+  Drops:
+  - mc_rotten_flesh 1 1
+  - mc_head_zombie 1 0.0001
+  DropsPerLevel:
+  - money 2 1
+  - exp 1 1
+  - 295 1-3 0.02
+  - 361 1 0.002
+  - 362 1 0.1
+  - mc_torch 1 0.025  
+  - coal 1-3 0.01
+  - iron_ingot 1 0.001
+  - gold_ingot 1 0.001
+  - 351:4 1 0.005
+zombie3drops:
+  Conditions:
+  - playerwithin 30
+  - targetwithin 30
+  - incombat
+  - level 5-7
+  Drops:
+  - mc_rotten_flesh 1 1
+  - mc_head_zombie 1 0.001
+  DropsPerLevel:
+  - money 3 1
+  - exp 1 1
+  - 435 1-3 0.001
+  - 361 1 0.01
+  - 362 1 0.02
+  - mc_torch 1 0.05  
+  - coal 1-4 0.01
+  - iron_ingot 1-2 0.02
+  - gold_ingot 1-2 0.01
+  - 351:4 1-2 0.01
+#
+# Skeleton
+#
+skeleton1drops:
+  Conditions:
+  - playerwithin 30
+  - targetwithin 30
+  - incombat
+  - level 1-3
+  Drops:
+  - bone 1 1
+  - mc_head_skeleton 1 0.0001
+  DropsPerLevel:
+  - money 1 1
+  - exp 1 1
+  - 295 1-3 0.05
+  - 361 1 0.01
+  - mc_torch 1 0.01  
+  - coal 1-2 0.01
+  - iron_ingot 1 0.01
+  - mc_bow 1 0.01
+  - 351:15 1-2 0.05
+skeleton2drops:
+  Conditions:
+  - playerwithin 30
+  - targetwithin 30
+  - incombat
+  - level 4-5
+  Drops:
+  - bone 1 1
+  - mc_head_skeleton 1 0.0001
+  DropsPerLevel:
+  - money 2 1
+  - exp 1 1
+  - 295 1-3 0.05
+  - 361 1 0.01
+  - 362 1 0.02
+  - mc_torch 1 0.025  
+  - coal 1-3 0.05
+  - iron_ingot 1 0.02
+  - gold_ingot 1 0.01
+  - 351:4 1 0.005
+  - mc_bow 1 0.01
+  - 351:15 1-2 0.05
+skeleton3drops:
+  Conditions:
+  - playerwithin 30
+  - targetwithin 30
+  - incombat
+  - level 5-7
+  Drops:
+  - bone 1 1
+  - mc_head_skeleton 1 0.001
+  DropsPerLevel:
+  - money 3 1
+  - exp 1 1
+  - 435 1-3 0.001
+  - 361 1 0.1
+  - 362 1 0.2
+  - mc_torch 1 0.05  
+  - coal 1-4 0.1
+  - iron_ingot 1-2 0.04
+  - gold_ingot 1-2 0.02
+  - 351:4 1-2 0.01
+  - mc_bow 1 0.01
+  - 351:15 1-2 0.01
+#
+# Creeper
+#
+creeper1drops:
+  Conditions:
+  - playerwithin 30
+  - targetwithin 30
+  - incombat
+  Drops:
+  - 289 1 1
+  - mc_head_creeper 1 0.0001 
+  DropsPerLevel:
+  - 289 1 0.1
+  - exp 1 1
+  - 331 1-3 0.01
+  - mc_torch 1 0.02
+creeper2drops:
+  Conditions:
+  - playerwithin 30
+  - targetwithin 30
+  - incombat
+  Drops:
+  - 289 1 1
+  - mc_head_creeper 1 0.001
+  DropsPerLevel:
+  - 289 1 0.1
+  - exp 1 1
+  - 331 1-3 0.01
+  - mc_torch 1 0.02
+#
+# Spider
+#
+spider1drops:
+  Conditions:
+  - playerwithin 30
+  - targetwithin 30
+  - incombat
+  - level 1-3
+  Drops:
+  - 375 1 1
+  - mc_head_spider 1 0.0001
+  DropsPerLevel:
+  - money 1 1
+  - 287 1 0.3
+  - exp 1 1
+spider2drops:
+  Conditions:
+  - playerwithin 30
+  - targetwithin 30
+  - incombat
+  - level 4-5
+  Drops:
+  - 375 1 1
+  - mc_head_spider 1 0.001
+  DropsPerLevel:
+  - money 1 1
+  - 287 1 0.3
+  - exp 1 1

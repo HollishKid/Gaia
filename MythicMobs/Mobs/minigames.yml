@@ -1,0 +1,116 @@
+assault_melee:
+  Type: zombie
+  Display: '&cAssaillant &dNiv.<mob.level>'
+  Health: 30
+  Damage: 1
+  Faction: assaillant
+  Options:
+    FollowRange: 40
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 0.20
+    AlwaysShowName: true
+    Despawn: true
+  Modules:
+    ThreatTable: false
+  Equipment:
+  - mc_leather_helmet:4
+  - mc_iron_sword:0
+  Skills:
+  - command{c="sudo <target.name> thisistheassaultminigamenormalkilled"} @trigger ~onDeath
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  LevelModifiers:
+    Health: 5
+    Damage: 1
+    KnockbackResistance: 0.05
+    MovementSpeed: 0.02
+
+assault_archer:
+  Type: skeleton
+  Display: '&cAssaillant Archer &dNiv.<mob.level>'
+  Health: 25
+  Faction: assaillant
+  Options:
+    FollowRange: 50
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    KnockbackResistance: 0.15
+    AlwaysShowName: true
+  Modules:
+    ThreatTable: false
+  Equipment:
+  - mc_leather_helmet:4
+  - mc_bow:0
+  Skills:
+  - command{c="sudo <target.name> thisistheassaultminigamenormalkilled"} @trigger ~onDeath
+  DamageModifiers:
+  - PROJECTILE 0.8 
+  AIGoalSelectors:
+  - 0 clear
+  - 1 arrowattack
+  - 2 randomstroll
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  LevelModifiers:
+    Health: 5
+    Damage: 1
+    KnockbackResistance: 0.05
+    MovementSpeed: 0.02
+    Despawn: true
+#
+#
+# Boss
+#
+#
+assault_boss:
+  Type: zombie
+  BossBar:
+    Enabled: true
+    Title: '&cCapitaine'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Display: '&cCapitaine &dNiv.<mob.level>'
+  Health: 50
+  Damage: 5
+  Faction: assaillant
+  Options:
+    FollowRange: 40
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 0.20
+    AlwaysShowName: true
+    Despawn: true
+  Modules:
+    ThreatTable: false
+  Equipment:
+  - mc_leather_helmet:4
+  - mc_gold_sword:0
+  Skills:
+  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#d9ff8a} @self ~onDamaged
+  - command{c="sudo <target.name> thisistheassaultminigamecaptainkilled"} @trigger ~onDeath
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  LevelModifiers:
+    Health: 5
+    Damage: 1
+    KnockbackResistance: 0.05
+    MovementSpeed: 0.02

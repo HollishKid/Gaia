@@ -1,0 +1,23 @@
+quester: Milicien
+first: n1,n2,n3,n4,n5
+stop: 'false'
+#
+#Random Sentences
+#
+NPC_options:
+  n1:
+    text: Ah, tu viens goûter les joies de vraie côte?!
+    conditions: random20 
+  n2:
+    text: Cet endroit est vraiment sympathique ...
+    conditions: random40
+  n3:
+    text: Il y a tant de choses à voir sur la côte !
+    conditions: random60
+  n4:
+    text: Tu as déjà regardé dans la mer, vers le sud ouest?
+    conditions: random80
+  n5:
+    text: Il paraît l'île de Tortuga renferme une quantité folle de richesses ...!
+    conditions: random100
+player_options:

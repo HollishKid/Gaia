@@ -1,0 +1,71 @@
+quester: Loukran
+first: welcome
+stop: 'false'
+#
+# Options NPC
+#
+NPC_options:
+  welcome:
+    text: Bienvenue à vous %player% ! Je vois que vous êtes nouveau en ces lieux !
+    conditions: voir_superieur
+    pointer: salut,quest_done
+  selection:
+    text: Je n'y suis pas contre, cela nous permettra de faire connaissances !
+    pointer: rep1,rep2,rep3
+  rep1_ans:
+    text: Je me nomme Loukran et je suis l'Herboriste de Mysteria, je m'y connais dans toutes sortes de plantes !
+  rep2_ans:
+    text: J'étais dans mon village natal non loin d'ici, j'y vivais heureux avec ma famille jusqu'à ce jour funeste...
+    pointer: int2
+  rep3_ans:
+    text: Je n'ai pas à me plaindre, tout le monde est chaleureux ! Mais j'ai quelques soucis avec certaines affaires en ce moment...
+    pointer: int3
+  int2_ans:
+    text: Je ne préfère pas ressasser ces souvenirs douloureux.
+  int3_ans:
+    text: Il y a peu de temps de cela, je devais recevoir une cargaison de plantes rares, mais je n'ai plus aucunes nouvelles de ce qu'il en est.
+    pointer: quest
+  quest_rep:
+    text: Vous feriez ça ? Soit, allez faire un tour dans le camp des brigands, il devrait y avoir des informations sur l'emplacement de la cargaison.
+    events: louk_qE1
+  quest_done_rep:
+    text: Merci à vous ! C'est l'une des plus rares ! Vous n'avez rien pas trouver autre chose comme des indices ?
+    events: louk_qpr
+    pointer: quest_done1
+  quest_done_rep1:
+    text: Mmmmh.. Cela semble intéressant... Je vais étudier ça de plus près. Choisissez l'une des récompenses que je vous offre.
+    events: louk_qdone
+#
+# Options Joueur
+#
+player_options:
+  salut:
+    text: Merci de votre accueil ! Puis-je vous demander quelques informations vous concernant ?
+    pointer: selection
+  rep1:
+    text: Qui êtes vous et que faîtes vous ici ?
+    pointer: rep1_ans
+  rep2:
+    text: Où êtiez vous avant votre arrivée à Mysteria ?
+    pointer: rep2_ans
+  rep3:
+    text: Votre vie en ces lieux vous est paisible ?
+    conditions: '!louk_qE1,!louk_qE2,!louk_qE3'
+    pointer: rep3_ans
+  int2:
+    text: Puis_je vous demander, sans indiscretion, ce qu'il s'est passé ?
+    pointer: int2_ans
+  int3:
+    text: Pouvez-vous m'en dire plus ?
+    pointer: int3_ans
+  quest:
+    text: Je pourrais voir ce qu'il en est si vous le souhaitez !
+    pointer: quest_rep
+  quest_done:
+    text: J'ai trouvé l'une de vos plantes !
+    conditions: louk_qE3
+    pointer: quest_done_rep
+  quest_done1:
+    text: Il y avait aussi ce journal, je ne sais pas si il pourrait vous être utile.
+    event: louk_qjc
+    pointer: quest_done_rep1

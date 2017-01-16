@@ -1,0 +1,694 @@
+#
+#CommandRegions - By GiansCode
+#
+
+#Perform certain commands when a player enters/leaves a specific WorldGuard region
+
+regions:
+    'assault':
+        enterConsoleCommands: ''
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands:
+        - 'thisistheleaveconsolecommandforassault'
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'training_grounds':
+        enterConsoleCommands: ''
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'mm m kill dummy'
+        - 'bq event %player% default.pvp_training_leaver'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'banque_athelas':
+        enterConsoleCommands:
+        - 'bq event %player% default.vault_tester'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'air_parcours':
+        enterConsoleCommands: ''
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'bq event %player% hollish.air_temple_closer_test'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'temple_cabin':
+        enterConsoleCommands: ''
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'bq event %player% hollish.mage_entry_story_leaver'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hole_cap':
+        enterConsoleCommands:
+        - 'bq event %player% drisgan.hol_foldertele'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'las_bureau':
+        enterConsoleCommands:
+        - 'bq event %player% drisgan.las_checkopen'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.las_closedoor'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_salleb1':
+        enterConsoleCommands:
+        - 'bq event %player% drisgan.hol_checkpopsalleB1'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_depopsalleB1'
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_salleb2':
+        enterConsoleCommands:
+        - 'bq event %player% drisgan.hol_checkpopsalleB2'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_depopsalleB2'
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_salleb3':
+        enterConsoleCommands:
+        - 'bq event %player% drisgan.hol_checkpopsalleB3'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_depopsalleB3'
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_entree':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_aileg1':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_aileg01':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_aileg2':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_aileg3':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_aileg4':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_aileg03':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_aileg5':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_ailed01':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_ailed1':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_d2':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_d3':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_d4':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_d5':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_erek_d6':
+        enterConsoleCommands:
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - 'bq event %player% drisgan.hol_checkexit'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'drisgan':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":"Drisgan","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":" ","italic":true,"color":"gray"}'
+        - 'bq event %player% drisgan.check_indrisgan'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'drisgan_balcony':
+        enterConsoleCommands:
+        - 'bq event %player% Drisgan.check_cine'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'lasswell_cave':
+        enterConsoleCommands:
+        - 'bq event %player% drisgan.las_entrycheck'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'athelas_castle':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":" ","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Château Royal","italic":true,"color":"gray"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'athelas_castle_second':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":" ","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Deuxième Étage","italic":true,"color":"gray"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'athelas_gm':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":" ","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Grand Marché","italic":true,"color":"gray"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'athelas_bank':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":" ","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Banque","italic":true,"color":"gray"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'athelas_station':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":" ","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Gare Centrale","italic":true,"color":"gray"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'athelas_biblio':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":" ","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Bibliothèque","italic":true,"color":"gray"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'athelas_farm':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":" ","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Ferme Communautaire","italic":true,"color":"gray"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: true
+        joinMessage:
+        - '&cCette ferme est &c&llibre &cd''exploitation. &cTout ce que vous plantez peut être récupéré par toutes les autres personnes ! &4Aucune plainte au Staff n''est recevable !&f'
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'start3':
+        enterConsoleCommands:
+        - 'bq event %player% default.player_testeur'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'arena':
+        enterConsoleCommands:
+        - 'bq event %player% default.arena_testeur'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'thief_treasure':
+        enterConsoleCommands: ''
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'bq event %player% Zedd.thieftreasure_reset'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'bureau_maka':
+        enterConsoleCommands: 
+        - 'bq event %player% Zedd.bureau_maka_check'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'bq event %player% Zedd.stacy_open'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'guild_vip':
+        enterConsoleCommands: 
+        - 'bq event %player% Zedd.check_guildmember'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'pre_louvre':
+        enterConsoleCommands:
+        - "bq event %player% hollish.louvre_enter"
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: 
+        - "bq event %player% hollish.louvre_leave"
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'thespawn':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% subtitle {"text":"Centre d''Athelas","italic":true,"color":"gray"}'
+        - 'title %player% title {"text":"Spawn","color":"dark_purple"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'athelas':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% subtitle {"text":"Première Ville","italic":true,"color":"gray"}'
+        - 'title %player% title {"text":"Athelas","color":"dark_purple"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'east':
+        enterConsoleCommands:
+        - 'title %player% times 20 100 20'
+        - 'title %player% title {"text":"Continent de l''Est","italic":true,"color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Perte d''Inventaire si vous mourrez !","bold":true,"color":"red"}'
+        - 'bq event %player% default.east_perms_checker_in'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'bq event %player% default.east_perms_checker_out'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'mine_athelas_mine':
+        enterConsoleCommands:
+        - 'bq event %player% hollish.mine_athelas_tester'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'tenebras':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% subtitle {"text":"Ville du Prince","italic":true,"color":"gray"}'
+        - 'title %player% title {"text":"Ténébras","color":"dark_purple"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'salon_grand_voyageur':
+        enterConsoleCommands:
+        - 'bq event %player% hollish.salon_grand_voyageur'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'salon_banquier':
+        enterConsoleCommands:
+        - 'bq event %player% hollish.salon_banquier'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'salon_bibliotheque':
+        enterConsoleCommands:
+        - 'bq event %player% hollish.salon_bibliotheque'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'nether_portal_access':
+        enterConsoleCommands:
+        - 'bq event %player% default.nether_entrance_reached'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'nether_portal_access2':
+        enterConsoleCommands:
+        - 'bq event %player% default.nether_entrance_reached'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'dwarf_castle':
+        enterConsoleCommands:
+        - 'bq event %player% hollish.dwarf_castle_tester'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'bq event %player% hollish.dwarf_castle_phase0'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'dwarf_bridge1':
+        enterConsoleCommands:
+        - 'bq event %player% hollish.dwarf_bridge1_tester'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'bq event %player% hollish.dwarf_bridge1_close'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'dwarf_bridge2':
+        enterConsoleCommands:
+        - 'bq event %player% hollish.dwarf_bridge2_tester'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'bq event %player% hollish.dwarf_bridge2_close1'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'dwarf_hall':
+        enterConsoleCommands:
+        - 'bq event %player% hollish.dwarf_hall_tester'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'ingor':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% subtitle {"text":"Ville des Nains","italic":true,"color":"gray"}'
+        - 'title %player% title {"text":"Ingor","color":"dark_purple"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'mine_entrance':
+        enterConsoleCommands:
+        - 'bq event %player% default.outer_mine_tester'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'dwarf_mine':
+        enterConsoleCommands:
+        - 'pex user %player% add -keepitems.keep'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'pex user %player% remove -keepitems.keep'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'foret_athelas2':
+        enterConsoleCommands:
+        - 'bq event %player% default.foret_athelas2'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'pex user %player% remove -keepitems.keep'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'north':
+        enterConsoleCommands:
+        - 'pex user %player% add -keepitems.keep'
+        - 'title %player% title {"text":"Grand Nord","italic":true,"color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Perte d''Inventaire si vous mourrez !","bold":true,"color":"red"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'pex user %player% remove -keepitems.keep'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'mysteria_porte1':
+        enterConsoleCommands:
+        - 'bq event %player% Mysteria.porte1'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+messages:
+    noPermission: "&dVous n'avez pas la permission pour faire cela."
+    reloadSuccess: "&aGrand Horloger, les commandes de région ont été mises à jour."
+
+#Commands and Permissions:
+#/crreload - Reloads the configuration file - commandregions.commands.reload
+        
+#Requirements:
+#WorldEdit: http://dev.bukkit.org/bukkit-plugins/worldedit/
+#WorldGuard: http://dev.bukkit.org/bukkit-plugins/worldguard/
+#WorldGuardRegionEvents: https://www.spigotmc.org/resources/wgregionevents-continued.15946/
+#PlaceholderAPI: https://www.spigotmc.org/resources/placeholderapi.6245/ (OPTIONAL)
+# EXAMPLE
+#    'pre_louvre': #The name of the region. To ensure the plugin reading your imput, please spell it in all lower case.
+#        enterConsoleCommands: #Commands to be perfomed by the console whenever a player enters a region. Use %player% for the players name and %region% for the region ID.
+#        - "pex user %player% remove -worldguard* Gaia"
+#        enterPlayerCommands: #Commands to be perfomed by the player whenever they enter a region. Use %player% for the players name and %region% for the region ID.
+#        - "me has just entered %region%"
+#        sendJoinMessage: true
+#        joinMessage: "&aYou have entered the spawn region"
+#        leaveConsoleCommands: #Commands to be perfomed by the console whenever a player leaves a region. Use %player% for the players name and %region% for the region ID.
+#        - "msg %player% You have left %region%"
+#        leavePlayerCommands: #Commands to be perfomed by the player whenever they leave a region. Use %player% for the players name and %region% for the region ID.
+#        - "me has just left %region%"
+#        sendLeaveMessage: true
+#        leaveMessage: "&cYou have left the spawn region"
+#           
+#    
+#    

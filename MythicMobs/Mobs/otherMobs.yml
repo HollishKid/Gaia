@@ -1,0 +1,109 @@
+### Ender Skeleton
+endske1:
+  Type: WITHER_SKELETON
+  Display: '&5Ender Skeleton'
+  Faction: zombies
+  Health: 50
+  AIGoalSelectors:
+  - 0 clear
+  - 1 arrowattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 SpecificFaction gardes
+  Options:
+    FollowRange: 30
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Despawn: true
+    PreventItemPickup: true
+    MovementSpeed: 0.25
+  Equipment:
+    - bow:0
+  DamageModifiers:
+  - PROJECTILE 0.05
+  Skills:
+  - shoot{t=arrow;d=5;md=25;v=10} @Target ~onDamaged 0.25
+  - effect:sound{sound=mob.endermen.idle;p=0} @selflocation ~onTimer:60 0.1
+  - effect:particles{particle=portal;amount=150;vSpread=0.5;hSpread=0.75;Speed=0.3;yoffset=1} @self ~onDeath 1
+  - effect:particles{particle=portal;amount=50;vSpread=0.5;hSpread=1;Speed=0.3;yoffset=1} @self ~onDamaged 1
+endghast:
+  Type: ghast
+  Display: '&5Ghast'
+  Health: 20
+  Damage: 20
+  Options:
+    FollowRange: 30
+    PreventOtherDrops: true
+    Despawn: true
+    PreventItemPickup: true
+    MovementSpeed: 0.30
+endzombie:
+  Type: zombie
+  Display: '&5Zombie'
+  Faction: zombies
+  Health: 10
+  Damage: 2
+  Disguise:
+    Type: player
+    Player: "&5Zombie"
+    Skin: x_x
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 SpecificFaction gardes
+  Options:
+    FollowRange: 30
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Despawn: true
+    PreventItemPickup: true
+    MovementSpeed: 0.20
+championroyal:
+  Type: zombie
+  Display: '&aChampion'
+  Faction: gardes
+  Health: 50
+  Damage: 9
+  Disguise:
+    Type: player
+    Player: "&aChampion"
+    Skin: kinglahcrab
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 SpecificFaction zombies
+  Options:
+    FollowRange: 20
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Despawn: true
+    PreventItemPickup: true
+    MovementSpeed: 0.27
+archerroyal:
+  Type: skeleton
+  Display: '&aArcher Royal'
+  Faction: gardes
+  Health: 50
+  Disguise:
+    Type: player
+    Player: "&aArcher Royal"
+    Skin: kinglahcrab
+  AIGoalSelectors:
+  - 0 clear
+  - 1 arrowattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 SpecificFaction zombies
+  Options:
+    FollowRange: 20
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Despawn: true
+    PreventItemPickup: true
+    MovementSpeed: 0.20

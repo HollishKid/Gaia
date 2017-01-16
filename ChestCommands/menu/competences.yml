@@ -1,0 +1,234 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dCompétences'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 4
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: 'competences; compet; c'
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+
+epees:
+  COMMAND: 'épées'
+  NAME: '&cEpées'
+  LORE:
+    - 'Affiche la compétence Epées'
+  ID: diamond_sword
+  POSITION-X: 2
+  POSITION-Y: 1
+
+poings:
+  COMMAND: 'poings'
+  NAME: '&cPoings'
+  LORE:
+    - 'Affiche la compétence Poings'
+  ID: shield
+  POSITION-X: 1
+  POSITION-Y: 1
+
+haches:
+  COMMAND: 'haches'
+  NAME: '&cHâches'
+  LORE:
+    - 'Affiche la compétence Hâches'
+  ID: diamond_axe
+  POSITION-X: 3
+  POSITION-Y: 1
+
+archerie:
+  COMMAND: 'archerie'
+  NAME: '&cTir à l''arc'
+  LORE:
+    - 'Affiche la compétence Tir à l''Arc'
+  ID: bow
+  POSITION-X: 4
+  POSITION-Y: 1
+  
+acrobatie:
+  COMMAND: 'acrobatie'
+  NAME: '&cAcrobatie'
+  LORE:
+    - 'Affiche la compétence Acrobatie'
+  ID: ladder
+  POSITION-X: 5
+  POSITION-Y: 1
+
+minage:
+  COMMAND: 'minage'
+  NAME: '&aMinage'
+  LORE:
+    - 'Affiche la compétence Minage'
+  ID: gold pickaxe
+  POSITION-X: 1
+  POSITION-Y: 2
+  
+excavation:
+  COMMAND: 'excavation'
+  NAME: '&aExcavation'
+  LORE:
+    - 'Affiche la compétence Excavation'
+  ID: gold spade
+  POSITION-X: 2
+  POSITION-Y: 2
+
+bucheronnage:
+  COMMAND: 'bûcheronnage'
+  NAME: '&aBûcheronnage'
+  LORE:
+    - 'Affiche la compétence Bûcheronnage'
+  ID: gold axe
+  POSITION-X: 3
+  POSITION-Y: 2
+
+peche:
+  COMMAND: 'pêche'
+  NAME: '&aPêche'
+  LORE:
+    - 'Affiche la compétence Pêche'
+  ID: fishing rod
+  POSITION-X: 4
+  POSITION-Y: 2
+
+apprivoisement:
+  COMMAND: 'apprivoisement'
+  NAME: '&dApprivoisement'
+  LORE:
+    - 'Affiche la compétence Apprivoisement'
+  ID: leash
+  POSITION-X: 1
+  POSITION-Y: 3
+
+herboristerie:
+  COMMAND: 'herboristerie'
+  NAME: '&dHerboristerie'
+  LORE:
+    - 'Affiche la compétence Herboristerie'
+  ID: gold hoe
+  POSITION-X: 2
+  POSITION-Y: 3
+
+alchimie:
+  COMMAND: 'alchimie'
+  NAME: '&dAlchimie'
+  LORE:
+    - 'Affiche la compétence Alchimie'
+  ID: potion
+  POSITION-X: 3
+  POSITION-Y: 3
+
+reparation:
+  COMMAND: 'réparation'
+  NAME: '&dRéparation'
+  LORE:
+    - 'Affiche la compétence Réparation'
+  ID: anvil
+  POSITION-X: 4
+  POSITION-Y: 3
+  
+fonte:
+  COMMAND: 'fonte'
+  NAME: '&2Fonte'
+  ID: lava_bucket
+  LORE:
+    - 'Affiche la compétence Fonte'
+  POSITION-X: 2
+  POSITION-Y: 4 
+  
+recyclage:
+  COMMAND: 'recyclage'
+  NAME: '&2Recyclage'
+  ID: book
+  LORE:
+    - 'Affiche la compétence Recyclage'
+  POSITION-X: 1
+  POSITION-Y: 4 
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - '&cFerme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&cRetour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal'
+  POSITION-X: 8
+  POSITION-Y: 1
+  
+fullguide:
+  COMMAND: 'tell: &a&o http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Competences'
+  NAME: '&6Guide Complet'
+  ID: book
+  ENCHANTMENT: 'infinity, 1'
+  LORE:
+    - 'Affiche un lien vers le guide'
+    - ' complet de Compétences.'
+  POSITION-X: 9
+  POSITION-Y: 3
+  
+mcstats:
+  COMMAND: 'mcstats'
+  NAME: '&6Statistiques'
+  ID: book
+  LORE:
+    - 'Affiche vos Statistiques'
+    - 'Individuelles Complètes'
+  POSITION-X: 7
+  POSITION-Y: 4 
+  
+mcrank:
+  COMMAND: 'mcrank'
+  NAME: '&6Classement Personnel'
+  ID: book
+  LORE:
+    - 'Affiche votre Classement'
+    - 'des Compétences'
+  POSITION-X: 8
+  POSITION-Y: 4 
+  
+mctop:
+  COMMAND: 'mctop'
+  NAME: '&6Classement Global'
+  ID: torch
+  LORE:
+    - 'Affiche le Classement'
+    - 'Global des Compétences'
+  POSITION-X: 9
+  POSITION-Y: 4 

@@ -1,0 +1,29 @@
+brigand:
+  Mobtype: baby_zombie
+  Display: '&4Brigand'
+  Health: 68
+  Damage: 3
+  Equipment:
+  - 276:1
+  Disguise:
+    Type: player
+    Player: '&4Brigand'
+    Skin: xX_Milky
+  Drops:
+  - brigandDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 RandomStroll
+  - 3 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget
+  - 2 players
+  Options:
+    FollowRange: 30
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    ShowHealth: true

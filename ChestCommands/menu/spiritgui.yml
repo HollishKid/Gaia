@@ -1,0 +1,490 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dSpiritualité'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 8
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+epees1:
+  COMMAND: 'console: bq event {player} default.spirit_epees1'
+  NAME: '&aÉpées'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Épées.'
+  ID: diamond_sword
+  POSITION-X: 1
+  POSITION-Y: 2
+  
+ 
+epees2:
+  COMMAND: 'console: bq event {player} default.spirit_epees2'
+  NAME: '&aÉpées'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Épées.'
+  ID: diamond_sword
+  POSITION-X: 2
+  POSITION-Y: 2
+  
+  
+epees3:
+  COMMAND: 'console: bq event {player} default.spirit_epees3'
+  NAME: '&aÉpées'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Épées.'
+  ID: diamond_sword
+  POSITION-X: 3
+  POSITION-Y: 2
+  
+  
+poings1:
+  COMMAND: 'console: bq event {player} default.spirit_poings1'
+  NAME: '&aPoings'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Poings.'
+  ID: shield
+  POSITION-X: 1
+  POSITION-Y: 3
+  
+ 
+poings2:
+  COMMAND: 'console: bq event {player} default.spirit_poings2'
+  NAME: '&aPoings'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Poings.'
+  ID: shield
+  POSITION-X: 2
+  POSITION-Y: 3
+  
+  
+poings3:
+  COMMAND: 'console: bq event {player} default.spirit_poings3'
+  NAME: '&aPoings'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Poings.'
+  ID: shield
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+  
+haches1:
+  COMMAND: 'console: bq event {player} default.spirit_haches1'
+  NAME: '&aHaches'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Haches.'
+  ID: diamond_axe
+  POSITION-X: 1
+  POSITION-Y: 4
+  
+ 
+haches2:
+  COMMAND: 'console: bq event {player} default.spirit_haches2'
+  NAME: '&aHaches'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Haches.'
+  ID: diamond_axe
+  POSITION-X: 2
+  POSITION-Y: 4
+  
+  
+haches3:
+  COMMAND: 'console: bq event {player} default.spirit_haches3'
+  NAME: '&aHaches'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Haches.'
+  ID: diamond_axe
+  POSITION-X: 3
+  POSITION-Y: 4
+  
+  
+arc1:
+  COMMAND: 'console: bq event {player} default.spirit_arc1'
+  NAME: '&aTir à l''Arc'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Tir à l''Arc.'
+  ID: bow
+  POSITION-X: 1
+  POSITION-Y: 5
+  
+ 
+arc2:
+  COMMAND: 'console: bq event {player} default.spirit_arc2'
+  NAME: '&aTir à l''Arc'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Tir à l''Arc.'
+  ID: bow
+  POSITION-X: 2
+  POSITION-Y: 5
+  
+  
+arc3:
+  COMMAND: 'console: bq event {player} default.spirit_arc3'
+  NAME: '&aTir à l''Arc'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Tir à l''Arc.'
+  ID: bow
+  POSITION-X: 3
+  POSITION-Y: 5
+  
+  
+alchimiste1:
+  COMMAND: 'console: bq event {player} default.spirit_alchimiste1'
+  NAME: '&aAlchimie'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Alchimie.'
+  ID: 379
+  POSITION-X: 1
+  POSITION-Y: 6
+  
+ 
+alchimiste2:
+  COMMAND: 'console: bq event {player} default.spirit_alchimiste2'
+  NAME: '&aAlchimie'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Alchimie.'
+  ID: 379
+  POSITION-X: 2
+  POSITION-Y: 6
+  
+  
+alchimiste3:
+  COMMAND: 'console: bq event {player} default.spirit_alchimiste3'
+  NAME: '&aAlchimie'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Alchimie.'
+  ID: 379
+  POSITION-X: 3
+  POSITION-Y: 6
+  
+  
+herboriste1:
+  COMMAND: 'console: bq event {player} default.spirit_herboriste1'
+  NAME: '&aHerboristerie'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Herboristerie.'
+  ID: 294
+  POSITION-X: 1
+  POSITION-Y: 7
+  
+ 
+herboriste2:
+  COMMAND: 'console: bq event {player} default.spirit_herboriste2'
+  NAME: '&aHerboristerie'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Herboristerie.'
+  ID: 294
+  POSITION-X: 2
+  POSITION-Y: 7
+  
+  
+herboriste3:
+  COMMAND: 'console: bq event {player} default.spirit_herboriste3'
+  NAME: '&aHerboristerie'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Herboristerie.'
+  ID: 294
+  POSITION-X: 3
+  POSITION-Y: 7
+  
+  
+acrobate1:
+  COMMAND: 'console: bq event {player} default.spirit_acrobate1'
+  NAME: '&aAcrobatie'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Acrobatie.'
+  ID: leather_boots
+  POSITION-X: 1
+  POSITION-Y: 8
+  
+ 
+acrobate2:
+  COMMAND: 'console: bq event {player} default.spirit_acrobate2'
+  NAME: '&aAcrobatie'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Acrobatie.'
+  ID: leather_boots
+  POSITION-X: 2
+  POSITION-Y: 8
+  
+  
+acrobate3:
+  COMMAND: 'console: bq event {player} default.spirit_acrobate3'
+  NAME: '&aAcrobatie'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Acrobatie.'
+  ID: leather_boots
+  POSITION-X: 3
+  POSITION-Y: 8
+  
+  
+bucheron1:
+  COMMAND: 'console: bq event {player} default.spirit_bucheron1'
+  NAME: '&aBûcheronnage'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Bûcheronnage.'
+  ID: 286
+  POSITION-X: 5
+  POSITION-Y: 2
+  
+ 
+bucheron2:
+  COMMAND: 'console: bq event {player} default.spirit_bucheron2'
+  NAME: '&aBûcheronnage'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Bûcheronnage.'
+  ID: 286
+  POSITION-X: 6
+  POSITION-Y: 2
+  
+  
+bucheron3:
+  COMMAND: 'console: bq event {player} default.spirit_bucheron3'
+  NAME: '&aBûcheronnage'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Bûcheronnage.'
+  ID: 286
+  POSITION-X: 7
+  POSITION-Y: 2
+  
+  
+mineur1:
+  COMMAND: 'console: bq event {player} default.spirit_mineur1'
+  NAME: '&aMinage'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Minage.'
+  ID: diamond_pickaxe
+  POSITION-X: 5
+  POSITION-Y: 3
+  
+ 
+mineur2:
+  COMMAND: 'console: bq event {player} default.spirit_mineur2'
+  NAME: '&aMinage'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Minage.'
+  ID: diamond_pickaxe
+  POSITION-X: 6
+  POSITION-Y: 3
+  
+  
+mineur3:
+  COMMAND: 'console: bq event {player} default.spirit_mineur3'
+  NAME: '&aMinage'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Minage.'
+  ID: diamond_pickaxe
+  POSITION-X: 7
+  POSITION-Y: 3
+  
+  
+reparateur1:
+  COMMAND: 'console: bq event {player} default.spirit_reparateur1'
+  NAME: '&aRéparation'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Réparation.'
+  ID: iron_ingot
+  POSITION-X: 5
+  POSITION-Y: 4
+  
+ 
+reparateur2:
+  COMMAND: 'console: bq event {player} default.spirit_reparateur2'
+  NAME: '&aRéparation'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Réparation.'
+  ID: iron_ingot
+  POSITION-X: 6
+  POSITION-Y: 4
+  
+  
+reparateur3:
+  COMMAND: 'console: bq event {player} default.spirit_reparateur3'
+  NAME: '&aRéparation'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Réparation.'
+  ID: iron_ingot
+  POSITION-X: 7
+  POSITION-Y: 4
+  
+  
+excavateur1:
+  COMMAND: 'console: bq event {player} default.spirit_excavateur1'
+  NAME: '&aExcavation'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Excavation.'
+  ID: 284
+  POSITION-X: 5
+  POSITION-Y: 5
+  
+ 
+excavateur2:
+  COMMAND: 'console: bq event {player} default.spirit_excavateur2'
+  NAME: '&aExcavation'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Excavation.'
+  ID: 284
+  POSITION-X: 6
+  POSITION-Y: 5
+  
+  
+excavateur3:
+  COMMAND: 'console: bq event {player} default.spirit_excavateur3'
+  NAME: '&aExcavation'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Excavation.'
+  ID: 284
+  POSITION-X: 7
+  POSITION-Y: 5
+  
+  
+apprivoiseur1:
+  COMMAND: 'console: bq event {player} default.spirit_apprivoiseur1'
+  NAME: '&aApprivoisement'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Apprivoisement.'
+  ID: '397:5'
+  POSITION-X: 5
+  POSITION-Y: 6
+  
+ 
+apprivoiseur2:
+  COMMAND: 'console: bq event {player} default.spirit_apprivoiseur2'
+  NAME: '&aApprivoisement'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Apprivoisement.'
+  ID: '397:5'
+  POSITION-X: 6
+  POSITION-Y: 6
+  
+  
+apprivoiseur3:
+  COMMAND: 'console: bq event {player} default.spirit_apprivoiseur3'
+  NAME: '&aApprivoisement'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Apprivoisement.'
+  ID: '397:5'
+  POSITION-X: 7
+  POSITION-Y: 6
+  
+  
+pecheur1:
+  COMMAND: 'console: bq event {player} default.spirit_pecheur1'
+  NAME: '&aPêche'
+  LORE:
+    - 'Échanger 1 point Spiritualité'
+    - 'contre 10xp en Pêche.'
+  ID: fishing_rod
+  POSITION-X: 5
+  POSITION-Y: 7
+  
+ 
+pecheur2:
+  COMMAND: 'console: bq event {player} default.spirit_pecheur2'
+  NAME: '&aPêche'
+  LORE:
+    - 'Échanger 10 points Spiritualité'
+    - 'contre 100xp en Pêche.'
+  ID: fishing_rod
+  POSITION-X: 6
+  POSITION-Y: 7
+  
+  
+pecheur3:
+  COMMAND: 'console: bq event {player} default.spirit_pecheur3'
+  NAME: '&aPêche'
+  LORE:
+    - 'Échanger tous vos points'
+    - 'Spiritualité contre de'
+    - 'l''expérience en Pêche.'
+  ID: fishing_rod
+  POSITION-X: 7
+  POSITION-Y: 7
+  
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - '&cFerme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1

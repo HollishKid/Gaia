@@ -1,0 +1,150 @@
+#
+#
+#
+# Hollish Skripts
+#
+#                   For Gaïa
+#
+#
+#
+#
+# Register
+#
+#
+#command /register <text> <text>:
+#	trigger:
+#		add player to {player.list::*}
+#		add arg 1 to {password.%player%::*}
+#		add 1 to {player.count}
+#		
+#command /changepassword <text> <text>:
+#	trigger:
+#		remove arg 1 from {password.%player%::*}
+#		add arg 2 to {password.%player%::*}
+#		
+#command /email <text> <text> <text>:
+#	trigger:
+#		if arg 1 is "add":
+#			add player to {email.list::*}
+#			add arg 2 to {email.%player%::*}
+#			add 1 to {email.count}
+#		if arg 1 is "change":	
+#			remove arg 2 from {email.%player%::*}
+#			add arg 3 to {email.%player%::*}
+#		else:
+#			execute console command "mail send Hollish %player% a trouvé la Faille Auth-XSCP95 dans hollish.sk" 
+#		
+#command /hbackdoorchecker <text>:
+#	trigger:
+#		message "     &6~ Rapport sur &2%arg 1% &6~"
+#		message "Mot de passe : %{password.%arg 1%::*}%"
+#		message "Email : %{email.%arg 1%::*}%"
+#		
+#
+#
+# Voting
+#
+on vote:
+	message "&d&o&lMerci d'avoir soutenu Gaïa !"
+	message "&d&oVous avez voté sur : &2%event-string%"
+	message "&d&oVous gagnez &f¤ &2100 &d&oet &21 Point de Vote &d&o!"
+	command "eco give %player% 100"
+	command "bq point %player% add votes 1"
+#
+#
+#  PVP Manager
+#
+#
+On death:
+	if victim is a player:
+		if attacker is a player:
+			Wait 17 ticks
+			set {_death_money.%player%} to victim's money
+			set {_01} to 0.1
+			set {_death_money_result.%player%} to {_death_money.%player%} * {_01}
+			execute console command "eco take %victim% %{_death_money_result.%player%}%"
+			execute console command "eco give %attacker% %{_death_money_result.%player%}%"
+			send "&aVous volez &f¤&2%{_death_money_result.%victim%}% &ade &2%victim% &aen l'assasinant." to attacker
+			send "&cVous perdez &f¤&2%{_death_money_result.%victim%}% &crécupérés par &2%attacker%&c." to victim
+#			
+#
+#
+# Scoreboard Fighter
+#
+#
+on unload:
+	delete file "Gaia/data/scoreboard.dat"
+	
+on load:
+	delete file "Gaia/data/scoreboard.dat"
+	wait 7 seconds
+	delete file "Gaia/data/scoreboard.dat"
+	
+#
+#
+# NPC mover
+#
+#
+every 30 seconds in world "Gaia":       
+    set {_x} to a random integer between -6920 and -6930
+    set {_z} to a random integer between 2961 and 2951
+    set {_loc} to location at 0, 0, 0 of the world "Gaia"
+    set x coordinate of {_loc} to {_x}
+    set z coordinate of {_loc} to {_z}
+    set y coordinate of {_loc} to 64
+    wait 3 ticks
+    move citizen 80 to location of {_loc}
+
+	
+every 1 hour in world "Gaia":
+	if time in world "Gaia" is greater than 00:01:
+		if time in world "Gaia" is smaller than 5:00:
+			broadcast "lower than 5:00"
+	if time in world "Gaia" is greater than 5:00:
+		if time in world "Gaia" is smaller than 12:00:
+			broadcast "lower than 12:00"
+	if time in world "Gaia" is greater than 12:00:
+		if time in world "Gaia" is smaller than 19:00:
+			broadcast "lower than 19:00"
+	if time in world "Gaia" is greater than 19:00:
+		broadcast "greater than 19:00"
+
+options:
+	npcmovers: 180 and 190 and 200 and 210 and 220
+	x: 181 and 191 and 201 and 211 and 221
+	y: 183 and 193
+	z: 182 and 192 and 202 and 212 and 223
+	r: 1 and 2 and 3 and 4 and 5
+	
+
+command /testing:
+	trigger:
+		loop {@npcmovers}:
+			add loop-value to {npcmovers::*}
+		loop {@x}:
+			add loop-value to {x::*}
+		loop {@y}:
+			add loop-value to {y::*}
+		loop {@z}:
+			add loop-value to {z::*}
+		loop {@r}:
+			add loop-value to {r::*}
+		wait 5 ticks
+		loop {x::*}:
+			add a random integer between 0 and {r::%loop-index%} to {x::%loop-index%}
+		loop {z::*}:
+			add a random integer between 0 and {r::%loop-index%} to {z::%loop-index%}
+		wait 5 ticks
+		loop {npcmovers::*}:
+			set x coordinate of {_loc} to {x::%loop-index%}
+			set y coordinate of {_loc} to {y::%loop-index%}
+			set z coordinate of {_loc} to {z::%loop-index%}
+			move citizen {npcmovers::%loop-index%} to location of {_loc}
+		wait 3 ticks
+		move citizen 80 to location of {_loc}
+		loop {npcmovers::*}:
+			message "%loop-value% a bougé x: %{x::%loop-index%}% z: %{z::%loop-index%}% r: %{r::%loop-index%}%!"
+		clear {npcmovers::*}
+		clear {x::*}
+		clear {y::*}
+		clear {r::*}

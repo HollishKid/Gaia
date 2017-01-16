@@ -1,0 +1,380 @@
+# 
+# 
+#
+# Remplacement des Mobs Vanilla
+#
+#
+#
+#
+###########################################################
+#
+# Zombies
+#
+zombielvl:
+  Type: zombie
+  Display: '&cZombie &dNiv.<mob.level>'
+  Health: 20
+  Damage: 3
+  Faction: zombies
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.21
+    PreventOtherDrops: true
+    KnockbackResistance: 0.20
+    Despawn: true    
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 fleesun
+  - 4 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget 
+  - 2 players
+  Drops:  
+  - zombie1drops
+  - zombie2drops
+  - zombie3drops
+  LevelModifiers:
+    Health: 5
+    Damage: 1
+    KnockbackResistance: 0.03
+    MovementSpeed: 0.02
+#
+# Skeletons
+#
+skeletonlvl:
+  Type: skeleton
+  Display: '&cSquelette &dNiv.<mob.level>'
+  Health: 15
+  Faction: zombies
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    KnockbackResistance: 0.17
+    Despawn: true    
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 arrowattack
+  - 2 randomstroll
+  - 3 fleesun
+  - 4 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget 
+  - 2 players
+  Drops:  
+  - skeleton1drops
+  - skeleton2drops
+  - skeleton3drops
+  LevelModifiers:
+    Health: 3
+    KnockbackResistance: 0.03
+    MovementSpeed: 0.02
+#
+# Creepers
+#
+creeperlvl:
+  Type: creeper
+  Display: '&cCreeper &dNiv.<mob.level>'
+  Health: 40
+  Damage: 5
+  DamageModifiers:
+  - PROJECTILE 0.66
+  Faction: creepers
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.21
+    PreventOtherDrops: true
+    KnockbackResistance: 0.21
+    Despawn: true   
+  Modules:
+    ThreatTable: false
+  Drops:  
+  - creeper1drops
+  LevelModifiers:
+    Health: 3
+    Damage: 2
+    KnockbackResistance: 0.03
+    MovementSpeed: 0.02
+#Level2 (Forest Biome)
+creeperlvl2:
+  Type: creeper
+  Display: '&cCreeper &dNiv.<mob.level>'
+  Health: 30
+  Damage: 6
+  DamageModifiers:
+  - PROJECTILE 0.75
+  Faction: creepers
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.24
+    PreventOtherDrops: true
+    KnockbackResistance: 0.24
+    Despawn: true
+    FuseTicks: 30
+    SuperCharged: true    
+  Modules:
+    ThreatTable: false
+  Drops:
+  - creeper2drops
+  LevelModifiers:
+    Health: 5
+    Damage: 2
+    KnockbackResistance: 0.04
+    MovementSpeed: 0.03
+#
+# Spider
+#
+spiderlvl:
+  Type: spider
+  Display: '&cAraignée &dNiv.<mob.level>'
+  Health: 20
+  Damage: 3
+  Faction: spiders
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.21
+    PreventOtherDrops: true
+    KnockbackResistance: 0.20
+    Despawn: true    
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget 
+  - 2 players
+  Drops:  
+  - spider1drops
+  - spider2drops
+  LevelModifiers:
+    Health: 3
+    Damage: 1
+    KnockbackResistance: 0.03
+    MovementSpeed: 0.02
+#
+#
+#
+# NORTH GOBLINS
+#
+#
+#
+#
+# Zombies
+#
+zombielvlnorth:
+  Type: zombie
+  Disguise:
+    Type: player
+    Player: '&cGoblin'
+    Skin: MattShaw
+    ShowName: false
+    ModifyBoundingBox: false
+  Display: '&cGoblin &dNiv.<mob.level>'
+  Health: 15
+  Damage: 5
+  Faction: goblins
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.21
+    PreventOtherDrops: true
+    KnockbackResistance: 0.20
+    Despawn: true    
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 fleesun
+  - 4 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget 
+  - 2 players
+  Drops:  
+  - zombie1drops
+  - zombie2drops
+  - zombie3drops
+  LevelModifiers:
+    Health: 5
+    Damage: 1
+    KnockbackResistance: 0.03
+    MovementSpeed: 0.02
+#
+# Skeletons
+#
+skeletonlvlnorth:
+  Type: skeleton
+  Disguise:
+    Type: player
+    Player: '&cGoblin Archer'
+    Skin: tharandur
+    ShowName: false
+    ModifyBoundingBox: false
+  Display: '&cGoblin Archer &dNiv.<mob.level>'
+  Health: 15
+  Faction: goblins
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    KnockbackResistance: 0.17
+    Despawn: true    
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 arrowattack
+  - 2 randomstroll
+  - 3 fleesun
+  - 4 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget 
+  - 2 players
+  Drops:  
+  - skeleton1drops
+  - skeleton2drops
+  - skeleton3drops
+  LevelModifiers:
+    Health: 3
+    KnockbackResistance: 0.03
+    MovementSpeed: 0.02
+#
+#
+#
+#
+#
+# PASSIVE ANIMALS
+#
+#
+#
+#
+#
+#
+# Horse
+#
+horse:
+  Type: horse
+  Display: '&fCheval'
+  Faction: horses
+  Options:
+    AlwaysShowName: false
+    KnockbackResistance: 0.20
+    Despawn: true
+#
+# Chicken
+#
+achicken:
+  Type: chicken
+  Display: '&fPoule'
+  Faction: poulets
+  Skills:
+  - skill{s=amobspawner} @self ~onSpawn
+  Options:
+    AlwaysShowName: false
+    Despawn: true
+#
+# Cow
+#
+acow:
+  Type: cow
+  Display: '&fVache'
+  Faction: cows
+  Skills:
+  - skill{s=amobspawner} @self ~onSpawn
+  Options:
+    AlwaysShowName: false
+    Despawn: true
+#
+# Pig
+#
+apig:
+  Type: pig
+  Display: '&fCochon'
+  Faction: pigs
+  Skills:
+  - skill{s=amobspawner} @self ~onSpawn
+  Options:
+    AlwaysShowName: false
+    Despawn: true
+#
+#
+# Massive Villager
+#
+#
+#     “BLACKSMITH”, “BUTCHER”, “FARMER”, “LIBRARIAN” or “PRIEST”
+#
+#
+villager_blacksmith:
+  Type: villager
+  Display: '&dForgeron'
+  Health: 100
+  Damage: 1
+  Faction: villageois
+  Options:
+    Invincible: true
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Despawn: true
+    VillagerType: BLACKSMITH
+villager_butcher:
+  Type: villager
+  Display: '&dBoucher'
+  Health: 100
+  Damage: 1
+  Faction: villageois
+  Options:
+    Invincible: true
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Despawn: true
+    VillagerType: BUTCHER
+villager_farmer:
+  Type: villager
+  Display: '&dPaysan'
+  Health: 100
+  Damage: 1
+  Faction: villageois
+  Options:
+    Invincible: true
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Despawn: true
+    VillagerType: FARMER
+villager_librarian:
+  Type: villager
+  Display: '&dBibliothécaire'
+  Health: 100
+  Damage: 1
+  Faction: villageois
+  Options:
+    Invincible: true
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Despawn: true
+    VillagerType: LIBRARIAN
+villager_priest:
+  Type: villager
+  Display: '&dMoine'
+  Health: 100
+  Damage: 1
+  Faction: villageois
+  Options:
+    Invincible: true
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    Despawn: true
+    VillagerType: PRIEST

@@ -1,0 +1,12 @@
+nether_portal_drops:
+  MaxItems: 3
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - mc_rotten_flesh 1 1
+  - exp 50 1
+  - money 200 1
+  - souliers_ignifuge 1 0.03
+  - jambieres_ignifuge 1 0.02
+  - casque_ignifuge 1 0.01
+  - plastron_ignifuge 1 0.01
