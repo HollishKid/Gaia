@@ -5,3 +5,8 @@ npcs:
   '280': Lieutenant_Hashor
   '268': Aktarion
   '278': Loukran
+compass:
+  akt_quest:
+    name: '&aCamp de &4Brigands'
+    location: -8869;82;4564;Gaia
+    item: scroll

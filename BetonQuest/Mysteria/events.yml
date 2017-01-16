@@ -60,11 +60,12 @@ tour_du_village_done3: journal del journal_superieur_quete
 #                  #
 #   PNJ Aktarion   #
 #                  #
-akt_qE1: folder akt_questE11,akt_questE12,akt_questE13,akt_questE14
+akt_qE1: folder akt_qE11,akt_qE12,akt_qE13,akt_qE14,akt_qE15
 akt_qE11: objective start akt_quest
 akt_qE12: 'message &dAprès la demande d''Aktarion qui vous a donné une destination, vous vous mettez vite en route !'
 akt_qE13: tag add akt_qE1
 akt_qE14: journal add akt_qE1
+akt_qE15: compas add akt_quest
 #
 akt_objq1: folder akt_objkillB1,akt_objq1m
 akt_objq1m: 'message &dVous êtes arrivés, tuez quelques brigands pour retrouver l''objet d''Aktarion'
