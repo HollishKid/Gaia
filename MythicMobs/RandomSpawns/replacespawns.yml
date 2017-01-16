@@ -1,0 +1,628 @@
+# 
+# 
+#
+# Remplacement des Mobs Vanilla
+#
+#
+#                               Conditions: - mobtype
+#
+###########################################################
+remover:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion athelas_mobspawning
+remover2:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_entree
+remover002:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_aileG1
+remover02:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_aileG2
+remover3:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_aileG3
+remover4:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_aileG4
+remover5:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_aileG5
+remover6:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed1
+remover7:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed2
+remover8:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed3
+remover9:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed4
+remover10:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed5
+remover11:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed6
+remover12:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 200
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_salleb3
+#
+# Zombies
+#
+zombie1:
+  Mobname: zombielvl
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 1
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - height 50-258
+zombie2:
+  Mobname: zombielvl
+  Worlds: Gaia
+  Level: 2
+  SpawnMethod: replace
+  Chance: 0.3
+  Priority: 2
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - height 50-258
+zombie3:
+  Mobname: zombielvl
+  Worlds: Gaia
+  Level: 3
+  SpawnMethod: replace
+  Chance: 0.3
+  Priority: 3
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - height 50-258
+zombie4:
+  Mobname: zombielvl
+  Worlds: Gaia
+  Level: 4
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 4
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - height 25-50
+zombie5:
+  Mobname: zombielvl
+  Worlds: Gaia
+  Level: 5
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 5
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - height 25-50
+zombie6:
+  Mobname: zombielvl
+  Worlds: Gaia
+  Level: 6
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 6
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - height 0-25
+zombie7:
+  Mobname: zombielvl
+  Worlds: Gaia
+  Level: 7
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 7
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - height 0-25
+#
+# Skeletons
+#
+skeleton1:
+  Mobname: skeletonlvl
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 1
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - height 50-258
+skeleton2:
+  Mobname: skeletonlvl
+  Worlds: Gaia
+  Level: 2
+  SpawnMethod: replace
+  Chance: 0.3
+  Priority: 2
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - height 50-258
+skeleton3:
+  Mobname: skeletonlvl
+  Worlds: Gaia
+  Level: 3
+  SpawnMethod: replace
+  Chance: 0.3
+  Priority: 3
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - height 50-258
+skeleton4:
+  Mobname: skeletonlvl
+  Worlds: Gaia
+  Level: 4
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 4
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - height 25-50
+skeleton5:
+  Mobname: skeletonlvl
+  Worlds: Gaia
+  Level: 5
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 5
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - height 25-50
+skeleton6:
+  Mobname: skeletonlvl
+  Worlds: Gaia
+  Level: 6
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 6
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - height 0-25
+skeleton7:
+  Mobname: skeletonlvl
+  Worlds: Gaia
+  Level: 7
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 7
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - height 0-25
+#CREEPER
+creeper1:
+  Mobname: creeperlvl
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 1
+  UseWorldScaling: false
+  Conditions:
+  - mobtype CREEPER
+creeper2:
+  Mobname: creeperlvl
+  Worlds: Gaia
+  Level: 2
+  SpawnMethod: replace
+  Chance: 0.3
+  Priority: 2
+  UseWorldScaling: false
+  Conditions:
+  - mobtype CREEPER
+creeper3:
+  Mobname: creeperlvl
+  Worlds: Gaia
+  Level: 3
+  SpawnMethod: replace
+  Chance: 0.3
+  Priority: 3
+  UseWorldScaling: false
+  Conditions:
+  - mobtype CREEPER
+#Creeper BIOME
+creeper11:
+  Mobname: creeperlvl2
+  Worlds: Gaia
+  Level: 3
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 4
+  UseWorldScaling: false
+  Conditions:
+  - mobtype CREEPER
+  - biome forest
+creeper21:
+  Mobname: creeperlvl2
+  Worlds: Gaia
+  Level: 4
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 5
+  UseWorldScaling: false
+  Conditions:
+  - mobtype CREEPER
+  - biome forest
+creeper31:
+  Mobname: creeperlvl2
+  Worlds: Gaia
+  Level: 5
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 6
+  UseWorldScaling: false
+  Conditions:
+  - mobtype CREEPER
+  - biome forest
+#SPIDER
+spider1:
+  Mobname: spiderlvl
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 1
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SPIDER
+  - height 50-258
+spider2:
+  Mobname: spiderlvl
+  Worlds: Gaia
+  Level: 2
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 2
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SPIDER
+  - height 50-258
+spider3:
+  Mobname: spiderlvl
+  Worlds: Gaia
+  Level: 3
+  SpawnMethod: replace
+  Chance: 0.3
+  Priority: 3
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SPIDER
+  - height 50-258
+spider4:
+  Mobname: spiderlvl
+  Worlds: Gaia
+  Level: 4
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 4
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SPIDER
+  - height 0-50
+spider5:
+  Mobname: spiderlvl
+  Worlds: Gaia
+  Level: 5
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 5
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SPIDER
+  - height 0-50
+#
+#
+#
+# NORTH GOBLINS
+#
+#
+#
+#
+#
+# Zombies
+#
+gbz1:
+  Mobname: zombielvlnorth
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 8
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion north
+gbz2:
+  Mobname: zombielvlnorth
+  Worlds: Gaia
+  Level: 2
+  SpawnMethod: replace
+  Chance: 0.6
+  Priority: 9
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion north
+gbz3:
+  Mobname: zombielvlnorth
+  Worlds: Gaia
+  Level: 3
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 10
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion north
+gbz4:
+  Mobname: zombielvlnorth
+  Worlds: Gaia
+  Level: 4
+  SpawnMethod: replace
+  Chance: 0.2
+  Priority: 11
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion north
+gbz5:
+  Mobname: zombielvlnorth
+  Worlds: Gaia
+  Level: 5
+  SpawnMethod: replace
+  Chance: 0.2
+  Priority: 12
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion north
+gbz6:
+  Mobname: zombielvlnorth
+  Worlds: Gaia
+  Level: 6
+  SpawnMethod: replace
+  Chance: 0.05
+  Priority: 13
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion north
+gbz7:
+  Mobname: zombielvlnorth
+  Worlds: Gaia
+  Level: 7
+  SpawnMethod: replace
+  Chance: 0.05
+  Priority: 14
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion north
+#
+# Skeletons
+#
+goba1:
+  Mobname: skeletonlvlnorth
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 8
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion north
+goba2:
+  Mobname: skeletonlvlnorth
+  Worlds: Gaia
+  Level: 2
+  SpawnMethod: replace
+  Chance: 0.6
+  Priority: 9
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion north
+goba3:
+  Mobname: skeletonlvlnorth
+  Worlds: Gaia
+  Level: 3
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 10
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion north
+goba4:
+  Mobname: skeletonlvlnorth
+  Worlds: Gaia
+  Level: 4
+  SpawnMethod: replace
+  Chance: 0.2
+  Priority: 11
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion north
+goba5:
+  Mobname: skeletonlvlnorth
+  Worlds: Gaia
+  Level: 5
+  SpawnMethod: replace
+  Chance: 0.2
+  Priority: 12
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion north
+goba6:
+  Mobname: skeletonlvlnorth
+  Worlds: Gaia
+  Level: 6
+  SpawnMethod: replace
+  Chance: 0.05
+  Priority: 13
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion north
+goba7:
+  Mobname: skeletonlvlnorth
+  Worlds: Gaia
+  Level: 7
+  SpawnMethod: replace
+  Chance: 0.05
+  Priority: 14
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion north
+#
+#HORSE
+#
+horse:
+  Mobname: horse
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 1
+  UseWorldScaling: false
+  Conditions:
+  - mobtype HORSE
+
+#HorseType: [type]
+#Defines the type of horse
+#Can be UNDEAD_HORSE, SKELETON_HORSE, MULE, DONKEY or HORSE
+#Defaults to HORSE
+#CHICKEN
+#COW
+#PIG
+#SHEEP
+#SQUID
+#WITCH
+#WITHER
+#WITHER_SKELETON
+#WOLF
+#
+# Villager done w/ individual Spawners
+#

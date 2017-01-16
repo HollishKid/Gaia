@@ -1,0 +1,49 @@
+quester: Daniel
+first: debut
+stop: 'false'
+#Options du NPC
+NPC_options:
+  'debut':
+    text: Hey, hey mec !! Comment tu vas ?! Bienvenue à l'île Céleste du Repos!! Comment tu t'es retrouvé ici?!
+    pointer: comment
+  'rep':
+    text: Ah!!! Sympa mon garçon, je te remercie pour ce service! Qu'est-ce que je peux t'offrir à boire pour te remercier?!
+    pointer: boisson_1,boisson_2,boisson_3,potion
+  'rep_bois_1':
+    text: A la tienne!! Et merci encore pour le coup de main! Par contre mon ami, je te laisse 5 minutes car cette île est réservée à des personnes de plus haute stature que la tienne!!
+##lui donner potion de lenteur 1:07
+  'rep_bois_2':
+    text: Tiens mon gars, tu l'as bien mérité!! Par contre mon ami, je te laisse 5 minutes car cette île est réservée à des personnes de plus haute stature que la tienne!!
+##lui donner potion de lenteur 1:30
+  'rep_bois_3':
+    text: Tu veux jouer le dur!! J'ai ce qu'il te faut!! Par contre mon ami, je te laisse 5 minutes car cette île est réservée à des personnes de plus haute stature que la tienne!!
+##lui donner potion de lenteur 4:00
+  'rep_potion':
+    text:  T'es un costaud, celle-là tu vas t'en souvenir!! Par contre, je te laisse 5 minutes car cette île est réservée à des personnes de plus haute stature que la tienne!! Dis moi l'aventurier, il serait caché un objet sur cette île qui permettrait de décupler la puissance de n'importe quelle arme!!
+    pointer: interesse,pas_interesse
+  'rep_oui':
+    text: N'oublies pas!! Dans 5 minutes, tu seras expulser de l'île, sans ménagement !! Alors, bon courage à toi! Je te préviens, personne n'est arrivé à le trouver, soit disant...
+##uploader un livre enchanté Chatiment 1 dans cheminée loft jumaker
+##uploader l'expulsion du joueur au bout de 5 minutes
+#Options du joueur
+player_options:
+  'comment':
+    text: C'est ton ami Jacques d'Athelas, le barman !! Il m'a envoyé vous apporter ces quelques caisses!!
+    pointer: rep
+  'boisson_1':
+    text: Je vais vous prendre une lichette de votre boisson!!
+    pointer: rep_bois_1
+  'boisson_2':
+    text: Mets-moi de 2 de doigts de ce brevage!
+    pointer: rep_bois_2
+  'boisson_3':
+    text: Mets-moi une rasade de ton élixir!!
+    pointer: rep_bois_3
+  'potion':
+    text: Comme je suis un aventurier un peu fou!! Je vais me laisser tenter par votre potion!!
+    pointer: rep_potion
+  'interesse':
+    text: Biensûr que ça m'interesse!! Je t'ai dis que j'avais l'âme d'un aventurier!!
+    pointer: rep_oui
+  'pas_interesse':
+    text: Non merci!! Je préfère m'éclipser!

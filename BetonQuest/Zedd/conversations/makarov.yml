@@ -1,0 +1,95 @@
+quester: Makarov
+first: n1,n2,n3,n4,n5,n6,tempo_maka,n9
+stop: 'false'
+##########################
+#                        #
+#       NPC OPTIONS      #
+#                        #
+##########################
+NPC_options:
+  n1:
+    text: Ah voici donc &2%player% &a&o! &2Jimbo&a&o m'a parlé de toi, tu sembles lui avoir fait une bonne impression. \nVeux tu toujours faire partie de cette guilde ?
+    conditions: 'event1_win,!maka_etape1,!maka_inconvers'
+    pointer: p1,p2
+  rep1:
+    text: Bien ! Je vais donc officiellement t'inscrire sur notre liste des membres. \nTu auras ainsi accès à nos salon privés.
+    event: maka_presentation,maka_inconvers,makarov_access_journal_del
+  n2:
+    text: Alors, tu te plaît dans la guilde ?
+    conditions: '!event1_win,maka_etape1,!zae_q4done,!jim_q2done,!maka_etape2'
+    event: makarov_access_journal_del
+#
+### 2eme étape
+#
+  n3:
+    text: Ah &2%player%&a&o, enfin te voilà. Tu fais forte impression parmis nos membres apparement ! \n&2Jimbo&a&o et &2Zael&a&o m'ont tenus au courant de tes progrès.
+    conditions: 'zae_q4done,jim_q2done,!maka_etape2,!maka_inconvers'
+    event: maka_etape2fold,maka_inconvers,maka_etape1remove,maka_etape2,jim_q23_journal_del,makarov_access_journal_del
+  n4:
+    text: Dépèches-toi d'accomplir ta mission !
+    conditions: '!maka_inconvers,maka_q1start,!drisgan.succes'
+    event: makarov_access_journal_del
+  n5:
+    text: Fais moi ton rapport.
+    conditions: drisgan.succes
+    event: maka_q1reward,maka_inconvers,makarov_access_journal_del,maka_j2_del
+  n6:
+    text: On dirait bien qu'il va falloir s'infiltrer dans leur organisation si on veut avoir plus d'informations... \nPuis-je compter sur toi encore une fois ?
+    conditions: '!maka_inconvers,maka_q1done,!maka_q2start,!maka_q2done'
+    pointer: oui,non
+  maka_q2start:
+    text: Parfait. L'objectif maintenant est donc de t'infiltrer chez ces contrebandiers. \nIl faudra les convaincre que tu peux leur être rentable pour devenir membre de leur organisation.
+    events: maka_q2startfold,maka_inconvers,makarov_access_journal_del
+#
+### 3ème étape
+#
+#
+#
+#tempo_maka remplace n7 et n8 et donne l'aval de la Guilde des Aventuriers pour retourner voir l'intendant.
+#
+#  n7:
+#    text: Bienvenue &2%player% &a&o! Alors, tu as de nouvelles informations pour moi ?
+#    conditions: '!maka_inconvers,maka_q2start,!maka_q2done,drisgan.eko_q3start'
+#    event: maka_etape3,maka_inconvers
+#  n8:
+#    text: Encore une fois bon courage &2%player%&a&o, tu en auras besoin...
+#    conditions: '!maka_inconvers,maka_q3start,condition_tempo_impossible'
+  tempo_maka:
+    text: Vous avez de nouvelles informations sur &dDrisgan &a&o?
+    conditions: '!maka_inconvers,maka_q3start,drisgan.eko_tempo'
+    pointer: nein,tempo_rep
+  tempo_maka_rep:
+    text: Excellent ! On va attendre de voir ce que va faire &2Eko &a&o; gardes un oeil sur lui ! \nEn attendant, je te recommande auprès de l'&2Intendant pour tous tes services rendus !
+    events: maka_tempo_done
+  n9:
+    text: gotcha !
+    conditions: '!maka_inconvers,maka_q3done'
+    event: maka_j6_del,maka_j7
+#
+##########################
+#                        #
+#     player OPTIONS     #
+#                        #
+##########################
+#
+player_options:
+#
+  p1:
+    text: Je le veux !
+    pointer: rep1
+  p2:
+    text: Je préfère ne pas y rentrer finalement...
+  oui:
+    text: Bien sur !
+    pointer: maka_q2start
+  non:
+    text: Je ne préfère pas...
+#
+#
+# Tempo
+#
+  nein:
+    text: Rien à vous dire non !
+  tempo_rep:
+    text: Oui ! J'ai aidé Eko à trouver Erek le traitre !
+    pointer: tempo_maka_rep

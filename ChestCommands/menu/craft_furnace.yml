@@ -1,0 +1,387 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dCraft de Matériaux'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this diamant set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Suppdiamantts all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with diamantange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+cuir1:
+  NAME: 'Cuir'
+  ID: 334
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+
+furnace1:
+  NAME: ' '
+  ID: 61
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+
+cuir:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+cuir2:
+  COMMAND: 'open: craft_cuir.yml'
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&oRecettes de Crafts'
+  ID: 58
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true  
+  
+  
+mailles1:
+  NAME: 'Ficelle'
+  ID: 287
+  POSITION-X: 1
+  POSITION-Y: 4
+  KEEP-OPEN: true
+
+furnace2:
+  NAME: ' '
+  ID: 61
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true  
+
+mailles:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+mailles3:
+  COMMAND: 'open: craft_mailles.yml'
+  NAME: 'Mailles'
+  LORE:
+  - '&oRecettes de Crafts'
+  ID: 58
+  POSITION-X: 4
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+fer1:
+  NAME: 'Lingot de Fer'
+  ID: 265
+  POSITION-X: 1
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+furnace3:
+  NAME: ' '
+  ID: 61
+  POSITION-X: 2
+  POSITION-Y: 6
+  KEEP-OPEN: true
+
+fer:
+  NAME: 'Fer Forgé'
+  LORE:
+  - '&d&oCe fer est'
+  - '&d&otrès dense !'
+  ID: 265
+  POSITION-X: 3
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+fer3:
+  COMMAND: 'open: craft_fer.yml'
+  NAME: 'Fer Forgé'
+  LORE:
+  - '&oRecettes de Crafts'
+  ID: 58
+  POSITION-X: 4
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+or1:
+  NAME: 'Lingot d''Or'
+  ID: 266
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+furnace4:
+  NAME: ' '
+  ID: 61
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+or:
+  NAME: 'Or Décoré'
+  LORE:
+  - '&d&oCet or est'
+  - '&d&ojoliment travaillé.'
+  ID: 266
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+or3:
+  COMMAND: 'open: craft_or.yml'
+  NAME: 'Or Décoré'
+  LORE:
+  - '&oRecettes de Crafts'
+  ID: 58
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+diamant1:
+  NAME: 'Diamant'
+  ID: 264
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true  
+  
+furnace5:
+  NAME: ' '
+  ID: 61
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+diamant:
+  NAME: 'Diamant Noble'
+  LORE:
+  - '&d&oCe diamant est'
+  - '&d&od''une qualité rare...'
+  ID: 264
+  POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+diamant3:
+  COMMAND: 'open: craft_diamant.yml'
+  NAME: 'Diamant Noble'
+  LORE:
+  - '&oRecettes de Crafts'
+  ID: 58
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+emeraude1:
+  NAME: 'Emeraude'
+  ID: 388
+  POSITION-X: 7
+  POSITION-Y: 6
+  KEEP-OPEN: true  
+  
+furnace6:
+  NAME: ' '
+  ID: 61
+  POSITION-X: 8
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+emeraude:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 9
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '61'
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+
+blocker14:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker24:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker34:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker44:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker54:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker64:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 3
+  KEEP-OPEN: true
+ 
+blocker74:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker84:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker13:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker23:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker33:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker43:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker53:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker63:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 5
+  KEEP-OPEN: true
+ 
+blocker73:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker83:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 5
+  KEEP-OPEN: true

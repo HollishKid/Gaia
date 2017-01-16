@@ -1,0 +1,105 @@
+garderoyal:
+  Mobtype: COW
+  Display: "&aGarde"
+  Health: 27
+  Disguise:
+   Type: player
+   Player: "&aGarde"
+   Skin: Rulz
+  Damage: 1
+  Armor: 0
+  Faction: gardes
+  AIGoalSelectors:
+  - 0 clear
+  - 1 RandomStroll
+  - 2 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 SpecificFaction revenant
+  Equipment:
+  - mc_diamond_helmet:4
+  - mc_diamond_chestplate:3
+  - mc_diamond_leggings:2
+  - mc_diamond_boots:1
+  - mc_diamond_sword:0
+  Skills:
+  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#8ad9ff} @self ~onDamaged
+  Options:
+    FollowRange: 20
+    AlwaysShowName: true
+    MovementSpeed: 0.21
+    PreventOtherDrops: true
+    KnockbackResistance: 0.25
+    Despawn: true
+revenant2:
+  Mobtype: WITCH
+  Display: "&cRevenant"
+  Health: 50
+  Disguise:
+   Type: player
+   Player: "&cRevenant"
+   Skin: FoidzaFlow
+  Damage: 4
+  DamageModifiers:
+  - FIRE 1.3
+  - DROWNING 0
+  Faction: revenant
+  AIGoalSelectors:
+  - 0 clear
+  - 1 RandomStroll
+  - 2 meleeattack
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction gardes
+  Equipment:
+  - mc_wooden_axe:0
+  Drops:
+  - money 3-7 0.1  
+  Skills:
+  - setstance{stance=notMounted} @Self ~onSpawn >0
+  - skill{s=vampirebid} @PlayersInRadius{r=1} ~onTimer:10 >0 0.20
+  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#d9ff8a} @self ~onDamaged
+  - command{c="bq event <target.name> default.assault_killed1"} @trigger ~onDeath
+  Options:
+    FollowRange: 20
+    AlwaysShowName: true
+    MovementSpeed: 0.24
+    PreventOtherDrops: true
+    KnockbackResistance: 0.35
+    Despawn: true
+revarcher:
+  Mobtype: SKELETON
+  Display: "&cArcher"
+  Health: 40
+  Disguise:
+   Type: player
+   Player: "&cArcher"
+   Skin: FoidzaFlow
+  Faction: revenant
+  AIGoalSelectors:
+  - 0 clear
+  - 1 RandomStroll
+  - 2 skeletonbowattack
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  - 3 SpecificFaction gardes
+  Drops:
+  - money 2-6 0.1  
+  Skills:
+  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#d9ff8a} @self ~onDamaged
+  - command{c="bq event <target.name> default.assault_killed1"} @trigger ~onDeath
+  Equipment:
+  - casqueassault:4
+  Options:
+    FollowRange: 20
+    AlwaysShowName: true
+    MovementSpeed: 0.24
+    PreventOtherDrops: true
+    KnockbackResistance: 0.3
+    Despawn: true

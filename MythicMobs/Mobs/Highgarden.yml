@@ -1,0 +1,117 @@
+lava_elem:
+  Mobtype: BABY_ZOMBIE
+  Display: '&6Goutte de lave'
+  Health: 80
+  Damage: 4
+#  Equipment:
+#  - 0:0
+  Skills:
+  - skill {s=FireBolt} @target ~onTimer:25 <70% 0.5
+  Disguise:
+    Type: player
+    Player: '&6Goutte de lave'
+    Skin: lava
+  Drops:
+  - lavaelemDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 RandomStroll
+  - 3 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget
+  Options:
+    FollowRange: 30
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    ShowHealth: true
+water_elem:
+  Mobtype: BABY_ZOMBIE
+  Display: "&6Goutte d'eau"
+  Health: 80
+  Damage: 4
+#  Equipment:
+#  - 0:0
+  Skills:
+  - skill {s=IceBolt} @target ~onTimer:25 <70% 0.5
+  Disguise:
+    Type: player
+    Player: "&6Goutte d'eau"
+    Skin: water
+  Drops:
+  - waterelemDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 RandomStroll
+  - 3 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget
+  Options:
+    FollowRange: 30
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    ShowHealth: true
+ghoule:
+  Mobtype: zombie
+  Display: "&4Ghoule"
+  Health: 50
+  Damage: 4
+  Skills:
+  - skill {s=weakness1} @target ~onTimer:25 <70% 0.5
+  Disguise:
+    Type: player
+    Player: "&4Ghoule"
+    Skin: danger
+  Drops:
+  - ghouleDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 FleeSun 
+  - 3 RandomStroll
+  - 4 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget
+  - 2 players
+  Options:
+    FollowRange: 30
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    ShowHealth: true
+revenant:
+  Mobtype: zombie
+  Display: "&4Revenant"
+  Health: 30
+  Damage: 4
+  Skills:
+  - skill {s=weakness1} @target ~onTimer:25 <70% 0.5
+  Disguise:
+    Type: player
+    Player: "&4Revenant"
+    Skin: darkila
+  Drops:
+  - revenantDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 RandomStroll
+  - 2 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget
+  - 2 players
+  Options:
+    FollowRange: 30
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventRandomEquipment: true

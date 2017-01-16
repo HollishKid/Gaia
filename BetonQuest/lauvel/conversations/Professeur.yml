@@ -1,0 +1,24 @@
+quester: Professeur
+first: salut
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  salut:
+    text: Veut-tu commencer l'aventure ?
+    pointer: oui,non
+  
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  oui:
+    text: Oui
+    events: int_hist
+  non:
+    text: Non

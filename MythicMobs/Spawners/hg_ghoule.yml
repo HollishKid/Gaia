@@ -1,0 +1,25 @@
+hg_ghoule:
+  MobName: ghoule
+  World: Gaia
+  X: -6896
+  Y: 69
+  Z: 3342
+  Radius: 50
+  UseTimer: true
+  MaxMobs: 15
+  MobLevel: 1
+  MobsPerSpawn: 2
+  Cooldown: 20
+  CooldownTimer: 0
+  Warmup: 10
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 100
+  LeashRange: 70
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions:
+  - raining true
+  ActiveMobs: 0

@@ -1,0 +1,2373 @@
+########################################################################
+###                                                                    #
+###   Vanilla Item Core, created by jaylawl                            #
+###   Version: 5 - xx.xx.2016                                          #
+###   Designed on MythicMobs 2.2.1 #xxxx, Spigot 1.8.8                 #
+###   Contact: jaylawlMC@gmail.com                                     #
+###                                                                    #
+###   This creation is available for free. If you like it,             #
+###   please consider making a donation to support my work.            #
+###   PayPal: jaylawlMC@gmail.com                                      #
+###                                                                    #
+########################################################################
+#~ dummy
+mc_air:
+  Id: 0
+mc_dummy:
+  Id: 0
+#~ stone
+mc_stone:
+  Id: stone
+mc_slab:
+  Id: step
+mc_stone_slab:
+  Id: step
+mc_stone_bricks:
+  Id: smooth_brick
+mc_stone_bricks_slab:
+  Id: step
+  Data: 5
+mc_moss_stone_bricks:
+  Id: smooth_brick
+  Data: 1
+mc_mossy_stone_bricks:
+  Id: smooth_brick
+  Data: 1
+mc_stone_bricks_mossy:
+  Id: smooth_brick
+  Data: 1
+mc_cracked_stone_bricks:
+  Id: smooth_brick
+  Data: 2
+mc_stone_bricks_cracked:
+  Id: smooth_brick
+  Data: 2
+mc_chiseled_stone_bricks:
+  Id: smooth_brick
+  Data: 3
+mc_stone_bricks_chiseled:
+  Id: smooth_brick
+  Data: 3
+mc_stone_brick_stairs:
+  Id: smooth_stairs
+mc_stairs_stone_brick:
+  Id: smooth_stairs
+mc_smooth_stone:
+  Id: stone
+mc_granite:
+  Id: stone
+  Data: 1
+mc_granite_polished:
+  Id: stone
+  Data: 2
+mc_polished_granite:
+  Id: stone
+  Data: 2
+mc_diorite:
+  Id: stone
+  Data: 3
+mc_diorite_polished:
+  Id: stone
+  Data: 4
+mc_polished_diorite:
+  Id: stone
+  Data: 4
+mc_andesite:
+  Id: stone
+  Data: 5
+mc_andesite_polished:
+  Id: stone
+  Data: 6
+mc_polished_andesite:
+  Id: stone
+  Data: 6
+mc_cobblestone:
+  Id: cobblestone
+mc_cobble:
+  Id: cobblestone
+mc_cobblestone_slab:
+  Id: step
+  Data: 3
+mc_moss_stone:
+  Id: mossy_cobblestone
+mc_moss_cobblestone:
+  Id: mossy_cobblestone
+mc_mossy_stone:
+  Id: mossy_cobblestone
+mc_mossy_cobblestone:
+  Id: mossy_cobblestone
+mc_cobble_stairs:
+  Id: cobblestone_stairs
+mc_cobblestone_stairs:
+  Id: cobblestone_stairs
+mc_wall:
+  Id: cobble_wall
+mc_cobble_wall:
+  Id: cobble_wall
+mc_cobblestone_wall:
+  Id: cobble_wall
+mc_moss_wall:
+  Id: cobble_wall
+  Data: 1
+mc_moss_cobble_wall:
+  Id: cobble_wall
+  Data: 1
+mc_moss_cobblestone_wall:
+  Id: cobble_wall
+  Data: 1
+mc_mossy_wall:
+  Id: cobble_wall
+  Data: 1
+mc_mossy_cobble_wall:
+  Id: cobble_wall
+  Data: 1
+mc_mossy_cobblestone_wall:
+  Id: cobble_wall
+  Data: 1
+#~ wood
+mc_oak_wood:
+  Id: log
+mc_oak_log:
+  Id: log
+mc_spruce_wood:
+  Id: log
+  Data: 1
+mc_spruce_log:
+  Id: log
+  Data: 1
+mc_birch_wood:
+  Id: log
+  Data: 2
+mc_birch_log:
+  Id: log
+  Data: 2
+mc_jungle_wood:
+  Id: log
+  Data: 3
+mc_jungle_log:
+  Id: log
+  Data: 3
+mc_acacia_wood:
+  Id: log_2
+mc_acacia_log:
+  Id: log_2
+mc_dark_oak_wood:
+  Id: log_2
+  Data: 1
+mc_dark_oak_log:
+  Id: log_2
+  Data: 1
+mc_planks:
+  Id: wood
+mc_oak_wood_planks:
+  Id: wood
+mc_planks_oak_wood:
+  Id: wood
+mc_spruce_wood_planks:
+  Id: wood
+  Data: 1
+mc_planks_spruce_wood:
+  Id: wood
+  Data: 1
+mc_birch_wood_planks:
+  Id: wood
+  Data: 2
+mc_planks_birch_wood:
+  Id: wood
+  Data: 2
+mc_jungle_wood_planks:
+  Id: wood
+  Data: 3
+mc_planks_jungle_wood:
+  Id: wood
+  Data: 3
+mc_acacia_wood_planks:
+  Id: wood
+  Data: 4
+mc_planks_acacia_wood:
+  Id: wood
+  Data: 4
+mc_dark_oak_wood_planks:
+  Id: wood
+  Data: 5
+mc_planks_dark_oak_wood:
+  Id: wood
+  Data: 5
+mc_oak_wood_slab:
+  Id: wood_step
+mc_spruce_wood_slab:
+  Id: wood_step
+  Data: 1
+mc_birch_wood_slab:
+  Id: wood_step
+  Data: 2
+mc_jungle_wood_slab:
+  Id: wood_step
+  Data: 3
+mc_acacia_wood_slab:
+  Id: wood_step
+  Data: 4
+mc_dark_oak_wood_slab:
+  Id: wood_step
+  Data: 5
+mc_oak_slab:
+  Id: wood_step
+mc_spruce_slab:
+  Id: wood_step
+  Data: 1
+mc_birch_slab:
+  Id: wood_step
+  Data: 2
+mc_jungle_slab:
+  Id: wood_step
+  Data: 3
+mc_acacia_slab:
+  Id: wood_step
+  Data: 4
+mc_dark_oak_slab:
+  Id: wood_step
+  Data: 5
+mc_oak_wood_stairs:
+  Id: wood_stairs
+mc_spruce_wood_stairs:
+  Id: spruce_wood_stairs
+mc_birch_wood_stairs:
+  Id: birch_wood_stairs
+mc_jungle_wood_stairs:
+  Id: jungle_wood_stairs
+mc_acacia_wood_stairs:
+  Id: acacia_wood_stairs
+mc_dark_oak_wood_stairs:
+  Id: dark_oak_stairs
+mc_oak_stairs:
+  Id: wood_stairs
+mc_spruce_stairs:
+  Id: spruce_wood_stairs
+mc_birch_stairs:
+  Id: birch_wood_stairs
+mc_jungle_stairs:
+  Id: jungle_wood_stairs
+mc_acacia_stairs:
+  Id: acacia_wood_stairs
+mc_dark_oak_stairs:
+  Id: dark_oak_stairs
+#~ ore blocks
+mc_coal_block:
+  Id: coal_block
+mc_iron_block:
+  Id: iron_block
+mc_gold_block:
+  Id: gold_block
+mc_redstone_block:
+  Id: redstone_block
+mc_lapis_block:
+  Id: lapis_block
+mc_lapis_lazuli_block:
+  Id: lapis_block
+mc_emerald_block:
+  Id: emerald_block
+mc_diamond_block:
+  Id: diamond_block
+mc_block_of_coal:
+  Id: coal_block
+mc_block_of_iron:
+  Id: iron_block
+mc_block_of_gold:
+  Id: gold_block
+mc_block_of_redstone:
+  Id: redstone_block
+mc_block_of_lapis:
+  Id: lapis_block
+mc_block_of_lapis_lazuli:
+  Id: lapis_block
+mc_block_of_emerald:
+  Id: emerald_block
+mc_block_of_diamond:
+  Id: diamond_block
+mc_quartz_block:
+  Id: quartz_block
+mc_block_of_quartz:
+  Id: quartz_block
+mc_chiseled_quartz:
+  Id: quartz_block
+  Data: 1
+mc_chiseled_quartz_block:
+  Id: quartz_block
+  Data: 1
+mc_quartz_block_chiseled:
+  Id: quartz_block
+  Data: 1
+mc_pillar_quartz:
+  Id: quartz_block
+  Data: 2
+mc_pillar_quartz_block:
+  Id: quartz_block
+  Data: 2
+mc_quartz_block_pillar:
+  Id: quartz_block
+  Data: 2
+mc_quartz_slab:
+  Id: step
+  Data: 7
+mc_slab_quartz:
+  Id: step
+  Data: 7
+mc_slab_of_quartz:
+  Id: step
+  Data: 7
+mc_quartz_stairs:
+  Id: quartz_stairs
+mc_stairs_quartz:
+  Id: quartz_stairs
+mc_stairs_of_quartz:
+  Id: quartz_stairs
+mc_coal_ore:
+  Id: coal_ore
+mc_iron_ore:
+  Id: iron_ore
+mc_gold_ore:
+  Id: gold_ore
+mc_redstone_ore:
+  Id: redstone_ore
+mc_lapis_ore:
+  Id: lapis_ore
+mc_lapis_lazuli_ore:
+  Id: lapis_ore
+mc_emerald_ore:
+  Id: emerald_ore
+mc_diamond_ore:
+  Id: diamond_ore
+mc_quartz_ore:
+  Id: quartz_ore
+#~ redstone related
+mc_redstone_torch:
+  Id: redstone_torch_on
+mc_lever:
+  Id: lever
+mc_switch:
+  Id: lever
+mc_tripwire_hook:
+  Id: tripwire_hook
+mc_hook:
+  Id: tripwire_hook
+mc_fence_gate:
+  Id: fence_gate
+mc_oak_fence_gate:
+  Id: fence_gate
+mc_spruce_fence_gate:
+  Id: spruce_fence_gate
+mc_birch_fence_gate:
+  Id: birch_fence_gate
+mc_jungle_fence_gate:
+  Id: jungle_fence_gate
+mc_acacia_fence_gate:
+  Id: acacia_fence_gate
+mc_dark_oak_fence_gate:
+  Id: dark_oak_fence_gate
+mc_fence_gate_oak:
+  Id: fence_gate
+mc_fence_gate_spruce:
+  Id: spruce_fence_gate
+mc_fence_gate_birch:
+  Id: birch_fence_gate
+mc_fence_gate_jungle:
+  Id: jungle_fence_gate
+mc_fence_gate_acacia:
+  Id: acacia_fence_gate
+mc_fence_gate_dark_oak:
+  Id: dark_oak_fence_gate
+mc_dispenser:
+  Id: dispenser
+mc_dropper:
+  Id: dropper
+mc_hopper:
+  Id: hopper
+mc_daylight_sensor:
+  Id: daylight_detector
+mc_daylight_detector:
+  Id: daylight_detector
+mc_gold_pressure_plate:
+  Id: gold_plate
+mc_golden_pressure_plate:
+  Id: gold_plate
+mc_light_weighted_pressure_plate:
+  Id: gold_plate
+mc_weighted_pressure_plate_light:
+  Id: gold_plate
+mc_iron_pressure_plate:
+  Id: iron_plate
+mc_heavy_weighted_pressure_plate:
+  Id: iron_plate
+mc_weighted_pressure_plate_heavy:
+  Id: iron_plate
+mc_stone_pressure_plate:
+  Id: stone_plate
+mc_wood_pressure_plate:
+  Id: wood_plate
+mc_wooden_pressure_plate:
+  Id: wood_plate
+mc_trapdoor:
+  Id: trap_door
+mc_trapdoor_wood:
+  Id: trap_door
+mc_trapdoor_wooden:
+  Id: trap_door
+mc_wooden_trapdoor:
+  Id: trap_door
+mc_wood_trapdoor:
+  Id: trap_door
+mc_trapdoor_iron:
+  Id: iron_trapdoor
+mc_iron_trapdoor:
+  Id: iron_trapdoor
+mc_piston:
+  Id: piston_base
+mc_piston_sticky:
+  Id: piston_sticky_base
+mc_sticky_piston:
+  Id: piston_sticky_base
+mc_wood_button:
+  Id: wood_button
+mc_wooden_button:
+  Id: wood_button
+mc_button_wood:
+  Id: wood_button
+mc_button_wooden:
+  Id: wood_button
+mc_stone_button:
+  Id: stone_button
+mc_button_stone:
+  Id: stone_button
+#~ misc
+mc_ender_pearl:
+  Id: ender_pearl
+mc_end_pearl:
+  Id: ender_pearl
+mc_book:
+  Id: book
+mc_book_and_quill:
+  Id: book_and_quill
+mc_stick:
+  Id: stick
+mc_blaze_rod:
+  Id: blaze_rod
+mc_blaze_powder:
+  Id: blaze_powder
+mc_torch:
+  Id: torch
+mc_pumpkin:
+  Id: pumpkin
+mc_jack_o_lantern:
+  Id: jack_o_lantern
+mc_lit_pumpkin:
+  Id: jack_o_lantern
+mc_anvil:
+  Id: anvil
+  Data: 0
+mc_anvil_slightly_damaged:
+  Id: anvil
+  Data: 1
+mc_anvil_very_damaged:
+  Id: anvil
+  Data: 2
+mc_ice:
+  Id: ice
+mc_packed_ice:
+  Id: packed_ice
+mc_leaves:
+  Id: leaves
+mc_oak_leaves:
+  Id: leaves
+mc_leaves_spruce:
+  Id: leaves
+  Data: 1
+mc_leaves_birch:
+  Id: leaves
+  Data: 2
+mc_leaves_jungle:
+  Id: leaves
+  Data: 3
+mc_oak_leaves:
+  Id: leaves
+mc_spruce_leaves:
+  Id: leaves
+  Data: 1
+mc_birch_leaves:
+  Id: leaves
+  Data: 2
+mc_jungle_leaves:
+  Id: leaves
+  Data: 3
+mc_glass:
+  Id: glass
+mc_glass_pane:
+  Id: thin_glass
+mc_command:
+  Id: command
+mc_command_block:
+  Id: command
+mc_rotten_flesh:
+  Id: rotten_flesh
+mc_flesh_rotten:
+  Id: rotten_flesh
+mc_zombie_flesh:
+  Id: rotten_flesh
+mc_chest:
+  Id: chest
+#~ armor
+mc_leather_helmet:
+  Id: leather_helmet
+mc_leather_chestplate:
+  Id: leather_chestplate
+mc_leather_leggings:
+  Id: leather_leggings
+mc_leather_boots:
+  Id: leather_boots
+mc_chainmail_helmet:
+  Id: chainmail_helmet
+mc_chainmail_chestplate:
+  Id: chainmail_chestplate
+mc_chainmail_leggings:
+  Id: chainmail_leggings
+mc_chainmail_boots:
+  Id: chainmail_boots
+mc_chain_helmet:
+  Id: chainmail_helmet
+mc_chain_chestplate:
+  Id: chainmail_chestplate
+mc_chain_leggings:
+  Id: chainmail_leggings
+mc_chain_boots:
+  Id: chainmail_boots
+mc_iron_helmet:
+  Id: iron_helmet
+mc_iron_chestplate:
+  Id: iron_chestplate
+mc_iron_leggings:
+  Id: iron_leggings
+mc_iron_boots:
+  Id: iron_boots
+mc_golden_helmet:
+  Id: gold_helmet
+mc_golden_chestplate:
+  Id: gold_chestplate
+mc_golden_leggings:
+  Id: gold_leggings
+mc_golden_boots:
+  Id: gold_boots
+mc_gold_helmet:
+  Id: gold_helmet
+mc_gold_chestplate:
+  Id: gold_chestplate
+mc_gold_leggings:
+  Id: gold_leggings
+mc_gold_boots:
+  Id: gold_boots
+mc_diamond_helmet:
+  Id: diamond_helmet
+mc_diamond_chestplate:
+  Id: diamond_chestplate
+mc_diamond_leggings:
+  Id: diamond_leggings
+mc_diamond_boots:
+  Id: diamond_boots
+#~ armor, dyed
+mc_leather_helmet_white:
+  Id: leather_helmet
+  Options:
+    Color: 255,255,255
+mc_leather_helmet_grey:
+  Id: leather_helmet
+  Options:
+    Color: 125,125,125
+mc_leather_helmet_black:
+  Id: leather_helmet
+  Options:
+    Color: 0,0,0
+mc_leather_helmet_red:
+  Id: leather_helmet
+  Options:
+    Color: 255,0,0
+mc_leather_helmet_green:
+  Id: leather_helmet
+  Options:
+    Color: 0,255,0
+mc_leather_helmet_dark_green:
+  Id: leather_helmet
+  Options:
+    Color: 0,102,0
+mc_leather_helmet_blue:
+  Id: leather_helmet
+  Options:
+    Color: 0,0,255
+mc_leather_helmet_pink:
+  Id: leather_helmet
+  Options:
+    Color: 255,51,153
+mc_leather_helmet_orange:
+  Id: leather_helmet
+  Options:
+    Color: 255,128,0
+mc_leather_helmet_cyan:
+  Id: leather_helmet
+  Options:
+    Color: 0,255,255
+mc_leather_helmet_yellow:
+  Id: leather_helmet
+  Options:
+    Color: 255,255,0
+mc_leather_chestplate_white:
+  Id: leather_chestplate
+  Options:
+    Color: 255,255,255
+mc_leather_chestplate_grey:
+  Id: leather_chestplate
+  Options:
+    Color: 125,125,125
+mc_leather_chestplate_black:
+  Id: leather_chestplate
+  Options:
+    Color: 0,0,0
+mc_leather_chestplate_red:
+  Id: leather_chestplate
+  Options:
+    Color: 255,0,0
+mc_leather_chestplate_green:
+  Id: leather_chestplate
+  Options:
+    Color: 0,255,0
+mc_leather_chestplate_dark_green:
+  Id: leather_chestplate
+  Options:
+    Color: 0,102,0
+mc_leather_chestplate_blue:
+  Id: leather_chestplate
+  Options:
+    Color: 0,0,255
+mc_leather_chestplate_pink:
+  Id: leather_chestplate
+  Options:
+    Color: 255,51,153
+mc_leather_chestplate_orange:
+  Id: leather_chestplate
+  Options:
+    Color: 255,128,0
+mc_leather_chestplate_cyan:
+  Id: leather_chestplate
+  Options:
+    Color: 0,255,255
+mc_leather_chestplate_yellow:
+  Id: leather_helmet
+  Options:
+    Color: 255,255,0
+mc_leather_leggings_white:
+  Id: leather_leggings
+  Options:
+    Color: 255,255,255
+mc_leather_leggings_grey:
+  Id: leather_leggings
+  Options:
+    Color: 125,125,125
+mc_leather_leggings_black:
+  Id: leather_leggings
+  Options:
+    Color: 0,0,0
+mc_leather_leggings_red:
+  Id: leather_leggings
+  Options:
+    Color: 255,0,0
+mc_leather_leggings_green:
+  Id: leather_leggings
+  Options:
+    Color: 0,255,0
+mc_leather_leggings_dark_green:
+  Id: leather_leggings
+  Options:
+    Color: 0,102,0
+mc_leather_leggings_blue:
+  Id: leather_leggings
+  Options:
+    Color: 0,0,255
+mc_leather_leggings_pink:
+  Id: leather_leggings
+  Options:
+    Color: 255,51,153
+mc_leather_leggings_orange:
+  Id: leather_leggings
+  Options:
+    Color: 255,128,0
+mc_leather_leggings_cyan:
+  Id: leather_leggings
+  Options:
+    Color: 0,255,255
+mc_leather_leggings_yellow:
+  Id: leather_helmet
+  Options:
+    Color: 255,255,0
+mc_leather_boots_white:
+  Id: leather_boots
+  Options:
+    Color: 255,255,255
+mc_leather_boots_grey:
+  Id: leather_boots
+  Options:
+    Color: 125,125,125
+mc_leather_boots_black:
+  Id: leather_boots
+  Options:
+    Color: 0,0,0
+mc_leather_boots_red:
+  Id: leather_boots
+  Options:
+    Color: 255,0,0
+mc_leather_boots_green:
+  Id: leather_boots
+  Options:
+    Color: 0,255,0
+mc_leather_boots_dark_green:
+  Id: leather_boots
+  Options:
+    Color: 0,102,0
+mc_leather_boots_blue:
+  Id: leather_boots
+  Options:
+    Color: 0,0,255
+mc_leather_boots_pink:
+  Id: leather_boots
+  Options:
+    Color: 255,51,153
+mc_leather_boots_orange:
+  Id: leather_boots
+  Options:
+    Color: 255,128,0
+mc_leather_boots_cyan:
+  Id: leather_boots
+  Options:
+    Color: 0,255,255
+mc_leather_boots_yellow:
+  Id: leather_helmet
+  Options:
+    Color: 255,255,0
+#~ misc tools
+mc_flint_and_steel:
+  Id: flint_and_steel
+mc_shears:
+  Id: shears
+mc_compass:
+  Id: compass
+mc_clock:
+  Id: watch
+mc_lead:
+  Id: leash
+mc_fishing_rod:
+  Id: fishing_rod
+mc_carrot_on_a_stick:
+  Id: carrot_stick
+#~ regular tools
+mc_wooden_pickaxe:
+  Id: wood_pickaxe
+mc_wooden_shovel:
+  Id: wood_shovel
+mc_wooden_hoe:
+  Id: wood_hoe
+mc_wooden_axe:
+  Id: wood_axe
+mc_stone_pickaxe:
+  Id: stone_pickaxe
+mc_stone_shovel:
+  Id: stone_shovel
+mc_stone_hoe:
+  Id: stone_hoe
+mc_stone_axe:
+  Id: stone_axe
+mc_iron_pickaxe:
+  Id: iron_pickaxe
+mc_iron_shovel:
+  Id: iron_shovel
+mc_iron_hoe:
+  Id: iron_hoe
+mc_iron_axe:
+  Id: iron_axe
+mc_golden_pickaxe:
+  Id: gold_pickaxe
+mc_golden_shovel:
+  Id: gold_shovel
+mc_golden_hoe:
+  Id: gold_hoe
+mc_golden_axe:
+  Id: gold_axe
+mc_diamond_pickaxe:
+  Id: diamond_pickaxe
+mc_diamond_shovel:
+  Id: diamond_shovel
+mc_diamond_hoe:
+  Id: diamond_hoe
+mc_diamond_axe:
+  Id: diamond_axe
+#~ weapons
+mc_wooden_sword:
+  Id: wood_sword
+mc_wood_sword:
+  Id: wood_sword
+mc_stone_sword:
+  Id: stone_sword
+mc_iron_sword:
+  Id: iron_sword
+mc_gold_sword:
+  Id: gold_sword
+mc_golden_sword:
+  Id: gold_sword
+mc_diamond_sword:
+  Id: diamond_sword
+mc_bow:
+  Id: bow
+mc_arrow:
+  Id: arrow
+#~ skulls
+mc_skull_skeleton:
+  Id: skull_item
+  Data: 0
+mc_skull_wither_skeleton:
+  Id: skull_item
+  Data: 1
+mc_skull_zombie:
+  Id: skull_item
+  Data: 2
+mc_skull_creeper:
+  Id: skull_item
+  Data: 4
+mc_head_skeleton:
+  Id: skull_item
+  Data: 0
+mc_head_wither_skeleton:
+  Id: skull_item
+  Data: 1
+mc_head_zombie:
+  Id: skull_item
+  Data: 2
+mc_head_creeper:
+  Id: skull_item
+  Data: 4
+mc_head_cow:
+  Id: skull_item
+  Data: 3
+  Options:
+    Player: MHF_Cow
+mc_head_sheep:
+  Id: skull_item
+  Data: 3
+  Options:
+    Player: MHF_Sheep
+mc_head_pig:
+  Id: skull_item
+  Data: 3
+  Options:
+    Player: MHF_Pig
+mc_head_squid:
+  Id: skull_item
+  Data: 3
+  Options:
+    Player: MHF_Squid
+mc_head_wolf:
+  Id: skull_item
+  Data: 3
+  Options:
+    Player: MHF_Wolf
+mc_head_ocelot:
+  Id: skull_item
+  Data: 3
+  Options:
+    Player: MHF_Ocelot
+mc_head_spider:
+  Id: skull_item
+  Data: 3
+  Display: '&fTête d''Araignée'
+  Options:
+    Player: MHF_Spider
+mc_head_enderman:
+  Id: skull_item
+  Data: 3
+  Display: '&fTête d''Enderman'
+  Options:
+    Player: MHF_Enderman
+mc_head_herobrine:
+  Id: skull_item
+  Data: 3
+  Display: '&fTête de Hérobrine'
+  Options:
+    Player: MHF_Herobrine
+#~ flowers & vegetation
+mc_sunflower:
+  Id: double_plant
+mc_lilac:
+  Id: double_plant
+  Data: 1
+mc_double_tallgrass:
+  Id: double_plant
+  Data: 2
+mc_large_fern:
+  Id: double_plant
+  Data: 3
+mc_rose_bush:
+  Id: double_plant
+  Data: 4
+mc_peony:
+  Id: double_plant
+  Data: 5
+mc_vine:
+  Id: vine
+mc_vines:
+  Id: vine
+mc_cactus:
+  Id: cactus
+mc_web:
+  Id: web
+mc_cobweb:
+  Id: web
+mc_sapling_oak:
+  Id: sapling
+mc_sapling_spruce:
+  Id: sapling
+  Data: 1
+mc_sapling_birch:
+  Id: sapling
+  Data: 2
+mc_sapling_jungle:
+  Id: sapling
+  Data: 3
+mc_sapling_acazia:
+  Id: sapling
+  Data: 4
+mc_sapling_dark_oak:
+  Id: sapling
+  Data: 5
+mc_oak_sapling:
+  Id: sapling
+mc_spruce_sapling:
+  Id: sapling
+  Data: 1
+mc_birch_sapling:
+  Id: sapling
+  Data: 2
+mc_jungle_sapling:
+  Id: sapling
+  Data: 3
+mc_acazia_sapling:
+  Id: sapling
+  Data: 4
+mc_dark_oak_sapling:
+  Id: sapling
+  Data: 5
+mc_brown_mushroom:
+  Id: brown_mushroom
+mc_red_mushroom:
+  Id: red_mushroom
+mc_deadbush:
+  Id: dead_bush
+mc_grass:
+  Id: long_grass
+  Data: 1
+mc_tallgrass:
+  Id: long_grass
+  Data: 1
+mc_tallgrass_grass:
+  Id: long_grass
+  Data: 1
+mc_fern:
+  Id: long_grass
+  Data: 2
+mc_tallgrass_fern:
+  Id: long_grass
+  Data: 2
+mc_dandelion:
+  Id: yellow_flower
+  Data: 0
+mc_poppy:
+  Id: red_rose
+  Data: 0
+mc_rose:
+  Id: red_rose
+  Data: 0
+  Display: '&rRose'
+mc_red_rose:
+  Id: red_rose
+  Data: 0
+  Display: '&rRed Rose'
+mc_blue_orchid:
+  Id: red_rose
+  Data: 1
+mc_allium:
+  Id: red_rose
+  Data: 2
+mc_azure_bluet:
+  Id: red_rose
+  Data: 3
+mc_red_tulip:
+  Id: red_rose
+  Data: 4
+mc_orange_tulip:
+  Id: red_rose
+  Data: 5
+mc_white_tulip:
+  Id: red_rose
+  Data: 6
+mc_pink_tulip:
+  Id: red_rose
+  Data: 7
+mc_oxeye_daisy:
+  Id: red_rose
+  Data: 8
+#~ colors
+mc_wool:
+  Id: wool
+mc_wool_white:
+  Id: wool
+mc_white_wool:
+  Id: wool
+mc_orange_wool:
+  Id: wool
+  Data: 1
+mc_wool_orange:
+  Id: wool
+  Data: 1
+mc_magenta_wool:
+  Id: wool
+  Data: 2
+mc_wool_magenta:
+  Id: wool
+  Data: 2
+mc_light_blue_wool:
+  Id: wool
+  Data: 3
+mc_wool_light_blue:
+  Id: wool
+  Data: 3
+mc_yellow_wool:
+  Id: wool
+  Data: 4
+mc_wool_yellow:
+  Id: wool
+  Data: 4
+mc_lime_wool:
+  Id: wool
+  Data: 5
+mc_wool_lime:
+  Id: wool
+  Data: 5
+mc_light_green_wool:
+  Id: wool
+  Data: 5
+mc_wool_light_green:
+  Id: wool
+  Data: 5
+mc_pink_wool:
+  Id: wool
+  Data: 6
+mc_wool_pink:
+  Id: wool
+  Data: 6
+mc_grey_wool:
+  Id: wool
+  Data: 7
+mc_dark_grey_wool:
+  Id: wool
+  Data: 7
+mc_gray_wool:
+  Id: wool
+  Data: 7
+mc_dark_gray_wool:
+  Id: wool
+  Data: 7
+mc_wool_grey:
+  Id: wool
+  Data: 7
+mc_wool_dark_grey:
+  Id: wool
+  Data: 7
+mc_wool_gray:
+  Id: wool
+  Data: 7
+mc_wool_dark_gray:
+  Id: wool
+  Data: 7
+mc_light_grey_wool:
+  Id: wool
+  Data: 8
+mc_light_gray_wool:
+  Id: wool
+  Data: 8
+mc_wool_light_grey:
+  Id: wool
+  Data: 8
+mc_wool_light_gray:
+  Id: wool
+  Data: 8
+mc_cyan_wool:
+  Id: wool
+  Data: 9
+mc_wool_cyan:
+  Id: wool
+  Data: 9
+mc_purple_wool:
+  Id: wool
+  Data: 10
+mc_wool_purple:
+  Id: wool
+  Data: 10
+mc_blue_wool:
+  Id: wool
+  Data: 11
+mc_wool_blue:
+  Id: wool
+  Data: 11
+mc_dark_blue_wool:
+  Id: wool
+  Data: 11
+mc_wool_dark_blue:
+  Id: wool
+  Data: 11
+mc_brown_wool:
+  Id: wool
+  Data: 12
+mc_wool_brown:
+  Id: wool
+  Data: 12
+mc_green_wool:
+  Id: wool
+  Data: 13
+mc_wool_green:
+  Id: wool
+  Data: 13
+mc_dark_green_wool:
+  Id: wool
+  Data: 13
+mc_wool_dark_green:
+  Id: wool
+  Data: 13
+mc_red_wool:
+  Id: wool
+  Data: 14
+mc_wool_red:
+  Id: wool
+  Data: 14
+mc_black_wool:
+  Id: wool
+  Data: 15
+mc_wool_black:
+  Id: wool
+  Data: 15
+mc_carpet:
+  Id: carpet
+mc_carpet_white:
+  Id: carpet
+mc_white_carpet:
+  Id: carpet
+mc_orange_carpet:
+  Id: carpet
+  Data: 1
+mc_carpet_orange:
+  Id: carpet
+  Data: 1
+mc_magenta_carpet:
+  Id: carpet
+  Data: 2
+mc_carpet_magenta:
+  Id: carpet
+  Data: 2
+mc_light_blue_carpet:
+  Id: carpet
+  Data: 3
+mc_carpet_light_blue:
+  Id: carpet
+  Data: 3
+mc_yellow_carpet:
+  Id: carpet
+  Data: 4
+mc_carpet_yellow:
+  Id: carpet
+  Data: 4
+mc_lime_carpet:
+  Id: carpet
+  Data: 5
+mc_carpet_lime:
+  Id: carpet
+  Data: 5
+mc_light_green_carpet:
+  Id: carpet
+  Data: 5
+mc_carpet_light_green:
+  Id: carpet
+  Data: 5
+mc_pink_carpet:
+  Id: carpet
+  Data: 6
+mc_carpet_pink:
+  Id: carpet
+  Data: 6
+mc_grey_carpet:
+  Id: carpet
+  Data: 7
+mc_dark_grey_carpet:
+  Id: carpet
+  Data: 7
+mc_gray_carpet:
+  Id: carpet
+  Data: 7
+mc_dark_gray_carpet:
+  Id: carpet
+  Data: 7
+mc_carpet_grey:
+  Id: carpet
+  Data: 7
+mc_carpet_dark_grey:
+  Id: carpet
+  Data: 7
+mc_carpet_gray:
+  Id: carpet
+  Data: 7
+mc_carpet_dark_gray:
+  Id: carpet
+  Data: 7
+mc_light_grey_carpet:
+  Id: carpet
+  Data: 8
+mc_light_gray_carpet:
+  Id: carpet
+  Data: 8
+mc_carpet_light_grey:
+  Id: carpet
+  Data: 8
+mc_carpet_light_gray:
+  Id: carpet
+  Data: 8
+mc_cyan_carpet:
+  Id: carpet
+  Data: 9
+mc_carpet_cyan:
+  Id: carpet
+  Data: 9
+mc_purple_carpet:
+  Id: carpet
+  Data: 10
+mc_carpet_purple:
+  Id: carpet
+  Data: 10
+mc_blue_carpet:
+  Id: carpet
+  Data: 11
+mc_carpet_blue:
+  Id: carpet
+  Data: 11
+mc_dark_blue_carpet:
+  Id: carpet
+  Data: 11
+mc_carpet_dark_blue:
+  Id: carpet
+  Data: 11
+mc_brown_carpet:
+  Id: carpet
+  Data: 12
+mc_carpet_brown:
+  Id: carpet
+  Data: 12
+mc_green_carpet:
+  Id: carpet
+  Data: 13
+mc_carpet_green:
+  Id: carpet
+  Data: 13
+mc_dark_green_carpet:
+  Id: carpet
+  Data: 13
+mc_carpet_dark_green:
+  Id: carpet
+  Data: 13
+mc_red_carpet:
+  Id: carpet
+  Data: 14
+mc_carpet_red:
+  Id: carpet
+  Data: 14
+mc_black_carpet:
+  Id: carpet
+  Data: 15
+mc_carpet_black:
+  Id: carpet
+  Data: 15
+mc_stained_glass_white:
+  Id: stained_glass
+mc_white_stained_glass:
+  Id: stained_glass
+mc_orange_stained_glass:
+  Id: stained_glass
+  Data: 1
+mc_stained_glass_orange:
+  Id: stained_glass
+  Data: 1
+mc_magenta_stained_glass:
+  Id: stained_glass
+  Data: 2
+mc_stained_glass_magenta:
+  Id: stained_glass
+  Data: 2
+mc_light_blue_stained_glass:
+  Id: stained_glass
+  Data: 3
+mc_stained_glass_light_blue:
+  Id: stained_glass
+  Data: 3
+mc_yellow_stained_glass:
+  Id: stained_glass
+  Data: 4
+mc_stained_glass_yellow:
+  Id: stained_glass
+  Data: 4
+mc_lime_stained_glass:
+  Id: stained_glass
+  Data: 5
+mc_stained_glass_lime:
+  Id: stained_glass
+  Data: 5
+mc_light_green_stained_glass:
+  Id: stained_glass
+  Data: 5
+mc_stained_glass_light_green:
+  Id: stained_glass
+  Data: 5
+mc_pink_stained_glass:
+  Id: stained_glass
+  Data: 6
+mc_stained_glass_pink:
+  Id: stained_glass
+  Data: 6
+mc_grey_stained_glass:
+  Id: stained_glass
+  Data: 7
+mc_dark_grey_stained_glass:
+  Id: stained_glass
+  Data: 7
+mc_gray_stained_glass:
+  Id: stained_glass
+  Data: 7
+mc_dark_gray_stained_glass:
+  Id: stained_glass
+  Data: 7
+mc_stained_glass_grey:
+  Id: stained_glass
+  Data: 7
+mc_stained_glass_dark_grey:
+  Id: stained_glass
+  Data: 7
+mc_stained_glass_gray:
+  Id: stained_glass
+  Data: 7
+mc_stained_glass_dark_gray:
+  Id: stained_glass
+  Data: 7
+mc_light_grey_stained_glass:
+  Id: stained_glass
+  Data: 8
+mc_light_gray_stained_glass:
+  Id: stained_glass
+  Data: 8
+mc_stained_glass_light_grey:
+  Id: stained_glass
+  Data: 8
+mc_stained_glass_light_gray:
+  Id: stained_glass
+  Data: 8
+mc_cyan_stained_glass:
+  Id: stained_glass
+  Data: 9
+mc_stained_glass_cyan:
+  Id: stained_glass
+  Data: 9
+mc_purple_stained_glass:
+  Id: stained_glass
+  Data: 10
+mc_stained_glass_purple:
+  Id: stained_glass
+  Data: 10
+mc_blue_stained_glass:
+  Id: stained_glass
+  Data: 11
+mc_stained_glass_blue:
+  Id: stained_glass
+  Data: 11
+mc_dark_blue_stained_glass:
+  Id: stained_glass
+  Data: 11
+mc_stained_glass_dark_blue:
+  Id: stained_glass
+  Data: 11
+mc_brown_stained_glass:
+  Id: stained_glass
+  Data: 12
+mc_stained_glass_brown:
+  Id: stained_glass
+  Data: 12
+mc_green_stained_glass:
+  Id: stained_glass
+  Data: 13
+mc_stained_glass_green:
+  Id: stained_glass
+  Data: 13
+mc_dark_green_stained_glass:
+  Id: stained_glass
+  Data: 13
+mc_stained_glass_dark_green:
+  Id: stained_glass
+  Data: 13
+mc_red_stained_glass:
+  Id: stained_glass
+  Data: 14
+mc_stained_glass_red:
+  Id: stained_glass
+  Data: 14
+mc_black_stained_glass:
+  Id: stained_glass
+  Data: 15
+mc_stained_glass_black:
+  Id: stained_glass
+  Data: 15
+mc_stained_glass_pane_white:
+  Id: stained_glass_pane
+mc_white_stained_glass_pane:
+  Id: stained_glass_pane
+mc_orange_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 1
+mc_stained_glass_pane_orange:
+  Id: stained_glass_pane
+  Data: 1
+mc_magenta_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 2
+mc_stained_glass_pane_magenta:
+  Id: stained_glass_pane
+  Data: 2
+mc_light_blue_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 3
+mc_stained_glass_pane_light_blue:
+  Id: stained_glass_pane
+  Data: 3
+mc_yellow_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 4
+mc_stained_glass_pane_yellow:
+  Id: stained_glass_pane
+  Data: 4
+mc_lime_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 5
+mc_stained_glass_pane_lime:
+  Id: stained_glass_pane
+  Data: 5
+mc_light_green_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 5
+mc_stained_glass_pane_light_green:
+  Id: stained_glass_pane
+  Data: 5
+mc_pink_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 6
+mc_stained_glass_pane_pink:
+  Id: stained_glass_pane
+  Data: 6
+mc_grey_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 7
+mc_dark_grey_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 7
+mc_gray_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 7
+mc_dark_gray_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 7
+mc_stained_glass_pane_grey:
+  Id: stained_glass_pane
+  Data: 7
+mc_stained_glass_pane_dark_grey:
+  Id: stained_glass_pane
+  Data: 7
+mc_stained_glass_pane_gray:
+  Id: stained_glass_pane
+  Data: 7
+mc_stained_glass_pane_dark_gray:
+  Id: stained_glass_pane
+  Data: 7
+mc_light_grey_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 8
+mc_light_gray_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 8
+mc_stained_glass_pane_light_grey:
+  Id: stained_glass_pane
+  Data: 8
+mc_stained_glass_pane_light_gray:
+  Id: stained_glass_pane
+  Data: 8
+mc_cyan_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 9
+mc_stained_glass_pane_cyan:
+  Id: stained_glass_pane
+  Data: 9
+mc_purple_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 10
+mc_stained_glass_pane_purple:
+  Id: stained_glass_pane
+  Data: 10
+mc_blue_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 11
+mc_stained_glass_pane_blue:
+  Id: stained_glass_pane
+  Data: 11
+mc_dark_blue_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 11
+mc_stained_glass_pane_dark_blue:
+  Id: stained_glass_pane
+  Data: 11
+mc_brown_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 12
+mc_stained_glass_pane_brown:
+  Id: stained_glass_pane
+  Data: 12
+mc_green_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 13
+mc_stained_glass_pane_green:
+  Id: stained_glass_pane
+  Data: 13
+mc_dark_green_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 13
+mc_stained_glass_pane_dark_green:
+  Id: stained_glass_pane
+  Data: 13
+mc_red_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 14
+mc_stained_glass_pane_red:
+  Id: stained_glass_pane
+  Data: 14
+mc_black_stained_glass_pane:
+  Id: stained_glass_pane
+  Data: 15
+mc_stained_glass_pane_black:
+  Id: stained_glass_pane
+  Data: 15
+mc_glass_white:
+  Id: stained_glass
+mc_white_glass:
+  Id: stained_glass
+mc_orange_glass:
+  Id: stained_glass
+  Data: 1
+mc_glass_orange:
+  Id: stained_glass
+  Data: 1
+mc_magenta_glass:
+  Id: stained_glass
+  Data: 2
+mc_glass_magenta:
+  Id: stained_glass
+  Data: 2
+mc_light_blue_glass:
+  Id: stained_glass
+  Data: 3
+mc_glass_light_blue:
+  Id: stained_glass
+  Data: 3
+mc_yellow_glass:
+  Id: stained_glass
+  Data: 4
+mc_glass_yellow:
+  Id: stained_glass
+  Data: 4
+mc_lime_glass:
+  Id: stained_glass
+  Data: 5
+mc_glass_lime:
+  Id: stained_glass
+  Data: 5
+mc_light_green_glass:
+  Id: stained_glass
+  Data: 5
+mc_glass_light_green:
+  Id: stained_glass
+  Data: 5
+mc_pink_glass:
+  Id: stained_glass
+  Data: 6
+mc_glass_pink:
+  Id: stained_glass
+  Data: 6
+mc_grey_glass:
+  Id: stained_glass
+  Data: 7
+mc_dark_grey_glass:
+  Id: stained_glass
+  Data: 7
+mc_gray_glass:
+  Id: stained_glass
+  Data: 7
+mc_dark_gray_glass:
+  Id: stained_glass
+  Data: 7
+mc_glass_grey:
+  Id: stained_glass
+  Data: 7
+mc_glass_dark_grey:
+  Id: stained_glass
+  Data: 7
+mc_glass_gray:
+  Id: stained_glass
+  Data: 7
+mc_glass_dark_gray:
+  Id: stained_glass
+  Data: 7
+mc_light_grey_glass:
+  Id: stained_glass
+  Data: 8
+mc_light_gray_glass:
+  Id: stained_glass
+  Data: 8
+mc_glass_light_grey:
+  Id: stained_glass
+  Data: 8
+mc_glass_light_gray:
+  Id: stained_glass
+  Data: 8
+mc_cyan_glass:
+  Id: stained_glass
+  Data: 9
+mc_glass_cyan:
+  Id: stained_glass
+  Data: 9
+mc_purple_glass:
+  Id: stained_glass
+  Data: 10
+mc_glass_purple:
+  Id: stained_glass
+  Data: 10
+mc_blue_glass:
+  Id: stained_glass
+  Data: 11
+mc_glass_blue:
+  Id: stained_glass
+  Data: 11
+mc_dark_blue_glass:
+  Id: stained_glass
+  Data: 11
+mc_glass_dark_blue:
+  Id: stained_glass
+  Data: 11
+mc_brown_glass:
+  Id: stained_glass
+  Data: 12
+mc_glass_brown:
+  Id: stained_glass
+  Data: 12
+mc_green_glass:
+  Id: stained_glass
+  Data: 13
+mc_glass_green:
+  Id: stained_glass
+  Data: 13
+mc_dark_green_glass:
+  Id: stained_glass
+  Data: 13
+mc_glass_dark_green:
+  Id: stained_glass
+  Data: 13
+mc_red_glass:
+  Id: stained_glass
+  Data: 14
+mc_glass_red:
+  Id: stained_glass
+  Data: 14
+mc_black_glass:
+  Id: stained_glass
+  Data: 15
+mc_glass_black:
+  Id: stained_glass
+  Data: 15
+mc_glass_pane_white:
+  Id: stained_glass_pane
+mc_white_glass_pane:
+  Id: stained_glass_pane
+mc_orange_glass_pane:
+  Id: stained_glass_pane
+  Data: 1
+mc_glass_pane_orange:
+  Id: stained_glass_pane
+  Data: 1
+mc_magenta_glass_pane:
+  Id: stained_glass_pane
+  Data: 2
+mc_glass_pane_magenta:
+  Id: stained_glass_pane
+  Data: 2
+mc_light_blue_glass_pane:
+  Id: stained_glass_pane
+  Data: 3
+mc_glass_pane_light_blue:
+  Id: stained_glass_pane
+  Data: 3
+mc_yellow_glass_pane:
+  Id: stained_glass_pane
+  Data: 4
+mc_glass_pane_yellow:
+  Id: stained_glass_pane
+  Data: 4
+mc_lime_glass_pane:
+  Id: stained_glass_pane
+  Data: 5
+mc_glass_pane_lime:
+  Id: stained_glass_pane
+  Data: 5
+mc_light_green_glass_pane:
+  Id: stained_glass_pane
+  Data: 5
+mc_glass_pane_light_green:
+  Id: stained_glass_pane
+  Data: 5
+mc_pink_glass_pane:
+  Id: stained_glass_pane
+  Data: 6
+mc_glass_pane_pink:
+  Id: stained_glass_pane
+  Data: 6
+mc_grey_glass_pane:
+  Id: stained_glass_pane
+  Data: 7
+mc_dark_grey_glass_pane:
+  Id: stained_glass_pane
+  Data: 7
+mc_gray_glass_pane:
+  Id: stained_glass_pane
+  Data: 7
+mc_dark_gray_glass_pane:
+  Id: stained_glass_pane
+  Data: 7
+mc_glass_pane_grey:
+  Id: stained_glass_pane
+  Data: 7
+mc_glass_pane_dark_grey:
+  Id: stained_glass_pane
+  Data: 7
+mc_glass_pane_gray:
+  Id: stained_glass_pane
+  Data: 7
+mc_glass_pane_dark_gray:
+  Id: stained_glass_pane
+  Data: 7
+mc_light_grey_glass_pane:
+  Id: stained_glass_pane
+  Data: 8
+mc_light_gray_glass_pane:
+  Id: stained_glass_pane
+  Data: 8
+mc_glass_pane_light_grey:
+  Id: stained_glass_pane
+  Data: 8
+mc_glass_pane_light_gray:
+  Id: stained_glass_pane
+  Data: 8
+mc_cyan_glass_pane:
+  Id: stained_glass_pane
+  Data: 9
+mc_glass_pane_cyan:
+  Id: stained_glass_pane
+  Data: 9
+mc_purple_glass_pane:
+  Id: stained_glass_pane
+  Data: 10
+mc_glass_pane_purple:
+  Id: stained_glass_pane
+  Data: 10
+mc_blue_glass_pane:
+  Id: stained_glass_pane
+  Data: 11
+mc_glass_pane_blue:
+  Id: stained_glass_pane
+  Data: 11
+mc_dark_blue_glass_pane:
+  Id: stained_glass_pane
+  Data: 11
+mc_glass_pane_dark_blue:
+  Id: stained_glass_pane
+  Data: 11
+mc_brown_glass_pane:
+  Id: stained_glass_pane
+  Data: 12
+mc_glass_pane_brown:
+  Id: stained_glass_pane
+  Data: 12
+mc_green_glass_pane:
+  Id: stained_glass_pane
+  Data: 13
+mc_glass_pane_green:
+  Id: stained_glass_pane
+  Data: 13
+mc_dark_green_glass_pane:
+  Id: stained_glass_pane
+  Data: 13
+mc_glass_pane_dark_green:
+  Id: stained_glass_pane
+  Data: 13
+mc_red_glass_pane:
+  Id: stained_glass_pane
+  Data: 14
+mc_glass_pane_red:
+  Id: stained_glass_pane
+  Data: 14
+mc_black_glass_pane:
+  Id: stained_glass_pane
+  Data: 15
+mc_glass_pane_black:
+  Id: stained_glass_pane
+  Data: 15
+#~
+mc_stained_clay_white:
+  Id: stained_clay
+mc_white_stained_clay:
+  Id: stained_clay
+mc_orange_stained_clay:
+  Id: stained_clay
+  Data: 1
+mc_stained_clay_orange:
+  Id: stained_clay
+  Data: 1
+mc_magenta_stained_clay:
+  Id: stained_clay
+  Data: 2
+mc_stained_clay_magenta:
+  Id: stained_clay
+  Data: 2
+mc_light_blue_stained_clay:
+  Id: stained_clay
+  Data: 3
+mc_stained_clay_light_blue:
+  Id: stained_clay
+  Data: 3
+mc_yellow_stained_clay:
+  Id: stained_clay
+  Data: 4
+mc_stained_clay_yellow:
+  Id: stained_clay
+  Data: 4
+mc_lime_stained_clay:
+  Id: stained_clay
+  Data: 5
+mc_stained_clay_lime:
+  Id: stained_clay
+  Data: 5
+mc_light_green_stained_clay:
+  Id: stained_clay
+  Data: 5
+mc_stained_clay_light_green:
+  Id: stained_clay
+  Data: 5
+mc_pink_stained_clay:
+  Id: stained_clay
+  Data: 6
+mc_stained_clay_pink:
+  Id: stained_clay
+  Data: 6
+mc_grey_stained_clay:
+  Id: stained_clay
+  Data: 7
+mc_dark_grey_stained_clay:
+  Id: stained_clay
+  Data: 7
+mc_gray_stained_clay:
+  Id: stained_clay
+  Data: 7
+mc_dark_gray_stained_clay:
+  Id: stained_clay
+  Data: 7
+mc_stained_clay_grey:
+  Id: stained_clay
+  Data: 7
+mc_stained_clay_dark_grey:
+  Id: stained_clay
+  Data: 7
+mc_stained_clay_gray:
+  Id: stained_clay
+  Data: 7
+mc_stained_clay_dark_gray:
+  Id: stained_clay
+  Data: 7
+mc_light_grey_stained_clay:
+  Id: stained_clay
+  Data: 8
+mc_light_gray_stained_clay:
+  Id: stained_clay
+  Data: 8
+mc_stained_clay_light_grey:
+  Id: stained_clay
+  Data: 8
+mc_stained_clay_light_gray:
+  Id: stained_clay
+  Data: 8
+mc_cyan_stained_clay:
+  Id: stained_clay
+  Data: 9
+mc_stained_clay_cyan:
+  Id: stained_clay
+  Data: 9
+mc_purple_stained_clay:
+  Id: stained_clay
+  Data: 10
+mc_stained_clay_purple:
+  Id: stained_clay
+  Data: 10
+mc_blue_stained_clay:
+  Id: stained_clay
+  Data: 11
+mc_stained_clay_blue:
+  Id: stained_clay
+  Data: 11
+mc_dark_blue_stained_clay:
+  Id: stained_clay
+  Data: 11
+mc_stained_clay_dark_blue:
+  Id: stained_clay
+  Data: 11
+mc_brown_stained_clay:
+  Id: stained_clay
+  Data: 12
+mc_stained_clay_brown:
+  Id: stained_clay
+  Data: 12
+mc_green_stained_clay:
+  Id: stained_clay
+  Data: 13
+mc_stained_clay_green:
+  Id: stained_clay
+  Data: 13
+mc_dark_green_stained_clay:
+  Id: stained_clay
+  Data: 13
+mc_stained_clay_dark_green:
+  Id: stained_clay
+  Data: 13
+mc_red_stained_clay:
+  Id: stained_clay
+  Data: 14
+mc_stained_clay_red:
+  Id: stained_clay
+  Data: 14
+mc_black_stained_clay:
+  Id: stained_clay
+  Data: 15
+mc_stained_clay_black:
+  Id: stained_clay
+  Data: 15
+mc_stained_hardened_clay_white:
+  Id: stained_clay
+mc_white_stained_hardened_clay:
+  Id: stained_clay
+mc_orange_stained_hardened_clay:
+  Id: stained_clay
+  Data: 1
+mc_stained_hardened_clay_orange:
+  Id: stained_clay
+  Data: 1
+mc_magenta_stained_hardened_clay:
+  Id: stained_clay
+  Data: 2
+mc_stained_hardened_clay_magenta:
+  Id: stained_clay
+  Data: 2
+mc_light_blue_stained_hardened_clay:
+  Id: stained_clay
+  Data: 3
+mc_stained_hardened_clay_light_blue:
+  Id: stained_clay
+  Data: 3
+mc_yellow_stained_hardened_clay:
+  Id: stained_clay
+  Data: 4
+mc_stained_hardened_clay_yellow:
+  Id: stained_clay
+  Data: 4
+mc_lime_stained_hardened_clay:
+  Id: stained_clay
+  Data: 5
+mc_stained_hardened_clay_lime:
+  Id: stained_clay
+  Data: 5
+mc_light_green_stained_hardened_clay:
+  Id: stained_clay
+  Data: 5
+mc_stained_hardened_clay_light_green:
+  Id: stained_clay
+  Data: 5
+mc_pink_stained_hardened_clay:
+  Id: stained_clay
+  Data: 6
+mc_stained_hardened_clay_pink:
+  Id: stained_clay
+  Data: 6
+mc_grey_stained_hardened_clay:
+  Id: stained_clay
+  Data: 7
+mc_dark_grey_stained_hardened_clay:
+  Id: stained_clay
+  Data: 7
+mc_gray_stained_hardened_clay:
+  Id: stained_clay
+  Data: 7
+mc_dark_gray_stained_hardened_clay:
+  Id: stained_clay
+  Data: 7
+mc_stained_hardened_clay_grey:
+  Id: stained_clay
+  Data: 7
+mc_stained_hardened_clay_dark_grey:
+  Id: stained_clay
+  Data: 7
+mc_stained_hardened_clay_gray:
+  Id: stained_clay
+  Data: 7
+mc_stained_hardened_clay_dark_gray:
+  Id: stained_clay
+  Data: 7
+mc_light_grey_stained_hardened_clay:
+  Id: stained_clay
+  Data: 8
+mc_light_gray_stained_hardened_clay:
+  Id: stained_clay
+  Data: 8
+mc_stained_hardened_clay_light_grey:
+  Id: stained_clay
+  Data: 8
+mc_stained_hardened_clay_light_gray:
+  Id: stained_clay
+  Data: 8
+mc_cyan_stained_hardened_clay:
+  Id: stained_clay
+  Data: 9
+mc_stained_hardened_clay_cyan:
+  Id: stained_clay
+  Data: 9
+mc_purple_stained_hardened_clay:
+  Id: stained_clay
+  Data: 10
+mc_stained_hardened_clay_purple:
+  Id: stained_clay
+  Data: 10
+mc_blue_stained_hardened_clay:
+  Id: stained_clay
+  Data: 11
+mc_stained_hardened_clay_blue:
+  Id: stained_clay
+  Data: 11
+mc_dark_blue_stained_hardened_clay:
+  Id: stained_clay
+  Data: 11
+mc_stained_hardened_clay_dark_blue:
+  Id: stained_clay
+  Data: 11
+mc_brown_stained_hardened_clay:
+  Id: stained_clay
+  Data: 12
+mc_stained_hardened_clay_brown:
+  Id: stained_clay
+  Data: 12
+mc_green_stained_hardened_clay:
+  Id: stained_clay
+  Data: 13
+mc_stained_hardened_clay_green:
+  Id: stained_clay
+  Data: 13
+mc_dark_green_stained_hardened_clay:
+  Id: stained_clay
+  Data: 13
+mc_stained_hardened_clay_dark_green:
+  Id: stained_clay
+  Data: 13
+mc_red_stained_hardened_clay:
+  Id: stained_clay
+  Data: 14
+mc_stained_hardened_clay_red:
+  Id: stained_clay
+  Data: 14
+mc_black_stained_hardened_clay:
+  Id: stained_clay
+  Data: 15
+mc_stained_hardened_clay_black:
+  Id: stained_clay
+  Data: 15
+mc_clay_white:
+  Id: stained_clay
+mc_white_clay:
+  Id: stained_clay
+mc_orange_clay:
+  Id: stained_clay
+  Data: 1
+mc_clay_orange:
+  Id: stained_clay
+  Data: 1
+mc_magenta_clay:
+  Id: stained_clay
+  Data: 2
+mc_clay_magenta:
+  Id: stained_clay
+  Data: 2
+mc_light_blue_clay:
+  Id: stained_clay
+  Data: 3
+mc_clay_light_blue:
+  Id: stained_clay
+  Data: 3
+mc_yellow_clay:
+  Id: stained_clay
+  Data: 4
+mc_clay_yellow:
+  Id: stained_clay
+  Data: 4
+mc_lime_clay:
+  Id: stained_clay
+  Data: 5
+mc_clay_lime:
+  Id: stained_clay
+  Data: 5
+mc_light_green_clay:
+  Id: stained_clay
+  Data: 5
+mc_clay_light_green:
+  Id: stained_clay
+  Data: 5
+mc_pink_clay:
+  Id: stained_clay
+  Data: 6
+mc_clay_pink:
+  Id: stained_clay
+  Data: 6
+mc_grey_clay:
+  Id: stained_clay
+  Data: 7
+mc_dark_grey_clay:
+  Id: stained_clay
+  Data: 7
+mc_gray_clay:
+  Id: stained_clay
+  Data: 7
+mc_dark_gray_clay:
+  Id: stained_clay
+  Data: 7
+mc_clay_grey:
+  Id: stained_clay
+  Data: 7
+mc_clay_dark_grey:
+  Id: stained_clay
+  Data: 7
+mc_clay_gray:
+  Id: stained_clay
+  Data: 7
+mc_clay_dark_gray:
+  Id: stained_clay
+  Data: 7
+mc_light_grey_clay:
+  Id: stained_clay
+  Data: 8
+mc_light_gray_clay:
+  Id: stained_clay
+  Data: 8
+mc_clay_light_grey:
+  Id: stained_clay
+  Data: 8
+mc_clay_light_gray:
+  Id: stained_clay
+  Data: 8
+mc_cyan_clay:
+  Id: stained_clay
+  Data: 9
+mc_clay_cyan:
+  Id: stained_clay
+  Data: 9
+mc_purple_clay:
+  Id: stained_clay
+  Data: 10
+mc_clay_purple:
+  Id: stained_clay
+  Data: 10
+mc_blue_clay:
+  Id: stained_clay
+  Data: 11
+mc_clay_blue:
+  Id: stained_clay
+  Data: 11
+mc_dark_blue_clay:
+  Id: stained_clay
+  Data: 11
+mc_clay_dark_blue:
+  Id: stained_clay
+  Data: 11
+mc_brown_clay:
+  Id: stained_clay
+  Data: 12
+mc_clay_brown:
+  Id: stained_clay
+  Data: 12
+mc_green_clay:
+  Id: stained_clay
+  Data: 13
+mc_clay_green:
+  Id: stained_clay
+  Data: 13
+mc_dark_green_clay:
+  Id: stained_clay
+  Data: 13
+mc_clay_dark_green:
+  Id: stained_clay
+  Data: 13
+mc_red_clay:
+  Id: stained_clay
+  Data: 14
+mc_clay_red:
+  Id: stained_clay
+  Data: 14
+mc_black_clay:
+  Id: stained_clay
+  Data: 15
+mc_clay_black:
+  Id: stained_clay
+  Data: 15
+#~
+mc_banner:
+  Id: banner
+  Data: 0
+mc_banner_black:
+  Id: banner
+  Data: 0
+mc_black_banner:
+  Id: banner
+  Data: 0
+mc_banner_red:
+  Id: banner
+  Data: 1
+mc_red_banner:
+  Id: banner
+  Data: 1
+mc_banner_green:
+  Id: banner
+  Data: 2
+mc_green_banner:
+  Id: banner
+  Data: 2
+mc_banner_brown:
+  Id: banner
+  Data: 3
+mc_brown_banner:
+  Id: banner
+  Data: 3
+mc_banner_blue:
+  Id: banner
+  Data: 4
+mc_blue_banner:
+  Id: banner
+  Data: 4
+mc_banner_dark_blue:
+  Id: banner
+  Data: 4
+mc_dark_blue_banner:
+  Id: banner
+  Data: 4
+mc_banner_purple:
+  Id: banner
+  Data: 5
+mc_purple_banner:
+  Id: banner
+  Data: 5
+mc_banner_cyan:
+  Id: banner
+  Data: 6
+mc_cyan_banner:
+  Id: banner
+  Data: 6
+mc_banner_light_grey:
+  Id: banner
+  Data: 7
+mc_banner_light_gray:
+  Id: banner
+  Data: 7
+mc_light_grey_banner:
+  Id: banner
+  Data: 7
+mc_light_gray_banner:
+  Id: banner
+  Data: 7
+mc_banner_dark_grey:
+  Id: banner
+  Data: 8
+mc_banner_dark_gray:
+  Id: banner
+  Data: 8
+mc_dark_grey_banner:
+  Id: banner
+  Data: 8
+mc_dark_gray_banner:
+  Id: banner
+  Data: 8
+mc_banner_pink:
+  Id: banner
+  Data: 9
+mc_pink_banner:
+  Id: banner
+  Data: 9
+mc_banner_lime:
+  Id: banner
+  Data: 10
+mc_lime_banner:
+  Id: banner
+  Data: 10
+mc_light_green_banner:
+  Id: banner
+  Data: 10
+mc_banner_light_green:
+  Id: banner
+  Data: 10
+mc_banner_yellow:
+  Id: banner
+  Data: 11
+mc_yellow_banner:
+  Id: banner
+  Data: 11
+mc_banner_light_blue:
+  Id: banner
+  Data: 12
+mc_light_blue_banner:
+  Id: banner
+  Data: 12
+mc_banner_magenta:
+  Id: banner
+  Data: 13
+mc_magenta_banner:
+  Id: banner
+  Data: 13
+mc_banner_orange:
+  Id: banner
+  Data: 14
+mc_orange_banner:
+  Id: banner
+  Data: 14
+mc_banner_white:
+  Id: banner
+  Data: 15
+mc_white_banner:
+  Id: banner
+  Data: 15

@@ -1,0 +1,21 @@
+quester: Shifoumi
+first: n1,n2,n3
+stop: 'true'
+##########################
+#                        #
+#       NPC OPTIONS      #
+#                        #
+##########################
+NPC_options:
+  n1:
+    text: "&7&oJe choisi la pierre!"
+    conditions: random60
+    event: shi_feuillewin
+  n2:
+    text: "&7&oJe choisi la feuille!"
+    conditions: random40
+    event: shi_feuilledraw
+  n3:
+    text: "&7&oJe choisi les ciseaux!"
+    conditions: random100
+    event: shi_feuilleloose

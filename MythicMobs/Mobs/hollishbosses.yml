@@ -1,0 +1,495 @@
+#############################
+#
+# Boss Nethérien et Copains
+#
+#############################
+netherien:
+  Mobtype: IRON_GOLEM
+  BossBar:
+    Enabled: true
+    Title: '&4Nethérien'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Disguise:
+    Type: player
+    Player: '&4&lNethérien'
+    Skin: Mr_Hedra
+  Modules:
+    ThreatTable: false
+    ImmunityTable: true
+  Options:
+    Silent: true
+    Despawn: true
+    FollowRange: 40
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    KnockbackResistance: 0.97
+    PreventMobKillDrops: true
+  Display: '&4&lNethérien'
+  Health: 500
+  Damage: 20
+  Skills:
+  - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged
+  - sound{s=entity.blaze.ambient;p=0.3;v=0.2} @self ~onTimer:60 0.25
+  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#8ad9ff} @self ~onDamaged
+  - summon{type=nether_cloud;amount=1;radius=15} ~onDamaged 0.25
+  - skill{s=KarazschArcaneBolt} @target ~onTimer:80
+  - summon{type=netherien_laser;amount=1;radius=5;os=true} ~onTimer:200
+  Equipment:
+  - nether_boss_head:4
+  DamageModifiers:
+  - FALL 0
+  - PROJECTILE 0.75
+  Faction: netherien
+  AITargetSelectors:
+  - 0 clear
+  - 1 Players
+  - 2 attacker
+  Drops:
+  - nether_portal_drops
+  
+netherien2:
+  Mobtype: IRON_GOLEM
+  BossBar:
+    Enabled: true
+    Title: '&4Nethérien'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Disguise:
+    Type: player
+    Player: '&4&lNethérien'
+    Skin: Mr_Hedra
+  Modules:
+    ThreatTable: false
+    ImmunityTable: true
+  Options:
+    Silent: true
+    Despawn: true
+    FollowRange: 40
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    KnockbackResistance: 0.97
+    PreventMobKillDrops: true
+  Display: '&4&lNethérien'
+  Health: 500
+  Damage: 20
+  Skills:
+  - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged
+  - sound{s=entity.blaze.ambient;p=0.3;v=0.2} @self ~onTimer:60 0.25
+  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#8ad9ff} @self ~onDamaged
+  - summon{type=nether_cloud;amount=1;radius=15} ~onDamaged 0.25
+  - skill{s=KarazschArcaneBolt} @target ~onTimer:80
+  - summon{type=netherien_laser;amount=1;radius=5;os=true} ~onTimer:200
+  Equipment:
+  - nether_boss_head:4
+  DamageModifiers:
+  - FALL 0
+  - PROJECTILE 0.75
+  Faction: netherien
+  AITargetSelectors:
+  - 0 clear
+  - 1 Players
+  - 2 attacker
+  Drops:
+  - nether_portal_drops
+
+netherien_laser:
+  Type: BABY_PIG_ZOMBIE
+  Disguise:
+    Type: ENDER_CRYSTAL
+  Display: ''
+  Health: 5
+  Damage: 0
+  Skills:
+  - skill{s=KarazschLaser} @Target ~onTimer:100
+  - skill{s=KarazschLaserDeath} @Self ~onSpawn
+  - potion{type=SLOW;d=999999;l=10} @self ~onSpawn
+  AITargetSelectors:
+  - 0 clear
+  - 1 Golems
+  Faction: Laser
+  DamageModifiers:
+  - FALL 0
+  Options:
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Silent: true
+ 
+nether_cloud:
+  Type: CHICKEN
+  Disguise:
+    Type: CHICKEN
+    Invisible: true
+  Display: 'Magie Noire'
+  Health: 1000
+  Damage: 0
+  Skills:
+  - skill{s=KarazschCloudDeath} @Self ~onSpawn
+  - skill{s=MagicCloudEffect} @Self ~onTimer:20
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 RandomStroll
+  - 2 AvoidArrows
+  - 3 LookAtPlayers
+  - 4 MoveTowardsTarget
+  AITargetSelectors:
+  - 0 clear
+  - 1 Players
+  Options:
+    Silent: true
+    Despawn: true
+    FollowRange: 50
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    KnockbackResistance: 1.0
+    PreventMobKillDrops: true
+#############
+#
+# Minions
+#
+#############
+zombie_minion:
+  Type: zombie
+  Display: '&cMinion Zombie'
+  Health: 30
+  Damage: 3
+  Faction: zombies
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    KnockbackResistance: 0.24
+    Despawn: true    
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+#
+# Skeletons
+#
+skeleton_minion:
+  Type: skeleton
+  Display: '&cMinion Squelette'
+  Health: 25
+  Faction: zombies
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    KnockbackResistance: 0.24
+    Despawn: true      
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 arrowattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+#
+#
+#
+zombie_minion2:
+  Type: zombie
+  Display: '&cMinion Zombie'
+  Health: 30
+  Damage: 3
+  Faction: zombies
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    KnockbackResistance: 0.24
+    Despawn: true    
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+#
+# Skeletons
+#
+skeleton_minion2:
+  Type: skeleton
+  Display: '&cMinion Squelette'
+  Health: 25
+  Faction: zombies
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    KnockbackResistance: 0.24
+    Despawn: true      
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 arrowattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+#############################
+#
+# Boss Goblin - Sacossi
+#
+#############################
+sancossi:
+  Type: PIG_ZOMBIE_VILLAGER
+  BossBar:
+    Enabled: true
+    Title: '&4Sancossi'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Display: '&cSancossi'
+  Health: 300
+  Faction: sancossi
+  Damage: 15
+  Skills:
+  - message{cooldown=20;m="<mob.name><&co> MEURT HUMAIN !!"} @PlayersInRadius{r=30} ~onCombat >0 0.2
+  - message{m="<mob.name><&co> Je vais te démembrer et te manger cru, HUMAIN ! MEURT !"} @PlayersInRadius{r=30} ~onPlayerKill >0 1
+  - skill{s=SummonZombies} ~onTimer:200
+  - effect:particletornado{p=flame;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @self ~onTimer:200
+  - skill{s=SmashAttackII} @Target >0 0.2
+  - skill{s=AngryAura} ~onTimer:150
+  - skill{s=Death} @Self ~onDeath
+  - skill{s=CallPig} @self 0.1
+  Equipment:
+  - 276
+  - chainmail_helmet:4
+  - iron_chestplate:3
+  - iron_leggings:2
+  - iron_boots:1
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.17
+    Profession: Priest
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+monturesancossi:
+  Type: PIG
+  Display: '&cCochon de Sancossi'
+  Health: 1
+  Faction: sancossi
+  Damage: 1
+  Skills:
+  - message{cooldown=20;m="&c<mob.name> &dOink oink oink !"} @PlayersInRadius{r=30} ~onCombat >0 0.2
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 SpecificFaction nainsingor
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 25
+    Despawn: true
+    PreventOtherDrops: true
+gardessancossi:
+  Type: ZOMBIE_VILLAGER
+  Display: '&cGardes de Sancossi'
+  Health: 45
+  Faction: sancossi
+  Damage: 10
+  Skills:
+  - skill{s=FireResistanceSpeed} ~onTimer:100
+  Equipment:
+  - 275
+  - iron_helmet:4
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 SpecificFaction nainsingor
+#
+# Nains vs. Sancossi
+#
+nainsingor:
+  Type: ZOMBIE_VILLAGER
+  Equipment:
+  - iron_chestplate:3
+  - iron_axe:0
+  Disguise:
+    Type: player
+    Player: '&a&lNain d''Ingor'
+    Skin: Sobepome
+  Display: '&aNain d''Ingor'
+  Health: 50
+  Faction: nainsingor
+  Damage: 10
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.18
+    PreventOtherDrops: true
+    KnockbackResistance: 0.24
+    Despawn: true      
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 SpecificFaction sancossi
+##########################################
+#
+#
+# Training Camp
+#
+#
+##########################################
+dummy:
+  Type: ZOMBIE
+  BossBar:
+    Enabled: true
+    Title: '&cEntraîneur (&aFacile&c)'
+    Range: 10
+    Color: RED
+    Style: SOLID
+  Display: '&cEntraîneur'
+  Disguise:
+    Type: player
+    Player: '&cEntraîneur'
+    Skin: Darkauron
+  Health: 50
+  Damage: 2
+  Armor: 1
+  Equipment:
+  - mc_leather_helmet:4
+  - mc_chainmail_chestplate:3
+  - mc_chainmail_leggings:2
+  - mc_chainmail_boots:1
+  - mc_wooden_sword:0
+  Skills:
+  - command{c="bq event <target.name> default.training_killed1"} @trigger ~onDeath
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    KnockbackResistance: 0.40
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  Drops:
+  - exp 1 1
+dummy2:
+  Type: ZOMBIE
+  BossBar:
+    Enabled: true
+    Title: '&cEntraîneur (&aIntermédiaire&c)'
+    Range: 10
+    Color: RED
+    Style: SOLID
+  Display: '&cEntraîneur'
+  Disguise:
+    Type: player
+    Player: '&cEntraîneur'
+    Skin: Darkauron
+  Health: 100
+  Damage: 3
+  Armor: 3
+  Equipment:
+  - mc_leather_helmet:4
+  - mc_chainmail_chestplate:3
+  - mc_chainmail_leggings:2
+  - mc_chainmail_boots:1
+  - mc_wooden_sword:0
+  Skills:
+  - command{c="bq event <target.name> default.training_killed2"} @trigger ~onDeath
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 0.50
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  Drops:
+  - exp 2 1
+dummy3:
+  Type: ZOMBIE
+  BossBar:
+    Enabled: true
+    Title: '&cEntraîneur (&aDifficile&c)'
+    Range: 10
+    Color: RED
+    Style: SOLID
+  Display: '&cEntraîneur'
+  Disguise:
+    Type: player
+    Player: '&cEntraîneur'
+    Skin: Darkauron
+  Health: 200
+  Damage: 4
+  Armor: 5
+  Equipment:
+  - mc_leather_helmet:4
+  - mc_chainmail_chestplate:3
+  - mc_chainmail_leggings:2
+  - mc_chainmail_boots:1
+  - mc_wooden_sword:0
+  Skills:
+  - command{c="bq event <target.name> default.training_killed3"} @trigger ~onDeath
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    KnockbackResistance: 0.60
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  Drops:
+  - exp 3 1

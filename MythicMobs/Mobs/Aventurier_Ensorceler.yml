@@ -1,0 +1,37 @@
+Aventurier_Ensorceler:
+  Type: baby_zombie
+  Display: "&4Aventurier Ensorcelé"
+  Health: 100
+  Damage: 5
+  BossBar:
+    Enabled: true
+    Title: '&4Aventurier Ensorcelé'
+    Range: 15
+    Color: BLUE
+    Style: SOLID
+  Options:
+    FollowRange: 20
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    ShowHealth: true
+  AIGoalSelectors:
+  - 0 clear 
+  - 1 RandomStroll
+  - 2 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+#  Drops:
+#  - 
+  Equipment: 
+  - 299:3
+  - 300:2
+  - 301:1
+  - 272:0
+  Disguise:
+    Type: player
+    Player: "&4Aventurier Ensorcelé"
+    Skin: Yadulla666

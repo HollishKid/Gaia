@@ -1,0 +1,359 @@
+casque1:
+  Id: 298
+  Data: 0
+  Display: '&3Casque 1er Âge'
+  Lore:
+  - '&e&oCe casque fut porté par les'
+  - '&e&opremiers habitants de Gaïa.'
+  - ' '
+  - '&7&oRareté : &3Épique'
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 4
+      Health: 4
+      KnockbackResistance: 5%
+  Options:
+    Unbreakable: true
+    Color: 255,125,0
+  Enchantments:
+  - PROTECTION_PROJECTILE:5
+plastron1:
+  Id: 299
+  Data: 0
+  Display: '&3Plastron 1er Âge'
+  Lore:
+  - '&e&oCe plastron fut porté par les'
+  - '&e&opremiers habitants de Gaïa.'
+  - ' '
+  - '&7&oRareté : &3Épique'
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 15
+      Health: 6
+      KnockbackResistance: 15%
+  Options:
+    Unbreakable: true
+    Color: 255,125,0
+  Enchantments:
+   - PROTECTION_FIRE:3
+   - PROTECTION_EXPLOSIONS:4
+jambieres1:
+  Id: 300
+  Data: 0
+  Display: '&3Jambieres 1er Âge'
+  Lore:
+  - '&e&oCes jambières furent portées par'
+  - '&e&oles premiers habitants de Gaïa.'
+  - ' '
+  - '&7&oRareté : &3Épique'
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 10
+      Health: 2
+      KnockbackResistance: 5%
+  Options:
+    Unbreakable: true
+    Color: 255,125,0
+  Enchantments:
+  - PROTECTION_FALL:4
+souliers1:
+  Id: 301
+  Data: 0
+  Display: '&3Bottes 1er Âge'
+  Lore:
+  - '&e&oCes bottes furent portées par'
+  - '&e&oles premiers habitants de Gaïa.'
+  - ' '
+  - '&7&oRareté : &3Épique'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 6
+      Health: 2
+      MovementSpeed: 0.1
+      KnockbackResistance: 5%
+  Options:
+    Unbreakable: true
+    Color: 255,125,0
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:3
+epee1:
+  Id: 283
+  Data: 0
+  Display: '&3Épée 1er Âge'
+  Lore:
+  - '&e&oCette épée fut forgée par les'
+  - '&e&opremiers habitants de Gaïa.'
+  - ' '
+  - '&7&oRareté : &3Épique' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 20
+    OffHand:
+      Damage: 15  
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_UNDEAD:4
+hache1:
+  Id: 286
+  Data: 0
+  Display: '&3Hache 1er Âge'
+  Lore:
+  - '&e&oCette hache fut utilisée par'
+  - '&e&oles premiers habitants de Gaïa.'
+  - ' '
+  - '&7&oRareté : &3Épique' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 17
+    OffHand:
+      Damage: 12
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_UNDEAD:3
+#
+#
+#
+casque2:
+  Id: 298
+  Data: 0
+  Display: '&aCasque 2ème Âge'
+  Lore:
+  - '&e&oUn casque ancien de'
+  - '&e&ol''époque du Roi Ubu.'
+  - ' '
+  - '&7&oRareté : &aRare'
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 2
+      Health: 2
+      KnockbackResistance: 2%
+  Options:
+    Unbreakable: true
+    Color: 255,178,102
+  Enchantments:
+  - PROTECTION_PROJECTILE:3
+plastron2:
+  Id: 299
+  Data: 0
+  Display: '&aPlastron 2ème Âge'
+  Lore:
+  - '&e&oUn plastron ancien de'
+  - '&e&ol''époque du Roi Ubu.'
+  - ' '
+  - '&7&oRareté : &aRare'
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 10
+      Health: 3
+      KnockbackResistance: 7%
+  Options:
+    Unbreakable: true
+    Color: 255,178,102
+  Enchantments:
+   - PROTECTION_FIRE:2
+   - PROTECTION_EXPLOSIONS:2
+jambieres2:
+  Id: 300
+  Data: 0
+  Display: '&aJambieres 2ème Âge'
+  Lore:
+  - '&e&oDes jambières anciennes de'
+  - '&e&ol''époque du Roi Ubu.'
+  - ' '
+  - '&7&oRareté : &aRare'
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 7
+      Health: 2
+      KnockbackResistance: 3%
+  Options:
+    Unbreakable: true
+    Color: 255,178,102
+  Enchantments:
+  - PROTECTION_FALL:2
+souliers2:
+  Id: 301
+  Data: 0
+  Display: '&aBottes 2ème Âge'
+  Lore:
+  - '&e&oDes bottes anciennes de'
+  - '&e&ol''époque du Roi Ubu.'
+  - ' '
+  - '&7&oRareté : &aRare'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 5
+      Health: 1
+      MovementSpeed: 0.05
+      KnockbackResistance: 2%
+  Options:
+    Unbreakable: true
+    Color: 255,178,102
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:2
+epee2:
+  Id: 283
+  Data: 0
+  Display: '&aÉpée 2ème Âge'
+  Lore:
+  - '&e&oCette épée fut forgée par les'
+  - '&e&oHommes du Roi Ubu.'
+  - ' '
+  - '&7&oRareté : &aRare' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 15
+    OffHand:
+      Damage: 10  
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_UNDEAD:3
+hache2:
+  Id: 286
+  Data: 0
+  Display: '&aHache 2ème Âge'
+  Lore:
+  - '&e&oCette hache fut utilisée par'
+  - '&e&oles Hommes du Roi Ubu.'
+  - ' '
+  - '&7&oRareté : &aRare' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 12
+    OffHand:
+      Damage: 7
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_UNDEAD:2
+#
+#
+#
+casque3:
+  Id: 298
+  Data: 0
+  Display: '&fCasque 3ème Âge'
+  Lore:
+  - '&e&oUn casque récent,'
+  - '&e&ode très bonne qualité'
+  - ' '
+  - '&7&oRareté : &fCommun'
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 2
+      Health: 1
+      KnockbackResistance: 2%
+  Options:
+    Color: 255,229,204
+  Enchantments:
+  - PROTECTION_PROJECTILE:3
+plastron3:
+  Id: 299
+  Data: 0
+  Display: '&fPlastron 3ème Âge'
+  Lore:
+  - '&e&oUn plastron récent,'
+  - '&e&ode très bonne qualité !'
+  - ' '
+  - '&7&oRareté : &fCommun'
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 7
+      Health: 2
+      KnockbackResistance: 5%
+  Options:
+    Color: 255,229,204
+  Enchantments:
+   - PROTECTION_FIRE:2
+   - PROTECTION_EXPLOSIONS:2
+jambieres3:
+  Id: 300
+  Data: 0
+  Display: '&fJambieres 3ème Âge'
+  Lore:
+  - '&e&oDes jambières récentes,'
+  - '&e&ode très bonne qualité !'
+  - ' '
+  - '&7&oRareté : &fCommun'
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 5
+      Health: 1
+      KnockbackResistance: 2%
+  Options:
+    Color: 255,229,204
+  Enchantments:
+  - PROTECTION_FALL:2
+souliers3:
+  Id: 301
+  Data: 0
+  Display: '&fBottes 3ème Âge'
+  Lore:
+  - '&e&oDes souliers récents,'
+  - '&e&ode très bonne qualité !'
+  - ' '
+  - '&7&oRareté : &fCommun'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 4
+      Health: 1
+      MovementSpeed: 0.03
+      KnockbackResistance: 1%
+  Options:
+    Color: 255,229,204
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:1
+epee3:
+  Id: 283
+  Data: 0
+  Display: '&fÉpée 3ème Âge'
+  Lore:
+  - '&e&oCette épée a été forgée'
+  - '&e&orécemment, mais n''en reste'
+  - '&e&opas moins dangereuse !'
+  - ' '
+  - '&7&oRareté : &fCommun' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 10
+    OffHand:
+      Damage: 5
+  Enchantments:
+  - DAMAGE_UNDEAD:2
+hache3:
+  Id: 286
+  Data: 0
+  Display: '&fHache 3ème Âge'
+  Lore:
+  - '&e&oUne hache récente,'
+  - '&e&omais très tranchante !'
+  - ' '
+  - '&7&oRareté : &fCommun' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 7
+    OffHand:
+      Damage: 2
+  Enchantments:
+  - DAMAGE_UNDEAD:1

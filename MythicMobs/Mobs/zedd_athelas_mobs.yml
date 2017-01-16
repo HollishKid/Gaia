@@ -1,0 +1,554 @@
+################################
+#
+###     BLACK HOLE EREK
+#
+#
+Shrek:
+  Type: ZOMBIE
+  BossBar:
+    Enabled: true
+    Title: '&4Anton'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Display: '&4Anton'
+  Health: 300
+  Damage: 8
+  Skills:
+  - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
+  - skill{s=MobHealth} ~onDamaged >0 1
+  - skill{s=MiniShrek} ~onTimer:400
+  - skill{s=Tempest-Blast} @target ~onTimer:150
+  - skill{s=Fart} ~onDamaged .1
+  - heal{amount=1} @self ~onTimer:40
+  - command{c="setblock -7415 38 3389 redstone_block"} ~onDeath 1
+  Disguise:
+    Type: player
+    Player: '&4Anton'
+    Skin: anton
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Equipment:
+  - SwampHead:4
+  - SwampChestplate:3
+  - SwampLeggings:2
+  - SwampBoots:1
+  - air:0
+  Options:
+    MovementSpeed: 0.2
+    KnockbackResistance: 1
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Despawn: false
+  Modules:
+    ThreatTable: true
+ShrekJr:
+  Type: ZOMBIE
+  Health: 35
+  Damage: 4
+  Disguise:
+    Type: player
+    Player: '&4Garde invoqué'
+    Skin: thief
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Options:
+    MovementSpeed: 0.3
+    Collidable: false
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+  Equipment:
+  - ShrekHead:4
+  - ShrekChestplate:3
+  - ShrekLeggings:2
+  - ShrekBoots:1
+  - air:0
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - LIGHTNING 0
+  Skills:
+  - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
+acolyte:
+  Type: ZOMBIE
+  Health: 80
+  Damage: 5
+  Skills:
+  - skill{s=acolyte_slow} @target ~onTimer:150
+  Disguise:
+    Type: player
+    Player: '&4Acolyte'
+    Skin: ntohee
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Options:
+    MovementSpeed: 0.3
+    Collidable: false
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+  Modules:
+    ThreatTable: true
+acolyteJr:
+  Type: ZOMBIE
+  Health: 40
+  Damage: 4
+  Skills:
+  - skill{s=acolyte_slow} @target ~onTimer:150
+  Disguise:
+    Type: player
+    Player: '&4Acolyte'
+    Skin: ntohee
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Options:
+    MovementSpeed: 0.3
+    Collidable: false
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+  Modules:
+    ThreatTable: true
+acolyte_ranged:
+  Type: SKELETON
+  Health: 70
+  Damage: 1
+  Skills:
+  - skill{s=SingleTargetFire} @target ~onTimer:250
+  Disguise:
+    Type: player
+    Player: '&4Archer rebelle'
+    Skin: LordNed
+  AIGoalSelectors:
+  - 0 clear
+  - 1 skeletonbowattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Equipment:
+  - bow:0
+  Options:
+    MovementSpeed: 0.2
+    Collidable: false
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+  Modules:
+    ThreatTable: true
+acolyte_rangedJr:
+  Type: SKELETON
+  Health: 50
+  Damage: 1
+  Disguise:
+    Type: player
+    Player: '&4Archer rebelle'
+    Skin: LordNed
+  AIGoalSelectors:
+  - 0 clear
+  - 1 skeletonbowattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Equipment:
+  - bow:0
+  Options:
+    MovementSpeed: 0.2
+    Collidable: false
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+  Modules:
+    ThreatTable: true
+Karaaaaaaa:
+  Mobtype: SKELETON
+  Disguise:
+    Type: player
+    Player: '&4Kara'
+    Skin: Ender
+  Options:
+    Silent: true
+    Despawn: true
+    FollowRange: 50
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    KnockbackResistance: 1.0
+  Display: '&6&lKarazsch'
+  Health: 300
+  Damage: 6
+  Skills:
+  - sound{s=entity.blaze.ambient;p=0.3;v=0.2} @self ~onTimer:60 0.25
+  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#8ad9ff} @self ~onDamaged 0.5
+  - skill{s=KarazschArcaneBolt} @target ~onTimer:80
+  - summon{type=KarazschLaserMob;amount=1;radius=20;os=true} ~onTimer:200
+  Equipment:
+  - stick:0
+  DamageModifiers:
+  - FALL 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 skeletonbowattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 player
+KaraLaserMob:
+  Type: BABY_PIG_ZOMBIE
+  Disguise:
+    Type: ENDER_CRYSTAL
+  Display: ''
+  Health: 5
+  Damage: 0
+  Skills:
+  - skill{s=KarazschLaser} @Target ~onTimer:100
+  - skill{s=KarazschLaserDeath} @Self ~onSpawn
+  - potion{type=SLOW;d=999999;l=10} @self ~onSpawn
+  AITargetSelectors:
+  - 0 clear
+  - 1 Golems
+  Faction: Laser
+  DamageModifiers:
+  - FALL 0
+  Options:
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Silent: true
+KaraCloud:
+  Type: CHICKEN
+  Disguise:
+    Type: CHICKEN
+    Invisible: true
+  Display: 'Dispersed Magic'
+  Health: 1000
+  Damage: 0
+  Skills:
+  - skill{s=KarazschCloudDeath} @Self ~onSpawn
+  - skill{s=MagicCloudEffect} @Self ~onTimer:20
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  AIGoalSelectors:
+  - 0 clear
+  - 2 RandomStroll
+  - 3 AvoidArrows
+  - 4 LookAtPlayers
+  - 5 MoveTowardsTarget
+  AITargetSelectors:
+  - 0 clear
+  - 1 Players
+  DamageModifiers:
+  - FALL 0
+  Options:
+    Silent: true
+    Despawn: true
+    FollowRange: 50
+    AlwaysShowName: false
+    MovementSpeed: 0.1
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    KnockbackResistance: 1.0
+Kara:
+  Type: SKELETON
+  BossBar:
+    Enabled: true
+    Title: '&4Kara'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Display: '&4Kara'
+  Health: 300
+  Damage: 8
+  Skills:
+  - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
+  - skill{s=MobHealth} ~onDamaged >0 1
+  - skill{s=Darkness} ~onTimer:400
+  - skill{s=VarsonFireyArmor} ~onTimer:800
+  - command{c="setblock -7413 27 3238 redstone_block"} ~onDeath 1
+  Disguise:
+    Type: player
+    Player: '&4Kara'
+    Skin: OctopusGuy
+  AIGoalSelectors:
+  - 0 clear
+  - 1 skeletonbowattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Equipment:
+  - bow:0
+  Options:
+    MovementSpeed: 0.3
+    KnockbackResistance: 1
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Despawn: false
+  Modules:
+    ThreatTable: true
+killer:
+  Type: ZOMBIE
+  Health: 800
+  Damage: 50
+  Skills:
+  - skill{s=acolyte_slow} @target ~onTimer:100
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Options:
+    MovementSpeed: 0.4
+    FollowRange: 50
+    Collidable: false
+    PreventOtherDrops: false
+    PreventRandomEquipment: true
+  Modules:
+    ThreatTable: true
+erek_p1:
+  Type: SKELETON
+  Health: 800
+  Damage: 1
+  Disguise:
+    Type: player
+    Player: '&4Erek'
+    Skin: superman
+  Skills:
+  - potion{type=SLOW;d=999999;l=10} @self ~onSpawn
+  - skill{s=MissileLauncher} ~onTimer:240
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 skeletonbowattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Equipment:
+  - bow:0
+  Options:
+    MovementSpeed: 0.4
+    AttackSpeed: 5
+    FollowRange: 50
+    Collidable: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 50
+  Modules:
+    ThreatTable: true
+0MissileMob0:
+  MobType: creeper
+  Display: '&6Missile'
+  Health: 20
+  Damage: 0
+  Drops:
+  - missiledrops
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+  - potion{t=INVISIBILITY;d=999999999;l=1} @Self ~onSpawn 1
+  - skill{skill=Missile} @Self ~onSpawn 1
+  Options:
+    FuseTicks: 10000
+    MovementSpeed: 0.005
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+erek_renfort:
+  Type: PIG_ZOMBIE
+  Health: 30
+  Damage: 4
+  Disguise:
+    Type: player
+    Player: '&4Garde invoqué'
+    Skin: thief
+  AIGoalSelectors:
+  - 0 clear
+  - 1 RandomStroll
+  - 2 AvoidArrows
+  - 3 Meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Options:
+    MovementSpeed: 0.3
+    Collidable: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+  Equipment:
+  - ShrekChestplate:3
+  - ShrekLeggings:2
+  - ShrekBoots:1
+  - air:0
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - LIGHTNING 0
+  Skills:
+  - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
+0LandMineMob0:
+  MobType: creeper
+  Display: '&4Mine'
+  Health: 20
+  Damage: 10
+  AITargetSelectors:
+  - 0 clear
+  - 1 monsters
+  - 2 players
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+  - potion{t=INVISIBILITY;d=999999999;l=1} @Self ~onSpawn 1
+  - effect:particles{particle=reddust;amount=35;vSpread=0.8;hSpread=0.1;Speed=0;yOffset=0} @Self ~onTimer:20 >0 1
+  - skill{skill=MineDetonate} @Self 1
+  - suicide @Self ~onTimer:400
+  Options:
+    FuseTicks: 1
+    PreventOtherDrops: true
+    Collidable: false
+    MovementSpeed: 0.005
+    FollowRange: 5
+    Despawn: true
+    KnockbackResistance: 1
+erek:
+  Type: PIG_ZOMBIE
+  BossBar:
+    Enabled: true
+    Title: '&4Erek'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Health: 1000
+  Damage: 4
+  Disguise:
+    Type: player
+    Player: '&4Erek'
+    Skin: superman
+  AIGoalSelectors:
+  - 0 clear
+  - 1 RandomStroll
+  - 2 AvoidArrows
+  - 3 Meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  DamageModifiers:
+  - ENTITY_EXPLOSION 250
+  Skills:
+  - skill{s=MobHealth} ~onDamaged >0 1
+  - skill{s=HealthPack} ~onDamaged >8 0.08
+  - skill{s=RandomPot} ~onTimer:600
+  - skill{s=landmine} ~onTimer:400
+  - command{c="setblock -7411 46 3272 redstone_block"} ~onDeath 1
+  Options:
+    MovementSpeed: 0.2
+    FollowRange: 40
+    Collidable: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+  Modules:
+    ThreatTable: true
+HealthPackMob:
+  Type: slime
+  Display: '&2Pack de soin'
+  Health: 2
+  Damage: 0
+  DamageModifiers:
+  - FALL 0
+  - ENTITY_EXPLOSION 0
+  Skills:
+  - heal{amount=10} @PlayersInRadius{r=10} ~onDamaged 1
+  - message{msg="&6&oVous récupérez &25 points de vie&6."} @PlayersInRadius{r=10} ~onDeath 1
+  - remove{delay=400} @self ~onSpawn
+  Options:
+    Size: 1
+    PreventSlimeSplit: true
+    MovementSpeed: 0.005
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Collidable: false
+hol_add:
+  Type: WITCH
+  Health: 50
+  Damage: 4
+  Disguise:
+    Type: player
+    Player: '&6Type louche'
+    Skin: goodthief
+  Skills:
+  - skill{s=rally_call} ~onCombat =50%
+  AIGoalSelectors:
+  - 0 clear
+  - 1 RandomStroll
+  - 2 AvoidArrows
+  - 3 Meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  Options:
+    MovementSpeed: 0.4
+    Collidable: false
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+  Modules:
+    ThreatTable: true

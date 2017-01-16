@@ -1,0 +1,46 @@
+quester: Garde Royal
+first: unknown,welcome
+stop: 'false'
+#Options du NPC
+NPC_options:
+  'unknown':
+    text: Parlez à l'&2Intendant&a&o, il vous attend !
+    condition: '!intendant_done'
+  'welcome':
+    text: Bonjour !
+    condition: intendant_done
+    pointer: bonjour,qui,chateau,intendant,roi
+  'qui_rep':
+    text: Je suis un membre de la Garde Royale d'Athelas.
+  'chateau_rep':
+    text: C'est le château construit par le &2Roi Ubu&a&o, Premier du Nom. Maintenant il appartient à son petit-fils, le &2Roi Kahn&a&o.
+  'intendant_rep':
+    text: Vous devriez considérer l'achat de lunettes. Il se trouve sur son siège, dans cette salle.
+  'roi_rep':
+    text: Hahaha! Qui es-tu pour prétendre pouvoir parler au &2Roi Kahn &a&o?!
+    pointer: moi,rien
+  'moi_rep':
+    text: C'est que tu es un coriace toi, alors écoutes moi bien, soit tu vas vite filer retourner à tes occupations, soit tu vas finir en geôle !!
+#Options du joueur
+player_options:
+  'bonjour':
+    text: Bonjour !
+  'qui':
+    text: Qui êtes vous ?
+    pointer: qui_rep
+  'chateau':
+    text: C'est quoi ce château ?
+    pointer: chateau_rep
+  'intendant':
+    text: Je cherche l'Intendant du Roi...
+    pointer: intendant_rep
+  'merci':
+    text: Merci
+  'roi':
+    text: Je demande à parler au Roi !
+    pointer: roi_rep
+  'moi':
+    text: Je suis %player%, Premier du Nom !! Et j'EXIGE un entretien avec le Roi !
+    pointer: moi_rep
+  'rien':
+    text: Ouais, je vais aller voir par là bas en fait...

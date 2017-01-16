@@ -1,0 +1,54 @@
+quester: Pirindë
+first: unknown,welcome,member
+stop: 'false'
+#                   #
+#                   #
+#  Options du NPC   #
+#                   #
+#                   #
+NPC_options:
+  unknown:
+    text: Je ne vous connais pas ! Allez voir l'&2Intendant &a&o!
+    conditions: '!gestionnaire'
+  welcome:
+    text: Salut jeune pousse ! Que viens-tu faire ici ?
+    conditions: 'gestionnaire,!herboriste'
+    pointer: presentation,become_member,rien
+  pres_ok:
+    text: Ok ! Quand vous serez reconnu par l'&2Intendant&a&o, revenez me voir !
+    events: found_guild7,guild_tester
+  member_ok:
+    text: Très bien, bienvenue parmi nous ! Notre Guilde excelle dans l'Herboristerie. \nLe Menu de la Guilde te permet de choisir un métier parmis d'autres avantages !
+    event: herboriste
+    pointer: menu,merci
+#
+#
+# Add any guild-specific quests in pointers of "member"
+  member:
+    text: Bienvenue dans votre guilde, &2%player% &a&o!
+    conditions: herboriste
+    pointer: menu,merci
+  herboriste_menu:
+    text: Le voilà !
+    event: herboriste_menu
+#                   #
+#                   #
+# Options du Joueur #
+#                   #
+#                   #
+player_options:
+  presentation:
+    text: Je viens me présenter de la part de l'Intendant !
+    conditions: 'guilde_herboristes'
+    pointer: pres_ok
+  become_member:
+    text: Je veux devenir membre de la Guilde des Herboristes !
+    condition: '!herboriste,intendant_done'
+    pointer: member_ok
+  menu:
+    text: Je voudrais accéder au Menu de la Guilde.
+    pointer: herboriste_menu
+  rien:
+    text: Je ne fais que passer...
+  merci:
+    text: Merci ! Au revoir !

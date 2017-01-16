@@ -1,0 +1,57 @@
+quester: Maître de Clé
+first: unwanted,unknown,client,client_coffre
+stop: 'false'
+#Options du NPC
+NPC_options:
+  unwanted:
+    text: Nous clients doivent être connu de l'&2Intendant. Je ne peux pas vous aider tant que vous ne lui avez pas parlé.
+    condition: '!intendant_done'
+  unknown:
+    text: Bonjour &2%player%. &a&oPuis-je vous renseigner ?
+    conditions: '!client,!client_coffre,intendant_done'
+    pointer: qui,coffre,client,protege
+  client:
+    text: Bonjour &2%player%. &a&oEn quoi puis-je vous aider aujourd'hui ?
+    conditions: 'client,!client_coffre'
+    pointer: qui,coffre1,protege
+  client_coffre:
+    text: Bonjour &2%player%. &a&oEn quoi puis-je vous aider aujourd'hui ?
+    conditions: client,client_coffre
+    pointer: qui,protege,sort
+  qui_rep:
+    text: Je suis le &2Maître de Clé &a&ogardien et garant du coffre de cette banque. Je travaille directement pour les &2Anciens Patrons &a&ode la Finance d'Athelas et je suis le seul outre les clients à pouvoir accéder au coffre.
+    pointer: coffre,client,protege
+  coffre_rep:
+    text: Je vois que vous n'êtes pas encore client chez nous. Veuillez parler à un &2Banquier &a&oau guichet pour vous faire faire un compte.
+  client_rep:
+    text: Pour ce faire, parlez à un &2Banquier &a&oau guichet pour vous faire faire un compte.
+  protege_rep:
+    text: La sécurité de notre coffre repose sur des murs en fer forgé, une surveillance de deux gardes jour et nuit et surtout un ensemble de sorts puissants que les &2Mages &a&oont offert à notre Banque.
+  coffre1_rep:
+    text: Je vois que vous avez été inscrit par un &2Banquier. &a&oVous pouvez désormais accéder librement au coffre. Le coffre est commun à tous les clients. Un sort puissant rend vos effets personnels visibiles uniquement par vous !
+    events: client_coffre
+    pointer: merci
+  sort_rep:
+    text: C'est un sort qui a été mis au point par un des 13 &2Mages &a&odu Sanctuaire. Grâce à lui, en fonction de la personne qui ouvre ce coffre, il dévoilera les effets personnels de cette dernière. Ce sort ne s'est jamais encore trompé !
+#Options du joueur
+player_options:
+  qui:
+    text: Qui êtes vous?
+    pointer: qui_rep
+  coffre:
+    text: Je voudrais accéder au coffre.
+    pointer: coffre_rep
+  client:
+    text: Je voudrais pouvoir profiter des services de votre banque.
+    pointer: client_rep
+  protege:
+    text: Comment est protégé votre coffre ?
+    pointer: protege_rep
+  coffre1:
+    text: Je voudrais accéder au coffre.
+    pointer: coffre1_rep
+  merci:
+    text: Merci Maître de Clé !
+  sort:
+    text: C'est quoi ce sort qui cache les effets personnels dont vous m'avez parlé ?
+    pointer: sort_rep

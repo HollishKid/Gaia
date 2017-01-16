@@ -1,0 +1,74 @@
+quester: Sir James
+first: butin,repeat,enfin,bonjour
+stop: 'false'
+############
+#          #
+#   NPC    #
+#          #
+############
+NPC_options:
+  butin:
+    text: Psst, oui c'est à toi que je parle ! Tu voudrais de l'argent ?
+    conditions: '!Sir_tresor,!Tresor_trouve,!Sir_James_done'
+    pointer: qui,oui,non
+  moi:
+    text: Je suis un corsaire, et c'est tout ce que vous devez savoir !
+  tresor:
+    text: J'ai entendus dire qu'un pirate aurait entérrer un trésor à Athélas.
+    pointer: quoi,oh
+  devine:
+    text: 'Je n''est que cet égnime: \n"Dans les temps anciens, on me craigné, par mon passage, tout deviens cendres. Mais aujourd''hui, je ne suis que pierre."'
+    pointer: trouve,non_trouve
+  bien:
+    text: Si c'est vraiment le cas, je te donnerais une part du butin.
+    pointer: ok
+  aventure:
+    text: Bonne route. Et reviens vite ! 
+    events: 'Sir_tresor,Sir_Journal,Sir_tresor_objt'
+  repeat:
+    text: Tu veux que je répéte l'égnime ?
+    conditions: 'Sir_tresor,!Tresor_trouve'
+    pointer: oui2,non2
+  repeat2:
+    text: "Dans les temps anciens, on me craigné. Par mon passage, tout deviens cendres. Mais aujourd'hui, je ne suis que pierre."
+  enfin:
+    text: Vous avez le trésor ? Merveilleux. Je vous remercie pour votre aide, prener ci comme guise de remerciement !
+    conditions: 'Tresor_trouve,Sir_tresor'
+    events: 'Donner_Butin_tous,defaut_tous'
+    pointer: merci
+  bonjour:
+    text: Bonjour, jeune aventurier !
+############
+#          #
+#  Joueur  #
+#          #
+############
+player_options:
+  qui:
+    text: Mais, qui étes vous ?
+    pointer: moi
+  oui:
+    text: Oui, que dois-je faire ?
+    pointer: tresor
+  non:
+    text: Non, je suis déjà riche.
+  quoi:
+    text: Vous croyez à de simple rumeur ? pff.
+  oh:
+    text: Ah oui, où ce trouve-t-il ?
+    pointer: devine
+  trouve:
+    text: J'ai une petite idée.
+    pointer: bien
+  non_trouve:
+    text: Alors là, j'abandonne.
+  ok:
+    text: Ok, je reviens !
+    pointer: aventure
+  oui2:
+    text: Oui, s'il vous plaît !
+    pointer: repeat2
+  non2:
+    text: Non merci.
+  merci:
+    text: Merci, Sir James. Je vous souhaites une bonne journée ! 

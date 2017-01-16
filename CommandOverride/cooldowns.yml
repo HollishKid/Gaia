@@ -1,0 +1,3 @@
+/plugins:
+  cooldown: 1
+  message: '&4You have to wait &c%time% &4seconds before you can do that command again!'

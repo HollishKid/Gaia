@@ -1,0 +1,576 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dGuilde Mineurs'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+craft_custom:
+  COMMAND: 'open: craft_custom.yml'
+  NAME: '&6&oCrafts Spéciaux'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&cAttention :'
+  - '&oVous ne devez &lpas'
+  - '&odéjà avoir l''objet que'
+  - '&ovous craftez dans votre'
+  - '&oinventaire; &lmême'
+  - '&osous une autre forme !'
+  - ' '
+  - '&oUtilisation :&l/crafts'
+  ID: 58
+  POSITION-X: 1
+  POSITION-Y: 6
+  KEEP-OPEN: true
+
+mineur:
+  COMMAND: 'console: bq event {player} default.metier_mineur'
+  NAME: '&6Mineur'
+  LORE:
+    - 'Accepter le métier Mineur'
+    - ' '
+    - 'Vous gagnerez 10% d''expérience en plus'
+    - 'dans la Compétence Minage !'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: diamond_pickaxe
+  POSITION-X: 4
+  POSITION-Y: 1
+
+mineur1:
+  COMMAND: 'console: bq event {player} default.metier_mineur1'
+  NAME: '&aGrade Mineur'
+  LORE:
+    - 'Prendre le Grade de Mineur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a1 &cCompétence Minage'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 2
+ 
+mineur2:
+  COMMAND: 'console: bq event {player} default.metier_mineur2'
+  NAME: '&aGrade Charbonnier'
+  LORE:
+    - 'Prendre le Grade de Charbonnier'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a25 &cCompétence Minage'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 3
+  
+mineur3:
+  COMMAND: 'console: bq event {player} default.metier_mineur3'
+  NAME: '&aGrade Houilleur'
+  LORE:
+    - 'Prendre le Grade de Houilleur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a50 &cCompétence Minage'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 4
+
+mineur4:
+  COMMAND: 'console: bq event {player} default.metier_mineur4'
+  NAME: '&aGrade Hercheur'
+  LORE:
+    - 'Prendre le Grade de Hercheur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a75 &cCompétence Minage'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 5
+  
+mineur5:
+  COMMAND: 'console: bq event {player} default.metier_mineur5'
+  NAME: '&aGrade Porion'
+  LORE:
+    - 'Prendre le Grade de Porion'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a100 &cCompétence Minage'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 6
+  
+reparation:
+  COMMAND: 'console: bq event {player} default.metier_reparation'
+  NAME: '&6Réparateur'
+  LORE:
+    - 'Accepter le métier Réparateur'
+    - ' '
+    - 'Vous gagnerez 10% d''expérience en plus'
+    - 'dans la Compétence Réparation !'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: iron_ingot
+  POSITION-X: 3
+  POSITION-Y: 1
+
+reparation1:
+  COMMAND: 'console: bq event {player} default.metier_reparation1'
+  NAME: '&aGrade Raccommodeur'
+  LORE:
+    - 'Prendre le Grade de Raccommodeur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a1 &cCompétence Réparation'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 2
+ 
+reparation2:
+  COMMAND: 'console: bq event {player} default.metier_reparation2'
+  NAME: '&aGrade Ouvrier'
+  LORE:
+    - 'Prendre le Grade d''Ouvrier'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a25 &cCompétence Réparation'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+reparation3:
+  COMMAND: 'console: bq event {player} default.metier_reparation3'
+  NAME: '&aGrade Artisan'
+  LORE:
+    - 'Prendre le Grade d''Artisan'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a50 &cCompétence Réparation'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 4
+
+reparation4:
+  COMMAND: 'console: bq event {player} default.metier_reparation4'
+  NAME: '&aGrade Contremaître'
+  LORE:
+    - 'Prendre le Grade de Contremaître'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a75 &cCompétence Réparation'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 5
+  
+reparation5:
+  COMMAND: 'console: bq event {player} default.metier_reparation5'
+  NAME: '&aGrade Maître'
+  LORE:
+    - 'Prendre le Grade de Maître'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a100 &cCompétence Réparation'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 6
+
+excavationtitle:
+  COMMAND: 'console: bq event {player} default.metier_excavation'
+  NAME: '&6Excavateur'
+  LORE:
+    - 'Accepter le métier Excavateur'
+    - ' '
+    - 'Vous gagnerez 10% d''expérience en plus'
+    - 'dans la Compétence Excavation !'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: 284
+  POSITION-X: 5
+  POSITION-Y: 1
+  
+excavation1:
+  COMMAND: 'console: bq event {player} default.metier_excavation1'
+  NAME: '&aGrade Galibot'
+  LORE:
+    - 'Prendre le Grade de Galibot'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a1 &cCompétence Excavation'
+  ID: paper
+  POSITION-X: 5
+  POSITION-Y: 2
+ 
+excavation2:
+  COMMAND: 'console: bq event {player} default.metier_excavation2'
+  NAME: '&aGrade Carrier'
+  LORE:
+    - 'Prendre le Grade de Carrier'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a25 &cCompétence Excavation'
+  ID: paper
+  POSITION-X: 5
+  POSITION-Y: 3
+  
+excavation3:
+  COMMAND: 'console: bq event {player} default.metier_excavation3'
+  NAME: '&aGrade Foreur'
+  LORE:
+    - 'Prendre le Grade de Foreur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a50 &cCompétence Excavation'
+  ID: paper
+  POSITION-X: 5
+  POSITION-Y: 4
+
+excavation4:
+  COMMAND: 'console: bq event {player} default.metier_excavation4'
+  NAME: '&aGrade Sapeur'
+  LORE:
+    - 'Prendre le Grade de Sapeur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a75 &cCompétence Excavation'
+  ID: paper
+  POSITION-X: 5
+  POSITION-Y: 5
+  
+excavation5:
+  COMMAND: 'console: bq event {player} default.metier_excavation5'
+  NAME: '&aGrade Pionnier'
+  LORE:
+    - 'Prendre le Grade de Pionnier'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a100 &cCompétence Excavation'
+  ID: paper
+  POSITION-X: 5
+  POSITION-Y: 6
+
+standardprefix:
+  COMMAND: 'console: bq event {player} default.basic_prefix'
+  NAME: '&6Retour Grade Habituel'
+  LORE:
+    - '&oCliquez ici pour'
+    - '&oremettre votre'
+    - '&opréfixe habituel.'
+    - ' '
+    - '&lVous serez toujours'
+    - '&lmembre de la guilde !'
+  ID: paper
+  POSITION-X: 1
+  POSITION-Y: 3
+
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - '&cFerme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+fullguide:
+  COMMAND: 'tell: &a&o http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Competences'
+  NAME: '&6Guide Complet'
+  ID: book
+  ENCHANTMENT: 'infinity, 1'
+  LORE:
+    - 'Affiche un lien vers le guide'
+    - ' complet de Compétences.'
+  POSITION-X: 9
+  POSITION-Y: 6
+  
+mcstats:
+  COMMAND: 'mcstats'
+  NAME: '&6Statistiques'
+  ID: paper
+  LORE:
+    - 'Affiche vos Statistiques'
+    - 'Individuelles Complètes'
+  POSITION-X: 9
+  POSITION-Y: 5
+  
+mcrank:
+  COMMAND: 'mcrank'
+  NAME: '&6Classement Personnel'
+  ID: paper
+  LORE:
+    - 'Affiche votre Classement'
+    - 'des Compétences'
+  POSITION-X: 9
+  POSITION-Y: 4
+  
+mctop:
+  COMMAND: 'mctop'
+  NAME: '&6Classement Global'
+  ID: torch
+  LORE:
+    - 'Affiche le Classement'
+    - 'Global des Compétences'
+  POSITION-X: 9
+  POSITION-Y: 3
+  
+jobs:
+  NAME: '&6Faire un Travail'
+  ID: torch
+  LORE:
+    - 'Ci-dessous les différents'
+    - 'travaux quotidients à'
+    - 'faire dans cette Guilde.'
+    - ' '
+    - '&ocliquez sur une icône'
+    - '&opour commencer.'
+  POSITION-X: 7
+  POSITION-Y: 1
+  
+repair:
+  COMMAND: 'console: bq event {player} default.job_repair'
+  NAME: '&6Travail Réparation'
+  ID: paper
+  LORE:
+    - 'Ce travail consiste à'
+    - 'apporter ces éléments:'
+    - '- &o25 Cuir Tanné'
+    - '- &o20 Mailles'
+    - '- &o10 Fer Forgé'
+    - '- &o5 Or Décoré'
+    - ' '
+    - '&lcliquez sur cette icône'
+    - '&lpour commencer ou'
+    - '&lpour donner les objets.'
+  POSITION-X: 7
+  POSITION-Y: 3
+  
+minage:
+  COMMAND: 'console: bq event {player} default.job_mining'
+  NAME: '&6Travail Minage'
+  ID: paper
+  LORE:
+    - 'Ce travail consiste à'
+    - 'miner ces éléments:'
+    - '- &o100 Pierres'
+    - '- &o25 Charbon'
+    - ' '
+    - '&lcliquez sur cette icône'
+    - '&lpour commencer ou'
+    - '&lpour donner les objets.'
+  POSITION-X: 7
+  POSITION-Y: 4
+  
+excavation:
+  COMMAND: 'console: bq event {player} default.job_excavation'
+  NAME: '&6Travail Excavation'
+  ID: paper
+  LORE:
+    - 'Ce travail consiste à'
+    - 'excaver ces éléments:'
+    - '- &o50 Terre'
+    - '- &o50 Gravier'
+    - ' '
+    - '&lcliquez sur cette icône'
+    - '&lpour commencer ou'
+    - '&lpour donner les objets.'
+  POSITION-X: 7
+  POSITION-Y: 5
+  
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 9
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+blocker92:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 9
+  KEEP-OPEN: true
+  
+blocker13:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker23:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker33:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker43:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker53:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker63:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker83:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+blocker93:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 9
+  KEEP-OPEN: true

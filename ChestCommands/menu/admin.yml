@@ -1,0 +1,468 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dAdmin'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 7
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 5
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note harp'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+staff:
+  COMMAND: 'staff'
+  NAME: '&a&lStaff en Ligne'
+  LORE:
+    - 'Permet d''afficher toutes'
+    - 'les personnes habilitées à'
+    - 'vous répondre.'
+  ID: map
+  POSITION-X: 4
+  POSITION-Y: 1
+
+players:
+  NAME: '&eJoueurs'
+  LORE:
+    - '{online} / {max_players}'
+  ID: gold sword
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+menu-close:
+  NAME: '&cFermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+  
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&6Retour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal'
+  POSITION-X: 8
+  POSITION-Y: 1
+  
+gm1:
+  COMMAND: 'op: gm 1'
+  NAME: '&aMode Créatif'
+  ID: 'wool:5'
+  LORE:
+    - 'Vous passe en Mode Créatif'
+  POSITION-X: 1
+  POSITION-Y: 1
+  VIEW-PERMISSION: menu.admin.gm1
+
+gm0:
+  COMMAND: 'op: gm 0'
+  NAME: '&cMode Survie'
+  ID: 'wool:14'
+  LORE:
+    - 'Vous repasse en Mode Survie'
+  POSITION-X: 2
+  POSITION-Y: 1
+  
+administration:
+  NAME: '&6Sur cette ligne'
+  ID: 'book, 1'
+  LORE:
+    - 'Toutes les commandes'
+    - 'd''Administration Courante'
+  POSITION-X: 1
+  POSITION-Y: 3
+  KEEP-OPEN: true
+
+citizensreload:
+  COMMAND: 'op: citizens save; op: citizens reload'
+  NAME: '&6Recharger les PNJ'
+  ID: paper
+  LORE:
+    - 'A cliquer lorsque les PNJ'
+    - 'sont mal affichés'
+    - ' '
+    - 'Ne pas utiliser à la légère !'
+  POSITION-X: 8
+  POSITION-Y: 3
+  VIEW-PERMISSION: menu.citizens.reload
+  
+inspector:
+  COMMAND: 'op: co inspect'
+  NAME: '&6Inspecteur de Blocs'
+  ID: paper
+  LORE:
+    - 'A cliquer lorsque vous'
+    - 'voulez inspecter QUI a'
+    - 'placé/cassé un block.'
+    - ''
+    - '&cPensez à cliquer ici'
+    - '&cà nouveau pour éteindre'
+  POSITION-X: 7
+  POSITION-Y: 3
+  VIEW-PERMISSION: menu.coreprotect.inspect
+  
+histoire:
+  NAME: '&6/histoire [nom du joueur]'
+  ID: paper
+  LORE:
+    - '&cNon cliquable, tapez la commande'
+    - 'A utiliser lorsqu''un joueur'
+    - 'est bloqué dans le générique'
+    - ' '
+    - 'Recommence l''Histoire'
+  POSITION-X: 5
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  VIEW-PERMISSION: menu.admin.histoire
+
+vanish:
+  COMMAND: 'vanish'
+  NAME: '&6/vanish'
+  ID: paper
+  LORE:
+    - 'Permet de devenir invisible'
+    - 'Afin d''observer d''éventuels cheats'
+  POSITION-X: 6
+  POSITION-Y: 3
+  
+register:
+  NAME: '&6/authme register'
+  ID: paper
+  LORE:
+    - '&cNon cliquable, tapez la commande'
+    - '/authme register (nom) (motdepasse)'
+    - ' '
+    - 'Permet d''enregistrer un joueur'
+    - 'avec un mot de passe de votre choix.'
+    - 'N''utiliser que si vous avez vérifié'
+    - 'qu''il ne s''agit pas d''un compte'
+    - 'ne servant qu''à obtenir l''argent du début !'
+  POSITION-X: 4
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+tpto:
+  NAME: '&6/tp'
+  ID: paper
+  LORE:
+    - '&cNon cliquable, tapez la commande'
+    - ' '
+    - '/tp [nom joueur]'
+    - 'pour se téléporter à des'
+    - 'personnes pour les aider'
+    - 'en cas de besoin.'
+  POSITION-X: 3
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+sanction:
+  NAME: '&6/sanction [fer/or/diamant] [nom joueur]'
+  ID: paper
+  LORE:
+    - 'Cette commande sert de'
+    - 'sanction globale à utiliser'
+    - 'exclusivement par les Modos'
+    - 'en respect du règlement !'
+    - ' '
+    - '&2/liberer [nom joueur] &fpour libérer.'
+    - '&fprématurément ou en cas de bug.'
+    - ' '
+    - 'Sanctions:'
+    - 'Fer: Prison + Mute(15m) + 1 avertissement'
+    - 'Or: Prison + Mute(30m) + 1averto +500¤'
+    - 'Diamant: Prison + Mute(1h) + 1averto +1000¤'
+    - ' '
+    - '5 points d''avertissements'
+    - '= tempban de 48 heures.'
+  POSITION-X: 9
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+administration2:
+  NAME: '&6Sur cette ligne'
+  ID: 'book, 2'
+  LORE:
+    - 'Tous les téléports.'
+  POSITION-X: 1
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+builder1:
+  COMMAND: 'op: tppos -7920 69 3594'
+  NAME: '&6Téléportation Château Ouest'
+  SKULL-OWNER: 'Lauvel'
+  ID: 'skull:3'
+  LORE:
+    - 'Développé par Lauvel'
+  POSITION-X: 3
+  POSITION-Y: 5
+
+builder2:
+  COMMAND: 'op: tppos -9045 71 4662'
+  NAME: '&6Téléportation Mystéria'
+  SKULL-OWNER: 'Sparadra59'
+  ID: 'skull:3'
+  LORE:
+    - 'Développé par Sparadra59'
+  POSITION-X: 4
+  POSITION-Y: 5  
+  
+builder3:
+  COMMAND: 'op: tppos -7372 23 175'
+  NAME: '&6Téléportation Temple'
+  SKULL-OWNER: 'guigui'
+  ID: 'skull:3'
+  LORE:
+    - '&6de la Terre.'
+    - ' '
+    - 'Développé par guigui'
+  POSITION-X: 5
+  POSITION-Y: 5  
+  
+builder4:
+  COMMAND: 'op: tppos -11443 64 5980'
+  NAME: '&6Téléportation Ile de Build'
+  SKULL-OWNER: 'Lyrtix'
+  ID: 'skull:3'
+  LORE:
+    - 'Développé par Lyrtix'
+  POSITION-X: 6
+  POSITION-Y: 5
+
+builder5:
+  COMMAND: 'op: tppos -6164 64 100'
+  NAME: '&6Téléportation Château Nord'
+  SKULL-OWNER: 'VodaX'
+  ID: 'skull:3'
+  LORE:
+    - 'Développé par VodaX'
+  POSITION-X: 7
+  POSITION-Y: 5 
+  
+administration3:
+  NAME: '&6Sur cette ligne'
+  ID: 'book, 3'
+  LORE:
+    - 'Téléports vers builds'
+    - 'non débutés qui demandent'
+    - 'des builders & développeurs'
+  POSITION-X: 1
+  POSITION-Y: 6
+  KEEP-OPEN: true  
+  
+builder6:
+  COMMAND: 'op: tppos -1983 66 8763'
+  NAME: '&6Téléportation Château Sud'
+  ID: paper
+  LORE:
+    - 'Un projet de château'
+    - 'ennemi, contenant un'
+    - 'portail avec salle de'
+    - 'boss. Sera codé à terme'
+    - 'par Zedd.'
+  POSITION-X: 4
+  POSITION-Y: 6
+  
+builder7:
+  COMMAND: 'op: tppos -6972 73 8325'
+  NAME: '&6Téléportation Ville Portuaire Sud'
+  ID: paper
+  LORE:
+    - 'Un projet de ville'
+    - 'portuaire allié du Sud.'
+    - ' '
+    - 'Cherche builder et'
+    - 'développeur.'
+  POSITION-X: 5
+  POSITION-Y: 6
+  
+builder8:
+  COMMAND: 'op: tppos -6542 126 1978'
+  NAME: '&6Téléportation Goblins'
+  SKULL-OWNER: 'goblin'
+  ID: 'skull:3'
+  LORE:
+    - 'Projet StrongHold des Goblins'
+    - 'Ici résidera le boss des Goblins'
+    - 'dans le Grand Nord.'
+    - ' '
+    - 'Cherche Builders.'
+  POSITION-X: 3
+  POSITION-Y: 6
+  
+builder9:
+  COMMAND: 'op: tppos -10682 65 3549'
+  NAME: '&6Téléportation Temple Eau'
+  SKULL-OWNER: 'Hollish'
+  ID: 'skull:3'
+  LORE:
+    - 'Projet Temple Eau'
+    - 'Commes les trois autres Temples,'
+    - 'ce temple représente un élément.'
+    - 'Construction sous l''eau de'
+    - 'façon à ce qu''il soit non'
+    - 'visible depuis la dynmap.'
+    - ' '
+    - 'Cherche Builders.'
+    - 'Sera codé par Hollish.'
+  POSITION-X: 6
+  POSITION-Y: 6
+  
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker72:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker92:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true

@@ -1,0 +1,318 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dJ.A.R.V.I.S.'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 5
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note harp'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+#rollback:
+#  COMMAND: 'open: rollback.yml'
+#  NAME: '&cRollBack'
+#  LORE:
+#    - '&fRollBack Intégral Continent Est'
+#    - '&f30 Jours'
+#  ID: dirt
+#  POSITION-X: 9
+#  POSITION-Y: 6
+
+
+
+players:
+  NAME: '&eJoueurs'
+  LORE:
+    - '{online} / {max_players}'
+  ID: gold sword
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+
+menu-close:
+  NAME: '&6Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+  
+menus:
+  NAME: '&6Menus'
+  ID: book
+  LORE:
+    - 'Tous les menus en colonne'
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+  
+menu:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&aRetour'
+  ID: paper
+  LORE:
+    - 'Retour au menu de la populasse'
+  POSITION-X: 1
+  POSITION-Y: 2
+  
+  
+admin:
+  COMMAND: 'open: admin.yml'
+  NAME: '&aAdmin'
+  ID: paper
+  LORE:
+    - 'Affiche le Menu Admin'
+  POSITION-X: 1
+  POSITION-Y: 3
+  
+  
+competences:
+  COMMAND: 'open: competences.yml'
+  NAME: '&aCompetences'
+  ID: paper
+  LORE:
+    - 'Affiche le Menu des Compétences'
+  POSITION-X: 1
+  POSITION-Y: 4
+  
+  
+hollishop:
+  COMMAND: 'console: op Hollish'
+  NAME: '&6Op Hollish'
+  ID: 37
+  LORE:
+    - '/op Hollish'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+
+hollishdeop:
+  COMMAND: 'console: deop Hollish'
+  NAME: '&6DeOp Hollish'
+  ID: 37
+  LORE:
+    - '/deop Hollish'
+  POSITION-X: 9
+  POSITION-Y: 3
+  KEEP-OPEN: true
+
+  
+hollishadmin:
+  COMMAND: 'console: pex user Hollish group set admin'
+  NAME: '&6Admin Hollish'
+  ID: 38
+  LORE:
+    - '/pex'
+  POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+  
+hollishaventurier:
+  COMMAND: 'console: pex user Hollish group set aventurier'
+  NAME: '&6Aventurier Hollish'
+  ID: 38
+  LORE:
+    - '/pex'
+  POSITION-X: 9
+  POSITION-Y: 5
+  KEEP-OPEN: true
+
+  
+money:
+  NAME: '&6Argent en poche:'
+  ID: gold ingot
+  LORE:
+    - '{money}'
+  POSITION-X: 5
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+  
+day:
+  COMMAND: 'console: time set day'
+  NAME: '&6Jour'
+  ID: 368
+  LORE:
+    - 'Jour sur Gaïa'
+  POSITION-X: 3
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+  
+night:
+  COMMAND: 'console: time set night'
+  NAME: '&6Nuit'
+  ID: 381
+  LORE:
+    - 'Nuit sur Gaïa'
+  POSITION-X: 4
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+  
+sun:
+  COMMAND: 'console: weather Gaia sun'
+  NAME: '&6Soleil'
+  ID: 327
+  LORE:
+    - 'Soleil sur Gaïa'
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+  
+storm:
+  COMMAND: 'console: weather Gaia storm'
+  NAME: '&6Orage'
+  ID: 326
+  LORE:
+    - 'Orage sur Gaïa'
+  POSITION-X: 7
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+  
+nighthome:
+  COMMAND: 'console: region flag louvre time-lock -w Gaia 18000'
+  NAME: '&6Nuit'
+  ID: 381
+  LORE:
+    - 'Nuit au Louvre'
+  POSITION-X: 4
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+  
+dayhome:
+  COMMAND: 'console: region flag louvre time-lock -w Gaia 12000'
+  NAME: '&6Jour'
+  ID: 368
+  LORE:
+    - 'Jour au Louvre'
+  POSITION-X: 3
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+  
+sunhome:
+  COMMAND: 'console: region flag louvre -w Gaia weather-lock clear'
+  NAME: '&6Soleil'
+  ID: 327
+  LORE:
+    - 'Soleil au Louvre'
+  POSITION-X: 6
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+  
+stormhome:
+  COMMAND: 'console: region flag louvre -w Gaia weather-lock storm'
+  NAME: '&6Pluie'
+  ID: 326
+  LORE:
+    - 'Pluie au Louvre'
+  POSITION-X: 7
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+  
+telechair:
+  COMMAND: 'console: tp Hollish -9728 83 2363'
+  NAME: '&6Home'
+  ID: bed
+  LORE:
+    - 'Home Sweet Home'
+  POSITION-X: 5
+  POSITION-Y: 2
+
+  
+telespawn:
+  COMMAND: 'console: tp Hollish -6753 63 2973'
+  NAME: '&6Spawn'
+  ID: 111
+  LORE:
+    - 'The Spawn'
+  POSITION-X: 4
+  POSITION-Y: 2
+
+  
+telesanctuary:
+  COMMAND: 'console: tp Hollish -7110 67 2419'
+  NAME: '&6Sanctuaire'
+  ID: 121
+  LORE:
+    - 'Magic is Coming ...'
+  POSITION-X: 7
+  POSITION-Y: 2
+
+telespawnbegin:
+  COMMAND: 'console: tp Hollish -6747 77 3275'
+  NAME: '&6Spawn'
+  ID: 106
+  LORE:
+    - 'First Connection Spawn'
+  POSITION-X: 3
+  POSITION-Y: 2
+  
+  
+telelouvre:
+  COMMAND: 'console: tp Hollish -9729 68 2466'
+  NAME: '&6Louvre'
+  ID: 106
+  LORE:
+    - 'Le Louvre'
+  POSITION-X: 6
+  POSITION-Y: 2
+
+escalier_louvre_open:
+  COMMAND: 'console: bq event Hollish hollish.stairs_open'
+  NAME: '&6Escalier Principal'
+  ID: 53
+  LORE:
+    - 'Ouvre l''escalier principal'
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+escalier_louvre_close:
+  COMMAND: 'console: bq event Hollish hollish.stairs_close'
+  NAME: '&6Escalier Principal'
+  ID: 67
+  LORE:
+    - 'Ferme l''escalier principal'
+  POSITION-X: 4   
+  POSITION-Y: 3

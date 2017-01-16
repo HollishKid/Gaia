@@ -1,0 +1,334 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dGuilde Alchimistes'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 7
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+alchimiste:
+  COMMAND: 'console: bq event {player} default.metier_alchimiste'
+  NAME: '&6Alchimiste'
+  LORE:
+    - 'Accepter le métier Alchimiste'
+    - ' '
+    - 'Vous gagnerez 10% d''expérience en plus'
+    - 'dans la Compétence Alchimie !'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: 379
+  POSITION-X: 3
+  POSITION-Y: 1
+
+alchimiste1:
+  COMMAND: 'console: bq event {player} default.metier_alchimiste1'
+  NAME: '&aGrade Adepte'
+  LORE:
+    - 'Prendre le Grade d''Adepte'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a1 &cCompétence Alchimie'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 2
+ 
+alchimiste2:
+  COMMAND: 'console: bq event {player} default.metier_alchimiste2'
+  NAME: '&aGrade Hermétiste'
+  LORE:
+    - 'Prendre le Grade de Hermétiste'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a25 &cCompétence Alchimie'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+alchimiste3:
+  COMMAND: 'console: bq event {player} default.metier_alchimiste3'
+  NAME: '&aGrade Occultiste'
+  LORE:
+    - 'Prendre le Grade d''Occultiste'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a50 &cCompétence Alchimie'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 4
+
+alchimiste4:
+  COMMAND: 'console: bq event {player} default.metier_alchimiste4'
+  NAME: '&aGrade Alchimiste'
+  LORE:
+    - 'Prendre le Grade d''Alchimiste'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a75 &cCompétence Alchimie'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 5
+  
+alchimiste5:
+  COMMAND: 'console: bq event {player} default.metier_alchimiste5'
+  NAME: '&aGrade Rose-Croix'
+  LORE:
+    - 'Prendre le Grade de Rose-Croix'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a100 &cCompétence Alchimie'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 6
+
+standardprefix:
+  COMMAND: 'console: bq event {player} default.basic_prefix'
+  NAME: '&6Retour Grade Habituel'
+  LORE:
+    - '&oCliquez ici pour'
+    - '&oremettre votre'
+    - '&opréfixe habituel.'
+    - ' '
+    - '&lVous serez toujours'
+    - '&lmembre de la guilde !'
+  ID: paper
+  POSITION-X: 1
+  POSITION-Y: 3
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - '&cFerme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+jobs:
+  NAME: '&6Faire un Travail'
+  ID: torch
+  LORE:
+    - 'Ci-dessous les différents'
+    - 'travaux quotidients à'
+    - 'faire dans cette Guilde.'
+    - ' '
+    - '&ocliquez sur une icône'
+    - '&opour commencer.'
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+alchijob:
+  COMMAND: 'console: bq event {player} default.job_alchimiste'
+  NAME: '&6Travail Alchimiste'
+  ID: paper
+  LORE:
+    - 'Ce travail consiste à'
+    - 'concocter les potions:'
+    - ' '
+    - '- &o30 Potions Ordinaires'
+    - ' '
+    - '&lcliquez sur cette icône'
+    - '&lpour commencer ou'
+    - '&lterminer ce travail.'
+  POSITION-X: 5
+  POSITION-Y: 3
+  
+  
+fullguide:
+  COMMAND: 'tell: &a&o http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Competences'
+  NAME: '&6Guide Complet'
+  ID: book
+  ENCHANTMENT: 'infinity, 1'
+  LORE:
+    - 'Affiche un lien vers le guide'
+    - ' complet de Compétences.'
+  POSITION-X: 9
+  POSITION-Y: 6
+  
+mcstats:
+  COMMAND: 'mcstats'
+  NAME: '&6Statistiques'
+  ID: paper
+  LORE:
+    - 'Affiche vos Statistiques'
+    - 'Individuelles Complètes'
+  POSITION-X: 9
+  POSITION-Y: 5
+  
+mcrank:
+  COMMAND: 'mcrank'
+  NAME: '&6Classement Personnel'
+  ID: paper
+  LORE:
+    - 'Affiche votre Classement'
+    - 'des Compétences'
+  POSITION-X: 9
+  POSITION-Y: 4
+  
+mctop:
+  COMMAND: 'mctop'
+  NAME: '&6Classement Global'
+  ID: torch
+  LORE:
+    - 'Affiche le Classement'
+    - 'Global des Compétences'
+  POSITION-X: 9
+  POSITION-Y: 3
+  
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker13:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker23:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker33:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker43:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker53:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker63:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker14:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker24:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker34:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker44:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker54:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker64:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 6
+  KEEP-OPEN: true

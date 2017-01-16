@@ -1,0 +1,580 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dGuilde Guerriers'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+#epees_stuff:
+#  COMMAND: 'open: guerrier_stuff'
+#  NAME: '&aÉquipements de la Guilde'
+#  LORE:
+#    - 'Cliquez ici pour'
+#    - 'afficher tout l''équipement'
+#    - 'de la Guilde'
+#  ID: diamond_chestplate
+#  POSITION-X: 1
+#  POSITION-Y: 3
+  
+epees:
+  COMMAND: 'console: bq event {player} default.metier_epees'
+  NAME: '&6Épéiste'
+  LORE:
+    - 'Accepter le métier Épéiste'
+    - ' '
+    - 'Vous gagnerez 10% d''expérience en plus'
+    - 'dans la Compétence Épées !'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: diamond_sword
+  POSITION-X: 3
+  POSITION-Y: 1
+
+epees1:
+  COMMAND: 'console: bq event {player} default.metier_epees1'
+  NAME: '&aGrade Épéiste'
+  LORE:
+    - 'Prendre le Grade de Épéiste'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a1 &cCompétence Épées'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 2
+ 
+epees2:
+  COMMAND: 'console: bq event {player} default.metier_epees2'
+  NAME: '&aGrade Bretteur'
+  LORE:
+    - 'Prendre le Grade de Bretteur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a25 &cCompétence Épées'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+epees3:
+  COMMAND: 'console: bq event {player} default.metier_epees3'
+  NAME: '&aGrade Fantassin'
+  LORE:
+    - 'Prendre le Grade de Fantassin'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a50 &cCompétence Épées'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 4
+
+epees4:
+  COMMAND: 'console: bq event {player} default.metier_epees4'
+  NAME: '&aGrade Sabreur'
+  LORE:
+    - 'Prendre le Grade de Sabreur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a75 &cCompétence Épées'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 5
+  
+epees5:
+  COMMAND: 'console: bq event {player} default.metier_epees5'
+  NAME: '&aGrade Paladin'
+  LORE:
+    - 'Prendre le Grade de Paladin'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a100 &cCompétence Épées'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 6
+  
+poings:
+  COMMAND: 'console: bq event {player} default.metier_poings'
+  NAME: '&6Pugiliste'
+  LORE:
+    - 'Accepter le métier Pugiliste'
+    - ' '
+    - 'Vous gagnerez 10% d''expérience en plus'
+    - 'dans la Compétence Poings !'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: shield
+  POSITION-X: 4
+  POSITION-Y: 1
+
+poings1:
+  COMMAND: 'console: bq event {player} default.metier_poings1'
+  NAME: '&aGrade Pugiliste'
+  LORE:
+    - 'Prendre le Grade de Pugiliste'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a1 &cCompétence Poings'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 2
+ 
+poings2:
+  COMMAND: 'console: bq event {player} default.metier_poings2'
+  NAME: '&aGrade Hatiliarius'
+  LORE:
+    - 'Prendre le Grade de Hatiliarius'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a25 &cCompétence Poings'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 3
+  
+poings3:
+  COMMAND: 'console: bq event {player} default.metier_poings3'
+  NAME: '&aGrade Centurion'
+  LORE:
+    - 'Prendre le Grade de Centurion'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a50 &cCompétence Poings'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 4
+
+poings4:
+  COMMAND: 'console: bq event {player} default.metier_poings4'
+  NAME: '&aGrade Venator'
+  LORE:
+    - 'Prendre le Grade de Venator'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a75 &cCompétence Poings'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 5
+  
+poings5:
+  COMMAND: 'console: bq event {player} default.metier_poings5'
+  NAME: '&aGrade Champion'
+  LORE:
+    - 'Prendre le Grade de Champion'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a100 &cCompétence Poings'
+  ID: paper
+  POSITION-X: 4
+  POSITION-Y: 6
+
+haches:
+  COMMAND: 'console: bq event {player} default.metier_haches'
+  NAME: '&6Milicien'
+  LORE:
+    - 'Accepter le métier Milicien'
+    - ' '
+    - 'Vous gagnerez 10% d''expérience en plus'
+    - 'dans la Compétence Haches !'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: diamond_axe
+  POSITION-X: 5
+  POSITION-Y: 1
+  
+haches1:
+  COMMAND: 'console: bq event {player} default.metier_haches1'
+  NAME: '&aGrade Milicien'
+  LORE:
+    - 'Prendre le Grade de Milicien'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a1 &cCompétence Haches'
+  ID: paper
+  POSITION-X: 5
+  POSITION-Y: 2
+ 
+haches2:
+  COMMAND: 'console: bq event {player} default.metier_haches2'
+  NAME: '&aGrade Franc'
+  LORE:
+    - 'Prendre le Grade de Franc'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a25 &cCompétence Haches'
+  ID: paper
+  POSITION-X: 5
+  POSITION-Y: 3
+  
+haches3:
+  COMMAND: 'console: bq event {player} default.metier_haches3'
+  NAME: '&aGrade Gladiateur'
+  LORE:
+    - 'Prendre le Grade de Gladiateur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a50 &cCompétence Haches'
+  ID: paper
+  POSITION-X: 5
+  POSITION-Y: 4
+
+haches4:
+  COMMAND: 'console: bq event {player} default.metier_haches4'
+  NAME: '&aGrade Pourfendeur'
+  LORE:
+    - 'Prendre le Grade de Pourfendeur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a75 &cCompétence Haches'
+  ID: paper
+  POSITION-X: 5
+  POSITION-Y: 5
+  
+haches5:
+  COMMAND: 'console: bq event {player} default.metier_haches5'
+  NAME: '&aGrade Berserk'
+  LORE:
+    - 'Prendre le Grade de Berserk'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a100 &cCompétence Haches'
+  ID: paper
+  POSITION-X: 5
+  POSITION-Y: 6
+
+archerie:
+  COMMAND: 'console: bq event {player} default.metier_arc'
+  NAME: '&6Archer'
+  LORE:
+    - 'Accepter le métier Archer'
+    - ' '
+    - 'Vous gagnerez 10% d''expérience en plus'
+    - 'dans la Compétence Tir à l''Arc !'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: bow
+  POSITION-X: 6
+  POSITION-Y: 1
+
+archer1:
+  COMMAND: 'console: bq event {player} default.metier_arc1'
+  NAME: '&aGrade Archerot'
+  LORE:
+    - 'Prendre le Grade de Archerot'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a1 &cCompétence Tir à l''Arc'
+  ID: paper
+  POSITION-X: 6
+  POSITION-Y: 2
+ 
+archer2:
+  COMMAND: 'console: bq event {player} default.metier_arc2'
+  NAME: '&aGrade Archer'
+  LORE:
+    - 'Prendre le Grade de Archer'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a25 &cCompétence Tir à l''Arc'
+  ID: paper
+  POSITION-X: 6
+  POSITION-Y: 3
+  
+archer3:
+  COMMAND: 'console: bq event {player} default.metier_arc3'
+  NAME: '&aGrade Franc-Archer'
+  LORE:
+    - 'Prendre le Grade de Franc-Archer'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a50 &cCompétence Tir à l''Arc'
+  ID: paper
+  POSITION-X: 6
+  POSITION-Y: 4
+
+archer4:
+  COMMAND: 'console: bq event {player} default.metier_arc4'
+  NAME: '&aGrade Arbalértrier'
+  LORE:
+    - 'Prendre le Grade de Arbalértrier'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a75 &cCompétence Tir à l''Arc'
+  ID: paper
+  POSITION-X: 6
+  POSITION-Y: 5
+  
+archer5:
+  COMMAND: 'console: bq event {player} default.metier_arc5'
+  NAME: '&aGrade Hood'
+  LORE:
+    - 'Prendre le Grade de Hood'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a100 &cCompétence Tir à l''Arc'
+  ID: paper
+  POSITION-X: 6
+  POSITION-Y: 6
+
+standardprefix:
+  COMMAND: 'console: bq event {player} default.basic_prefix'
+  NAME: '&6Retour Grade Habituel'
+  LORE:
+    - '&oCliquez ici pour'
+    - '&oremettre votre'
+    - '&opréfixe habituel.'
+    - ' '
+    - '&lVous serez toujours'
+    - '&lmembre de la guilde !'
+  ID: paper
+  POSITION-X: 1
+  POSITION-Y: 6
+
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - '&cFerme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+
+jobs:
+  NAME: '&6Faire un Travail'
+  ID: torch
+  LORE:
+    - 'Ci-dessous les différents'
+    - 'travaux quotidients à'
+    - 'faire dans cette Guilde.'
+    - ' '
+    - '&ocliquez sur une icône'
+    - '&opour commencer.'
+  POSITION-X: 8
+  POSITION-Y: 1
+  
+epeesjob:
+  COMMAND: 'console: bq event {player} default.job_swords'
+  NAME: '&6Travail Épées'
+  ID: paper
+  LORE:
+    - 'Ce travail consiste à'
+    - 'tuer ces monstres:'
+    - '&luniquement à l''épée'
+    - '- &o20 Zombies'
+    - '- &o10 Squelettes'
+    - '- &o5 Araignées'
+    - ' '
+    - '&lcliquez sur cette icône'
+    - '&lpour commencer ou'
+    - '&lterminer ce travail.'
+  POSITION-X: 8
+  POSITION-Y: 3
+  
+unarmedjob:
+  COMMAND: 'console: bq event {player} default.job_unarmed'
+  NAME: '&6Travail Poings'
+  ID: paper
+  LORE:
+    - 'Ce travail consiste à'
+    - 'tuer ces monstres:'
+    - '&luniquement au poing'
+    - '- &o20 Zombies'
+    - '- &o10 Squelettes'
+    - '- &o5 Araignées'
+    - ' '
+    - '&lcliquez sur cette icône'
+    - '&lpour commencer ou'
+    - '&lterminer ce travail.'
+  POSITION-X: 8
+  POSITION-Y: 4
+  
+axesjob:
+  COMMAND: 'console: bq event {player} default.job_axes'
+  NAME: '&6Travail Hache'
+  ID: paper
+  LORE:
+    - 'Ce travail consiste à'
+    - 'tuer ces monstres:'
+    - '&luniquement à la hache'
+    - '- &o20 Zombies'
+    - '- &o10 Squelettes'
+    - '- &o5 Araignées'
+    - ' '
+    - '&lcliquez sur cette icône'
+    - '&lpour commencer ou'
+    - '&lterminer ce travail.'
+  POSITION-X: 8
+  POSITION-Y: 5
+  
+archerjob:
+  COMMAND: 'console: bq event {player} default.job_archer'
+  NAME: '&6Travail Archer'
+  ID: paper
+  LORE:
+    - 'Ce travail consiste à'
+    - 'tuer ces monstres:'
+    - '&luniquement à l''arc'
+    - '- &o20 Zombies'
+    - '- &o10 Squelettes'
+    - '- &o5 Araignées'
+    - ' '
+    - '&lcliquez sur cette icône'
+    - '&lpour commencer ou'
+    - '&lterminer ce travail.'
+  POSITION-X: 8
+  POSITION-Y: 6
+  
+fullguide:
+  COMMAND: 'tell: &a&o http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Competences'
+  NAME: '&6Guide Complet'
+  ID: book
+  ENCHANTMENT: 'infinity, 1'
+  LORE:
+    - 'Affiche un lien vers le guide'
+    - ' complet de Compétences.'
+  POSITION-X: 1
+  POSITION-Y: 4
+  
+mcstats:
+  COMMAND: 'mcstats'
+  NAME: '&6Statistiques'
+  ID: paper
+  LORE:
+    - 'Affiche vos Statistiques'
+    - 'Individuelles Complètes'
+  POSITION-X: 1
+  POSITION-Y: 2
+  
+mcrank:
+  COMMAND: 'mcrank'
+  NAME: '&6Classement Personnel'
+  ID: paper
+  LORE:
+    - 'Affiche votre Classement'
+    - 'des Compétences'
+  POSITION-X: 1
+  POSITION-Y: 3
+  
+mctop:
+  COMMAND: 'mctop'
+  NAME: '&6Classement Global'
+  ID: torch
+  LORE:
+    - 'Affiche le Classement'
+    - 'Global des Compétences'
+  POSITION-X: 1
+  POSITION-Y: 1
+  
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker13:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker23:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker33:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker43:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker53:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker63:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 6
+  KEEP-OPEN: true

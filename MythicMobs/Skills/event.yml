@@ -1,0 +1,32 @@
+vampirebid:
+  Cooldown: 10
+  Conditions:
+  - targetwithin 2
+  - targetinlineofsight true
+  - stance notMounted
+  Skills:
+  - mounttarget
+  - setstance{stance=mounted} @Self
+  - effect boss sound damage.hit:1.5:1 >0 1
+  - effect target particle dripLava:1:1:2500:0.25:1 >0 1
+  - damage 0:1:false >0 1
+  - healself 1 >0 1
+  - delay 20
+  - damage 0:1:false >0 1
+  - healself 1 >0 1
+  - delay 20
+  - damage 0:1:false >0 1
+  - healself 1 >0 1
+  - effect target particle dripLava:1:1:2500:0.25:1 >0 1
+  - delay 20
+  - damage 0:1:false >0 1
+  - healself 1 >0 1
+  - delay 20
+  - damage 0:1:false >0 1
+  - healself 1 >0 1
+  - effect target particle dripLava:1:1:2500:0.25:1 >0 1
+  - delay 20
+  - damage 0:1:false >0 1
+  - healself 1 >0 1
+  - delay 10
+  - dismount @Self

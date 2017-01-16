@@ -1,0 +1,186 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: 'Fond Marin'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 3
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+  
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 3
+  
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&6Retour'
+  ID: stick
+  LORE:
+    - 'Retour au menu basique des Aventuriers'
+  POSITION-X: 8
+  POSITION-Y: 3
+
+marin1:
+  COMMAND: '/br sphere 45%3,45%12,10%82 5'
+  NAME: 'Degradé Marin 1'
+  ID: '12'
+  LORE:
+    - '&4Changement du fond en :'
+    - '45% de Terre (3),'
+    - '45% de Sable (12),'
+    - '10% de Clay (82).'
+  POSITION-X: 1
+  POSITION-Y: 1
+
+marin2:
+  COMMAND: '/br sphere 40%3,40%12,10%82,10%13 5'
+  NAME: 'Degradé Marin 2'
+  ID: '12'
+  LORE:
+    - '&4Changement du fond en :'
+    - '40% de Terre (3),'
+    - '40% de Sable (12),'
+    - '10% de Clay (82),'
+    - '10% de Gravier (13).'
+  POSITION-X: 2
+  POSITION-Y: 1
+
+marin3:
+  COMMAND: '/br sphere 35%3,35%12,10%82,20%13 5'
+  NAME: 'Degradé Marin 3'
+  ID: '12'
+  LORE:
+    - '&4Changement du fond en :'
+    - '35% de Terre (3),'
+    - '35% de Sable (12),'
+    - '10% de Clay (82),'
+    - '20% de Gravier (13).'
+  POSITION-X: 3
+  POSITION-Y: 1
+
+marin4:
+  COMMAND: '/br sphere 30%3,30%12,10%82,40%13 5'
+  NAME: 'Degradé Marin 4'
+  ID: '12'
+  LORE:
+    - '&4Changement du fond en :'
+    - '30% de Terre (3),'
+    - '30% de Sable (12),'
+    - '10% de Clay (82),'
+    - '30% de Gravier (13).'
+  POSITION-X: 4
+  POSITION-Y: 1
+
+marin5:
+  COMMAND: '/br sphere 25%3,25%12,5%82,55%13 5'
+  NAME: 'Degradé Marin 5'
+  ID: '12'
+  LORE:
+    - '&4Changement du fond en :'
+    - '25% de Terre (3),'
+    - '25% de Sable (12),'
+    - '5% de Clay (82),'
+    - '55% de Gravier (13).'
+  POSITION-X: 5
+  POSITION-Y: 1
+
+marin6:
+  COMMAND: '/br sphere 20%3,20%12,5%82,65%13 5'
+  NAME: 'Degradé Marin 6'
+  ID: '12'
+  LORE:
+    - '&4Changement du fond en :'
+    - '20% de Terre (3),'
+    - '20% de Sable (12),'
+    - '5% de Clay (82),'
+    - '65% de Gravier (13).'
+  POSITION-X: 6
+  POSITION-Y: 1
+
+marin7:
+  COMMAND: '/br sphere 10%3,10%12,5%82,75%13 5'
+  NAME: 'Degradé Marin 7'
+  ID: '12'
+  LORE:
+    - '&4Changement du fond en :'
+    - '10% de Terre (3),'
+    - '10% de Sable (12),'
+    - '5% de Clay (82),'
+    - '75% de Gravier (13).'
+  POSITION-X: 7
+  POSITION-Y: 1
+
+marin8:
+  COMMAND: '/br sphere 5%3,5%12,2.5%82,87.5%13 5'
+  NAME: 'Degradé Marin 8'
+  ID: '12'
+  LORE:
+    - '&4Changement du fond en :'
+    - '5% de Terre (3),'
+    - '5% de Sable (12),'
+    - '2.5% de Clay (82),'
+    - '82.5% de Gravier (13).'
+  POSITION-X: 8
+  POSITION-Y: 1
+
+marin9:
+  COMMAND: '/br sphere 2%3,2%12,96%13 5'
+  NAME: 'Degradé Marin 9'
+  ID: '12'
+  LORE:
+    - '&4Changement du fond en :'
+    - '2% de Terre (3),'
+    - '2% de Sable (12),'
+    - '96% de Gravier (13).'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+mask:
+  COMMAND: '//mask 1,2,3,12,13,15,16,82'
+  NAME: 'Mask'
+  ID: '12'
+  LORE:
+    - '&4Permet de masker :'
+    - 'Stone (1)'
+    - 'Herbe (2)'
+    - 'Terre (3)'
+    - 'Sable (12)'
+    - 'Gravier (13)'
+    - 'Iron Ore (15)'
+    - 'Coal Ore (16)'
+    - 'Clay (82)'
+  POSITION-X: 5
+  POSITION-Y: 2 

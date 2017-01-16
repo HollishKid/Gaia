@@ -1,0 +1,50 @@
+quester: Le Survivant
+first: unknown,hello
+stop: 'false'
+#Options du NPC
+NPC_options:
+  unknown:
+    text: Vous n'êtes pas de cette ville ! Parlez à l'&2Intendant &a&o!
+    conditions: '!intendant_done'
+  hello:
+    text: Salutations à vous &2%player%
+    conditions: intendant_done
+    pointer: qui,nom
+  nom_rep:
+    text: Absolument pas! C'est un surnom qu'on me donne, après de longues années passées à l'&dEst&a&o...
+    pointer: qui,est
+  qui_rep:
+    text: Je suis un simple guerrier de l'armée d' &dAthelas &a&o, ayant servi beaucoup d'années à l'dEst&a&o...
+    pointer: nom,est
+  est_rep:
+    text: L'&dEst &a&oj'appele le continent massif qui se trouve à l'extrémité Est du monde connu de &6Gaïa&a&o. C'est un endroit bien sombre ces jours-ci...
+    pointer: qui,nom,sombre,connu,aller
+  aller_rep:
+    text: La seule façon d'aller sur le continent de l' &dEst &a&oest par l'eau, parlez à ce &2Commandant &a&oqui se trouve sur ce bateau. Mais sachez que rien vous protège là bas, que ce soit des monstres, mais aussi des personnes... !
+    pointer: qui,nom,connu,aller
+  connu_rep:
+    text: Il existe des récits anciens qui racontent que &6Gaïa &a&os'étend au delà de la carte connue à ce jour. Ce sont des zones auxquelles nous ne pouvons plus accéder depuis l'arrivée des Forces du Mal.
+    pointer: qui,nom,aller,sombre
+  sombre_rep:
+    text: Mais tu viens de quel monde toi ? Vous ne savez pas que &6Gaïa &a&oest envahi par les Forces du Mal ? L'&dEst &a&oest complètement hors du contrôle des troupes Royales... Il semblerait même que &6Gaïa &a&o ait abandonné ces contrées et que les hommes et femmes s'y battent entre eux...
+    pointer: qui,nom,connu,aller
+#Options du joueur
+player_options:
+  qui:
+    text: Qui êtes vous ?
+    pointer: qui_rep
+  nom:
+    text: C'est vraiment un nom ça, Le Survivant ?!
+    pointer: nom_rep
+  est:
+    text: C'est quoi que vous appelez l'Est?
+    pointer: est_rep
+  sombre:
+    text: Comment ça sombre ?
+    pointer: sombre_rep
+  connu:
+    text: Comment ça le monde connu ?
+    pointer: connu_rep
+  aller:
+    text: Comment on fait pour aller à l'Est ?
+    pointer: aller_rep

@@ -1,0 +1,90 @@
+quester: 'Sam le Fondeur'
+first: 1,2,2a,3,4
+stop: 'false'
+NPC_options:
+  '1':
+    text: Salut mon gaillard! T'es à la recherche d'un boulot? Je peux peut-être t'aider pour ca... Mais tu devras manier la pioche! Ca t'intéresse?
+    conditions: loggerjoe_p1
+    pointer: point1,point2
+  '2':
+    text: Bientôt fini?
+    conditions: loggerjoe_startq1
+    pointer: check1
+  2a:
+    text: Bientôt fini??
+    conditions: loggerjoe_startq2
+    pointer: check2
+  '3':
+    text: Bon, tu es maintenant prêt pour un vrai boulot. Toujours partant?
+    conditions: loggerjoe_p2
+    pointer: loggerjoe_suiteoui,loggerjoe_suitenon
+  '4':
+    text: Ah c'est toi %player%? Qu'est ce que tu fais dans le coin?
+    conditions: loggerjoe_p3
+    pointer: final1,final2,final3
+  rep_oui:
+    text: On verra si c'est bien le cas.
+    pointer: priseq1,declineq1
+  confirm1:
+    text: On va commencer par te procurer une pioche de mineur. Va me chercher &62x bâton en bois&a&o et je te monterai une tête de pioche!
+    events: loggerjoe_startq1
+  loggerjoe_reward1:
+    text: Bien! On va pouvoir commencer les choses sérieuses!
+    events: loggerjoe_reward1,loggerjoe_q1
+  suite1:
+    text: Bien! Il va falloir aller à la mine! Va et rapporte moi &610 minerai de fer&a&o, la ressource la plus utile dans ce monde!
+    events: loggerjoe_startq2
+  loggerjoe_reward2:
+    text: Voilà tes barres de fer! N'hésite pas à revenir si tu veux en faire fondre plus ou si tu casses ta pioche.
+    events: loggerjoe_reward2,loggerjoe_q2
+  finalrep1:
+    text: Il faut que tu m'ammène deux &6Bâton de bois&a&o pour que je te fasse ça.
+    conditions: '!loggerjoe_stick1'
+  finalrep1a:
+    text: Pas de souci, fais moi voir ces bouts de bois la...
+    conditions: loggerjoe_stick1
+    events: loggerjoe_takestick,loggerjoe_r2,loggerjoe_mess1
+  finalrep2:
+    text: Il faut que tu m'ammène &610x Minerai de fer&a&o pour que je les transforme en lingots!
+    conditions: '!loggerjoe_fish'
+  finalrep2a:
+    text: Envoi les minerais, je suis chaud comme la braise!!
+    conditions: loggerjoe_fish
+    events: loggerjoe_takefish,loggerjoe_r4,loggerjoe_mess2
+  finalrep3:
+    text: Eh bien bonjour!
+player_options:
+  point1:
+    text: Pourquoi pas, j'ai une solide paire de bras!
+    pointer: confirm1
+  point2:
+    text: Pas vraiment...
+  priseq1:
+    text: Comment dois-je m'y prendre?
+    pointer: confirm1
+  declineq1:
+    text: Non merci.
+  check1:
+    text: Voici vos bâtons de bois!
+    conditions: loggerjoe_stick1
+    events: loggerjoe_takestick,loggerjoe_endq1
+    pointer: loggerjoe_reward1
+  loggerjoe_suiteoui:
+    text: Oui
+    pointer: suite1
+  loggerjoe_suitenon:
+    text: Non
+  check2:
+    text: Voici vos minerais!
+    conditions: loggerjoe_fish
+    events: loggerjoe_endq2,loggerjoe_takefish
+    pointer: loggerjoe_reward2
+  final1:
+    text: J'aurai besoin d'une nouvelle tête de pioche!
+    pointer: finalrep1,finalrep1a
+  final2:
+    text: Je voudrais faire fondre du fer!
+    pointer: finalrep2,finalrep2a
+  final3:
+    text: Je passais juste dire bonjour!
+    pointer: finalrep3

@@ -1,0 +1,25 @@
+quester: GoupilDC16
+first: hello
+stop: 'false'
+#Options du NPC
+NPC_options:
+  hello:
+    text: Bonjour &2%player%&a&o, je suis &dGoupilDC16&a&o, Modérateur de Gaïa.
+    pointer: role,citation,sens
+  role_rep: 
+    text: Mon role jeune padawan est de chasser les kikoo qui pullulent nos contrés.
+  citation_rep:
+    text: A vaincre sans péril, on triomphe sans gloire.
+  sens_rep:
+    text: Pour moi c'est de chasser. Pour toi c'est de me nourrir.
+#Options du joueur
+player_options:
+  role:
+    text: Quel est ton rôle sur Gaïa ?
+    pointer: role_rep
+  citation:
+    text: Quelle est ta citation préférée ?
+    pointer: citation_rep
+  sens:
+    text: Quel est le Sens de la Vie ?
+    pointer: sens_rep

@@ -1,0 +1,54 @@
+quester: Curuvar
+first: unknown,welcome,member
+stop: 'false'
+#                   #
+#                   #
+#  Options du NPC   #
+#                   #
+#                   #
+NPC_options:
+  unknown:
+    text: Qui pourriez vous bien être ?! Allez voir l'&2Intendant &a&o!
+    conditions: '!gestionnaire'
+  welcome:
+    text: Salut jeune inconnu ! Quel destin t'amène ici, en ce jour ?
+    conditions: 'gestionnaire,!alchimiste'
+    pointer: presentation,become_member,rien
+  pres_ok:
+    text: Parfaitement, je serais ... \ncurieux ... \nde recroiser ton chemin en ce monde.... !
+    events: found_guild1,guild_tester
+  member_ok:
+    text: Parfaitement parfait !! Cette Guilde se concentre sur l'Art de l'Alchimie!  \nLe Menu de la Guilde te permet de choisir ce métier parmis d'autres avantages !
+    event: alchimiste
+    pointer: menu,merci
+#
+#
+# Add any guild-specific quests in pointers of "member"
+  member:
+    text: Bienvenue dans votre guilde, &2%player% &a&o!
+    conditions: alchimiste
+    pointer: menu,merci
+  alchimiste_menu:
+    text: Le voilà !
+    event: alchimiste_menu
+#                   #
+#                   #
+# Options du Joueur #
+#                   #
+#                   #
+player_options:
+  presentation:
+    text: Je viens me présenter de la part de l'Intendant !
+    conditions: 'guilde_alchimistes'
+    pointer: pres_ok
+  become_member:
+    text: Je veux devenir membre de la Guilde des Alchimistes !
+    condition: '!alchimiste,intendant_done'
+    pointer: member_ok
+  menu:
+    text: Je voudrais accéder au Menu de la Guilde.
+    pointer: alchimiste_menu
+  rien:
+    text: Je ne saurais dire...
+  merci:
+    text: Merci ! Au revoir !

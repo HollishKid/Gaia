@@ -1,0 +1,228 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&e&oGuilde Guerriers'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+stuff:
+  NAME: '&aÉquipements Guilde Guerriers'
+  LORE:
+    - 'Ici se trouve tout'
+    - 'l''équipement de cette Guilde.'
+    - ' '
+    - '&a&oEn cliquant sur une icône, '
+    - '&a&ovous obtiendrez l''équipement,'
+    - '&a&oà condition d''avoir le bon niveau.'
+  ID: shield
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true
+ 
+casque2:
+  COMMAND: 'console: bq event {player} default.stuff_casque2'
+  NAME: '&aCasque 2ème Âge'
+  LORE:
+  - '&e&oUn casque ancien de'
+  - '&e&ol''époque du Roi Ubu.'
+  - ' '
+  - '&7&oRareté : &aRare'
+  - ' '
+  - '&cRequiert:'
+  - '&f¤ &c7000'
+  - '&cNiveau &a50 &cCompétence Épées'
+  ID: 298
+  POSITION-X: 3
+  POSITION-Y: 5
+  
+plastron2:
+  ID: 299
+  COMMAND: 'console: bq event {player} default.stuff_plastron2'
+  NAME: '&aPlastron 2ème Âge'
+  LORE:
+  - '&e&oUn plastron ancien de'
+  - '&e&ol''époque du Roi Ubu.'
+  - ' '
+  - '&7&oRareté : &aRare'
+  - ' '
+  - '&cRequiert:'
+  - '&f¤ &c4000'
+  - '&cNiveau &a40 &cCompétence Épées'
+  POSITION-X: 3
+  POSITION-Y: 4
+  
+jambieres2:
+  ID: 300
+  COMMAND: 'console: bq event {player} default.stuff_jambieres2'
+  NAME: '&aJambieres 2ème Âge'
+  LORE:
+  - '&e&oDes jambières anciennes de'
+  - '&e&ol''époque du Roi Ubu.'
+  - ' '
+  - '&7&oRareté : &aRare'
+  - ' '
+  - '&cRequiert:'
+  - '&f¤ &c500'
+  - '&cNiveau &a20 &cCompétence Épées'
+  POSITION-X: 3
+  POSITION-Y: 2
+  
+souliers2:
+  ID: 301
+  COMMAND: 'console: bq event {player} default.stuff_souliers2'
+  NAME: '&aBottes 2ème Âge'
+  LORE:
+  - '&e&oDes bottes anciennes de'
+  - '&e&ol''époque du Roi Ubu.'
+  - ' '
+  - '&7&oRareté : &aRare'  
+  - ' '
+  - '&cRequiert:'
+  - '&f¤ &c200'
+  - '&cNiveau &a10 &cCompétence Épées'
+  POSITION-X: 3
+  POSITION-Y: 1
+  
+epee2:
+  ID: 283
+  COMMAND: 'console: bq event {player} default.stuff_epee2'
+  NAME: '&aÉpée 2ème Âge'
+  LORE:
+  - '&e&oCette épée fut forgée par les'
+  - '&e&oHommes du Roi Ubu.'
+  - ' '
+  - '&7&oRareté : &aRare' 
+  - ' '
+  - '&cRequiert:'
+  - '&f¤ &c2000'
+  - '&cNiveau &a30 &cCompétence Épées'
+  POSITION-X: 3
+  POSITION-Y: 3
+#
+#
+#
+#
+#
+ 
+casque1:
+  ID: 298
+  COMMAND: 'console: bq event {player} default.stuff_casque1'
+  NAME: '&3Casque 1er Âge'
+  LORE:
+  - '&e&oCe casque fut porté par les'
+  - '&e&opremiers habitants de Gaïa.'
+  - ' '
+  - '&7&oRareté : &3Épique'
+  - ' '
+  - '&cRequiert:'
+  - '&f¤ &c25000'
+  - '&cNiveau &a100 &cCompétence Épées'
+  POSITION-X: 5
+  POSITION-Y: 5
+
+plastron1:
+  ID: 299
+  COMMAND: 'console: bq event {player} default.stuff_plastron1'
+  NAME: '&3Plastron 1er Âge'
+  LORE:
+  - '&e&oCe plastron fut porté par les'
+  - '&e&opremiers habitants de Gaïa.'
+  - ' '
+  - '&7&oRareté : &3Épique'
+  - ' '
+  - '&cRequiert:'
+  - '&f¤ &c21000'
+  - '&cNiveau &a90 &cCompétence Épées'
+  POSITION-X: 5
+  POSITION-Y: 4
+
+jambieres1:
+  ID: 300
+  COMMAND: 'console: bq event {player} default.stuff_jambieres1'
+  NAME: '&3Jambieres 1er Âge'
+  LORE:
+  - '&e&oCes jambières furent portées par'
+  - '&e&oles premiers habitants de Gaïa.'
+  - ' '
+  - '&7&oRareté : &3Épique'
+  - ' '
+  - '&cRequiert:'
+  - '&f¤ &c13000'
+  - '&cNiveau &a70 &cCompétence Épées'
+  POSITION-X: 5
+  POSITION-Y: 2
+
+souliers1:
+  ID: 301
+  COMMAND: 'console: bq event {player} default.stuff_souliers1'
+  NAME: '&3Bottes 1er Âge'
+  LORE:
+  - '&e&oCes bottes furent portées par'
+  - '&e&oles premiers habitants de Gaïa.'
+  - ' '
+  - '&7&oRareté : &3Épique'
+  - ' '
+  - '&cRequiert:'
+  - '&f¤ &c9000'
+  - '&cNiveau &a60 &cCompétence Épées'
+  POSITION-X: 5
+  POSITION-Y: 1
+
+epee1:
+  ID: 283
+  COMMAND: 'console: bq event {player} default.stuff_epee1'
+  NAME: '&3Épée 1er Âge'
+  LORE:
+  - '&e&oCette épée fut forgée par les'
+  - '&e&opremiers habitants de Gaïa.'
+  - ' '
+  - '&7&oRareté : &3Épique'
+  - ' '
+  - '&cRequiert:'
+  - '&f¤ &c17000'
+  - '&cNiveau &a80 &cCompétence Épées'
+  POSITION-X: 5
+  POSITION-Y: 3
+
+ 
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - '&cFerme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1

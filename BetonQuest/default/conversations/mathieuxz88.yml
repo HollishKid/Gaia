@@ -1,0 +1,25 @@
+quester: MathieuxZ88
+first: hello
+stop: 'false'
+#Options du NPC
+NPC_options:
+  hello:
+    text: Bonjour &2%player%&a&o, je suis &dMathieuxZ88&a&o, &2Modérateur &a&osur Gaïa.
+    pointer: role,citation,sens
+  role_rep: 
+    text: Je suis toujours content d'aider les aventuriers à leur arrivée sur Gaïa.
+  citation_rep:
+    text: L'ennemi est c*n, il pense que l'ennemi c'est nous, mais l'ennemi c'est lui !
+  sens_rep:
+    text: Le sens de la Vie ? C'est à droite.
+#Options du joueur
+player_options:
+  role:
+    text: Quel est ton rôle sur Gaïa ?
+    pointer: role_rep
+  citation:
+    text: Quelle est ta citation préférée ?
+    pointer: citation_rep
+  sens:
+    text: Quel est le Sens de la Vie ?
+    pointer: sens_rep

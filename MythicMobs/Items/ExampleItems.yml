@@ -1,0 +1,161 @@
+#
+# 
+# QUEST ITEMS (mostly)
+#
+#
+BanditTunic:
+  Id: 299
+  Display: '&aBandit Tunic'
+  Lore:
+  - '&6A leather tunic taken from'
+  - '&6the corpse of a bandit.'
+  Options:
+    Color: 255,40,40
+SpiderBlood:
+  Id: 341
+  Data: 0
+  Amount: 1
+  Display: '&dSpider Blood'
+  Lore:
+  - '&oBeerk...'
+flask_nighthaste:
+  Id: potion
+  Data: 8195
+  Display: 'Flacon de hâte nocturne'
+  Options:
+    HideFlags: true
+  Lore:
+  - '&8Made by Gretchen Inc.'
+  - '&cNotice: May cause liver failure.'
+  PotionEffects:
+  - NIGHT_VISION 1800 1
+  - SPEED 1800 1
+flask_strength:
+  Id: potion
+  Data: 8204
+  Display: 'Flacon de robustesse'
+  Options:
+    HideFlags: true
+  Lore:
+  - '&8Made by Gretchen Inc.'
+  - '&cNotice: May cause heart failure.'
+  PotionEffects:
+  - REGENERATION 1800 1
+  - DAMAGE_RESISTANCE 1800 1
+flask_suspect:
+  Id: potion
+  Data: 8266
+  Display: 'Flacon suspect'
+  Options:
+    HideFlags: true
+  Lore:
+  - '&8Made by Gretchen Inc.'
+  - '&cNotice: May cause brain failure.'
+  PotionEffects:
+  - SLOW 600 1
+  - WEAKNESS 600 1
+stick:
+  Id: 280
+  Data: 0
+  Amount: 1
+  Display: '&dStick'
+woodensword:
+  Id: 268
+  Data: 0
+  Amount: 1
+  Display: '&dWooden sword'
+quest_log:
+  Id: 403
+  Data: 0
+  Amount: 1
+  Display: '&2Journal des Quêtes'
+  Lore:
+  - '&8          par &aZ &8& &6H'
+fishingrod_common:
+  Id: 346
+  Data: 0
+  Display: '&aCanne à pêche ornée'
+  Lore:
+  - '&8On dirait des dauphins'
+  - '&8sur le manche...'
+  Enchantments:
+  - DURABILITY:5
+thief_key:
+  Id: 280
+  Data: 0
+  Display: '&2Clé des voleurs'
+  Lore:
+  - '&8&oInsérer dans la pierre'
+  - '&8&ogravée sous le village.'
+lava_tear:
+  Id: 378
+  Data: 0
+  Amount: 1
+  Display: '&2Goutte de lave'
+  Lore:
+  - ''
+  - '&8&oLa goutte est étrangement'
+  - '&8&ofroide au contact...'
+water_tear:
+  Id: 370
+  Data: 0
+  Amount: 1
+  Display: '&2Goutte d''eau'
+  Lore:
+  - ''
+  - '&8&oUne lueur chatoyante'
+  - '&8&oen émane.'
+pack_varko:
+  Id: 54
+  Data: 0
+  Amount: 1
+  Display: '&2Paquet de &dVarko'
+  Lore:
+  - ''
+  - '&8&oA livrer au'
+  - '&8&oCollège des Mages'
+hypercap:
+  Id: 347
+  Data: 0
+  Amount: 1
+  Display: '&2Hypercapaciteur Bidulotron'
+  Lore:
+  - ''
+  - '&8&oPour mesurer toute'
+  - '&8&osorte de choses!'
+hyperreg:
+  Id: 347
+  Data: 0
+  Amount: 1
+  Display: '&2Hypercapaciteur Bidulotron'
+  Lore:
+  - ''
+  - '&8&oRéglé sur la'
+  - '&8&osensibilité maximum'
+potion_closeportal:
+  Id: 369
+  Data: 0
+  Amount: 1
+  Display: '&2Brouilleur arcanique'
+  Lore:
+  - ''
+  - '&8&oDevrait suffire à rendre'
+  - '&8&ole portail inutilisable.'
+ombre_jaune:
+  Id: 41
+  Data: 0
+  Amount: 1
+  Display: '&2Ombre Jaune'
+  Lore:
+  - ''
+  - '&8&oDes scènes de carnage sont'
+  - '&8&ogravées sur les faces...'
+ami_pack:
+  Id: 54
+  Data: 0
+  Amount: 1
+  Display: '&2Pack de survie'
+  Lore:
+  - ''
+  - '&8&oCLIC DROIT pour utiliser'
+  - '&8&oun objet tenu en main'

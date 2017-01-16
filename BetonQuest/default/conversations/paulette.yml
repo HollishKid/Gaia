@@ -1,0 +1,102 @@
+quester: Paulette
+first: unknown,normal,occupe1,occupe2,occupe3,occupe_inprogress1,occupe_inprogress2,occupe_inprogress3
+stop: 'false'
+################
+#Options du NPC#
+################
+NPC_options:
+  unknown:
+    text: Je ne vous ai jamais vu. Parlez à l'&2Intendant &a&o!
+    condition: '!intendant_done'
+  normal:
+    text: Salutation! Bienvenue dans mon humble auberge !
+    condition: timer_paulette
+    pointer: boire,chambre,bonjour,francis_carrot
+  chambre_rep:
+    text: Ah! Je suis navré de l'entendre, toutes mes chambres sont prises...
+  boire_rep:
+    text: Vous êtes au bon endroit ! Qu'est-ce que je vous sers?
+    pointer: the,eau,rien
+#
+  occupe_inprogress1:
+    text: J'espère que vous n'avez pas oublié de porter mon gâteau à mon fils ?!
+    condition: '!timer_paulette,tag_fils_paulette'
+    pointer: francis_carrot
+  occupe_inprogress2:
+    text: J'espère que vous n'avez pas oublié mes oeufs ?!
+    condition: '!timer_paulette,paulette_oeuf'
+    pointer: aide2_bis,francis_carrot
+  occupe_inprogress3:
+    text: J'espère que vous n'avez pas oublié Madame ?!
+    condition: '!timer_paulette,madame'
+    pointer: francis_carrot
+#
+  occupe1:
+    text: Je n'ai pas le temps, je dois partir bientôt faire une livraison...
+    condition: 'paulette1,!timer_paulette,!tag_fils_paulette,intendant_done'
+    event: paulette_cleaner
+    pointer: aide1,non,francis_carrot
+  livraison_rep:
+    text: Vous êtes bien aimable ! Il faut amener ce gâteau au Garde Royal qui est de garde au pied du château ! \nC'est mon fils vous comprenez, il ne tient pas longtemps sans manger... !
+    event: paulette_occupe1
+  occupe2:
+    text: Je suis trop occupée, j'ai besoin d'oeufs pour faire ma pâte !
+    condition: 'paulette2,!timer_paulette,!paulette_oeuf,intendant_done'
+    event: paulette_cleaner
+    pointer: aide2,aide2_bis,non,francis_carrot
+  ressources_rep:
+    text: C'est gentil! Apportez moi &d5 oeufs &a&oalors !
+    event: paulette_occupe2
+  aide2_bis_rep:
+    text: Merci beaucoup! J'espère que le gâteau sera bon... !
+    event: paulette_ressources_done
+  occupe3:
+    text: J'ai une cliente qui attends son repas dans sa chambre, je ne peux pas vous parler.
+    condition: 'paulette3,!timer_paulette,!madame,intendant_done'
+    event: paulette_cleaner
+    pointer: aide3,non,francis_carrot
+  madame_rep:
+    text: Merci! Il faut d'abord lui demander ce qu'elle veut. Madame est dans la Chambre 2.
+    event: paulette_occupe3
+  merci_carrot:
+    text: Merci beaucoup! Tenez, un peu d'argent pour vous !
+###################
+#Options du joueur#
+###################
+player_options:
+  bonjour:
+    text: Bonjour à vous! Et ... aurevoir !
+  chambre:
+    text: Je voudrais louer une chambre pour la nuit
+    pointer: chambre_rep
+  boire:
+    text: Je voudrais boire quelque chose.
+    pointer: boire_rep
+  the:
+    text: Je voudrais boire du thé.
+  eau:
+    text: Je voudrais boire de l'eau.
+  rien:
+    text: Rien merci.
+#
+#
+  aide1:
+    text: Je peux y aller si vous voulez !
+    pointer: livraison_rep
+  aide2:
+    text: Je peux aller le chercher si vous voulez !
+    pointer: ressources_rep
+  aide2_bis:
+    text: J'ai les oeufs qu'il vous faut !
+    condition: paulette_oeuf,paulette_oeuf_have
+    pointer: aide2_bis_rep
+  aide3:
+    text: Je peux m'en occuper si vous voulez !
+    pointer: madame_rep
+  non:
+    text: Je reviendrais plus tard.
+  francis_carrot:
+    text: J'ai les 10 carrottes que Francis vous fait parvenir !
+    conditions: francis_carrot_have,tag_francis_carot
+    events: francis_livraison_done
+    pointer: merci_carrot

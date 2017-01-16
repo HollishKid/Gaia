@@ -1,0 +1,36 @@
+miners:
+  Type: zombie
+  Display: '&cMineur Maudit'
+  Health: 40
+  Damage: 4
+  Faction: miners
+  Options:
+    FollowRange: 20
+    MovementSpeed: 0.23
+    PreventOtherDrops: true
+    KnockbackResistance: 0.55
+  Disguise:
+   Type: player
+   Player: '&cMineur Maudit'
+   Skin: FoidzaFlow
+  Modules:
+    ThreatTable: false
+  Equipment:
+  - mc_leather_helmet:4
+  - mc_iron_pickaxe:0
+  DamageModifiers:
+  - PROJECTILE 0.1  
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Drops:
+  - exp 1 1
+  - mc_wooden_pickaxe 1 0.4
+  - mc_iron_pickaxe 1 0.2
+  - mc_golden_pickaxe 1 0.02

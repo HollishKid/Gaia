@@ -1,0 +1,120 @@
+quester: Sofia
+first: start
+stop: 'false'
+#################
+#               #
+#  NPC OPTIONS  #
+#               #
+#################
+NPC_options:
+  start:
+    text: En quoi puis-je vous aider &2%player% &a&o?
+    pointer: questions,out
+  questions_accept:
+    text: Bien entendu ! Que souhaitez vous savoir ? Pour des informations complètes, visitez &b http://gaia-minecraft.enjin.com/guide
+    pointer: survie,plot,dynmap,mcmmo,trade,magie,site,jelag,out
+  jelag_rep:
+    text: Installez &2Optifine &a&oà l'aide de ce lien (cliquez directement sur le lien) &b http://gaia-minecraft.enjin.com/guide
+  survie_rep:
+    text: Il vous faut trouver une maison à louer, trouvez un &2Gestionnaire &a&oau &dChâteau &a&oou au &dGrand Marché. &a&oVous pourrez aussi prendre le bâteau et fonder votre Ville sur le continent dangereux de l'Est !
+  plot_rep:
+    text: Pour ça il faut parler avec l'&2Intendant &a&ode la ville qui se trouve au &dChâteau d'Athelas&a&o, si vous êtes déjà passé le voir, adressez vous au &2gestionnaire&a&o.
+  mcmmo_rep:
+    text: Pour afficher vos Compétences, tapez la commande &7/stats&a&o. Pour chaque compétence individuelle, utilisez la commande &7/[nom de la compétence]&a&o. Utilisez &7/Menu &a&opour toutes vos options.
+  trade_rep:
+    text: Pour plus d'informations sur le Commerce, adressez vous à un &dCourtier &a&oau Grand Marché !
+  magie_rep:
+    text: Parlez au &2Mage &a&oà l'entrée du &dSanctuaire &a&oou à l'&2Apprenti &a&o!
+  site_rep:
+    text: 'Pour plus d''informations: &b http://www.gaia-minecraft.enjin.com &a&oou envoyez un mail à &bgaia.minecraft.assistance@gmail.com'
+  dynmap_rep:
+    text: 'Pour ça &6Gaïa &a&oa créée une Carte Interactive sur : &b http://gaia-minecraft.enjin.com/gallery &a&o, souhaitez vous en savoir plus ?'
+    pointer: oui,non,out
+#
+# Dynmap
+#
+  oui_rep:
+    text: Voici les différentes choses à savoir sur la Carte Interactive, sur laquelle voulez vous en savoir davantage ? 
+    pointer: ou,iso,markers,autre
+  non_rep:
+    text: D'accord, en quoi puis-je vous aider ?
+    pointer: survie,plot,dynmap,mcmmo,trade,magie,site,out
+  ou_rep:
+    text: 'Visitez l''adresse &b http://gaia-minecraft.enjin.com/gallery '
+    pointer: iso,markers,zoom,autre
+  iso_rep:
+    text: Sur la droite de l'écran (glissez la souris entièrement à droite) vous pouvez sélectionner la vision de la carte.
+    pointer: ou,markers,zoom,autre
+  markers_rep:
+    text: Vous pouvez cocher et décocher les catégories de symboles affichés en haut à gauche de la fênetre (glissez la souris sur le symbole représentant trois couches). Certains sont très utiles !
+    pointer: ou,iso,zoom,autre
+  zoom_rep:
+    text: Vous pouvez zoomer et dézoomer en utilisant la molette de la souris, ou les symboles + et - en haut à gauche de la fênetre.
+    pointer: ou,iso,markers,autre
+  magie_rep:
+    text: Demande plus de conseil à l'&2Apprenti&a&o. Il se trouve au &dSanctuaire&a&o, au Nord d'Athelas.
+####################
+#                  #
+#  PLAYER OPTIONS  #
+#                  #
+####################
+player_options:
+  jelag:
+    text: J'ai des problèmes de lag, que faire ?
+    pointer: jelag_rep
+  survie:
+    text: Comment me faire à manger ?
+    pointer: survie_rep
+  questions:
+    text: Je peux poser une question précise ?
+    pointer: questions_accept
+  plot:
+    text: Comment obtenir une maison ou un terrain ?
+    pointer: plot_rep
+  site:
+    text: Comment avoir des informations en plus sur le monde Gaïa ?
+    pointer: site_rep
+  dynmap:
+    text: Comment se repèrer ici ?
+    pointer: dynmap_rep
+  mcmmo:
+    text: Comment gérer mes compétences ?
+    pointer: mcmmo_rep
+  trade:
+    text: Comment acheter ou je vendre des biens ?
+    pointer: trade_rep
+  magie:
+    text: Comment est-ce que je gère ma Magie et mes Sorts ?
+    conditions: hollish.mageentry_approved
+    pointer: magie_rep
+#
+# Dynmap
+#
+  oui:
+    text: Oui, que pouvez vous m'en dire ?
+    pointer: oui_rep
+  non:
+    text: Non merci, je voudrais vous demander autre chose.
+    pointer: non_rep
+  autre:
+    text: Je voudrais vous demander autre chose.
+    pointer: non_rep
+  ou:
+    text: Adresse de la Carte Interactive
+    pointer: ou_rep
+  iso:
+    text: La Carte Interactive en perspective
+    pointer: iso_rep
+  markers:
+    text: Faire apparaître/disparaître les symboles sur la Carte Interactive
+    pointer: markers_rep
+  zoom:
+    text: Zoomer et dézoomer sur la Carte Interactive
+    pointer: zoom_rep
+#
+#
+# OUT
+#
+#
+  out:
+    text: Merci pour votre aide ! Aurevoir !

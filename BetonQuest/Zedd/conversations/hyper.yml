@@ -1,0 +1,30 @@
+quester: Hypercapaciteur
+first: n1,n2,n3,n4,n5
+stop: 'false'
+##########################
+#                        #
+#       NPC OPTIONS      #
+#                        #
+##########################
+NPC_options:
+#
+  n1:
+    text: "&6&oFaille trouvée !!"
+    conditions: inregion_faille
+    event: zae_delayobj4,zae_faillefound
+  n2:
+    text: "&6&oFaille très proche !"
+    conditions: inregion_chaud
+    event: zae_delayobj4
+  n3:
+    text: "&6&oFaille proche."
+    conditions: inregion_moyen
+    event: zae_delayobj4
+  n4:
+    text: "&6&oFaille éloignée."
+    conditions: inregion_chateau
+    event: zae_delayobj4
+  n5:
+    text: "&6&oIl faut aller au chateau d'abord !"
+    conditions: '!inregion_chateau'
+    event: zae_delayobj4

@@ -1,0 +1,23 @@
+waterelemDrops:
+  Drops:
+  - water_tear 1-2 0.5
+  - 332 1-8 0.7
+  - 174 1-5 0.5
+  - exp 10
+lavaelemDrops:
+  Drops:
+  - lava_tear 1-2 0.5
+  - 49 1 0.7
+  - 378 1-3 0.5
+  - mc_blaze_powder 1 1
+  - exp 10
+ghouleDrops:
+  Drops:
+  - leatherlegs_uncommon 1 0.05
+  - 367 1-3 1
+  - 372 1 0.5
+  - exp 5
+revenantDrops:
+  Drops:
+  - 352 2-5 1
+  - exp 10

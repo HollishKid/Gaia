@@ -1,0 +1,874 @@
+#
+#
+# 
+# Conditions
+#
+#                Default
+#
+#
+########################################################
+tested: tag tested
+staff: tag staff
+founder: tag founder
+creator: tag creator
+builder: tag builder
+moderator: tag moderator
+beta: tag beta
+player: tag player
+#
+day: time 7-19
+chest_loot_time: testforblock -6753;67;2967;Gaia GLOWSTONE
+sneaking: sneak
+#
+#
+# Events
+#
+#
+assault_killed25: point assault_killed 25
+breche: testforblock -6751;50;2971;Gaia REDSTONE_TORCH_ON
+#
+# Takéo
+#
+arena_occupied: party 250 arena_occupied_exe count:1
+arena_occupied_exe: region arena
+#
+#
+# Random
+#
+#
+##########################
+random001: random 1-10000
+random01: random 1-1000
+random1: random 1-100
+random2: random 2-100
+random3: random 3-100
+random4: random 4-100
+random5: random 5-100
+random6: random 6-100
+random7: random 7-100
+random8: random 8-100
+random9: random 9-100
+random10: random 10-100
+random20: random 20-100
+random40: random 40-100
+random60: random 60-100
+random70: random 70-100
+random80: random 80-100
+random85: random 85-100
+random86: random 86-100
+random87: random 87-100
+random88: random 88-100
+random89: random 89-100
+random90: random 90-100
+random91: random 91-100
+random92: random 92-100
+random93: random 93-100
+random94: random 94-100
+random95: random 95-100
+random96: random 96-100
+random97: random 97-100
+random98: random 98-100
+random99: random 99-100
+random999: random 999-1000
+random100: random 100-100
+#
+#
+# Réputation Athelas (Points)
+#   Points de Vote
+#
+#
+##########################
+reput_athelas1: point reput_athelas 1
+reput_athelas2: point reput_athelas 2
+reput_athelas3: point reput_athelas 3
+reput_athelas5: point reput_athelas 5
+reput_athelas10: point reput_athelas 10
+reput_athelas15: point reput_athelas 15
+reput_athelas20: point reput_athelas 20
+reput_athelas30: point reput_athelas 30
+#
+votes1: point votes 1
+votes3: point votes 3
+votes5: point votes 5
+votes10: point votes 10
+votes20: point votes 20
+votes25: point votes 25
+votes30: point votes 30
+votes35: point votes 35
+votes40: point votes 40
+votes50: point votes 50
+votes100: point votes 100
+votes150: point votes 150
+votes200: point votes 200
+votes250: point votes 250
+#
+#
+# Vulgarite Timer
+#
+#
+vulgarite1: point vulgarite 1
+vulgarite3: point vulgarite 3
+vulgarite5: point vulgarite 5
+#
+# Charon
+#
+skin_custom_cost: and reput_athelas10,votes20
+skin_premade: and reput_athelas2,votes5
+######################################
+#
+#
+#     ¤ Banks ¤
+#
+#                    ¤ Money ¤
+#
+#
+######################################
+#
+compte_tempo_defined: variable %objective.banking.depot% \d+
+compte_tempo_wrong: variable %objective.banking.depot% \D+
+#
+poche_tempo_defined: variable %objective.banking.retrait% \d+
+poche_tempo_wrong: variable %objective.banking.retrait% \D+
+#
+compte_enough: money %objective.banking.depot%
+poche_enough: point compte %objective.banking.retrait%
+#
+#
+money_1: money 1
+money_5: money 5
+money_10: money 10
+money_20: money 20
+money_25: money 25
+money_30: money 30
+money_40: money 40
+money_50: money 50
+money_90: money 90
+money_100: money 100
+money_200: money 200
+money_250: money 250
+money_500: money 500
+money_2000: money 2000
+money_2500: money 2500
+money_4000: money 4000
+money_4500: money 4500
+money_5000: money 5000
+money_7000: money 7000
+money_9000: money 9000
+money_10000: money 10000
+money_100000: money 100000
+money_13000: money 13000
+money_17000: money 17000
+money_200000: money 200000
+money_21000: money 21000
+money_25000: money 25000
+money_400000: money 400000
+money_750000: money 750000
+money_1000000: money 1000000
+money_2000000: money 2000000
+money_5000000: money 5000000
+money_10000000: money 10000000
+#
+# Banque
+#
+client: tag client
+client_coffre: tag client_coffre
+compte_money_1: point compte 1
+compte_money_5: point compte 5
+compte_money_25: point compte 25
+compte_money_50: point compte 50
+compte_money_100: point compte 100
+compte_money_500: point compte 500
+compte_money_5000: point compte 5000
+compte_money_10000: point compte 10000
+compte_money_100000: point compte 100000
+compte_money_200000: point compte 200000
+compte_money_400000: point compte 400000
+compte_money_750000: point compte 750000
+compte_money_1000000: point compte 1000000
+compte_money_2000000: point compte 2000000
+compte_money_5000000: point compte 5000000
+compte_money_10000000: point compte 10000000
+#
+#
+# Bâteau
+#
+#################################################
+autorisation_bateau: tag autorisation_bateau
+#
+on_bat_athelas_central: location -6602;65;3170;Gaia;33
+on_bat_athelas_east: location -6445;65;3016;Gaia;33
+#
+on_bat_est1: location -298;65;6781;Gaia;33
+on_bat_est2: location -474;65;5635;Gaia;33
+on_bat_est3: location -406;65;4764;Gaia;33
+on_bat_est4: location -1725;65;2838;Gaia;33
+on_bat_est5: location -3048;65;1382;Gaia;33
+on_bat_est6: location -3538;65;-944;Gaia;33
+on_bat_est7: location -756;65;456;Gaia;33
+#
+divine: tag divine
+spawn: tag spawn
+athelas: tag athelas
+zedds: tag zedds
+pirateden: tag pirateden
+soulstorm: tag soulstorm
+frontest: tag frontest
+jumaker: tag jumaker
+or_spawn: or spawn,divine
+or_athelas: or athelas,divine
+or_zedds: or zedds,divine
+or_pirateden: or pirateden,divine
+or_soulstorm: or soulstorm,divine
+or_frontest: or frontest,divine
+or_jumaker: or jumaker,divine
+ami_inconvers: tag ami_inconvers
+ami_packinhand: hand ami_pack
+plume_have: hand Plume_etrange
+amiral: tag amiral
+passeur: tag passeur
+cabine1_pleine: party 4 cabine1_loc count:2
+cabine1_loc: location -7235;80;2660;Gaia;5
+cabine2_pleine: party 4 cabine2_loc count:2
+cabine2_loc: location -6938;130;2987;Gaia;5
+cabine3_pleine: party 4 cabine3_loc count:2
+cabine3_loc: location -6705;75;3292;Gaia;5
+#
+#
+# Intendant
+#             & Guildes
+#
+#################################
+intendant: tag intendant
+intendant_done: tag intendant_done
+gestionnaire: tag gestionnaire
+gestionnaire_progress: tag gestionnaire_progress
+gestionnaire_compteur5: point gestionnaire_compteur 5
+gestionnaire_done: tag gestionnaire_done
+gestionnaire_found: journal gestionnaire_found
+journal_guilds_found: journal guilds_found
+navigation_signing: tag navigation_signing
+navigation_signed: tag navigation_signed
+#
+seeds_inhand: hand wheat_seed
+in_athelas: region athelas
+#
+guild_temporizer: tag guild_temporizer
+guildes_all: and !guilde_alchimistes,!guilde_acrobates,!guilde_guerriers,!guilde_pecheurs,!guilde_mineurs,!guilde_apprivoiseurs,!guilde_herboristes,!guilde_bucherons
+guilde_alchimistes: journal guilde1
+guilde_acrobates: journal guilde2
+guilde_guerriers: journal guilde3
+guilde_pecheurs: journal guilde4
+guilde_mineurs: journal guilde5
+guilde_apprivoiseurs: journal guilde6
+guilde_herboristes: journal guilde7
+guilde_bucherons: journal guilde8
+#
+#
+# Intendant
+#
+#                        End of Bêta
+#
+intendant_next_phase: and makarov_recommandation,mage_recommandation
+makarov_recommandation: journal Zedd.maka_tempo_journal_intendant
+mage_recommandation: journal hollish.mage_entry_branching_out
+#
+#
+# Grades 
+#
+#
+grade_ecuyer: tag grade_ecuyer
+#
+#
+#
+# Jobs
+#
+#
+#
+# Job Guilde Minage
+#
+job_guilde_mining1: or job_mining,job_excavation
+job_guilde_mining2: or job_mining,job_repair
+job_guilde_mining3: or job_repair,job_excavation
+job_mining: tag job_mining
+job_mining_done: tag job_mining_done
+job_mining_have: and job_mining_have1,job_mining_have2
+job_mining_have1: tag job_mining_coal_done
+job_mining_have2: tag job_mining_stone_done
+job_mining_havebis: and job_mining_have1,job_mining_have2,job_mining_have4,job_mining_have5
+job_mining_have4: item stone:100
+job_mining_have5: item coal:25
+#
+job_excavation: tag job_excavation
+job_excavation_done: tag job_excavation_done
+job_excavation_have: and job_excavation_have1,job_excavation_have2
+job_excavation_have1: tag job_excavation_gravel_done
+job_excavation_have2: tag job_excavation_dirt_done
+job_excavation_havebis: and job_excavation_have1,job_excavation_have2,job_excavation_have4,job_excavation_have5
+job_excavation_have4: item dirt:50
+job_excavation_have5: item gravel:50
+#
+job_repair: tag job_repair
+job_repair_done: tag job_repair_done
+job_repair_have: and job_repair_have1,job_repair_have2,job_repair_have3,job_repair_have4
+job_repair_have1: item craft_leather:25
+job_repair_have2: item craft_string:20
+job_repair_have3: item craft_iron:10
+job_repair_have4: item craft_gold:5
+#
+#
+# Job Guilde Combat
+#
+job_guilde_combat1: or job_swords,job_axes,job_unarmed
+job_guilde_combat2: or job_swords,job_archer,job_unarmed
+job_guilde_combat3: or job_archer,job_axes,job_unarmed
+job_guilde_combat4: or job_swords,job_axes,job_archer 
+#
+job_archer: tag job_archer
+job_archer_done: tag job_archer_done
+job_archer_have: and job_archer_have1,job_archer_have2,job_archer_have3
+job_archer_have1: tag job_archer_zombie_kill_done
+job_archer_have2: tag job_archer_skeleton_kill_done
+job_archer_have3: tag job_archer_spider_kill_done
+#
+job_axes: tag job_axes
+job_axes_done: tag job_axes_done
+job_axes_have: and job_axes_have1,job_axes_have2,job_axes_have3
+job_axes_have1: tag job_axes_zombie_kill_done
+job_axes_have2: tag job_axes_skeleton_kill_done
+job_axes_have3: tag job_axes_spider_kill_done
+#
+job_swords: tag job_swords
+job_swords_done: tag job_swords_done
+job_swords_have: and job_swords_have1,job_swords_have2,job_swords_have3
+job_swords_have1: tag job_swords_zombie_kill_done
+job_swords_have2: tag job_swords_skeleton_kill_done
+job_swords_have3: tag job_swords_spider_kill_done
+#
+job_unarmed: tag job_unarmed
+job_unarmed_done: tag job_unarmed_done
+job_unarmed_have: and job_unarmed_have1,job_unarmed_have2,job_unarmed_have3
+job_unarmed_have1: tag job_unarmed_zombie_kill_done
+job_unarmed_have2: tag job_unarmed_skeleton_kill_done
+job_unarmed_have3: tag job_unarmed_spider_kill_done
+#
+holding_nothing: and !holding_bow,!holding_axe,!holding_sword,!wand_hand
+wand_hand: wand hand
+holding_bow: hand bow
+holding_axe: or holding_axe1,holding_axe2,holding_axe3,holding_axe4,holding_axe5
+holding_axe1: hand wooden_axe
+holding_axe2: hand stone_axe
+holding_axe3: hand ironaxe
+holding_axe4: hand gold_axe
+holding_axe5: hand diamond_axe
+holding_sword: or holding_sword1,holding_sword2,holding_sword3,holding_sword4,holding_sword5
+holding_sword1: hand wooden_sword
+holding_sword2: hand stone_sword
+holding_sword3: hand iron_sword
+holding_sword4: hand gold_sword
+holding_sword5: hand diamond_sword
+#
+#
+job_fishing: tag job_fishing
+job_fishing_done: tag job_fishing_done
+job_fishing_have: and job_fishing_have1,job_fishing_tempo_done
+job_fishing_have1: item rawfish:20
+job_fishing_tempo_done: tag job_fishing_tempo_done
+#
+job_alchimiste: tag job_alchimiste
+job_alchimiste_done: tag job_alchimiste_done
+job_alchimiste_have: and job_alchimiste_have1,job_alchimiste_tempo_done
+job_alchimiste_have1: item mundane_potion:30
+job_alchimiste_tempo_done: tag job_alchimiste_tempo_done
+#
+job_herboriste: tag job_herboriste
+job_herboriste_done: tag job_herboriste_done
+job_herboriste_have: and job_herboriste_have1,job_herboriste_tempo_done
+job_herboriste_have1: item ble:50
+job_herboriste_tempo_done: tag job_herboriste_tempo_done
+job_herboriste_50: point job_herboriste 50
+#
+job_apprivoiseur: tag job_apprivoiseur
+job_apprivoiseur_done: tag job_apprivoiseur_done
+job_apprivoiseur_have: tag job_apprivoiseur_tempo_done
+job_apprivoiseur_tempo_done: tag job_apprivoiseur_tempo_done
+#
+job_bucheron: tag job_bucheron
+job_bucheron_done: tag job_bucheron_done
+job_bucheron_have: and job_bucheron_have1,job_bucheron_tempo_done
+job_bucheron_have1: item oakwoodlog:75
+job_bucheron_tempo_done: tag job_bucheron_tempo_done
+#
+#
+#
+# Grades
+#
+#
+alchimiste: tag alchimiste
+acrobate: tag acrobate
+guerrier: tag guerrier
+pecheur: tag pecheur
+mineur: tag mineur
+apprivoiseur: tag apprivoiseur
+herboriste: tag herboriste
+bucheron: tag bucheron
+#
+#
+#
+# Métiers
+# 
+#
+#
+metier_have: or metier_poings,metier_epees,metier_haches,metier_arc,metier_alchimiste,metier_acrobate,metier_peche,metier_apprivoiseur,metier_herboriste,metier_mineur,metier_reparation,metier_excavation,metier_bucheron
+metier_poings: tag metier_poings
+metier_epees: tag metier_epees
+metier_haches: tag metier_haches
+metier_arc: tag metier_arc
+metier_alchimiste: tag metier_alchimiste
+metier_acrobate: tag metier_acrobate
+metier_peche: tag metier_pecheur
+metier_apprivoiseur: tag metier_apprivoiseur
+metier_herboriste: tag metier_herboriste
+metier_mineur: tag metier_mineur
+metier_reparation: tag metier_reparation
+metier_excavation: tag metier_excavation
+metier_bucheron: tag metier_bucheron
+#
+#
+# Conditions de Compétence
+#
+#
+poings_25: mcmmolevel unarmed 25
+poings_50: mcmmolevel unarmed 50
+poings_75: mcmmolevel unarmed 75
+poings_100: mcmmolevel unarmed 100
+#
+epees_25: mcmmolevel swords 25
+epees_75: mcmmolevel swords 75
+epees_10: mcmmolevel swords 10
+epees_20: mcmmolevel swords 20
+epees_30: mcmmolevel swords 30
+epees_40: mcmmolevel swords 40
+epees_50: mcmmolevel swords 50
+epees_60: mcmmolevel swords 60
+epees_70: mcmmolevel swords 70
+epees_80: mcmmolevel swords 80
+epees_90: mcmmolevel swords 90
+epees_100: mcmmolevel swords 100
+#
+haches_25: mcmmolevel axes 25
+haches_50: mcmmolevel axes 50
+haches_75: mcmmolevel axes 75
+haches_100: mcmmolevel axes 100
+#
+arc_25: mcmmolevel archery 25
+arc_50: mcmmolevel archery 50
+arc_75: mcmmolevel archery 75
+arc_100: mcmmolevel archery 100
+#
+alchimiste_25: mcmmolevel alchemy 25
+alchimiste_50: mcmmolevel alchemy 50
+alchimiste_75: mcmmolevel alchemy 75
+alchimiste_100: mcmmolevel alchemy 100
+#
+acrobate_25: mcmmolevel acrobatics 25
+acrobate_50: mcmmolevel acrobatics 50
+acrobate_75: mcmmolevel acrobatics 75
+acrobate_100: mcmmolevel acrobatics 100
+#
+peche_25: mcmmolevel fishing 25
+peche_50: mcmmolevel fishing 50
+peche_75: mcmmolevel fishing 75
+peche_100: mcmmolevel fishing 100
+#
+apprivoiseur_25: mcmmolevel taming 25
+apprivoiseur_50: mcmmolevel taming 50
+apprivoiseur_75: mcmmolevel taming 75
+apprivoiseur_100: mcmmolevel taming 100
+#
+herboriste_25: mcmmolevel herbalism 25
+herboriste_50: mcmmolevel herbalism 50
+herboriste_75: mcmmolevel herbalism 75
+herboriste_100: mcmmolevel herbalism 100
+#
+mineur_25: mcmmolevel mining 25
+mineur_50: mcmmolevel mining 50
+mineur_75: mcmmolevel mining 75
+mineur_100: mcmmolevel mining 100
+#
+reparation_25: mcmmolevel repair 25
+reparation_50: mcmmolevel repair 50
+reparation_75: mcmmolevel repair 75
+reparation_100: mcmmolevel repair 100
+#
+excavation_25: mcmmolevel excavation 25
+excavation_50: mcmmolevel excavation 50
+excavation_75: mcmmolevel excavation 75
+excavation_100: mcmmolevel excavation 100
+#
+bucheron_25: mcmmolevel woodcutting 25
+bucheron_50: mcmmolevel woodcutting 50
+bucheron_75: mcmmolevel woodcutting 75
+bucheron_100: mcmmolevel woodcutting 100
+#
+fonte_1: mcmmolevel smelting 1
+fonte_2: mcmmolevel smelting 2
+fonte_3: mcmmolevel smelting 3
+fonte_4: mcmmolevel smelting 4
+fonte_5: mcmmolevel smelting 5
+fonte_6: mcmmolevel smelting 6
+fonte_7: mcmmolevel smelting 7
+fonte_8: mcmmolevel smelting 8
+fonte_9: mcmmolevel smelting 9
+fonte_10: mcmmolevel smelting 10
+fonte_11: mcmmolevel smelting 11
+fonte_12: mcmmolevel smelting 12
+fonte_13: mcmmolevel smelting 13
+fonte_14: mcmmolevel smelting 14
+fonte_15: mcmmolevel smelting 15
+fonte_16: mcmmolevel smelting 16
+fonte_17: mcmmolevel smelting 17
+fonte_18: mcmmolevel smelting 18
+fonte_19: mcmmolevel smelting 19
+fonte_20: mcmmolevel smelting 20
+#
+bron: tag bron
+jacopo: tag jacopo
+citoyen_athelas: tag citoyen_athelas
+#
+ami_first: tag ami_first
+int_inconvers: tag int_inconvers
+j_entry_int: journal j_entry_int
+#
+# Jacopo
+#
+jacopo_start: tag jacopo_start
+jacopo_boat_done: tag jacopo_boat_done
+boat_have: item boat:1
+jacopo_ermite: tag jacopo_ermite
+ermite: tag ermite
+jacopo_done: tag jacopo_done
+or_jacopo_quest_init: or jacopo_done,autorisation_bateau
+#
+# Unkown Object
+#
+unknown_object_have: item unknow_object
+#
+#
+# Spirituality
+#
+#
+#
+spirit1: point spirituality 1
+spirit10: point spirituality 10
+#
+os_have1: item bone:1
+os_have2: item bone:2
+os2_have1: item bone_charged:1
+os2_hand1: hand bone_charged
+#
+#Moine François
+#
+francois_apprenti: tag hollish.apprenti_francois
+francois_burried_gros_os: tag hollish.burried_gros_os
+prayed: tag prayed
+in_spiritualium: or region_spiri1,region_spiri2,region_spiri3
+region_spiri1: region athelas_spiritualium
+region_spiri2: region athelas_spiritualium2
+region_spiri3: region sanctuaire
+#
+#
+# Mines
+#
+#
+or_in_outer_mine: or in_lower_mine,in_upper_mine
+in_lower_mine: region lower_mine
+in_upper_mine: region upper_mine
+#
+#
+# Foret
+#
+#
+in_foret_athelas: region foret_athelas
+tag_foret_athelas: tag foret_athelas
+foret_athelas: tag foret_athelas
+foret_obj_distance_exe: location -7040;65;2855;Gaia;70
+#
+# Ermite
+#
+ermite: tag ermite
+erudit_air_student: tag hollish.erudit_air_student
+ermite_tarte: item tarte
+tag_ermite_tarteur: tag ermite_tarteur
+tag_voyage_air: tag hollish.voyage_air
+or_loser_or_backer: or tag_air_temple_loser,tag_voyage_air_done
+tag_voyage_air_done: tag hollish.voyage_air_done
+tag_air_temple_loser: tag hollish.air_temple_loser
+tag_aang: tag hollish.aang
+#
+# Nether Donjon
+#
+nether_donjon2_tag: tag nether_donjon2
+in_nether_donjon2: region nether_portal2
+nether_donjon2_set: testforblock -7652;61;2902;Gaia REDSTONE_BLOCK
+nether_donjon2_started: testforblock -7724;34;2902;Gaia REDSTONE_BLOCK
+nether_donjon2_last_raider_not: testforblock -7762;40;2902;Gaia GLOWSTONE
+nether_donjon2_party_condition: party 9999 nether_donjon2_tag count:2
+nether_donjon2_party_condition2: party 9999 in_nether_donjon2 count:1
+#
+#
+nether_donjon_tag: tag nether_donjon
+in_nether_donjon: region nether_portal
+nether_donjon_set: testforblock 727;83;1164;Gaia GLOWSTONE
+nether_donjon_started: testforblock 727;84;1164;Gaia GLOWSTONE
+nether_donjon_last_raider_not: testforblock 728;23;1030;Gaia GLOWSTONE
+nether_donjon_party_condition: party 9999 nether_donjon_tag count:2
+nether_donjon_party_condition2: party 9999 in_nether_donjon count:1
+#nether_donjon_minions: monsters ZOMBIE:1,SKELETON:1 728;17;1093;Gaia;18
+#
+# Zedd
+#
+recruteur: tag recruteur
+joze_q1_bis: tag lutcha_q1start
+lutcha_q1done: tag lutcha_q1done
+lutcha_c3: or lutcha_q1done,lutcha_c2
+lutcha_c2: and !joze_q1,!joze_q1_bis
+joze_q1: tag jozef_q1start
+newdrink_q1: or is_newdrink,!gret_q1done
+is_newdrink: tag gret_newdrink
+gret_startq1: tag gret_startq1
+gret_q1done: tag gret_q1done
+gret_q1items: and gret_fish,gret_leaf,gret_water,gret_startq1
+gret_leaf: item oakleaves:5
+gret_water: item waterbucket:1
+gret_fish: item rawfish:1
+gret_q2items: item goldencarrot:5
+gret_q2done: tag gret_q2done
+gret_startq2: tag gret_startq2
+gret_q3done: tag gret_q3done
+gret_q3dispo: and !gret_q3done,is_spiderblood
+is_spiderblood: item spiderblood:1
+adel1_done: tag adel1_done
+adel1_start: tag adel1_start
+adel1_sang: item spiderblood:10
+gdpa_done: tag gdpa_done
+start_questguild: tag start_questguild
+samson_inprogress: tag samson_inprogress
+samsonq1: tag samsonq1
+cimereached: tag global_cimereached
+introquestguild: tag introquestguild
+bar_questinprogress: tag bar_questinprogress
+has_pain: item bread:10
+pain_bar: tag pain_bar
+bartend_q0: and pain_bar,has_pain
+bartend_q1: and !bar_questinprogress,!livraison_done
+bartend_start2: and !bar_questinprogress,livraison_done,!bartend_quete2
+bartend_quete2: tag bartend_q2
+bartend_q2: and bartend_rawpork,bartend_rawsteack
+bartend_rawpork: item rawsteack:5
+bartend_rawsteack: item rawpork:5
+livraison_done: tag livraison_done
+bread_given: tag bread_given
+loggerjoe_stick1: item stick:2
+loggerjoe_startq1: tag loggerjoe_startq1
+loggerjoe_startq2: tag loggerjoe_startq2
+loggerjoe_done: tag loggerjoe_q1
+loggerjoe_p1: and !loggerjoe_done,!loggerjoe_startq1
+loggerjoe_p2: and loggerjoe_done,!loggerjoe_startq2,!loggerjoe_q2
+loggerjoe_fish: item ironore:10
+loggerjoe_p3: and loggerjoe_q1,loggerjoe_q2
+loggerjoe_q1: tag loggerjoe_q1
+loggerjoe_q2: tag loggerjoe_q2
+access_south: tag access_south
+######
+#
+# Maître d'Armes
+#
+#                   Entraînement
+################################
+arc_occupe: or arc_occupe1,arc_occupe2,arc_occupe3
+arc_occupe1: party 222 arc_occupe1_exe count:1
+arc_occupe1_exe: location -6491;83;3240;Gaia;3
+arc_occupe2: party 222 arc_occupe2_exe count:1
+arc_occupe2_exe: location -6501;83;3231;Gaia;3
+arc_occupe3: party 222 arc_occupe3_exe count:1
+arc_occupe3_exe: location -6482;83;3216;Gaia;4
+arrow_compteur1: point arrow_compteur $arrowscore1$
+arrow_compteur2: point arrow_compteur $arrowscore2$
+arrow_compteur3: point arrow_compteur $arrowscore3$
+#
+#
+pvp_occupe: party 222 pvp_occupe_exe count:1
+pvp_occupe_exe: region training_grounds
+pvp_training: tag pvp_training
+training_easy_timer_tag: tag training_easy_timer
+training_medium_timer_tag: tag training_medium_timer
+training_hard_timer_tag: tag training_hard_timer
+######
+#
+# Réputation Athelas
+#
+#################################
+neutre: point reput_athelas 0
+amical: point reput_athelas 10
+honore: point reput_athelas 50
+exalte: point reput_athelas 100
+# Timers
+delay_ilse2: tag delay_ilse2
+delay_ilse3: tag delay_ilse3
+# Marie & Sam
+tag_sam: tag sam
+tag_marie: tag marie
+# Nimue
+the_demande: tag the_demande
+tag_nimue_timer: tag nimue_timer
+#
+saut_eau: item waterbucket:1
+tag_gorick: tag tag_gorick
+random33: random 10-100
+#
+# Paulette
+#
+timer_paulette: tag timer_paulette
+paulette1: testforblock -6709;73;3071;Gaia BREWING_STAND
+paulette2: testforblock -6709;73;3069;Gaia BREWING_STAND
+paulette3: testforblock -6709;73;3067;Gaia BREWING_STAND
+tag_fils_paulette: tag fils_paulette
+gateau_paulette: item gateau_paulette
+paulette_oeuf: tag paulette_oeuf
+paulette_oeuf_have: item egg:5
+madame: tag madame
+madame_betteraves: tag madame_betteraves
+madame_betteraves_have: item soupe_betteraves
+#
+# Paul
+#
+timer_paul: tag timer_paul
+paul1: testforblock -6753;71;3042;Gaia FLOWER_POT
+paul2: testforblock -6753;71;3041;Gaia FLOWER_POT
+paul3: testforblock -6753;71;3040;Gaia FLOWER_POT
+#
+tag_pain_paul: tag pain_paul
+pain_paul: item pain_paul:10
+#
+paul_ble: tag paul_ble
+paul_ble_have: item ble:10
+#
+pain_urgent: tag pain_urgent
+pain_urgent_done: tag pain_urgent_done
+pain_urgent_have: item bread:3
+#
+# Francis
+#
+timer_francis: tag timer_francis
+francis1: testforblock -6975;64;3020;Gaia HAY_BLOCK
+francis2: testforblock -6975;64;3019;Gaia HAY_BLOCK
+francis3: testforblock -6975;64;3018;Gaia HAY_BLOCK
+#
+tag_pain_francis: tag pain_francis
+tag_paul_francis: tag paul_francis
+pain_francis: item pain_paul:2
+#
+tag_francis_carot: tag francis_carot
+francis_carrot_have: item carrot:10
+#
+betteraves_urgent: tag betteraves_urgent
+betteraves_have: item betteraves:7
+tag_tarte_chef: tag tarte_chef
+tarte_chef_have: item tarte_chef
+#############################
+#
+#
+#
+#                Crafts Customisés
+#
+#
+#
+###############################################################################
+#
+craft_casque_cuir_have: item craft_casque_cuir
+craft_casque_cuir_tempo_have: item leather_helmet
+#
+craft_plastron_cuir_have: item craft_plastron_cuir
+craft_plastron_cuir_tempo_have: item leather_tunic
+#
+craft_jambes_cuir_have: item craft_jambes_cuir
+craft_jambes_cuir_tempo_have: item leather_pants
+#
+craft_pieds_cuir_have: item craft_pieds_cuir
+craft_pieds_cuir_tempo_have: item leathershoes
+#
+craft_casque_maille_have: item craft_casque_maille
+craft_casque_maille_tempo_have: item chain_helmet
+#
+craft_plastron_maille_have: item craft_plastron_maille
+craft_plastron_maille_tempo_have: item chain_body
+#
+craft_jambes_maille_have: item craft_jambes_maille
+craft_jambes_maille_tempo_have: item chain_legs
+#
+craft_pieds_maille_have: item craft_pieds_maille
+craft_pieds_maille_tempo_have: item chain_boots
+#
+craft_casque_fer_have: item craft_casque_fer
+craft_casque_fer_tempo_have: item iron_helmet
+#
+craft_plastron_fer_have: item craft_plastron_fer
+craft_plastron_fer_tempo_have: item iron_chestplate
+#
+craft_jambes_fer_have: item craft_jambes_fer
+craft_jambes_fer_tempo_have: item iron_legs
+#
+craft_pieds_fer_have: item craft_pieds_fer
+craft_pieds_fer_tempo_have: item iron_boots
+#
+craft_casque_or_have: item craft_casque_or
+craft_casque_or_tempo_have: item gold_helmet
+#
+craft_plastron_or_have: item craft_plastron_or
+craft_plastron_or_tempo_have: item gold_plate
+#
+craft_jambes_or_have: item craft_jambes_or
+craft_jambes_or_tempo_have: item gold_legs
+#
+craft_pieds_or_have: item craft_pieds_or
+craft_pieds_or_tempo_have: item gold_boots
+#
+craft_casque_diamant_have: item craft_casque_diamant
+craft_casque_diamant_tempo_have: item diamond_helmet
+#
+craft_plastron_diamant_have: item craft_plastron_diamant
+craft_plastron_diamant_tempo_have: item diamond_body
+#
+craft_jambes_diamant_have: item craft_jambes_diamant
+craft_jambes_diamant_tempo_have: item diamond_legs
+#
+craft_pieds_diamant_have: item craft_pieds_diamant
+craft_pieds_diamant_tempo_have: item diamond_boots
+#
+#
+# Skript Extentions
+#
+#
+empty_inventory: and empty_inv,empty_armor
+empty_inv: empty 36
+empty_armor: and !ea1,!ea2,!ea3,!ea4,!ea5,!ea6,!ea7,!ea8,!ea9,!ea10,!ea11,!ea12,!ea13,!ea14,!ea15,!ea16,!ea17,!ea18,!ea19,!ea20
+ea1: armor leather_boots
+ea2: armor leather_pants
+ea3: armor leather_tunic
+ea4: armor leather_helmet
+ea5: armor iron_boots
+ea6: armor iron_legs
+ea7: armor iron_chestplate
+ea8: armor iron_helmet
+ea9: armor chain_boots
+ea10: armor chain_legs
+ea11: armor chain_body
+ea12: armor chain_helmet
+ea13: armor gold_boots
+ea14: armor gold_legs
+ea15: armor gold_plate
+ea16: armor gold_helmet
+ea17: armor diamond_boots
+ea18: armor diamond_legs
+ea19: armor diamond_body
+ea20: armor diamond_helmet

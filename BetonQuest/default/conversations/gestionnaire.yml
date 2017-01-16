@@ -1,0 +1,77 @@
+quester: Gestionnaire
+first: welcome,first,progress,unknown
+stop: 'false'
+#Options du NPC
+NPC_options:
+  'unknown':
+    text: Vous n'êtes pas de cette ville vous ! Allez voir l'&2Intendant &a&o!
+    conditions: '!intendant'
+  'first':
+    text: Enchanté &2%player% &a&o! Je suis ravi de vous aider dans votre recherche de maison ! \nCommencez par en chercher une dans la ville. Une fois que vous l'aurez louée, plantez-y ces quelques graines de blé. \nConsultez votre Journal de Progression pour les instructions !
+    conditions: '!gestionnaire,!gestionnaire_progress,intendant'
+    events: gestionnaire_found
+  'done_rep':
+    text: Très bien, vous avez maintenant lancé une production de nourriture basique ! \nPensez à vous faire des stocks de nourriture ! &fFrancis &a&oélève un tas d'animaux bons pour l'abattoir ! \nN'hésitez pas à me poser toutes les questions qu'il vous faut. Depuis votre &f/menu &a&ovous pouvez accéder au Menu Locations. \nRetournez voir l'&2Intendant &a&omaintenant !
+    events: gestionnaire_over
+  'progress':
+    text: Bonjour &2%player% &a&o! Est-ce que je peux vous aider ?
+    conditions: '!gestionnaire,gestionnaire_progress,intendant'
+    pointer: quefai,done,rien
+  'quefao':
+    text: Vous devez louer une maison, puis planter 7 graines dans le jardin. \nConsultez votre Journal de Progression quand vous êtes perdu ! \n&cS'il n'y a plus de maisons à louer, utilisez la Ferme Communautaire gérée par &fFrançis&a&o, au Sud d'ici pour planter vos graines !
+  'welcome':
+    text: En quoi puis-je vous aider ?
+    conditions: 'intendant,gestionnaire'
+    pointer: qui,comment,autre,rien
+  'qui_rep':
+    text: Je travaille pour l'&2Intendant &a&oet je gère toutes les parcelles légales et leur location.
+  'com_rep':
+    text: Il vous faut simplement faire un clic droit sur le panneau de la parcelle souhaitée. \nN'hésitez pas de le visiter avant de vous décider !
+  'autre_rep':
+    text: Bien entendu, en quoi puis-je vous renseigner ?
+    pointer: panneaux,ou,map,dechanter,apres,rien
+  'pan_rep':
+    text: Chaque panneaux indique en temps réel l'état d'une parcelle, Loué ou A Louer et son prix pour le temps de location indiqué. \nFaites un clic gauche sur un panneau pour plus d'infos. \n&4ATTENTION &a&oUn clic droit vous fera louer la parcelle concernée !
+  'ou_rep':
+    text: 'Vous pouvez accéder à la Carte de Gaïa à l''adresse suivante: &9http://www.gaia-minecraft.enjin.com/gallery'
+  'map_rep':
+    text: 'Sur &9http://www.gaia-minecraft.enjin.com/gallery &a&oCliquez en haut à gauche de l''écran sur "Maisons et Terrains", en zoomant sur la ville vous lez verrez apparaître ! Pour plus d''infos sur cette Carte, consultez &2Sofia&a&o.'
+  'dechanter_rep':
+    text: Pour arrêter une location, il vous faut vous accroupir, puis faire un clic droit sur le panneau correspondant à votre location.
+  'apres_rep':
+    text: Votre parcelle est remise à l'état initial, tel que vous l'avez trouvée. Faites donc attention de ne pas y laisser d'effets personnels !
+#Options du joueur
+player_options:
+  'quefai':
+    text: Qu'est-ce que je dois faire déjà ?
+    pointer: quefao
+  'done':
+    text: J'ai loué une maison et planté les graines comme vous l'avez dit !
+    conditions: '!gestionnaire,gestionnaire_done'
+    pointer: done_rep
+  'qui':
+    text: Qui êtes vous ?
+    pointer: qui_rep
+  'comment':
+    text: Comment louer une parcelle ou une maison ?
+    pointer: com_rep
+  'autre':
+    text: Pouvez vous me renseigner sur autre chose ?
+    pointer: autre_rep
+  'ou':
+    text: Où se trouvent les parcelles et maisons ?
+    pointer: ou_rep
+  'map':
+    text: Comment me repérer dans toutes les parcelles ?
+    pointer: map_rep
+  'panneaux':
+    text: A quoi servent tous ces panneaux ?
+    pointer: pan_rep
+  'dechanter':
+    text: Je ne veux plus louer ma parcelle !
+    pointer: dechanter_rep
+  'apres':
+    text: Que se passe-t-il à la fin d'une location ?
+    pointer: apres_rep
+  'rien':
+    text: Pas du tout, merci ! Bonne journée !
