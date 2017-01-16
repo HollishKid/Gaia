@@ -1,0 +1,24 @@
+tv_bandit6:
+  MobName: bandit
+  World: Gaia
+  X: -7589
+  Y: 90
+  Z: 3069
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 1
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 60
+  CooldownTimer: 0
+  Warmup: 10
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 40
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 1

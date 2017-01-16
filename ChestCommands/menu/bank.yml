@@ -1,0 +1,381 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&6Banque'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 5
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 5
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note harp'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+enpoche:
+  COMMAND: 'console: bq event {player} default.account'
+  NAME: 'Argent en poche'
+  LORE:
+    - '&a{money}'
+    - ' '
+    - '&ocliquez pour afficher'
+    - '&ovotre solde de compte.'
+  ID: gold ingot
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+
+menu-close:
+  NAME: '&6Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+
+choose_deposit:
+  COMMAND: 'console: bq event {player} default.banking_compte_enter'
+  NAME: '&4Déposer...'
+  ID: 386
+  LORE:
+    - '&oPour déposer un montant' 
+    - '&ode votre choix:'
+    - ' '
+    - '&l1- Cliquez ici'
+    - '&l2- Tapez ''depot: [montant]'''
+    - 'dans le tchat.'
+  POSITION-X: 4
+  POSITION-Y: 1
+  
+choixe:
+  NAME: ' '
+  ID: 280
+  LORE:
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+choose_withdraw:
+  COMMAND: 'console: bq event {player} default.banking_poche_enter'
+  NAME: '&aRetirer...'
+  ID: 340
+  LORE:
+    - '&oPour retirer un montant' 
+    - '&ode votre choix:'
+    - ' '
+    - '&l1- Cliquez ici'
+    - '&l2- Tapez ''retrait: [montant]'''
+    - 'dans le tchat.'
+  POSITION-X: 6
+  POSITION-Y: 1 
+ 
+depot:
+  NAME: '&4Dépôts'
+  ID: paper
+  LORE:
+    - 'Sur cette ligne :'
+    - 'montants de dépôt'
+    - 'prédéfinis.'
+    - ' '
+    - '&oCliquez sur une'
+    - '&oicône pour déposer'
+    - '&ole montant indiqué.'
+  POSITION-X: 1
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+retrait:
+  NAME: '&2Retraits (en ligne)'
+  ID: paper
+  LORE:
+    - 'Sur cette ligne :'
+    - 'montants de retrait'
+    - 'prédéfinis.'
+    - ' '
+    - '&oCliquez sur une'
+    - '&oicône pour retirer'
+    - '&ole montant indiqué.'
+  POSITION-X: 1
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+  
+depot1:
+  COMMAND: 'console: bq event {player} default.depot1'
+  NAME: '&4Dépôt &f¤&a1'
+  ID: 152
+  POSITION-X: 3
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+  
+depot5:
+  COMMAND: 'console: bq event {player} default.depot5'
+  NAME: '&4Dépôt &f¤&a5'
+  ID: 152
+  POSITION-X: 4
+  POSITION-Y: 3
+  KEEP-OPEN: true 
+  
+  
+depot50:
+  COMMAND: 'console: bq event {player} default.depot50'
+  NAME: '&4Dépôt &f¤&a50'
+  ID: 152
+  POSITION-X: 5
+  POSITION-Y: 3
+  KEEP-OPEN: true  
+  
+  
+depot500:
+  COMMAND: 'console: bq event {player} default.depot500'
+  NAME: '&4Dépôt &f¤&a500'
+  ID: 152
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true  
+  
+  
+depot5000:
+  COMMAND: 'console: bq event {player} default.depot5000'
+  NAME: '&4Dépôt &f¤&a5000'
+  ID: 152
+  POSITION-X: 7
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+depot10000:
+  COMMAND: 'console: bq event {player} default.depot10000'
+  NAME: '&4Dépôt &f¤&a10000'
+  ID: 152
+  POSITION-X: 8
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+  
+retrait1:
+  COMMAND: 'console: bq event {player} default.retrait1'
+  NAME: '&4Retrait &f¤&a1'
+  ID: 168
+  POSITION-X: 3
+  POSITION-Y: 5
+  KEEP-OPEN: true
+
+  
+retrait5:
+  COMMAND: 'console: bq event {player} default.retrait5'
+  NAME: '&4Retrait &f¤&a5'
+  ID: 168
+  POSITION-X: 4
+  POSITION-Y: 5
+  KEEP-OPEN: true
+
+  
+retrait50:
+  COMMAND: 'console: bq event {player} default.retrait50'
+  NAME: '&4Retrait &f¤&a50'
+  ID: 168
+  POSITION-X: 5
+  POSITION-Y: 5
+  KEEP-OPEN: true
+
+retrait500:
+  COMMAND: 'console: bq event {player} default.retrait500'
+  NAME: '&4Retrait &f¤&a500'
+  ID: 168
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+
+  
+retrait5000:
+  COMMAND: 'console: bq event {player} default.retrait5000'
+  NAME: '&4Retrait &f¤&a5000'
+  ID: 168
+  POSITION-X: 7
+  POSITION-Y: 5
+  KEEP-OPEN: true
+
+  
+retrait10000:
+  COMMAND: 'console: bq event {player} default.retrait10000'
+  NAME: '&4Retrait &f¤&a10000'
+  ID: 168
+  POSITION-X: 8
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+depotall:
+  COMMAND: 'console: bq event {player} default.depotall; open: bank_tempo'
+  NAME: '&4Dépôt Total'
+  ID: 152
+  LORE:
+    - '&oDépose tout sur'
+    - '&ovotre compte.'
+    - '&oEn poche : &a{money}'
+  POSITION-X: 9
+  POSITION-Y: 3
+  
+retraitall:
+  COMMAND: 'console: bq event {player} default.retraitall; open: bank_tempo'
+  NAME: '&4Retrait Total'
+  ID: 168
+  LORE:
+    - '&oRetire tout de'
+    - '&ovotre compte.'
+  POSITION-X: 9
+  POSITION-Y: 5
+
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker72:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker92:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true

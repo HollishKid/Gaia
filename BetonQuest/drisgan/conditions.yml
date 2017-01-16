@@ -1,0 +1,182 @@
+# N'utiliser que des "#" simples en début de commentaire
+# Ne pas laisser de lignes blaches dans les fichiers
+quest_drisgan: tag Crox.ikonq1_start
+obrien: tag obrien
+height: height 72
+succes: tag succes
+echec: tag echec
+echec2: tag echec2
+obrien_step2: tag obrien_step2
+ikonq2_done: tag Crox.ikonq2_done
+#
+#
+### ALDWIN
+#
+#
+ald_inconvers: tag ald_inconvers
+hol_firstgo: tag hol_firstgo
+hol_access: tag hol_access
+hol_timer: tag hol_timer
+hol_done: tag hol_done
+#
+#
+### EKO
+#
+#
+#
+eko_inconvers: tag eko_inconvers
+eko_q1start: tag eko_q1start
+eko_q1done: tag eko_q1done
+money_1500: money 1500
+eko_lettre: item lettre_cachetee:1
+eko_q2start: tag eko_q2start
+eko_q2done: tag eko_q2done
+eko_q3start: tag eko_q3start
+eko_q3done: tag eko_q3done
+#
+# Tempo Redirect
+#
+eko_tempo: tag eko_tempo
+#
+#
+#
+###   LASSWELL
+#
+#
+lascave_occupied: party 1000 in_lasswellcave count:1
+in_lasswellcave: region lasswell_cave
+#
+las_inconvers: tag las_inconvers
+las_gotest: tag las_gotest
+las_testpassed: tag las_testpassed
+#
+las_score1: point las_score 1
+las_score2: point las_score 2
+las_score3: point las_score 3
+las_score4: point las_score 4
+las_score5: point las_score 5
+las_score6: point las_score 6
+las_score7: point las_score 7
+las_score8: point las_score 8
+las_score9: point las_score 9
+las_score10: point las_score 10
+#
+las_q1start: tag las_q1start
+#
+#
+#
+night: time 5-19
+drisgan: tag drisgan
+random20: random 20-100
+random33: random 33-100
+random40: random 40-100
+random60: random 60-100
+random80: random 80-100
+random100: random 1-1
+shi_start: tag shi_start
+shi_roundstart: tag shi_roundstart
+shi_pt2: point shi_score 3
+shi_pt1: point shi_score 2
+shi_pt0: point shi_score 1
+#
+#
+#
+in_drisganbalcony: region drisgan_balcony
+balcony_occupied: and balcony_occupied1,drisgan_infilt
+balcony_occupied1: party 1000 in_drisganbalcony count:1
+#
+indrisgan: region drisgan
+drisgan_infilt: tag drisgan_infilt
+indrisgan_infilt: and drisgan_infilt,indrisgan
+#
+kal_q2start: tag Zedd.kal_q2start
+#
+#
+#
+#
+######################################################
+######################################################
+#
+### HOLE
+#
+######################################################
+######################################################
+#
+#
+#
+### SECU CHECK
+#
+hol_r1: region hol_erek_salleb1
+hol_c1: party 1000 hol_r1 count:1
+#
+hol_r2: region hol_salleb2
+hol_c2: party 1000 hol_r2 count:1
+#
+hol_r3: region hol_salleb3
+hol_c3: party 1000 hol_r3 count:1
+#
+hol_r4: region hol_erek_entree
+hol_c4: party 1000 hol_r4 count:1
+#
+hol_r5: region hol_erek_aileg1
+hol_c5: party 1000 hol_r5 count:1
+#
+hol_r6: region hol_erek_aileg01
+hol_c6: party 1000 hol_r6 count:1
+#
+hol_r7: region hol_erek_aileg2
+hol_c7: party 1000 hol_r7 count:1
+#
+hol_r8: region hol_erek_aileg3
+hol_c8: party 1000 hol_r8 count:1
+#
+hol_r9: region hol_erek_aileg4
+hol_c9: party 1000 hol_r9 count:1
+#
+hol_r10: region hol_erek_aileg03
+hol_c10: party 1000 hol_r10 count:1
+#
+hol_r11: region hol_erek_aileg5
+hol_c11: party 1000 hol_r11 count:1
+#
+hol_r12: region hol_erek_ailed01
+hol_c12: party 1000 hol_r12 count:1
+#
+hol_r13: region hol_erek_ailed1
+hol_c13: party 1000 hol_r13 count:1
+#
+hol_r14: region hol_erek_d2
+hol_c14: party 1000 hol_r14 count:1
+#
+hol_r15: region hol_erek_d5
+hol_c15: party 1000 hol_r15 count:1
+#
+hol_r16: region hol_erek_d6
+hol_c16: party 1000 hol_r16 count:1
+#
+hol_r17: region hol_erek_d4
+hol_c17: party 1000 hol_r17 count:1
+#
+hol_r18: region hol_erek_d3
+hol_c18: party 1000 hol_r18 count:1
+#
+#
+hol_checkall: or hol_c1,hol_c2,hol_c3,hol_c4,hol_c5,hol_c6,hol_c7,hol_c8,hol_c9,hol_c10,hol_c11,hol_c12,hol_c13,hol_c14,hol_c15,hol_c16,hol_c17,hol_c18
+hol_checkin: or hol_r1,hol_r2,hol_r3,hol_r4,hol_r5,hol_r6,hol_r7,hol_r8,hol_r9,hol_r10,hol_r11,hol_r12,hol_r13,hol_r14,hol_r15,hol_r16,hol_r17,hol_r18 
+#
+#
+hol_shrekdead: tag hol_shrekdead
+hol_karadead: tag hol_karadead
+hol_erekdead: tag hol_erekdead
+#
+hol_residus_inhand: hand residus_de_poudre
+hol_residuscheck: item residus_de_poudre:5
+hol_residuscheck1: item residus_de_poudre:1
+hol_tnt_inhand: hand erek_tnt
+hol_redblock: and hol_redblock1,hol_insalleb3
+hol_redblock1: testforblock -7435;51;3274;Gaia redstone_block
+hol_insalleb3: region hol_salleb3
+#
+#
+#
+#

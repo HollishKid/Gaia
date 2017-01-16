@@ -1,0 +1,25 @@
+quester: Zedd
+first: hello
+stop: 'false'
+#Options du NPC
+NPC_options:
+  hello:
+    text: Bonjour &2%player%&a&o, je suis &2Zedd&a&o, Co-Fondateur de Gaïa.
+    pointer: role,citation,sens
+  role_rep: 
+    text: Je n'ai pas encore répondu à cette question.
+  citation_rep:
+    text: Je n'ai pas encore répondu à cette question.
+  sens_rep:
+    text: '42'
+#Options du joueur
+player_options:
+  role:
+    text: Quel est ton rôle sur Gaïa ?
+    pointer: role_rep
+  citation:
+    text: Quelle est ta citation préférée ?
+    pointer: citation_rep
+  sens:
+    text: Quel est le Sens de la Vie ?
+    pointer: sens_rep

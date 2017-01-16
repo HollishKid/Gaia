@@ -1,0 +1,24 @@
+tv_moinevoleur3:
+  MobName: moinevoleur
+  World: Gaia
+  X: -7612
+  Y: 83
+  Z: 3065
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 1
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 60
+  CooldownTimer: 0
+  Warmup: 10
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 40
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 1

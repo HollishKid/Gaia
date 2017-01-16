@@ -1,0 +1,115 @@
+bandit:
+  Mobtype: baby_zombie
+  Display: '&4Bandit'
+  Health: 30
+  Damage: 2
+  Equipment:
+  - mc_wooden_sword:0
+  Disguise:
+    Type: player
+    Player: "&4Bandit"
+    Skin: thug
+  Modules:
+    ThreatTable: false
+  Drops:
+  - banditDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 RandomStroll
+  - 3 OpenDoors
+  - 4 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Options:
+    FollowRange: 20
+    AlwaysShowName: false
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+quest_bandit:
+  Mobtype: baby_zombie
+  Display: '&4Bandit'
+  Health: 20
+  Damage: 2
+  Equipment:
+  - mc_wooden_sword:0
+  Disguise:
+    Type: player
+    Player: "&4Bandit"
+    Skin: thug
+  Modules:
+    ThreatTable: false
+  Drops:
+  - banditDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 RandomStroll
+  - 2 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Options:
+    FollowRange: 20
+    AlwaysShowName: false
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+lieutenant:
+  Type: zombie
+  Display: '&cLieutenant'
+  Health: 30
+  Damage: 3
+  Faction: bandit
+  Disguise:
+   Type: player
+   Player: '&cLieutenant'
+   Skin: HellCatcher
+  Modules:
+    ThreatTable: false
+  Equipment:
+  - mc_iron_axe:0 
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  - 2 players
+  Options:
+    FollowRange: 20
+    AlwaysShowName: true
+    MovementSpeed: 0.24
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+moinevoleur:
+  Mobtype: baby_zombie
+  Display: '&6Moine voleur'
+  Health: 40
+  Damage: 2
+  Equipment:
+  - mc_stick:0
+  Disguise:
+    Type: player
+    Player: "&6Moine voleur"
+    Skin: drhuehue808
+  Drops:
+  - moinevoleurDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 RandomStroll
+  - 3 OpenDoors
+  - 4 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  Options:
+    FollowRange: 30
+    AlwaysShowName: false
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    PreventRandomEquipment: true

@@ -1,0 +1,24 @@
+mine2:
+  MobName: miners
+  World: Gaia
+  X: 323
+  Y: 43
+  Z: 4405
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 4
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 7
+  CooldownTimer: 0
+  Warmup: 7
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 20
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

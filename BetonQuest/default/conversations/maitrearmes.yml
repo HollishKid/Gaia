@@ -1,0 +1,69 @@
+quester: Maître d'Armes
+first: unknown,welcome
+stop: 'false'
+#########
+#  NPC  #
+#########
+NPC_options:
+  unknown:
+    text: Tu n'es pas un citoyen toi, vas voir l'&2Intendant &a&oavant de t'entraîner au combat ici !
+    condition: '!intendant_done'
+  welcome:
+    text: Bonjour jeune guerrier !
+    condition: intendant_done
+    pointer: parfaire,bonjour
+  parfaire_rep:
+    text: Tu es au bon endroit ! Quel entraînement veux-tu suivre ?
+    pointer: arc,pve1,pve2,pve3
+  arc_rep:
+    text: Très bien ! Ton entraînement va commencer !
+    condition: '!arc_occupe'
+    events: arc_master,arc1_meca1
+  arc_rep_occupied:
+    text: Quelqu'un utilise déjà le parcours ; reviens dans deux minutes !
+    condition: arc_occupe
+  pve_rep1:
+    text: Très bien ! Ton entraînement commence dans 5 secondes.
+    condition: '!pvp_occupe,!training_easy_timer_tag'
+    events: pvp_training_master1
+  pve_rep2:
+    text: Très bien ! Ton entraînement commence dans 5 secondes.
+    condition: '!pvp_occupe,!training_medium_timer_tag'
+    events: pvp_training_master2
+  pve_rep3:
+    text: Très bien ! Ton entraînement commence dans 5 secondes.
+    condition: '!pvp_occupe,!training_hard_timer_tag'
+    events: pvp_training_master3
+  pve_rep12:
+    text: Tu dois attendre &2%objective.training_easy_timer.left% &a&oavant de refaire cet entraînement.
+    condition: '!pvp_occupe,training_easy_timer_tag'
+  pve_rep22:
+    text: Tu dois attendre &2%objective.training_medium_timer.left% &a&oavant de refaire cet entraînement.
+    condition: '!pvp_occupe,training_medium_timer_tag'
+  pve_rep32:
+    text: Tu dois attendre &2%objective.training_hard_timer.left% &a&oavant de refaire cet entraînement.
+    condition: '!pvp_occupe,training_hard_timer_tag'
+  pve_rep_occupied:
+    text: L'entraîneur est occupé avec quelqu'un d'autre ; reviens dans deux minutes !
+    condition: 'pvp_occupe'
+##########
+# JOUEUR #
+##########
+player_options:
+  bonjour:
+    text: Bonjour.
+  parfaire:
+    text: Je veux m'entraîner au combat !
+    pointer: parfaire_rep
+  arc: 
+    text: En tir à l'arc !
+    pointer: arc_rep,arc_rep_occupied
+  pve1:
+    text: En combat rapproché ! &d&o(Facile, 5 minutes)
+    pointer: pve_rep1,pve_rep12,pve_rep_occupied
+  pve2:
+    text: En combat rapproché ! &d&o(Intermédiaire, 5 minutes)
+    pointer: pve_rep2,pve_rep22,pve_rep_occupied
+  pve3:
+    text: En combat rapproché ! &d&o(Difficile, 5 minutes)
+    pointer: pve_rep3,pve_rep32,pve_rep_occupied

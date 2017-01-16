@@ -1,0 +1,6 @@
+command /testingagain:
+	trigger:
+		if player meets betonquest condition "empty_inventory":
+			message "vous avez du stuff !"
+		else:
+			message "JEUX !!"

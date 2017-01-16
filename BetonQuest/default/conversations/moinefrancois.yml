@@ -1,0 +1,109 @@
+quester: Moine François
+first: unknown,welcome
+stop: 'false'
+#                #
+
+#  Options NPC   #
+
+#                #
+NPC_options:
+  unknown:
+    text: Vous êtes inconnu dans cette ville. Parlez à l'&2Intendant &a&o!
+    condition: '!intendant_done'
+  welcome:
+    text: Que Gaïa vous guide, &2%player% &a&o!
+    condition: intendant_done
+    pointer: apprenti,burriergrosos,sanctuary,spirituality,chargeagain,charge,merci
+  sanctuary_rep:
+    text: Vous êtes ici dans un &dSpiritualium&a&o, un petit recoin de spiritualité. Le grand &dSanctuaire &a&oest au Nord-Ouest de le Ville d'Athelas.
+  spirituality_rep:
+    text: Que voulez vous savoir ?
+    pointer: whycharge,whattodo,spirituality_win
+  whycharge_rep:
+    text: Une fois un os chargé, vous pouvez l'enterrer dans un bloc d'herbe et ainsi augmenter vos points de Spiritualité. \nAttention tout de même, si vous trouvez ou obtenez des Os Chargés autrement que par un moine, vous devrez parler à l'un de nous pour pouvoir enterrer ces Os Chargés !
+  whattodo_rep:
+    text: Les points de Spiritualité permettent d'augmenter vos compétences grâce à la Magie. Parlez à l'&2Apprenti &a&oau &dSanctuaire &a&opour en savoir plus !
+  chargeagain_rep:
+    text: Vous pouvez désormer enterrer des os chargé.
+    events: default.spirituality_activator
+  charge_no_have:
+    text: Vous n'avez pas d'os non chargé sur vous...
+    condition: '!os_have1'
+  charge_have:
+    text: Biensur ! Combien voulez vous que j'en charge ?
+    condition: os_have1
+    pointer: c1,ctous
+  c1_rep:
+    text: Le voilà !
+    event: os_charge1,default.spirituality_activator
+  ctous_rep:
+    text: Les voilà !
+    event: os_chargeall,default.spirituality_activator
+#
+  apprenti_rep:
+    text: Ah je vois... \nIntéressant ! \nVous devriez essayer d'enterrer cet os dans un bloc de d'herbe, comme vous pouvez déjà le faire avec un Os Chargé. \nUne fois que vous aurez fait ça, revenez me voir pour me dire ce que ça donne !
+    events: hollish.burry_gros_os
+  burriergrosos_rep:
+    text: Je ne suis pas étonné ! Vous devez avoir gagné beaucoup de points en Spiritualité ! \nPensez à consulter l'&2Apprenti &a&oau &dSanctuaire &a&opour échanger ces points contre de l'expérience dans vos Compétences !
+    events: hollish.varkopack_done
+#
+#
+#
+  spirituality_win_rep:
+    text: Je connais un rituel qui vous permet de gagner plus de Spiritualité. Il vous suffit de vous accroupir dans un Spiritualium pendant 10 secondes. \nAinsi vous gagnerez deux fois plus de Spiritualité pendant 30 minutes lorsque vous enterez un Os Chargé !
+#                #
+
+# Options Joueur #
+
+#                #
+player_options:
+  merci:
+    text: Merci !
+  sanctuary:
+    text: Je cherche le Sanctuaire...
+    pointer: sanctuary_rep
+#
+#
+#
+  spirituality:
+    text: Je voudrais en savoir un peu plus sur la spiritualité.
+    pointer: spirituality_rep
+  whycharge:
+    text: Pourquoi charger des os ?
+    pointer: whycharge_rep
+  whattodo:
+    text: Que faire avec mes points de Spiritualité ?
+    pointer : whattodo_rep
+  chargeagain:
+    text: Je veux pouvoir enterrer des os chargés !
+    pointer: chargeagain_rep
+  charge:
+    text: Pouvez vous charger ces os ?
+    pointer: charge_have,charge_no_have
+#
+#
+#
+  c1:
+    text: Un s'il vous plaît !
+    pointer: c1_rep
+  ctous:
+    text: Tous s'il vous plaît !
+    condition: os_have2
+    pointer: ctous_rep
+#
+#
+#
+  apprenti:
+    text: L'Apprenti du Sanctuaire m'a dit de vous apporter ce Gros Os !
+    condition: francois_apprenti,!francois_burried_gros_os
+    pointer: apprenti_rep
+  burriergrosos:
+    text: J'ai enterré le Gros Os; une forte Spiritualité s'est emparée de moi !
+    condition: francois_burried_gros_os
+    pointer: burriergrosos_rep
+#
+#
+#
+  spirituality_win:
+    text: Je voudrais gagner plus de Spiritualité !
+    pointer: spirituality_win_rep

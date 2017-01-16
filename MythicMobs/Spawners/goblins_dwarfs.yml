@@ -1,0 +1,24 @@
+goblins_dwarfs:
+  MobName: zombielvlnorth
+  World: Gaia
+  X: -6605
+  Y: 79
+  Z: 2464
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 7
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 7
+  CooldownTimer: 0
+  Warmup: 60
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 20
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

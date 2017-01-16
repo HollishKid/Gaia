@@ -1,0 +1,45 @@
+#################################################
+#
+#
+########   BLACK HOLE EREK
+#
+#
+################################################
+ShrekHead:
+  Id: 397
+  Data: 3
+  Options:
+    Player: Shrek
+ShrekChestplate:
+  Id: leather_chestplate
+  Options:
+    Color: 230,230,150
+ShrekLeggings:
+  Id: leather_leggings
+  Options:
+    Color: 100,80,10
+ShrekBoots:
+  Id: leather_boots
+  Options:
+    Color: 69,69,69
+residus_de_poudre:
+  Id: 289
+  Display: '&2Résidus de poudre'
+  Lore:
+  - ''
+  - '&6 Utilisez 5 résidus pour'
+  - '&6 créer une charge explosive!'
+erek_tnt:
+  Id: 46
+  Display: '&2Charge explosive'
+  Lore:
+  - ''
+  - '&6 Placez la sous le balcon'
+  - '&6 pour atteindre Erek!'
+lettre_cachetee:
+  Id: 339
+  Display: '&2Lettre cachetée'
+  Lore:
+  - ''
+  - '&6Une paire de dagues'
+  - '&6en ornent le cachet.'

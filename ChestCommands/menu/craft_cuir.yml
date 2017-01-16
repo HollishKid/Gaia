@@ -1,0 +1,484 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dCraft de Cuir'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+cuir1:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+cuir2:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+cuir3:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 3
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+cuir4:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+cuir5:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+emerald1:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+cuir_casque:
+  NAME: '&aCasque Cuir Tanné'
+  LORE:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  ID: 298
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+cuir12:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 6
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+cuir22:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 8
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+cuir32:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+cuir42:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+cuir52:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+cuir62:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+cuir72:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 7
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+cuir82:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 8
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+emerald12:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 7
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+cuir_plastron:
+  NAME: '&aPlastron Cuir Tanné'
+  LORE:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  ID: 299
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+cuir13:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 1
+  POSITION-Y: 4
+  KEEP-OPEN: true
+
+cuir23:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+cuir33:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+cuir43:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 1
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+cuir53:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 3
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+cuir63:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 1
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+cuir73:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 3
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+emerald13:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+cuir_jambes:
+  NAME: '&aJambières Cuir Tanné'
+  LORE:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  ID: 300
+  POSITION-X: 4
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+cuir14:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+cuir24:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 8
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+cuir34:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 6
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+cuir44:
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&d&oCe cuir renforcé'
+  - '&d&oest bien plus robuste !'
+  ID: 334
+  POSITION-X: 8
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+emerald14:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 7
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+cuir_pieds:
+  NAME: '&aBottes Cuir Tanné'
+  LORE:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  ID: 301
+  POSITION-X: 9
+  POSITION-Y: 5
+  KEEP-OPEN: true
+
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '58'
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 7
+  KEEP-OPEN: true
+ 
+blocker72:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 9
+  KEEP-OPEN: true

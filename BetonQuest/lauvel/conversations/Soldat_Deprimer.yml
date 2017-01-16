@@ -1,0 +1,67 @@
+quester: Soldat Deprimer
+first: aie,retour,millemerci,vousnepouvez
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  millemerci:
+    text: Je vous remercie de votre aide !
+    conditions: 'Loyer_Done'
+  vousnepouvez:
+    text: Ah, que faire ? Que faire ? Je ne sais plus quoi faire!
+  aie:
+    text: Aie, je suis bien embêter, comment je vais faire ?!
+    conditions: 'Besoin_Aide,!Loyer_Done,!Cruel_Tag,!Bonter_Tag'
+    pointer: bonjour
+  loyer:
+    text: 'Ah, bonjour ... Tu est nouveau ? Le Chef d''Escadron ma demander d''allé chercher le loyer d''une femme qui veut pas payer. \nMais le prix à était doubler par le Roi est elle veut pas payer ! Je ne sais plus quoi faire, je risque d''être virer !'
+    pointer: laissemoifaire
+  ou:
+    text: 'Elle s''occupe de l''auberge à côtés du port ! Elle se nomme Claire.'  
+    events: 'Quetes_Loyer'
+  retour:
+    text: Vous revoilà !
+    conditions: 'Loyer_Payer,!Loyer_Done'
+    pointer: voila
+  maiscomment:
+    text: Mais comment avez vous fais ?!
+    pointer: bonter,cruel
+  jevois:
+    text: Je vois ! je vais pas te forcer mais merci !
+    events: 'Defaut_Loyer'
+  jevois2:
+    text: Je vois ! Mais je suis pas douer pour mentir !
+    events: 'Defaut_Loyer'
+    pointer: qui
+  ah:
+    text: '...*bouche bée*'
+    events: 'Defaut_Loyer'
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  bonjour:
+    text: 'Qu''est-ce qui ce passe ? Pourquoi est tu si hésitant et déprimer ?'
+    pointer: loyer
+  laissemoifaire:
+    text: Laisse moi mon occupé, où habite-t-elle ?
+    pointer: ou
+  voila:
+    text: Voilà le loyer comme promis !
+    pointer: maiscomment
+  bonter:
+    text: C'est un secret ! 
+    conditions: 'Bonter_Tag'
+    pointer: jevois
+  cruel:
+    text: Facile, fallais juste la menacer !
+    conditions: 'Cruel_Tag'
+    pointer: jevois2
+  qui:
+    text: Qui à dis que je menter ?
+    pointer: ah

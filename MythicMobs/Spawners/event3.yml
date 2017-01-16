@@ -1,0 +1,24 @@
+event3:
+  MobName: garderoyal
+  World: Gaia
+  X: -7051
+  Y: 65
+  Z: 3207
+  Radius: 3
+  UseTimer: true
+  MaxMobs: 3
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 25
+  CooldownTimer: 0
+  Warmup: 25
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 22
+  HealOnLeash: false
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 2

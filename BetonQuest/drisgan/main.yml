@@ -1,0 +1,18 @@
+npcs:
+  '138': gardealeatoire
+  '140': garde1
+  '141': garde1
+  '142': garde2
+  '143': garde2
+  '144': milicien
+  '145': gardealeatoire2
+  '146': gardealeatoire3
+  '147': gardealeatoire4
+  '151': obrien
+  '206': Eko
+  '292': shifoumi
+  '340': lasswell
+  '444': aldwin
+  '445': lasswell2
+cancel: {}
+variables: {}

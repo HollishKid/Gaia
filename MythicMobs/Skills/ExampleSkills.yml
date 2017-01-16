@@ -1,0 +1,90 @@
+# 
+# These example files show you some VERY basic meta skills.
+# You can copy and expand them however you'd like.
+SmashAttack:
+  Cooldown: 8
+  Conditions:
+  - targetwithin 25
+  Skills:
+  - message{cooldown=30;m="<mob.name><&co> Hahahah! I will crush you, fool!"} @PlayersInRadius{r=40}
+  - teleport @target
+  - effect:sound{s=mob.endermen.portal;volume=1.0;pitch=0.5}
+  - delay 10
+  - damage{amount=5;ignorearmor=true} @PlayersInRadius{r=5}
+  - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
+  - effect:explosion @Self
+SummonSkeletons:
+  Cooldown: 15
+  Skills:
+  - message{m="<mob.name><&co> Arise, my minions!"} @PlayersInRadius{r=40}
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+AngrySludgePoison:
+  Cooldown: 10
+  Skills:
+  - potion{type=POISON;lvl=2;duration=100} @PlayersInRadius{r=15}
+  - effect:particles{p=happyVillager;amount=1000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+IceBolt:
+  Skills:
+  - projectile{onTick=IceBolt-Tick;onHit=IceBolt-Hit;v=8;i=1;hR=1;vR=1}
+IceBolt-Tick:
+  Skills:
+  - effect:particles{p=snowballpoof;amount=20;speed=0;hR=0.2;vR=0.2} @origin
+IceBolt-Hit:
+  Skills:
+  - damage{a=3}
+  - potion{type=SLOW;duration=100;lvl=2}
+  - message{cooldown=50;m="&6&oRalenti!"} @target
+FireBolt:
+  Skills:
+  - projectile{onTick=FireBolt-Tick;onHit=FireBolt-Hit;v=10;i=1;hR=1;vR=1}
+FireBolt-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=20;speed=0;hR=0.2;vR=0.2} @origin
+FireBolt-Hit:
+  Skills:
+  - damage{a=6}
+weakness1:
+  Skills:
+  - potion{type=WEAKNESS;d=200;lvl=2}
+  - message{cooldown=50;m="&6&oFaiblesse!"} @target
+tpkick:
+  Skills:
+  - teleport{sh=2;vh=1} @target
+  - message{cooldown=1;m="&6&oDéplacement instantané!"} @target
+  - potion{type=SLOW;duration=100;lvl=2}
+  - damage{amount=2}
+  - effect:boss particles cloud:1:1:25:0.1:-2 >0 1
+firekick:
+  Conditions:
+  - targetwithin 3
+  Skills:
+  - message{cooldown=1;m="&6&oPoing enflammé!!"} @target
+  - effect:explosion @target
+  - damage{amount=5} @target
+  - throw{v=9;vy=2} @target
+  - ignite{ticks=50} @target
+tpheal:
+  Skills:
+  - message{cooldown=1;m="&6&oTakeo se soigne!"} @target
+  - heal{a=25} self
+  - effect:particles{particle=heart;amount=30;hS=1;vS=1;speed=5} @self
+takeotaunt:
+  Skills:
+  - randomskill {skills=tt1,tt2,tt3}
+tt1:
+  Skills:
+  - message{cooldown=1;m="&4Takeo:&7 Je vais t'étriper!"} @target
+tt2:
+  Skills:
+  - message{cooldown=1;m="&4Takeo:&7 Tu fais pas le poids!"} @target
+tt3:
+  Skills:
+  - message{cooldown=1;m="&4Takeo:&7 Tu ne peux pas m'échapper!"} @target
+orion_stun:
+  Skills:
+  - potion{type=SLOW;duration=100;lvl=10}

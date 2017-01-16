@@ -1,0 +1,719 @@
+#
+#
+# J'ai modifié toutes les commandes "sentry" en leur équivalent "sentinel"
+#   Il me semble que obrien_fold2 n'était pas complet, j'ai ajouté les events manquants 
+#   (Il manque le 1, aucun ID de PNJ n'était indiqué ... Y a-t-il 11 PNJ de concerné?)
+#   Obligation de rajouter un delay progressif puisque les PNJ sont sélectionnées 1 à 1 
+#   par la console. Temps total de l'exécution du folder = 12 secondes
+#                    Checker si cela ne pose pas de pb IG
+#
+#                                                                                ~H
+folder_infilt: folder obj_loc1,drisgan_infilt delay:1
+drisgan_infilt: tag add drisgan_infilt
+drisgan_infiltremove: tag remove drisgan_infilt
+obj_loc1: objective start obj_loc1
+obrien_fold2: folder tag_obrien2,targetupdate2,targetupdate3,targetupdate4,targetupdate5,targetupdate6,targetupdate7,targetupdate8,targetupdate9,targetupdate10,targetupdate11,targetupdate12,acces_drisgan delay:1
+tag_obrien2: tag add obrien2
+acces_drisgan: tag add drisgan
+targetupdate2: folder targetupdate2_exe,targetupdate2_fold delay:1
+targetupdate2_exe: command npc sel 144
+targetupdate2_fold: folder targetupdate2_exe2 delay:1
+targetupdate2_exe2: command sentinel addignore player:%player%
+targetupdate3: folder targetupdate3_exe,targetupdate3_fold delay:2
+targetupdate3_exe: command npc sel 140
+targetupdate3_fold: folder targetupdate3_exe2 delay:1
+targetupdate3_exe2: command sentinel addignore player:%player%
+targetupdate4: folder targetupdate4_exe,targetupdate4_fold delay:3
+targetupdate4_exe: command npc sel 141
+targetupdate4_fold: folder targetupdate4_exe2 delay:1
+targetupdate4_exe2: command sentinel addignore player:%player%
+targetupdate5: folder targetupdate5_exe,targetupdate5_fold delay:4
+targetupdate5_exe: command npc sel 138
+targetupdate5_fold: folder targetupdate5_exe2 delay:1
+targetupdate5_exe2: command sentinel addignore player:%player%
+targetupdate6: folder targetupdate6_exe,targetupdate6_fold delay:5
+targetupdate6_exe: command npc sel 146
+targetupdate6_fold: folder targetupdate6_exe2 delay:1
+targetupdate6_exe2: command sentinel addignore player:%player%
+targetupdate7: folder targetupdate7_exe,targetupdate7_fold delay:7
+targetupdate7_exe: command npc sel 145
+targetupdate7_fold: folder targetupdate7_exe2 delay:1
+targetupdate7_exe2: command sentinel addignore player:%player%
+targetupdate8: folder targetupdate8_exe,targetupdate8_fold delay:7
+targetupdate8_exe: command npc sel 168
+targetupdate8_fold: folder targetupdate8_exe2 delay:1
+targetupdate8_exe2: command sentinel addignore player:%player%
+targetupdate9: folder targetupdate9_exe,targetupdate9_fold delay:8
+targetupdate9_exe: command npc sel 150
+targetupdate9_fold: folder targetupdate9_exe2 delay:1
+targetupdate9_exe2: command sentinel addignore player:%player%
+targetupdate10: folder targetupdate10_exe,targetupdate10_fold delay:9
+targetupdate10_exe: command npc sel 147
+targetupdate10_fold: folder targetupdate10_exe2 delay:1
+targetupdate10_exe2: command sentinel addignore player:%player%
+targetupdate11: folder targetupdate11_exe,targetupdate11_fold delay:10
+targetupdate11_exe: command npc sel 148
+targetupdate11_fold: folder targetupdate11_exe2 delay:1
+targetupdate11_exe2: command sentinel addignore player:%player%
+targetupdate12: folder targetupdate12_exe,targetupdate12_fold delay:11
+targetupdate12_exe: command npc sel 167
+targetupdate12_fold: folder targetupdate12_exe2 delay:1
+targetupdate12_exe2: command sentinel addignore player:%player%
+#
+# Code remplacé
+#  Deprecated depuis update à Sentinel
+#
+#targetupdate1: command sentry 140 ignore add player:%player%
+#targetupdate2: command sentry 141 ignore add player:%player%
+#targetupdate3: command sentry 138 ignore add player:%player%
+#targetupdate4: command sentry 146 ignore add player:%player%
+#targetupdate5: command sentry 145 ignore add player:%player%
+#targetupdate8: command sentry 168 ignore add player:%player%
+#targetupdate9: command sentry 150 ignore add player:%player%
+#targetupdate10: command sentry 147 ignore add player:%player%
+#targetupdate11: command sentry 148 ignore add player:%player%
+#targetupdate12: command sentry 167 ignore add player:%player%
+#
+#
+##########################
+#                        #
+###      EKO           ###
+#                        #
+##########################
+#
+## Journal
+#
+eko_j1: journal add eko_j1
+eko_j1_del: journal del eko_j1
+eko_j2: journal add eko_j2
+eko_j2_del: journal del eko_j2
+eko_j3: journal add eko_j3
+eko_j3_del: journal del eko_j3
+eko_j4: journal add eko_j4
+eko_j4_del: journal del eko_j4
+eko_j5: journal add eko_j5
+eko_j5_del: journal del eko_j5
+#
+#
+eko_inconvers: tag add eko_inconvers
+eko_conversdone: tag remove eko_inconvers
+#
+### Phase 1
+#
+eko_conv1: folder eko_mess1,eko_fold1 delay:8
+eko_mess1: message &2Eko &f:&a&o Bon, il faut bien avouer que nos affaires sont parfois à la limite du légal. Voire illégales.
+eko_fold1: folder eko_mess2,eko_fold2 delay:7
+eko_mess2: message &2Eko &f:&a&o Mais nos membres les plus doués en retirent des richesses que tu n'aurai certainement jamais vu de ta vie !
+eko_fold2: folder eko_mess3,eko_fold3 delay:8
+eko_mess3: message &2Eko &f:&a&o Si ce genre de boulot t'intéresse, alors passe derrière le comptoir et actionne la torche dans la cave...
+eko_fold3: folder eko_clean1,eko_q1start,eko_click,eko_conversdone,eko_j1 delay:1
+eko_clean1: tag remove global.kal_q2start
+eko_q1start: tag add eko_q1start
+eko_click_delay: folder eko_click delay:2
+eko_click: objective start eko_click
+eko_opentrap: setblock redstone_block -7160;67;3530;Gaia
+eko_opentrap_delay: folder eko_closetrap delay:6
+eko_closetrap: setblock AIR -7160;67;3530;Gaia
+#
+eko_q1end: tag remove eko_q1start
+eko_q1done: tag add eko_q1done
+eko_clickdel: objective delete eko_click
+#
+### Phase 2 
+#
+eko_q2startfolder: folder eko_mess4,eko_q2startfolder2,eko_q1end,eko_q1done,las_objarrowdel,eko_clickdel delay:5
+eko_mess4: message &2Eko &f:&a&o J'ai entendu quelques rumeurs dernièrement... Il semblerait qu'&4Erek&a&o ait été vu au alentours du &dTrou Noir&a&o, un peu plus au Nord de &dDrisgan&a&o.
+eko_q2startfolder2: folder eko_mess5,eko_q2startfolder3 delay:8
+eko_mess5: message &2Eko &f:&a&o Cet endroit est un ramassis de pouilleux et d'ordures en tous genres, seulement, certains d'entre eux sont assez puissants... Je commence à comprendre pourquoi le chef préfère t'envoyer plutôt que l'un d'entre nous...
+eko_q2startfolder3: folder eko_mess6,eko_q2startfolder4 delay:8
+eko_mess6: message &2Eko &f:&a&o Quoiqu'il en soit, tu dois passer par la faille qui se situe à l'Est du Trou Noir pour pouvoir y accèder. Une fois sur place, élimine quelques une de ces ordures et fouille leurs cadavres!
+eko_q2startfolder4: folder eko_mess7,eko_q2start,eko_q2obj,eko_j2,eko_conversdone,eko_makaupdate,eko_givechain,eko_givechainmess delay:8
+eko_mess7: 'message &2Eko &f: &a&oReviens lorsque tu auras trouvé des informations intéressantes !'
+eko_q2start: tag add eko_q2start
+eko_q2end: tag remove eko_q2start
+eko_q2done: tag add eko_q2done
+eko_q2obj: objective start eko_q2obj
+eko_givechain: command mm i give %player% chainfeet
+eko_givechainmess: message &6&oVous recevez des &aBottines en fer&6&o.
+#
+eko_makaupdate: folder Zedd.maka_j3_del,Zedd.maka_j4,Zedd.makarow_access_exe,eko_makamess delay:6
+eko_makamess: message &6&oVous avez réunis assez d'informations, il est temps de faire un rapport au maître Makarov.
+#
+eko_q2droplettre: folder eko_mess8,eko_givelettre,eko_j2_del,eko_j3
+eko_mess8: message &6&oVous récupérez une lettre cachetée.
+eko_givelettre: give lettre_cachetee:1
+#
+# replaced eko_q3startfolder with tempo_redirect
+eko_q2donefolder: folder eko_takelettre,eko_q2done,eko_q2end,eko_q2reward,tempo_redirect delay:2
+eko_q2reward: folder eko_givechainlegs,eko_givechainlegsmess
+eko_givechainlegs: command mm i give %player% chainlegs
+eko_givechainlegsmess: message &6&oVous recevez des &aJambières annelées&6&o.
+eko_takelettre: take lettre_cachetee:1
+#
+#
+tempo_redirect: folder eko_tempo_tag,maka_tempo_redirect_journal,Zedd.makarow_access_exe
+eko_tempo_tag: tag add eko_tempo
+maka_tempo_redirect_journal: journal add maka_tempo_redirect_journal
+tempo_remover: folder eko_tempo_tag_del,maka_tempo_redirect_journal_del
+eko_tempo_tag_del: tag remove eko_tempo
+maka_tempo_redirect_journal_del: journal del maka_tempo_redirect_journal
+#
+#
+### Phase 3
+#
+eko_q3startfolder: folder eko_mess9,eko_q3startfolder2 delay:3
+eko_mess9: 'message &2Eko &f: &a&oEh bien il semblerait que j''ai vu juste ! &4Erek&a&o se terre dans ces souterrains !'
+eko_q3startfolder2: folder eko_mess10,eko_q3startfolder3 delay:5
+eko_mess10: 'message &2Eko &f: &a&oJe vais envoyer un de mes hommes pour faire des repérages, retrouve le là-bas, il s''appelle &2Aldwin&a&o.'
+eko_q3startfolder3: folder eko_j3_del,eko_j4,eko_q3start,eko_conversdone delay:2
+eko_q3start: tag add eko_q3start
+eko_q3end: tag remove eko_q3start
+eko_q3done: tag add eko_q3done
+#
+##########################
+#                        #
+###      LASSWELL      ###
+#                        #
+##########################
+#
+#
+las_j1: journal add las_j1
+las_j1del: journal del las_j1
+las_j2: journal add las_j2
+las_j2_del: journal del las_j2
+#
+#
+las_entrycheck: if lascave_occupied las_entrydenied else nothing
+las_entrydenied: folder las_tele,las_mess0
+las_tele: teleport -7160;63;3540;Gaia
+las_mess0: message &dVeuillez attendre votre tour !
+#
+las_inconvers: tag add las_inconvers
+las_conversdone: tag remove las_inconvers
+las_fold1: folder las_mess1,las_fold2 delay:8
+las_mess1: message &2Lasswell &f:&a&o ... ou pas. Mais tu devrais faire attention où tu mets les pieds petit... En attendant on va voir si tu peux m'être utile malgré un manque évident de cervelle...
+las_fold2: folder las_mess2,las_fold3 delay:8
+las_mess2: message &2Lasswell &f:&a&o Tu vois le cadre au bout du champ de tir? Un bloc de laine va apparaitre à plusieurs positions à l'intérieur, je veux que tu le transperce avec des flèches, autant de fois que possible!
+las_fold3: folder las_mess3,las_fold4 delay:8
+las_mess3: message &2Lasswell &f:&a&o Si tu n'as pas le matériel nécessaire pour cet exercice, je peux te le fournir... moyennant finance évidemment, on ne fait pas dans la charité ici!
+las_fold4: folder las_mess4,las_fold5 delay:8
+las_mess4: message &2Lasswell &f:&a&o Enfin, dis moi quand tu sera prêt, je lancerai la machinerie pour le test.
+las_fold5: folder las_gotest,las_conversdone delay:2
+las_gotest: tag add las_gotest
+las_buybow: folder las_takebowmoney,las_givebow delay:2
+las_takebowmoney: command eco take %player% 1500
+las_givebow: give bow:1
+las_buyarrows: folder las_takearrowsmoney,las_givearrows delay:2
+las_takearrowsmoney: command eco take %player% 1500
+las_givearrows: give arrow:16
+#
+############ Event shooting arrows
+#
+#
+## Lancement du test de tir
+#
+las_starttest: folder las_launching,las_objarrow,las_testpassed
+las_objarrow: objective start las_objarrow
+las_testpassed: tag add las_testpassed
+las_launching: folder las_mess5,las_mess6,las_launching2 delay:1
+las_mess5: message &6&oLe test de tir va commencer! Préparez vous!
+las_mess6: message &6&o Début du test dans...
+las_launching2: folder las_mess7,las_launching3 delay:2
+las_mess7: message &63
+las_launching3: folder las_mess8,las_launching4 delay:2
+las_mess8: message &62
+las_launching4: folder las_mess9,las_launching5,las_startpt delay:2
+las_mess9: message &61
+las_launching5: folder las_mess10,las_setfold1,las_resetpoint delay:2
+las_mess10: message &6Partez !!
+las_startpt: point las_score 0
+las_resetpoint: point las_score *0
+#
+## Séquence de tir
+#
+las_setfold1: folder las_setblock1,las_airfold1
+las_setblock1: setblock wool -7166;65;3564;Gaia
+las_airfold1: folder las_setair1,las_setfold2 delay:2
+las_setair1: setblock air -7166;65;3564;Gaia
+#
+las_setfold2: folder las_setblock2,las_airfold2
+las_setblock2: setblock wool -7168;63;3563;Gaia
+las_airfold2: folder las_setair2,las_setfold3 delay:2
+las_setair2: setblock air -7168;63;3563;Gaia
+#
+las_setfold3: folder las_setblock3,las_airfold3
+las_setblock3: setblock wool -7166;64;3561;Gaia
+las_airfold3: folder las_setair3,las_setfold4 delay:2
+las_setair3: setblock air -7166;64;3561;Gaia
+#
+las_setfold4: folder las_setblock4,las_airfold4
+las_setblock4: setblock wool -7167;67;3563;Gaia
+las_airfold4: folder las_setair4,las_setfold5 delay:2
+las_setair4: setblock air -7167;67;3563;Gaia
+#
+las_setfold5: folder las_setblock5,las_airfold5
+las_setblock5: setblock wool -7168;63;3564;Gaia
+las_airfold5: folder las_setair5,las_setfold6 delay:2
+las_setair5: setblock air -7168;63;3564;Gaia
+#
+las_setfold6: folder las_setblock6,las_airfold6
+las_setblock6: setblock wool -7167;64;3561;Gaia
+las_airfold6: folder las_setair6,las_setfold7 delay:2
+las_setair6: setblock air -7167;64;3561;Gaia
+#
+las_setfold7: folder las_setblock7,las_airfold7
+las_setblock7: setblock wool -7167;66;3564;Gaia
+las_airfold7: folder las_setair7,las_setfold8 delay:2
+las_setair7: setblock air -7167;66;3564;Gaia
+#
+las_setfold8: folder las_setblock8,las_airfold8
+las_setblock8: setblock wool -7165;64;3563;Gaia
+las_airfold8: folder las_setair8,las_setfold9 delay:2
+las_setair8: setblock air -7165;64;3563;Gaia
+#
+las_setfold9: folder las_setblock9,las_airfold9
+las_setblock9: setblock wool -7169;64;3563;Gaia
+las_airfold9: folder las_setair9,las_setfold10 delay:2
+las_setair9: setblock air -7169;64;3563;Gaia
+#
+las_setfold10: folder las_setblock10,las_airfold10
+las_setblock10: setblock wool -7166;62;3564;Gaia 
+las_airfold10: folder las_setair10 delay:2
+las_setair10: setblock air -7166;62;3564;Gaia
+#
+## Reception du hit
+#
+las_arrowhit: folder las_objarrow,las_hitmess,las_addpoint delay:1
+las_hitmess: message hit
+las_addpoint: point las_score 1
+#
+## Triage du score
+#
+las_equalizer: if las_score10 las_reward10 else las_equalizer2
+las_equalizer2: if las_score9 las_reward9 else las_equalizer3
+las_equalizer3: if las_score8 las_reward8 else las_equalizer4
+las_equalizer4: if las_score7 las_reward7 else las_equalizer5
+las_equalizer5: if las_score6 las_reward6 else las_equalizer6
+las_equalizer6: if las_score5 las_reward5 else las_equalizer7
+las_equalizer7: if las_score4 las_reward4 else las_equalizer8
+las_equalizer8: if las_score3 las_reward3 else las_equalizer9
+las_equalizer9: if las_score2 las_reward2 else las_equalizer10
+las_equalizer10: if las_score1 las_reward1 else las_reward0
+#
+las_reward10: folder las_mess11,las_comment10,las_foldersuite delay:2
+las_mess11: 'message &2Lasswell &f: &a&oTu as fait le score maximal ! Félicitations !'
+las_comment10: 'message &2Lasswell &f: &a&oTu m''as impressionné... Et il m''en faut !'
+#
+las_reward9: folder las_mess12,las_comment9,las_foldersuite delay:2
+las_mess12: 'message &2Lasswell &f: &a&oTu as fais &69 &a&opoint(s).'
+las_comment9: 'message &2Lasswell &f: &a&oTrès joli score ! Tu peux être fier.'
+#
+las_reward8: folder las_mess13,las_comment8,las_foldersuite delay:2
+las_mess13: 'message &2Lasswell &f: &a&oTu as fais &68 &a&opoint(s).'
+las_comment8: 'message &2Lasswell &f: &a&oTrès joli score ! Tu peux être fier.'
+#
+las_reward7: folder las_mess14,las_comment7,las_foldersuite delay:2
+las_mess14: 'message &2Lasswell &f: &a&oTu as fais &67 &a&opoint(s).'
+las_comment7: 'message &2Lasswell &f: &a&oJoli score ! On fera peut-être quelque chose de toi...'
+#
+las_reward6: folder las_mess15,las_comment6,las_foldersuite delay:2
+las_mess15: 'message &2Lasswell &f: &a&oTu as fais &66 &a&opoint(s).'
+las_comment6: 'message &2Lasswell &f: &a&oUn peu mieux que la moyenne. Pas mal.'
+#
+las_reward5: folder las_mess16,las_comment5,las_foldersuite delay:2
+las_mess16: 'message &2Lasswell &f: &a&oTu as fais &65 &a&opoint(s).'
+las_comment5: 'message &2Lasswell &f: &a&oTout juste la moyenne. Admettons. Tu as peut-être un talent caché...'
+#
+las_reward4: folder las_mess17,las_comment4,las_testpasseddel,las_conversdone delay:2
+las_mess17: 'message &2Lasswell &f: &a&oTu as fais &64 &a&opoint(s).'
+las_comment4: 'message &2Lasswell &f: &a&oSi proche... Et pourtant si loin... Recommence !'
+#
+las_reward3: folder las_mess18,las_comment3,las_testpasseddel,las_conversdone delay:2
+las_mess18: 'message &2Lasswell &f: &a&oTu as fais &63 &a&opoint(s).'
+las_comment3: 'message &2Lasswell &f: &a&oUn amateur... On avait bien besoin de ca! Recommence !'
+#
+las_reward2: folder las_mess19,las_comment2,las_testpasseddel,las_conversdone delay:2
+las_mess19: 'message &2Lasswell &f: &a&oTu as fais &62 &a&opoint(s).'
+las_comment2: 'message &2Lasswell &f: &a&oC''est la 1ère fois que tu tiens un arc? Recommence !'
+#
+las_reward1: folder las_mess20,las_comment1,las_testpasseddel,las_conversdone delay:2
+las_mess20: 'message &2Lasswell &f: &a&oTu as fais &61 &a&opoint(s).'
+las_comment1: 'message &2Lasswell &f: &a&oC''est la 1ère fois que tu tiens un arc? Recommence !'
+#
+las_reward0: folder las_mess21,las_comment0,las_testpasseddel,las_conversdone delay:2
+las_mess21: 'message &2Lasswell &f: &a&oTu as fais &60 &a&opoint(s).'
+las_comment0: 'message &2Lasswell &f: &a&oTu le fais exprès ? Je devrais peut-être rendre ce test payant... Recommence !'
+#
+## Fin du triage
+#
+las_foldersuite: folder las_mess22,las_testpasseddel,las_foldersuite2 delay:4
+las_mess22: 'message &2Lasswell &f: &a&oMaintenant que cette formalité est reglée, tu va avoir une chance de prouver ta valeur, et une seule.'
+las_foldersuite2: folder las_mess23,las_foldersuite3 delay:6
+las_mess23: 'message &2Lasswell &f: &a&oIl se trouve que notre tribu compte une brebis galeuse. &4Erek&a&o, un jeune présomptueux, qui risque notre sécurité à tous en dérobant le mauvais &6Objet &a&o!!'
+las_foldersuite3: folder las_mess24,las_foldersuite4 delay:6
+las_mess24: 'message &2Lasswell &f: &a&oÉlimine ce traitre, et tu prendras sa place au sein de notre confrérie. Ainsi le veut la tradition.'
+las_foldersuite4: folder las_mess25,eko_q1done,eko_q1end,las_foldersuite5 delay:6
+las_mess25: 'message &2Lasswell &f: &a&oRetourne voir &2Eko&a&o maintenant, il t''expliquera comment le trouver.'
+las_foldersuite5: folder las_conversdone,las_q1start,las_scoredel,las_gotestdel,eko_j1_del,las_j1,las_title1 delay:2
+las_q1start: tag add las_q1start
+#
+las_title1: folder las_title11,las_title12,las_title13
+las_title11: command title %player% times 40 60 80
+las_title12: command title %player% subtitle {"text":"Première lecon, sortir les déchets !","color":"gold"}
+las_title13: command title %player% title {"text":"Démontrer son utilité","color":"green"}
+#
+#
+## Lasswell cleaning session
+#
+las_scoredel: command bq point %player% del las_score
+las_q1startdel: tag remove las_q1start
+las_testpasseddel: tag remove las_testpassed
+las_gotestdel: tag remove las_gotest
+las_objarrowdel: objective delete las_objarrow
+#
+#
+####### LASSWELL 2
+#
+#
+las2_holreward: folder las2_money,las2_givesword,las2_giveswordmess,las2_mess1,eko_q3done,eko_q3end,las2_fold2 delay:5
+las2_money: command eco give %player% 5000
+las2_givesword: command mm i give %player% iron_sword1
+las2_giveswordmess: message &6&oVous recevez une &aEpée robuste&6&o.
+las2_mess1: message &2Lasswell:&a&o Bien, maintenant laisse moi, va donc continuer tes aventures ou explorer la ville, peu me chaut!
+las2_fold2: folder las2_mess2,las2_journalupdate delay:7
+las2_mess2: message &2Lasswell:&a&o Mais tiens toi quand même prêt à répondre à mon appel, on ne sait jamais quand le prochain bon coup peut tomber...
+las2_journalupdate: folder eko_j5_del,las_j2,las_conversdone delay:1
+#
+las_checkopen: if hol_access las_opendoor else nothing
+las_opendoor: setblock redstone_block -7141;68;3519;Gaia
+las_closedoor: setblock air -7141;68;3519;Gaia
+#
+#
+#
+#
+#
+#
+#############################################################################################
+#
+interact_folder: folder sentry1_folder,sentry2_folder,interact_folder_2 delay:0
+sentry1_folder: folder sentry1_spawn delay:3
+sentry2_folder: folder sentry2_spawn delay:6
+sentry1_spawn: command npc spawn 290
+sentry2_spawn: command npc spawn 153
+sentry1_exp: explosion 0 0 1 -7159;79;3507;Gaia
+interact_folder_2: folder message1,message1bis delay:0
+message1bis: folder message2,message2bis delay:8
+message2bis: folder message3,message3bis delay:5
+message3bis: folder message4,message4bis delay:5
+message4bis: folder message5,message5bis delay:5
+message5bis: folder message6,message6bis delay:4
+message6bis: folder message7,message7bis delay:5
+message7bis: folder message8,message8bis,fold_taunt delay:3
+message8bis: folder folder_succes delay:0
+message1: message &dVous entendez un craquement de parquet derrière la fenêtre ...
+message2: 'message &6Frank &f: Au rapport Chef &6Erek &f! Je vous apporte les nouvelles,
+  le commerce avec Tortuga se passe très bien. Notre allié &2Zatara &fnous ouvre beaucoup
+  d''opportunités'
+message3: 'message &4Erek &f: Parfait ! Qu''en est-il de notre petit &6Trésor &f?'
+message4: 'message &6Frank &f: Je n''ai pas réussi à retrouver l''&6Objet. &4Orion
+  &fétait trop bien gardé ... Il a considérablement augmenté le nombre de gardes ...'
+message5: 'message &4Erek &f: Tu n''es qu''un bon à rien &6Frank &f! Tu ne parviens
+  même pas à t''approcher d''un misérable voleur!'
+message6: 'message &6Frank &f: Mais, Chef ... ! J''ai fait ce que j''ai pu ... !'
+message7: 'message &4Erek &f: Non &6Frank &f, pour tant de médiocrité, tu vas payer
+  la peine capitale !'
+message8: 'message &6Frank &f: S''il vous plaît! Je vous en supplie! Non, ayez pitié
+  !!'
+message9: 'message &4Erek &f: Meurt &6Frank&f!'
+folder_attack: folder folder_attack_expl,frank_depop,end_message
+folder_attack_expl: explosion 0 0 3 -7160;79;3506;Gaia
+frank_depop: command npc despawn 153
+fold_taunt: folder message9,folder_attack,sentry1_despawn delay:4
+end_message: folder end_message_exe delay:7
+end_message_exe: 'message &4Erek: &fIl va me falloir quelqu''un de plus compétent
+  pour m''occuper de ces voleurs ...!'
+sentry1_despawn: folder sentry1_despawn_exe,sentry1_exp delay:10
+sentry1_despawn_exe: command npc despawn 290
+folder_succes: folder tag_succes,succes_message,Zedd.makarov_access,drisgan_infiltremove,Zedd.maka_q1_journal_del,Zedd.maka_j2 delay:13
+tag_succes: tag add succes
+tag_succesremove: tag remove succes
+succes_message: message &d&oJe devrais retourner voir le maitre &2Makarov &d&opour voir ce qu'il pense de tout ça.
+echec_folder: folder obj_loc1_rem,tag_obrien_rem,tag_echec,message_out1,message_out2,teleport_out delay:0
+obj_loc1_rem: objective delete obj_loc1
+tag_obrien_rem: tag remove obrien
+tag_echec: tag add echec
+message_out1: 'message &6Milicien &f: Tu n''as rien à faire ici, INTRUS! DEHORS !!
+  DEHORS !!'
+message_out2: message &dVous avez été violemment mis hors de Drisgan
+teleport_out: teleport -7090;63;3508;Gaia
+tag_echec_remove: tag remove echec
+banditdooro: setblock REDSTONE_TORCH_ON -7158;70;3472;Gaia
+banditdoorc: folder banditdoorcfolder delay:7
+banditdoorcfolder: setblock AIR -7158;70;3472;Gaia
+banditdoor1o: setblock REDSTONE_TORCH_ON -7188;70;3525;Gaia
+banditdoor1c: folder banditdoor1cfolder delay:7
+banditdoor1cfolder: setblock AIR -7188;70;3525;Gaia
+shi_startfold: folder shi_start,shi_startpt,shi_convers delay:1
+shi_start: tag add shi_start
+shi_end: tag remove shi_start
+shi_scoredel: command bq point %player% del shi_score
+shi_startpt: point shi_score 1
+shi_roundstart: tag add shi_roundstart
+shi_endround: tag remove shi_roundstart
+shi_conversfold: folder shi_convers delay:1
+shi_convers: conversation shifoumi
+shi_mess0: message &4Shifoumi:&7&o Egalité !
+shi_mess1: message &4Shifoumi:&7&o Tu gagnes un point ...
+shi_mess2: message &4Shifoumi:&7&o Aha! Tu perds un point!
+shi_pierrefold: folder shi_pierre delay:1
+shi_feuillefold: folder shi_feuille delay:1
+shi_ciseauxfold: folder shi_ciseaux delay:1
+shi_pierre: conversation pierre
+shi_feuille: conversation feuille
+shi_ciseaux: conversation ciseaux
+shi_pierrewin: folder shi_addpoint,shi_mess1,shi_conversfold delay:2
+shi_pierredraw: folder shi_mess0,shi_conversfold delay:2
+shi_pierreloose: folder shi_substractpoint,shi_mess2,shi_conversfold delay:2
+shi_feuillewin: folder shi_addpoint,shi_mess1,shi_conversfold delay:2
+shi_feuilledraw: folder shi_mess0,shi_conversfold delay:2
+shi_feuilleloose: folder shi_substractpoint,shi_mess2,shi_conversfold delay:2
+shi_ciseauxwin: folder shi_addpoint,shi_mess1,shi_conversfold delay:2
+shi_ciseauxdraw: folder shi_mess0,shi_conversfold delay:2
+shi_ciseauxloose: folder shi_substractpoint,shi_mess2,shi_conversfold delay:2
+shi_addpoint: point shi_score 1
+shi_substractpoint: point shi_score -1
+shi_area0: folder shi_setair2,shi_setair1 delay:1
+shi_area1: folder shi_setblock1,shi_setair2 delay:1
+shi_area2: folder shi_setblock1,shi_setblock2 delay:1
+shi_setblock1: setblock REDSTONE_BLOCK -7096;64;3309;Gaia
+shi_setblock2: setblock REDSTONE_BLOCK -7098;64;3309;Gaia
+shi_setair1: setblock AIR -7096;64;3309;Gaia
+shi_setair2: setblock AIR -7098;64;3309;Gaia
+#
+#
+nothing: tag remove wazagaga
+#
+### Zones d'exclusion Drisgan
+#
+#
+check_cine: if balcony_occupied balcony_folder else nothing
+balcony_folder: folder bal_tele,bal_telemess
+bal_tele: teleport -7160;82;3495;Gaia
+bal_telemess: message &dCette zone est occupée, revenez plus tard.
+#
+check_indrisgan: if indrisgan_infilt infilt_telefolder else nothing
+infilt_telefolder: folder infilt_tele,infilt_telemess
+infilt_tele: teleport -7109;69;3503;Gaia
+infilt_telemess: message &dJe devrais éviter de me faire remarquer dans le village pour le moment...
+#
+#
+#
+##########################
+#                        #
+###     BLACK HOLE     ###
+#                        #
+##########################
+#
+hol_foldertele: folder hol_tele,hol_mess0
+hol_tele: teleport -7348;71;3264;Gaia
+hol_mess0: 'message &d&oOuups! C''est un peu haut tout de même...'
+#
+##
+###########  ALDWIN
+##
+#
+#
+######  Starting point
+#
+hol_startfolder: folder hol_obj_aileG,hol_obj_aileD,hol_resetdoor,hol_resetboss,hol_die,hol_timerstart
+#
+hol_in: teleport -7365;51;3272;Gaia
+hol_exit: conversation aldwin_exit
+hol_out: teleport -7352;52;3272;Gaia
+hol_resetdoor: folder hol_resetdoor1,hol_resetdoor2
+hol_resetdoor1: setblock air -7370;47;3274;Gaia
+hol_resetdoor2: setblock air -7373;47;3274;Gaia
+hol_resetboss: folder hol_removeshrekdead,hol_removekaradead,hol_removeerekdead
+hol_removeshrekdead: tag remove hol_shrekdead
+hol_removekaradead: tag remove hol_karadead
+hol_removeerekdead: tag remove hol_erekdead
+hol_timerstart: folder hol_timer,hol_delay
+hol_timer: tag add hol_timer
+hol_delay: objective start hol_delay
+hol_timerremove: tag remove hol_timer
+hol_resetmess: message &d&oVotre inscription à &4La Tanière du Traître&d&o a été réinitialisée.
+#
+#
+#### Aile Gauche
+#
+#
+hol_obj_aileG: objective start hol_obj1
+hol_pop2: folder hol_pop21,hol_pop22,hol_obj2
+hol_pop21: command mm m spawn acolyte 1 Gaia,-7377,51,3302
+hol_pop22: command mm m spawn acolyte_ranged 1 Gaia,-7383,51,3302
+#
+hol_obj2: objective start hol_obj2
+hol_pop1: folder hol_pop11,hol_pop12,hol_pop13,hol_obj3
+hol_pop11: command mm m spawn acolyte_ranged 1 Gaia,-7405,51,3302
+hol_pop12: command mm m spawn acolyte 1 Gaia,-7404,51,3299
+hol_pop13: command mm m spawn acolyte 1 Gaia,-7404,51,3306
+#
+hol_obj3: objective start hol_obj3
+hol_pop3: folder hol_pop31,hol_pop32,hol_pop33,hol_pop34,hol_obj4
+hol_pop31: command mm m spawn acolyte 1 Gaia,-7402,47,3323
+hol_pop32: command mm m spawn acolyte 1 Gaia,-7402,47,3322
+hol_pop33: command mm m spawn acolyte 1 Gaia,-7402,47,3321
+hol_pop34: command mm m spawn acolyte_ranged 1 Gaia,-7416,45,3332
+#
+hol_obj4: objective start hol_obj4
+hol_pop4: folder hol_pop41,hol_pop42,hol_pop43
+hol_pop41: command mm m spawn acolyte_ranged 1 Gaia,-7418,44,3348
+hol_pop42: command mm m spawn acolyte 1 Gaia,-7413,43,3349
+hol_pop43: command mm m spawn acolyte 1 Gaia,-7416,41,3355
+#
+#
+hol_checkpopsalleB1: if !hol_shrekdead hol_popsalleB1 else nothing
+hol_popsalleB1: folder hol_popsalleB01,hol_setairB1
+hol_popsalleB01: command mm m spawn Shrek 1 Gaia,-7413,40,3390
+hol_setairB1: setblock air -7415;38;3389;Gaia
+hol_depopsalleB1: command mm m kill Shrek
+hol_B1killed: folder hol_shrekdead,hol_shrekopen,hol_shrekdeadmess
+hol_shrekdead: tag add hol_shrekdead
+hol_shrekdeadmess: message &6Vous entendez un déclic au loin ...
+hol_shrekopen: setblock redstone_block -7370;47;3274;Gaia
+#
+# 
+#
+### Aile Droite
+#
+#
+#
+hol_obj_aileD: folder hol_obj5
+hol_obj5: objective start hol_obj5
+hol_pop5: folder hol_pop51,hol_obj6
+hol_pop51: command mm m spawn acolyteJr 5 Gaia,-7384,51,3243
+#
+hol_obj6: objective start hol_obj6
+hol_pop6: folder hol_pop61,hol_pop62,hol_pop63,hol_obj7
+hol_pop61: command mm m spawn acolyte_rangedJr 1 Gaia,-7408,51,3250
+hol_pop62: command mm m spawn acolyte_ranged 1 Gaia,-7414,51,3243
+hol_pop63: command mm m spawn acolyte_rangedJr 1 Gaia,-7408,51,3236
+#
+hol_obj7: objective start hol_obj7
+hol_pop7: folder hol_pop71,hol_pop72,hol_pop73,hol_pop74,hol_pop75
+hol_pop71: command mm m spawn acolyte 1 Gaia,-7413,43,3247
+hol_pop72: command mm m spawn acolyte_ranged 1 Gaia,-7398,43,3243
+hol_pop73: command mm m spawn acolyte 1 Gaia,-7412,38,3237
+hol_pop74: command mm m spawn acolyte_ranged 1 Gaia,-7406,38,3251
+hol_pop75: command mm m spawn acolyte 1 Gaia,-7398,38,3243
+#
+#
+hol_checkpopsalleB2: if !hol_karadead hol_popsalleB2 else nothing
+hol_popsalleB2: folder hol_popsalleB02,hol_setairB2
+hol_popsalleB02: command mm m spawn Kara 1 Gaia,-7409,29,3242
+hol_setairB2: setblock air -7413;27;3238;Gaia
+hol_depopsalleB2: command mm m kill Kara
+hol_B2killed: folder hol_karadead,hol_karaopen,hol_karadeadmess
+hol_karadead: tag add hol_karadead
+hol_karadeadmess: message &6Vous entendez un déclic au loin ...
+hol_karaopen: setblock redstone_block -7373;47;3274;Gaia
+#
+#
+#
+######  Last Boss: EREK
+#
+#
+hol_erekstartfold: folder hol_objtnt,hol_objplacetnt
+#
+hol_objtnt: objective start hol_objtnt
+hol_objplacetnt: objective start hol_objplacetnt
+#
+hol_checkpopsalleB3: if !hol_erekdead hol_popsalleB3 else nothing
+hol_popsalleB3: folder hol_erekstartfold,hol_popsalleB31,hol_popsalleB32,hol_poperekmess,hol_setairB3
+hol_setairB3: setblock air -7411;46;3272;Gaia
+hol_poperekmess: message &4Erek:&a&o C'est ça qu'ils envoient contre moi? Meurs vermisseau !!
+hol_popsalleB31: command mm m spawn erek_p1 1 Gaia,-7426,51,3272
+hol_popsalleB32: if !hol_redblock hol_popB3add else nothing
+hol_popB3add: folder hol_popB3add1,hol_popB3add2,hol_popB3addsuite,hol_popaddmess delay:10
+hol_popB3add1: command mm m spawn erek_renfort 1 Gaia,-7411,51,3258
+hol_popB3add2: command mm m spawn erek_renfort 1 Gaia,-7411,51,3286
+hol_popaddmess: message &6&oErek appelle des renforts !
+hol_popB3addsuite: folder hol_popB3add1,hol_popB3add2,hol_popB3addreset delay:5
+# This leads into an infinite loop.
+hol_popB3addreset: folder hol_popsalleB32 delay:30
+#
+hol_depopsalleB3: folder hol_depopsalleB31,hol_depopsalleB32,hol_takeallresidus,hol_setair
+hol_depopsalleB31: command mm m kill erek_p1
+hol_depopsalleB32: command mm m kill erek_renfort
+hol_takeallresidus: if hol_residuscheck1 hol_taketake else nothing
+hol_taketake: folder hol_taketaketake,hol_takeallresidus delay:1
+hol_taketaketake: take residus_de_poudre:64
+#
+hol_residuscheck: if hol_residuscheck hol_foldertnt else hol_tntdenied
+hol_tntdenied: folder hol_tntdeniedmess,hol_objtnt delay:1
+hol_tntdeniedmess: message &6&oVous n'avez pas assez de &2Résidus de poudre &6&o!
+hol_foldertnt: folder hol_takeresidus,hol_givetnt,hol_givetntmess
+hol_takeresidus: take residus_de_poudre:5
+hol_givetnt: give erek_tnt:1
+hol_givetntmess: message &6&oVous recevez une &2Charge explosive&6&o !
+#
+#
+### Phase 2
+#
+#
+hol_erekphase2: folder hol_ep2placeblock1,hol_ep2placeblock2,hol_depopsalleB31
+hol_ep2placeblock21: setblock redstone_block -7435;51;3274;Gaia
+hol_setair: setblock air -7435;51;3274;Gaia
+hol_ep2placeblock2: folder hol_ep2placeblock21,hol_poperek delay:4
+hol_ep2placeblock1: setblock tnt -7425;49;3272;Gaia
+hol_tntplacedremove: tag remove hol_tntplaced
+hol_poperek: command mm m spawn erek 1 Gaia,-7426,51,3272
+#
+#
+hol_B3killed: folder hol_erekdead,hol_erekdeadmess,hol_checkdone,hol_checkmakaq3
+hol_erekdead: tag add hol_erekdead
+hol_erekdeadmess: message &6Vous avez éliminé Erek !!
+hol_checkdone: if !hol_done hol_firstdone else nothing
+hol_firstdone: folder hol_done,eko_j4_del,eko_j5,las_j1del
+hol_done: tag add hol_done
+hol_checkmakaq3: if Zedd.maka_q3start hol_makavalid else nothing
+hol_makavalid: folder Zedd.maka_q3end,Zedd.maka_q3done,Zedd.maka_j5_del,Zedd.maka_j6,Zedd.makarow_access_exe delay:5
+#
+#
+#
+#
+#
+##########################
+#                        #
+###      ALDWIN        ###
+#                        #
+##########################
+#
+#
+ald_inconvers: tag add ald_inconvers
+ald_conversdone: tag remove ald_inconvers
+#
+ald_firstgo: folder hol_firstgo,ald_mess1,ald_firstgo2 delay:5
+hol_firstgo: tag add hol_firstgo
+ald_mess1: message &2Aldwin:&a&o Il va vous falloir pénétrer en ces lieux seul, débusquer le traître et l'éliminer. Je... vous tiens la porte en attendant...
+ald_firstgo2: folder ald_mess2,hol_access,ald_conversdone delay:7
+ald_mess2: message &2Aldwin:&a&o Dites moi lorsque vous serez prêt à y aller!
+hol_access: tag add hol_access
+#
+hol_respawn: folder hol_dierestart
+hol_dierestart: folder hol_die delay:1
+hol_die: objective start hol_die
+hol_removedie: objective delete hol_die
+#
+hol_checkexit: folder hol_checkexit2 delay:1
+hol_checkexit2: if !hol_checkin hol_removedie else nothing
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#

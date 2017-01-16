@@ -1,0 +1,9 @@
+quester: Charon
+first: welcome
+stop: 'false'
+#NPC options
+NPC_options:
+  welcome:
+    text: 'Bonjour, vous avez : \n&2%point.reput_athelas.amount% &a&oPoint(s) de Réputation \n&2%point.votes.amount% &a&oPoint(s) de Vote'
+    event: charon_store
+player_options:

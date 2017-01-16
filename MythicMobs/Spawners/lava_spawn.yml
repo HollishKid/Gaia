@@ -1,0 +1,24 @@
+lava_spawn:
+  MobName: lava_elem
+  World: Gaia
+  X: -6837
+  Y: 64
+  Z: 3339
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 6
+  MobLevel: 1
+  MobsPerSpawn: 2
+  Cooldown: 60
+  CooldownTimer: 0
+  Warmup: 10
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 100
+  LeashRange: 30
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 5

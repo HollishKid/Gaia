@@ -1,0 +1,441 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dBoutique Charon'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 15
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+  
+menuclose:
+  NAME: '&6Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+ 
+blocker11:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker21:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker31:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker41:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker51:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker61:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker71:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker81:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker91:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true 
+ 
+blocker12:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 3
+  KEEP-OPEN: true
+ 
+advids:
+  COMMAND: 'ad'
+  NAME: '&aSoutenez Gaïa !'
+  LORE:
+    - '&fGagnez &22 &fpoints de vote'
+    - '&fen donnant 30 secondes'
+    - '&fde votre temps !'
+    - ' '
+    - 'Utilisation illimitée'
+    - ' '
+    - '&fMerci de votre générosité !'
+  ID: book
+  ENCHANTMENT: 'fire aspect, 1'
+  POSITION-X: 4
+  POSITION-Y: 1
+ 
+votegui:
+  COMMAND: 'thisistheopenvotemenucommand'
+  NAME: '&aVotez pour Gaïa'
+  LORE:
+    - '&fGagnez &21 &fpoint de vote'
+    - '&fen votant pour le serveur'
+    - ' '
+    - 'Utilisation limitée'
+    - ' '
+    - '&fMerci de votre soutien !'
+  ID: book
+  POSITION-X: 5
+  POSITION-Y: 1
+  
+skin_basic:
+  COMMAND: 'console: skinsrestorer set {player} {player}'
+  NAME: '&cRevenir à votre Skin'
+  ID: torch
+  LORE:
+    - 'Enlève votre skin actuel'
+    - 'et remet votre skin de base.'
+    - ' '
+    - '&aPrix: &fGratuit'
+  POSITION-X: 1
+  POSITION-Y: 3
+
+skin_link:
+  COMMAND: 'tell: &a http://mcskinsearch.com/browse'
+  NAME: '&6Navigateur de Skins'
+  ID: paper
+  LORE:
+    - 'Affiche un lien vers le navigateur de'
+    - 'skins en Ligne qui permet de choisir'
+    - 'le skin de votre choix.'
+    - ' '
+    - 'Utilisez ensuite le bouton "Skin Personnalisé"'
+  POSITION-X: 2
+  POSITION-Y: 3
+
+
+skin_perso:
+  COMMAND: 'console: bq event {player} default.skin_choisir'
+  NAME: '&aSkin Personnalisé'
+  SKULL-OWNER: 'Hollish'
+  ID: 'skull:3'
+  LORE:
+    - 'Choisir un Skin à partir des skins'
+    - 'avec le lien "Navigateur de Skins"'
+    - '&o(le bouquin sur la gauche)'
+    - ' '
+    - 'Cliquez ici puis tapez le'
+    - 'NOM EXACT du skin sur la '
+    - 'pancarte qui apparaît.'
+    - ' '
+    - '&aPrix : &c10 Points de réputation'
+    - '        &c20 Points de Vote'
+    - '&4ATTENTION &f: '
+    - 'Certains skins ne fonctionnent pas'
+    - 'Aucun remboursement possible !'
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+xp_event2:
+  COMMAND: 'console: bq event {player} default.xpboost2'
+  NAME: '&aBoost d''XP (&2*2&a)'
+  ID: '95:4'
+  LORE:
+    - '&fLancez un événement de'
+    - '&fBoost d''Expérience fois &22 &f!'
+    - '&fAffecte tous les joueurs.'
+    - '&fDurée: &215 &fminutes'
+    - ' '
+    - '&cPrix : &a100 &cPoints de Vote'
+  POSITION-X: 7
+  POSITION-Y: 3
+  
+xp_event3:
+  COMMAND: 'console: bq event {player} default.xpboost3'
+  NAME: '&aBoost d''XP (&2*3&a)'
+  ID: '95:5'
+  LORE:
+    - '&fLancez un événement de'
+    - '&fBoost d''Expérience fois &23 &f!'
+    - '&fAffecte tous les joueurs.'
+    - '&fDurée: &215 &fminutes'
+    - ' '
+    - '&cPrix : &a10 &cPoints de réputation'
+    - '        &a150 &cPoints de Vote'
+  POSITION-X: 8
+  POSITION-Y: 3
+  
+xp_event4:
+  COMMAND: 'console: bq event {player} default.xpboost4'
+  NAME: '&aBoost d''XP (&2*4&a)'
+  ID: '95:13'
+  LORE:
+    - '&fLancez un événement de'
+    - '&fBoost d''Expérience fois &24 &f!'
+    - '&fAffecte tous les joueurs.'
+    - '&fDurée: &215 &fminutes'
+    - ' '
+    - '&cPrix : &a20 &cPoints de réputation'
+    - '        &a200 &cPoints de Vote'
+  POSITION-X: 9
+  POSITION-Y: 3
+  
+mount:
+  COMMAND: 'console: bq event {player} default.pets_mount'
+  NAME: '&aDressez vos Compagnons'
+  ID: '420'
+  LORE:
+    - '&fVous permet de monter'
+    - '&fsur vos compagnon.'
+    - ' '
+    - '&fVous vous déplacerez'
+    - '&fà sa vélocité spécifique.'
+    - ' '
+    - '&cPrix : &a100 &cPoints de Vote'
+  POSITION-X: 1
+  POSITION-Y: 5
+  
+chicken:
+  COMMAND: 'console: bq event {player} default.pets_chicken'
+  NAME: '&aCompagnon Poule'
+  ID: '366'
+  LORE:
+    - '&fAchetez un Compagnon'
+    - '&aPoule &f!'
+    - ' '
+    - '&fVélocité: &20.15'
+    - ' '
+    - '&cPrix : &a25 &cPoints de Vote'
+  POSITION-X: 3
+  POSITION-Y: 5
+  
+cow:
+  COMMAND: 'console: bq event {player} default.pets_cow'
+  NAME: '&aCompagnon Vâche'
+  ID: '363'
+  LORE:
+    - '&fAchetez un Compagnon'
+    - '&aVâche &f!'
+    - ' '
+    - '&fVélocité: &20.20'
+    - ' '
+    - '&cPrix : &a30 &cPoints de Vote'
+  POSITION-X: 4
+  POSITION-Y: 5
+  
+mutton:
+  COMMAND: 'console: bq event {player} default.pets_sheep'
+  NAME: '&aCompagnon Mouton'
+  ID: '424'
+  LORE:
+    - '&fAchetez un Compagnon'
+    - '&aMouton &f!'
+    - ' '
+    - '&fVélocité: &20.25'
+    - ' '
+    - '&cPrix : &a35 &cPoints de Vote'
+  POSITION-X: 5
+  POSITION-Y: 5
+  
+pig:
+  COMMAND: 'console: bq event {player} default.pets_pig'
+  NAME: '&aCompagnon Cochon'
+  ID: '319'
+  LORE:
+    - '&fAchetez un Compagnon'
+    - '&aCochon &f!'
+    - ' '
+    - '&fVélocité: &20.30'
+    - ' '
+    - '&cPrix : &a40 &cPoints de Vote'
+  POSITION-X: 6
+  POSITION-Y: 5
+  
+rabbit:
+  COMMAND: 'console: bq event {player} default.pets_rabbit'
+  NAME: '&aCompagnon Lapin'
+  ID: '411'
+  LORE:
+    - '&fAchetez un Compagnon'
+    - '&aLapin &f!'
+    - ' '
+    - '&fVélocité: &20.35'
+    - ' '
+    - '&cPrix : &a50 &cPoints de Vote'
+  POSITION-X: 7
+  POSITION-Y: 5
+  
+villager:
+  COMMAND: 'console: bq event {player} default.pets_villager'
+  NAME: '&aCompagnon Villageois'
+  ID: '397:3'
+  LORE:
+    - '&fAchetez un Compagnon'
+    - '&aVillageois &f!'
+    - ' '
+    - '&fVélocité: &20.30'
+    - ' '
+    - '&cPrix : &a200 &cPoints de Vote'
+  POSITION-X: 3
+  POSITION-Y: 6
+  
+gollem:
+  COMMAND: 'console: bq event {player} default.pets_gollem'
+  NAME: '&aCompagnon Gollem'
+  ID: '265'
+  LORE:
+    - '&fAchetez un Compagnon'
+    - '&aGollem de Fer &f!'
+    - ' '
+    - '&fVélocité: &20.35'
+    - ' '
+    - '&cPrix : &a250 &cPoints de Vote'
+  POSITION-X: 4
+  POSITION-Y: 6
+  
+snowman:
+  COMMAND: 'console: bq event {player} default.pets_snowman'
+  NAME: '&aCompagnon Bonhomme de Neige'
+  ID: '332'
+  LORE:
+    - '&fAchetez un Compagnon'
+    - '&aBonhomme de Neige &f!'
+    - ' '
+    - '&fVélocité: &20.30'
+    - ' '
+    - '&cPrix : &a250 &cPoints de Vote'
+  POSITION-X: 5
+  POSITION-Y: 6
+  
+witch:
+  COMMAND: 'console: bq event {player} default.pets_witch'
+  NAME: '&aCompagnon Sorcière'
+  ID: '438'
+  LORE:
+    - '&fAchetez un Compagnon'
+    - '&aSorcière &f!'
+    - ' '
+    - '&fVélocité: &20.30'
+    - ' '
+    - '&cPrix : &a250 &cPoints de Vote'
+  POSITION-X: 6
+  POSITION-Y: 6

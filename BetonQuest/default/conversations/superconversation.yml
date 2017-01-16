@@ -1,0 +1,6 @@
+quester: '%player%'
+first: back
+stop: 'false'
+NPC_options:
+  back:
+    text: Bonjour Je suis %npc% !

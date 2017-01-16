@@ -1,0 +1,355 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dGuilde Bûcherons'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 7
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+metiers:
+  NAME: '&6Métiers Guilde Bûcherons'
+  LORE:
+    - 'En colonne se trouvent'
+    - 'tous les métiers de la guilde.'
+    - ' '
+    - '&a&oEn cliquant sur une icône,'
+    - '&a&ovous renoncez à'
+    - '&a&ovotre métier actuel.'
+    - ' '
+    - 'Un métier permet de gagner plus'
+    - 'd''expérience et d''adopter les'
+    - 'grades du métier.'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: shield
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+bucheron:
+  COMMAND: 'console: bq event {player} default.metier_bucheron'
+  NAME: '&6Bûcheron'
+  LORE:
+    - 'Accepter le métier Bûcheron'
+    - ' '
+    - 'Vous gagnerez 10% d''expérience en plus'
+    - 'dans la Compétence Bûcheronnage !'
+    - ' '
+    - '&cRequiert &f: &2250 &f¤'
+  ID: 286
+  POSITION-X: 3
+  POSITION-Y: 1
+
+bucheron1:
+  COMMAND: 'console: bq event {player} default.metier_bucheron1'
+  NAME: '&aGrade Échardier'
+  LORE:
+    - 'Prendre le Grade d''Échardier'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a1 &cCompétence Bûcheronnage'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 2
+ 
+bucheron2:
+  COMMAND: 'console: bq event {player} default.metier_bucheron2'
+  NAME: '&aGrade Bûcheron'
+  LORE:
+    - 'Prendre le Grade de Bûcheron'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a25 &cCompétence Bûcheronnage'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+bucheron3:
+  COMMAND: 'console: bq event {player} default.metier_bucheron3'
+  NAME: '&aGrade Tronçonneur'
+  LORE:
+    - 'Prendre le Grade de Tronçonneur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a50 &cCompétence Bûcheronnage'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 4
+
+bucheron4:
+  COMMAND: 'console: bq event {player} default.metier_bucheron4'
+  NAME: '&aGrade Abbateur'
+  LORE:
+    - 'Prendre le Grade d''Abbateur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a75 &cCompétence Bûcheronnage'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 5
+  
+bucheron5:
+  COMMAND: 'console: bq event {player} default.metier_bucheron5'
+  NAME: '&aGrade Écorceur'
+  LORE:
+    - 'Prendre le Grade de Écorceur'
+    - ' '
+    - '&cRequiert:'
+    - '&cNiveau &a100 &cCompétence Bûcheronnage'
+  ID: paper
+  POSITION-X: 3
+  POSITION-Y: 6
+
+standardprefix:
+  COMMAND: 'console: bq event {player} default.basic_prefix'
+  NAME: '&6Retour Grade Habituel'
+  LORE:
+    - '&oCliquez ici pour'
+    - '&oremettre votre'
+    - '&opréfixe habituel.'
+    - ' '
+    - '&lVous serez toujours'
+    - '&lmembre de la guilde !'
+  ID: paper
+  POSITION-X: 1
+  POSITION-Y: 3
+
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - '&cFerme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+jobs:
+  NAME: '&6Faire un Travail'
+  ID: torch
+  LORE:
+    - 'Ci-dessous les différents'
+    - 'travaux quotidients à'
+    - 'faire dans cette Guilde.'
+    - ' '
+    - '&ocliquez sur une icône'
+    - '&opour commencer.'
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+alchijob:
+  COMMAND: 'console: bq event {player} default.job_bucheron'
+  NAME: '&6Travail Bûcheron'
+  ID: paper
+  LORE:
+    - 'Ce travail consiste à'
+    - 'couper ce bois:'
+    - ' '
+    - '- &o75 Bois de Chêne'
+    - ' '
+    - '&lcliquez sur cette icône'
+    - '&lpour commencer ou'
+    - '&lterminer ce travail.'
+  POSITION-X: 5
+  POSITION-Y: 3
+  
+  
+fullguide:
+  COMMAND: 'tell: &a&o http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Competences'
+  NAME: '&6Guide Complet'
+  ID: book
+  ENCHANTMENT: 'infinity, 1'
+  LORE:
+    - 'Affiche un lien vers le guide'
+    - ' complet de Compétences.'
+  POSITION-X: 9
+  POSITION-Y: 6
+  
+mcstats:
+  COMMAND: 'mcstats'
+  NAME: '&6Statistiques'
+  ID: paper
+  LORE:
+    - 'Affiche vos Statistiques'
+    - 'Individuelles Complètes'
+  POSITION-X: 9
+  POSITION-Y: 5
+  
+mcrank:
+  COMMAND: 'mcrank'
+  NAME: '&6Classement Personnel'
+  ID: paper
+  LORE:
+    - 'Affiche votre Classement'
+    - 'des Compétences'
+  POSITION-X: 9
+  POSITION-Y: 4
+  
+mctop:
+  COMMAND: 'mctop'
+  NAME: '&6Classement Global'
+  ID: torch
+  LORE:
+    - 'Affiche le Classement'
+    - 'Global des Compétences'
+  POSITION-X: 9
+  POSITION-Y: 3
+  
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker13:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker23:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker33:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker43:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker53:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker63:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker14:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker24:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker34:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker44:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker54:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker64:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 6
+  KEEP-OPEN: true

@@ -1,0 +1,24 @@
+spider1:
+  MobName: Araignée
+  World: Gaia
+  X: -6842
+  Y: 26
+  Z: 3348
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 8
+  MobLevel: 1
+  MobsPerSpawn: 3
+  Cooldown: 45
+  CooldownTimer: 0
+  Warmup: 4
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 60
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: true
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 3

@@ -1,0 +1,188 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dBateau'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 3
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 5
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note harp'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+menu-close:
+  NAME: '&cFermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&6Retour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal'
+  POSITION-X: 8
+  POSITION-Y: 1
+  
+athelascentral:
+  COMMAND: 'console: bq event {player} default.bat_athelas_central'
+  NAME: '&aAthelas Central'
+  ID: paper
+  LORE:
+    - 'Vous amène au bateau'
+    - 'au Centre d''Athelas'
+    - 'en (-6602 65 3170)'
+    - ' '
+    - '&4Coût: &f¤ &a100'
+  POSITION-X: 1
+  POSITION-Y: 2
+
+athelaseast:
+  COMMAND: 'console: bq event {player} default.bat_athelas_east'
+  NAME: '&aAthelas Est'
+  ID: paper
+  LORE:
+    - 'Vous amène au bateau'
+    - 'à l''Est d''Athelas'
+    - 'en (-6445 65 3016)'
+    - ' '
+    - '&4Coût: &f¤ &a100'
+  POSITION-X: 2
+  POSITION-Y: 2
+  
+est1:
+  COMMAND: 'console: bq event {player} default.bat_est1'
+  NAME: '&aContinent Est'
+  ID: paper
+  LORE:
+    - 'Vous amène au bateau en'
+    - '(-298 65 6781)'
+    - ' '
+    - '&4Coût: &f¤ &a100'
+    - '&cRequiert: &f15 &apoints de Réputation'
+    - '(non déduits)'
+  POSITION-X: 1
+  POSITION-Y: 3
+  
+  
+est2:
+  COMMAND: 'console: bq event {player} default.bat_est2'
+  NAME: '&aContinent Est'
+  ID: paper
+  LORE:
+    - 'Vous amène au bateau en'
+    - '(474 65 5635)'
+    - ' '
+    - '&4Coût: &f¤ &a100'
+    - '&cRequiert: &f10 &apoints de Réputation'
+    - '(non déduits)'
+  POSITION-X: 2
+  POSITION-Y: 3
+  
+  
+est3:
+  COMMAND: 'console: bq event {player} default.bat_est3'
+  NAME: '&aContinent Est'
+  ID: paper
+  LORE:
+    - 'Vous amène au bateau en'
+    - '(-406 65 4764)'
+    - ' '
+    - '&4Coût: &f¤ &a100'
+    - '&cRequiert: &f15 &apoints de Réputation'
+    - '(non déduits)'
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+  
+est4:
+  COMMAND: 'console: bq event {player} default.bat_est4'
+  NAME: '&aContinent Est'
+  ID: paper
+  LORE:
+    - 'Vous amène au bateau en'
+    - '(-1725 65 2838)'
+    - ' '
+    - '&4Coût: &f¤ &a100'
+    - '&cRequiert: &f15 &apoints de Réputation'
+    - '(non déduits)'
+  POSITION-X: 4
+  POSITION-Y: 3
+  
+  
+est5:
+  COMMAND: 'console: bq event {player} default.bat_est5'
+  NAME: '&aContinent Est'
+  ID: paper
+  LORE:
+    - 'Vous amène au bateau en'
+    - '(-3048 65 1382)'
+    - ' '
+    - '&4Coût: &f¤ &a100'
+    - '&cRequiert: &f15 &apoints de Réputation'
+    - '(non déduits)'
+  POSITION-X: 5
+  POSITION-Y: 3
+  
+  
+est6:
+  COMMAND: 'console: bq event {player} default.bat_est6'
+  NAME: '&aContinent Est'
+  ID: paper
+  LORE:
+    - 'Vous amène au bateau en'
+    - '(-3538 65 -944)'
+    - ' '
+    - '&4Coût: &f¤ &a100'
+    - '&cRequiert: &f20 &apoints de Réputation'
+    - '(non déduits)'
+  POSITION-X: 6
+  POSITION-Y: 3
+  
+  
+est7:
+  COMMAND: 'console: bq event {player} default.bat_est7'
+  NAME: '&aContinent Est'
+  ID: paper
+  LORE:
+    - 'Vous amène au bateau en'
+    - '(-756 65 456)'
+    - ' '
+    - '&4Coût: &f¤ &a100'
+    - '&cRequiert: &f30 &apoints de Réputation'
+    - '(non déduits)'
+  POSITION-X: 7
+  POSITION-Y: 3
+  

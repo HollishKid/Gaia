@@ -1,0 +1,35 @@
+quester: Victor
+first: back
+stop: 'false'
+NPC_options:
+  back:
+    text: En quoi puis-je vous aider &2%player% &a&o?
+    pointer: qui,nourriture
+  qui_rep:
+    text: Je suis chargé de la nourriture à bord de navire, je cuisine pour tout le monde !
+  nourriture_rep:
+    text: Il vous faudra en acheter au &dGrand Marché&a&o, mais rien ne vaut une préparation faite maison! Pour vous faire à manger, il vous faudra cultiver la terre ou chasser.
+    pointer: cultiver,chasser
+  cultiver_rep:
+    text: Ah non ! L'&2Intendant &a&oveille et ne vous laissera pas faire ça n'importe où ! Pensez à aller le voir pour louer une maison avec un lopin de terre que vous pourrez cultiver ! Il est dans le &dChâteau d'Athelas &a&o!
+  chasser_rep:
+    text: Afin d'assurer la nourriture pour tous, vous pouvez chasser où bon vous semble ! Il paraît que le Continent Est regorge d'animaux sauvages ! 
+    pointer: continent_est
+  continent_est_rep:
+    text: C'est un vaste continent tout à fait à l'Est, il n'y a aucune civilisation stable là bas. Vous pouvez donc vous faire attaquer et piller par n'importe qui et n'importe quoi, mais il n'en reste pas moins que la terre y est libre d'accès, d'exploitation et de construction...
+player_options:
+  qui:
+    text: Qui êtes vous ?
+    pointer: qui_rep
+  nourriture:
+    text: Qu'est-ce que je peux faire pour me nourrir ?
+    pointer: nourriture_rep
+  cultiver:
+    text: Cultiver la terre ? Comme ça ? N'importe où ?
+    pointer: cultiver_rep
+  chasser:
+    text: Chasser ? Je peux faire ça où ?
+    pointer: chasser_rep
+  continent_est:
+    text: C'est quoi ce continent dont vous parlez ?
+    pointer: continent_est_rep

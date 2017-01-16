@@ -1,0 +1,30 @@
+quester: Soldat_Ryan
+first: salut,jyvais,mhh
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  salut:
+    text: Salut, qui est-tu ?
+    conditions: 'Soldat_Ryan,!Ryan_trouve'
+    pointer: recrue
+  ok:
+    text: Ok merci, jeune recrue. Je me mets en route.
+    events: 'Ryan_trouve_tous'
+  jyvais:
+    text: Ok, j'y vais, retourne prévenir le soldat Anxieux.
+    conditions: 'Ryan_trouve'
+  mhh:
+    text: Mhh, ce livre est intéressant ! 
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  recrue:
+    text: Je suis nouveau et on ma demander de venir vous prévenir que le Général vous chercher !
+    pointer: ok

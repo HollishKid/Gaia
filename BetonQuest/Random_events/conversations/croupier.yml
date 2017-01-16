@@ -1,0 +1,24 @@
+quester: croupier
+first: n1
+stop: 'false'
+##########################
+#                        #
+#       NPC OPTIONS      #
+#                        #
+##########################
+NPC_options:
+  n1:
+    text: Etes-vous prêt à lancer la roulette?
+    condition: '!loto_start'
+    pointer: oui,non
+##########################
+#                        #
+#       player OPTIONS      #
+#                        #
+##########################
+player_options:
+  oui:
+    text: Oui.
+    event: loto_start
+  non:
+    text: Non.

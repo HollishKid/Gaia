@@ -1,0 +1,64 @@
+quester: Felco
+first: unknown,welcome,member
+stop: 'false'
+#                   #
+#                   #
+#  Options du NPC   #
+#                   #
+#                   #
+NPC_options:
+  unknown:
+    text: Je ne vous connais pas ! Allez voir l'&2Intendant &a&o!
+    conditions: '!gestionnaire'
+  welcome:
+    text: Salut jeune mineur ! Que puis-je pour toi ?
+    conditions: 'gestionnaire,!mineur'
+    pointer: presentation,become_member,rien
+  pres_ok:
+    text: Ok ! Pensez à venir rejoindre ma Guilde une fois que vous serez Citoyen !
+    events: found_guild5,guild_tester
+  member_ok:
+    text: Excellent, bienvenue parmi nous ! Notre Guilde renferme 4 spécialités différentes! \nLe Minage, l'Exavation, la Réparation et la Fonte. \nLe Menu de la Guilde te permet de choisir un métier parmis d'autres avantages !
+    event: mineur
+    pointer: menu,merci
+#
+#
+# Add any guild-specific quests in pointers of "member"
+  member:
+    text: Bienvenue dans votre guilde, &2%player% &a&o!
+    conditions: mineur
+    pointer: menu,special,crafts,merci
+  mineur_menu:
+    text: Le voilà !
+    event: mineur_menu
+  special_rep:
+    text: Vous aurez 10% de Bonus d'Expérience dans la Compétence de votre métier. \nDe plus, vous aurez accès à la mine de la guilde, qui se situe en dehors d'Athelas vers le Nord-Est.
+  crafts_rep:
+    text: 'Vous pouvez créer des armures spéciales grâce à des matériaux nouveaux. \nPour créer un nouveau matériaux, mettez le dans un Four. \nVous pouvez y mettre: &dCuir&a&o, &dFicelle&a&o, &dFer&a&o, &dOr &a&oet &dDiamant&a&o. \nPour en fabriquer une armure, utilisez les recettes classiques.'
+#                   #
+#                   #
+# Options du Joueur #
+#                   #
+#                   #
+player_options:
+  presentation:
+    text: Je viens me présenter de la part de l'Intendant !
+    conditions: 'guilde_mineurs'
+    pointer: pres_ok
+  become_member:
+    text: Je veux devenir membre de la Guilde des Mineurs !
+    condition: '!mineur,intendant_done'
+    pointer: member_ok
+  menu:
+    text: Je voudrais accéder au Menu de la Guilde.
+    pointer: mineur_menu
+  special:
+    text: Quels sont les avantages de cette guilde ?
+    pointer: special_rep
+  crafts:
+    text: Comment fonctionnent les Crafts Spéciaux ?
+    pointer: crafts_rep
+  rien:
+    text: Rien du tout...
+  merci:
+    text: Merci ! Au revoir !

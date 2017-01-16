@@ -1,0 +1,54 @@
+quester: Kelva
+first: unknown,welcome,member
+stop: 'false'
+#                   #
+#                   #
+#  Options du NPC   #
+#                   #
+#                   #
+NPC_options:
+  unknown:
+    text: Je ne vous connais pas ! Allez voir l'&2Intendant &a&o!
+    conditions: '!gestionnaire'
+  welcome:
+    text: Salut jeune animal ! En quoi puis-je t'aider ?
+    conditions: 'gestionnaire,!apprivoiseur'
+    pointer: presentation,become_member,rien
+  pres_ok:
+    text: Ok ! Je ne t'accepterais pas en tant que membre de ma guilde tant que tu ne seras pas officiellement reconnu par l'&2Intendant &a&o!
+    events: found_guild6,guild_tester
+  member_ok:
+    text: Très bien, bienvenue parmi nous ! Notre Guilde spécialise dans l'Apprivoisement des animaux sauvages. \nLe Menu de la Guilde te permet de choisir ce métier parmis d'autres avantages !
+    event: apprivoiseur
+    pointer: menu,merci
+#
+#
+# Add any guild-specific quests in pointers of "member"
+  member:
+    text: Bienvenue dans votre guilde, &2%player% &a&o!
+    conditions: apprivoiseur
+    pointer: menu,merci
+  apprivoiseur_menu:
+    text: Le voilà !
+    event: apprivoiseur_menu
+#                   #
+#                   #
+# Options du Joueur #
+#                   #
+#                   #
+player_options:
+  presentation:
+    text: Je viens me présenter de la part de l'Intendant !
+    conditions: 'guilde_apprivoiseurs'
+    pointer: pres_ok
+  become_member:
+    text: Je veux devenir membre de la Guilde des Apprivoiseurs !
+    condition: '!apprivoiseur,intendant_done'
+    pointer: member_ok
+  menu:
+    text: Je voudrais accéder au Menu de la Guilde.
+    pointer: apprivoiseur_menu
+  rien:
+    text: Rien du tout...
+  merci:
+    text: Merci ! Au revoir !

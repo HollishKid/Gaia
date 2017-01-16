@@ -1,0 +1,287 @@
+casqueassault:
+  Id: 298
+  Data: 0
+  Display: '&3Casque 1er Âge'
+  Lore:
+  - '&e&oCe casque fut porté par les'
+  - '&e&opremiers habitants de Gaïa.'
+  Options:
+    Unbreakable: true
+    Color: 255,125,0
+stuff_leatherhead:
+  Id: 298
+  Display: '&fChapeau en cuir'
+  Lore:
+  - ' '
+  - '&7&oRareté : &fCommun'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Armor: 1
+stuff_leatherchest:
+  Id: 299
+  Data: 0
+  Display: '&fTunique en cuir'
+  Lore:
+  - ' '
+  - '&7&oRareté : &fCommun'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Armor: 3
+      Health: 1
+stuff_leatherlegs:
+  Id: 300
+  Data: 0
+  Display: '&fPantalon en cuir'
+  Lore:
+  - ' '
+  - '&7&oRareté : &fCommun'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Armor: 2
+      Health: 1
+stuff_leatherfeet :
+  Id: 301
+  Data: 0
+  Display: '&fBottes en cuir'
+  Lore:
+  - ' '
+  - '&7&oRareté : &fCommun'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Armor: 1
+stonesword_common:
+  Id: 272
+  Data: 0
+  Display: '&fÉpée en pierre'
+  Lore:
+  - '&e&oUne épée étonnement'
+  - '&e&oefficace !'
+  - ' '
+  - '&7&oRareté : &fCommun'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      Damage: 6
+stonesaxe_common:
+  Id: 275
+  Data: 0
+  Display: '&fHache en pierre'
+  Lore:
+  - '&e&oUne hache étonnement'
+  - '&e&otranchante !'
+  - ' '
+  - '&7&oRareté : &fCommun'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      Damage: 6
+stonesword_Zedd:
+  Id: 272
+  Data: 0
+  Display: '&9Épée en pierre'
+  Lore:
+  - '&e&oUne épée étonnement'
+  - '&e&oefficace !'
+  - ' '
+  - '&7&oRareté : &fCommun'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      Damage: 8
+chainchest_common:
+  Id: 303
+  Data: 0
+  Display: '&9Cotte de mailles'
+  Lore:
+  - '&e&oFabrication simple'
+  - '&e&omais robuste !'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Armor: 5.5
+      Health: 2
+bow_common:
+  Id: 261
+  Data: 0
+  Display: '&fArc simple'
+  Lore:
+  - '&e&oFabrication simple'
+  - '&e&omais efficace !'
+  - ' '
+  - '&7&oRareté : &fCommun'
+  Options:
+    Unbreakable: true
+leatherlegs_uncommon:
+  Id: 301
+  Data: 0
+  Display: '&9Chausses en cuir gravé'
+  Lore:
+  - '&e&oDes symboles runiques'
+  - '&e&ocourent le long des'
+  - '&e&ocoutures...'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.03
+      Health: 2
+      Armor: 1
+leatherhead_uncommon:
+  Id: 298
+  Data: 0
+  Display: '&9Coiffe rituelle'
+  Lore:
+  - '&e&oLes plumes sont jolies'
+  - '&e&omais vous tombent un peu'
+  - '&e&odans les yeux...'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Armor: 3
+      Health: 2
+leatherlegs_common:
+  Id: 300
+  Data: 0
+  Display: '&9Jambières en cuir'
+  Lore:
+  - '&e&oUn peu serrées au niveau'
+  - '&e&ode l''entrejambe...'
+  - ''
+  - '&7&oRareté : &9Rare'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Armor: 5
+      Health: 2
+Zsword:
+  Id: 267
+  Data: 0
+  Display: '&6Zsword'
+  Lore:
+  - '&eYou know it.'
+  - ' '
+  - '&7&oRareté : &6Légendaire' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 50
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - KNOCKBACK:1
+leather_oxy:
+  Id: 298
+  Data: 0
+  Display: '&fMasque de plongée'
+  Lore:
+   - ' '
+   - '&7&oRareté : &fCommun' 
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 1
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - OXYGEN:1
+chainhead:
+  Id: 302
+  Data: 0
+  Display: '&9Casque en mailles'
+  Lore:
+  - ''
+  - '&7&oRareté : &9Rare'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Armor: 6
+      Health: 2
+chainchest:
+  Id: 303
+  Data: 0
+  Display: '&9Cotte de mailles'
+  Lore:
+  - ''
+  - '&7&oRareté : &9Rare'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Armor: 10
+      Health: 4
+chainlegs:
+  Id: 304
+  Data: 0
+  Display: '&9Jambières annelées'
+  Lore:
+  - ''
+  - '&7&oRareté : &9Rare'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Armor: 8
+      Health: 3
+chainfeet:
+  Id: 305
+  Data: 0
+  Display: '&9Bottines en fer'
+  Lore:
+  - ''
+  - '&7&oRareté : &9Rare'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Armor: 5
+      Health: 2
+cheatchest:
+  Id: 303
+  Data: 0
+  Display: '&9Cotte de mailles'
+  Lore:
+  - ''
+  - '&7&oRareté : &9Rare'
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Armor: 100
+      Health: 200
+iron_sword1:
+  Id: 267
+  Data: 0
+  Display: '&9Épée robuste'
+  Lore:
+  - '&eDe bonne facture.'
+  - ' '
+  - '&7&oRareté : &9Rare' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 13
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - KNOCKBACK:1

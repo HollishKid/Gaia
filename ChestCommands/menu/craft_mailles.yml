@@ -1,0 +1,484 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dCraft de Mailles'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+mailles1:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+mailles2:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+mailles3:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 3
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+mailles4:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+mailles5:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+emerald1:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+mailles_casque:
+  NAME: '&aCasque en Mailles'
+  LORE:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  ID: 302
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+mailles12:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 6
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+mailles22:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 8
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+mailles32:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+mailles42:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+mailles52:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+mailles62:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+mailles72:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 7
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+mailles82:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 8
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+emerald12:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 7
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+mailles_plastron:
+  NAME: '&aPlastron en Mailles'
+  LORE:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  ID: 303
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+mailles13:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 1
+  POSITION-Y: 4
+  KEEP-OPEN: true
+
+mailles23:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+mailles33:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+mailles43:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 1
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+mailles53:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 3
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+mailles63:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 1
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+mailles73:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 3
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+emerald13:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+mailles_jambes:
+  NAME: '&aJambières en Mailles'
+  LORE:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  ID: 304
+  POSITION-X: 4
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+mailles14:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+mailles24:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 8
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+mailles34:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 6
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+mailles44:
+  NAME: 'Mailles'
+  LORE:
+  - '&d&oCette maille fera'
+  - '&d&oune armure correcte.'
+  ID: 287
+  POSITION-X: 8
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+emerald14:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 7
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+mailles_pieds:
+  NAME: '&aBottes en Mailles'
+  LORE:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  ID: 305
+  POSITION-X: 9
+  POSITION-Y: 5
+  KEEP-OPEN: true
+
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '58'
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 7
+  KEEP-OPEN: true
+ 
+blocker72:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 9
+  KEEP-OPEN: true

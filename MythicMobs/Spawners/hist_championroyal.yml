@@ -1,0 +1,25 @@
+hist_championroyal:
+  MobName: championroyal
+  World: Gaia
+  X: -6755
+  Y: 10
+  Z: 3251
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 3
+  MobLevel: 1
+  MobsPerSpawn: 3
+  Cooldown: 1
+  CooldownTimer: 0
+  Warmup: 7
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions:
+  - playerwithin 30
+  ActiveMobs: 2

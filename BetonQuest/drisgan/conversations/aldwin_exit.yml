@@ -1,0 +1,27 @@
+quester: Aldwin
+first: n1
+stop: 'false'
+##########################
+#                        #
+#       NPC OPTIONS      #
+#                        #
+##########################
+NPC_options:
+#
+  n1:
+    text: Voulez vous sortir du donjon?
+    pointer: oui,non
+#
+##########################
+#                        #
+#     player OPTIONS     #
+#                        #
+##########################
+player_options:
+#
+  oui:
+    text: Oui.
+    event: hol_out
+  non:
+    text: Non.
+    

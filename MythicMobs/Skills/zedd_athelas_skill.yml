@@ -1,0 +1,345 @@
+#######################################################
+#
+#
+##########  BLACK HOLE EREK
+#
+#
+#######################################################
+#
+Fart:
+  Cooldown: 15
+  Skills:
+  - potion{type=POISON;lvl=1;duration=30} @PlayersInRadius{r=10}
+  - potion{type=CONFUSION;lvl=2;duration=200} @PlayersInRadius{r=10}
+  - effect:particles{p=reddust;color=#40ae35;amount=5000;hS=10;vS=10;speed=0}
+MobHealth:
+  Skills:
+  - sendactionmessage{msg="&7»» &d&n<mob.hp>&r &7««"} @PIR{r=30}
+MiniShrek:
+  Skills:
+  - summon{mob=ShrekJr;amount=2;noise=5} @Self
+Tempest-Blast:
+  Skills:
+  - projectile{onTick=Tempest-Blast-Tick;onHit=Tempest-Blast-Hit;v=12;i=1;hR=1;vR=1}
+Tempest-Blast-Tick:
+  Skills:
+  - effect:particles{p=snowballpoof;amount=20;speed=0;hs=.3;vs=.3} @origin
+  - effect:particles{p=snowshovel;amount=100;speed=0.1;hs=.3;vs=.3} @origin
+  - sound{s=mob.horse.breathe;v=1} @origin
+Tempest-Blast-Hit:
+  Skills:
+  - damage{a=2}
+  - throw{velocitiy=35;velocityY=15}
+acolyte_slow:
+  Skills:
+  - damage{a=2}
+  - potion{type=SLOW;duration=50;lvl=3}
+SingleTargetFire:
+  Skills:
+  - effect:particles{p=flame;hs=1;vs=1;a=50;s=0.01;} @target  
+  - damage{a=6;ignorearmor=true;}
+  - ignite{d=60;}
+Darkness:
+  Skills:
+  - potion{type=SLOW;lvl=127;duration=40} @Self
+  - summon{mob=MarkerStand;amount=1;noise=0} @target
+  - effect:smokeswirl{duration=60;interval=1} @Self
+  - effect:particleline{particle=reddust;color=#000000;amount=10;ys=1.5} @target
+  - damage{amount=3} @target
+  - potion{type=BLINDNESS;lvl=1;duration=100} @target
+KarazschArcaneBolt:
+  Cooldown: 1
+  Skills:
+  - missile{ot=KAP_TICK;oh=KAP_HIT;v=4;i=1;hR=1;vR=1;in=0.75}
+KAP_TICK:
+  Skills:
+  - effect:particles{p=reddust;c=#5e11d8;a=10;hS=0.1;vS=0.1} @origin
+KAP_HIT:
+  Skills:
+  - effect:particles{p=reddust;c=#5e11d8;a=50;hS=1;vS=1}
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=0.01}
+  - damage{a=12;i=false}
+ 
+KarazschLaser:
+  Cooldown: 0.25
+  Conditions:
+  - targetinlineofsight false
+  Skills:
+  - missile{ot=KL_TICK;oh=KL_HIT;v=5;i=1;hR=1;vR=1;in=0.75}
+KL_TICK:
+  Skills:
+  - effect:particles{p=reddust;c=#f182ff;a=5;hS=0.1;vS=0.1} @origin
+KL_HIT:
+  Skills:
+  - heal{amount=30}
+  - effect:particles{p=reddust;c=#f182ff;a=30;hS=0.3;vS=0.8;y=1.0}
+  - effect:sound{s=entity.guardian.attack;v=0.2;p=2.0}
+MagicCloudEffect:
+  Cooldown: 0
+  Skills:
+  - skill{s=MCEffect}
+  - delay 2
+  - skill{s=MCEffect}
+  - delay 2
+  - skill{s=MCEffect}
+  - delay 2
+  - skill{s=MCEffect}
+  - delay 2
+  - skill{s=MCEffect}
+  - delay 2
+  - skill{s=MCEffect}
+  - delay 2
+  - skill{s=MCEffect}
+  - delay 2
+  - skill{s=MCEffect}
+  - delay 2
+  - skill{s=MCEffect}
+  - delay 2
+  - skill{s=MCEffect}
+MCEffect:
+  Cooldown: 0.01
+  Skills:
+  - effect:particles{p=reddust;c=#8ad9ff;a=10;hs=1.0;vs=0.5;s=0;y=1.0}
+  - effect:particles{p=reddust;c=#8ad9ff;a=10;hs=0.5;vs=1.0;s=0;y=1.0}
+  - damage{amount=0.5;ignoreArmor=true} @a[r=3]
+ 
+KarazschCloudDeath:
+  Skills:
+  - delay 600
+  - remove{m=KarazschCloud} @Self
+ 
+KarazschLaserDeath:
+  Cooldown: 0.01
+  Skills:
+  - DELAY 600
+  - remove{m=KarazschLaserMob} @Self
+VarsonFireyArmor:
+  Skills:
+  - message{msg="<mob.name> &a&oIl suffit !!"} @PlayersInRadius{r=40} >0 1
+  - message{msg="&6&oLe corps de Kara commence à emettre de la chaleur !"} @PlayersInRadius{r=40} >0 1
+  - effect:sound{s=random.anvil_use;v=1;p=1} @Self >0 1
+  - effect:particles{particle=enchantmenttable;amount=50;vSpread=0.5;hSpread=0.5;Speed=0;yOffset=1.5} @Self
+  - potion{type=SLOW;d=200;l=10} @self
+  - skill{skill=VarsonFireyArmorEffect} @Self
+VarsonFireyArmorEffect:
+  Cooldown: 0.25
+  Skills:
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - heal{amount=10}
+  - sendactionmessage{msg="&7»» &d&n<mob.hp>&r &7««"} @PIR{r=30}
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - heal{amount=10}
+  - sendactionmessage{msg="&7»» &d&n<mob.hp>&r &7««"} @PIR{r=30}
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - heal{amount=10}
+  - sendactionmessage{msg="&7»» &d&n<mob.hp>&r &7««"} @PIR{r=30}
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=75;radius=2;yoffset=1} @Self
+  - damage{a=7;i=false} @PlayersInRadius{r=4} >0 1
+  - ignite{d=400} @PlayersInRadius{r=4} >0 1
+Missile:
+  Cooldown: 0.25
+  Skills:
+  - skill{skill=MissileWARN} @Self >0 1
+  - delay 60
+  - effect:particles{particle=explode;amount=50;vSpread=0.5;hSpread=1;Speed=0.01;yOffset=20} @Self >0 1
+  - effect:particles{particle=largeexplode;amount=20;vSpread=1;hSpread=0.5;Speed=1;yOffset=20} @Self >0 1
+  - effect:sound{sound=random.explode;volume=1.5;p=0.5} @Self >0 1
+  - delay 2
+  - effect:particles{particle=explode;amount=50;vSpread=0.5;hSpread=1;Speed=0.01;yOffset=17} @Self >0 1
+  - effect:particles{particle=largeexplode;amount=20;vSpread=1;hSpread=0.5;Speed=1;yOffset=17} @Self >0 1
+  - effect:sound{sound=random.explode;volume=1.5;p=0.5} @Self >0 1
+  - delay 2
+  - effect:particles{particle=explode;amount=50;vSpread=0.5;hSpread=1;Speed=0.01;yOffset=14} @Self >0 1
+  - effect:particles{particle=largeexplode;amount=20;vSpread=1;hSpread=0.5;Speed=1;yOffset=14} @Self >0 1
+  - effect:sound{sound=random.explode;volume=1.5;p=0.5} @Self >0 1
+  - delay 2
+  - effect:particles{particle=explode;amount=50;vSpread=0.5;hSpread=1;Speed=0.01;yOffset=11} @Self >0 1
+  - effect:particles{particle=largeexplode;amount=20;vSpread=1;hSpread=0.5;Speed=1;yOffset=11} @Self >0 1
+  - effect:sound{sound=random.explode;volume=1.5;p=0.5} @Self >0 1
+  - delay 2
+  - effect:particles{particle=explode;amount=50;vSpread=0.5;hSpread=1;Speed=0.01;yOffset=8} @Self >0 1
+  - effect:particles{particle=largeexplode;amount=20;vSpread=1;hSpread=0.5;Speed=1;yOffset=8} @Self >0 1
+  - effect:sound{sound=random.explode;volume=1.5;p=0.5} @Self >0 1
+  - delay 2
+  - effect:particles{particle=explode;amount=50;vSpread=0.5;hSpread=1;Speed=0.01;yOffset=5} @Self >0 1
+  - effect:particles{particle=largeexplode;amount=20;vSpread=1;hSpread=0.5;Speed=1;yOffset=5} @Self >0 1
+  - effect:sound{sound=random.explode;volume=1.5;p=0.5} @Self >0 1
+  - delay 2
+  - effect:particles{particle=explode;amount=50;vSpread=0.5;hSpread=1;Speed=0.01;yOffset=2} @Self >0 1
+  - effect:particles{particle=largeexplode;amount=20;vSpread=1;hSpread=0.5;Speed=1;yOffset=2} @Self >0 1
+  - effect:sound{sound=random.explode;volume=1.5;p=0.5} @Self >0 1
+  - delay 2
+  - effect:sound{sound=random.explode;volume=2;p=0.5} @Self >0 1
+  - effect:sound{sound=random.explode;volume=2;p=0.5} @Self >0 1
+  - effect:sound{sound=random.explode;volume=2;p=0.5} @Self >0 1
+  - effect:particles{particle=flame;amount=100;vSpread=3;hSpread=1;Speed=1;yOffset=0} @Self >0 1
+  - effect:particles{particle=smoke;amount=100;vSpread=5;hSpread=2;Speed=1;yOffset=0} @Self >0 1
+  - effect:particles{particle=lava;amount=100;vSpread=5;hSpread=2;Speed=1;yOffset=0} @Self >0 1
+  - effect:particles{particle=lava;amount=100;vSpread=7;hSpread=1;Speed=1;yOffset=0} @Self >0 1
+  - effect:particles{particle=reddust;amount=500;vSpread=3;hSpread=1;Speed=0.01;yOffset=0} @Self >0 1
+  - throw{velocity=7;velocityY=7} @LivingEntitiesInRadius{r=14} >0 1
+  - damage{a=30;i=false} @LivingEntitiesInRadius{r=5} >0 1
+  - message{msg="&6&oLa détonation a laissé des &2Résidus de poudre &6&oderrière elle..."} @PlayersInRadius{r=20} >0 0.4
+  - suicide @Self >0 1
+MissileWARN:
+  Cooldown: 0.25
+  Skills:  
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:sound{sound=note.pling;volume=2;p=2} @Self >0 1
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:sound{sound=note.pling;volume=2;p=2} @Self >0 1
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:sound{sound=note.pling;volume=2;p=2} @Self >0 1
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:sound{sound=note.pling;volume=2;p=2} @Self >0 1
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:sound{sound=note.pling;volume=2;p=2} @Self >0 1
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+  - delay 5
+  - effect:sound{sound=note.pling;volume=2;p=2} @Self >0 1
+  - effect:particlering{particle=witchMagic;amount=100;vspread=0.5;hspread=0.5;speed=0;yoffset=0;points=20;radius=5} @Self
+MissileLauncher:
+  Skills:
+  - summon{mob=0MissileMob0;amount=1;noise=5} @PlayersInRing{min=1;max=50}
+landmine:
+  Skills:
+  - message{msg="&6&oErek arme des mines dans la zone !"} @PlayersInRadius{r=25} >0 1
+  - randomskill {skills=pop1,pop2,pop3,pop4}
+  - delay 2
+  - randomskill {skills=pop1,pop2,pop3,pop4}
+pop1:
+  Skills:
+  - summon{mob=0LandMineMob0;amount=1;noise=5} @Location{c=-7407,49,3277}
+pop2:
+  Skills:
+  - summon{mob=0LandMineMob0;amount=1;noise=5} @Location{c=-7407,49,3266}
+pop3:
+  Skills:
+  - summon{mob=0LandMineMob0;amount=1;noise=5} @Location{c=-7419,49,3266}
+pop4:
+  Skills:
+  - summon{mob=0LandMineMob0;amount=1;noise=5} @Location{c=-7419,49,3277}
+MineDetonate:
+  Skills:
+  - effect:sound{sound=note.pling;volume=2;p=2} @Self >0 1
+  - effect:sound{sound=random.explode;volume=2;p=0.5} @Self >0 1
+  - effect:particles{particle=flame;amount=50;vSpread=2;hSpread=2;Speed=1;yOffset=0} @Self >0 1
+  - effect:particles{particle=smoke;amount=50;vSpread=4;hSpread=2;Speed=1;yOffset=0} @Self >0 1
+  - effect:particles{particle=lava;amount=50;vSpread=4;hSpread=2;Speed=1;yOffset=0} @Self >0 1
+  - effect:particles{particle=lava;amount=50;vSpread=6;hSpread=2;Speed=1;yOffset=0} @Self >0 1
+  - damage{a=50;i=false} @LivingEntitiesInRadius{r=5} >0 1
+  - throw{velocity=6;velocityY=6} @LivingEntitiesInRadius{r=5} >0 1
+HealthPack:
+  Skills:
+  - summon{mob=HealthPackMob;amount=1;noise=5} @Self
+  - message{msg="&6&oErek laisse tomber un &2Pack de soin &6!"} @PlayersInRadius{r=25} >0 1
+RandomPot:
+  Skills:
+  - randomskill {skills=pot1,pot2,pot3}
+  - message{msg="&6&oErek lance un flacon dans votre direction !"} @PlayersInRadius{r=25} >0 1
+pot1:
+  Skills:
+  - potion{type=CONFUSION;lvl=2;duration=200} @PlayersInRadius{r=25}
+  - message{msg="&4&oConfusion !"} @PlayersInRadius{r=25} >0 1
+pot2:
+  Skills:
+  - potion{type=BLINDNESS;lvl=1;duration=200} @PlayersInRadius{r=25}
+  - message{msg="&4&oAveuglement !"} @PlayersInRadius{r=25} >0 1
+pot3:
+  Skills:
+  - potion{type=WEAKNESS;lvl=1;duration=200} @PlayersInRadius{r=25}
+  - message{msg="&4&oFaiblesse !"} @PlayersInRadius{r=25} >0 1
+rally_call:
+  Skills:
+  - message{m="&6Le Type Louche appelle à l'aide !!"} @PlayersInRadius{r=10}
+  - rally{types=hol_add;radius=10;ot=false}

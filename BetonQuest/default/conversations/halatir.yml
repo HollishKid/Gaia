@@ -1,0 +1,54 @@
+quester: Halatir
+first: unknown,welcome,member
+stop: 'false'
+#                   #
+#                   #
+#  Options du NPC   #
+#                   #
+#                   #
+NPC_options:
+  unknown:
+    text: Je ne vous connais pas ! Allez voir l'&2Intendant &a&o!
+    conditions: '!gestionnaire'
+  welcome:
+    text: Salut jeune maquereau ! Que nous vaut ta visite ?
+    conditions: 'gestionnaire,!pecheur'
+    pointer: presentation,become_member,rien
+  pres_ok:
+    text: Ok ! Je ne vous accepterais pas dans mes eaux tant que tu ne seras pas officiellement reconnu par l'&2Intendant &a&o!
+    events: found_guild4,guild_tester
+  member_ok:
+    text: Très bien, bienvenue parmi nous ! Notre Guilde se concentre sur la Pêche et le Recyclage ! \nLe Menu de la Guilde te permet de choisir un métier parmis d'autres avantages !
+    event: pecheur
+    pointer: menu,merci
+#
+#
+# Add any guild-specific quests in pointers of "member"
+  member:
+    text: Bienvenue dans votre guilde, &2%player% &a&o!
+    conditions: pecheur
+    pointer: menu,merci
+  pecheur_menu:
+    text: Le voilà !
+    event: pecheur_menu
+#                   #
+#                   #
+# Options du Joueur #
+#                   #
+#                   #
+player_options:
+  presentation:
+    text: Je viens me présenter de la part de l'Intendant !
+    conditions: 'guilde_pecheurs'
+    pointer: pres_ok
+  become_member:
+    text: Je veux devenir membre de la Guilde des Pêcheurs !
+    condition: '!pecheur,intendant_done'
+    pointer: member_ok
+  menu:
+    text: Je voudrais accéder au Menu de la Guilde.
+    pointer: pecheur_menu
+  rien:
+    text: Je suis juste de passage...
+  merci:
+    text: Merci ! Au revoir !
