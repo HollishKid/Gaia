@@ -1,3 +1,6 @@
+#                           #
+#   PNJ Lieutenant_Hashor   #
+#                           #
 histoire_mysteria: folder histoire_mysteria1,histoire_mysteria2 delay:3
 histoire_mysteria1: 'message &2Lieutenant Hashor &f: &a&oMysteria n''est pas une ville comme les autres, elle est à l''origine de deux personnages emblématiques !'
 histoire_mysteria2: folder histoire_mysteria3,histoire_mysteria4 delay:6
