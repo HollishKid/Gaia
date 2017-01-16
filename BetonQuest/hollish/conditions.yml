@@ -1,0 +1,543 @@
+# 
+# Conditions
+#             For Gaïa
+#                       By Hollish
+#
+#
+#
+#############################################
+builder: tag builder
+builder_in: tag builder_in
+#
+day: time 5-19
+midday: time 1-23
+#
+# Mechanics
+#
+#############
+castle_door_check: party 99999 castle_door_checker count:1
+castle_door_checker: location -7013;89;2937;Gaia;7
+biblio_door_check: party 9999 biblio_door_checker count:1
+biblio_door_checker: location -6723;66;2885;Gaia;14
+sanctuary_door_check: party 9999 sanctuary_door_checker count:1
+sanctuary_door_checker: location -7110;67;2441;Gaia;20
+#
+#
+# Spirituality
+#
+#
+#
+os_have1: item bone:1
+os_have2: item bone:2
+bone_have1: item bone_charged:1
+#
+os3_hand: hand bone_gros
+#
+spirituality1: point default.spirituality 1
+spirituality100: point default.spirituality 100
+spirituality250: point default.spirituality 250
+spirituality1500: point default.spirituality 1500
+spirituality2000: point default.spirituality 2000
+spirituality3000: point default.spirituality 3000
+spirituality5000: point default.spirituality 5000
+spirituality10000: point default.spirituality 10000
+#
+#
+# Fables 
+#
+#
+fables_t1p1: tag fables_t1p1
+fables_t1p2: tag fables_t1p2
+fables_t1p3: tag fables_t1p3
+fables_t1p4: tag fables_t1p4
+fables_t1p5: tag fables_t1p5
+#
+fables_t2p1: tag fables_t2p1
+fables_t2p2: tag fables_t2p2
+fables_t2p3: tag fables_t2p3
+fables_t2p4: tag fables_t2p4
+#
+fables_t3p1: tag fables_t3p1
+fables_t3p2: tag fables_t3p2
+fables_t3p3: tag fables_t3p3
+fables_t3p4: tag fables_t3p4
+#
+# Book have
+fables_or: or fables_t1p1_have,fables_t1p2_have,fables_t1p3_have,fables_t1p4_have,fables_t1p5_have,fables_t2p1_have,fables_t2p2_have,fables_t2p3_have,fables_t2p4_have,fables_t3p1_have,fables_t3p2_have,fables_t3p3_have,fables_t3p4_have
+#
+fables_t1p1_have: item fables_t1p1
+fables_t1p2_have: item fables_t1p2
+fables_t1p3_have: item fables_t1p3
+fables_t1p4_have: item fables_t1p4
+fables_t1p5_have: item fables_t1p5
+#
+fables_t2p1_have: item fables_t2p1
+fables_t2p2_have: item fables_t2p2
+fables_t2p3_have: item fables_t2p3
+fables_t2p4_have: item fables_t2p4
+#
+fables_t3p1_have: item fables_t3p1
+fables_t3p2_have: item fables_t3p2
+fables_t3p3_have: item fables_t3p3
+fables_t3p4_have: item fables_t3p4
+
+#
+#
+# TRAIN
+#
+##########
+riding: riding minecart
+#
+tag_train_village: tag train_village
+destination_village: tag destination_village
+train_have_iron: item ironbar:3
+sanctuary_train_tag: tag sanctuary_train
+destination_sanctuary: tag destination_sanctuary
+train_have_gold: item goldbar:5
+destination_dwarf: tag destination_dwarf
+#
+# Tickets
+#
+train_ticket: tag train_ticket
+train_ticket_hand: hand train_ticket
+#
+# Location Checker
+#
+gare_loc: location -6525;59;3161;Gaia;30
+guilde_loc: location -6920;63;3169;Gaia;30
+porteo_loc: location -7055;65;3159;Gaia;30
+chateau_loc: location -6934;62;2935;Gaia;30
+porten_loc: location -6758;63;2793;Gaia;30
+gm_loc: location -6619;81;2968;Gaia;30
+dwarf_loc: location -6486;98;2771;Gaia;30
+village_loc: location -6838;69;2595;Gaia;30
+sanctuary_loc: location -7017;65;2500;Gaia;30
+#
+# Arrivées
+#
+#globales
+train_out: or train_nains,train_village,train_sanct
+train_in: or train_gare,train_guilde,train_porteo,train_chateau,train_porten,train_gm
+train_vill_or_sanct: or train_village,train_sanct
+#individuelles
+train_gare: tag train_gare
+#train_gare_loc: location -6573;59;3147;Gaia;20
+#
+train_guilde: tag train_guilde
+#train_guilde_loc: location -6913;63;3160;Gaia;20
+#
+train_porteo: tag train_porteo
+#train_porteo_loc: location -7066;65;3169;Gaia;20
+#
+train_chateau: tag train_chateau
+#train_chateau_loc: location -6948;62;2941;Gaia;20
+#
+train_porten: tag train_porten
+#train_porten_loc: location -6765;63;2804;Gaia;20
+#
+train_gm: tag train_gm
+#train_gm_loc: location -6609;81;2959;Gaia;20
+#
+train_nains: tag train_nains
+train_village: tag train_village
+train_sanct: tag train_sanct
+#
+#
+autorisation_mineur: tag autorisation_mineur
+or_in_mine_athelas: or in_mine_athelas1,in_mine_athelas2
+and_not_inmine_athelas: and !in_mine_athelas1,in_mine_athelas2
+in_mine_athelas1: region mine_athelas_mine
+in_mine_athelas2: region mine_athelas_mine2
+inside_mine: party 100 inside_mine_or count:1
+inside_mine_or: or mine_athelas1,mine_athelas2,mine_athelas3,mine_athelas4,mine_athelas5,mine_athelas6,mine_athelas7
+mine_athelas1: location -6825;56;2900;Gaia;5
+mine_athelas2: location -6840;51;2887;Gaia;10
+mine_athelas3: location -6860;51;2882;Gaia;10
+mine_athelas4: location -6880;54;2877;Gaia;7
+mine_athelas5: location -6892;57;2873;Gaia;5
+mine_athelas6: location -6831;50;2877;Gaia;11
+mine_athelas7: location -6815;57;2907;Gaia;6
+mine_obj_distance_exe: location -6850;57;2888;Gaia;60
+time_up_mine: tag time_up_mine
+#
+#
+random20: random 20-100
+random40: random 40-100
+random60: random 60-100
+random80: random 80-100
+random100: random 1-1
+#
+#
+#
+# Money
+#
+#
+#################
+money_1: money 1
+money_5: money 5
+money_10: money 10
+money_20: money 20
+money_25: money 25
+money_30: money 30
+money_40: money 40
+money_50: money 50
+money_90: money 90
+money_100: money 100
+money_200: money 200
+money_500: money 500
+money_1000: money 1000
+##########
+#
+# Salons
+#
+#
+###########################
+salon_biblio: or !votes200,!reput_athelas100
+#
+#
+# Votes
+#
+#
+###########################
+votes50: point default.votes 50
+votes100: point default.votes 100
+votes200: point default.votes 200
+#
+#
+# Quest Points
+#
+#
+###########################
+#
+#
+# Réputation
+#
+#
+###########################
+reput_athelas100: point default.reput_athelas 100
+#
+#
+# Prison
+#
+#
+###########################
+avertissements_5: point avertissements 5
+#
+# Mage Entry
+#              & Baguette Magique
+#
+tag_mage_entry: tag tag_mage_entry
+temple_cabin_full: party 200 in_temple_cabin count:1
+in_temple_cabin: region temple_cabin
+inv_place_1: empty 1
+mageentry_approved: tag mageentry_approved
+#
+#
+#
+wand_inventory: wand inventory
+wand_air: wand hand name:airbender
+wand_earth: wand hand name:earthbender
+wand_water: wand hand name:waterbender
+wand_fire: wand hand name:firebender
+#
+air_airblast: tag air_airblast
+air_bomb: tag air_bomb
+air_suction: tag air_suction
+air_tornado: tag air_tornado
+air_poussee: tag air_poussee
+air_shield: tag air_shield
+air_enhancedspeed: tag air_enhancedspeed
+air_scooter: tag air_scooter
+air_breathofwind: tag air_breathofwind
+#
+air_mana_200: point air_mana 200
+#
+air_mana_regen_20: point air_mana_regen 20
+#
+# Factions
+#
+air: tag air
+earth: tag earth
+water: tag water
+fire: tag fire
+#
+other_air_faction: or earth,water,fire
+other_earth_faction: or air,water,fire
+other_water_faction: or earth,air,fire
+other_fire_faction: or earth,water,air
+#
+#
+wand_hand: wand hand
+baguette_magic_missile: tag baguette_magic_missile
+baguette_flare: tag baguette_flare
+#
+# Apprenti
+#
+varko_package: tag Zedd.var_q2start
+varko_package_have: item pack_varko
+#
+# Orno
+#
+tag_orno: tag orno
+orno_book: tag orno_book
+orno_beta: tag orno_beta
+orno_book_tagged: tag orno_book_tagged
+orno_book_tagged2: tag orno_book_tagged2
+orno_book_have: item orno_book
+orno_beta_book: item orno_book_beta
+tag_orno_done: tag orno_done
+tag_orno_end: tag orno_end
+tag_orno_beta: tag orno_beta
+#
+# Erudit de l'Air
+#
+tag_erudit_book: tag erudit_book
+erudit_book_have: item book_and_quill
+tag_erudit_air: tag erudit_air
+tag_erudit_air_student: tag erudit_air_student
+airtemple_magic_learning: tag airtemple_magic_learning
+journal_obj_airmill: journal journal_obj_airmill
+and_milo_bumi_tenzin: and tag_milo,tag_bumi,tag_tenzin
+tag_milo: tag milo
+tag_bumi: tag bumi
+tag_tenzin: tag tenzin
+#
+# Air Temple
+#
+#
+# Journal
+journal_findaang: journal journal_findaang
+#
+air_obj_distance_exe: region air_temple
+air_parcours_occupied: party 9999 air_parcours_occupied_exe count:1
+air_parcours_occupied2: party 9999 air_parcours_occupied_exe count:2
+air_parcours_occupied_exe: region air_parcours
+tag_moine_air: tag moine_air
+tag_aang: tag aang
+livre_air: tag livre_air
+milo_fiole: tag milo_fiole
+fiole_have: item fiole:1
+fiole_hand: hand fiole
+fiole_air_have: item fiole_air:1
+milo_fiole1: tag milo_fiole1
+region_east: region east
+tag_milo_ardere: tag milo_ardere
+ardere_in_progress: journal journal_fiole_sommet_done
+fiole_air_calmed_have: item fiole_air_calmed
+tag_ardere_aang: tag tag_ardere_aang
+aang_baton_have: item baton
+tag_aang_baton: tag tag_aang_baton
+empty_1: empty 1
+ingredients_air_wand: and aang_baton_have,fiole_air_calmed_have,empty_1
+air_wand: tag air_wand
+#
+# Erudits (autres, tempo)
+#
+earthtemple_magic_learning: tag earthtemple_magic_learning
+firetemple_magic_learning: tag firetemple_magic_learning
+watertemple_magic_learning: tag watertemple_magic_learning
+tag_erudit_eau: tag erudit_eau
+tag_erudit_terre: tag erudit_terre
+tag_erudit_feu: tag erudit_feu
+#
+#
+# Hollish
+#           JARVIS
+#
+hollish: tag hollish
+hollish_here: party 500 inside_louvre any:hollish count:2
+inside_louvre: region pre_louvre
+screen_on: testforblock -9731;81;2362;Gaia STONE
+#
+# 
+#
+#  Ingor 
+#
+#
+##################################
+tag_casar: tag casar
+tag_nauco: tag nauco
+stone_chateau_nain: item stone:50,stone_bricks:10,stone_stairs:5
+journal_nauco_pierre: journal journal_nauco_pierre
+nauco_weapons: and nauco_weapons1,nauco_weapons2
+nauco_weapons1: tag nauco_weapons1
+nauco_weapons2: tag nauco_weapons2
+journal_nauco_weapons_done: journal journal_nauco_weapons_done
+tag_sancossi: tag sancossi
+tag_sancossi_done: tag sancossi_done
+tag_sancossi_done_tempo: tag sancossi_done_tempo
+#
+#
+dwarf_hall: tag dwarf_hall
+journal_norno: journal journal_norno
+tag_norno: tag norno
+#
+# New Castle Tester
+#
+dwarf_bridge1_tag: tag dwarf_bridge1
+dwarf_bridge2_tag: tag dwarf_bridge2
+dwarf_castle_occupied: party 9999 dwarf_castle_occupied_exe count:1
+dwarf_castle_occupied_exe: region dwarf_castle
+#
+or_dwarf_castle_phase0_sancossi: or tag_sancossi_done,dwarf_castle_phase0
+dwarf_castle_phase0: tag dwarf_castle_phase0
+dwarf_castle_phase1: tag dwarf_castle_phase1
+dwarf_castle_phase2: tag dwarf_castle_phase2
+dwarf_castle_phase3: tag dwarf_castle_phase3
+dwarf_castle_phase4: tag dwarf_castle_phase4
+dwarf_castle_phase5: tag dwarf_castle_phase5
+#
+journal_norno: journal journal_norno
+journal_norno_trans: journal journal_norno_trans
+journal_norno1: journal journal_norno1
+journal_norno2: journal journal_norno2
+journal_norno3: journal journal_norno3
+journal_norno4: journal journal_norno4
+journal_norno5: journal journal_norno5
+#
+planks1000: item planks:1000
+stone2000: item stone:2000
+and_third_norno: and stone_bricks50,stone_stairs25,chest10,bed5
+stone_bricks50: item stone_bricks:50
+stone_stairs25: item stone_stairs:25
+chest10: item chest:10
+bed5: item bed:5
+and_fourth_norno: and stone_bricks100,ironbar33,goldbar10,oak_door5
+stone_bricks100: item stone_bricks:100
+ironbar33: item ironbar:33
+goldbar10: item goldbar:10
+oak_door5: item oak_door:5
+and_statue_norno: and stone_bricks250,ironbar50,goldbar25,diamondblock5,emeraldblock2
+stone_bricks250: item stone_bricks:250
+ironbar50: item ironbar:50
+goldbar25: item goldbar:25
+diamondblock5: item diamond_block:5
+emeraldblock2: item emerald_block:2
+#
+#
+tag_casar_killingspree: tag casar_killingspree
+journal_killed_spree: journal journal_killed_spree
+journal_north_bridge_repair: journal journal_north_bridge_repair
+north_bridge_repair_have: and stone_bricks200,planks100
+stone_bricks200: item stone_bricks:200
+planks100: item planks:100
+#
+# 
+#
+#  JEUX 
+#
+#
+##################################
+assault_started: testforblock -6591;75;2917;Gaia GLOWSTONE
+#
+#
+#
+# OLD STUFF
+uhc_tag: tag uhc
+uhc_in: region uhc
+uhc_in_lobby: region uhc_lobby
+uhc_outside: or uhc_in_lobby,!uhc_in
+uhc_players_left_check: party 5000 uhc_in,!uhc_in_lobby count:2
+uhc_players_left_check1: party 5000 uhc_in,!uhc_in_lobby,!uhc_team1 count:1
+uhc_players_left_check2: party 5000 uhc_in,!uhc_in_lobby,!uhc_team2 count:1
+uhc_players_left_check3: party 5000 uhc_in,!uhc_in_lobby,!uhc_team3 count:1
+uhc_players_left_check4: party 5000 uhc_in,!uhc_in_lobby,!uhc_team4 count:1
+#
+tag_uhc: tag uhc
+games_launched: testforblock -6589;70;2917;Gaia REDSTONE_BLOCK
+games_started: testforblock -6587;66;2913;Gaia REDSTONE_BLOCK
+#
+# Rules
+#
+#
+#General
+uhc_dynmaphide: testforblock -6590;66;2911;Gaia REDSTONE_BLOCK
+uhc_mobspawning: testforblock -6591;66;2911;Gaia REDSTONE_BLOCK
+#Time
+uhc_time20: testforblock -6590;66;2920;Gaia REDSTONE_BLOCK
+uhc_time30: testforblock -6591;66;2920;Gaia REDSTONE_BLOCK
+uhc_time40: testforblock -6592;66;2920;Gaia REDSTONE_BLOCK
+uhc_time50: testforblock -6593;66;2920;Gaia REDSTONE_BLOCK
+uhc_time60: testforblock -6594;66;2920;Gaia REDSTONE_BLOCK
+#
+#Types of Games
+#
+uhc_teams: or games_uhc_team2,games_uhc_team3,games_uhc_team4
+uhc_teams3: or games_uhc_team3,games_uhc_team4
+games_uhc_1: testforblock -6587;66;2914;Gaia REDSTONE_BLOCK
+games_uhc_team2: testforblock -6587;66;2915;Gaia REDSTONE_BLOCK
+games_uhc_team3: testforblock -6587;66;2916;Gaia REDSTONE_BLOCK
+games_uhc_team4: testforblock -6587;66;2917;Gaia REDSTONE_BLOCK
+#
+#Inscription
+#
+has_team: or uhc_team1,uhc_team2,uhc_team3,uhc_team4,has_place
+uhc_team1: tag uhc_team1
+uhc_team2: tag uhc_team2
+uhc_team3: tag uhc_team3
+uhc_team4: tag uhc_team4
+uhc_not_team1: or uhc_team2,uhc_team3,uhc_team4
+uhc_not_team2: or uhc_team1,uhc_team3,uhc_team4
+uhc_not_team3: or uhc_team1,uhc_team2,uhc_team4
+uhc_not_team4: or uhc_team1,uhc_team2,uhc_team3
+#
+# Individuel
+#
+has_place: or uhc_place1,uhc_place2,uhc_place3,uhc_place4,uhc_place5,uhc_place6,uhc_place7,uhc_place8,uhc_place9,uhc_place10,uhc_place11,uhc_place12,uhc_place13,uhc_place14,uhc_place15,uhc_place16,uhc_place17,uhc_place18,uhc_place19,uhc_place20
+uhc_place1: tag uhc_place1
+uhc_place2: tag uhc_place2
+uhc_place3: tag uhc_place3
+uhc_place4: tag uhc_place4
+uhc_place5: tag uhc_place5
+uhc_place6: tag uhc_place6
+uhc_place7: tag uhc_place7
+uhc_place8: tag uhc_place8
+uhc_place9: tag uhc_place9
+uhc_place10: tag uhc_place10
+uhc_place11: tag uhc_place11
+uhc_place12: tag uhc_place12
+uhc_place13: tag uhc_place13
+uhc_place14: tag uhc_place14
+uhc_place15: tag uhc_place15
+uhc_place16: tag uhc_place16
+uhc_place17: tag uhc_place17
+uhc_place18: tag uhc_place18
+uhc_place19: tag uhc_place19
+uhc_place20: tag uhc_place20
+#
+#Team1
+uhc_team1_full: and uhc1,uhc2,uhc3,uhc4,uhc5
+uhc1: testforblock -6590;71;2911;Gaia REDSTONE_BLOCK
+uhc2: testforblock -6590;71;2912;Gaia REDSTONE_BLOCK
+uhc3: testforblock -6590;71;2913;Gaia REDSTONE_BLOCK
+uhc4: testforblock -6590;71;2914;Gaia REDSTONE_BLOCK
+uhc5: testforblock -6590;71;2915;Gaia REDSTONE_BLOCK
+#Team2
+uhc_team2_full: and uhc6,uhc7,uhc8,uhc9,uhc10
+uhc6: testforblock -6590;71;2919;Gaia REDSTONE_BLOCK
+uhc7: testforblock -6590;71;2920;Gaia REDSTONE_BLOCK
+uhc8: testforblock -6590;71;2921;Gaia REDSTONE_BLOCK
+uhc9: testforblock -6590;71;2922;Gaia REDSTONE_BLOCK
+uhc10: testforblock -6590;71;2923;Gaia REDSTONE_BLOCK
+#Team3
+uhc_team3_full: and uhc11,uhc12,uhc13,uhc14,uhc15
+uhc11: testforblock -6590;69;2911;Gaia REDSTONE_BLOCK
+uhc12: testforblock -6590;69;2912;Gaia REDSTONE_BLOCK
+uhc13: testforblock -6590;69;2913;Gaia REDSTONE_BLOCK
+uhc14: testforblock -6590;69;2914;Gaia REDSTONE_BLOCK
+uhc15: testforblock -6590;69;2915;Gaia REDSTONE_BLOCK
+#Team4
+uhc_team4_full: and uhc16,uhc17,uhc18,uhc19,uhc20
+uhc16: testforblock -6590;69;2919;Gaia REDSTONE_BLOCK
+uhc17: testforblock -6590;69;2920;Gaia REDSTONE_BLOCK
+uhc18: testforblock -6590;69;2921;Gaia REDSTONE_BLOCK
+uhc19: testforblock -6590;69;2922;Gaia REDSTONE_BLOCK
+uhc20: testforblock -6590;69;2923;Gaia REDSTONE_BLOCK
+#
+# TIMER
+#
+uhc_var1: testforblock -6596;66;2916;Gaia REDSTONE_BLOCK
+uhc_var2: testforblock -6596;66;2917;Gaia REDSTONE_BLOCK
+uhc_var3: testforblock -6596;66;2918;Gaia REDSTONE_BLOCK
+uhc_var4: testforblock -6596;66;2919;Gaia REDSTONE_BLOCK
+uhc_var5: testforblock -6596;66;2920;Gaia REDSTONE_BLOCK

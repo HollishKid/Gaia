@@ -1,0 +1,50 @@
+quester: Bibliothécaire
+first: hello
+stop: 'false'
+########
+#      #
+#  NPC #
+#      #
+########
+NPC_options:
+  hello:
+    text: Bonjour à vous &2%player% &a&o! En quoi puis-je vous aider ?
+    pointer: endroit,livre,livre_rare,auteur
+  endroit_rep:
+    text: Vous êtes à la &dBibliothèque d'Athelas&a&o, le plus ancien des lieux du Savoir sur Gaïa.
+  livre_rep:
+   text: Vous pourrez très bientôt emprunter la vaste collection de cette Bibliothèque. \nPour l'instant vous devrez vous contenter de quelques extraits. Cliquez sur une étagère de livres pour voir par vous même !
+  physicien_book:
+    conditions: lauvel.Physicien_tag
+    text: Bien sur, quel est ce livre ?
+    pointer: heimer
+  heimer_direction:
+    text: Hmm, ce livre est ancien. il devrait ce trouver dans la petit salle sur les étagère "Physique".
+    pointer: heimer_merci
+  livre_rare_rep:
+    text: Il existe une rare collection des Fables de LaFontaine. \nCes volumes sont dispersés dans beaucoup de collections privées sur Gaïa. \nCherchez ces volumes et vous vous verrez plus Sage !
+  auteur_rep:
+    text: Vous pouvez les poser dans le coffre à côté. \nLe livre sera regardé par un admin et sera ajouté à la Collection une fois approuvé. \nSachez que vous pourrez être payé si votre livre est approuvé !
+############
+#          #
+#  JOUEUR  #
+#          #
+############
+player_options:
+  endroit:
+    text: Quel est cet endroit ?
+    pointer: endroit_rep
+  livre:
+    text: Je suis à la recherche d'un livre spécifique...
+    pointer: livre_rep,physicien_book
+  heimer:
+    text: Le livre que je recherche ce nomme "Etudes des portails" de "Heimer.
+    pointer: heimer_direction
+  heimer_merci:
+    text: je vous remercie pour votre aide.
+  livre_rare:
+    text: Existe-t-il des livres rares, de grande valeur ?
+    pointer: livre_rare_rep
+  auteur:
+    text: Je voudrais déposer un livre, écrit de ma main dans la collection de la Bibliothèque.
+    pointer: auteur_rep

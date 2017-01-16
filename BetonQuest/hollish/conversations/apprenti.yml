@@ -1,0 +1,90 @@
+quester: Apprenti
+first: hello
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  hello:
+    text: Bonjour à vous &2%player% &a&o!
+    pointer: baguette,spirituality,varko,bye
+  spirituality_rep:
+    text: Que voulez vous savoir ?
+    pointer: spiritxp,whycharge,whattodo,spirituality_win
+  whycharge_rep:
+    text: Une fois un os chargé, vous pouvez l'enterrer dans un bloc d'herbe et ainsi augmenter vos points de Spiritualité. \nAttention tout de même, si vous trouvez ou obtenez des Os Chargés autrement que par un moine, vous devrez parler à l'un d'eux pour pouvoir enterrer ces Os Chargés !
+  whattodo_rep:
+    text: Les points de Spiritualité permettent d'augmenter vos compétences grâce à la Magie. Je suis en charge de vous offrir ce transfert de Spiritualité en Expérience !
+    pointer: spiritxp,bye
+  spiritxp_rep:
+    text: Très bien, voici l'interface d'échange.
+    events: spiritgui
+  baguette_rep:
+    text: Avec plaisir, que souhaitez vous savoir sur la Baguette Magique ?
+    pointer: lancer,changer
+  lancer_rep:
+    text: Pour lancer un sort, il vous suffit d'avoir la &dBaguette Magique &a&oen main et de faire un clic gauche ! Votre sort actif sera lancé.
+  changer_rep:
+    text: En ayant la &dBaguette Magique &a&oen main, cliquez sur la touche pour jeter des objets. \nComme votre &dBaguette ne peut pas être jetée, vous activerez le menu rapide de sélection des Sorts. \nPour ouvrir l'inventaire complet, appuyer sur la touche de votre inventaire en ayant le menu de sélection rapide des sorts activé.
+#
+#
+#
+  have:
+    text: Très bien, passez le moi ! \nHum, je vois... \n&2Varko &a&ome fait savoir que des Aventuriers de sa Guilde ont trouvé un os particulier sur le lointain Continent de l'Est. \nCet os semble particulièrement chargé en Spiritualité. Tenez ce &dGrand Os &a&oet amenez le au &2Moine François &a&oà &dAthelas&a&o, il en saura davantage !
+    condition: varko_package_have
+    event: varko_pack_delivered
+  no_have:
+    text: Il semblerait que vous n'ayez pas de paquet sur vous...
+    condition: '!varko_package_have'
+#
+  spirituality_win_rep:
+    text: Je connais un rituel qui vous permet de gagner plus de Spiritualité. Il vous suffit de vous accroupir dans un Spiritualium pendant 10 secondes. \nAinsi vous gagnerez deux fois plus de Spiritualité pendant 30 minutes lorsque vous enterez un Os Chargé !
+###########
+#         #
+# Joueur  #
+#         #
+###########
+player_options:
+  bye:
+    text: Au revoir ! 
+  baguette:
+    text: Pourriez vous m'expliquer davantage sur une Baguette Magique ?
+    condition: mageentry_approved
+    pointer: baguette_rep
+  lancer:
+    text: Comment lancer un sort ?
+    pointer: lancer_rep
+  changer:
+    text: Comment changer le sort actif sur ma Baguette Magique ?
+    pointer: changer_rep
+#
+#
+#
+#
+#
+#
+  spirituality:
+    text: Je voudrais en savoir un peu plus sur la spiritualité.
+    pointer: spirituality_rep
+  whycharge:
+    text: Pourquoi charger des os ?
+    pointer: whycharge_rep
+  whattodo:
+    text: Que faire avec mes points de Spiritualité ?
+    pointer : whattodo_rep
+  spiritxp:
+    text: Je veux échanger ma Spiritualité contre de l'expérience !
+    pointer: spiritxp_rep
+#
+  spirituality_win:
+    text: Je voudrais gagner plus de Spiritualité !
+    pointer: spirituality_win_rep
+#
+#
+#
+  varko:
+    text: Varko m'a envoyé vous donner un paquet !
+    condition: varko_package
+    pointer: have,no_have

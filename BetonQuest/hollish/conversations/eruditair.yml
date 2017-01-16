@@ -1,0 +1,196 @@
+quester: 'Érudit'
+first: inconnu,porteur,connu
+stop: 'false'
+#########
+#       #
+#  NPC  #
+#       # Erudit de l'Air - Erudit Vista
+#########
+NPC_options:
+##
+#
+# Inconnu
+#         Pour les non initiés, sans baguette
+#
+##
+  inconnu:
+    text: Bien à vous, en quoi puis-je vous aider ?
+    conditions: '!mageentry_approved'
+    pointer: qui,keske,merciaurevoir
+  qui_rep:
+    text: Je suis un des 4 &3Érudits &a&odu &dSanctuaire&a&o. Je suis &dÉrudit &a&ode l'Air.
+    pointer: comment,autres
+  keske_rep:
+    text: Cet endroit est consacré à la recherche sur l'Air en tant qu'élément. J'y fais mes recherches, j'y enseigne et j'y vis. Mon rôle est aussi d'enseigner les &3Minions.
+    pointer: minions
+  comment_rep:
+    text: Cela veut dire que mes recherches portent sur l'Air en tant qu'élément consituant de notre monde. Plus particulièrement la Magie qui y est associée...
+  autres_rep:
+    text: Nous spécialisons chacun dans l'un des éléments qui composent le monde de &6Gaïa &a&o; Terre, Air, Eau et Feu.
+  minions_rep:
+    text: Je suis étonné que vous n'en ayez pas encore vu en venant ici, ce sont les apprentis du &dSanctuaire&a&o, ils sont formés pour rejoindre la hiérarchie Spirituelle et ainsi s'occuper des lieux spirituels de ce monde.
+##
+#
+# Jeune Spiritus
+#         Pour les porteurs de Baguette!
+#
+##
+  porteur:
+    text: Bien à vous &2%player%&a&o. Je sens en vous la présence d'une Spiritualité naissante...
+    conditions: 'mageentry_approved,!tag_erudit_air'
+    pointer: air1,air2,air3,air4,air5
+  faux:
+    text: Je crains que malgré cela, vous n'ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité ... Celle du Respect !
+  acceptation:
+    text: Je suis ravi d'entendre que vous me présentez ce Respect. Puis-je savoir ce qui vous amène ?
+    pointer: passer,apprentissage
+#A partir d'ici commence chaque spécialité de l'Erudit (delete me)
+  etudiant:
+    text: Ah ! Je vois... Il s'avère que je pourrais vous enseigner, votre esprit me convient, mais je ne vois pas en vous le moindre savoir pour entamer ces études. Avant de vous lancer, fabriquez vous un &dlivre avec une plume&a&o, pour prendre vos notes éventuelles !
+    conditions: '!tag_erudit_book'
+    event: tag_erudit_air
+    pointer: book_ok,book_non
+#
+  book_rep:
+    text: Vous devez fabriquer un &dlivre avec une plume &a&opour pouvoir prendre des notes au cours de vos apprentissages dans la Magie. Revenez me voir ensuite.
+#
+  ermite:
+    text: Excellent, commençons votre apprentissage !
+    events: air_folder,tag_erudit_book,book_erudit_journal_remove
+  erudit_air_student_rep:
+    text: Il se trouve sur une île, ou plutôt un banc de sable, au Sud-Est d'Athelas, au milieu de la mer !
+#
+# Connu + Livre - Rattacher tout ici sur le pointer
+#
+  connu:
+    text: Ravi de vous revoir, &2%player%&a&o, en quoi puis-je vous aider ?
+    condition: tag_erudit_air
+    pointer: book_erudit,book,apprentissage,erudit_air_student,aang,merciaurevoir
+#
+# Aang
+#
+  aang_rep:
+    text: Je ne peux pas vous croire. Vous ne pouvez pas...
+    pointer: livre_air,welldont
+#
+############
+#          #
+#  JOUEUR  #
+#          # 
+############
+player_options:
+  qui:
+    text: Qui êtes vous ?
+    pointer: qui_rep
+  keske:
+    text: Que faites vous ici ?
+    pointer: keske_rep
+  merciaurevoir:
+    text: Rien du tout, au revoir !
+  comment:
+    text: Qu'est-ce que cela veut dire ?
+    pointer: comment_rep
+  autres:
+    text: Qui sont les autres Érudits ?
+    pointer: autres_rep
+  minions:
+    text: Qui sont ces Minions ?
+    pointer: minions_rep
+##
+#
+# Formule de politesse
+#
+##
+  air1: 
+    text: C'est effectivement le cas, Érudit &6Wilya &a&o!
+    pointer: faux
+  air2: 
+    text: C'est effectivement le cas, Érudit &6Wilma &a&o!
+    pointer: faux
+  air3: 
+    text: C'est effectivement le cas, Érudit &6Vilya &a&o!
+    pointer: faux
+  air4: 
+    text: C'est effectivement le cas, Érudit &6Vilin &a&o!
+    pointer: faux
+  air5: 
+    text: C'est effectivement le cas, Érudit &6Vista &a&o!
+    pointer: acceptation
+##
+#
+# Entracte et Apprentissage
+#
+##
+  passer:
+    text: Je ne faisais que visiter les lieux...
+  apprentissage:
+    text: Je suis ici pour me présenter en tant que votre humble Étudiant.
+    pointer: etudiant
+  book_erudit:
+    text: J'ai un livre et une plume pour écrire !
+    condition: 'erudit_book_have,tag_erudit_book,!tag_erudit_air_student'
+    pointer: ermite   
+  book_ok:
+    text: Aucun problème, j'y vais de ce pas !
+    event: book_erudit,book_erudit_journal
+  book_non:
+    text: Eh, non pas tout de suite.
+  book:
+    text: Qu'est-ce que je dois faire déjà ?
+    condition: '!tag_erudit_air_student,!tag_erudit_book'
+    pointer: book_rep
+  erudit_air_student:
+    text: Où est l'Ermite dont vous m'avez parlé ?
+    conditions: 'tag_erudit_air_student,!tag_aang'
+    pointer: erudit_air_student_rep
+#
+# Post Aang - Trouvaille du TEMPLE
+#
+  aang:
+    text: J'ai trouvé le temple de l'Air !
+    conditions: 'livre_air'
+    pointer: aang_rep
+  livre_air:
+    text: Et pourtant, voici un livre pour vous le prouver !
+    condition: '!airtemple_magic_learning'
+    events: livre_air_inspection
+  welldont:
+    text: Alors ne me croyez pas !
+#######################################
+#
+#
+# SORTS A UTILISER POUR CETTE CLASSE
+#
+#
+#######################################
+#Arrow*
+#Arrow Rain*
+#Cloak
+#Disarm
+#Entangle
+#Flash Bang
+#Fling*
+#Force
+#Gatling Gun*
+#Grab
+#ICBM
+#Levitate
+#LockPick
+#Peek (regard furtif)
+#Pull
+#Push*
+#Secure
+#Silence
+#Tracking Sense
+#Whip (AIR BEGGINING)
+#Wound*
+#######################################
+#
+#
+# NOTES GENERALES SUR ORGANISATION MAGIE
+#
+#
+#######################################
+# Maître de Temple donne accès au Menu avec les Sorts achetables.
+#   Points de Spiritualité.
+# WAND UNDROPPABLE

@@ -1,0 +1,155 @@
+quester: 'Mage'
+first: inconnu,connu,connu_orno_not,connu_orno_end,back
+stop: 'false'
+#########
+#       #
+#  NPC  #
+#       #
+#########
+NPC_options:
+  inconnu:
+    text: Bienvenue en ce haut lieu, &2%player%&a&o.
+    conditions: '!tag_mage_entry,!tag_orno,!tag_orno_done,!mageentry_approved'
+    pointer: qui,quel,entrer,merciaurevoir
+  qui_rep:
+    text: Je suis un des 13 &3Mages &a&odu &dSanctuaire&a&o. Je suis chargé de l'acceuil des voyageurs en quête de spiritualité.
+    pointer: mages,spir,merciaurevoir
+  quel_rep:
+    text: On l'appelle le &dSanctuaire &a&oet sert de résidence et de lieux de travail aux 13 &3Mages&a&o. \nIl y a beaucoup de voyageurs qui viennent s'intruire et tenter de mieux comprendre le monde que &6Gaïa &a&oa créée.
+    pointer: mages,ou,spir,merciaurevoir
+  mages_rep:
+    text: Les 13 &3Mages &a&osont les plus érudits spirituels de présents sur &dGaïa &a&o. \nNous sommes chargés, par le biais du Savoir, de lutter contre l'invasion qui menace &dGaïa.
+    pointer: ou,spir,merciaurevoir
+  ou_rep:
+    text: Vous en avez un devant vous &2%player% &a&o! Je ne saurais vous dire où se trouvent les autres; nous possédons tous des pouvoirs divers, beaucoup savent se téléporter ... \nAlors les localiser tous semble impossible !
+  spir_rep:
+    text: La Spiritualité est tout ce qui ne relève pas du Physique. La Magie peut s'avérer être des moyens puissants pour évoluer dans le monde de &6Gaïa&a&o.
+    pointer: vouloir,merciaurevoir
+  entrer_rep:
+    text: Je ne peux pas vous laisser entrer, cet accès est exclusif aux 13 &3Mages&a&o.
+  vouloir_rep:
+    text: Avant que je puisse vous recommander nos &3Érudits&a&o, vous devez vous renseigner davantage sur la Magie. \nÊtes vous prêt ?
+    pointer: oui,non,pourquoi
+  oui_rep:
+    text: Pour commencer je veux vous montrer quelque chose, permettez moi de me connecter directement à votre esprit...
+    events: histoire_temple_tester
+  pourquoi_rep:
+    text: Aucun d'entre eux n'acceptera un élève sans initiation en Spiritualité d'un Mage ! \nEncore moins sans &dBaguette Magique &a&o!
+###
+#  POST-HISTOIRE
+###
+  connu:
+    text: Avant de vous rendre auprès des Érudits, allez vous documenter dans la &dLibrairie Royale d'Athelas&a&o. Adressez-vous à &2Orno&a&o, il sait que vous venez...
+    conditions: 'tag_mage_entry,!tag_orno,!tag_orno_end,!mageentry_approved'
+    events: orno_title_tag,journal_find_orno
+  connu_orno_not:
+    text: Vous n'avez pas encore été approuvé par &2Orno&a&o, sinon il me l'aurait fait savoir...
+    conditions: 'tag_mage_entry,tag_orno,!tag_orno_end'
+    pointer: orno_ou
+  orno_ou_rep:
+    text: Il se trouve à la &dLibrairie d'Athelas&a&o.
+  connu_orno_end:
+    text: Orno m'a informé de la bonne réussite de votre apprentissage pour vous adresser aux Érudits ! Il est donc temps de vous envoyer chez eux, allez les trouver ici, dans le &dSanctuaire&a&o. \nPensez à conserver les livres d'&2Orno &a&oet d'en tirer beaucoup de sagesse !
+    conditions: 'tag_mage_entry,tag_orno_end,!mageentry_approved'
+    event: journal_mageentry_del,journal_erudits,mageentry_approved,quest_point_1
+###
+#
+# Retour
+#         Jeune Spiritus, Porteur de Baguette!
+#
+###
+  back:
+    text: Quel plaisir de vous revoir &2%player% &a&o!
+    conditions: mageentry_approved
+    pointer: histoire,magie,branching_out
+  histoire_bis:
+    text: Avec plaisir, &2%player% &a&o!
+    event: histoire_folder
+  magie_apprenti:
+    text: Demandez à l'&2Apprenti &a&ode vous aider !
+  branching_out_ok:
+    text: J'ai entendu cette excellente nouvelle ! \nIl est temps que je vous donne mon feu vert pour retourner voir l'Intendant. \nVous pouvez continuer votre apprentissage au Sanctuaire avec les 3 autres Érudits.
+    events: mage_entry_branching_out
+############
+#          #
+#  JOUEUR  #
+#          #
+############
+player_options:
+  merciaurevoir:
+    text: Merci, aurevoir !
+  qui:
+    text: Qui êtes vous ?
+    pointer: qui_rep
+  quel:
+    text: Quel est cet endroit ?
+    pointer: quel_rep
+  mages:
+    text: Les 13 Mages ? Qui c'est eux ?
+    pointer: mages_rep
+  ou:
+    text: Où se trouvent ils ?
+    pointer: ou_rep
+  spir:
+    text: Qu'est-ce que vous entendez par Spiritualité ?
+    pointer: spir_rep
+  entrer:
+    text: Je voudrais accéder aux parties intérieures.
+    pointer: entrer_rep
+  vouloir:
+    text: Je voudrais en apprendre plus sur cette Spiritualité, je suis sûr que je peux en tirer des bénéfices !
+    pointer: vouloir_rep
+  oui:
+    text: Bien évidemment ! Que dois-je faire ?
+    pointer: oui_rep
+  non:
+    text: Eh ... non merci. J'ai autre chose à faire là tout de suite...
+  pourquoi:
+    text: Pourquoi est-ce que je ferais ça ?! Les Érudits ne peuvent pas m'enseigner à moi aussi ?!
+    pointer: pourquoi_rep
+  orno_ou:
+    text: Où se trouve Orno ?
+    pointer: orno_ou_rep
+###
+#
+# Retour
+#         Jeune Spiritus, Porteur de Baguette!
+#
+###
+  histoire:
+    text: Pourriez-vous me montrer à nouveau l'histoire que vous m'aviez conté, sur l'histoire de Gaïa et ses 4 Temples ?
+    pointer: histoire_bis
+  magie:
+    text: Pourrez vous m'apprendre plus sur ma Baguette Magique ?
+    pointer: magie_apprenti
+###
+#
+# Branching out to Intendant
+#
+#                 End of Bêta
+#
+###
+  branching_out:
+    text: J''ai fini ma formation avec l'Érudit de l'Air.
+    condition: airtemple_magic_learning
+    pointer: branching_out_ok
+#######################################
+#                                     #
+#                                     #
+# SORTS A UTILISER POUR CETTE CLASSE  #
+#                                     #
+#                                     #
+#######################################
+#Cat
+#Familiar & Herd & Mob
+#Flare (feu artifice) DONE
+#Gather (teleport autres joueurs)
+#Magic Missile* DONE
+#Pollinate (Goody)
+#Portal
+#Recall (teleport previous position)
+#Stash
+#Super Kill
+#Tag
+#Tornado
+#Wolf

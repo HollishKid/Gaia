@@ -1,0 +1,98 @@
+quester: Casar
+first: welcome,welcomebis
+stop: 'false'
+#                #
+
+#  Options NPC   #
+
+#                #
+NPC_options:
+  welcome:
+    text: Ô rage ! Ô désespoir ! &dIngor &a&oest en ruines !
+    condition: '!tag_casar'
+    pointer: helpyou,tantpis
+  helpyou_rep:
+    text: Si vous saviez tout ce qu'il y a à faire... \nNous arrivons à peine à tenir les défenses contre les gobelins qui arrivent du Nord. \nIl nous faudrait reprendre notre ancien château à l'Est pour pouvoir reprendre position contre ces viles créatures !
+    pointer: letsgo,tantpis
+  letsgo_rep:
+    text: Ce n'est pas si simple, le pont qui rejoint le château est cassé...
+    pointer: repaircastlebridge,tantpis
+  repaircastlebridge_rep:
+    text: Vous avez l'air motivé... C'est que vous ne savez pas à quel point le chef des Goblins, &cSancossi &a&oest féroce. \nJ'accepte votre aide néanmoins ! Parlez à &2Nauco&a&o, à côté du pont vers le château à l'Est.
+    events: tag_casar,journal_nauco
+  welcomebis:
+    text: Vous revoilà &2%player% &a&o!
+    condition: tag_casar
+    pointer: killed_sancossi,canhelptobuild,access_north,killed_spree,repair_north_bridge,bonjour
+#
+#
+#
+  killed_sancossi_rep:
+    text: C'est vrai ce que vous me dites là ?! \nSi c'est vrai, nous pourrons reprendre la rive droite et reconstruire le &2Château d'Ingor &a&o! \nPermettez moi de vous offrir un peu de mon expérience et cette humble somme d'argent en guise de remerciement. \nDe plus, vous avez maintenant accès à la Gare des Nains !
+    events: journal_backto_casar_del,sancossi_kill_rewards,tag_sancossi_done_tempo,quest_point_1,destination_dwarf
+    pointer: canhelptobuild,aurevoir
+  canhelptobuild_rep:
+    text: Vous feriez ça pour nous ? \nMerci beaucoup ! Je vous laisse désormais l'accès à notre Hall. Il se trouve juste à quelques blocs de nous. \nVous y trouverez une Banque et surtout, &2Norno&a&o, il surpervisera les travaux de rénovation du Château !
+    events: journal_norno,tag_sancossi_done_tempo_del,sancossi_done_tag_del,journal_backto_casar_del,dwarf_hall
+    pointer: entendu,aurevoir
+#
+#
+#
+  anorth_rep:
+    text: Avant de vous laisser passer je dois vous demander un dernier service. \nIl existe encore un bastion de Goblins au Nord-Ouest d'ici. Allez tuer 15 de ces viles créatures, puis revenez me voir !
+    events: journal_casar_killingspree,tag_casar_killingspree,objective_casar_killingspree,journal_casar_north_del
+  killed_spree_rep:
+    text: Très bien ! Apportez moi maintenant 200 Pierres Tailées et 100 Planches de Chêne et je ferais réparer le pont vers le Nord !
+    events: journal_north_bridge_repair,journal_killed_spree_del
+  repair_north_bridge_rep:
+    text: Passez moi ça, je fais réparer le pont. Vous avez désormais accès au Pont du Nord. \nNe prenez pas cette région à la légère, les Goblins y ont toujours le pouvoir ! \nJe vous fais don de cet argent et cette expérience !
+    events: journal_north_bridge_repair_del,take_repair_bridge,casar_price1,casar_price2,casar_price3,dwarf_bridge2_tag,entry_north_allow
+#                #
+
+# Options Joueur #
+
+#                #
+player_options:
+  helpyou:
+    text: Est-ce que je peux vous aider ?
+    pointer: helpyou_rep
+  letsgo:
+    text: Allons-y alors ! Reprenons le château !
+    pointer: letsgo_rep
+  repaircastlebridge:
+    text: Aucun souci, on répare le pont alors !
+    pointer: repaircastlebridge_rep
+  tantpis:
+    text: Je vais vite partir alors... !
+  bonjour:
+    text: Bonjour !
+  aurevoir:
+    text: Merci, Aurevoir !
+  entendu:
+    text: Je vais le vois de ce pas !
+#
+#
+#
+  killed_sancossi:
+    text: J'ai tue Sancossi !
+    condition: tag_sancossi_done,!tag_sancossi_done_tempo
+    pointer: killed_sancossi_rep
+  canhelptobuild:
+    text: Je peux vous aider à reconstruire le château si vous voulez !
+    condition: tag_sancossi_done_tempo
+    pointer: canhelptobuild_rep
+#
+#
+#
+  access_north:
+    text: Je voudrais accéder au Nord...
+    condition: 'dwarf_castle_phase4,!tag_casar_killingspree,!dwarf_bridge2_tag,!journal_killed_spree,!journal_north_bridge_repair'
+    pointer: anorth_rep
+  killed_spree:
+    text: J'ai tué les 15 Goblins !
+    condition: journal_killed_spree
+    pointer: killed_spree_rep
+  repair_north_bridge:
+    text: J'ai les matériaux pour réparer le pont vers le nord.
+    condition: north_bridge_repair_have,journal_north_bridge_repair
+    pointer: repair_north_bridge_rep

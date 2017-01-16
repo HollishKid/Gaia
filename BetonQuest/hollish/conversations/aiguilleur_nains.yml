@@ -1,0 +1,62 @@
+quester: 'Aiguilleur'
+first: hello
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  hello:
+    text: Bonjour &2%player% &a&o! En quoi puis-je vous aider ?
+    pointer: voyage,aide
+#
+# AIDE
+#
+  aide_rep:
+    text: Que voulez vous savoir ?
+    pointer: more,ticket,train
+  more_rep:
+    text: Nous vous ammenons dans les endroits qui vous sont connus. \nAllez découvrir le monde !
+  ticket_rep:
+    text: Il vous suffit de me demander de voyager ! \nVotre ticket sera valable 15 minutes sur tout le réseau. Parlez à un Aiguilleur avant de monter dans un train.
+  train_rep:
+    text: Il fonctionne avec un système mécanique complexe... légèrement aidé par un peu de magie bien dosé...
+#
+# Voyage
+#
+  voyage_rep:
+    text: Très bien, voici vos options.
+    conditions: destination_dwarf
+    events: open_train_gui
+  voyage_rep_not:
+    text: Vous n'avez pas encore débloqué cette gare. \nVous devrez d'abord aider les Nains d'Ingor !
+    conditions: '!destination_dwarf'
+    events: open_train_gui
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+#
+# AIDE
+#
+  aide:
+    text: Je voudrais un renseignement sur les trains.
+    pointer: aide_rep
+  more:
+    text: Comment avoir plus de destinations ?
+    pointer: more_rep
+  ticket:
+    text: Comment acheter un ticket ?
+    pointer: ticket_rep
+  train:
+    text: Comment fonctionne votre train ?
+    pointer: train_rep
+#
+# DESTINATIONS
+#
+  voyage:
+    text: Je voudrais voyager en train.
+    pointer: voyage_rep,voyage_rep_not

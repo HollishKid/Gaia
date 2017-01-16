@@ -1,0 +1,47 @@
+quester: Gardien
+first: hello
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  hello:
+    text: Bonjour &2%player% &a&o!
+    pointer: qui,miner,bye
+  qui_rep:
+    text: Je suis le Gardien de la Mine ! Pour des raisons de sécurité, vous ne pouvez pas miner avant de vous enregistrer ! Je veille à ce que tout le monde ressorte vivant !
+  miner_rep:
+    text: Bien entendu ! Vous devez &d¤100 &a&opour un accès de &d10 minutes&a&o. Cela vous convient ?
+    pointer: oui,non
+  oui_rep1:
+    text: Bonne mine à vous !
+    condition: money_100
+    event: mine_acces_folder
+  oui_rep2:
+    text: Il semblerait que vous n'ayez pas assez d'argent !
+    condition: '!money_100'
+  non_rep:
+    text: Ah, tant pis pour vous. Les accès privilégiés se gagnent vous savez !
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  qui:
+    text: Qui êtes vous ?
+    pointer: qui_rep
+  miner:
+    text: Je souhaiterais miner dans la mine.
+    conditions: '!autorisation_mineur'
+    pointer: miner_rep
+  oui:
+    text: Oui! Voici &d¤100
+    pointer: oui_rep1,oui_rep2
+  non:
+    text: Il est hors de question que je paye cela !
+    pointer: non_rep
+  bye:
+    text: Au revoir !
