@@ -61,14 +61,16 @@ tour_du_village_done3: journal del journal_superieur_quete
 #                  #
 #   PNJ Aktarion   #
 #                  #
-akt_qE1: folder akt_questE11,akt_questE12,akt_questE13,akt_questE14
+akt_qE1: folder akt_qE11,akt_qE12,akt_qE13,akt_qE14,akt_qE15
 akt_qE11: objective start akt_quest
 akt_qE12: 'message &dAprès la demande d''Aktarion qui vous a donné une destination, vous vous mettez vite en route !'
 akt_qE13: tag add akt_qE1
 akt_qE14: journal add akt_qE1
+akt_qE15: compass add akt_quest
 #
-akt_objq1: folder akt_objkillB1,akt_objq1m
+akt_objq1: folder akt_objkillB1,akt_objq1m,akt_objq1c
 akt_objq1m: 'message &dVous êtes arrivés, tuez quelques brigands pour retrouver l''objet d''Aktarion'
+akt_objq1c: compass del akt_quest
 #akt_objkill: objective start akt_objkill
 akt_objkillB1: objective start akt_objkillB1
 Bkill1: message &4Brigand&6&o tués 1/10
@@ -93,26 +95,30 @@ Bkill10: message &4Brigand&6&o tués 10/10
 #
 Bkilled: tag add Bkilled
 #
-akt_qE2: folder akt_qE21,akt_qE22,akt_qE23,akt_qE24,akt_qtE25
+akt_qE2: folder akt_qE21,akt_qE22,akt_qE23,akt_qE24,akt_qE25,akt_qE26
 akt_qE21: message &dVous vous hâtez de retourner voir Aktarion après avoir retrouver son objet
 akt_qE22: tag del akt_qE1
 akt_qE23: tag add akt_qE2
 akt_qE24: journal del akt_qE1
 akt_qE25: journal add akt_qE2
+akt_qE26: compass add aktarion
 #
-akt_qdone: folder akt_qdone1,akt_qdone2,akt_qdone3,akt_qdone4,akt_qdone5,akt_qdone6
+akt_qdone: folder akt_qdone1,akt_qdone2,akt_qdone3,akt_qdone4,akt_qdone5,akt_qdone6,akt_qdone7,akt_qdone8
 akt_qdone1: take akt_tool:1
 akt_qdone2: journal del akt_qE2
 akt_qdone3: tag del akt_qE2
-akt_qdone4: tag add akt_qdone
-akt_qdone5: 'command cc open aktarion_reward.yml %player%'
-akt_qdone6: command eco give %player% 500
-akt_rew1: 'command mm items %player% give korutsu_sword 1'
-akt_rew2: 'command mm items %player% give ardenko_axe 1'
-akt_rew3: 'command mm items %player% give imiko_bow 1'
+akt_qdone4: tag del Bkilled
+akt_qdone5: tag add akt_qdone
+akt_qdone6: 'command cc open aktarion_reward.yml %player%'
+akt_qdone7: command eco give %player% 500
+akt_qdone8: compass del aktarion
+akt_rew1: 'command mm items give %player% korutsu_sword 1'
+akt_rew2: 'command mm items give %player% ardenko_axe 1'
+akt_rew3: 'command mm items give %player% imiko_bow 1'
 #                 #
 #   PNJ Loukran   #
 #                 #
+louk_dv: tag add louk_dv
 louk_qE1: folder louk_qE11,louk_qE12,louk_qE13,louk_qE14
 louk_qE11: objective start louk_qE1
 louk_qE12: 'message &dAllez voir dans le camp des brigands pour trouver l''emplacement de la cargaison'
@@ -193,12 +199,55 @@ louk_qE33: tag add louk_qE3
 louk_qE34: journal del louk_qE2
 louk_qE35: journal add louk_qE3
 #
+louk_qE4: folder louk_qE41,louk_qE42,louk_qE43,louk_qE44,louk_qE45,louk_qE46,louk_qE47
+louk_qE41: tag del louk_qE3
+louk_qE42: tag add louk_qE4 
+louk_qE43: 'message &a&oVous venez de trouver une plante ainsi qu''un vieux journal'
+louk_qE44: journal del louk_qE3
+louk_qE45: journal add louk_qE4
+louk_qE46: give louk_qpr
+louk_qE47: give cargaison_j
+#
 louk_qpr: take louk_qpr
 louk_qjc: take cargaison_j
 #
-louk_qdone: folder louk_qdone1,louk_qdone2
-louk_qdone1: tag del louk_qE3
+louk_qdone: folder louk_qdone1,louk_qdone2,louk_qdone3,louk_qdone4
+louk_qdone1: tag del louk_qE4
 louk_qdone2: tag add louk_qdone
+louk_qdone3: journal del louk_qE4
+louk_qdone4: command eco give %player% 1000
+#louk_qdone6: 'command cc open loukran_reward.yml %player%'
+#               #
+#   PNJ Tatsu   #
+#               #
+tatsu_dv: tag add tatsu_dv
+#
+tatsu_q1: folder tatsu_q11,tatsu_q12,tatsu_q13,tatsu_q14,tatsu_q15
+tatsu_q11: objective start tatsu_q1
+tatsu_q12: 'message &a&oAllez chercher l''objet de Tatsu'
+tatsu_q13: tag add tatsu_q1
+tatsu_q14: journal add tatsu_q1
+tatsu_q15: compass add tatsu_q1
+#
+tatsu_q1_1: folder tatsu_q1_11,tatsu_q1_12,tatsu_q1_13,tatsu_q1_14,tatsu_q1_15,tatsu_q1_16,tatsu_q1_17
+tatsu_q1_11: 'message &a&oVous avez trouvé ce que Tatsu a perdu'
+tatsu_q1_12: tag del tatsu_q1
+tatsu_q1_13: tag add tatsu_q1_1
+tatsu_q1_14: journal del tatsu_q1
+tatsu_q1_15: journal add tatsu_q1_1
+tatsu_q1_16: compass del tatsu_q1
+tatsu_q1_17: compass add tatsu_q1_1
+#
+tatsu_qdone: folder tatsu_qdone1,tatsu_qdone2,tatsu_qdone3,tatsu_qdone4,tatsu_qdone5,tatsu_qdone6
+tatsu_qdone1: tag del tatsu_q1_1
+tatsu_qdone2: tag add tatsu_qdone
+tatsu_qdone3: journal del tatsu_q1_1
+tatsu_qdone4: compass del tatsu_q1_1
+tatsu_qdone5: 'command eco give %player% 500'
+tatsu_qdone6: 'command cc open aktarion_reward.yml %player%'
+tatsu_rew1: 'command mm items give %player% korutsu_sword 1'
+tatsu_rew2: 'command mm items give %player% ardenko_axe 1'
+tatsu_rew3: 'command mm items give %player% imiko_bow 1'
 #
 # Mechanisme de Porte
 #
