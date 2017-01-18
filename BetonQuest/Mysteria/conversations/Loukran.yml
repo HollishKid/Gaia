@@ -1,5 +1,5 @@
 quester: Loukran
-first: welcome
+first: welcome,welcomebis
 stop: 'false'
 #
 # Options NPC
@@ -7,7 +7,11 @@ stop: 'false'
 NPC_options:
   welcome:
     text: Bienvenue à vous %player% ! Je vois que vous êtes nouveau en ces lieux !
-    conditions: voir_superieur
+    events: louk_dv
+    conditions: 'voir_superieur,!louk_dv'
+    pointer: salut
+  welcomebis:
+    text: Vous revoilà ! Puis-je faire quelque chose pour vous ?
     pointer: salut,quest_done
   selection:
     text: Je n'y suis pas contre, cela nous permettra de faire connaissances !
@@ -63,7 +67,7 @@ player_options:
     pointer: quest_rep
   quest_done:
     text: J'ai trouvé l'une de vos plantes !
-    conditions: louk_qE3
+    conditions: louk_qE4
     pointer: quest_done_rep
   quest_done1:
     text: Il y avait aussi ce journal, je ne sais pas si il pourrait vous être utile.

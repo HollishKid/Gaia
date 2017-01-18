@@ -7,7 +7,7 @@ stop: 'false'
 NPC_options:
   welcome:
     text: Hey ! T'es le nouveau venu qui arrive d'Athelas c'est ça ?
-    conditions: 'voir_superieur_done,!akt_qE1'
+    conditions: 'voir_superieur_done,!akt_qE1,!akt_qE2,!akt_qdone'
     pointer: yop
   welcomebis:
     text: Hey %player% ! Comment se passe ton aventure ?
@@ -69,7 +69,7 @@ player_options:
     pointer: quest_done_rep
   hist_akt:
     text: Puis-je vous poser mes questions maintenant ?
-    conditions: akt_quest_done
+    conditions: akt_qdone
     pointer: hist_akt_rep
   who:
     text: Qui êtes-vous réellement dans ce village ?
