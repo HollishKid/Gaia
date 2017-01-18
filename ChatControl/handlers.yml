@@ -97,3 +97,7 @@ teleportlogger:
 compliment:
   Execute_Commands:
     - bq point %player add compliment 1
+    
+ilce:
+  Execute_Commands:
+    - bq event %player hollish.ilce

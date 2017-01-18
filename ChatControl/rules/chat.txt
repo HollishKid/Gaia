@@ -374,7 +374,7 @@ then warn &d&oSi vous avez des problèmes de &aPNJ&d&o, pensez à &aconsulter l'
 #Ilcë
 match (i+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(c+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)
 then deny
-then warn &a&oRien de particulier ne semble se passer. Je n'ai certainnement pas assez de Force Spirituelle ni de connaissances pour faire apparaître une Baguette Magique !
+handle as ilce
 
 #
 #
