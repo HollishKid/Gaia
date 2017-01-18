@@ -35,3 +35,7 @@ louk_qE3: action right 58 loc:-8798;79;4684;Gaia;3 events:louk_qE4
 louk_qch1: action right 54 loc:-8851;77;4540;Gaia;3 events:louk_chest_tester1
 louk_qch2: action right 54 loc:-8881;93;4561;Gaia;3 events:louk_chest_tester2 cancel
 louk_qch3: action right 54 loc:-8829;84;4500;Gaia;3 events:louk_chest_tester3 cancel
+#
+# Tatsu #
+#
+tatsu_q1: action right 58 loc:-8677;74;4410;Gaia;3 conditions:tatsu_q1 events:tatsu_q1_1

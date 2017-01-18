@@ -25,6 +25,11 @@ louk_ch3: tag louk_ch3
 louk_qE2: tag louk_qE2
 louk_qE3: tag louk_qE3
 louk_qE4: tag louk_qE4
+#   Tatsu   #
+tatsu_dv: tag tatsu_dv
+tatsu_q1: tag tatsu_q1
+tatsu_q1_1: tag tatsu_q1_1
+tatsu_qdone: tag tatsu_qdone
 #    Porte 1  #
 acces_porte1: tag acces_porte1
 porte1_door_check: party 9999 porte1_door_checker count:1

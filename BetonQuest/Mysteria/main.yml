@@ -5,6 +5,7 @@ npcs:
   '280': Lieutenant_Hashor
   '268': Aktarion
   '278': Loukran
+  '201': Tatsu
 compass:
   akt_quest:
     name: '&aCamp de &4Brigands'
@@ -14,4 +15,14 @@ compass:
   aktarion:
     name: '&9Aktarion'
     location: -8943;85;4628;Gaia
+    item: scroll
+compass:
+  tatsu_q1:
+    name: '&aCave abandonnée'
+    location: -8676;79;4407;Gaia
+    item: scroll
+compass:
+  tatsu_q1_1:
+    name: '&3Tatsu'
+    location: -8692;97;4432;Gaia
     item: scroll
