@@ -1,0 +1,2 @@
+#   Tatsu   "
+tatsu_q1: action right 58 loc:-100;200;300;world;5 conditions:tatsu_q1 events:tatsu_q1_1
