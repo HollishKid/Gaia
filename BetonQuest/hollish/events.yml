@@ -567,6 +567,60 @@ tag_erudit_feu: tag add erudit_feu
 #
 air_wand_menu: command cc open airwand %player%
 #
+# This artefact reparation requires manual update anytime a new wand, spell or other configuration added.
+#   Between different wands there must be check on which wand is held by player.
+#   This is required to configure each wand based on tags.
+#   Below is 1st cycle of testing (air bender).
+#   Each cycle must be launched individually from "ilce" (check for case lost wand is not airwand)
+#
+ilce: folder ilce_air,ilce_fire,ilce_earth,ilce_water
+#
+ilce_air: if air_wand ilce_air2 else nothing
+ilce_air2: if wand1_inventory air_wand_have_hand else ilce_airbis
+ilce_airbis: if wand_air wand_air_configure else ilce_air3
+ilce_air3: folder ilce_air4,ilce_air5,ilce_air6
+ilce_air4: message &d&oIl semblerait que vous ayez perdu votre Baguette de l'Air.
+ilce_air5: command wandp %player% airbender
+ilce_air6: folder ilce_air7 delay:1
+ilce_air7: if wand_air wand_air_configure else air_wand_have_hand
+#
+wand_air_configure: folder wand_air_c1,wand_air_c2
+wand_air_c1: message &d&oLa Baguette d'Air que vous tenez en main va être réenchantée. Ne la lâchez pas...
+wand_air_c2: if air_airblast wand_air_blast else wand_air_c3
+wand_air_c3: if air_bomb wand_air_bomb else wand_air_c4
+wand_air_c4: if air_suction wand_air_suction else wand_air_c5
+wand_air_c5: if air_tornado wand_air_tornado else wand_air_c6
+wand_air_c6: if air_poussee wand_air_poussee else wand_air_c7
+wand_air_c7: if air_shield wand_air_shield else wand_air_c8
+wand_air_c8: if air_enhancedspeed wand_air_enhancedspeed else wand_air_c9
+wand_air_c9: if air_scooter wand_air_scooter else wand_air_c10
+wand_air_c10: if air_breathofwind wand_air_breathofwind else regenup_air_exe3
+#
+wand_air_blast: folder air_airblast_exe1,wand_air_c3
+wand_air_bomb: folder air_bomb_exe1,wand_air_c4
+wand_air_suction: folder suction_exe1,wand_air_c5
+wand_air_tornado: folder air_tornado_exe1,wand_air_c6
+wand_air_poussee: folder air_poussee_exe1,wand_air_c7
+wand_air_shield: folder air_shield_exe1,wand_air_c8
+wand_air_enhancedspeed: folder air_enhancedspeed_exe1,wand_air_c9
+wand_air_scooter: folder air_scooter_exe1,wand_air_c10
+wand_air_breathofwind: folder air_breathofwind_exe1,regenup_air_exe3
+#
+#
+# Disabled with nothings while there are no other wands.
+ilce_fire: if fire_wand ilce_fire2 else nothing
+ilce_fire2: if wand2_inventory nothing else nothing
+#ilce_fire3:
+ilce_earth: if earth_wand ilce_earth2 else nothing
+ilce_earth2: if wand3_inventory nothing else nothing
+#ilce_earth3:
+ilce_water: if water_wand ilce_water2 else nothing
+ilce_water2: if wand4_inventory nothing else nothing
+#ilce_fire3:
+#
+air_wand_have_hand: message &d&oPour remettre votre Baguette à niveau, tenez la dans la main et prononcez le mot d'apparition.
+#
+#
 too_much_mana: message &dVous avez trop de Mana sur cette Baguette pour pouvoir en rajouter !
 no_spirit: message &dVous n'avez pas assez de points de Spiritualité pour faire cela !
 spell_have: message &dVous possédez déjà ce sort.

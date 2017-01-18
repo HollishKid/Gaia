@@ -1,7 +1,3 @@
-#                           #
-#   PNJ Lieutenant_Hashor   #
-#                           #
-# Vlouf #
 histoire_mysteria: folder histoire_mysteria1,histoire_mysteria2 delay:3
 histoire_mysteria1: 'message &2Lieutenant Hashor &f: &a&oMysteria n''est pas une ville comme les autres, elle est à l''origine de deux personnages emblématiques !'
 histoire_mysteria2: folder histoire_mysteria3,histoire_mysteria4 delay:6
@@ -18,13 +14,7 @@ histoire_mysteria12: folder histoire_mysteria13,histoire_mysteria_tag1 delay:6
 histoire_mysteria13: 'message &2Lieutenant Hashor &f: &a&oJ''espère que ces renseignements te sont suffisant et que tu n''es pas trop impatient d''en découvrir ce merveilleux endroit.'
 histoire_mysteria_tag: tag add histoire_mysteria_tag
 histoire_mysteria_tag1: tag del histoire_mysteria_tag
-#                 #
-#   PNJ Roi Ubu   #
-#                 #
 demande_royale: tag add rencontrer_roi
-#                  #
-#   PNJ Garderos   #
-#                  #
 enter_mysteria: tag add garderos_deja_vu
 #
 voir_superieur: folder voir_superieur1,voir_superieur2,voir_superieur3,voir_superieur4
