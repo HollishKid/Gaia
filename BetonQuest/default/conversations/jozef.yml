@@ -10,6 +10,7 @@ stop: 'true'
 #
 # Je me suis permis de "comment out" cette quête, vu qu'elle n'est pas actuellement utilisée
 #  Lutcha étant en développement !
+#   '115': lutcha a été réaffecté.
 #
 #
 NPC_options:
