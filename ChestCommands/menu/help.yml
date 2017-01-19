@@ -73,86 +73,69 @@ account:
   KEEP-OPEN: true
   
 addrecovery:
-  COMMAND: 'thisistheaddrecoverycommand'
   NAME: '&a&lAjouter une adresse mail'
   LORE:
     - 'En cas de perte de Mot de Passe'
     - 'vous pourrez vous envoyer un mail'
     - 'avec un nouveau mot de passe.'
     - ' '
-    - '&aPour l''ajouter correctement'
-    - '&acliquez ici et tapez:'
-    - '&2[votreadressemail] [votreadressemail]'
+    - '&aCommande pour l''ajouter :'
     - ' '
-    - '&cSi votre adresse est trop longue pour'
-    - '&cla pancarte, continuez sur la ligne'
-    - '&csuivante ! Pensez à bien ajouter'
-    - '&cun espace entre les adresses !'
+    - '&2/ajoutermail [mail] [mail]'
   ID: map
   POSITION-X: 1
-  POSITION-Y: 3 
+  POSITION-Y: 3
+  KEEP-OPEN: true
 
 changerecovery:
-  COMMAND: 'thisisthechangerecoverycommand'
   NAME: '&a&lChanger votre adresse mail'
   LORE:
     - 'En cas de perte de Mot de Passe'
     - 'vous pourrez vous envoyer un mail'
     - 'avec un nouveau mot de passe.'
     - ' '
-    - '&aPour le modifier correctement'
-    - '&acliquez ici et tapez:'
-    - '&2[ancienne_adressemail]'
-    - '&2[nouvelle_adressemail]'
+    - '&aCommande pour le modifier :'
     - ' '
-    - '&cSi votre adresse est trop longue pour'
-    - '&cla pancarte, continuez sur la ligne'
-    - '&csuivante ! Pensez à bien ajouter'
-    - '&cun espace entre les adresses !'
   ID: map
   POSITION-X: 1
-  POSITION-Y: 4  
+  POSITION-Y: 4
+  KEEP-OPEN: true  
   
 sendrecovery:
-  COMMAND: 'thisisthesendrecoverycommand'
   NAME: '&a&lEnvoyer un nouveau Mot de Passe'
   LORE:
-    - 'Si vous avez ajouté une adresse mail'
-    - 'vous pouvez vous envoyer un mail'
+    - 'En cas de perte de Mot de Passe'
+    - 'vous pourrez vous envoyer un mail'
     - 'avec un nouveau mot de passe.'
     - ' '
-    - '&aPour vous l''envoyer correctement'
-    - '&acliquez ici et tapez:'
-    - '&2[votre_adresse_mail]'
+    - '&aCommande pour vous envoyer'
+    - '&aun nouveau mot de passe :'
     - ' '
-    - '&cSi votre adresse est trop longue pour'
-    - '&cla pancarte, continuez sur la ligne'
-    - '&csuivante !'
+    - '&2/envoyermdp [mail]'
     - ' '
-    - '&aUtilisez la commande'
-    - '&2/email recover [votre_adresse_mail]'
-    - '&asi vous n''avez pas accès au Menu'
-    - '(lorsque vous n''êtes pas encore identifié)'
+    - '&oNote :'
+    - 'Vous pouvez utiliser cette commande'
+    - 'avant de vous login si vous avez'
+    - 'perdu votre mot de passe !'
   ID: map
   POSITION-X: 1
   POSITION-Y: 5
+  KEEP-OPEN: true
   
 changepassword:
-  COMMAND: 'thisisthepasswordchangercommand'
   NAME: '&2&lChanger de Mot de Passe'
   LORE:
-    - 'Modifiez votre mot de passe en tapant'
+    - 'Modifiez votre mot de passe.'
     - 'sur la pancarte qui apparaît:'
     - ' '
-    - 'votre mot de passe actuel (première ligne)'
-    - 'nouveau mot de passe       (deuxième ligne)'
+    - '&aCommande pour changer votre'
+    - '&avotre mot de passe :'
     - ' '
-    - '&4ATTENTION :'
-    - '&cvous devez PRÉCÉDER votre nouveau'
-    - '&cmot de passe par un ESPACE !'
+    - '&2/changermdp [ancienmdp] [nouveaumdp]'
   ID: map
   POSITION-X: 1
-  POSITION-Y: 2  
+  POSITION-Y: 2 
+  KEEP-OPEN: true  
   
 options:
   NAME: '&a&lOptions de Jeu'

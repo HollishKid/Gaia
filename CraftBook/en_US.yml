@@ -1,0 +1,150 @@
+mech:
+    teleport:
+        alert: You Teleported!
+        invalidcoords: The entered coordinates are invalid!
+        range: Out of Range!
+        obstruct: Your destination is obstructed!
+        create: Teleporter Created!
+        arriveonly: You can only arrive at this teleporter!
+        sign: There is no Sign at your Destination!
+    lift:
+        no-destination: This lift has no destination.
+        target-sign-created: Elevator target sign created.
+        down-sign-created: Elevator down sign created.
+        no-depart: Cannot depart from this lift (can only arrive).
+        busy: Elevator Busy!
+        floor: Floor
+        up-sign-created: Elevator up sign created.
+        obstruct: Your destination is obstructed!
+        down: You went down a floor!
+        up: You went up a floor!
+        leave: You have left the elevator!
+        no-floor: There is no floor at your destination!
+    use-permission: You don't have permission to use this mechanic.
+    bookcase:
+        fail-line: Failed to fetch a line from the books file.
+        read-line: Vous prenez un livre et lisez une ligne au hasard ...
+        fail-file: Failed to read the books file.
+    gate:
+        not-found: Failed to find a gate!
+        toggle: Gate Toggled!
+        create: Gate Created!
+        valid-item: Line 1 needs to be a valid block id.
+    chairs:
+        too-far: '&dCette chaise est trop loin!'
+        stand: '&dVous n''êtes plus assis.'
+        floating: '&dVous ne pouvez pas vous asseoir ici.'
+        obstructed: '&dVous ne pouvez pas vous asseoir ici.'
+        sit: '&dVous êtes désormais assis.'
+        in-use: '&dCette chaise est occupée!'
+    lightstone:
+        lightstone: 'LightStone:'
+    door:
+        material: Door must be made entirely out of the same material!
+        other-sign: Door sign required on other side (or it was too far away).
+        toggle: Door Toggled!
+        create: Door Created!
+        unusable: Material not usable for a door!
+    anchor:
+        create: Chunk Anchor Created!
+        already-anchored: This chunk is already anchored!
+    hiddenswitch:
+        toggle: You hear the muffled click of a switch!
+        key: The key did not fit!
+    pay:
+        create: Pay Created!
+        success: 'Payment Successful! You paid: '
+        not-enough-money: Payment Failed! You don't have enough money.
+        failed-to-pay: Payment Failed! The money failed to be exchanged.
+    bridge:
+        toggle: Bridge Toggled!
+        end-create: Bridge End Created!
+        other-sign: Bridge sign required on other side (or it was too far away).
+        create: Bridge Created!
+        unusable: Material not usable for a bridge!
+        material: Bridge must be made entirely out of the same material!
+    cauldron:
+        legacy-not-in-group: Doesn't seem as if you have the ability...
+        cook: 'You have cooked the recipe:'
+        create: Cauldron Created!
+        leaky: Cauldron has a leak!
+        legacy-not-a-recipe: Hmm, this doesn't make anything...
+        permissions: You dont have permission to cook this recipe.
+        no-lava: Cauldron lacks lava!
+        legacy-create: In a poof of smoke, you've made
+        too-small: Cauldron is too small!
+        stir: You stir the cauldron but nothing happens.
+    painting:
+        editing: You are now editing this painting!
+        used: This painting is already being edited by
+        range: You are too far away from the painting!
+        stop: You are no longer editing this painting!
+    dgate:
+        create: Small Gate Created!
+    pistons:
+        superpush:
+            created: Piston Super-Push Mechanic Created!
+        crush:
+            created: Piston Crush Mechanic Created!
+        supersticky:
+            created: Piston Super-Sticky Mechanic Created!
+        bounce:
+            created: Piston Bounce Mechanic Created!
+    restock-permission: You don't have permission to restock this mechanic.
+    xp-storer:
+        success: You package your experience into a bottle!
+        not-enough-xp: You do not have enough experience to fill a bottle!
+        bottle: You need a bottle to perform this mechanic!
+    signcopy:
+        paste: You have pasted the sign!
+        copy: You have copied the sign!
+    create-permission: You don't have permission to create this mechanic.
+    custom-crafting:
+        recipe-permission: You do not have permission to craft this recipe.
+    command-items:
+        wait: You have to wait %time% seconds to use this again!
+        out-of-sync: Inventory became out of sync during usage of command-items!
+        need: You need %item% to use this command!
+    ammeter:
+        ammeter: Ammeter
+    headdrops:
+        click-message: This is the dismembered head of..
+        break-permission: You don't have permission to break heads!
+    not-enough-blocks: Not enough blocks to trigger mechanic!
+    map:
+        create: Map Changer Created!
+        invalid: Invalid Map ID!
+    cook:
+        add-fuel: You put fuel into the cooking pot, and watch as the fire roars!
+        ouch: Ouch! That was hot!
+        create: Cooking Pot Created!
+    area:
+        missing: The area or namespace does not exist.
+        create: Toggle Area Created!
+    restock: Mechanism Restocked!
+    group: You are not in the required group!
+    command:
+        create: Command Sign Created!
+    bounceblocks:
+        invalid-velocity: You need to enter a valid velocity on the 3rd line!
+        create: BounceBlock Created!
+    lightswitch:
+        create: Light Switch Created!
+area:
+    permissions: '&6Gaia&f: Vous ne pouvez pas faire ça ici.'
+    break-permissions: '&6Gaia&f: Vous ne pouvez pas casser ça ici.'
+    use-permissions: '&6Gaia&f: Vous ne pouvez pas utiliser ça ici.'
+vehicles:
+    create-permission: '&6Gaia&f: Vous ne pouvez pas faire ça ici'
+variable:
+    missing: This variable is missing!
+    use-permissions: You don't have permission to use that variable!
+worldedit:
+    ic:
+        noselection: No selection was found!
+        notfound: WorldEdit not found!
+        unsupported: WorldEdit selection type currently unsupported for IC's!
+circuits:
+    pipes:
+        create: Pipe created!
+        pipe-not-found: Failed to find pipe!

@@ -179,7 +179,7 @@ command /thisistheassaultminigamenormalkilled:
 #
 command /thisistheassaultminigamecaptainkilled:
 	trigger:
-		if {mini.ass.round} < 3:
+		if {mini.ass.round} is 1 or 2 or 3:
 			add 1 to {mini.ass.round}
 			set {mini.ass.round.on} to 0
 			wait 5 ticks
