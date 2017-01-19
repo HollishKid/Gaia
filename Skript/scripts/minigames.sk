@@ -45,18 +45,19 @@ command /thisistheassaultminigameinitiation:
 			add player to {mini.ass.players::*}
 			teleport player to {mini.ass.lobby}
 			broadcast "&aUn MiniJeux - &cAssault"
-			broadcast "&avient d'être lancé par &2%player% &a!"
-			broadcast "&aDébut dans &2&l2 &aminutes&a !"
+			broadcast "&avient d'Ãªtre lancÃ© par &2%player% &a!"
+			broadcast "&aDÃ©but dans &2&l2 &aminutes&a !"
 			broadcast "&aRejoignez en -6593,2917 !"
 #
 			wait 1 minute
 			broadcast "&aMiniJeux - &cAssault"
-			broadcast "&aDébut dans &2&l1 minute &a!"
+			broadcast "&aDÃ©but dans &2&l1 minute &a!"
 			broadcast "&aRejoignez en -6593,2917 !"
 #
 			wait 1 minute
 			set {mini.ass.started} to 1
 			set {mini.ass.round} to 1
+			set {mini.ass.round.on} to 1
 			loop all players:
 				if {mini.ass.%loop-player%} is 1:
 					message "&a&oL'Assault va commencer !" to loop-player
@@ -82,8 +83,8 @@ command /thisistheassaultminigameinitiation:
 			wait 5 ticks
 #			
 		else:
-			message "&c&oCe jeu a déjà été lancé !"
-			message "&a&oVous pouvez le rejoindre en parlant au Maître de Jeu !"	
+			message "&c&oCe jeu a dÃ©jÃ  Ã©tÃ© lancÃ© !"
+			message "&a&oVous pouvez le rejoindre en parlant au MaÃ®tre de Jeu !"	
 #
 #
 # INSCRIPTION
@@ -93,7 +94,7 @@ command /thisistheassaultminigameinscription:
 	trigger:
 		if {mini.ass.initiated} is 1:
 			if {mini.ass.started} is 1:
-				message "&d&oCe minijeux a déjà commencé."
+				message "&d&oCe minijeux a dÃ©jÃ  commencÃ©."
 				message "&d&oMerci d'attendre."
 			else:
 				set {mini.ass.%player%} to 1
@@ -103,8 +104,8 @@ command /thisistheassaultminigameinscription:
 				message "&aJoueurs dans la partie :"
 				message "&2%{mini.ass.players::*}%"
 		else:
-			message "&d&oCe MiniJeux n'a pas encore été lancé."
-			message "&d&oVous pouvez le lancer en parlant au Maître de Jeu."
+			message "&d&oCe MiniJeux n'a pas encore Ã©tÃ© lancÃ©."
+			message "&d&oVous pouvez le lancer en parlant au MaÃ®tre de Jeu."
 #
 #
 # LEAVER TESTER
@@ -122,7 +123,7 @@ command /thisistheleaveconsolecommandforassault:
 			if {mini.in.ass} > 0:
 				loop all players:
 					if {mini.ass.%loop-player%} is 1:
-						message "&c&oUn des joueurs a quitté la partie." to loop-player
+						message "&c&oUn des joueurs a quittÃ© la partie." to loop-player
 						set {mini.in.ass} to 0
 			else:
 				clear {mini.ass.players::*}
@@ -131,13 +132,13 @@ command /thisistheleaveconsolecommandforassault:
 				set {mini.ass.round} to 0
 				set {mini.ass.started} to 0
 				set {mini.ass.initiated} to 0
-				broadcast "&cL'Assault est terminé ! Plus aucun aventurier dans la zone !"
+				broadcast "&cL'Assault est terminÃ© ! Plus aucun aventurier dans la zone !"
 #
 # Losers
 #
 on death of a player:
 	if {mini.ass.%player%} is 1:
-		message "&c&oVous êtes mort pendant la partie."
+		message "&c&oVous Ãªtes mort pendant la partie."
 		set {mini.in.ass} to 0
 		teleport player to {mini.ass.lobby}
 #
@@ -147,41 +148,38 @@ on death of a player:
 #
 command /thisistheassaultminigamenormalkilled:
 	trigger:
-		add 1 to {mini.ass.mobs}
-		loop all players:
-			if {mini.ass.%loop-player%} is 1:
-				set action bar of loop-player to "&c&oAssaillants tués &f: &2&l%{mini.ass.mobs}%"
 		if {mini.ass.round.on} is 0:
-			if {mini.ass.mobs} > 29:
-				set {mini.ass.mobs} to 0
-				set {mini.ass.round.on} to 1
-				if {mini.ass.round} is 1:
-					command "mm mobs spawn assault_boss:%{mini.ass.round}% 1 Gaia,-11461,122,5178"
-					loop all players:
-						if {mini.ass.%loop-player%} is 1:
-							message "&c&oUn nouveau Capitaine vient d'arriver !" to loop-player
-							message "&c&oCherchez le sur une des tours avec un drapeau !" to loop-player
-					
-				if {mini.ass.round} is 2:
-					command "mm mobs spawn assault_boss:%{mini.ass.round}% 1 Gaia,-11462,86,5212"
-					loop all players:
-						if {mini.ass.%loop-player%} is 1:
-							message "&c&oUn nouveau Capitaine vient d'arriver !" to loop-player
-							message "&c&oCherchez le sur une des tours avec un drapeau !" to loop-player
-					
-				if {mini.ass.round} is 3:
-					command "mm mobs spawn assault_boss:%{mini.ass.round}% 1 Gaia,-11432,86,5207"
-					loop all players:
-						if {mini.ass.%loop-player%} is 1:
-							message "&c&oUn nouveau Capitaine vient d'arriver !" to loop-player
-							message "&c&oCherchez le sur une des tours avec un drapeau !" to loop-player
+			stop
+		else if {mini.ass.round.on} is 1:
+			add 1 to {mini.ass.mobs}
+			loop all players:
+				if {mini.ass.%loop-player%} is 1:
+					set action bar of loop-player to "&c&oAssaillants tuÃ©s &f: &2&l%{mini.ass.mobs}%"
+				if {mini.ass.mobs} > 29:
+					set {mini.ass.mobs} to 0
+					set {mini.ass.round.on} to 0
+
+					if {mini.ass.round} is 1:
+						command "mm mobs spawn assault_boss:%{mini.ass.round}% 1 Gaia,-11461,122,5178"
+						message "&c&oUn nouveau Capitaine vient d'arriver !" to loop-player
+						message "&c&oCherchez le sur une des tours avec un drapeau !" to loop-player
+
+					if {mini.ass.round} is 2:
+						command "mm mobs spawn assault_boss:%{mini.ass.round}% 1 Gaia,-11462,86,5212"
+						message "&c&oUn nouveau Capitaine vient d'arriver !" to loop-player
+						message "&c&oCherchez le sur une des tours avec un drapeau !" to loop-player
+
+					if {mini.ass.round} is 3:
+						command "mm mobs spawn assault_boss:%{mini.ass.round}% 1 Gaia,-11432,86,5207"
+						message "&c&oUn nouveau Capitaine vient d'arriver !" to loop-player
+						message "&c&oCherchez le sur une des tours avec un drapeau !" to loop-player
 				
 #
 # Big Kill
 #
 command /thisistheassaultminigamecaptainkilled:
 	trigger:
-		if {mini.ass.round} < 4:
+		if {mini.ass.round} < 3:
 			add 1 to {mini.ass.round}
 			set {mini.ass.round.on} to 0
 			wait 5 ticks
@@ -199,7 +197,7 @@ command /thisistheassaultminigamecaptainkilled:
 			wait 5 ticks
 			loop all players:
 				if {mini.ass.%loop-player%} is 1:
-					message "&c&oCapitaine tué !" to loop-player
+					message "&c&oCapitaine tuÃ© !" to loop-player
 					message "&c&oUne nouvelle vague d'Assaillants !" to loop-player
 					message "&c&oTuez en 30 !" to loop-player
 					message "&c&oVague &2&l%{mini.ass.round}%" to loop-player
@@ -207,17 +205,19 @@ command /thisistheassaultminigamecaptainkilled:
 		else:
 			loop all players:
 				if {mini.ass.%loop-player%} is 1:
-					clear {mini.ass.players::*}
-					set {mini.in.ass} to 0
-					set {mini.ass.mobs} to 0
-					set {mini.ass.round} to 0
-					set {mini.ass.round.on} to 0
-					set {mini.ass.started} to 0
-					set {mini.ass.initiated} to 0
-					message "&2&lAssault Terminé !" to loop-player
-					message "&a&lVous avez repris le château !" to loop-player
+				
+					message "&2&lAssault TerminÃ© !" to loop-player
+					message "&a&lVous avez repris le chÃ¢teau !" to loop-player
 					command "eco give %loop-player% 50"
 					teleport loop-player to {mini.ass.lobby}
+			clear {mini.ass.players::*}
+			set {mini.in.ass} to 0
+			set {mini.ass.mobs} to 0
+			set {mini.ass.round} to 0
+			set {mini.ass.round.on} to 0
+			set {mini.ass.started} to 0
+			set {mini.ass.initiated} to 0		
+					
 #					
 #
 # OUT
@@ -226,5 +226,5 @@ command /thisistheassaultminigamecaptainkilled:
 on rightclick on sign:
     if line 1 of the clicked block is "[Sortie]":
         if line 2 of the clicked block is "Retour vers":
-            if line 3 of the clicked block is "Maître de Jeu":
+            if line 3 of the clicked block is "MaÃ®tre de Jeu":
                 teleport player to {mini.start}
