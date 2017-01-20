@@ -1,0 +1,12 @@
+npcs:
+  '201': Tatsu
+compass:
+  tatsu_q1:
+    name: '&aCave abandonnée'
+    location: -8676;79;4407;Gaia
+    item: scroll
+compass:
+  tatsu_q1_1:
+    name: '&3Tatsu'
+    location: -8692;97;4432;Gaia
+    item: scroll
