@@ -1,4 +1,3 @@
-!!!conversation!!!Lieutenant_Hashor
 quester: 'Lieutenant_Hashor'
 first: welcome
 stop: 'stop'
@@ -8,7 +7,7 @@ stop: 'stop'
 NPC_options:
   welcome:
     text: 'Bonjour à toi vaillant guerrier ! As-tu quelque chose à me demander ?'
-    conditions: !histoire_mysteria_tag
+    conditions: '!histoire_mysteria_tag'
     pointers: histoire,infos,quetes
   histoire_rep:
     text: 'L''endroit dont je suis l''envoyé se nomme Mysteria, mais laisses moi t''en dire plus !'

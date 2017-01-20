@@ -1,4 +1,3 @@
-!!!conversation!!!aiguilleur_village
 quester: 'Aiguilleur'
 first: hello
 stop: 'false'
@@ -28,11 +27,11 @@ NPC_options:
 #
   voyage_rep:
     text: 'Très bien, voici vos options.'
-    conditions: destination_village
+    conditions: 'destination_village'
     events: open_train_gui
   voyage_rep_not:
     text: 'Vous n''avez pas encore débloqué cette gare. \nParlez au Moine Ardère pour plus de renseignements !'
-    conditions: !destination_village
+    conditions: '!destination_village'
     events: open_train_gui
 #############
 #           #

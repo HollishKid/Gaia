@@ -1,4 +1,3 @@
-!!!conversation!!!moinefrancois
 quester: 'Moine François'
 first: unknown,welcome
 stop: 'false'
@@ -10,10 +9,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Vous êtes inconnu dans cette ville. Parlez à l''&2Intendant &a&o!'
-    conditions: !intendant_done
+    conditions: '!intendant_done'
   welcome:
     text: 'Que Gaïa vous guide, &2%player% &a&o!'
-    conditions: intendant_done
+    conditions: 'intendant_done'
     pointers: apprenti,burriergrosos,sanctuary,spirituality,chargeagain,charge,merci
   sanctuary_rep:
     text: 'Vous êtes ici dans un &dSpiritualium&a&o, un petit recoin de spiritualité. Le grand &dSanctuaire &a&oest au Nord-Ouest de le Ville d''Athelas.'
@@ -29,10 +28,10 @@ NPC_options:
     events: default.spirituality_activator
   charge_no_have:
     text: 'Vous n''avez pas d''os non chargé sur vous...'
-    conditions: !os_have1
+    conditions: '!os_have1'
   charge_have:
     text: 'Biensur ! Combien voulez vous que j''en charge ?'
-    conditions: os_have1
+    conditions: 'os_have1'
     pointers: c1,ctous
   c1_rep:
     text: 'Le voilà !'
@@ -89,18 +88,18 @@ player_options:
     pointers: c1_rep
   ctous:
     text: 'Tous s''il vous plaît !'
-    conditions: os_have2
+    conditions: 'os_have2'
     pointers: ctous_rep
 #
 #
 #
   apprenti:
     text: 'L''Apprenti du Sanctuaire m''a dit de vous apporter ce Gros Os !'
-    conditions: francois_apprenti,!francois_burried_gros_os
+    conditions: 'francois_apprenti,!francois_burried_gros_os'
     pointers: apprenti_rep
   burriergrosos:
     text: 'J''ai enterré le Gros Os; une forte Spiritualité s''est emparée de moi !'
-    conditions: francois_burried_gros_os
+    conditions: 'francois_burried_gros_os'
     pointers: burriergrosos_rep
 #
 #

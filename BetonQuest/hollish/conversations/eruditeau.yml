@@ -1,4 +1,3 @@
-!!!conversation!!!eruditeau
 quester: 'Érudit'
 first: inconnu,porteur,connu
 stop: 'false'
@@ -16,7 +15,7 @@ NPC_options:
 ##
   inconnu:
     text: 'Bien à vous, en quoi puis-je vous aider ?'
-    conditions: !mageentry_approved
+    conditions: '!mageentry_approved'
     pointers: qui,keske,merciaurevoir
   qui_rep:
     text: 'Je suis un des 4 &3Érudits &a&odu &dSanctuaire &a&o. Je suis &dÉrudit &a&ode l''Eau.'
@@ -38,7 +37,7 @@ NPC_options:
 ##
   porteur:
     text: 'Bien à vous &2%player%&a&o. Je sens en vous la présence d''une Spiritualité naissante...'
-    conditions: mageentry_approved,!tag_erudit_eau
+    conditions: 'mageentry_approved,!tag_erudit_eau'
     pointers: eau1,eau2,eau3,eau4,eau5
   faux:
     text: 'Je crains que malgré cela, vous n''ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité... Celle du Respect !'
@@ -50,7 +49,7 @@ NPC_options:
 #
   etudiant_refoule:
     text: 'Ah! Je suis ravi de l''apprendre, mais je ne prends que les Étudiants avancés. Parlez d''abord à l''Érudit du Feu !'
-    conditions: !firetemple_magic_learning
+    conditions: '!firetemple_magic_learning'
   etudiant:
     text: 'Très bien... Je vois que vous avez déjà été l''étudiant de tous les autres Érudits. \nCommençons votre instruction.'
 #    events: tag_erudit_eau
@@ -62,7 +61,7 @@ NPC_options:
 ##
   connu:
     text: 'Vous revoilà ma petite vague !'
-    conditions: tag_erudit_eau
+    conditions: 'tag_erudit_eau'
     pointers: qui,keske,aurevoir
 ############
 #          #

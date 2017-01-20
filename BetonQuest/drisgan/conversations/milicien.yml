@@ -1,4 +1,3 @@
-!!!conversation!!!milicien
 quester: 'Milicien'
 first: n1,n2
 stop: 'true'
@@ -10,11 +9,11 @@ stop: 'true'
 NPC_options:
   n1:
     text: 'Qui va là?'
-    conditions: !succes
+    conditions: '!succes'
     pointers: moi
   n2:
     text: 'Tu as réussi? Bien, dépêche-toi de faire ton rapport au maître dans ce cas!'
-    conditions: succes
+    conditions: 'succes'
   next:
     text: 'Tu tombe bien, il y a justement une réunion cette nuit! Tu vois cette fenêtre avec les motifs rouge et blanc qui l''encadrent? C''est le lieu de la réunion. Tâche de l''atteindre sans te faire repérer!'
     events: folder_infilt
@@ -30,7 +29,7 @@ NPC_options:
 player_options:
   moi:
     text: 'Je suis envoyé par le maitre.'
-    conditions: Zedd.maka_q1start
+    conditions: 'Zedd.maka_q1start'
     pointers: next
   ok:
     text: 'Pas de problèmes.'

@@ -1,4 +1,3 @@
-!!!conversation!!!gretchen
 quester: 'Gretchen'
 first: n0,n1
 stop: 'false'
@@ -10,24 +9,24 @@ stop: 'false'
 NPC_options:
   n0:
     text: 'Je n''ai jamais vu votre visage. Parles à l''&2Intendant &a&orapidement !'
-    conditions: !intendant_done
+    conditions: '!intendant_done'
   n1:
     text: 'Bienvenue à l''échoppe des Filtres et Potions Gretchen Inc. Que puis-je vous servir ?'
-    conditions: intendant_done
+    conditions: 'intendant_done'
     pointers: eau,newdrink,retour_q1,test_ing,menu,retour_q2
   pff:
     text: 'Tsss, encore un radin ! Aller prend ça et lave toi avec, tu fais fuir la vraie clientèle !'
     events: gret_givewater
   is_newdrink:
     text: 'Il se pourrait que j''ai eu une nouvelle idée de cocktail... Mais il me manque des ingrédients ! \nVeux tu aller me les chercher ?'
-    conditions: newdrink_q1
+    conditions: 'newdrink_q1'
     pointers: oui_q1,non_q1
   isnot_newdrink:
     text: 'Désolé, je n''ai pas eu d''autres idées pour le moment... Revient plus tard !'
-    conditions: !is_newdrink
+    conditions: '!is_newdrink'
   gret_startq1:
     text: 'Pour ce cocktail, j''ai besoin de &61x Seau d''eau&a&o, &65x Feuilles de chêne&a&o et de &61x Poisson cru&a&o. \nReviens vite avec tout ça !'
-    conditions: !gret_q1done
+    conditions: '!gret_q1done'
     events: gret_startq1
   prize_q1:
     text: 'Bravo ! Voilà une mixture gratuite pour toi ! Tu pourras en acheter ici désormais, et n''hésite pas à repasser me voir pour de nouvelles recettes ! \nTu peux aussi me proposer des ingrédients toi même si tu veux.'
@@ -36,29 +35,29 @@ NPC_options:
     text: 'Désolé mais je ne vois rien qui m''inspire dans ce que tu transporte... Essayes autre chose !'
   vente_cock1:
     text: 'Et voilà pour vous !'
-    conditions: money_2500
+    conditions: 'money_2500'
     events: gret_giveitem,gret_messq1,takemoney_cock1
   gret_startq2:
     text: 'J''ai entendu parler de &6Carotte dorée&a&o, si tu m''en ramène 5, je devrais pouvoir en faire quelque chose.'
-    conditions: !gret_q2done
+    conditions: '!gret_q2done'
     events: gret_startq2,gret_drinkused
   prize_q2:
     text: 'Bien joué ! Voyons voir ce que ça donne...'
     events: gret_prizeq2,gret_endq2,gret_q2done
   vente_cock2:
     text: 'Et voilà pour vous !'
-    conditions: money_4500
+    conditions: 'money_4500'
     events: gret_giveitem2,gret_messq2,takemoney_cock2
   vente_cock3:
     text: 'Et voilà pour vous !'
-    conditions: money_500
+    conditions: 'money_500'
     events: gret_giveitem3,gret_messq3,takemoney_cock3
   vente_no_fund:
     text: 'Vous n''avez pas assez d''argent pour ça !'
 ########## Ingrédients rapportés
   test_spiderblood:
     text: 'Ah je vois que tu as un peu de &6Sang d''araignée &a&o! Cela me donne une idée, je peux t''en prendre un échantillon ?'
-    conditions: gret_q3dispo
+    conditions: 'gret_q3dispo'
     pointers: sp_oui,sp_non
   prize_q3:
     text: 'Merci! Je ne suis pas sur du résultat mais j''espère que ça t''iras !'
@@ -88,33 +87,33 @@ player_options:
     text: 'J''ai des choses plus importantes à faire.'
   retour_q1:
     text: 'J''ai réuni les ingrédients !'
-    conditions: gret_q1items
+    conditions: 'gret_q1items'
     pointers: prize_q1
   test_ing:
     text: 'Ai-je un ingrédient utilisable pour des cocktails sur moi ?'
-    conditions: gret_q1done
+    conditions: 'gret_q1done'
     pointers: test_spiderblood,testing_default
 ########## MENU
   cock1:
     text: '&65x Flacon de Hâte nocturne&3( ¤ 2500 )'
-    conditions: gret_q1done
+    conditions: 'gret_q1done'
     pointers: vente_cock1,vente_no_fund
   cock2:
     text: '&65x Flacon de robustesse&3( ¤ 4500 )'
-    conditions: gret_q2done
+    conditions: 'gret_q2done'
     pointers: vente_cock2,vente_no_fund
   cock3:
     text: '&65x Flacon suspect&3( ¤ 500 )'
-    conditions: gret_q3done
+    conditions: 'gret_q3done'
     pointers: vente_cock3,vente_no_fund
 ######### FIN MENU
   retour_q2:
     text: 'J''ai réuni les ingrédients !'
-    conditions: gret_q2items
+    conditions: 'gret_q2items'
     pointers: prize_q2
   menu:
     text: 'Quels produits sont disponibles actuellement ?'
-    conditions: gret_q1done
+    conditions: 'gret_q1done'
     pointers: menu_rep
   nonmerci:
     text: 'Merci, mais je n''ai plus soif.'

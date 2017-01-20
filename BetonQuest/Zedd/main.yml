@@ -1,4 +1,3 @@
-!!!main!!!
 global_locations: tv_coffre1,tv_coffre2,ut_coffre
 npcs:
   '36': oldseaman

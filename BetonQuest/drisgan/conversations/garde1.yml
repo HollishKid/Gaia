@@ -1,4 +1,3 @@
-!!!conversation!!!garde1
 quester: 'Milicien'
 first: etranger,connu
 stop: 'false'
@@ -8,11 +7,11 @@ stop: 'false'
 NPC_options:
   etranger:
     text: 'Fous le camp d''ici avant que je te pourfende avec mon glaive !!'
-    conditions: !drisgan
+    conditions: '!drisgan'
     pointers: mais
   connu:
     text: 'Hé, salut &2%player% &a&o! Comment on va ? Tu veux rentrer ?'
-    conditions: drisgan
+    conditions: 'drisgan'
     pointers: cava,oui,non
   open:
     text: 'D''accord ! A bientôt !'
@@ -33,5 +32,5 @@ player_options:
     text: 'Non merci, je vais rester dehors ...'
   mais:
     text: 'J''ai pourtant été envoyé par Kali Jones pour rencontrer Eko.'
-    conditions: kal_q2start
+    conditions: 'kal_q2start'
     pointers: rep1

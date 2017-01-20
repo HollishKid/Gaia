@@ -1,4 +1,3 @@
-!!!conversation!!!jim_convers
 quester: 'Jimbo'
 first: n1,n2
 stop: 'false'
@@ -11,9 +10,9 @@ NPC_options:
 #
   n1:
     text: 'Tu devrais proposer ton aide aux autres membres de la guilde maintenant, et ne sois pas timide !'
-    conditions: !zae_q4done
+    conditions: '!zae_q4done'
     events: jimconvers_done
   n2:
     text: 'Le maitre m''a demandé de t''envoyer le voir dès que tu serais de retour, monte donc le voir et ne traine pas en chemin !'
-    conditions: zae_q4done
+    conditions: 'zae_q4done'
     events: makarov_access,jimconvers_done,makarov_access_journal

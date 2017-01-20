@@ -1,4 +1,3 @@
-!!!conversation!!!varko
 quester: 'Varko'
 first: n1,prop
 stop: 'false'
@@ -11,15 +10,15 @@ NPC_options:
 #
   n1:
     text: 'Bonjour &2%player%&a&o. Belle journée pour partir à l''aventure n''est-ce pas ?'
-    conditions: !var_inconvers,!var_pitch
+    conditions: '!var_inconvers,!var_pitch'
     pointers: oui,taf,checkq1
   pitch:
     text: 'J''aurai effectivement une tâche à te confier si tu veux bien l''accepter. Un de mes contacts au &dSanctuaire&a&o m''a contacté il n''y a pas longtemps.'
-    conditions: !var_q1done
+    conditions: '!var_q1done'
     events: var_pitch_fold,var_pitch,var_inconvers
   prop:
     text: 'La mission t''intéresse ?'
-    conditions: var_pitch,!var_inconvers
+    conditions: 'var_pitch,!var_inconvers'
     pointers: accept,refus
   confirm1:
     text: 'Bien, j''attendrais donc ton retour.'
@@ -33,11 +32,11 @@ NPC_options:
 #
   pitch2:
     text: 'J''ai encore un service à te demander. Il faudrait maintenant apporter ce paquet à l''&2Apprenti&a&o, il se trouve au &dSanctuaire&a&o. Peux-tu faire ça pour moi ?'
-    conditions: var_q1done,!var_q2start
+    conditions: 'var_q1done,!var_q2start'
     pointers: ok,pasok
   none:
     text: 'Rien pour le moment, désolé...'
-    conditions: var_q1done,var_q2done
+    conditions: 'var_q1done,var_q2done'
 #
 #
 ##########################
@@ -51,7 +50,7 @@ player_options:
     text: 'Effectivement ! J''y vais de ce pas d''ailleurs...'
   taf:
     text: 'Auriez-vous du travail pour moi ?'
-    conditions: !var_q1start,!var_q2start
+    conditions: '!var_q1start,!var_q2start'
     pointers: pitch,pitch2,none
   accept:
     text: 'J''accepte la mission !'
@@ -61,7 +60,7 @@ player_options:
     pointers: deg1
   checkq1:
     text: 'Voici les gouttes de lave et les gouttes d''eau.'
-    conditions: var_lavatear,var_watertear,!var_q1done
+    conditions: 'var_lavatear,var_watertear,!var_q1done'
     pointers: var_q1reward
   ok:
     text: 'Pas de problème.'

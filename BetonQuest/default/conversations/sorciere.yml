@@ -1,4 +1,3 @@
-!!!conversation!!!sorciere
 quester: 'Sorcière'
 first: hello
 stop: 'false'
@@ -15,11 +14,11 @@ NPC_options:
     pointers: oui
   random_rep:
     text: 'Très bien, ça vous coutera &f¤ 100'
-    conditions: money_100
+    conditions: 'money_100'
     pointers: go,non
   choisir_rep:
     text: 'Très bien, ça vous coutera &f¤ 250'
-    conditions: money_250
+    conditions: 'money_250'
     pointers: go_choice1,go_choice2,go_choice3,go_choice4,go_choice5,go_choice6,go_choice7,non
   no_fund:
     text: 'Vous essayez de m''arnaquer?! Vous n''avez pas assez de sous!!'

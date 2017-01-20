@@ -1,4 +1,3 @@
-!!!conversation!!!Garde_Superieur
 quester: 'Garde Supérieur'
 first: sauveur,alors,bonjour
 stop: 'false'
@@ -10,7 +9,7 @@ stop: 'false'
 NPC_options:
   sauveur:
     text: 'Salut &2%player% &a&o, l''aventurier. Tu est un de ceux qui doivent secourir &dHistoria.'
-    conditions: int_hist,!Hist_Tag
+    conditions: 'int_hist,!Hist_Tag'
     pointers: non,oui
   oui2:
     text: 'Toute à fais ! Je suis la pour surveillée toute allée et venue d''&dHistoria.'
@@ -29,7 +28,7 @@ NPC_options:
     pointers: accord
   alors:
     text: 'Alors, comment avance votre mission ?!'
-    conditions: Hist_Tag
+    conditions: 'Hist_Tag'
   bonjour:
     text: 'Bonjour &2%player% &a&o, on s''ennuie ?'
     events: defaut_tous,Tresor_Journal1,Tag_del1

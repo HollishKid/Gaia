@@ -1,4 +1,3 @@
-!!!events!!!
 #
 #
 # J'ai modifié toutes les commandes "sentry" en leur équivalent "sentinel"
@@ -214,7 +213,7 @@ las_givearrows: give an_arrow:16
 ## Lancement du test de tir
 #
 las_starttest: folder las_launching,las_objarrow,las_testpassed
-las_objan_arrow: objective start las_objarrow
+las_objarrow: objective start las_objarrow
 las_testpassed: tag add las_testpassed
 las_launching: folder las_mess5,las_mess6,las_launching2 delay:1
 las_mess5: 'message &6&oLe test de tir va commencer! Préparez vous!'

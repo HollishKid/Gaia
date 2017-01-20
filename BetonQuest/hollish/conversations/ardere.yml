@@ -1,4 +1,3 @@
-!!!conversation!!!ardere
 quester: 'Ardere'
 first: welcome
 stop: 'false'
@@ -31,10 +30,10 @@ NPC_options:
     events: default.spirituality_activator
   charge_no_have:
     text: 'Vous n''avez pas d''os non chargé sur vous...'
-    conditions: !os_have1
+    conditions: '!os_have1'
   charge_have:
     text: 'Biensur ! Combien voulez vous que j''en charge ?'
-    conditions: os_have1
+    conditions: 'os_have1'
     pointers: c1,ctous
   c1_rep:
     text: 'Le voilà !'
@@ -63,22 +62,22 @@ player_options:
     pointers: sanctuary_rep
   milo:
     text: 'Aang m''a envoyé avec cette fiole agitée. Il m''a dit que je pourrais canaliser son énergie ici.'
-    conditions: tag_milo_ardere,!ardere_in_progress
+    conditions: 'tag_milo_ardere,!ardere_in_progress'
     pointers: milo_rep
   milobis:
     text: 'La fiole semble s''être calmée. Que devrais-je faire maintenant ?'
-    conditions: fiole_air_calmed_have,!tag_ardere_aang
+    conditions: 'fiole_air_calmed_have,!tag_ardere_aang'
     pointers: milobis_rep
 #
 #
 #
   train:
     text: 'Je voudrais utiliser le train de votre village !'
-    conditions: !tag_train_village,!destination_village
+    conditions: '!tag_train_village,!destination_village'
     pointers: train_rep
   trainhave:
     text: 'J''ai les 3 lingots de fer pour réparer la ligne de train !'
-    conditions: tag_train_village,!destination_village,train_have_iron
+    conditions: 'tag_train_village,!destination_village,train_have_iron'
     pointers: trainhave_rep
 
 #
@@ -107,7 +106,7 @@ player_options:
     pointers: c1_rep
   ctous:
     text: 'Tous s''il vous plaît !'
-    conditions: os_have2
+    conditions: 'os_have2'
     pointers: ctous_rep
 #
   spirituality_win:

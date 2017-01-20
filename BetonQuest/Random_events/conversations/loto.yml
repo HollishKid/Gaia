@@ -1,4 +1,3 @@
-!!!conversation!!!loto
 quester: 'Loto'
 first: n1,n2,n3,n4,n5,n6,n7,n8,n9,n10,n11,n12,n13,n14,n15,n16,n17,n18,n19,n20,n21,n22,n23,n24,n25,n26,n27,n28,n29,n30,n31,n32,n33,n34,n35,n36,n37,n38,n39,n40,n41,n42,n43,n44,n45,n46,n47,n48,n49,n50,n51,n52,n53,n54,n55,n56,n57,n58,n59,n60,n61,n62,n63,n64
 stop: 'true'
@@ -11,131 +10,131 @@ prefix: tick
 NPC_options:
   n1:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,gold
+    conditions: 'random_6,loto_start,gold'
     events: p1
   n2:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,gold
+    conditions: 'random_6,loto_start,gold'
     events: p2
   n3:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,gold
+    conditions: 'random_6,loto_start,gold'
     events: p3
   n4:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,gold
+    conditions: 'random_6,loto_start,gold'
     events: p4
   n5:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,gold
+    conditions: 'random_6,loto_start,gold'
     events: p5
   n6:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,gold
+    conditions: 'random_6,loto_start,gold'
     events: p6
   n7:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,gold
+    conditions: 'random_6,loto_start,gold'
     events: p7
   n8:
     text: '"&6&oDING!"'
-    conditions: random_12,loto_start,gold
+    conditions: 'random_12,loto_start,gold'
     events: p8
   n9:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,gold
+    conditions: 'random_18,loto_start,gold'
     events: p9
   n10:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,gold
+    conditions: 'random_18,loto_start,gold'
     events: p10
   n11:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,gold
+    conditions: 'random_18,loto_start,gold'
     events: p11
   n12:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,gold
+    conditions: 'random_18,loto_start,gold'
     events: p12
   n13:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,gold
+    conditions: 'random_18,loto_start,gold'
     events: p13
   n14:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,gold
+    conditions: 'random_18,loto_start,gold'
     events: p14
   n15:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,gold
+    conditions: 'random_18,loto_start,gold'
     events: p15
   n16:
     text: '"&6&oDING!"'
-    conditions: random_24,loto_start,gold
+    conditions: 'random_24,loto_start,gold'
     events: p16
   n17:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,gold
+    conditions: 'random_36,loto_start,gold'
     events: p1
   n18:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,gold
+    conditions: 'random_36,loto_start,gold'
     events: p2
   n19:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,gold
+    conditions: 'random_36,loto_start,gold'
     events: p3
   n20:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,gold
+    conditions: 'random_36,loto_start,gold'
     events: p4
   n21:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,gold
+    conditions: 'random_36,loto_start,gold'
     events: p5
   n22:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,gold
+    conditions: 'random_36,loto_start,gold'
     events: p6
   n23:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,gold
+    conditions: 'random_36,loto_start,gold'
     events: p7
   n24:
     text: '"&6&oDING!"'
-    conditions: random_42,loto_start,gold
+    conditions: 'random_42,loto_start,gold'
     events: p8
   n25:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,gold
+    conditions: 'random_60,loto_start,gold'
     events: p9
   n26:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,gold
+    conditions: 'random_60,loto_start,gold'
     events: p10
   n27:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,gold
+    conditions: 'random_60,loto_start,gold'
     events: p11
   n28:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,gold
+    conditions: 'random_60,loto_start,gold'
     events: p12
   n29:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,gold
+    conditions: 'random_60,loto_start,gold'
     events: p13
   n30:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,gold
+    conditions: 'random_60,loto_start,gold'
     events: p14
   n31:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,gold
+    conditions: 'random_60,loto_start,gold'
     events: p15
   n32:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,gold
+    conditions: 'random_60,loto_start,gold'
     events: p16
 ##########################################################
 #
@@ -144,129 +143,129 @@ NPC_options:
 ##########################################################
   n33:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,diamond
+    conditions: 'random_6,loto_start,diamond'
     events: b1
   n34:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,diamond
+    conditions: 'random_6,loto_start,diamond'
     events: b2
   n35:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,diamond
+    conditions: 'random_6,loto_start,diamond'
     events: b3
   n36:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,diamond
+    conditions: 'random_6,loto_start,diamond'
     events: b4
   n37:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,diamond
+    conditions: 'random_6,loto_start,diamond'
     events: b5
   n38:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,diamond
+    conditions: 'random_6,loto_start,diamond'
     events: b6
   n39:
     text: '"&6&oDING!"'
-    conditions: random_6,loto_start,diamond
+    conditions: 'random_6,loto_start,diamond'
     events: b7
   n40:
     text: '"&6&oDING!"'
-    conditions: random_12,loto_start,diamond
+    conditions: 'random_12,loto_start,diamond'
     events: b8
   n41:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,diamond
+    conditions: 'random_18,loto_start,diamond'
     events: b9
   n42:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,diamond
+    conditions: 'random_18,loto_start,diamond'
     events: b10
   n43:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,diamond
+    conditions: 'random_18,loto_start,diamond'
     events: b11
   n44:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,diamond
+    conditions: 'random_18,loto_start,diamond'
     events: b12
   n45:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,diamond
+    conditions: 'random_18,loto_start,diamond'
     events: b13
   n46:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,diamond
+    conditions: 'random_18,loto_start,diamond'
     events: b14
   n47:
     text: '"&6&oDING!"'
-    conditions: random_18,loto_start,diamond
+    conditions: 'random_18,loto_start,diamond'
     events: b15
   n48:
     text: '"&6&oDING!"'
-    conditions: random_24,loto_start,diamond
+    conditions: 'random_24,loto_start,diamond'
     events: b16
   n49:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,diamond
+    conditions: 'random_36,loto_start,diamond'
     events: b1
   n50:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,diamond
+    conditions: 'random_36,loto_start,diamond'
     events: b2
   n51:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,diamond
+    conditions: 'random_36,loto_start,diamond'
     events: b3
   n52:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,diamond
+    conditions: 'random_36,loto_start,diamond'
     events: b4
   n53:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,diamond
+    conditions: 'random_36,loto_start,diamond'
     events: b5
   n54:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,diamond
+    conditions: 'random_36,loto_start,diamond'
     events: b6
   n55:
     text: '"&6&oDING!"'
-    conditions: random_36,loto_start,diamond
+    conditions: 'random_36,loto_start,diamond'
     events: b7
   n56:
     text: '"&6&oDING!"'
-    conditions: random_42,loto_start,diamond
+    conditions: 'random_42,loto_start,diamond'
     events: b8
   n57:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,diamond
+    conditions: 'random_60,loto_start,diamond'
     events: b9
   n58:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,diamond
+    conditions: 'random_60,loto_start,diamond'
     events: b10
   n59:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,diamond
+    conditions: 'random_60,loto_start,diamond'
     events: b11
   n60:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,diamond
+    conditions: 'random_60,loto_start,diamond'
     events: b12
   n61:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,diamond
+    conditions: 'random_60,loto_start,diamond'
     events: b13
   n62:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,diamond
+    conditions: 'random_60,loto_start,diamond'
     events: b14
   n63:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,diamond
+    conditions: 'random_60,loto_start,diamond'
     events: b15
   n64:
     text: '"&6&oDING!"'
-    conditions: random_60,loto_start,diamond
+    conditions: 'random_60,loto_start,diamond'
     events: b16

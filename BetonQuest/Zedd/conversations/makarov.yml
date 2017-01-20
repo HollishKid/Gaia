@@ -1,4 +1,3 @@
-!!!conversation!!!makarov
 quester: 'Makarov'
 first: n1,n2,n3,n4,n5,n6,tempo_maka,n9
 stop: 'false'
@@ -10,33 +9,33 @@ stop: 'false'
 NPC_options:
   n1:
     text: 'Ah voici donc &2%player% &a&o! &2Jimbo&a&o m''a parlé de toi, tu sembles lui avoir fait une bonne impression. \nVeux tu toujours faire partie de cette guilde ?'
-    conditions: event1_win,!maka_etape1,!maka_inconvers
+    conditions: 'event1_win,!maka_etape1,!maka_inconvers'
     pointers: p1,p2
   rep1:
     text: 'Bien ! Je vais donc officiellement t''inscrire sur notre liste des membres. \nTu auras ainsi accès à nos salon privés.'
     events: maka_presentation,maka_inconvers,makarov_access_journal_del
   n2:
     text: 'Alors, tu te plaît dans la guilde ?'
-    conditions: !event1_win,maka_etape1,!zae_q4done,!jim_q2done,!maka_etape2
+    conditions: '!event1_win,maka_etape1,!zae_q4done,!jim_q2done,!maka_etape2'
     events: makarov_access_journal_del
 #
 ### 2eme étape
 #
   n3:
     text: 'Ah &2%player%&a&o, enfin te voilà. Tu fais forte impression parmis nos membres apparement ! \n&2Jimbo&a&o et &2Zael&a&o m''ont tenus au courant de tes progrès.'
-    conditions: zae_q4done,jim_q2done,!maka_etape2,!maka_inconvers
+    conditions: 'zae_q4done,jim_q2done,!maka_etape2,!maka_inconvers'
     events: maka_etape2fold,maka_inconvers,maka_etape1remove,maka_etape2,jim_q23_journal_del,makarov_access_journal_del
   n4:
     text: 'Dépèches-toi d''accomplir ta mission !'
-    conditions: !maka_inconvers,maka_q1start,!drisgan.succes
+    conditions: '!maka_inconvers,maka_q1start,!drisgan.succes'
     events: makarov_access_journal_del
   n5:
     text: 'Fais moi ton rapport.'
-    conditions: drisgan.succes
+    conditions: 'drisgan.succes'
     events: maka_q1reward,maka_inconvers,makarov_access_journal_del,maka_j2_del
   n6:
     text: 'On dirait bien qu''il va falloir s''infiltrer dans leur organisation si on veut avoir plus d''informations... \nPuis-je compter sur toi encore une fois ?'
-    conditions: !maka_inconvers,maka_q1done,!maka_q2start,!maka_q2done
+    conditions: '!maka_inconvers,maka_q1done,!maka_q2start,!maka_q2done'
     pointers: oui,non
   maka_q2start:
     text: 'Parfait. L''objectif maintenant est donc de t''infiltrer chez ces contrebandiers. \nIl faudra les convaincre que tu peux leur être rentable pour devenir membre de leur organisation.'
@@ -57,14 +56,14 @@ NPC_options:
 #    conditions: '!maka_inconvers,maka_q3start,condition_tempo_impossible'
   tempo_maka:
     text: 'Vous avez de nouvelles informations sur &dDrisgan &a&o?'
-    conditions: !maka_inconvers,maka_q3start,drisgan.eko_tempo
+    conditions: '!maka_inconvers,maka_q3start,drisgan.eko_tempo'
     pointers: nein,tempo_rep
   tempo_maka_rep:
     text: 'Excellent ! On va attendre de voir ce que va faire &2Eko &a&o; gardes un oeil sur lui ! \nEn attendant, je te recommande auprès de l''&2Intendant pour tous tes services rendus !'
     events: maka_tempo_done
   n9:
     text: 'gotcha !'
-    conditions: !maka_inconvers,maka_q3done
+    conditions: '!maka_inconvers,maka_q3done'
     events: maka_j6_del,maka_j7
 #
 ##########################

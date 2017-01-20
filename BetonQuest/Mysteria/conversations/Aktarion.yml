@@ -1,4 +1,3 @@
-!!!conversation!!!Aktarion
 quester: 'Aktarion'
 first: welcome,welcomebis
 stop: 'false'
@@ -8,7 +7,7 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Hey ! T''es le nouveau venu qui arrive d''Athelas c''est ça ?'
-    conditions: voir_superieur_done,!akt_qE1,!akt_qE2,!akt_qdone
+    conditions: 'voir_superieur_done,!akt_qE1,!akt_qE2,!akt_qdone'
     pointers: yop
   welcomebis:
     text: 'Hey %player% ! Comment se passe ton aventure ?'
@@ -66,11 +65,11 @@ player_options:
     text: 'Je suis désolé, mais pour le moment, j''ai d''autres occupations ailleurs.'
   quest_done:
     text: 'J''ai retrouvé ce qui vous appartient !'
-    conditions: akt_tool,Bkilled,!akt_qdone
+    conditions: 'akt_tool,Bkilled,!akt_qdone'
     pointers: quest_done_rep
   hist_akt:
     text: 'Puis-je vous poser mes questions maintenant ?'
-    conditions: akt_qdone
+    conditions: 'akt_qdone'
     pointers: hist_akt_rep
   who:
     text: 'Qui êtes-vous réellement dans ce village ?'

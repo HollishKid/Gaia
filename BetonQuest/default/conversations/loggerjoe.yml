@@ -1,27 +1,26 @@
-!!!conversation!!!loggerjoe
 quester: 'Sam le Fondeur'
 first: n1,n2,n2a,n3,n4
 stop: 'false'
 NPC_options:
   n1:
     text: 'Salut mon gaillard! T''es à la recherche d''un boulot? Je peux peut-être t''aider pour ca... Mais tu devras manier la pioche! Ca t''intéresse?'
-    conditions: loggerjoe_p1
+    conditions: 'loggerjoe_p1'
     pointers: point1,point2
   n2:
     text: 'Bientôt fini?'
-    conditions: loggerjoe_startq1
+    conditions: 'loggerjoe_startq1'
     pointers: check1
   n2a:
     text: 'Bientôt fini??'
-    conditions: loggerjoe_startq2
+    conditions: 'loggerjoe_startq2'
     pointers: check2
   n3:
     text: 'Bon, tu es maintenant prêt pour un vrai boulot. Toujours partant?'
-    conditions: loggerjoe_p2
+    conditions: 'loggerjoe_p2'
     pointers: loggerjoe_suiteoui,loggerjoe_suitenon
   n4:
     text: 'Ah c''est toi %player%? Qu''est ce que tu fais dans le coin?'
-    conditions: loggerjoe_p3
+    conditions: 'loggerjoe_p3'
     pointers: final1,final2,final3
   rep_oui:
     text: 'On verra si c''est bien le cas.'
@@ -40,17 +39,17 @@ NPC_options:
     events: loggerjoe_reward2,loggerjoe_q2
   finalrep1:
     text: 'Il faut que tu m''ammène deux &6Bâton de bois&a&o pour que je te fasse ça.'
-    conditions: !loggerjoe_stick1
+    conditions: '!loggerjoe_stick1'
   finalrep1a:
     text: 'Pas de souci, fais moi voir ces bouts de bois la...'
-    conditions: loggerjoe_stick1
+    conditions: 'loggerjoe_stick1'
     events: loggerjoe_takestick,loggerjoe_r2,loggerjoe_mess1
   finalrep2:
     text: 'Il faut que tu m''ammène &610x Minerai de fer&a&o pour que je les transforme en lingots!'
-    conditions: !loggerjoe_fish
+    conditions: '!loggerjoe_fish'
   finalrep2a:
     text: 'Envoi les minerais, je suis chaud comme la braise!!'
-    conditions: loggerjoe_fish
+    conditions: 'loggerjoe_fish'
     events: loggerjoe_takefish,loggerjoe_r4,loggerjoe_mess2
   finalrep3:
     text: 'Eh bien bonjour!'
@@ -67,7 +66,7 @@ player_options:
     text: 'Non merci.'
   check1:
     text: 'Voici vos bâtons de bois!'
-    conditions: loggerjoe_stick1
+    conditions: 'loggerjoe_stick1'
     events: loggerjoe_takestick,loggerjoe_endq1
     pointers: loggerjoe_reward1
   loggerjoe_suiteoui:
@@ -77,7 +76,7 @@ player_options:
     text: 'Non'
   check2:
     text: 'Voici vos minerais!'
-    conditions: loggerjoe_fish
+    conditions: 'loggerjoe_fish'
     events: loggerjoe_endq2,loggerjoe_takefish
     pointers: loggerjoe_reward2
   final1:

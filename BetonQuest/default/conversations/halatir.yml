@@ -1,4 +1,3 @@
-!!!conversation!!!halatir
 quester: 'Halatir'
 first: unknown,welcome,member
 stop: 'false'
@@ -10,10 +9,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Je ne vous connais pas ! Allez voir l''&2Intendant &a&o!'
-    conditions: !gestionnaire
+    conditions: '!gestionnaire'
   welcome:
     text: 'Salut jeune maquereau ! Que nous vaut ta visite ?'
-    conditions: gestionnaire,!pecheur
+    conditions: 'gestionnaire,!pecheur'
     pointers: presentation,become_member,rien
   pres_ok:
     text: 'Ok ! Je ne vous accepterais pas dans mes eaux tant que tu ne seras pas officiellement reconnu par l''&2Intendant &a&o!'
@@ -27,7 +26,7 @@ NPC_options:
 # Add any guild-specific quests in pointers of "member"
   member:
     text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
-    conditions: pecheur
+    conditions: 'pecheur'
     pointers: menu,merci
   pecheur_menu:
     text: 'Le voilà !'
@@ -40,11 +39,11 @@ NPC_options:
 player_options:
   presentation:
     text: 'Je viens me présenter de la part de l''Intendant !'
-    conditions: guilde_pecheurs
+    conditions: 'guilde_pecheurs'
     pointers: pres_ok
   become_member:
     text: 'Je veux devenir membre de la Guilde des Pêcheurs !'
-    conditions: !pecheur,intendant_done
+    conditions: '!pecheur,intendant_done'
     pointers: member_ok
   menu:
     text: 'Je voudrais accéder au Menu de la Guilde.'

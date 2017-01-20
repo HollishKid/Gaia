@@ -1,4 +1,3 @@
-!!!conversation!!!adelaide
 quester: 'Adelaide'
 first: n0,n1,n2,n3
 stop: 'false'
@@ -6,18 +5,18 @@ stop: 'false'
 NPC_options:
   n0:
     text: 'Vous n''êtes pas de cette ville ! Parlez à l''&2Intendant &a&o!'
-    conditions: !intendant_done
+    conditions: '!intendant_done'
   n1:
     text: 'Bien le bonjour, en quoi puis-je vous aider ?'
-    conditions: !adel1_done,!adel1_start,intendant_done
+    conditions: '!adel1_done,!adel1_start,intendant_done'
     pointers: p1
   n2:
     text: 'Alors, comment avance ta quête ? As-tu réussi ?'
-    conditions: adel1_start
+    conditions: 'adel1_start'
     pointers: retour1,retour
   n3:
     text: 'Bonjour &2%player%&a&o, que puis-je faire pour toi ?'
-    conditions: adel1_done
+    conditions: 'adel1_done'
   r1:
     text: 'Malheureusement, je n''ai plus de stocks disponible actuellement... Mes fournisseurs habituels ont arretés de me livrer il y plusieurs semaines déjà !'
     pointers: l1,l2
@@ -38,7 +37,7 @@ player_options:
     text: 'La vie est dure...'
   retour:
     text: 'J''ai rammené ce que vous vouliez.'
-    conditions: adel1_sang
+    conditions: 'adel1_sang'
     pointers: recompense1
   retour1:
     text: 'J''y travaille encore.'

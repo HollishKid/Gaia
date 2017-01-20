@@ -1,4 +1,3 @@
-!!!conversation!!!tenzin
 quester: 'Tenzin'
 first: welcome
 stop: 'false'
@@ -21,4 +20,4 @@ player_options:
     text: 'Bonjour à vous Tenzin!'
   apprentissage:
     text: 'Pourriez vous m''enseigner des choses sur la Magie de l''Air?'
-    conditions: airtemple_magic_learning
+    conditions: 'airtemple_magic_learning'

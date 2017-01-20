@@ -1,4 +1,3 @@
-!!!conversation!!!ynvgardrelai
 quester: 'Ynvgard'
 first: n1,n2
 stop: 'true'
@@ -11,10 +10,10 @@ NPC_options:
 #
   n1:
     text: 'Je n''ai pas encore trouvé l''objet ! Continue de me couvrir encore un peu !'
-    conditions: ynv_q3start,!yre_npckill,!yre_startfight
+    conditions: 'ynv_q3start,!yre_npckill,!yre_startfight'
     events: yre_event,yre_startfight
 #Semblait être absent dans le code. Enlevé d'ici et ajouté dans les Events, suite aux Objectifs yre_objkill1 & 2
   n2:
     text: 'Voilà qui était mouvementé ! Enfin, je n''ai pas trouvé ce que je cherchais... Tant pis, il faut partir avant que plus de renforts n''arrivent !'
-    conditions: yre_npckill
+    conditions: 'yre_npckill'
     events: yre_ending

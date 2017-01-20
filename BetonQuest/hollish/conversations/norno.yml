@@ -1,4 +1,3 @@
-!!!conversation!!!norno
 quester: 'Norno'
 first: welcome,welcomebis
 stop: 'false'
@@ -10,7 +9,7 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Bonjour.'
-    conditions: journal_norno,!tag_norno
+    conditions: 'journal_norno,!tag_norno'
     pointers: helpyou,bonjour
   helpyou_rep:
     text: 'Je t''avoue que je peux utiliser une bonne paire de mains sur le chantier ! \nJe vais me charger de la construction, tu seras affecté à l''extraction des ressources ! \nPour réparer la partie Nord du Château, il va falloir &d1000 planches de chêne&a&o!'
@@ -19,7 +18,7 @@ NPC_options:
     text: 'Vous êtes assigné à l''extraction des ressources. Consultez votre Journal de Progression pour savoir que faire !'
   welcomebis:
     text: 'Bonjour &2%player% &a&o!!'
-    conditions: tag_norno
+    conditions: 'tag_norno'
     pointers: woodhave,stone_next,stonehave,third_next,fourth_next,thirdhave,fourthhave,keske,statue,statuehave,bonjour
   woodhave_ok:
     text: 'Parfait, passez les moi ! Cela nous permettra de réparer la première partie du Château, à savoir le flanc Nord ! C''est un excellent début !'
@@ -63,44 +62,44 @@ player_options:
     text: 'Non merci ! Aurevoir !'
   keske:
     text: 'Qu''est-ce que je dois faire déjà ?'
-    conditions: !dwarf_castle_phase4
+    conditions: '!dwarf_castle_phase4'
     pointers: keske_rep
   helpyou:
     text: 'Casar m''a envoyé pour vous aider à réparer le Château à l''Est !'
     pointers: helpyou_rep
   woodhave:
     text: 'J''ai le bois qu''il vous faut pour la reconstruction du château !'
-    conditions: planks1000,journal_norno1
+    conditions: 'planks1000,journal_norno1'
     pointers: woodhave_ok
   stone_next:
     text: 'Je veux vous aider à reconstruire la suite !'
-    conditions: dwarf_castle_phase1,!dwarf_castle_phase2
+    conditions: 'dwarf_castle_phase1,!dwarf_castle_phase2'
     pointers: stone_next_ok
   stonehave:
     text: 'J''ai les pierres qu''il vous faut pour la reconstruction du château !'
-    conditions: stone2000,journal_norno2
+    conditions: 'stone2000,journal_norno2'
     pointers: stonehave_ok
   third_next:
     text: 'Je veux aider à reconstruire le Château !'
-    conditions: dwarf_castle_phase2,!dwarf_castle_phase3
+    conditions: 'dwarf_castle_phase2,!dwarf_castle_phase3'
     pointers: third_next_ok
   thirdhave:
     text: 'J''ai ce qu''il vous faut pour la reconstruction du château !'
-    conditions: and_third_norno,journal_norno3
+    conditions: 'and_third_norno,journal_norno3'
     pointers: thirdhave_ok
   fourth_next:
     text: 'Je veux aider à finir la reconstruction du Château !'
-    conditions: dwarf_castle_phase3,!dwarf_castle_phase4
+    conditions: 'dwarf_castle_phase3,!dwarf_castle_phase4'
     pointers: fourth_next_ok
   fourthhave:
     text: 'J''ai ce qu''il vous faut pour terminer la reconstruction du château !'
-    conditions: and_fourth_norno,journal_norno4
+    conditions: 'and_fourth_norno,journal_norno4'
     pointers: fourthhave_ok
   statue:
     text: 'Est-ce que je peux vous aider à faire autre chose ?'
-    conditions: dwarf_castle_phase4,!dwarf_castle_phase5
+    conditions: 'dwarf_castle_phase4,!dwarf_castle_phase5'
     pointers: statue_help
   statuehave:
     text: 'J''ai tous les blocs nécéssaires à la Statue de Casar.'
-    conditions: and_statue_norno,journal_norno5
+    conditions: 'and_statue_norno,journal_norno5'
     pointers: statuehave_rep

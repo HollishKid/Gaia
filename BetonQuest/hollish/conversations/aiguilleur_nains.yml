@@ -1,4 +1,3 @@
-!!!conversation!!!aiguilleur_nains
 quester: 'Aiguilleur'
 first: hello
 stop: 'false'
@@ -28,11 +27,11 @@ NPC_options:
 #
   voyage_rep:
     text: 'Très bien, voici vos options.'
-    conditions: destination_dwarf
+    conditions: 'destination_dwarf'
     events: open_train_gui
   voyage_rep_not:
     text: 'Vous n''avez pas encore débloqué cette gare. \nVous devrez d''abord aider les Nains d''Ingor !'
-    conditions: !destination_dwarf
+    conditions: '!destination_dwarf'
     events: open_train_gui
 #############
 #           #

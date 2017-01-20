@@ -1,4 +1,3 @@
-!!!conversation!!!samson
 quester: 'Samson'
 first: n0,n1,n2
 stop: 'false'
@@ -6,14 +5,14 @@ NPC_options:
 #Joueurs sans la quête Transport auprès de l'Intendant
   n0:
     text: 'Je ne vous connais pas ! Vous devez d''abord parler à l''&2Intendant !'
-    conditions: !intendant_done
+    conditions: '!intendant_done'
   n1:
     text: 'Il y des gens qui voient le futur dans les flammes...'
-    conditions: !samson_inprogress,intendant_done
+    conditions: '!samson_inprogress,intendant_done'
     pointers: point1
   n2:
     text: 'Eh bien ? Pas encore fait ?'
-    conditions: samson_inprogress
+    conditions: 'samson_inprogress'
     pointers: check_done1,bye
   rep_oui:
     text: 'Ce vieux sénile ? Il passe son temps à poser des énigmes stupides aux gens et n''a aucune idée de ce qu''il se passe vraiment dans le monde. Etes-vous un peu plus curieux ?'
@@ -31,7 +30,7 @@ NPC_options:
 player_options:
   point1:
     text: 'Grandpa Allen m''a envoyé vous voir, que puis-je faire pour vous ?'
-    conditions: start_questguild
+    conditions: 'start_questguild'
     pointers: rep_oui
   point2:
     text: 'Je veux savoir ce qu''il se passe.'
@@ -40,7 +39,7 @@ player_options:
     text: 'Les ignorants sont bénis.'
   check_done1:
     text: 'J''ai gravi la Cime, et bien que la vue de la ville à mes pieds m''ait enchanté, j''ai ressenti comme une présence maléfique... Que pouvez vous me dire la dessus ?'
-    conditions: cimereached
+    conditions: 'cimereached'
     pointers: fin1
   bye:
     text: 'Au revoir.'

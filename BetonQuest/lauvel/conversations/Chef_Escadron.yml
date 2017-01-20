@@ -1,4 +1,3 @@
-!!!conversation!!!Chef_Escadron
 quester: 'Chef d''escadron'
 first: qui,promotion,mais
 stop: 'false'
@@ -10,7 +9,7 @@ stop: 'false'
 NPC_options:
   qui:
     text: 'Qui ose me déranger ?'
-    conditions: Recrutement_Tag
+    conditions: 'Recrutement_Tag'
     pointers: jesuisunerecrue
   chef:
     text: 'Quand on s''adresse à moi, on dit Chef !!!'
@@ -22,7 +21,7 @@ NPC_options:
     text: 'Mais vous le faites tous exprès ! Allez voir ailleur si j''y suis !!!'
   promotion:
     text: 'Bien, je vois que vous êtes un élément intérressant ! Que dirais vous de passez au rang de soldat ?'
-    conditions: Loyer_Done,Ryan_Done,Physicien_Done
+    conditions: 'Loyer_Done,Ryan_Done,Physicien_Done'
     pointers: rangsoldat1
   rangsoldat2:
     text: 'J''ai reçu un rapport dans lequel des bruits étranges était émis depuis le moulin pendant la nuit ! \nEt je voudrais que vous enquêter puisque personne des autres recrue ose y allé. \nc''est à vous de joué !'

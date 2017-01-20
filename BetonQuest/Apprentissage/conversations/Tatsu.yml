@@ -1,4 +1,3 @@
-!!!conversation!!!Tatsu
 quester: 'Tatsu'
 first: welcome,welcomebis
 stop: 'false'
@@ -8,7 +7,7 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Je ne m''attendais pas à voir passer un aventurier en ces lieux si lointains de la ville'
-    conditions: !tatsu_dv
+    conditions: '!tatsu_dv'
     events: tatsu_dv
     pointers: yop
   welcomebis:

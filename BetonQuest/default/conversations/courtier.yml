@@ -1,4 +1,3 @@
-!!!conversation!!!courtier
 quester: 'Courtier'
 first: unknown,bonjour
 stop: 'false'
@@ -6,10 +5,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Vous n''êtes pas de cette ville ! Parlez à l''&2Intendant &a&o!'
-    conditions: !intendant_done
+    conditions: '!intendant_done'
   bonjour:
     text: 'Bonjour &2%player% &a&o! Bienvenue au &dGrand Marché &a&o!'
-    conditions: intendant_done
+    conditions: 'intendant_done'
     pointers: quel,question,bye
   question_rep:
     text: 'Bien entendu. En quoi puis-je vous aider ?'

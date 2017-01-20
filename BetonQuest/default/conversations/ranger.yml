@@ -1,4 +1,3 @@
-!!!conversation!!!ranger
 quester: 'Ranger Snow'
 first: inconnu,access_south
 stop: 'false'
@@ -6,10 +5,10 @@ NPC_options:
 #Joueurs sans la quête Transport auprès de l'Intendant
   inconnu:
     text: 'Je ne vous ai jamais vu dans ces contrées.'
-    conditions: !access_south
+    conditions: '!access_south'
   access_south:
     text: 'Ah, c''est Moncul qui vous envoi!'
-    conditions: access_south
+    conditions: 'access_south'
     pointers: oui,non
   rep_oui:
     text: 'En avant Guingamp!'

@@ -1,4 +1,3 @@
-!!!conversation!!!paul
 quester: 'Paul'
 first: normal,occupe1,occupe2,occupe3,occupe_inprogress1,occupe_inprogress2,occupe_inprogress3
 stop: 'false'
@@ -8,31 +7,31 @@ stop: 'false'
 NPC_options:
   normal:
     text: 'Bonjour! Vous êtes à la recherche d''un bon pain ? Il vous coûtera seulement &f¤&2100 &a&o!'
-    conditions: timer_paul
+    conditions: 'timer_paul'
     pointers: pain,bonjour
   pain_rep:
     text: 'Tenez, profitez en bien !'
-    conditions: money_100
+    conditions: 'money_100'
     events: give_pain_paul,money_p100
   pain_rep_funds:
     text: 'Vous n''avez pas assez d''argent ...'
-    conditions: !money_100
+    conditions: '!money_100'
 #
   occupe_inprogress1:
     text: 'J''espère que vous n''avez pas oublié de porter le pain au Chef du Château ?!'
-    conditions: !timer_paul,tag_pain_paul
+    conditions: '!timer_paul,tag_pain_paul'
   occupe_inprogress2:
     text: 'J''espère que vous n''avez pas oublié mon &d10 blé&a&o ?!'
-    conditions: !timer_paul,paul_ble
+    conditions: '!timer_paul,paul_ble'
     pointers: aide2_bis
   occupe_inprogress3:
     text: 'J''espère que vous êtes entrain de faire les &d3 pains&a&o ?!'
-    conditions: !timer_paul,pain_urgent
+    conditions: '!timer_paul,pain_urgent'
     pointers: aide3_bis
 #
   occupe1:
     text: 'Je n''ai pas le temps, je dois livrer du pain au château !'
-    conditions: paul1,!timer_paul,!tag_pain_paul
+    conditions: 'paul1,!timer_paul,!tag_pain_paul'
     events: paul_cleaner
     pointers: aide1,non
   livraison_rep:
@@ -40,7 +39,7 @@ NPC_options:
     events: paul_occupe1
   occupe2:
     text: 'Je suis trop occupé, j''ai besoin d''aller chercher le blé pour faire ma pâte !'
-    conditions: paul2,!timer_paul,!paul_ble
+    conditions: 'paul2,!timer_paul,!paul_ble'
     events: paul_cleaner
     pointers: aide2,aide2_bis,non
   ressources_rep:
@@ -51,7 +50,7 @@ NPC_options:
     events: paul_ressources_done
   occupe3:
     text: 'Je ne peux pas vous parler. J''ai du pain à faire en urgence !'
-    conditions: paul3,!timer_paul,!pain_urgent
+    conditions: 'paul3,!timer_paul,!pain_urgent'
     events: paul_cleaner
     pointers: aide3,non
   pain_rep:
@@ -79,14 +78,14 @@ player_options:
     pointers: ressources_rep
   aide2_bis:
     text: 'J''ai le blé qu''il vous faut !'
-    conditions: paul_ble,paul_ble_have
+    conditions: 'paul_ble,paul_ble_have'
     pointers: aide2_bis_rep
   aide3:
     text: 'Je peux m''en occuper si vous voulez !'
     pointers: pain_rep
   aide3_bis:
     text: 'J''ai les pains qu''il vous faut !'
-    conditions: pain_urgent_done,pain_urgent_have
+    conditions: 'pain_urgent_done,pain_urgent_have'
     pointers: aide3_bis_rep
   non:
     text: 'Je reviendrais plus tard.'

@@ -1,4 +1,3 @@
-!!!conversation!!!Soldat_Anxieux
 quester: 'Soldat_Anxieux'
 first: salut,merci,enfin,occupe
 stop: 'false'
@@ -10,7 +9,7 @@ stop: 'false'
 NPC_options:
   salut:
     text: 'Salut, as-tu vus le soldat ryan ? As-tu est nouveau !'
-    conditions: Besoin_Aide,!Soldat_Ryan,!Ryan_trouve,!Ryan_Tag,Deuxieme_Escadron1
+    conditions: 'Besoin_Aide,!Soldat_Ryan,!Ryan_trouve,!Ryan_Tag,Deuxieme_Escadron1'
     pointers: non,nonmais
   biensur:
     text: 'Oui, bien sur, je pense qu''il se trouve encore à la blibliothèque mais elle est si grand ! /nDit-lui que le général le cherche !'
@@ -20,11 +19,11 @@ NPC_options:
     events: Soldat_Ryan_tous
   merci:
     text: 'Tu la trouver ! Et il va voir le général ! Merci beaucoup !'
-    conditions: Ryan_trouve
+    conditions: 'Ryan_trouve'
     events: Defaut_Ryan
   enfin:
     text: 'Je peut enfin être tranquille, grâce à toi!'
-    conditions: Ryan_Tag
+    conditions: 'Ryan_Tag'
   occupe:
     text: 'Désolé, mais je suis occupé à chercher le Soldat Ryan.'
 ############

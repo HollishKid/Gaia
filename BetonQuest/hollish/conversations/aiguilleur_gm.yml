@@ -1,4 +1,3 @@
-!!!conversation!!!aiguilleur_gm
 quester: 'Aiguilleur'
 first: hello
 stop: 'false'
@@ -28,38 +27,38 @@ NPC_options:
 #
   voyage_rep:
     text: 'Le prix du ticket valable pendant &d15 minutes &a&oest de &f¤ &d50&a&o. Où souhaiteriez vous aller ?'
-    conditions: !train_ticket
+    conditions: '!train_ticket'
     pointers: gare,guilde,porteo,chateau,porten
   voyage_rep_ticket:
     text: 'Votre billet est valable pendant encore &2%objective.ticket_timer.left%&a&o, où voulez vous aller ?'
-    conditions: train_ticket
+    conditions: 'train_ticket'
     pointers: gare1,guilde1,porteo1,chateau1,porten1
 #
 # New Ticket
 #
   gare_pay:
     text: 'Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !'
-    conditions: money_50
+    conditions: 'money_50'
     events: tag_train_remover,ticket_pay,depart_gare,gm_summon
   guilde_pay:
     text: 'Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !'
-    conditions: money_50
+    conditions: 'money_50'
     events: tag_train_remover,ticket_pay,depart_guilde,gm_summon
   porteo_pay:
     text: 'Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !'
-    conditions: money_50
+    conditions: 'money_50'
     events: tag_train_remover,ticket_pay,depart_porteo,gm_summon
   chateau_pay:
     text: 'Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !'
-    conditions: money_50
+    conditions: 'money_50'
     events: tag_train_remover,ticket_pay,depart_chateau,gm_summon
   porten_pay:
     text: 'Avancez vous sur le quai de départ, un train vous y attendra. Ne tardez pas à monter !'
-    conditions: money_50
+    conditions: 'money_50'
     events: tag_train_remover,ticket_pay,depart_porten,gm_summon
   no_fund:
     text: 'Il semblerait que vous n''ayez pas assez d''argent pour payer le billet...'
-    conditions: !money_50
+    conditions: '!money_50'
 #
 # Valid Ticket
 #

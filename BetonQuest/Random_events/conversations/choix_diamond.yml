@@ -1,4 +1,3 @@
-!!!conversation!!!choix_diamond
 quester: 'Loto'
 first: n1,n2,n3
 stop: 'true'
@@ -11,13 +10,13 @@ prefix: tick
 NPC_options:
   n1:
     text: '"&6&oDONG!"'
-    conditions: loto_start,!diamond,random_36
+    conditions: 'loto_start,!diamond,random_36'
     events: choix_diamond
   n2:
     text: '"&6&oDING!"'
-    conditions: loto_start,diamond
+    conditions: 'loto_start,diamond'
     events: roulette
   n3:
     text: '"&6&oDING!"'
-    conditions: loto_start,gold
+    conditions: 'loto_start,gold'
     events: roulette

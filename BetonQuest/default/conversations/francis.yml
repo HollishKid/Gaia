@@ -1,4 +1,3 @@
-!!!conversation!!!francis
 quester: 'Francis'
 first: unknown,normal,occupe1,occupe2,occupe3,occupe_inprogress1,occupe_inprogress2,occupe_inprogress3
 stop: 'false'
@@ -8,26 +7,26 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Vous n''êtes pas de cette ville ! Parlez à l''&2Intendant &a&o!'
-    conditions: !intendant_done
+    conditions: '!intendant_done'
   normal:
     text: 'Le travail dans les champs, c''est pas facile tous les jours !'
-    conditions: timer_francis
+    conditions: 'timer_francis'
 #
   occupe_inprogress1:
     text: 'J''espère que vous n''avez pas oublié d''aller chercher les &d2 pains &a&ochez &fPaul &a&o?'
-    conditions: !timer_francis,tag_pain_francis
+    conditions: '!timer_francis,tag_pain_francis'
     pointers: aide1_bis
   occupe_inprogress2:
     text: 'J''espère que vous n''avez pas oublié de livrer les carrottes chez &fPaulette &a&o?!'
-    conditions: !timer_francis,tag_francis_carot
+    conditions: '!timer_francis,tag_francis_carot'
   occupe_inprogress3:
     text: 'J''espère que vous avez fait la commission des betteraves au &fChef &a&odu Château ?'
-    conditions: !timer_francis,betteraves_urgent
+    conditions: '!timer_francis,betteraves_urgent'
     pointers: aide3_bis
 #
   occupe1:
     text: 'Vous êtes là pour m''aider? Sinon, je vais retourner travailler... !'
-    conditions: francis1,!timer_francis,!tag_pain_francis,intendant_done
+    conditions: 'francis1,!timer_francis,!tag_pain_francis,intendant_done'
     events: francis_cleaner
     pointers: aide1,non
   livraison_rep:
@@ -38,7 +37,7 @@ NPC_options:
     events: francis_ressources_done
   occupe2:
     text: 'Pourriez vous m''aider à livrer un de mes produits ?'
-    conditions: francis2,!timer_francis,!tag_francis_carot,intendant_done
+    conditions: 'francis2,!timer_francis,!tag_francis_carot,intendant_done'
     events: francis_cleaner
     pointers: aide2,non
   ressources_rep:
@@ -46,7 +45,7 @@ NPC_options:
     events: francis_occupe2
   occupe3:
     text: 'Vous n''auriez pas le temps d''aider à livrer ces betteraves par hasard ?'
-    conditions: francis3,!timer_francis,!betteraves_urgent,intendant_done
+    conditions: 'francis3,!timer_francis,!betteraves_urgent,intendant_done'
     events: francis_cleaner
     pointers: aide3,non
   betteraves_rep:
@@ -67,14 +66,14 @@ player_options:
     pointers: ressources_rep
   aide1_bis:
     text: 'J''ai les pains de Paul !'
-    conditions: tag_paul_francis,pain_francis
+    conditions: 'tag_paul_francis,pain_francis'
     pointers: aide1_bis_rep
   aide3:
     text: 'Pas de problème ! Je les livre où ?'
     pointers: betteraves_rep
   aide3_bis:
     text: 'Oui! J''ai même le gâteau du chef !'
-    conditions: tag_tarte_chef,tarte_chef_have
+    conditions: 'tag_tarte_chef,tarte_chef_have'
     pointers: aide3_bis_rep
   non:
     text: 'Je suis occupé moi aussi ! Au revoir !'

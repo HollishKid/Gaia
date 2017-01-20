@@ -1,4 +1,3 @@
-!!!conversation!!!mageentry
 quester: 'Mage'
 first: inconnu,connu,connu_orno_not,connu_orno_end,back
 stop: 'false'
@@ -10,7 +9,7 @@ stop: 'false'
 NPC_options:
   inconnu:
     text: 'Bienvenue en ce haut lieu, &2%player%&a&o.'
-    conditions: !tag_mage_entry,!tag_orno,!tag_orno_done,!mageentry_approved
+    conditions: '!tag_mage_entry,!tag_orno,!tag_orno_done,!mageentry_approved'
     pointers: qui,quel,entrer,merciaurevoir
   qui_rep:
     text: 'Je suis un des 13 &3Mages &a&odu &dSanctuaire&a&o. Je suis chargé de l''acceuil des voyageurs en quête de spiritualité.'
@@ -41,17 +40,17 @@ NPC_options:
 ###
   connu:
     text: 'Avant de vous rendre auprès des Érudits, allez vous documenter dans la &dLibrairie Royale d''Athelas&a&o. Adressez-vous à &2Orno&a&o, il sait que vous venez...'
-    conditions: tag_mage_entry,!tag_orno,!tag_orno_end,!mageentry_approved
+    conditions: 'tag_mage_entry,!tag_orno,!tag_orno_end,!mageentry_approved'
     events: orno_title_tag,journal_find_orno
   connu_orno_not:
     text: 'Vous n''avez pas encore été approuvé par &2Orno&a&o, sinon il me l''aurait fait savoir...'
-    conditions: tag_mage_entry,tag_orno,!tag_orno_end
+    conditions: 'tag_mage_entry,tag_orno,!tag_orno_end'
     pointers: orno_ou
   orno_ou_rep:
     text: 'Il se trouve à la &dLibrairie d''Athelas&a&o.'
   connu_orno_end:
     text: 'Orno m''a informé de la bonne réussite de votre apprentissage pour vous adresser aux Érudits ! Il est donc temps de vous envoyer chez eux, allez les trouver ici, dans le &dSanctuaire&a&o. \nPensez à conserver les livres d''&2Orno &a&oet d''en tirer beaucoup de sagesse !'
-    conditions: tag_mage_entry,tag_orno_end,!mageentry_approved
+    conditions: 'tag_mage_entry,tag_orno_end,!mageentry_approved'
     events: journal_mageentry_del,journal_erudits,mageentry_approved,quest_point_1
 ###
 #
@@ -61,7 +60,7 @@ NPC_options:
 ###
   back:
     text: 'Quel plaisir de vous revoir &2%player% &a&o!'
-    conditions: mageentry_approved
+    conditions: 'mageentry_approved'
     pointers: histoire,magie,branching_out
   histoire_bis:
     text: 'Avec plaisir, &2%player% &a&o!'
@@ -132,7 +131,7 @@ player_options:
 ###
   branching_out:
     text: 'J''ai fini ma formation avec l''Érudit de l''Air.'
-    conditions: airtemple_magic_learning
+    conditions: 'airtemple_magic_learning'
     pointers: branching_out_ok
 #######################################
 #                                     #

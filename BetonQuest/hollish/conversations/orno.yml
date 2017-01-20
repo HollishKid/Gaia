@@ -1,4 +1,3 @@
-!!!conversation!!!orno
 #
 # NPC
 quester: 'Orno'
@@ -7,16 +6,16 @@ stop: 'false'
 NPC_options:
   inconnu:
     text: 'Bien à vous. Comment vous portez-vous ?'
-    conditions: !tag_orno_end,!tag_orno,!orno_book,!tag_orno_beta
+    conditions: '!tag_orno_end,!tag_orno,!orno_book,!tag_orno_beta'
     pointers: bonjour,dac,que
   retour:
     text: 'Vous revoilà &2%player% &a&o! J''espère que votre formation se passe bien auprès des Érudits ! N''oubliez pas: &6Calpa &a&opour Eau, &6Kemen &a&opour Terre, &6Ruinë &a&opour Feu et &6Vista &a&opour Air! Vous devrez répondre &6Ilcë &a&oau Mage à l''entrée pour faire apparaître votre &dBaguette Magique !'
-    conditions: tag_orno_end,!tag_orno,!orno_book,!tag_orno_beta
+    conditions: 'tag_orno_end,!tag_orno,!orno_book,!tag_orno_beta'
   que_rep:
     text: 'J''assiste les Érudits dans leur travail de recherche documentaire. De par l''âge de cet endroit, beaucoup de documents sont conservés ici. Certains pensent même que des salles inconnues se trouvent encore en profondeur sous le bâtiment.'
   connu:
     text: 'Bien à vous &2%player% &a&o! Le &2Mage &a&om''a prévenu de votre visite. Vous souhaiteriez donc vous soumettre à l''enseignement des Érudits, allez me chercher le livre intitulé &6"Histoire de l''Enseignement de la Magie"&a&o.'
-    conditions: tag_orno,!orno_book,!orno_book_tagged,!tag_orno_beta
+    conditions: 'tag_orno,!orno_book,!orno_book_tagged,!tag_orno_beta'
     pointers: dako,pourquoi,ou
   pourquoi_rep:
     text: 'Il nous permettra de commencer votre enseignement et de vous faire accepter en tant qu''élève auprès des Érudits ! Vous y allez alors ?'
@@ -25,11 +24,11 @@ NPC_options:
     text: 'Dans la section Histoire de la &dPetite Salle &a&o!'
   livre_sans:
     text: 'Vous n''avez pas encore trouvé le livre que je vous ai demandé ? Il s''appelle &6"Histoire de l''Enseignement de la Magie" &a&o.'
-    conditions: tag_orno,orno_book,!orno_book_tagged,!tag_orno_beta
+    conditions: 'tag_orno,orno_book,!orno_book_tagged,!tag_orno_beta'
     pointers: ou,non
   livre:
     text: 'Je vois que vous avez le livre qu''il nous faut. Avez vous pris le temps de le parcourir ?'
-    conditions: tag_orno,orno_book,orno_book_tagged,!tag_orno_beta
+    conditions: 'tag_orno,orno_book,orno_book_tagged,!tag_orno_beta'
     pointers: si,pas
   si_rep:
     text: 'Très bien ! Comme je suis responsable des personnes que je recommande auprès des Érudits, je me dois de vous interroger d''abord. Êtes-vous prêt ?'
@@ -55,10 +54,10 @@ NPC_options:
     events: orno_beta,tag_remove_ornobook
   connu_beta_sans:
     text: 'Vous n''avez toujours pas trouvé ce livre que je vous ai demandé ? Il s''intitule &6"Histoire de la Magie".'
-    conditions: tag_orno,tag_orno_beta,!orno_book_tagged2
+    conditions: 'tag_orno,tag_orno_beta,!orno_book_tagged2'
   connu_beta:
     text: 'Très bien! Vous avez trouvé le livre qu''il faut ! J''espère que vous l''avez bouquiné, vous en aurez besoin si vous voulez faire apparaître une &dBaguette Magique &a&o. C''est le mot &6Ilcë &a&o!'
-    conditions: tag_orno,tag_orno_beta,orno_book_tagged2
+    conditions: 'tag_orno,tag_orno_beta,orno_book_tagged2'
     events: orno_end
 player_options:
   bonjour:

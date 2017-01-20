@@ -1,4 +1,3 @@
-!!!conversation!!!curuvar
 quester: 'Curuvar'
 first: unknown,welcome,member
 stop: 'false'
@@ -10,10 +9,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Qui pourriez vous bien être ?! Allez voir l''&2Intendant &a&o!'
-    conditions: !gestionnaire
+    conditions: '!gestionnaire'
   welcome:
     text: 'Salut jeune inconnu ! Quel destin t''amène ici, en ce jour ?'
-    conditions: gestionnaire,!alchimiste
+    conditions: 'gestionnaire,!alchimiste'
     pointers: presentation,become_member,rien
   pres_ok:
     text: 'Parfaitement, je serais ... \ncurieux ... \nde recroiser ton chemin en ce monde.... !'
@@ -27,7 +26,7 @@ NPC_options:
 # Add any guild-specific quests in pointers of "member"
   member:
     text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
-    conditions: alchimiste
+    conditions: 'alchimiste'
     pointers: menu,merci
   alchimiste_menu:
     text: 'Le voilà !'
@@ -40,11 +39,11 @@ NPC_options:
 player_options:
   presentation:
     text: 'Je viens me présenter de la part de l''Intendant !'
-    conditions: guilde_alchimistes
+    conditions: 'guilde_alchimistes'
     pointers: pres_ok
   become_member:
     text: 'Je veux devenir membre de la Guilde des Alchimistes !'
-    conditions: !alchimiste,intendant_done
+    conditions: '!alchimiste,intendant_done'
     pointers: member_ok
   menu:
     text: 'Je voudrais accéder au Menu de la Guilde.'

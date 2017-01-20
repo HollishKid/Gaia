@@ -1,4 +1,3 @@
-!!!conversation!!!nimue
 quester: 'Nimuë'
 first: unknown,the_first,the_hostile,the_neutre,the_amical,the_honore,the_exalte,the_done
 stop: 'false'
@@ -6,43 +5,43 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Vous êtes inconnu dans cette ville. Parlez à l''&2Intendant &a&o!'
-    conditions: !intendant_done
+    conditions: '!intendant_done'
   the_done:
     text: 'Ce thé était fort agréable, n''est-ce pas ?'
-    conditions: !the_demande,tag_nimue_timer
+    conditions: '!the_demande,tag_nimue_timer'
   the_first:
     text: 'Si vous me ramenez un saut d''eau, je ferais et partagerais un thé avec plaisir !'
-    conditions: !the_demande,!tag_nimue_timer,intendant_done
+    conditions: '!the_demande,!tag_nimue_timer,intendant_done'
     pointers: oui,non,voici
   the_hostile:
     text: 'Vous devriez respecter davantage les habitants de cette ville, ils pourraient vous aider ! Revenez quand vous aurez gagné leur respect ! Comme vous voyez, ils ne seront pas toujours sympathiques avec vous, profitez bien de votre "thé" !'
-    conditions: the_demande,!neutre
+    conditions: 'the_demande,!neutre'
     events: potion_ilse1
   the_neutre:
     text: 'Je vois que vous n''êtes pas encore reconnu par les habitants d''&dAthelas &a&o! Vous devriez sympathiser davantage avec eux, ils pourront vous donner plus que ... de l''eau chaude !'
-    conditions: the_demande,neutre,!amical
+    conditions: 'the_demande,neutre,!amical'
     events: potion_ilse2
   the_amical:
     text: 'Voici votre thé ! Il semblerait que les habitants d''&dAthelas &a&oapprécient votre venue ! Ne méprisez l''intérêt d''avoir de bonnes relations en ville...'
-    conditions: the_demande,amical,!honore
+    conditions: 'the_demande,amical,!honore'
     events: potion_ilse3
   the_honore:
     text: 'C''est bon de savoir que des Aventuriers comme vous veillent sur cette ville ! J''espère que cette potion vous fera avancer &arapidement &a&odans vos aventures !'
-    conditions: the_demande,honore,!exalte
+    conditions: 'the_demande,honore,!exalte'
     events: potion_ilse4
   the_exalte:
     text: 'Je suis très honorée de partager cette tasse de thé avec vous, je tiens à vous donner ce petit cadeau qui j''espère pourra vous aider pour passer &ainaperçu &a&o!'
-    conditions: the_demande,exalte
+    conditions: 'the_demande,exalte'
     events: potion_ilse5
 #Options du joueur
 player_options:
   oui:
     text: 'Avec plaisir, j''y vais de ce pas !'
-    conditions: !saut_eau
+    conditions: '!saut_eau'
   non:
     text: 'Non merci, je préfère boire le thé seul.'
     events: reput_athelas1_negatif
   voici:
     text: 'Voici de l''eau pour faire le thé, je resterais pour le thé avec plaisir !'
-    conditions: saut_eau
+    conditions: 'saut_eau'
     events: the_folder

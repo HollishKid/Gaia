@@ -1,4 +1,3 @@
-!!!conversation!!!obrien
 quester: 'O''Brian'
 first: inconnu,connu,echec,echec2,succes,n1,step2,step3,dris
 stop: 'false'
@@ -14,26 +13,26 @@ NPC_options:
 ##################### 1ere partie
   inconnu:
     text: 'Bonjour, &2%player%'
-    conditions: !quest_drisgan,!echec,!echec2,!obrien_step2,!ikonq2_done
+    conditions: '!quest_drisgan,!echec,!echec2,!obrien_step2,!ikonq2_done'
   connu:
     text: 'Salut, &2Ikon&a&om''a parlé de toi, tu es prêt à infiltrer la ville?'
-    conditions: quest_drisgan,!echec,!echec2,!obrien,!obrien_step2
+    conditions: 'quest_drisgan,!echec,!echec2,!obrien,!obrien_step2'
     events: folder_infilt
     pointers: rep1
   n1:
     text: 'La nuit est courte, dépeches toi!'
-    conditions: quest_drisgan,obrien,!echec,!echec2,!succes,!obrien_step2
+    conditions: 'quest_drisgan,obrien,!echec,!echec2,!succes,!obrien_step2'
   echec:
     text: 'Je vous que tu as échoué ... Retentes donc une autre fois !'
-    conditions: quest_drisgan,echec,!echec2,!obrien_step2
+    conditions: 'quest_drisgan,echec,!echec2,!obrien_step2'
 #REMOVED "echec2" from events below = NOT DEFINED
     events: folder_infilt
   echec2:
     text: 'Allez, vas-y! Comme je t''ai dit, le lière sur le mur extérieur, pas loin d''ici !'
-    conditions: quest_drisgan,echec,echec2,!succes,!obrien_step2
+    conditions: 'quest_drisgan,echec,echec2,!succes,!obrien_step2'
   succes:
     text: 'Alors tu as réussi? Qu''as-tu appris?'
-    conditions: succes,!obrien_step2
+    conditions: 'succes,!obrien_step2'
     pointers: rep4
   suite1:
     text: 'Bien. Le seul accès se fait grace à du lierre qui monte sur le mur derrière moi. La suite de ton parcours devra se faire sur les toits, car les miliciens au sol te jèterons hors de la ville aussitôt.'
@@ -50,11 +49,11 @@ NPC_options:
 ############################# 2eme partie
   step2:
     text: 'Je n''ai pas encore réuni assez d''informations. Reviens plus tard.'
-    conditions: obrien_step2,!ikonq2_done
+    conditions: 'obrien_step2,!ikonq2_done'
 #############################
   step3:
     text: 'Bien joué petit, les voleurs de la forêt ont mis une prime sur ta tête, cela devrait suffire à convaincre le boss.'
-    conditions: ikonq2_done
+    conditions: 'ikonq2_done'
     pointers: rep5
   suite5:
     text: 'Tu va aller voir &2Eko&a&o, c''est un lieutenant à qui je t''ai recommandé. Et ne t''inquiètes pas pour les guardes tu as un sauf-conduit à Drisgan dorénavant, parles à ceux qui sont devant la porte Nord pour entrer dans la ville.'
@@ -62,7 +61,7 @@ NPC_options:
 ############################# END
   dris:
     text: 'Hey %player%! Ca se passe bien avec la hièrarchie?'
-    conditions: drisgan
+    conditions: 'drisgan'
 ##########################
 #                        #
 #     player OPTIONS     #

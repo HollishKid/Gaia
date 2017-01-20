@@ -1,4 +1,3 @@
-!!!conversation!!!fils_paulette
 quester: 'Garde Royal'
 first: livraison
 stop: 'false'
@@ -18,5 +17,5 @@ NPC_options:
 player_options:
   bonjour:
     text: 'Vous êtes le fils de Paulette ? J''ai quelque chose  pour vous !'
-    conditions: gateau_paulette,tag_fils_paulette
+    conditions: 'gateau_paulette,tag_fils_paulette'
     pointers: oui

@@ -1,4 +1,3 @@
-!!!conversation!!!test
 quester: 'Ardere'
 first: welcome
 stop: 'false'
@@ -13,6 +12,6 @@ player_options:
     text: 'Merci!'
   milo:
     text: 'Milo m''a envoyé avec cette fiole agitée. Il m''a dit que je pourrais canaliser son énergie ici.'
-    conditions: tag_milo_ardere
+    conditions: 'tag_milo_ardere'
     pointers: milo_rep
 

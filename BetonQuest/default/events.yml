@@ -1,4 +1,3 @@
-!!!events!!!
 #
 #
 #
@@ -2944,7 +2943,7 @@ loggerjoe_takestick: take stick:2
 arc_master: folder give_bow,scan_arrows,take_arrows,give_arrows delay:0
 #
 give_bow: give bow
-scan_arrows: point an_arrows_tempo %item.arrow.amount%
+scan_arrows: point an_arrows_tempo %item.an_arrow.amount%
 take_arrows: folder take_arrows_exe delay:1
 take_arrows_exe: take an_arrow:%point.arrows_tempo.amount%
 give_arrows: give an_arrow:200

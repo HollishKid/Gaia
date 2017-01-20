@@ -1,4 +1,3 @@
-!!!conversation!!!eruditair
 quester: 'Érudit'
 first: inconnu,porteur,connu
 stop: 'false'
@@ -16,7 +15,7 @@ NPC_options:
 ##
   inconnu:
     text: 'Bien à vous, en quoi puis-je vous aider ?'
-    conditions: !mageentry_approved
+    conditions: '!mageentry_approved'
     pointers: qui,keske,merciaurevoir
   qui_rep:
     text: 'Je suis un des 4 &3Érudits &a&odu &dSanctuaire&a&o. Je suis &dÉrudit &a&ode l''Air.'
@@ -38,7 +37,7 @@ NPC_options:
 ##
   porteur:
     text: 'Bien à vous &2%player%&a&o. Je sens en vous la présence d''une Spiritualité naissante...'
-    conditions: mageentry_approved,!tag_erudit_air
+    conditions: 'mageentry_approved,!tag_erudit_air'
     pointers: air1,air2,air3,air4,air5
   faux:
     text: 'Je crains que malgré cela, vous n''ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité ... Celle du Respect !'
@@ -48,7 +47,7 @@ NPC_options:
 #A partir d'ici commence chaque spécialité de l'Erudit (delete me)
   etudiant:
     text: 'Ah ! Je vois... Il s''avère que je pourrais vous enseigner, votre esprit me convient, mais je ne vois pas en vous le moindre savoir pour entamer ces études. Avant de vous lancer, fabriquez vous un &dlivre avec une plume&a&o, pour prendre vos notes éventuelles !'
-    conditions: !tag_erudit_book
+    conditions: '!tag_erudit_book'
     events: tag_erudit_air
     pointers: book_ok,book_non
 #
@@ -65,7 +64,7 @@ NPC_options:
 #
   connu:
     text: 'Ravi de vous revoir, &2%player%&a&o, en quoi puis-je vous aider ?'
-    conditions: tag_erudit_air
+    conditions: 'tag_erudit_air'
     pointers: book_erudit,book,apprentissage,erudit_air_student,aang,merciaurevoir
 #
 # Aang
@@ -129,7 +128,7 @@ player_options:
     pointers: etudiant
   book_erudit:
     text: 'J''ai un livre et une plume pour écrire !'
-    conditions: erudit_book_have,tag_erudit_book,!tag_erudit_air_student
+    conditions: 'erudit_book_have,tag_erudit_book,!tag_erudit_air_student'
     pointers: ermite
   book_ok:
     text: 'Aucun problème, j''y vais de ce pas !'
@@ -138,22 +137,22 @@ player_options:
     text: 'Eh, non pas tout de suite.'
   book:
     text: 'Qu''est-ce que je dois faire déjà ?'
-    conditions: !tag_erudit_air_student,!tag_erudit_book
+    conditions: '!tag_erudit_air_student,!tag_erudit_book'
     pointers: book_rep
   erudit_air_student:
     text: 'Où est l''Ermite dont vous m''avez parlé ?'
-    conditions: tag_erudit_air_student,!tag_aang
+    conditions: 'tag_erudit_air_student,!tag_aang'
     pointers: erudit_air_student_rep
 #
 # Post Aang - Trouvaille du TEMPLE
 #
   aang:
     text: 'J''ai trouvé le temple de l''Air !'
-    conditions: livre_air
+    conditions: 'livre_air'
     pointers: aang_rep
   livre_air:
     text: 'Et pourtant, voici un livre pour vous le prouver !'
-    conditions: !airtemple_magic_learning
+    conditions: '!airtemple_magic_learning'
     events: livre_air_inspection
   welldont:
     text: 'Alors ne me croyez pas !'

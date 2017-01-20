@@ -1,4 +1,3 @@
-!!!conversation!!!larca
 quester: 'Larca'
 first: unknown,welcome,member
 stop: 'false'
@@ -10,10 +9,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Je ne vous connais pas ! Allez voir l''&2Intendant &a&o!'
-    conditions: !gestionnaire
+    conditions: '!gestionnaire'
   welcome:
     text: 'Salut jeune athlète ! Que viens tu faire aujourd''hui ?'
-    conditions: gestionnaire,!acrobate
+    conditions: 'gestionnaire,!acrobate'
     pointers: presentation,become_member,rien
   pres_ok:
     text: 'Ok ! Je vous acceuillerais avec plaisir lorsque vous serez officiellement Citoyen !'
@@ -27,7 +26,7 @@ NPC_options:
 # Add any guild-specific quests in pointers of "member"
   member:
     text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
-    conditions: acrobate
+    conditions: 'acrobate'
     pointers: menu,merci
   acrobate_menu:
     text: 'Le voilà !'
@@ -40,11 +39,11 @@ NPC_options:
 player_options:
   presentation:
     text: 'Je viens me présenter de la part de l''Intendant !'
-    conditions: guilde_acrobates
+    conditions: 'guilde_acrobates'
     pointers: pres_ok
   become_member:
     text: 'Je veux devenir membre de la Guilde des Acrobates !'
-    conditions: !acrobate,intendant_done
+    conditions: '!acrobate,intendant_done'
     pointers: member_ok
   menu:
     text: 'Je voudrais accéder au Menu de la Guilde.'

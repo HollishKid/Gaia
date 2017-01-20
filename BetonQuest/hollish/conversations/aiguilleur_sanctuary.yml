@@ -1,4 +1,3 @@
-!!!conversation!!!aiguilleur_sanctuary
 quester: 'Aiguilleur'
 first: hello
 stop: 'false'
@@ -26,15 +25,15 @@ NPC_options:
 #
   voyage_rep:
     text: 'Le prix du ticket valable pendant &d15 minutes &a&oest de &f¤ &d50&a&o. Où souhaiteriez vous aller ?'
-    conditions: !train_ticket,destination_sanctuary
+    conditions: '!train_ticket,destination_sanctuary'
     events: open_train_gui
   voyage_rep_ticket:
     text: 'Votre billet est valable pendant encore &2%objective.ticket_timer.left%&a&o, où voulez vous aller ?'
-    conditions: train_ticket,destination_sanctuary
+    conditions: 'train_ticket,destination_sanctuary'
     events: open_train_gui
   voyage_rep_not:
     text: 'Vous n''avez pas encore débloqué cette gare. \nVous devrez d''abord aider les Nains d''Ingor !'
-    conditions: !destination_sanctuary
+    conditions: '!destination_sanctuary'
     events: open_train_gui
 #
 #
@@ -43,10 +42,10 @@ NPC_options:
 #
   comehere_village:
     text: 'Vous devez d''abord débloquer la Gare au village au Sud d''ici. Parlez au &2Moine Ardère&a&o.'
-    conditions: !destination_village
+    conditions: '!destination_village'
   comehere_microquest:
     text: 'Très bien, il me faudrait 5 lingots d''or, pour améliorer les rails et donner assez de puissance au train !'
-    conditions: destination_village
+    conditions: 'destination_village'
     events: journal_sanctuary_train,sanctuary_train_tag
   comeherehave_rep:
     text: 'Passez moi ces lingots, je ferais améliorer ces rails sur le champs ! Merci beaucoup !'
@@ -74,16 +73,16 @@ player_options:
 #
   voyage:
     text: 'Je voudrais voyager en train.'
-    conditions: destination_village,destination_sanctuary
+    conditions: 'destination_village,destination_sanctuary'
     pointers: voyage_rep,voyage_rep_ticket,voyage_rep_not
 #
 # Use this Station Micro Quest
 #
   comehere:
     text: 'Je voudrais pouvoir utiliser cette gare.'
-    conditions: !destination_sanctuary,!sanctuary_train_tag
+    conditions: '!destination_sanctuary,!sanctuary_train_tag'
     pointers: comehere_village,comehere_microquest
   comeherehave:
     text: 'J''ai les 5 lingots d''or qu''il faut pour accélérer les rails du train !'
-    conditions: sanctuary_train_tag,train_have_gold,!destination_sanctuary
+    conditions: 'sanctuary_train_tag,train_have_gold,!destination_sanctuary'
     pointers: comeherehave_rep

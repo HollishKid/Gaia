@@ -1,4 +1,3 @@
-!!!conversation!!!Claire
 quester: 'Claire'
 first: loyer,gentil,mechante,inconnue
 stop: 'false'
@@ -10,16 +9,16 @@ stop: 'false'
 NPC_options:
   inconnue:
     text: 'Bonjour à vous !'
-    conditions: Hist_Tag
+    conditions: 'Hist_Tag'
   gentil:
     text: 'Rebonjour ! Merci encore pour ton aide !'
-    conditions: Bonter_Tag,!Cruel_Tag
+    conditions: 'Bonter_Tag,!Cruel_Tag'
   mechante:
     text: 'Partez d''ici ! Je ne veux  plus vous revoier ici !'
-    conditions: Cruel_Tag,!Bonter_Tag
+    conditions: 'Cruel_Tag,!Bonter_Tag'
   loyer:
     text: 'Qu''est ce que vous voulez ? Vous venez encore pour le loyer ?'
-    conditions: Quetes_Loyer,!Loyer_Done
+    conditions: 'Quetes_Loyer,!Loyer_Done'
     pointers: oui
   alors:
     text: 'alors ça ne changera pas ! Je ne payerais pas !'
