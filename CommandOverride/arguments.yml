@@ -13,3 +13,18 @@
 /tell:
   min: '2'
   message: '&4Usage: &c /tell <player> <message>'
+/enregistrer:
+  min: '2'
+  message: '&4Pour vous enregistrer tapez &c/enregistrer &4suivi de 2 fois votre mot de passe.'
+/modifiermdp:
+  min: '2'
+  message: '&4Pour modifier votre mot de passe tapez &c/modifiermdp &4suivi de votre ancien MDP puis le nouveau MDP.'
+/ajoutermail:
+  min: '2'
+  message: '&4Pour ajouter une adresse mail tapez &c/ajoutermail &4suivi de 2 fois votre adresse mail.'
+/modifiermail:
+  min: '2'
+  message: '&4Pour modifier votre adresse mail tapez &c/modifiermail &4suivi de votre ancienne adresse puis la nouvelle adresse.'
+/envoyermdp:
+  min: '1'
+  message: '&4Pour vous envoyer un nouveau mot de passe tapez &c/envoyermdp &4suivi de votre adresse mail.'

@@ -105,18 +105,33 @@ commands:
   - WAIT 1
   - command:/pets
   /closethisshit: []
-  /thisisthepasswordchangercommand:
+  /enregistrer:
+  - console:/pex user <player> timed add authme.player.register 7 
   - WAIT 1
-  - console:/vsign <player> changepassword {data}
-  /thisistheaddrecoverycommand:
+  - op-command:/register <arg 0> <arg 1>
+  - WAIT 2
+  - op-command:/thisisthepasswordaddercommand <arg 0> <arg 1>
+  /modifiermdp:
+  - console:/pex user <player> timed add authme.player.changepassword 7
   - WAIT 1
-  - console:/vsign <player> email add {data}
-  /thisisthechangerecoverycommand:
+  - op-command:/changepassword <arg 0> <arg 1>
+  - WAIT 2
+  - op-command:/thisisthepasswordchangercommand <arg 0> <arg 1>
+  /ajoutermail:
+  - console:/pex user <player> timed add authme.player.email.add 7
   - WAIT 1
-  - console:/vsign <player> email change {data}
-  /thisisthesendrecoverycommand:
+  - op-command:/email add <arg 0> <arg 1>
+  - WAIT 2
+  - op-command:/thisistheemailaddercommand <arg 0> <arg 1>
+  /modifiermail:
+  - console:/pex user <player> timed add authme.player.email.change 7
   - WAIT 1
-  - console:/vsign <player> email recover {data}
+  - op-command:/email change <arg 0> <arg 1>
+  - WAIT 2
+  - op-command:/thisisthechangerecoverycommand <arg 0> <arg 1>
+  /envoyermdp:
+  - WAIT 1
+  - op-command:/email recovery <arg 0>
   /thisisthehelpopcommand:
   - WAIT 1
   - console:/vsign <player> helpop {data}
