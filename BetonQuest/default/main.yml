@@ -59,7 +59,6 @@ static:
   05:06: chest_loot_timer
 global_locations: cimereached,spiritualium1,spiritualium2,spiritualium3
 npcs:
-  '7': innkeeper
   '1': amiral
   '8': man
   '12': pattefol
