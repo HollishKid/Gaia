@@ -1,4 +1,4 @@
-quester: Ingolmo
+quester: 'Ingolmo'
 first: unknown,welcome,member
 stop: 'false'
 #                   #
@@ -8,29 +8,29 @@ stop: 'false'
 #                   #
 NPC_options:
   unknown:
-    text: Je ne vous connais pas ! Allez voir l'&2Intendant &a&o!
+    text: 'Je ne vous connais pas ! Allez voir l''&2Intendant &a&o!'
     conditions: '!gestionnaire'
   welcome:
-    text: Salut jeune chair à canon ! Que me veux-tu ?
+    text: 'Salut jeune chair à canon ! Que me veux-tu ?'
     conditions: 'gestionnaire,!guerrier'
-    pointer: presentation,become_member,rien
+    pointers: presentation,become_member,rien
   pres_ok:
-    text: Ok ! Je ne vous accepterais pas en tant que membre de ma guilde tant que tu ne seras pas officiellement reconnu par l'&2Intendant &a&o!
+    text: 'Ok ! Je ne vous accepterais pas en tant que membre de ma guilde tant que tu ne seras pas officiellement reconnu par l''&2Intendant &a&o!'
     events: found_guild3,guild_tester
   member_ok:
-    text: Très bien, bienvenue parmi nous ! Notre Guilde renferme 4 spécialités différentes! \nLe combat aux Poings, à l'Epée et à la Hache. Sans oublier le Tir à l'Arc ! \nLe Menu de la Guilde te permet de choisir un métier parmis d'autres avantages !
-    event: guerrier
-    pointer: menu,merci
+    text: 'Très bien, bienvenue parmi nous ! Notre Guilde renferme 4 spécialités différentes! \nLe combat aux Poings, à l''Epée et à la Hache. Sans oublier le Tir à l''Arc ! \nLe Menu de la Guilde te permet de choisir un métier parmis d''autres avantages !'
+    events: guerrier
+    pointers: menu,merci
 #
 #
 # Add any guild-specific quests in pointers of "member"
   member:
-    text: Bienvenue dans votre guilde, &2%player% &a&o!
-    conditions: guerrier
-    pointer: menu,crafts,merci
+    text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
+    conditions: 'guerrier'
+    pointers: menu,crafts,merci
   guerrier_menu:
-    text: Le voilà !
-    event: guerrier_menu
+    text: 'Le voilà !'
+    events: guerrier_menu
   crafts_rep:
     text: 'Vous pouvez créer des armures spéciales grâce à des matériaux nouveaux. \nPour créer un nouveau matériaux, mettez le dans un Four. \nVous pouvez y mettre: &dCuir&a&o, &dFicelle&a&o, &dFer&a&o, &dOr &a&oet &dDiamant&a&o. \nPour en fabriquer une armure, utilisez les recettes classiques.'
 #                   #
@@ -40,20 +40,20 @@ NPC_options:
 #                   #
 player_options:
   presentation:
-    text: Je viens me présenter de la part de l'Intendant !
+    text: 'Je viens me présenter de la part de l''Intendant !'
     conditions: 'guilde_guerriers'
-    pointer: pres_ok
+    pointers: pres_ok
   become_member:
-    text: Je veux devenir membre de la Guilde des Guerriers !
-    condition: '!guerrier,intendant_done'
-    pointer: member_ok
+    text: 'Je veux devenir membre de la Guilde des Guerriers !'
+    conditions: '!guerrier,intendant_done'
+    pointers: member_ok
   menu:
-    text: Je voudrais accéder au Menu de la Guilde.
-    pointer: guerrier_menu
+    text: 'Je voudrais accéder au Menu de la Guilde.'
+    pointers: guerrier_menu
   crafts:
-    text: Comment fonctionnent les Crafts Spéciaux ?
-    pointer: crafts_rep
+    text: 'Comment fonctionnent les Crafts Spéciaux ?'
+    pointers: crafts_rep
   rien:
-    text: Rien du tout...
+    text: 'Rien du tout...'
   merci:
-    text: Merci ! Au revoir !
+    text: 'Merci ! Au revoir !'

@@ -1,6 +1,6 @@
-quester: recruteur
+quester: 'recruteur'
 first: n1
 stop: 'false'
 NPC_options:
   n1:
-    text: On a toujours besoin de bras en plus !
+    text: 'On a toujours besoin de bras en plus !'

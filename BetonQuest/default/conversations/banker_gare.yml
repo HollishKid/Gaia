@@ -1,50 +1,50 @@
-quester: Banquier
+quester: 'Banquier'
 first: welcome,client
 stop: 'false'
 #Options du NPC
 NPC_options:
   welcome:
-    text: Bienvenue dans l'Antenne Gare de la Banque d'&dAthelas &2%player% &a&o! Je vois que vous n'avez pas de compte dans notre établissement, souhaitez vous en ouvrir un ?
+    text: 'Bienvenue dans l''Antenne Gare de la Banque d''&dAthelas &2%player% &a&o! Je vois que vous n''avez pas de compte dans notre établissement, souhaitez vous en ouvrir un ?'
     conditions: '!client'
-    pointer: oui,non,compte
+    pointers: oui,non,compte
   client:
     text: 'Bienvenue &2%player% &a&o! En poche &f¤ &2%ph.vault_eco_balance_fixed% &a&oCompte &f¤ &2%point.compte.amount%'
-    conditions: client
-    pointer: depret,autre
+    conditions: 'client'
+    pointers: depret,autre
   autre_pointer:
-    text: Bien entendu, en quoi puis-je vous aider &2%player% &a&o?
-    pointer: acces,argent,compte
+    text: 'Bien entendu, en quoi puis-je vous aider &2%player% &a&o?'
+    pointers: acces,argent,compte
   argent_rep:
-    text: Votre argent est entreposé dans le coffre fort de la banque. Son emplacement est gardé secret et sa protection accrue par rapport aux coffres des clients.
+    text: 'Votre argent est entreposé dans le coffre fort de la banque. Son emplacement est gardé secret et sa protection accrue par rapport aux coffres des clients.'
   acces_rep:
-    text: Absolument ! C'est un Coffre Relais réservé aux Votants méritants de la Ville d'Athelas, à votre service.
+    text: 'Absolument ! C''est un Coffre Relais réservé aux Votants méritants de la Ville d''Athelas, à votre service.'
   oui_rep:
     text: 'Excellent ! Je vous inscrit dans nos registres immédiatement &2%player% &a&o!'
   compte_rep:
-    text: Ouvrir un compte vous permet de déposer et retirer de l'argent et surtout, de disposer de cet argent dans TOUTES les banques d'Athelas et ses antennes !
+    text: 'Ouvrir un compte vous permet de déposer et retirer de l''argent et surtout, de disposer de cet argent dans TOUTES les banques d''Athelas et ses antennes !'
   depret_open:
-    text: Tout à fait, voici vos possibilités.
-    event: depret_open
+    text: 'Tout à fait, voici vos possibilités.'
+    events: depret_open
 #Options du joueur
 player_options:
   oui:
-    text: Absolument !
+    text: 'Absolument !'
     events: client
-    pointer: oui_rep
+    pointers: oui_rep
   non:
-    text: Non merci !
+    text: 'Non merci !'
   compte:
-    text: A quoi ça sert d'avoir un compte dans votre banque ?
-    pointer: compte_rep
+    text: 'A quoi ça sert d''avoir un compte dans votre banque ?'
+    pointers: compte_rep
   depret:
-    text: Je veux déposer/retirer de l'argent.
-    pointer: depret_open
+    text: 'Je veux déposer/retirer de l''argent.'
+    pointers: depret_open
   acces:
-    text: C'est un coffre de Banque à côté de vous ?
-    pointer: acces_rep
+    text: 'C''est un coffre de Banque à côté de vous ?'
+    pointers: acces_rep
   argent:
-    text: Qu'est-ce qu'il se passe avec l'argent que je mets sur mon compte ?
-    pointer: argent_rep
+    text: 'Qu''est-ce qu''il se passe avec l''argent que je mets sur mon compte ?'
+    pointers: argent_rep
   autre:
-    text: Pouvez vous me renseigner sur autre chose ?
-    pointer: autre_pointer
+    text: 'Pouvez vous me renseigner sur autre chose ?'
+    pointers: autre_pointer

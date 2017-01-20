@@ -1,43 +1,43 @@
-quester: Adelaide
+quester: 'Adelaide'
 first: n0,n1,n2,n3
 stop: 'false'
 #NPC options
 NPC_options:
   n0:
-    text: Vous n'êtes pas de cette ville ! Parlez à l'&2Intendant &a&o!
+    text: 'Vous n''êtes pas de cette ville ! Parlez à l''&2Intendant &a&o!'
     conditions: '!intendant_done'
   n1:
-    text: Bien le bonjour, en quoi puis-je vous aider ?
+    text: 'Bien le bonjour, en quoi puis-je vous aider ?'
     conditions: '!adel1_done,!adel1_start,intendant_done'
-    pointer: p1
+    pointers: p1
   n2:
-    text: Alors, comment avance ta quête ? As-tu réussi ?
-    conditions: adel1_start
-    pointer: retour1,retour
+    text: 'Alors, comment avance ta quête ? As-tu réussi ?'
+    conditions: 'adel1_start'
+    pointers: retour1,retour
   n3:
-    text: Bonjour &2%player%&a&o, que puis-je faire pour toi ?
-    conditions: adel1_done
+    text: 'Bonjour &2%player%&a&o, que puis-je faire pour toi ?'
+    conditions: 'adel1_done'
   r1:
-    text: Malheureusement, je n'ai plus de stocks disponible actuellement... Mes fournisseurs habituels ont arretés de me livrer il y plusieurs semaines déjà !
-    pointer: l1,l2
+    text: 'Malheureusement, je n''ai plus de stocks disponible actuellement... Mes fournisseurs habituels ont arretés de me livrer il y plusieurs semaines déjà !'
+    pointers: l1,l2
   q1:
-    text: Vous feriez ca pour moi ? Fantastique ! \nTout ce qu'il me faut c'est un peu de &6Sang d'araignée&a&o pour finir mes couleurs ! \nTu pourra en trouver dans la &dVieille Caverne des Alchimistes&a&o. \nIl parait qu'elle est sous l'eau à côté de &dHigh Garden&a&o, mais je ne sais pas comment y accéder...
+    text: 'Vous feriez ca pour moi ? Fantastique ! \nTout ce qu''il me faut c''est un peu de &6Sang d''araignée&a&o pour finir mes couleurs ! \nTu pourra en trouver dans la &dVieille Caverne des Alchimistes&a&o. \nIl parait qu''elle est sous l''eau à côté de &dHigh Garden&a&o, mais je ne sais pas comment y accéder...'
     events: adel1_start,adel1_folder
   recompense1:
-    text: Merveilleux ! Je vais enfin pouvoir me remettre au travail ! \nVoilà pour ta peine, avec mes remerciements.
+    text: 'Merveilleux ! Je vais enfin pouvoir me remettre au travail ! \nVoilà pour ta peine, avec mes remerciements.'
     events: adel1_folder2
 player_options:
   p1:
-    text: Qu'avez-vous à me proposer ?
-    pointer: r1
+    text: 'Qu''avez-vous à me proposer ?'
+    pointers: r1
   l1:
-    text: De quoi avez vous besoin pour travailler ?
-    pointer: q1
+    text: 'De quoi avez vous besoin pour travailler ?'
+    pointers: q1
   l2:
-    text: La vie est dure...
+    text: 'La vie est dure...'
   retour:
-    text: J'ai rammené ce que vous vouliez.
-    conditions: adel1_sang
-    pointer: recompense1
+    text: 'J''ai rammené ce que vous vouliez.'
+    conditions: 'adel1_sang'
+    pointers: recompense1
   retour1:
-    text: J'y travaille encore.
+    text: 'J''y travaille encore.'

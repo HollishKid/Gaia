@@ -1,4 +1,4 @@
-quester: Mike
+quester: 'Mike'
 first: ami
 stop: 'false'
 ###########
@@ -7,11 +7,11 @@ stop: 'false'
 #         #
 ###########
 NPC_options:
-  ami: 
-    text: Salut l'ami, tu visite ? Tu savais que Historia étais une ville pasible à une époque ?
-    pointer: trav
+  ami:
+    text: 'Salut l''ami, tu visite ? Tu savais que Historia étais une ville pasible à une époque ?'
+    pointers: trav
   roi:
-    text: D'après ma mère, après la mort du Roi Flok son fils Cony à monté sur le trône. Et depuis, la ville à complétement changé ...    
+    text: 'D''après ma mère, après la mort du Roi Flok son fils Cony à monté sur le trône. Et depuis, la ville à complétement changé ...'
 #############
 #           #
 #   Joueur  #
@@ -19,5 +19,5 @@ NPC_options:
 #############
 player_options:
   trav:
-    text: salut, non je travail ! Ah bon, qu'est-ce qui c'est passé ?
-    pointer: roi
+    text: 'salut, non je travail ! Ah bon, qu''est-ce qui c''est passé ?'
+    pointers: roi

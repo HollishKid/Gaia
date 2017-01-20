@@ -3,7 +3,7 @@
 obj_reach: location -6981;63;3208;Gaia;2 events:close_gate,spawn_takeo,obj_reach2
 obj_reach2: delay 0 conditions:!region_arena events:takeo_clean,death_mess
 #
-logout_event: logout events:takeo_clean,death_mess
+logout_events: logout events:takeo_clean,death_mess
 obj_killtakeo: mmobkill takeo amount:1 events:event1_win_folder
 obj_killtakeo2: mmobkill takeo amount:1 events:event1_win_folder2
 #
@@ -96,3 +96,4 @@ its_objr1q5: mmobkill ghoule amount:8 events:its_objr1q5_complete
 #
 #
 ###
+

@@ -1,4 +1,4 @@
-﻿#
+#
 # Garderos et Kinsot #
 #
 journal_garderos_quete: 'Garderos m''a dit d''aller voir son superieur pour confirmer ma présence sous motif.'
@@ -18,5 +18,5 @@ louk_qE4: 'Je viens de trouver une plante et un journal, je devrais rapporter ce
 #
 # Tatsu
 #
-tatsu_q1: 'Tatsu m''a envoyé chercher son objet qu'il a perdu il y a peu'
-tatsu_q1_1: 'J''ai retrouvé l'objet en question, je devrais le rapporter à Tatsu'
+tatsu_q1: 'Tatsu m''a envoyé chercher son objet qu''il a perdu il y a peu'
+tatsu_q1_1: 'J''ai retrouvé l''objet en question, je devrais le rapporter à Tatsu'

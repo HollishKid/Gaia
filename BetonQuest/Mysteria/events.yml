@@ -19,19 +19,19 @@ enter_mysteria: tag add garderos_deja_vu
 #
 voir_superieur: folder voir_superieur1,voir_superieur2,voir_superieur3,voir_superieur4
 voir_superieur1: objective start voir_superieur
-voir_superieur2: message &dVous devez aller voir le superieur de Garderos !
+voir_superieur2: 'message &dVous devez aller voir le superieur de Garderos !'
 voir_superieur3: journal add journal_garderos_quete
 voir_superieur4: tag add voir_superieur
 #
 voir_superieur_done: folder voir_superieur_done1,voir_superieur_done2,voir_superieur_done3 delay:5
-voir_superieur_done1: message &dVous êtes arrivé dans le poste d'avant garde !
+voir_superieur_done1: 'message &dVous êtes arrivé dans le poste d''avant garde !'
 voir_superieur_done2: tag add voir_superieur_done
 voir_superieur_done3: journal del journal_garderos_quete
 #                        #
 #   PNJ Général Kinsot   #
 #                        #
 motif_donner: folder motif_donner1,motif_donner2,motif_donner3
-motif_donner1: message &dVous donnez votre motif au Général Kinsot.
+motif_donner1: 'message &dVous donnez votre motif au Général Kinsot.'
 motif_donner2: tag add motif_donner
 motif_donner3: folder motif_donner4,motif_donner5 delay:7
 motif_donner4: 'message &2Général Kinsot &f: &a&oJe vois donc ce qui pousse le roi à nous envoyer un aventurier comme toi.'
@@ -40,12 +40,12 @@ motif_donner6: 'message &2Général Kinsot &f: &a&oTrès bien, je vais accèder 
 #
 tour_du_village: folder tour_du_village1,tour_du_village2,tour_du_village3,tour_du_village4
 tour_du_village1: objective start tour_du_village
-tour_du_village2: message &dVous devez aller dans le village afin d'y rencontrer les villageois !
+tour_du_village2: 'message &dVous devez aller dans le village afin d''y rencontrer les villageois !'
 tour_du_village3: journal add journal_superieur_quete
 tour_du_village4: tag add tour_du_village
 #
 tour_du_village_done: folder tour_du_village_done1,tour_du_village_done2,tour_du_village_done3
-tour_du_village_done1: message &dVous êtes arrivé au village !
+tour_du_village_done1: 'message &dVous êtes arrivé au village !'
 tour_du_village_done2: tag add tour_du_village_done
 tour_du_village_done3: journal del journal_superieur_quete
 #                  #
@@ -63,30 +63,30 @@ akt_objq1m: 'message &dVous êtes arrivés, tuez quelques brigands pour retrouve
 akt_objq1c: compass del akt_quest
 #akt_objkill: objective start akt_objkill
 akt_objkillB1: objective start akt_objkillB1
-Bkill1: message &4Brigand&6&o tués 1/10
+Bkill1: 'message &4Brigand&6&o tués 1/10'
 akt_brigkilled1: objective start akt_objkillB2
-Bkill2: message &4Brigand&6&o tués 2/10
+Bkill2: 'message &4Brigand&6&o tués 2/10'
 akt_brigkilled2: objective start akt_objkillB3
-Bkill3: message &4Brigand&6&o tués 3/10
+Bkill3: 'message &4Brigand&6&o tués 3/10'
 akt_brigkilled3: objective start akt_objkillB4
-Bkill4: message &4Brigand&6&o tués 4/10
+Bkill4: 'message &4Brigand&6&o tués 4/10'
 akt_brigkilled4: objective start akt_objkillB5
-Bkill5: message &4Brigand&6&o tués 5/10
+Bkill5: 'message &4Brigand&6&o tués 5/10'
 akt_brigkilled5: objective start akt_objkillB6
-Bkill6: message &4Brigand&6&o tués 6/10
+Bkill6: 'message &4Brigand&6&o tués 6/10'
 akt_brigkilled6: objective start akt_objkillB7
-Bkill7: message &4Brigand&6&o tués 7/10
+Bkill7: 'message &4Brigand&6&o tués 7/10'
 akt_brigkilled7: objective start akt_objkillB8
-Bkill8: message &4Brigand&6&o tués 8/10
+Bkill8: 'message &4Brigand&6&o tués 8/10'
 akt_brigkilled8: objective start akt_objkillB9
-Bkill9: message &4Brigand&6&o tués 9/10
+Bkill9: 'message &4Brigand&6&o tués 9/10'
 akt_brigkilled9: objective start akt_objkillB10
-Bkill10: message &4Brigand&6&o tués 10/10
+Bkill10: 'message &4Brigand&6&o tués 10/10'
 #
 Bkilled: tag add Bkilled
 #
 akt_qE2: folder akt_qE21,akt_qE22,akt_qE23,akt_qE24,akt_qE25,akt_qE26
-akt_qE21: message &dVous vous hâtez de retourner voir Aktarion après avoir retrouver son objet
+akt_qE21: 'message &dVous vous hâtez de retourner voir Aktarion après avoir retrouver son objet'
 akt_qE22: tag del akt_qE1
 akt_qE23: tag add akt_qE2
 akt_qE24: journal del akt_qE1
@@ -100,7 +100,7 @@ akt_qdone3: tag del akt_qE2
 akt_qdone4: tag del Bkilled
 akt_qdone5: tag add akt_qdone
 akt_qdone6: 'command cc open aktarion_reward.yml %player%'
-akt_qdone7: command eco give %player% 500
+akt_qdone7: 'command eco give %player% 500'
 akt_qdone8: compass del aktarion
 akt_rew1: 'command mm items give %player% korutsu_sword 1'
 akt_rew2: 'command mm items give %player% ardenko_axe 1'
@@ -145,15 +145,15 @@ louk_objchall: objective start louk_objchall
 #
 louk_chest_tester1: folder louk_chest_tag,louk_chest_found1,louk_give_key
 louk_chest_tag: tag add louk_ch1
-louk_chest_found1: message &aVous venez de trouver une petite clé dans le coffre.
+louk_chest_found1: 'message &aVous venez de trouver une petite clé dans le coffre.'
 louk_give_key: give cle_de_louk1
 #
 louk_chest_tester2: if louk_ch1 louk_chest_found2 else louk_chest_closed1
 louk_chest_found2: folder louk_chest_found3,louk_chest_found4,louk_chest_found4bis,louk_chest_found5,louk_chest_found6,louk_chest_found7
-louk_chest_found3:  message &a&oLa petite Clé ouvre ce coffre.
+louk_chest_found3: 'message &a&oLa petite Clé ouvre ce coffre.'
 louk_chest_found4: tag add louk_ch2
 louk_chest_found4bis: tag del louk_ch1
-louk_chest_found5: message &a&oVous trouvez une grosse clé dans le coffre.
+louk_chest_found5: 'message &a&oVous trouvez une grosse clé dans le coffre.'
 louk_chest_found6: give cle_de_louk2
 louk_chest_found7: take cle_de_louk1
 louk_chest_closed1: folder louk_chest_closed2,louk_objch2
@@ -161,7 +161,7 @@ louk_chest_closed2: 'message &c&oCe coffre est fermé à clé !'
 #
 louk_chest_tester3: if louk_ch2 louk_chest_found8 else louk_chest_closed4
 louk_chest_found8: folder louk_chest_found9,louk_chest_found10,louk_chest_found11,louk_chest_found12
-louk_chest_found9: message &a&oLa Grosse Clé ouvre le coffre.
+louk_chest_found9: 'message &a&oLa Grosse Clé ouvre le coffre.'
 louk_chest_found10: take cle_de_louk2
 louk_chest_found11: give cargaison_pos
 louk_chest_found12: tag add louk_ch3
@@ -191,7 +191,7 @@ louk_qE35: journal add louk_qE3
 #
 louk_qE4: folder louk_qE41,louk_qE42,louk_qE43,louk_qE44,louk_qE45,louk_qE46,louk_qE47
 louk_qE41: tag del louk_qE3
-louk_qE42: tag add louk_qE4 
+louk_qE42: tag add louk_qE4
 louk_qE43: 'message &a&oVous venez de trouver une plante ainsi qu''un vieux journal'
 louk_qE44: journal del louk_qE3
 louk_qE45: journal add louk_qE4
@@ -205,7 +205,7 @@ louk_qdone: folder louk_qdone1,louk_qdone2,louk_qdone3,louk_qdone4
 louk_qdone1: tag del louk_qE4
 louk_qdone2: tag add louk_qdone
 louk_qdone3: journal del louk_qE4
-louk_qdone4: command eco give %player% 1000
+louk_qdone4: 'command eco give %player% 1000'
 #louk_qdone6: 'command cc open loukran_reward.yml %player%'
 #               #
 #   PNJ Tatsu   #
@@ -242,13 +242,13 @@ tatsu_rew3: 'command mm items give %player% imiko_bow 1'
 # Mechanisme de Porte
 #
 porte1: folder porte1_mess1,porte1_mess2,porte1_test
-porte1_mess1: command title %player% title {"text":"Mysteria","italic":true,"color":"dark_purple"}
-porte1_mess2: command title %player% subtitle {"text":"Porte 1","bold":true,"color":"red"}
+porte1_mess1: 'command title %player% title {"text":"Mysteria","italic":true,"color":"dark_purple"}'
+porte1_mess2: 'command title %player% subtitle {"text":"Porte 1","bold":true,"color":"red"}'
 #
 # Ici le format "if [condition] [event1] else [event2]" exécute [event1] si [condition] est respecté.
 porte1_test: if acces_porte1 porte1_open else porte1_refus
 #
-porte1_refus: message &dVous n'avez pas l'autorisation de rentrer ici !
+porte1_refus: 'message &dVous n''avez pas l''autorisation de rentrer ici !'
 #
 porte1_open: folder porte1_open1,porte1_timer_close
 porte1_open1: setblock REDSTONE_BLOCK -8970;76;4676;Gaia

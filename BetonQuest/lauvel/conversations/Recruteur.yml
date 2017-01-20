@@ -1,4 +1,4 @@
-quester: Recruteur
+quester: 'Recruteur'
 first: bonjour,occuper
 stop: 'false'
 ###########
@@ -8,19 +8,19 @@ stop: 'false'
 ###########
 NPC_options:
   bonjour:
-    text: Bonjour, vous êtes là pour le recrutement ?
-    condition: 'Donner_Lettre'
-    events: 'Del_Journal'
-    pointer: lettre
+    text: 'Bonjour, vous êtes là pour le recrutement ?'
+    conditions: 'Donner_Lettre'
+    events: Del_Journal
+    pointers: lettre
   r1:
     text: 'Mhh, ..., oui, ..., bien donc vous êtes engagez ! Qu''est-ce que vous savez d''&dHistoria &a&o?'
-    pointer: rien
+    pointers: rien
   explication:
     text: 'Donc la garde d''&dHistoria &a&oest décomposé en trois groupe disctinte ! \nLa deuxième escadron composé de soldat et de recrue. \nLa première escadron est composé de guerrier puissant ! \nEt la dernière est la Garde Royal composée de guerrier puissant choissie par le Roi en personne ! \nVoilà, vous commancerez dans la deuxième escadron. Allez voir votre supérieure !'
-    events: 'Prendre_Lettre,Deuxieme_Escadron1,Chef_Journal'
-    pointer: accord
+    events: Prendre_Lettre,Deuxieme_Escadron1,Chef_Journal
+    pointers: accord
   occuper:
-    text: Désoler, mais je suis occupé, revener plus tard !   
+    text: 'Désoler, mais je suis occupé, revener plus tard !'
 #############
 #           #
 #   Joueur  #
@@ -28,11 +28,11 @@ NPC_options:
 #############
 player_options:
   lettre:
-    text: Bonjour, oui, on ma demander de vous remettre ceci.
-    pointer: r1
+    text: 'Bonjour, oui, on ma demander de vous remettre ceci.'
+    pointers: r1
   rien:
-    text: Rien, monsieur ! Je vien de la compagne, monsieur !
-    pointer: explication
+    text: 'Rien, monsieur ! Je vien de la compagne, monsieur !'
+    pointers: explication
   accord:
-    text: Oui, monsieur 
-    events: 'Recrutement_Tag'
+    text: 'Oui, monsieur'
+    events: Recrutement_Tag

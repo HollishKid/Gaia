@@ -1,27 +1,27 @@
-﻿#
+#
 # Quêtes Secondaires
 #
 #Sir_James
 Sir_tresor: tag add Sir_tresor
-Sir_Journal: journal add sir_James_Journal
+Sir_Journal: journal add Sir_James_Journal
 Sir_tresor_objt: objective start Sir_tresor_objt
 #
 Tresor_Trouve_tous: folder Tresor_mess,Tresor_Journal1,Tresor_Journal2,Tresor_Tag delay:4
-Tresor_mess: message &dAprès avoir remarqué une croix sous la queue, vous cresez est trouvé un coffre au trésor.
+Tresor_mess: 'message &dAprès avoir remarqué une croix sous la queue, vous cresez est trouvé un coffre au trésor.'
 Tresor_Journal1: journal del Sir_James_Journal
 Tresor_Journal2: journal add Coffre_Tresor_Journal
 Tresor_Tag: tag add Tresor_trouve
 #
 Donner_Butin_tous: folder mess_Butin,butin_donner delay:2
 #                                             ~ H
-mess_Butin: message &dVous venez de recevoir &f¤&23000&d.
+mess_Butin: 'message &dVous venez de recevoir &f¤&23000&d.'
 butin_donner: money 3000
 defaut_tous: folder Journal_del,Tag_del1,Tag_del2,Sir_tresor_objt2,Sir_James_done delay:5
 Journal_del: journal del Coffre_Tresor_Journal
 Tag_del1: tag del Sir_tresor
 Tag_del2: tag del Tresor_trouve
 Sir_tresor_objt2: objective delete Sir_tresor_objt
-Sir_James_done: tag add Sir_James_done 
+Sir_James_done: tag add Sir_James_done
 #
 #SoldatRyan
 Soldat_Ryan_tous: folder Soldat_Ryan,Ryan_Journal delay:2
@@ -43,7 +43,7 @@ Quetes_Loyer: tag add Quetes_Loyer
 Loyer_Journal: journal add Loyer_Journal
 #
 Verifier_Argent: if money_Loyer Loyer_Payer_Bonter else messbonte
-messbonte: message &4Vous n'avez pas l'argent nécessaire !
+messbonte: 'message &4Vous n''avez pas l''argent nécessaire !'
 Loyer_Payer_Bonter: folder Payer_Loyer,Bonter_Tag,Loyer_Payer,Loyer_Journal2,Del_Loyer_Journal,Quetes_Loyer2 delay:6
 Payer_Loyer: money -1000
 Bonter_Tag: tag add Bonter_Tag
@@ -67,7 +67,7 @@ Quetes_Physicien: folder Physicien_tag,Physicien_journal1,Physicien_book delay:1
 Physicien_book: objective start Physicien_book
 Physicien_journal1: journal add Physicien_journal1
 Physicien_tag: tag add Physicien_tag
-Physicien_message: message &dVous trouvez un livre avec le bon titre, écrit par &2Physicien Heimer&d, vous le prenez de l'étagère.
+Physicien_message: 'message &dVous trouvez un livre avec le bon titre, écrit par &2Physicien Heimer&d, vous le prenez de l''étagère.'
 Physicien_journal_reload: folder Physicien_journal1_del,Physicien_journal2 delay:0
 Physicien_journal1_del: journal del Physicien_journal1
 Physicien_journal2: journal add Physicien_journal2
@@ -106,7 +106,7 @@ Quetes_promo_obj: folder Quetes_promo_obj1,Quetes_promo_obj2 delay:2
 Quetes_promo_obj1: objective start Quetes_promo_obj1
 Quetes_promo_obj2: objective start Quetes_promo_obj2
 Quetes_promo_modspawn: if !Day Aventurier_Ensorceler else Aventurier_Ensorceler
-Aventurier_Ensorceler: command mm mobs spawn Aventurier_Ensorceler 1 Gaia,-7814,68,3545
+Aventurier_Ensorceler: 'command mm mobs spawn Aventurier_Ensorceler 1 Gaia,-7814,68,3545'
 Quetes_promo_Done: folder Quetes_promo_tag2,Quetes_promo_obj_del,Quetes_promo_journal2 delay:1
 Quetes_promo_tag2: folder Quetes_promo_tag_del,Aventurier_Ensorceler_kill delay:2
 Quetes_promo_tag_del: tag del Quetes_promo_tag

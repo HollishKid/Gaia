@@ -1,34 +1,34 @@
-quester: Bill
+quester: 'Bill'
 first: back
 stop: 'false'
 NPC_options:
   back:
-    text: Bonjour &2%player% &a&o! Je peux vous aider peut-être ?
-    pointer: qui,pourquoi,comment
+    text: 'Bonjour &2%player% &a&o! Je peux vous aider peut-être ?'
+    pointers: qui,pourquoi,comment
   qui_rep:
-    text: Je suis &2Bill &a&oet je suis sur ce navire pour assister l'équipage dans l'entretien.
+    text: 'Je suis &2Bill &a&oet je suis sur ce navire pour assister l''équipage dans l''entretien.'
   pourquoi_rep:
-    text: Vous n'êtes pas obligé de le faire, mais pour survivre il va vous falloir trouver de la nourriture ! A part cela, certaines ressources se vendent très bien au &dGrand Marché&a&o, histoire de se faire un peu de sous !
+    text: 'Vous n''êtes pas obligé de le faire, mais pour survivre il va vous falloir trouver de la nourriture ! A part cela, certaines ressources se vendent très bien au &dGrand Marché&a&o, histoire de se faire un peu de sous !'
   comment_rep:
-    text: Certainnement pas ! Pas mal d'endroits sont protégés par &6Gaïa &a&o pour conserver les anciens travaux, notamment des villes et villages; elle estime que ces endroits enrichissent son monde !
-    pointer: ou,enrichi
+    text: 'Certainnement pas ! Pas mal d''endroits sont protégés par &6Gaïa &a&o pour conserver les anciens travaux, notamment des villes et villages; elle estime que ces endroits enrichissent son monde !'
+    pointers: ou,enrichi
   ou_rep:
-    text: Il existe des mines un peu partout dans et autour de la ville d'&dAthelas&a&o, essayez de voir là bas !
+    text: 'Il existe des mines un peu partout dans et autour de la ville d''&dAthelas&a&o, essayez de voir là bas !'
   enrichi_rep:
-    text: Elle considère que l'ancienneté des travaux ont permis de protéger les populations contre les Forces Maléfiques et offrent un lieu de sécurité. Elle utilise sa plus puissante magie pour protéger ces lieux contre tout enhavisseur !
+    text: 'Elle considère que l''ancienneté des travaux ont permis de protéger les populations contre les Forces Maléfiques et offrent un lieu de sécurité. Elle utilise sa plus puissante magie pour protéger ces lieux contre tout enhavisseur !'
 player_options:
   qui:
-    text: Qui êtes vous ?
-    pointer: qui_rep
+    text: 'Qui êtes vous ?'
+    pointers: qui_rep
   pourquoi:
-    text: Pourquoi est-ce que j'aurais besoin de récolter des ressources ?
-    pointer: pourquoi_rep
+    text: 'Pourquoi est-ce que j''aurais besoin de récolter des ressources ?'
+    pointers: pourquoi_rep
   comment:
-    text: Est-ce que je pourrais récolter des ressources où bon me semble ?
-    pointer: comment_rep
+    text: 'Est-ce que je pourrais récolter des ressources où bon me semble ?'
+    pointers: comment_rep
   ou:
-    text: Où est-ce que je vais pour récolter mes ressources alors ?!
-    pointer: ou_rep
+    text: 'Où est-ce que je vais pour récolter mes ressources alors ?!'
+    pointers: ou_rep
   enrichi:
-    text: Pourquoi vous ditez que ces endroits enrichissent le monde de Gaïa ?
-    pointer: enrichi_rep
+    text: 'Pourquoi vous ditez que ces endroits enrichissent le monde de Gaïa ?'
+    pointers: enrichi_rep

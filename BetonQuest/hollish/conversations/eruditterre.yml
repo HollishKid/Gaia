@@ -4,7 +4,7 @@ stop: 'false'
 #########
 #       #
 #  NPC  #
-#       # 
+#       #
 ######### Erudit Terre - Erudit Kemen
 NPC_options:
 ##
@@ -14,110 +14,110 @@ NPC_options:
 #
 ##
   inconnu:
-    text: Bien à vous, en quoi puis-je vous aider ?
+    text: 'Bien à vous, en quoi puis-je vous aider ?'
     conditions: '!mageentry_approved'
-    pointer: qui,keske,merciaurevoir
+    pointers: qui,keske,merciaurevoir
   qui_rep:
-    text: Je suis un des 4 &3Érudits &a&odu &dSanctuaire&a&o. Je suis &dÉrudit &a&ode la Terre.
-    pointer: comment,autres
+    text: 'Je suis un des 4 &3Érudits &a&odu &dSanctuaire&a&o. Je suis &dÉrudit &a&ode la Terre.'
+    pointers: comment,autres
   keske_rep:
-    text: Cet endroit est consacré à la recherche sur la Terre en tant qu'élément. J'y fais mes recherches, j'y enseigne et j'y vis. Mon rôle est aussi d'enseigner les &3Minions.
-    pointer: minions
+    text: 'Cet endroit est consacré à la recherche sur la Terre en tant qu''élément. J''y fais mes recherches, j''y enseigne et j''y vis. Mon rôle est aussi d''enseigner les &3Minions.'
+    pointers: minions
   comment_rep:
-    text: Cela veut dire que mes recherches portent sur la Terre en tant qu'élément consituant de notre monde. Plus particulièrement la Magie qui y est associée...
+    text: 'Cela veut dire que mes recherches portent sur la Terre en tant qu''élément consituant de notre monde. Plus particulièrement la Magie qui y est associée...'
   autres_rep:
-    text: Nous spécialisons chacun dans l'un des éléments qui composent le monde de &6Gaïa &a&o; Terre, Air, Eau et Feu.
+    text: 'Nous spécialisons chacun dans l''un des éléments qui composent le monde de &6Gaïa &a&o; Terre, Air, Eau et Feu.'
   minions_rep:
-    text: Je suis étonné que vous n'en ayez pas encore vu en venant ici, ce sont les apprentis du &dSanctuaire &a&o, ils sont formés pour rejoindre la hiérarchie Spirituelle et ainsi s'occuper des lieux spirituels de ce monde.
+    text: 'Je suis étonné que vous n''en ayez pas encore vu en venant ici, ce sont les apprentis du &dSanctuaire &a&o, ils sont formés pour rejoindre la hiérarchie Spirituelle et ainsi s''occuper des lieux spirituels de ce monde.'
 ##
 #
 # JNew Guy
-#  
+#
 #
 ##
   porteur:
-    text: Bien à vous &2%player%&a&o. Je sens en vous la présence d'une Spiritualité naissante...
+    text: 'Bien à vous &2%player%&a&o. Je sens en vous la présence d''une Spiritualité naissante...'
     conditions: 'mageentry_approved,!tag_erudit_terre'
-    pointer: terre1,terre2,terre3,terre4,terre5
+    pointers: terre1,terre2,terre3,terre4,terre5
   faux:
-    text: Je crains que malgré cela, vous n'ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité... Celle du Respect !
+    text: 'Je crains que malgré cela, vous n''ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité... Celle du Respect !'
   acceptation:
-    text: Je suis ravi d'entendre que vous me présentez ce Respect. Puis-je savoir ce qui vous amène ?
-    pointer: passer,apprentissage
+    text: 'Je suis ravi d''entendre que vous me présentez ce Respect. Puis-je savoir ce qui vous amène ?'
+    pointers: passer,apprentissage
 #
 #
 #
   etudiant_refoule:
-    text: Ah! Je suis ravi de l'apprendre, mais je ne prends pas d'étudiants à la volée. Parlez d'abord à l'Érudit de l'Air !
+    text: 'Ah! Je suis ravi de l''apprendre, mais je ne prends pas d''étudiants à la volée. Parlez d''abord à l''Érudit de l''Air !'
     conditions: '!airtemple_magic_learning'
   etudiant:
-    text: Très bien... Je vois que vous avez déjà été l'étudiant de l'Érudit de l'Air. \nCommençons votre instruction.
+    text: 'Très bien... Je vois que vous avez déjà été l''étudiant de l''Érudit de l''Air. \nCommençons votre instruction.'
 #    events: tag_erudit_terre,erudit_terre_instruction_nord
 ##
 #
 # Jeune Spiritus
-#  
+#
 #
 ##
   connu:
-    text: Vous revoilà mon petit caillou !
-    conditions: tag_erudit_terre
-    pointer: qui,keske,aurevoir
+    text: 'Vous revoilà mon petit caillou !'
+    conditions: 'tag_erudit_terre'
+    pointers: qui,keske,aurevoir
 ############
 #          #
 #  JOUEUR  #
-#          # 
+#          #
 ############
 player_options:
   qui:
-    text: Qui êtes vous ?
-    pointer: qui_rep
+    text: 'Qui êtes vous ?'
+    pointers: qui_rep
   keske:
-    text: Que faites vous ici ?
-    pointer: keske_rep
+    text: 'Que faites vous ici ?'
+    pointers: keske_rep
   merciaurevoir:
-    text: Rien du tout, au revoir !
+    text: 'Rien du tout, au revoir !'
   aurevoir:
-    text: Eh... Aurevoir...
+    text: 'Eh... Aurevoir...'
   comment:
-    text: Qu'est-ce que cela veut dire ?
-    pointer: comment_rep
+    text: 'Qu''est-ce que cela veut dire ?'
+    pointers: comment_rep
   autres:
-    text: Qui sont les autres Érudits ?
-    pointer: autres_rep
+    text: 'Qui sont les autres Érudits ?'
+    pointers: autres_rep
   minions:
-    text: Qui sont ces Minions ?
-    pointer: minions_rep
+    text: 'Qui sont ces Minions ?'
+    pointers: minions_rep
 ##
 #
 # Formule de politesse
 #
 ##
-  terre1: 
-    text: C'est effectivement le cas, Érudit &6Kemen &a&o!
-    pointer: acceptation
-  terre2: 
-    text: C'est effectivement le cas, Érudit &6Kelva &a&o!
-    pointer: faux
-  terre3: 
-    text: C'est effectivement le cas, Érudit &6Invis &a&o!
-    pointer: faux
-  terre4: 
-    text: C'est effectivement le cas, Érudit &6Ilva &a&o!
-    pointer: faux
-  terre5: 
-    text: C'est effectivement le cas, Érudit &6Itila &a&o!
-    pointer: faux
+  terre1:
+    text: 'C''est effectivement le cas, Érudit &6Kemen &a&o!'
+    pointers: acceptation
+  terre2:
+    text: 'C''est effectivement le cas, Érudit &6Kelva &a&o!'
+    pointers: faux
+  terre3:
+    text: 'C''est effectivement le cas, Érudit &6Invis &a&o!'
+    pointers: faux
+  terre4:
+    text: 'C''est effectivement le cas, Érudit &6Ilva &a&o!'
+    pointers: faux
+  terre5:
+    text: 'C''est effectivement le cas, Érudit &6Itila &a&o!'
+    pointers: faux
 ##
 #
 # Entracte et Apprentissage
 #
 ##
   passer:
-    text: Je ne faisais que visiter les lieux...
+    text: 'Je ne faisais que visiter les lieux...'
   apprentissage:
-    text: Je suis ici pour me présenter en tant que votre humble Étudiant.
-    pointer: etudiant,etudiant_refoule
+    text: 'Je suis ici pour me présenter en tant que votre humble Étudiant.'
+    pointers: etudiant,etudiant_refoule
 #######################################
 #
 #

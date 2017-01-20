@@ -1,4 +1,4 @@
-# 
+#
 # Conditions
 #             For Gaïa
 #                       By Hollish
@@ -43,7 +43,7 @@ spirituality5000: point default.spirituality 5000
 spirituality10000: point default.spirituality 10000
 #
 #
-# Fables 
+# Fables
 #
 #
 fables_t1p1: tag fables_t1p1
@@ -86,7 +86,7 @@ fables_t3p4_have: item fables_t3p4
 # TRAIN
 #
 ##########
-riding: riding minecart
+is_riding: riding minecart
 #
 tag_train_village: tag train_village
 destination_village: tag destination_village
@@ -360,9 +360,9 @@ hollish_here: party 500 inside_louvre any:hollish count:2
 inside_louvre: region pre_louvre
 screen_on: testforblock -9731;81;2362;Gaia STONE
 #
-# 
 #
-#  Ingor 
+#
+#  Ingor
 #
 #
 ##################################
@@ -433,9 +433,9 @@ north_bridge_repair_have: and stone_bricks200,planks100
 stone_bricks200: item stone_bricks:200
 planks100: item planks:100
 #
-# 
 #
-#  JEUX 
+#
+#  JEUX
 #
 #
 ##################################

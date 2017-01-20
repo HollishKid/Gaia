@@ -1,4 +1,4 @@
-quester: foronar
+quester: 'foronar'
 first: n1
 stop: 'false'
 #
@@ -10,10 +10,10 @@ stop: 'false'
 #
 NPC_options:
   n1:
-    text: "..."
-    pointer: check_joze
+    text: '"..."'
+    pointers: check_joze
   rep1:
-    text: Il me semble avoir entendu parler d'un expert dans le domaine de la généalogie. Il paraitrait qu'il habite en ville.
+    text: 'Il me semble avoir entendu parler d''un expert dans le domaine de la généalogie. Il paraitrait qu''il habite en ville.'
 #
 ##########################
 #                        #
@@ -23,6 +23,6 @@ NPC_options:
 #
 player_options:
   check_joze:
-    text: Je suis à la recherche d'un ouvrage en particulier, &6Croisements divers et variés&b, en avez vous déjà entendu parler?
-    conditions: joze_q1
-    pointer: rep1
+    text: 'Je suis à la recherche d''un ouvrage en particulier, &6Croisements divers et variés&b, en avez vous déjà entendu parler?'
+    conditions: 'joze_q1'
+    pointers: rep1

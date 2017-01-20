@@ -1,26 +1,26 @@
-quester: Istimor
+quester: 'Istimor'
 first: welcome,unknown
 stop: 'false'
 #Options du NPC
 NPC_options:
   unknown:
-    text: Vous n'êtes pas encore Citoyen de la Ville d'Athelas, allez voir l'&2Intendant avant toute chose !
-    condition: '!intendant_done'
+    text: 'Vous n''êtes pas encore Citoyen de la Ville d''Athelas, allez voir l''&2Intendant avant toute chose !'
+    conditions: '!intendant_done'
   welcome:
-    text: Bonjour &2%player%&a&o, vous cherchez quelque chose ?
-    condition: intendant_done
-    pointer: objet,rien
-  objet_rep: 
-    text: Donnez moi cet objet pour que je regarde !
-    condition: unknown_object_have
-    event: unknown_object_exchange
+    text: 'Bonjour &2%player%&a&o, vous cherchez quelque chose ?'
+    conditions: 'intendant_done'
+    pointers: objet,rien
+  objet_rep:
+    text: 'Donnez moi cet objet pour que je regarde !'
+    conditions: 'unknown_object_have'
+    events: unknown_object_exchange
   objet_no_have:
-    text: Seriez-vous entrain de m'arnaquer ?! Vous n'avez aucun objet inconnu sur vous !
-    condition: '!unknown_object_have'
+    text: 'Seriez-vous entrain de m''arnaquer ?! Vous n''avez aucun objet inconnu sur vous !'
+    conditions: '!unknown_object_have'
 #Options du joueur
 player_options:
   objet:
-    text: J'ai trouvé un objet inconnu ... Pourriez-vous me dire ce que c'est ?
-    pointer: objet_rep,objet_no_have
+    text: 'J''ai trouvé un objet inconnu ... Pourriez-vous me dire ce que c''est ?'
+    pointers: objet_rep,objet_no_have
   rien:
-    text: Rien du tout, aurevoir !
+    text: 'Rien du tout, aurevoir !'

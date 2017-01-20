@@ -300,7 +300,7 @@ handle as vulgarite
 
 # Register
 match (registrer|register)
-then warn &d&oPour vous enregistrer, tapez &a/register &d&osuivi de DEUX fois le mot de passe de votre choix, séparés par un espace.
+then warn &d&oPour vous enregistrer, tapez &a/enregistrer &d&osuivi de DEUX fois le mot de passe de votre choix, séparés par un espace.
 
 # Click not Type!
 match (^1\b|^2\b|^3\b|^4\b|^5\b|^6\b|^&\b)

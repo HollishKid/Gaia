@@ -1,20 +1,20 @@
-quester: Jacques
+quester: 'Jacques'
 first: dabord
 stop: 'false'
 #Options du NPC
 NPC_options:
-  'dabord':
-    text: Eh bien le bonjour à vous jeune voyageur!
-    pointer: boire,chambre,bonjour
+  dabord:
+    text: 'Eh bien le bonjour à vous jeune voyageur!'
+    pointers: boire,chambre,bonjour
   paulette:
-    text: Ah! Demandez à &fPaulette &a&oplutôt, j'ai des choses à faire!
+    text: 'Ah! Demandez à &fPaulette &a&oplutôt, j''ai des choses à faire!'
 #Options du joueur
 player_options:
-  'bonjour':
-    text: Bonjour à vous! Et ... aurevoir !
-  'chambre':
-    text: Je voudrais louer une chambre pour la nuit
-    pointer: paulette
+  bonjour:
+    text: 'Bonjour à vous! Et ... aurevoir !'
+  chambre:
+    text: 'Je voudrais louer une chambre pour la nuit'
+    pointers: paulette
   boire:
-    text: Je voudrais boire quelque chose.
-    pointer: paulette
+    text: 'Je voudrais boire quelque chose.'
+    pointers: paulette

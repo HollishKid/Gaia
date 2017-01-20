@@ -1,63 +1,63 @@
-quester: Courtier
+quester: 'Courtier'
 first: unknown,bonjour
 stop: 'false'
 #Options du NPC
 NPC_options:
   unknown:
-    text: Vous n'êtes pas de cette ville ! Parlez à l'&2Intendant &a&o!
+    text: 'Vous n''êtes pas de cette ville ! Parlez à l''&2Intendant &a&o!'
     conditions: '!intendant_done'
   bonjour:
-    text: Bonjour &2%player% &a&o! Bienvenue au &dGrand Marché &a&o!
-    conditions: intendant_done
-    pointer: quel,question,bye
+    text: 'Bonjour &2%player% &a&o! Bienvenue au &dGrand Marché &a&o!'
+    conditions: 'intendant_done'
+    pointers: quel,question,bye
   question_rep:
-    text: Bien entendu. En quoi puis-je vous aider ?
-    pointer: buy,sell,echangedirect,localshop
+    text: 'Bien entendu. En quoi puis-je vous aider ?'
+    pointers: buy,sell,echangedirect,localshop
   quel_rep:
-    text: Le &dGrand Marché &a&oest l'endroit où se réunissent tous les acheteurs et vendeurs de la Ville pour échanger leurs biens.
+    text: 'Le &dGrand Marché &a&oest l''endroit où se réunissent tous les acheteurs et vendeurs de la Ville pour échanger leurs biens.'
   buy_rep:
-    text: Pour ce faire, vous pouvez acheter dans les boutiques des vendeurs reconnus dans les étages. \nAu rez-de-chaussée au Nord, vous trouverez un courtier qui regroupe toutes les offres des Aventuriers de ce monde !
-    pointer: aventurier,reconnu,merci
+    text: 'Pour ce faire, vous pouvez acheter dans les boutiques des vendeurs reconnus dans les étages. \nAu rez-de-chaussée au Nord, vous trouverez un courtier qui regroupe toutes les offres des Aventuriers de ce monde !'
+    pointers: aventurier,reconnu,merci
   sell_rep:
-    text: Vous pouvez procéder de deux façons, aborder directement des Aventuriers et leur proposer ce que vous avez à vendre. \nSinon vous devez posséder votre propre magasin, chez vous !
-    pointer: echangedirect,localshop
+    text: 'Vous pouvez procéder de deux façons, aborder directement des Aventuriers et leur proposer ce que vous avez à vendre. \nSinon vous devez posséder votre propre magasin, chez vous !'
+    pointers: echangedirect,localshop
   echangedirect_rep:
-    text: Pour procéder à un échange, il vous faut faire Shift + Clic-Droit sur un autre joueur. \nVous pourrez échanger de l'argent, de l'expérience et des objets. \nCette méthode est préférable pour éviter les arnaques !
+    text: 'Pour procéder à un échange, il vous faut faire Shift + Clic-Droit sur un autre joueur. \nVous pourrez échanger de l''argent, de l''expérience et des objets. \nCette méthode est préférable pour éviter les arnaques !'
   localshop_rep:
-    text: Pour ouvrir votre propre magasin, vous devez posséder une parcelle ou risquer l'ouvrir sur le Continent de l'Est. \nIl vous faut placer un coffre et poser une pancarte dans un rayon de 1 à côté. \nCe panneau doit avoir écrit "&7Magasin&a&o" sur la première ligne.
+    text: 'Pour ouvrir votre propre magasin, vous devez posséder une parcelle ou risquer l''ouvrir sur le Continent de l''Est. \nIl vous faut placer un coffre et poser une pancarte dans un rayon de 1 à côté. \nCe panneau doit avoir écrit "&7Magasin&a&o" sur la première ligne.'
   bye:
-    text: Au revoir!
+    text: 'Au revoir!'
   aventurier_rep:
-    text: Ce sont des personnes comme vous et moi, ils parcourent le monde et proposent certains de leur bien à la vente. \nIls n'ont pas forcément tout en stock, mais peuvent proposer des prix intéressants !
+    text: 'Ce sont des personnes comme vous et moi, ils parcourent le monde et proposent certains de leur bien à la vente. \nIls n''ont pas forcément tout en stock, mais peuvent proposer des prix intéressants !'
   reconnu_rep:
-    text: Ces vendeurs sont reconnus par l'&2Intendant &a&od'&dAthelas&a&o, ils assurent l'arrivée de tous les biens nécessaires aux habitants d'Athelas et possèdent véritablement tout ! Mais sont fortement taxés, d'ou leur prix élevés.
+    text: 'Ces vendeurs sont reconnus par l''&2Intendant &a&od''&dAthelas&a&o, ils assurent l''arrivée de tous les biens nécessaires aux habitants d''Athelas et possèdent véritablement tout ! Mais sont fortement taxés, d''ou leur prix élevés.'
 #Options du joueur
 player_options:
   quel:
-    text: Quel est cet endroit ?
-    pointer: quel_rep
+    text: 'Quel est cet endroit ?'
+    pointers: quel_rep
   question:
-    text: J'ai une question concernant le Commerce ?
-    pointer: question_rep
+    text: 'J''ai une question concernant le Commerce ?'
+    pointers: question_rep
   buy:
-    text: Comment acheter des choses ?
-    pointer: buy_rep
+    text: 'Comment acheter des choses ?'
+    pointers: buy_rep
   sell:
-    text: Comment vendre des choses ?
-    pointer: sell_rep
+    text: 'Comment vendre des choses ?'
+    pointers: sell_rep
   aventurier:
-    text: Qui sont ces aventuriers ?
-    pointer: aventurier_rep
+    text: 'Qui sont ces aventuriers ?'
+    pointers: aventurier_rep
   reconnu:
-    text: Qui sont ces vendeurs reconnus ?
-    pointer: reconnu_rep
+    text: 'Qui sont ces vendeurs reconnus ?'
+    pointers: reconnu_rep
   echangedirect:
-    text: Comment échanger directement avec d'autres Aventuriers ?
-    pointer: echangedirect_rep
+    text: 'Comment échanger directement avec d''autres Aventuriers ?'
+    pointers: echangedirect_rep
   localshop:
-    text: Comment faire pour avoir mon propre magasin ?
-    pointer: localshop_rep
+    text: 'Comment faire pour avoir mon propre magasin ?'
+    pointers: localshop_rep
   merci:
-    text: Merci pour vos conseils !
+    text: 'Merci pour vos conseils !'
   bye:
-    text: Au revoir !
+    text: 'Au revoir !'
