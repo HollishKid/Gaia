@@ -1,3 +1,4 @@
+!!!conversation!!!ermite
 quester: 'Ermite'
 first: unknown,hello
 stop: 'false'
@@ -9,10 +10,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Même moi je n''ai jamais entendu parler de vous... Parlez à l''&2Intendant &a&o!'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   hello:
     text: 'Salutations, &2%player%&a&o.'
-    conditions: 'intendant_done'
+    conditions: intendant_done
     pointers: qui,pourquoi,jacopo,air_temple,tarte_have,air_temple_loser,voyage_air,back
 #
 #
@@ -80,14 +81,14 @@ player_options:
 #
   jacopo:
     text: 'Jacopo m''envoie pour vous retrouver ici.'
-    conditions: 'jacopo_ermite'
+    conditions: jacopo_ermite
     pointers: jacopo_rep
 #
 # Temple de l'Air - Tentative de convaincre Ermite
 #
   air_temple:
     text: 'J''ai été envoyé par l''Erudit de l''Air. Il me dit que vous auriez vu une chute d''eau du ciel ?'
-    conditions: 'erudit_air_student,!tag_air_temple_loser,!tag_voyage_air,!tag_aang'
+    conditions: erudit_air_student,!tag_air_temple_loser,!tag_voyage_air,!tag_aang
     pointers: air_temple_rep
   vieux:
     text: 'Vieux curieux? Vous parlez comme ça d''un Erudit ?'
@@ -118,23 +119,23 @@ player_options:
     pointers: tarte
   tarte_have:
     text: 'J''ai une tarte à la citrouille! Vous êtes prêt à embarquer pour me montrer cette chute d''eau ?'
-    conditions: 'ermite_tarte,tag_ermite_tarteur,!tag_aang'
+    conditions: ermite_tarte,tag_ermite_tarteur,!tag_aang
     pointers: tarte_have_rep
   voyage_air:
     text: 'Vous m''emmenez voir cette chute alors ?'
-    conditions: 'tag_voyage_air,!tag_aang'
+    conditions: tag_voyage_air,!tag_aang
     pointers: voyage_air_rep
 #
 # Loser
 #
   air_temple_loser:
     text: 'Je n''ai pas réussi à atteindre le coeur du Temple de l''Air, pouvez vous m''y amener à nouveau ?'
-    conditions: 'or_loser_or_backer,!tag_aang'
+    conditions: or_loser_or_backer,!tag_aang
     pointers: air_temple_loser_rep
 #
 # Back
 #
   back:
     text: 'J''ai trouvé le Temple de l''Air !'
-    conditions: 'tag_aang'
+    conditions: tag_aang
     pointers: back_rep

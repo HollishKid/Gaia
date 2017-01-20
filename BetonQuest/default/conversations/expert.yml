@@ -1,3 +1,4 @@
+!!!conversation!!!expert
 quester: 'Istimor'
 first: welcome,unknown
 stop: 'false'
@@ -5,18 +6,18 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Vous n''êtes pas encore Citoyen de la Ville d''Athelas, allez voir l''&2Intendant avant toute chose !'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   welcome:
     text: 'Bonjour &2%player%&a&o, vous cherchez quelque chose ?'
-    conditions: 'intendant_done'
+    conditions: intendant_done
     pointers: objet,rien
   objet_rep:
     text: 'Donnez moi cet objet pour que je regarde !'
-    conditions: 'unknown_object_have'
+    conditions: unknown_object_have
     events: unknown_object_exchange
   objet_no_have:
     text: 'Seriez-vous entrain de m''arnaquer ?! Vous n''avez aucun objet inconnu sur vous !'
-    conditions: '!unknown_object_have'
+    conditions: !unknown_object_have
 #Options du joueur
 player_options:
   objet:

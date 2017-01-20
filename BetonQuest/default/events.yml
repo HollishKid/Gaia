@@ -1,3 +1,4 @@
+!!!events!!!
 #
 #
 #
@@ -2314,7 +2315,7 @@ compte_ret_all: point compte *0
 obj_salaire_timer: objective start obj_salaire_timer
 #
 #
-salaire: folder salaire_transmitter,salaire_suite delay:2
+salaire: folder salaire_transmitter,salaire_suite delay:120
 salaire_transmitter: point salaire %point.reput_athelas.amount%
 salaire_suite: folder salaire_plus100,salaire_grade_tester delay:1
 salaire_plus100: point salaire 100
@@ -2943,7 +2944,7 @@ loggerjoe_takestick: take stick:2
 arc_master: folder give_bow,scan_arrows,take_arrows,give_arrows delay:0
 #
 give_bow: give bow
-scan_arrows: point an_arrows_tempo %item.an_arrow.amount%
+scan_arrows: point an_arrows_tempo %item.arrow.amount%
 take_arrows: folder take_arrows_exe delay:1
 take_arrows_exe: take an_arrow:%point.arrows_tempo.amount%
 give_arrows: give an_arrow:200

@@ -1,3 +1,4 @@
+!!!conversation!!!eruditterre
 quester: 'Érudit'
 first: inconnu,porteur,connu
 stop: 'false'
@@ -15,7 +16,7 @@ NPC_options:
 ##
   inconnu:
     text: 'Bien à vous, en quoi puis-je vous aider ?'
-    conditions: '!mageentry_approved'
+    conditions: !mageentry_approved
     pointers: qui,keske,merciaurevoir
   qui_rep:
     text: 'Je suis un des 4 &3Érudits &a&odu &dSanctuaire&a&o. Je suis &dÉrudit &a&ode la Terre.'
@@ -37,7 +38,7 @@ NPC_options:
 ##
   porteur:
     text: 'Bien à vous &2%player%&a&o. Je sens en vous la présence d''une Spiritualité naissante...'
-    conditions: 'mageentry_approved,!tag_erudit_terre'
+    conditions: mageentry_approved,!tag_erudit_terre
     pointers: terre1,terre2,terre3,terre4,terre5
   faux:
     text: 'Je crains que malgré cela, vous n''ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité... Celle du Respect !'
@@ -49,7 +50,7 @@ NPC_options:
 #
   etudiant_refoule:
     text: 'Ah! Je suis ravi de l''apprendre, mais je ne prends pas d''étudiants à la volée. Parlez d''abord à l''Érudit de l''Air !'
-    conditions: '!airtemple_magic_learning'
+    conditions: !airtemple_magic_learning
   etudiant:
     text: 'Très bien... Je vois que vous avez déjà été l''étudiant de l''Érudit de l''Air. \nCommençons votre instruction.'
 #    events: tag_erudit_terre,erudit_terre_instruction_nord
@@ -61,7 +62,7 @@ NPC_options:
 ##
   connu:
     text: 'Vous revoilà mon petit caillou !'
-    conditions: 'tag_erudit_terre'
+    conditions: tag_erudit_terre
     pointers: qui,keske,aurevoir
 ############
 #          #

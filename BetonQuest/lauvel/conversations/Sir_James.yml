@@ -1,3 +1,4 @@
+!!!conversation!!!Sir_James
 quester: 'Sir James'
 first: butin,repeat,enfin,bonjour
 stop: 'false'
@@ -9,7 +10,7 @@ stop: 'false'
 NPC_options:
   butin:
     text: 'Psst, oui c''est à toi que je parle ! Tu voudrais de l''argent ?'
-    conditions: '!Sir_tresor,!Tresor_trouve,!Sir_James_done'
+    conditions: !Sir_tresor,!Tresor_trouve,!Sir_James_done
     pointers: qui,oui,non
   moi:
     text: 'Je suis un corsaire, et c''est tout ce que vous devez savoir !'
@@ -27,13 +28,13 @@ NPC_options:
     events: Sir_tresor,Sir_Journal,Sir_tresor_objt
   repeat:
     text: 'Tu veux que je répéte l''égnime ?'
-    conditions: 'Sir_tresor,!Tresor_trouve'
+    conditions: Sir_tresor,!Tresor_trouve
     pointers: oui2,non2
   repeat2:
     text: '"Dans les temps anciens, on me craigné. Par mon passage, tout deviens cendres. Mais aujourd''hui, je ne suis que pierre."'
   enfin:
     text: 'Vous avez le trésor ? Merveilleux. Je vous remercie pour votre aide, prener ci comme guise de remerciement !'
-    conditions: 'Tresor_trouve,Sir_tresor'
+    conditions: Tresor_trouve,Sir_tresor
     events: Donner_Butin_tous,defaut_tous
     pointers: merci
   bonjour:

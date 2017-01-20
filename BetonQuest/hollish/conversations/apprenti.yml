@@ -1,3 +1,4 @@
+!!!conversation!!!apprenti
 quester: 'Apprenti'
 first: hello
 stop: 'false'
@@ -33,11 +34,11 @@ NPC_options:
 #
   have:
     text: 'Très bien, passez le moi ! \nHum, je vois... \n&2Varko &a&ome fait savoir que des Aventuriers de sa Guilde ont trouvé un os particulier sur le lointain Continent de l''Est. \nCet os semble particulièrement chargé en Spiritualité. Tenez ce &dGrand Os &a&oet amenez le au &2Moine François &a&oà &dAthelas&a&o, il en saura davantage !'
-    conditions: 'varko_package_have'
+    conditions: varko_package_have
     events: varko_pack_delivered
   no_have:
     text: 'Il semblerait que vous n''ayez pas de paquet sur vous...'
-    conditions: '!varko_package_have'
+    conditions: !varko_package_have
 #
   spirituality_win_rep:
     text: 'Je connais un rituel qui vous permet de gagner plus de Spiritualité. Il vous suffit de vous accroupir dans un Spiritualium pendant 10 secondes. \nAinsi vous gagnerez deux fois plus de Spiritualité pendant 30 minutes lorsque vous enterez un Os Chargé !'
@@ -51,7 +52,7 @@ player_options:
     text: 'Au revoir !'
   baguette:
     text: 'Pourriez vous m''expliquer davantage sur une Baguette Magique ?'
-    conditions: 'mageentry_approved'
+    conditions: mageentry_approved
     pointers: baguette_rep
   lancer:
     text: 'Comment lancer un sort ?'
@@ -86,6 +87,6 @@ player_options:
 #
   varko:
     text: 'Varko m''a envoyé vous donner un paquet !'
-    conditions: 'varko_package'
+    conditions: varko_package
     pointers: have,no_have
 

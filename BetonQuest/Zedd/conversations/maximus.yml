@@ -1,3 +1,4 @@
+!!!conversation!!!maximus
 quester: 'Maximus'
 first: n1
 stop: 'false'
@@ -26,11 +27,11 @@ player_options:
 #
   p1:
     text: 'Le chef Jimbo m''a envoyé vous voir. Que dois-je faire ?'
-    conditions: 'jim_q1start'
+    conditions: jim_q1start
     pointers: event1
   p2:
     text: 'Puis-je combattre dans l''arène ?'
-    conditions: '!jim_q1start,!max1'
+    conditions: !jim_q1start,!max1
     pointers: rep1
   p3:
     text: 'Je relèverai tous les défis !'
@@ -39,7 +40,7 @@ player_options:
     text: 'Je vais me préparer d''abord.'
   p5:
     text: 'Je veux une revanche contre Takeo !'
-    conditions: 'fight1,!jim_q1start'
+    conditions: fight1,!jim_q1start
     events: event1
     pointers: gofight
   p6:

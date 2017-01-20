@@ -1,3 +1,4 @@
+!!!conversation!!!itsuki
 quester: 'Itsuki'
 first: n1,n2
 stop: 'false'
@@ -9,14 +10,14 @@ stop: 'false'
 NPC_options:
   n1:
     text: 'Bien le bonjour, jeune membre de notre Guilde des Aventuriers ! Serais-tu intéressé par les contrats de guilde ?'
-    conditions: '!its_inconvers,!its_rang1'
+    conditions: !its_inconvers,!its_rang1
     pointers: oui,non
   rep1:
     text: 'Les contrats de guilde sont des tâches courantes, qui nous sont transmises par les services royaux afin que des aventuriers les accomplissent.'
     events: its_beginnerfold,its_inconvers
   n2:
     text: 'Contrats de guilde'
-    conditions: '!its_inconvers,its_rang1'
+    conditions: !its_inconvers,its_rang1
     pointers: rang1,non_merci
   menu_rang1:
     text: 'Rang 1'

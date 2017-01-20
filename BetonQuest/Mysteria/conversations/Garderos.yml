@@ -1,3 +1,4 @@
+!!!conversation!!!Garderos
 quester: 'Garderos'
 first: welcome,welcomebis
 stop: 'false'
@@ -7,11 +8,11 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Hâlte là ! Avez vous un motif recevable avant de vous aventurez en ces lieux ?!'
-    conditions: '!deja_vu'
+    conditions: !deja_vu
     pointers: motif,sorry
   welcomebis:
     text: 'Qu''avez-vous encore à me demander ?!'
-    conditions: 'deja_vu'
+    conditions: deja_vu
     pointers: sorry
   motif_rep:
     text: 'Hum... Votre motif me paraît suspect, allez donc voir mon supérieur.'
@@ -23,7 +24,7 @@ NPC_options:
 player_options:
   motif:
     text: 'Voici mon motif, je l''ai reçu du roi d''Athelas en personne.'
-    conditions: '!voir_superieur'
+    conditions: !voir_superieur
     events: enter_mysteria
     pointers: motif_rep
   partir:

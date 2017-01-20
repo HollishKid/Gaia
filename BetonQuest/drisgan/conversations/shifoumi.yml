@@ -1,3 +1,4 @@
+!!!conversation!!!shifoumi
 quester: 'Shifoumi'
 first: n1,n2,pt2,pt1,pt0,pt00
 stop: 'true'
@@ -9,31 +10,31 @@ stop: 'true'
 NPC_options:
   n1:
     text: '"&7&oQui ose se présenter devant moi?"'
-    conditions: '!shi_start'
+    conditions: !shi_start
     pointers: p1
   rep1:
     text: '"&7&oPeut-être bien... Mais tu devras tout de même me vaincre pour passer! En garde!!"'
     events: shi_startfold
   n2:
     text: '"&7&oPierre, feuille ou ciseaux ??"'
-    conditions: 'shi_start,!shi_roundstart'
+    conditions: shi_start,!shi_roundstart
     events: shi_roundstart
     pointers: pierre,feuille,ciseaux,assez
   pt2:
     text: '"&7&oC''est bon tu m''as vaincu... Tu peux passer."'
-    conditions: 'shi_pt2,shi_roundstart'
+    conditions: shi_pt2,shi_roundstart
     events: shi_area2,shi_endround,shi_end,shi_scoredel
   pt1:
     text: '"&7&oTu ne m''a pas encore vaincu!"'
-    conditions: 'shi_pt1,shi_roundstart'
+    conditions: shi_pt1,shi_roundstart
     events: shi_area1,shi_endround,shi_conversfold
   pt0:
     text: '"&7&oTu es loin d''être à la hauteur!"'
-    conditions: 'shi_pt0,shi_roundstart'
+    conditions: shi_pt0,shi_roundstart
     events: shi_area0,shi_endround,shi_conversfold
   pt00:
     text: '"&7&oTu es loin d''être à la hauteur!"'
-    conditions: 'shi_roundstart'
+    conditions: shi_roundstart
     events: shi_addpoint,shi_area0,shi_endround,shi_conversfold
 #
 ##########################

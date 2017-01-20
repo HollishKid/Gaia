@@ -1,3 +1,4 @@
+!!!conversation!!!butler
 quester: 'Butler'
 first: entrer
 stop: 'false'
@@ -12,11 +13,11 @@ NPC_options:
     pointers: good,bye
   indeed:
     text: 'Je vois que vous êtes accompagné de lui même, bienvenue dans le Manoir &2%player% &a&o!'
-    conditions: 'hollish_here'
+    conditions: hollish_here
     events: builder_autorized
   liar:
     text: 'Il semblerait que Hollish ne soit pas avec vous. Vous avez menti. Pour cela, je vous envoie en &cPrison &a&o! &4Mentir est Mal !'
-    conditions: '!hollish_here'
+    conditions: !hollish_here
     events: prison_god_testerfer
 #############
 #           #

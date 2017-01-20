@@ -1,3 +1,4 @@
+!!!conversation!!!intendant
 quester: 'Intendant'
 first: welcome,welcome_ecuyer,ecuyer
 stop: 'false'
@@ -9,14 +10,15 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Salutations à vous, &2%player%&a&o.'
-    conditions: '!int_inconvers,!intendant_next_phase'
+    conditions: !int_inconvers,!intendant_next_phase
     pointers: the_first,gestionnaire,guildsfound,guildsnotfound,bat,bat_done,signing_progress,signing_done,loca,autre
   welcome_ecuyer:
     text: 'Salutations &2%player% &a&o! Je suis ravi de vous revoir. \nVous avez été recommandé par Makarov de la Guilde des Aventuriers et le Mage du Sanctuaire.'
-    conditions: 'intendant_next_phase,!grade_ecuyer'
+    conditions: !int_inconvers,intendant_next_phase,!grade_ecuyer
     events: welcome_ecuyer
   ecuyer:
     text: 'Salutations &2Écuyer %player% &a&o! En quoi puis-je vous aider ?'
+    conditions: !int_inconvers,grade_ecuyer
     pointers: bat,bat_done,signing_progress,signing_done,loca,autre
 
 #
@@ -59,15 +61,15 @@ NPC_options:
   loca_rep:
     text: 'Référrez vous au &2Gestionnaire&a&o, qui se trouve dans son bureau, au sein du château, en sortant par la grosse porte à droite !'
   qui_rep:
-    text: 'Je suis l''Intendant du Roi d''Athelas. Je gère les affaires courantes de cette ville et du royaume lui appartenant.'
+    text: 'Je suis l''Intendant du Roi d''Athelas. \nJe gère les affaires courantes de cette ville et du royaume lui appartenant.'
   nom_rep:
-    text: 'Ah ... L''information est mon métier, jeune aventurier .. J''ai des petits oiseaux sur tous les continents de Gaïa.'
+    text: 'Ah... L''information est mon métier, jeune aventurier.. \nJ''ai des petits oiseaux sur tous les continents de Gaïa.'
   dynmap_rep:
-    text: '&dSofia &a&opourra vous renseigner ... Utilisez &bhttp://www.gaia-minecraft.enjin.com/ &a&opour toutes les informations.'
+    text: '&dSofia &a&opourra vous renseigner. \nUtilisez &bhttp://www.gaia-minecraft.enjin.com/ &a&opour toutes les informations.'
   salaire_rep:
     text: 'Ce calcul se fait ainsi: &f¤&a&o100 (&fBase&a&o) &f+ &a&oPoints de réputation (&fPart Variable&a&o) \nVotre Salaire est aussi influencé par votre niveau de Compétence dans votre Guilde et de votre Grade Royal.'
   villes_rep:
-    text: 'Renseignez vous en cliquant ici:&b http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Continent_Est'
+    text: 'Renseignez vous en cliquant ici :\n&b http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Continent_Est'
 ############
 #          #
 #  JOUEUR  #
@@ -76,50 +78,50 @@ NPC_options:
 player_options:
   the_first:
     text: 'Je suis venu répondre à l''appel du Roi !'
-    conditions: '!intendant'
+    conditions: !intendant
     events: tag_intendant
     pointers: first_rep
   gestionnaire:
     text: 'J''ai fait ce que le Gestionnaire m''a demandé !'
-    conditions: 'gestionnaire,!intendant_done,gestionnaire_found'
+    conditions: gestionnaire,!intendant_done,gestionnaire_found
     pointers: gestionnaire_found
   gestionnairenotfound:
     text: 'Qu''est-ce que je dois faire déjà ?'
-    conditions: 'intendant,!intendant_done,!gestionnaire'
+    conditions: intendant,!intendant_done,!gestionnaire
     pointers: gestionnairenotfound_rep
   guildsfound:
     text: 'J''ai trouvé toutes les Guildes !'
-    conditions: 'guildes_all,intendant,journal_guilds_found,!intendant_done'
+    conditions: guildes_all,intendant,journal_guilds_found,!intendant_done
     pointers: guildsfound_rep
   guildsnotfound:
     text: 'Qu''est-ce que je dois faire déjà ?'
-    conditions: 'intendant,!intendant_done,!guildes_all,gestionnaire'
+    conditions: intendant,!intendant_done,!guildes_all,gestionnaire
     pointers: guildsnotfound_rep
 #
   bat:
     text: 'Je voudrais naviguer sur les bateaux et accéder au Continent Est.'
-    conditions: 'intendant_done,!autorisation_bateau'
+    conditions: intendant_done,!autorisation_bateau
     pointers: bat_rep
   bat_done:
     text: 'J''ai fini ma formation avec Jacopo !'
-    conditions: 'jacopo_done,!navigation_signing,!autorisation_bateau'
+    conditions: jacopo_done,!navigation_signing,!autorisation_bateau
     pointers: bat_done_rep
   signing_progress:
     text: 'J''ai perdu le contrat que je devais signer.'
-    conditions: 'jacopo_done,navigation_signing,!navigation_signed,!autorisation_bateau'
+    conditions: jacopo_done,navigation_signing,!navigation_signed,!autorisation_bateau
     pointers: signing_progress_rep
   signing_done:
     text: 'J''ai signé le contrat que je devais signer.'
-    conditions: 'jacopo_done,navigation_signed,!autorisation_bateau'
+    conditions: jacopo_done,navigation_signed,!autorisation_bateau
     pointers: signing_done_rep
 #
   loca:
     text: 'Je voudrais louer une maison ou un terrain à Athelas.'
-    conditions: 'intendant_done'
+    conditions: intendant_done
     pointers: loca_rep
   autre:
     text: 'Poser une autre question...'
-    conditions: 'intendant_done'
+    conditions: intendant_done
     pointers: autre_rep
   qui:
     text: 'Qui êtes vous?'

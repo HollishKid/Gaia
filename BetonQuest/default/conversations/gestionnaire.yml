@@ -1,3 +1,4 @@
+!!!conversation!!!gestionnaire
 quester: 'Gestionnaire'
 first: welcome,the_first,progress,unknown
 stop: 'false'
@@ -5,23 +6,23 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Vous n''êtes pas de cette ville vous ! Allez voir l''&2Intendant &a&o!'
-    conditions: '!intendant'
+    conditions: !intendant
   the_first:
     text: 'Enchanté &2%player% &a&o! Je suis ravi de vous aider dans votre recherche de maison ! \nCommencez par en chercher une dans la ville. Une fois que vous l''aurez louée, plantez-y ces quelques graines de blé. \nConsultez votre Journal de Progression pour les instructions !'
-    conditions: '!gestionnaire,!gestionnaire_progress,intendant'
+    conditions: !gestionnaire,!gestionnaire_progress,intendant
     events: gestionnaire_found
   done_rep:
     text: 'Très bien, vous avez maintenant lancé une production de nourriture basique ! \nPensez à vous faire des stocks de nourriture ! &fFrancis &a&oélève un tas d''animaux bons pour l''abattoir ! \nN''hésitez pas à me poser toutes les questions qu''il vous faut. Depuis votre &f/menu &a&ovous pouvez accéder au Menu Locations. \nRetournez voir l''&2Intendant &a&omaintenant !'
     events: gestionnaire_over
   progress:
     text: 'Bonjour &2%player% &a&o! Est-ce que je peux vous aider ?'
-    conditions: '!gestionnaire,gestionnaire_progress,intendant'
+    conditions: !gestionnaire,gestionnaire_progress,intendant
     pointers: quefai,the_done,rien
   quefao:
     text: 'Vous devez louer une maison, puis planter 7 graines dans le jardin. \nConsultez votre Journal de Progression quand vous êtes perdu ! \n&cS''il n''y a plus de maisons à louer, utilisez la Ferme Communautaire gérée par &fFrançis&a&o, au Sud d''ici pour planter vos graines !'
   welcome:
     text: 'En quoi puis-je vous aider ?'
-    conditions: 'intendant,gestionnaire'
+    conditions: intendant,gestionnaire
     pointers: qui,comment,autre,rien
   qui_rep:
     text: 'Je travaille pour l''&2Intendant &a&oet je gère toutes les parcelles légales et leur location.'
@@ -47,7 +48,7 @@ player_options:
     pointers: quefao
   the_done:
     text: 'J''ai loué une maison et planté les graines comme vous l''avez dit !'
-    conditions: '!gestionnaire,gestionnaire_done'
+    conditions: !gestionnaire,gestionnaire_done
     pointers: done_rep
   qui:
     text: 'Qui êtes vous ?'

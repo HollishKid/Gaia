@@ -1,3 +1,4 @@
+!!!conversation!!!grandpaallen
 quester: 'Papy Allen'
 first: n0,n1,n2
 stop: 'false'
@@ -5,14 +6,14 @@ NPC_options:
 #Prise de décision du gd pa
   n0:
     text: 'Je vois que vous n''êtes pas d''ici. Parlez à l''&2Intendant &a&o!'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   n1:
     text: 'Namaste jeune aventurier ! Tu semble débrouillard dans ton genre... J''aurai éventuellement un service à te demander... Mais répondrais-tu à une question simple avant cela ?'
-    conditions: '!gdpa_done,intendant_done'
+    conditions: !gdpa_done,intendant_done
     pointers: point1,point2
   n2:
     text: 'Alors comment se déroule tes voyages ? As-tu réussis à trouver la Guilde des Aventuriers ?'
-    conditions: 'gdpa_done'
+    conditions: gdpa_done
     pointers: oui,non
   rep_oui:
     text: 'Sans bouche ni dent, je dévore les montagnes et réduis la roche en poussière... Que suis-je ?'

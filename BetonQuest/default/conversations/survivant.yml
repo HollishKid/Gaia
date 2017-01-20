@@ -1,3 +1,4 @@
+!!!conversation!!!survivant
 quester: 'Le Survivant'
 first: unknown,hello
 stop: 'false'
@@ -5,10 +6,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Vous n''êtes pas de cette ville ! Parlez à l''&2Intendant &a&o!'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   hello:
     text: 'Salutations à vous &2%player%'
-    conditions: 'intendant_done'
+    conditions: intendant_done
     pointers: qui,nom
   nom_rep:
     text: 'Absolument pas! C''est un surnom qu''on me donne, après de longues années passées à l''&dEst&a&o...'

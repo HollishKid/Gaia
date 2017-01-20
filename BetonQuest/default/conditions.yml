@@ -1,3 +1,4 @@
+!!!conditions!!!
 #
 #
 #
@@ -844,8 +845,31 @@ craft_jambes_diamant_tempo_have: item diamond_legs
 #
 craft_pieds_diamant_have: item craft_pieds_diamant
 craft_pieds_diamant_tempo_have: item diamond_boots
-
-
-
-
-
+#
+#
+# Skript Extentions
+#
+#
+empty_inventory: and empty_inv,empty_armor
+empty_inv: empty 36
+empty_armor: and !ea1,!ea2,!ea3,!ea4,!ea5,!ea6,!ea7,!ea8,!ea9,!ea10,!ea11,!ea12,!ea13,!ea14,!ea15,!ea16,!ea17,!ea18,!ea19,!ea20
+ea1: armor leather_boots
+ea2: armor leather_pants
+ea3: armor leather_tunic
+ea4: armor leather_helmet
+ea5: armor iron_boots
+ea6: armor iron_legs
+ea7: armor iron_chestplate
+ea8: armor iron_helmet
+ea9: armor chain_boots
+ea10: armor chain_legs
+ea11: armor chain_body
+ea12: armor chain_helmet
+ea13: armor gold_boots
+ea14: armor gold_legs
+ea15: armor gold_plate
+ea16: armor gold_helmet
+ea17: armor diamond_boots
+ea18: armor diamond_legs
+ea19: armor diamond_body
+ea20: armor diamond_helmet

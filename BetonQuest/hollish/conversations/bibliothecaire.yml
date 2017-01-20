@@ -1,3 +1,4 @@
+!!!conversation!!!bibliothecaire
 quester: 'Bibliothécaire'
 first: hello
 stop: 'false'
@@ -13,10 +14,10 @@ NPC_options:
   endroit_rep:
     text: 'Vous êtes à la &dBibliothèque d''Athelas&a&o, le plus ancien des lieux du Savoir sur Gaïa.'
   livre_rep:
-    text: 'Vous pourrez très bientôt emprunter la vaste collection de cette Bibliothèque. \nPour l''instant vous devrez vous contenter de quelques extraits. Cliquez sur une étagère de livres pour voir par vous même !'
+    text: 'Vous pourrez très bientôt emprunter la vaste collection de cette Bibliothèque. Pour l''instant vous devrez vous contenter de quelques extraits. Cliquez sur une étagère de livres pour voir par vous même !'
   physicien_book:
     text: 'Bien sur, quel est ce livre ?'
-    conditions: 'lauvel.Physicien_tag'
+    conditions: lauvel.Physicien_tag
     pointers: heimer
   heimer_direction:
     text: 'Hmm, ce livre est ancien. il devrait ce trouver dans la petit salle sur les étagère "Physique".'

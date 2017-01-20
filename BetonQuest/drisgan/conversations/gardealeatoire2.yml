@@ -1,3 +1,4 @@
+!!!conversation!!!gardealeatoire2
 quester: 'Milicien'
 first: n1,n2,n3,n4,n5
 stop: 'false'
@@ -7,17 +8,17 @@ stop: 'false'
 NPC_options:
   n1:
     text: 'Je ne t''ai pas déjà vu traîner dans les parages toi?!'
-    conditions: 'random20'
+    conditions: random20
   n2:
     text: 'Ta tête me dit quelque chose ... !'
-    conditions: 'random40'
+    conditions: random40
   n3:
     text: 'Je suis sûr de te reconnaître!'
-    conditions: 'random60'
+    conditions: random60
   n4:
     text: 'Comment tu t''appelles déjà?!'
-    conditions: 'random80'
+    conditions: random80
   n5:
     text: 'Ah oui!! Tu t''appelles &2%player% &a&o!'
-    conditions: 'random100'
+    conditions: random100
 player_options:

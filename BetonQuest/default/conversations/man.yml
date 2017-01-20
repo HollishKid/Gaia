@@ -1,13 +1,14 @@
+!!!conversation!!!man
 quester: 'Jacopo'
 first: the_start,back
 stop: 'false'
 NPC_options:
   the_start:
     text: 'Bonjour à vous !'
-    conditions: '!amiral'
+    conditions: !amiral
   back:
     text: 'L''&2Amiral &a&om''a ordonné de vous ramener dans le port d''&dAthelas&a&o, êtes vous prêt à partir ?'
-    conditions: 'amiral'
+    conditions: amiral
     pointers: oui,non
   depart:
     text: 'Très bien! Rappelez vous d''aller voir l''&2Intendant &a&orapidement une fois en ville, il vous dira que faire ! \n&cNe vous souciez pas de la nourriture pour l''instant, votre barre de faim ne diminuera pas tant que vous êtes en formation avec l''&2Intendant&c.'

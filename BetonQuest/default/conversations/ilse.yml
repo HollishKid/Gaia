@@ -1,3 +1,4 @@
+!!!conversation!!!ilse
 quester: 'Clélia'
 first: unknown,hostile,neutre,amical,honore,exalte
 stop: 'false'
@@ -5,21 +6,21 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Vous êtes inconnu dans cette ville. Parlez à l''&2Intendant &a&o!'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   hostile:
     text: 'Qu''est-ce que tu me veux toi ?!'
-    conditions: '!neutre'
+    conditions: !neutre
   neutre:
     text: 'Bonjour.'
-    conditions: 'neutre,!amical'
+    conditions: neutre,!amical
   amical:
     text: 'Bonjour à vous &2%player% &a&o!'
-    conditions: 'amical,!honore'
+    conditions: amical,!honore
   honore:
     text: 'Bonjour à vous &2%player% &a&o! Je suis enchantée de vous voir !'
-    conditions: 'honore,!exalte'
+    conditions: honore,!exalte
   exalte:
     text: 'Par Gaïa et toute la Spiritualité en ce bas monde ... Est-ce bien vous &2%player% &a&o?! Je suis enchantée de vous voir !!'
-    conditions: 'exalte'
+    conditions: exalte
 #Options du joueur
 player_options:

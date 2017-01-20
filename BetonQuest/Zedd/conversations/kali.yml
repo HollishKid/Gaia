@@ -1,3 +1,4 @@
+!!!conversation!!!kali
 quester: 'Kali Jones'
 first: n1,n2,n3
 stop: 'false'
@@ -9,11 +10,11 @@ stop: 'false'
 NPC_options:
   n1:
     text: 'Interrompre un homme de &dDrisgan&a&o pendant qu''il boit sa bière ? \nMmmmh mauvaise idée...'
-    conditions: '!kal_inconvers,!kal_q1start,!kal_q1done'
+    conditions: !kal_inconvers,!kal_q1start,!kal_q1done
     pointers: p1,p2
   n2:
     text: 'Tu as découvert le temple ?'
-    conditions: '!kal_inconvers,kal_q1start'
+    conditions: !kal_inconvers,kal_q1start
     pointers: check1,p5
   rep1:
     text: 'Un opportuniste hein ? \nJ''ai peut-être une proposition qui pourra t''intéresser...'
@@ -25,14 +26,14 @@ NPC_options:
     text: 'D''après mes recherches, le temple était plutôt situé en bord de mer. \nJe pensais commencer mes recherches autour de High Garden.'
     events: kal_inconvers,kal_rep3
   rep4:
-    text: 'Vraiment?! Elle existait vraiment alors... Voilà ta récompense.'
+    text: 'Vraiment ?! Elle existait vraiment alors... \nVoilà ta récompense !'
     events: kal_q1reward
 #
 ###  2eme étape
 #
   n3:
     text: 'Bon, &2%player% &a&o! T''es prêt à faire de véritables affaires ?'
-    conditions: '!kal_inconvers,kal_q1done,!kal_q2start'
+    conditions: !kal_inconvers,kal_q1done,!kal_q2start
     pointers: p6,p7
   rep5:
     text: 'Eh bien j''ai un message à te transmettre. \nMon supérieur à beaucoup apprécié ta récupération de l''&dOmbre Jaune&a&o.'
@@ -48,7 +49,7 @@ player_options:
 #
   p1:
     text: 'Je cherche simplement une occasion de me faire un peu d''argent.'
-    conditions: 'maka_q2start'
+    conditions: maka_q2start
     pointers: rep1
   p2:
     text: 'Désolé, erreur sur la personne.'
@@ -59,7 +60,7 @@ player_options:
     text: 'Non merci.'
   check1:
     text: 'J''ai retrouvé l''&2Ombre jaune &b!'
-    conditions: 'ombre_jaune'
+    conditions: ombre_jaune
     pointers: rep4
   p5:
     text: 'Quelles sont les informations dont on dispose sur la localisation du temple ?'
@@ -68,5 +69,5 @@ player_options:
     text: 'Pas vraiment...'
   p7:
     text: 'Pourquoi pas. Tu aurais pas quelque chose d''autre pour moi ?'
-    conditions: '!kal_q2start,!kal_q2done'
+    conditions: !kal_q2start,!kal_q2done
     pointers: rep5

@@ -1,3 +1,4 @@
+!!!conversation!!!ynvgard
 quester: 'Ynvgard'
 first: n1,n2,n3,n4,in_progress
 stop: 'false'
@@ -12,23 +13,23 @@ NPC_options:
 #
   in_progress:
     text: 'Une question ?'
-    conditions: '!ynv_inconvers,ynv_inprogress'
+    conditions: !ynv_inconvers,ynv_inprogress
     pointers: IP_q1,all_good,q1_check,q2_check,IP_q3,IP_q3retry
   n1:
     text: 'Que fait tu ici ? Cette salle de briefing est réservée !'
-    conditions: '!ynv_inprogress,!ynv_inconvers,!ynv_q1done'
+    conditions: !ynv_inprogress,!ynv_inconvers,!ynv_q1done
     pointers: p1,p4
   n2:
     text: 'Les préparatifs sont donc achevés, il faut maintenant voler les voleurs ! Es-tu prêt ?'
-    conditions: 'ynv_q1done,ynv_q2done,!ynv_q3start,!ynv_q3done'
+    conditions: ynv_q1done,ynv_q2done,!ynv_q3start,!ynv_q3done
     pointers: ready,ornot
   n3:
     text: 'Ah te voilà &2%player% &a&o! Voilà ta récompense pour la mission, tu le mérite bien !'
-    conditions: 'yre_eventdone'
+    conditions: yre_eventdone
     events: ynv_q3reward,ynv_q3done,ynv_q3_journal_del,jim_q21_journal_del,jim_q22_journal
   n4:
     text: 'Ce sera tout pour le moment. Tu peux retourner voir le &2Chef Jimbo&a&o, je lui ai déjà dit que j''étais satisfait de tes services.'
-    conditions: 'ynv_q3done'
+    conditions: ynv_q3done
   rep1:
     text: 'Ah enfin ! Il se trouve que je dois régler les problèmes que causent des bandits installés dans la forêt non loin. Es-tu prêt à te salir les mains ?'
     pointers: p2,p3
@@ -50,11 +51,11 @@ NPC_options:
     events: ynv_q3startfold
   giveagain:
     text: 'Tâche d''en faire bon usage cette fois ci !'
-    conditions: '!ynv_has_fireworks'
+    conditions: !ynv_has_fireworks
     events: ynv_givefireworks
   giveagainbis:
     text: 'Je vois que tu en as AU MOINS 5 dans ton inventaire !'
-    conditions: 'ynv_has_fireworks'
+    conditions: ynv_has_fireworks
   q3retry:
     text: 'J''attendrai de nouveau ton signal alors !'
     events: ynv_objfire
@@ -68,7 +69,7 @@ player_options:
 #
   p1:
     text: 'Le Chef Jimbo m''a envoyé à votre service. Que puis-je faire pour vous ?'
-    conditions: 'jim_q2start'
+    conditions: jim_q2start
     pointers: rep1
   p2:
     text: 'Je suis prêt.'
@@ -78,11 +79,11 @@ player_options:
     pointers: q1_deg
   IP_q1:
     text: 'Rappelez moi la mission s''il vous plait !'
-    conditions: 'ynv_inprogress,ynv_q1start'
+    conditions: ynv_inprogress,ynv_q1start
     pointers: rappel_q1
   IP_q3:
     text: 'J''ai perdu mes fusées ! Puis-je en avoir d''autres ?'
-    conditions: 'ynv_q3start'
+    conditions: ynv_q3start
     pointers: giveagain,giveagainbis
   p4:
     text: 'Désolé, je m''en vais.'
@@ -90,11 +91,11 @@ player_options:
     text: 'Tout va bien.'
   q1_check:
     text: 'J''ai éliminé les bandits.'
-    conditions: 'Mkilled,Bkilled'
+    conditions: Mkilled,Bkilled
     pointers: q1_reward
   q2_check:
     text: 'J''ai découvert où se trouve la cache des voleurs !'
-    conditions: 'or_etape3,!ynv_q2done'
+    conditions: or_etape3,!ynv_q2done
     pointers: q2_reward
   ready:
     text: 'Je suis prêt !'
@@ -103,5 +104,5 @@ player_options:
     text: 'Pas encore.'
   IP_q3retry:
     text: 'Je veux retenter la mission !'
-    conditions: 'ynv_q3start'
+    conditions: ynv_q3start
     pointers: q3retry

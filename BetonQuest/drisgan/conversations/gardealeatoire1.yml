@@ -1,3 +1,4 @@
+!!!conversation!!!gardealeatoire1
 quester: 'Milicien'
 first: n1,n2,n3,n4,n5
 stop: 'false'
@@ -7,17 +8,17 @@ stop: 'false'
 NPC_options:
   n1:
     text: 'Qu''est-ce que tu fais ici déjà?'
-    conditions: 'random20'
+    conditions: random20
   n2:
     text: 'Je ne suis pas sûr d''avoir envie de te parler ...'
-    conditions: 'random40'
+    conditions: random40
   n3:
     text: 'Laisse moi faire ma ronde en paix!'
-    conditions: 'random60'
+    conditions: random60
   n4:
     text: 'La bière de chez &dJane &a&o est la meilleure de la contrée ... Personne ne sait d''où elle vient pourtant!'
-    conditions: 'random80'
+    conditions: random80
   n5:
     text: 'Passe boire une bière chez &dJane &a&o! Ca te feras moins tirer la gueule!'
-    conditions: 'random100'
+    conditions: random100
 player_options:

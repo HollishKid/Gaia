@@ -1,3 +1,4 @@
+!!!conversation!!!moineair
 quester: 'Moine Air'
 first: hello,again
 stop: 'false'
@@ -9,12 +10,12 @@ stop: 'false'
 NPC_options:
   hello:
     text: 'Bonjour à vous &2%player% &a&o!'
-    conditions: '!tag_moine_air'
+    conditions: !tag_moine_air
     events: tag_moine_air
     pointers: qui,quel,comment
   again:
     text: 'Vous revoilà &2%player% &a&o! Content de vous revoir ! Allez retrouver Aang désormais !'
-    conditions: 'tag_moine_air'
+    conditions: tag_moine_air
 #
   qui_rep:
     text: 'Je suis un des habitants du Temple de l''Air, avec les autres moines, sous la direction de &2Aang&a&o. Vous devriez aller le voir, au coeur de l''Arbre Central. Je vous ouvre la voie à l''Est, empruntez les marches blanches !'

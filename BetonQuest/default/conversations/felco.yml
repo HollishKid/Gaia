@@ -1,3 +1,4 @@
+!!!conversation!!!felco
 quester: 'Felco'
 first: unknown,welcome,member
 stop: 'false'
@@ -9,10 +10,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Je ne vous connais pas ! Allez voir l''&2Intendant &a&o!'
-    conditions: '!gestionnaire'
+    conditions: !gestionnaire
   welcome:
     text: 'Salut jeune mineur ! Que puis-je pour toi ?'
-    conditions: 'gestionnaire,!mineur'
+    conditions: gestionnaire,!mineur
     pointers: presentation,become_member,rien
   pres_ok:
     text: 'Ok ! Pensez à venir rejoindre ma Guilde une fois que vous serez Citoyen !'
@@ -26,7 +27,7 @@ NPC_options:
 # Add any guild-specific quests in pointers of "member"
   member:
     text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
-    conditions: 'mineur'
+    conditions: mineur
     pointers: menu,special,crafts,merci
   mineur_menu:
     text: 'Le voilà !'
@@ -43,11 +44,11 @@ NPC_options:
 player_options:
   presentation:
     text: 'Je viens me présenter de la part de l''Intendant !'
-    conditions: 'guilde_mineurs'
+    conditions: guilde_mineurs
     pointers: pres_ok
   become_member:
     text: 'Je veux devenir membre de la Guilde des Mineurs !'
-    conditions: '!mineur,intendant_done'
+    conditions: !mineur,intendant_done
     pointers: member_ok
   menu:
     text: 'Je voudrais accéder au Menu de la Guilde.'

@@ -1,3 +1,4 @@
+!!!main!!!
 static:
   '23:59': daily_mine_reset
   '05:05': daily_mine_reset

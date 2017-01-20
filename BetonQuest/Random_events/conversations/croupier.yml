@@ -1,3 +1,4 @@
+!!!conversation!!!croupier
 quester: 'croupier'
 first: n1
 stop: 'false'
@@ -9,7 +10,7 @@ stop: 'false'
 NPC_options:
   n1:
     text: 'Etes-vous prêt à lancer la roulette?'
-    conditions: '!loto_start'
+    conditions: !loto_start
     pointers: oui,non
 ##########################
 #                        #

@@ -1,3 +1,4 @@
+!!!conversation!!!sofia
 quester: 'Sofia'
 first: the_start
 stop: 'false'
@@ -85,7 +86,7 @@ player_options:
     pointers: trade_rep
   magie:
     text: 'Comment est-ce que je gère ma Magie et mes Sorts ?'
-    conditions: 'hollish.mageentry_approved'
+    conditions: hollish.mageentry_approved
     pointers: magie_rep
 #
 # Dynmap

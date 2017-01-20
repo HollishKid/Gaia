@@ -1,3 +1,4 @@
+!!!conversation!!!casar
 quester: 'Casar'
 first: welcome,welcomebis
 stop: 'false'
@@ -9,7 +10,7 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Ô rage ! Ô désespoir ! &dIngor &a&oest en ruines !'
-    conditions: '!tag_casar'
+    conditions: !tag_casar
     pointers: helpyou,tantpis
   helpyou_rep:
     text: 'Si vous saviez tout ce qu''il y a à faire... \nNous arrivons à peine à tenir les défenses contre les gobelins qui arrivent du Nord. \nIl nous faudrait reprendre notre ancien château à l''Est pour pouvoir reprendre position contre ces viles créatures !'
@@ -22,7 +23,7 @@ NPC_options:
     events: tag_casar,journal_nauco
   welcomebis:
     text: 'Vous revoilà &2%player% &a&o!'
-    conditions: 'tag_casar'
+    conditions: tag_casar
     pointers: killed_sancossi,canhelptobuild,access_north,killed_spree,repair_north_bridge,bonjour
 #
 #
@@ -75,24 +76,24 @@ player_options:
 #
   killed_sancossi:
     text: 'J''ai tue Sancossi !'
-    conditions: 'tag_sancossi_done,!tag_sancossi_done_tempo'
+    conditions: tag_sancossi_done,!tag_sancossi_done_tempo
     pointers: killed_sancossi_rep
   canhelptobuild:
     text: 'Je peux vous aider à reconstruire le château si vous voulez !'
-    conditions: 'tag_sancossi_done_tempo'
+    conditions: tag_sancossi_done_tempo
     pointers: canhelptobuild_rep
 #
 #
 #
   access_north:
     text: 'Je voudrais accéder au Nord...'
-    conditions: 'dwarf_castle_phase4,!tag_casar_killingspree,!dwarf_bridge2_tag,!journal_killed_spree,!journal_north_bridge_repair'
+    conditions: dwarf_castle_phase4,!tag_casar_killingspree,!dwarf_bridge2_tag,!journal_killed_spree,!journal_north_bridge_repair
     pointers: anorth_rep
   killed_spree:
     text: 'J''ai tué les 15 Goblins !'
-    conditions: 'journal_killed_spree'
+    conditions: journal_killed_spree
     pointers: killed_spree_rep
   repair_north_bridge:
     text: 'J''ai les matériaux pour réparer le pont vers le nord.'
-    conditions: 'north_bridge_repair_have,journal_north_bridge_repair'
+    conditions: north_bridge_repair_have,journal_north_bridge_repair
     pointers: repair_north_bridge_rep

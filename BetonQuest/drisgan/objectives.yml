@@ -1,3 +1,4 @@
+!!!objectives!!!
 obj_loc1: location -7154;80;3505;Gaia;3 events:interact_folder
 eko_click: action right TORCH conditions:eko_q1start events:eko_opentrap,eko_click_delay,eko_opentrap_delay loc:-7158;68;3535;Gaia;2
 #

@@ -1,3 +1,4 @@
+!!!conversation!!!hyper
 quester: 'Hypercapaciteur'
 first: n1,n2,n3,n4,n5
 stop: 'false'
@@ -10,21 +11,21 @@ NPC_options:
 #
   n1:
     text: '"&6&oFaille trouvée !!"'
-    conditions: 'inregion_faille'
+    conditions: inregion_faille
     events: zae_delayobj4,zae_faillefound
   n2:
     text: '"&6&oFaille très proche !"'
-    conditions: 'inregion_chaud'
+    conditions: inregion_chaud
     events: zae_delayobj4
   n3:
     text: '"&6&oFaille proche."'
-    conditions: 'inregion_moyen'
+    conditions: inregion_moyen
     events: zae_delayobj4
   n4:
     text: '"&6&oFaille éloignée."'
-    conditions: 'inregion_chateau'
+    conditions: inregion_chateau
     events: zae_delayobj4
   n5:
     text: '"&6&oIl faut aller au chateau d''abord !"'
-    conditions: '!inregion_chateau'
+    conditions: !inregion_chateau
     events: zae_delayobj4

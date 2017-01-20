@@ -1,3 +1,4 @@
+!!!conversation!!!tano
 quester: 'Tano'
 first: unknown,welcome,member
 stop: 'false'
@@ -9,10 +10,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Qui êtes vous ?! Allez voir l''&2Intendant &a&o!'
-    conditions: '!gestionnaire'
+    conditions: !gestionnaire
   welcome:
     text: 'Salut jeune pousse ! Que puis-je pour toi ?'
-    conditions: 'gestionnaire,!bucheron'
+    conditions: gestionnaire,!bucheron
     pointers: presentation,become_member,foret,rien
   pres_ok:
     text: 'Ok ! Reviens me voir quand tu seras officiellement reconnu par l''&2Intendant &a&o!'
@@ -26,7 +27,7 @@ NPC_options:
 # Add any guild-specific quests in pointers of "member"
   member:
     text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
-    conditions: 'bucheron'
+    conditions: bucheron
     pointers: menu,foret,merci
   bucheron_menu:
     text: 'Le voilà !'
@@ -39,11 +40,11 @@ NPC_options:
     pointers: dac,non
   entry_exe1:
     text: 'Parfait, bonne coupe!'
-    conditions: 'money_100'
+    conditions: money_100
     events: foret_folder_entry
   entry_exe2:
     text: 'Il semblerait que vous n''ayez pas assez d''argent!'
-    conditions: '!money_100'
+    conditions: !money_100
     events: foret_folder_entry
 #                   #
 #                   #
@@ -53,11 +54,11 @@ NPC_options:
 player_options:
   presentation:
     text: 'Je viens me présenter de la part de l''Intendant !'
-    conditions: 'guilde_bucherons'
+    conditions: guilde_bucherons
     pointers: pres_ok
   become_member:
     text: 'Je veux devenir membre de la Guilde des Bûcherons !'
-    conditions: '!bucheron,intendant_done'
+    conditions: !bucheron,intendant_done
     pointers: member_ok
   menu:
     text: 'Je voudrais accéder au Menu de la Guilde.'
@@ -71,7 +72,7 @@ player_options:
 #
   foret:
     text: 'Je voudrais accéder à la Fôret!'
-    conditions: '!foret_athelas'
+    conditions: !foret_athelas
     pointers: entry
   dac:
     text: 'D''accord! Voici &d¤100'

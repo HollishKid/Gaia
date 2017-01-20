@@ -1,3 +1,4 @@
+!!!conditions!!!
 #
 # Conditions
 #             For Gaïa
@@ -234,7 +235,14 @@ mageentry_approved: tag mageentry_approved
 #
 #
 #
-wand_inventory: wand inventory
+wand1_inventory: and wand1_inventory1,!wand_air
+wand1_inventory1: wand inventory name:airbender
+wand2_inventory: and wand2_inventory1,!wand_fire
+wand2_inventory1: wand inventory name:firebender
+wand3_inventory: and wand3_inventory1,!wand_earth
+wand3_inventory1: wand inventory name:earthbender
+wand4_inventory: and wand4_inventory1,!wand_water
+wand4_inventory1: wand inventory name:waterbender
 wand_air: wand hand name:airbender
 wand_earth: wand hand name:earthbender
 wand_water: wand hand name:waterbender
@@ -268,6 +276,7 @@ other_fire_faction: or earth,water,air
 #
 #
 wand_hand: wand hand
+wand_inventory: wand inventory
 baguette_magic_missile: tag baguette_magic_missile
 baguette_flare: tag baguette_flare
 #
@@ -330,6 +339,9 @@ tag_aang_baton: tag tag_aang_baton
 empty_1: empty 1
 ingredients_air_wand: and aang_baton_have,fiole_air_calmed_have,empty_1
 air_wand: tag air_wand
+fire_wand: tag fire_wand
+earth_wand: tag earth_wand
+water_wand: tag water_wand
 #
 # Erudits (autres, tempo)
 #
@@ -428,6 +440,11 @@ planks100: item planks:100
 #
 #
 ##################################
+assault_started: testforblock -6591;75;2917;Gaia GLOWSTONE
+#
+#
+#
+# OLD STUFF
 uhc_tag: tag uhc
 uhc_in: region uhc
 uhc_in_lobby: region uhc_lobby

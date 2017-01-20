@@ -1,3 +1,4 @@
+!!!conversation!!!jimbo
 quester: 'Jimbo'
 first: n1,n2,n3,n4,in_progress,n5,n6
 stop: 'false'
@@ -12,7 +13,7 @@ NPC_options:
 #
   in_progress:
     text: 'Je suis occupé avec les affaires de la guilde. \nReviens quand tu auras accompli ta tâche.'
-    conditions: 'in_progress'
+    conditions: in_progress
     pointers: IP_q1,IP_q2
   help_q1:
     text: 'L''arène est juste à coté de la guilde, en direction de l''ouest.'
@@ -23,7 +24,7 @@ NPC_options:
 #
   n1:
     text: 'Salutations &2%player%&a&o. Que puis-je faire pour t''aider ?'
-    conditions: '!jim_q1start,!jim_q1done,!event1_win'
+    conditions: !jim_q1start,!jim_q1done,!event1_win
     pointers: p1,p2,p3
   rep1:
     text: 'Je suis le responsable du recrutement pour la &6Guilde des Aventuriers&a&o. \nSi quelqu''un veut en faire partie, c''est à moi qu''il faut s''adresser !'
@@ -45,31 +46,31 @@ NPC_options:
     events: jim_q1go
   n2:
     text: 'Alors tu as battu &4Takeo&a&o hein ? Pas mal, tu pourras peut-être nous être utile. \nLe maître de la guilde va te recevoir maintenant. \nTu le trouveras dans son bureau a l''étage.'
-    conditions: 'event1_win,!jim_q1done'
+    conditions: event1_win,!jim_q1done
     events: jim_firstend,max_journal_del
 #
 ## 2eme étape
 #
   n3:
     text: 'Bien, maintenant que tu es officiellement un membre de la guilde je peux te recommander pour certains travaux... \nPour ton premier travail, tu va aller voir le &2sergent Ynvgard&a&o. \nTu lui porteras assistance jusqu''à ce qu''il en décide autrement.'
-    conditions: 'jim_q1done,!in_progress,maka_etape1,!ynv_q3done'
+    conditions: jim_q1done,!in_progress,maka_etape1,!ynv_q3done
     events: jim_2ndstart,max_journal_del
 #
 ## 3eme étage
 #
   n4:
     text: 'Le &2Srg Ynvgard&a&o m''a déjà fait part de ton succès, je dois dire que cela fait plaisir à entendre ! \nC''est toujours bon pour l''image de la guilde !'
-    conditions: 'ynv_q3done,!jim_inconvers,!jim_q2done'
+    conditions: ynv_q3done,!jim_inconvers,!jim_q2done
     events: jim_q2ending,jim_inconvers
 #
 ## End JIMBO
 #
   n5:
     text: 'Salut &2%player%&a&o, on se promène ?'
-    conditions: 'random_50,!jim_inconvers,jim_q2done'
+    conditions: random_50,!jim_inconvers,jim_q2done
   n6:
     text: 'De nouvelles recrues se sont encore présentées, peut-être les as-tu inspiré !'
-    conditions: '!jim_inconvers,jim_q2done'
+    conditions: !jim_inconvers,jim_q2done
 #
 ##########################
 #                        #
@@ -102,9 +103,9 @@ player_options:
     text: 'Très peu pour moi, merci...'
   IP_q1:
     text: 'Où se trouve l''arène ?'
-    conditions: 'in_progress,jim_q1start'
+    conditions: in_progress,jim_q1start
     pointers: help_q1
   IP_q2:
     text: 'Où se trouve le sergent ?'
-    conditions: 'in_progress,jim_q2start'
+    conditions: in_progress,jim_q2start
     pointers: help_q2

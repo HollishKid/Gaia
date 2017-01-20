@@ -1,3 +1,4 @@
+!!!conversation!!!jacopo
 quester: 'Jacopo'
 first: unknown,known,boat_not,boat,ermite_not,ermite,quest
 stop: 'false'
@@ -9,10 +10,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'OYÉ &2%player% &a&o!'
-    conditions: '!jacopo,!jacopo_start,!jacopo_boat_done,!autorisation_bateau'
+    conditions: !jacopo,!jacopo_start,!jacopo_boat_done,!autorisation_bateau
   known:
     text: 'OYÉ &2%player% &a&o!'
-    conditions: 'jacopo,!jacopo_start,!jacopo_boat_done,!autorisation_bateau'
+    conditions: jacopo,!jacopo_start,!jacopo_boat_done,!autorisation_bateau
     pointers: intendant,qui
   qui_rep:
     text: 'J''m''appelle &2Jacopo &a&oet je suis un ancien de la Marine d''Athelas reconverti dans des affaires plus... lucratives !'
@@ -27,27 +28,27 @@ NPC_options:
     events: journal_jacopo_go_del,obj_jacopo_bat,journal_jacopo_bat
   boat_not:
     text: 'Je vois que tu n''as toujours pas trouvé comment faire un bâteau. \nSi tu ne sais pas faire ça, comment veux-tu que je t''envoie en eaux profondes ?!'
-    conditions: 'jacopo,jacopo_start,!jacopo_boat_done,!jacopo_ermite,!ermite'
+    conditions: jacopo,jacopo_start,!jacopo_boat_done,!jacopo_ermite,!ermite
   boat:
     text: 'Parfait ! \nMaintenant, navigue vers le petit îlot de sable qui se trouve à l''Est d''ici. Retrouves-y l''&2Ermite&a&o. \Tu devrais utiliser ta Carte Dynamique pour y arriver ! \nDemandes conseil à &2Sofia &a&osi tu as besoin d''aide avec ça !'
-    conditions: 'jacopo,jacopo_start,jacopo_boat_done,boat_have,!jacopo_ermite,!ermite'
+    conditions: jacopo,jacopo_start,jacopo_boat_done,boat_have,!jacopo_ermite,!ermite
     events: journal_jacopo_bat_del,tag_jacopo_ermite,journal_jacopo_ermite
     pointers: ok,sofia
   sofia_rep:
     text: 'Tu as quoi à la place des yeux ?! \nElle est sur le quai, juste derrière toi ! \nSinon elle est toujours au &dSpawn &a&oquand on a besoin d''elle !'
   ermite_not:
     text: 'Il semblerait que tu n''as toujours pas trouvé l''&2Ermite&a&o... \nSeule ton arrivée par tes propres forces là bas me prouvera que tu sauras survivre seul en mer !'
-    conditions: 'jacopo,jacopo_start,jacopo_boat_done,jacopo_ermite,!ermite'
+    conditions: jacopo,jacopo_start,jacopo_boat_done,jacopo_ermite,!ermite
   ermite:
     text: 'Un pigeon m''est parvenu ! Même s''il n''était pas content que j''envoie encore un jeune matelot sur son île, l''&2Ermite &a&oatteste t''avoir parlé dans sa maison ! \nJ''envoie un pigeon à mon tour à l''&2Intendant&a&o, je valide ta formation ! Retournes donc le voir.'
-    conditions: 'jacopo,jacopo_start,jacopo_boat_done,!jacopo_ermite,ermite'
+    conditions: jacopo,jacopo_start,jacopo_boat_done,!jacopo_ermite,ermite
     events: journal_ermite_back_del,tag_jacopo_done,jacopo_clean,journal_jacopo_approuved
 #
 # Quête pour accéder à Zatarra, sur l'Île des Pirates
 #
   quest:
     text: 'OYE &2%player% &a&o!'
-    conditions: 'or_jacopo_quest_init'
+    conditions: or_jacopo_quest_init
 ############
 #          #
 #  JOUEUR  #
@@ -56,7 +57,7 @@ NPC_options:
 player_options:
   intendant:
     text: 'L''Intendant m''envoie vous voir...'
-    conditions: '!jacopo_start,!jacopo_boat_done,!jacopo_done,!autorisation_bateau'
+    conditions: !jacopo_start,!jacopo_boat_done,!jacopo_done,!autorisation_bateau
     pointers: intendant_rep
   qui:
     text: 'Qui êtes vous ?'

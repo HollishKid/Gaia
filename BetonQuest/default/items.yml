@@ -1,32 +1,33 @@
+!!!items!!!
 #
 #
 #    Items for Gaïa
 bow: BOW
-an_arrow: ARROW data:0
+an_arrow: ARROW
 wooden_sword: WOOD_SWORD
-leather_boots: LEATHER_BOOTS data:0
-leather_tunic: LEATHER_CHESTPLATE data:0
-leather_pants: LEATHER_LEGGINGS data:0
-leathershoes: LEATHER_BOOTS data:0
-leather_helmet: LEATHER_HELMET data:0
-iron_helmet: IRON_HELMET data:0
-iron_chestplate: IRON_CHESTPLATE data:0
-iron_legs: IRON_LEGGINGS data:0
-iron_boots: IRON_BOOTS data:0
+leather_boots: LEATHER_BOOTS
+leather_tunic: LEATHER_CHESTPLATE
+leather_pants: LEATHER_LEGGINGS
+leathershoes: LEATHER_BOOTS
+leather_helmet: LEATHER_HELMET
+iron_helmet: IRON_HELMET
+iron_chestplate: IRON_CHESTPLATE
+iron_legs: IRON_LEGGINGS
+iron_boots: IRON_BOOTS
 iron_sword: IRON_SWORD
-chain_helmet: CHAINMAIL_HELMET data:0
-chain_body: CHAINMAIL_CHESTPLATE data:0
-chain_legs: CHAINMAIL_LEGGINGS data:0
-chain_boots: CHAINMAIL_BOOTS data:0
-gold_helmet: GOLD_HELMET data:0
-gold_plate: GOLD_CHESTPLATE data:0
-gold_legs: GOLD_LEGGINGS data:0
-gold_boots: GOLD_BOOTS data:0
-diamond_helmet: DIAMOND_HELMET data:0
-diamond_body: DIAMOND_CHESTPLATE data:0
-diamond_legs: DIAMOND_LEGGINGS data:0
-diamond_boots: DIAMOND_BOOTS data:0
-gold_body: GOLD_CHESTPLATE data:0
+chain_helmet: CHAINMAIL_HELMET
+chain_body: CHAINMAIL_CHESTPLATE
+chain_legs: CHAINMAIL_LEGGINGS
+chain_boots: CHAINMAIL_BOOTS
+gold_helmet: GOLD_HELMET
+gold_plate: GOLD_CHESTPLATE
+gold_legs: GOLD_LEGGINGS
+gold_boots: GOLD_BOOTS
+diamond_helmet: DIAMOND_HELMET
+diamond_body: DIAMOND_CHESTPLATE
+diamond_legs: DIAMOND_LEGGINGS
+diamond_boots: DIAMOND_BOOTS
+gold_body: GOLD_CHESTPLATE
 wooden_axe: WOOD_AXE
 gold_axe: GOLD_AXE
 diamond_axe: DIAMOND_AXE

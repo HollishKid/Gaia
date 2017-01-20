@@ -1,5 +1,6 @@
+!!!conversation!!!Loukran
 quester: 'Loukran'
-first: welcome
+first: welcome,welcomebis
 stop: 'false'
 #
 # Options NPC
@@ -7,7 +8,11 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Bienvenue à vous %player% ! Je vois que vous êtes nouveau en ces lieux !'
-    conditions: 'voir_superieur'
+    events: louk_dv
+    conditions: voir_superieur,!louk_dv
+    pointers: salut
+  welcomebis:
+    text: 'Vous revoilà ! Puis-je faire quelque chose pour vous ?'
     pointers: salut,quest_done
   selection:
     text: 'Je n''y suis pas contre, cela nous permettra de faire connaissances !'
@@ -50,7 +55,7 @@ player_options:
     pointers: rep2_ans
   rep3:
     text: 'Votre vie en ces lieux vous est paisible ?'
-    conditions: '!louk_qE1,!louk_qE2,!louk_qE3'
+    conditions: !louk_qE1,!louk_qE2,!louk_qE3
     pointers: rep3_ans
   int2:
     text: 'Puis_je vous demander, sans indiscretion, ce qu''il s''est passé ?'
@@ -63,7 +68,7 @@ player_options:
     pointers: quest_rep
   quest_done:
     text: 'J''ai trouvé l''une de vos plantes !'
-    conditions: 'louk_qE3'
+    conditions: louk_qE4
     pointers: quest_done_rep
   quest_done1:
     text: 'Il y avait aussi ce journal, je ne sais pas si il pourrait vous être utile.'

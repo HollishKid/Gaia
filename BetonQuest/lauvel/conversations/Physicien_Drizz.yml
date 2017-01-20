@@ -1,3 +1,4 @@
+!!!conversation!!!Physicien_Drizz
 quester: 'Physicien'
 first: retour,venue
 stop: 'false'
@@ -9,7 +10,7 @@ stop: 'false'
 NPC_options:
   venue:
     text: 'Oh bonjour, as-tu un instant à m''accorder ?'
-    conditions: 'Besoin_Aide,!Physicien_Done'
+    conditions: Besoin_Aide,!Physicien_Done
     pointers: non,oui
   p1:
     text: 'Voilà, je suis le physicien Drizz... Et j''étudis les portails dans lequels les serviteurs du mal ont passée pour nous envahir ! \nJ''ai entendu parler qu''à Athélas, il y avait un physicien de génie ayant écrit un livre sur c''est recherche ! \n Il se nomme "Heimer" et sont livre "Etudes des portails".'
@@ -22,7 +23,7 @@ NPC_options:
     events: Quetes_Physicien
   retour:
     text: 'Oh le voilà, merci beaucoup! Ah, mais les pages anexes sont déchiré ! \nComment vais-je faire ! Revenez plus tard, j''aurais encore besoin de vous ! \nMerci encore, je vous laisse l''original, je me suis fais une copie.'
-    conditions: 'Physicien_tag,physicien_book_tagged,!Physicien_Done'
+    conditions: Physicien_tag,physicien_book_tagged,!Physicien_Done
     events: Physicien_end_chap1
 #############
 #           #

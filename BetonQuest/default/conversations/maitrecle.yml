@@ -1,3 +1,4 @@
+!!!conversation!!!maitrecle
 quester: 'Maître de Clé'
 first: unwanted,unknown,client,client_coffre
 stop: 'false'
@@ -5,18 +6,18 @@ stop: 'false'
 NPC_options:
   unwanted:
     text: 'Nous clients doivent être connu de l''&2Intendant. Je ne peux pas vous aider tant que vous ne lui avez pas parlé.'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   unknown:
     text: 'Bonjour &2%player%. &a&oPuis-je vous renseigner ?'
-    conditions: '!client,!client_coffre,intendant_done'
+    conditions: !client,!client_coffre,intendant_done
     pointers: qui,coffre,client,protege
   client:
     text: 'Bonjour &2%player%. &a&oEn quoi puis-je vous aider aujourd''hui ?'
-    conditions: 'client,!client_coffre'
+    conditions: client,!client_coffre
     pointers: qui,coffre1,protege
   client_coffre:
     text: 'Bonjour &2%player%. &a&oEn quoi puis-je vous aider aujourd''hui ?'
-    conditions: 'client,client_coffre'
+    conditions: client,client_coffre
     pointers: qui,protege,sort
   qui_rep:
     text: 'Je suis le &2Maître de Clé &a&ogardien et garant du coffre de cette banque. Je travaille directement pour les &2Anciens Patrons &a&ode la Finance d''Athelas et je suis le seul outre les clients à pouvoir accéder au coffre.'

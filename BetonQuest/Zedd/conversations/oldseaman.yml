@@ -1,26 +1,27 @@
+!!!conversation!!!oldseaman
 quester: 'Tad le Pêcheur'
 first: n1,n2,n2a,n3,n4
 stop: 'false'
 NPC_options:
   n1:
     text: 'Ahoy la bleusaille ! Alors on est attiré par les mystères de la mer ?'
-    conditions: '!seaman_startq1,!seaman_q1done'
+    conditions: !seaman_startq1,!seaman_q1done
     pointers: point1,point2
   n2:
     text: 'Alors ca avance ces aventures ?'
-    conditions: 'seaman_startq1'
+    conditions: seaman_startq1
     pointers: check1
   n2a:
     text: 'Alors ca avance ces aventures ?'
-    conditions: 'seaman_startq2'
+    conditions: seaman_startq2
     pointers: check2
   n3:
     text: 'Prêt pour la suite moussaillon ?'
-    conditions: 'seaman_q1done'
+    conditions: seaman_q1done
     pointers: seaman_suiteoui,seaman_suitenon
   n4:
     text: 'Ah &2%player% &a&o! Que fais tu dans le coin ?'
-    conditions: 'seaman_q2done'
+    conditions: seaman_q2done
     pointers: final1,final2,final3
   rep_oui:
     text: 'Voilà qui est dit mon garcon ! Et le meilleur moyen de les trouver... pêcher ! Tu veux tenter le coup ?'
@@ -39,17 +40,17 @@ NPC_options:
     events: seaman_reward2,seaman_q2done
   finalrep1:
     text: 'Il me faut deux &7Bâton de bois&a&o pour que je te fasse ça.'
-    conditions: '!seaman_stick1'
+    conditions: !seaman_stick1
   finalrep1a:
     text: 'Pas de souci, fais moi voir ces bouts de bois la...'
-    conditions: 'seaman_stick1'
+    conditions: seaman_stick1
     events: seaman_takestick,seaman_r2,seaman_mess1
   finalrep2:
     text: 'Il faut que tu apporte 5x &7Poisson Cru&a&o pour que je te les cuisine !'
-    conditions: '!seaman_fish'
+    conditions: !seaman_fish
   finalrep2a:
     text: 'Envoi les poissons, je fais chauffer la braise !!'
-    conditions: 'seaman_fish'
+    conditions: seaman_fish
     events: seaman_takefish,seaman_r4,seaman_mess2
   finalrep3:
     text: 'Eh bien bonjour !'
@@ -66,7 +67,7 @@ player_options:
     text: 'Non merci.'
   check1:
     text: 'Voici vos bâtons de bois !'
-    conditions: 'seaman_stick1'
+    conditions: seaman_stick1
     events: seaman_takestick,seaman_endq1
     pointers: seaman_reward1
   seaman_suiteoui:
@@ -76,7 +77,7 @@ player_options:
     text: 'Non'
   check2:
     text: 'Voici vos poissons !'
-    conditions: 'seaman_fish'
+    conditions: seaman_fish
     events: seaman_endq2,seaman_takefish
     pointers: seaman_reward2
   final1:

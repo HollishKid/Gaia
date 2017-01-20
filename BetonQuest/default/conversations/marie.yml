@@ -1,3 +1,4 @@
+!!!conversation!!!marie
 quester: 'Marie'
 first: unknown,help,help2,merci
 stop: 'false'
@@ -5,18 +6,18 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Vous êtes inconnu dans cette ville. Parlez à l''&2Intendant &a&o!'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   help:
     text: 'A l''aide ! Mon fils a disparu !'
-    conditions: '!tag_sam,!tag_marie,intendant_done'
+    conditions: !tag_sam,!tag_marie,intendant_done
     pointers: aide,non
   help2:
     text: 'Vous avez trouvé &2Sam &a&oalors ?! Il adore jouer autour de la porte Nord de la ville ... pas loin d''ici!'
-    conditions: '!tag_sam,!tag_marie'
+    conditions: !tag_sam,!tag_marie
     pointers: aide,non
   merci:
     text: 'Sam est rentré à la maison me disant que vous l''aviez trouvé ! Merci, à vous &2%player%&a&o, je ne l''oublierais jamais !'
-    conditions: 'tag_marie'
+    conditions: tag_marie
   sam:
     text: 'Oh merci beaucoup &2%player% &a&o! Il s''appelle &2Sam&a&o, il adore jouer autour de la porte Nord de la ville... Pas loin d''ici !'
     events: obj_find_sam,tag_sam

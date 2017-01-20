@@ -1,3 +1,4 @@
+!!!events!!!
 #   Tatsu   #
 tatsu_dv: tag add tatsu_dv
 #
@@ -9,7 +10,7 @@ tatsu_q14: journal add tatsu_q1
 tatsu_q15: compass add tatsu_q1
 #
 tatsu_q1_1: folder tatsu_q1_11,tatsu_q1_12,tatsu_q1_13,tatsu_q1_14,tatsu_q1_15,tatsu_q1_16,tatsu_q1_17
-tatsu_q1_11: 'message &a&oVous avez trouvé ce que Tatsu a perdu'
+tatsu_q1_11: 'message &a&oVous avez trouvÃ© ce que Tatsu a perdu'
 tatsu_q1_12: tag del tatsu_q1
 tatsu_q1_13: tag add tatsu_q1_1
 tatsu_q1_14: journal del tatsu_q1

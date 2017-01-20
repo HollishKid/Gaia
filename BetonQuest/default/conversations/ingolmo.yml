@@ -1,3 +1,4 @@
+!!!conversation!!!ingolmo
 quester: 'Ingolmo'
 first: unknown,welcome,member
 stop: 'false'
@@ -9,10 +10,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Je ne vous connais pas ! Allez voir l''&2Intendant &a&o!'
-    conditions: '!gestionnaire'
+    conditions: !gestionnaire
   welcome:
     text: 'Salut jeune chair à canon ! Que me veux-tu ?'
-    conditions: 'gestionnaire,!guerrier'
+    conditions: gestionnaire,!guerrier
     pointers: presentation,become_member,rien
   pres_ok:
     text: 'Ok ! Je ne vous accepterais pas en tant que membre de ma guilde tant que tu ne seras pas officiellement reconnu par l''&2Intendant &a&o!'
@@ -26,7 +27,7 @@ NPC_options:
 # Add any guild-specific quests in pointers of "member"
   member:
     text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
-    conditions: 'guerrier'
+    conditions: guerrier
     pointers: menu,crafts,merci
   guerrier_menu:
     text: 'Le voilà !'
@@ -41,11 +42,11 @@ NPC_options:
 player_options:
   presentation:
     text: 'Je viens me présenter de la part de l''Intendant !'
-    conditions: 'guilde_guerriers'
+    conditions: guilde_guerriers
     pointers: pres_ok
   become_member:
     text: 'Je veux devenir membre de la Guilde des Guerriers !'
-    conditions: '!guerrier,intendant_done'
+    conditions: !guerrier,intendant_done
     pointers: member_ok
   menu:
     text: 'Je voudrais accéder au Menu de la Guilde.'

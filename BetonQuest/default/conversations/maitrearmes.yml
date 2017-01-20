@@ -1,3 +1,4 @@
+!!!conversation!!!maitrearmes
 quester: 'Maître d''Armes'
 first: unknown,welcome
 stop: 'false'
@@ -7,45 +8,45 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Tu n''es pas un citoyen toi, vas voir l''&2Intendant &a&oavant de t''entraîner au combat ici !'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   welcome:
     text: 'Bonjour jeune guerrier !'
-    conditions: 'intendant_done'
+    conditions: intendant_done
     pointers: parfaire,bonjour
   parfaire_rep:
     text: 'Tu es au bon endroit ! Quel entraînement veux-tu suivre ?'
     pointers: arc,pve1,pve2,pve3
   arc_rep:
     text: 'Très bien ! Ton entraînement va commencer !'
-    conditions: '!arc_occupe'
+    conditions: !arc_occupe
     events: arc_master,arc1_meca1
   arc_rep_occupied:
     text: 'Quelqu''un utilise déjà le parcours ; reviens dans deux minutes !'
-    conditions: 'arc_occupe'
+    conditions: arc_occupe
   pve_rep1:
     text: 'Très bien ! Ton entraînement commence dans 5 secondes.'
-    conditions: '!pvp_occupe,!training_easy_timer_tag'
+    conditions: !pvp_occupe,!training_easy_timer_tag
     events: pvp_training_master1
   pve_rep2:
     text: 'Très bien ! Ton entraînement commence dans 5 secondes.'
-    conditions: '!pvp_occupe,!training_medium_timer_tag'
+    conditions: !pvp_occupe,!training_medium_timer_tag
     events: pvp_training_master2
   pve_rep3:
     text: 'Très bien ! Ton entraînement commence dans 5 secondes.'
-    conditions: '!pvp_occupe,!training_hard_timer_tag'
+    conditions: !pvp_occupe,!training_hard_timer_tag
     events: pvp_training_master3
   pve_rep12:
     text: 'Tu dois attendre &2%objective.training_easy_timer.left% &a&oavant de refaire cet entraînement.'
-    conditions: '!pvp_occupe,training_easy_timer_tag'
+    conditions: !pvp_occupe,training_easy_timer_tag
   pve_rep22:
     text: 'Tu dois attendre &2%objective.training_medium_timer.left% &a&oavant de refaire cet entraînement.'
-    conditions: '!pvp_occupe,training_medium_timer_tag'
+    conditions: !pvp_occupe,training_medium_timer_tag
   pve_rep32:
     text: 'Tu dois attendre &2%objective.training_hard_timer.left% &a&oavant de refaire cet entraînement.'
-    conditions: '!pvp_occupe,training_hard_timer_tag'
+    conditions: !pvp_occupe,training_hard_timer_tag
   pve_rep_occupied:
     text: 'L''entraîneur est occupé avec quelqu''un d''autre ; reviens dans deux minutes !'
-    conditions: 'pvp_occupe'
+    conditions: pvp_occupe
 ##########
 # JOUEUR #
 ##########

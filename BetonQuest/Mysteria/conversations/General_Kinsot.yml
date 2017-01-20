@@ -1,3 +1,4 @@
+!!!conversation!!!General_Kinsot
 quester: 'Général Kinsot'
 first: welcome,welcomebis
 stop: 'false'
@@ -7,15 +8,15 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Bonjour à toi %player% ! Garderos m''a prévenu de ton arrivée !'
-    conditions: 'voir_superieur,!motif_donner,!tour_du_village'
+    conditions: voir_superieur,!motif_donner,!tour_du_village
     pointers: motif
   welcomebis:
     text: 'Bonjour %player% ! Tu as besoin de quelque chose ?'
-    conditions: 'voir_superieur,motif_donner,tour_du_village'
+    conditions: voir_superieur,motif_donner,tour_du_village
     pointers: quete
   motif_rep:
     text: 'Oui, et j''aimerais voir ce motif du roi avant de continuer cette discussion !'
-    conditions: '!motif_donner'
+    conditions: !motif_donner
     events: motif_donner
     pointers: quete
   quete_rep:
@@ -30,7 +31,7 @@ NPC_options:
 player_options:
   motif:
     text: 'Donc vous savez en ce qui concerne le motif de ma présence devant vous ?'
-    conditions: '!motif_donner'
+    conditions: !motif_donner
     pointers: motif_rep
   quete:
     text: 'Que dois-je faire à présent ?'

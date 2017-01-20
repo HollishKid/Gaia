@@ -1,17 +1,18 @@
+!!!conversation!!!bartend
 quester: 'Ollie'
 first: n0,n1,n2
 stop: 'false'
 NPC_options:
   n0:
     text: 'Vous n''êtes pas de cette ville ! Parlez à l''&2Intendant &a&o!'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   n1:
     text: 'Puis-je vous aider?'
-    conditions: '!introquestguild,intendant_done'
+    conditions: !introquestguild,intendant_done
     pointers: point1,point2,point3,retour1,retour2
   n2:
     text: 'Puis-je vous aider ?'
-    conditions: 'introquestguild'
+    conditions: introquestguild
     pointers: point2,point3,retour1,retour2
   rep_oui:
     text: 'Vous vous trouvez au bar du premier niveau de la Guilde des Aventuriers ! Vous trouverez ici différents types de personnes, certaines cherchent de l''aide, d''autres cherchent des trésors et les dernières... peut-être vaut-il mieux se tenir éloigné de ce qu''elles cherchent...'
@@ -19,11 +20,11 @@ NPC_options:
     text: 'Cordialement.'
   travail1:
     text: 'J''aurais effectivement besoin d''un service ! Je devais être livré en pain ce matin mais toujours aucun signe de mon boulanger. Peut-être pouvez vous me fournir 10 &7Pains&a&o à la place ?'
-    conditions: 'bartend_q1'
+    conditions: bartend_q1
     pointers: oui_travail,non_travail
   travail2:
     text: 'Oui! Maintenant c''est de viande que je manque ! Allez vite me chercher 5 &7Cotelette de proc cru&a&o et 5 &7Boeuf cru &a&o!'
-    conditions: 'bartend_start2'
+    conditions: bartend_start2
     pointers: oui_travail2,non_travail2
   thx:
     text: 'Merci beaucoup !'
@@ -42,7 +43,7 @@ player_options:
     pointers: rep_oui
   point2:
     text: 'Avez vous du travail pour moi ?'
-    conditions: '!bar_questinprogress,!bartend_q2'
+    conditions: !bar_questinprogress,!bartend_q2
     pointers: travail1,travail2
   point3:
     text: 'Tout va bien.'
@@ -54,12 +55,12 @@ player_options:
     text: 'Je suis attendu ailleurs...'
   retour1:
     text: 'Voici votre livraison de pain !'
-    conditions: 'bartend_q0'
+    conditions: bartend_q0
     events: livraison_done,remove_painbar,remove_breadgiven
     pointers: recompense1
   retour2:
     text: 'Voici votre viande !'
-    conditions: 'bartend_q2'
+    conditions: bartend_q2
     events: bartend_endq2
     pointers: recompense2
   oui_travail2:

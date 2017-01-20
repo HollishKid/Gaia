@@ -1,3 +1,4 @@
+!!!main!!!
 static:
   '23:58': forest_master
   '23:59': randomizer
@@ -115,7 +116,6 @@ npcs:
   '111': jozef
   '113': seimag
   '114': foronar
-  '115': lutcha
   '118': paulette
   '119': sofia
   '125': officier2
@@ -157,6 +157,7 @@ npcs:
   '422': lyrtix
   '423': guigui
   '424': goupil
+  '425': blablagumm
   '429': commandant
   '430': commandant
   '431': commandant
@@ -223,3 +224,4 @@ variables:
   arrowscore1: '1'
   arrowscore2: '2'
   arrowscore3: '3'
+

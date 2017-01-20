@@ -1,3 +1,4 @@
+!!!events!!!
 #
 #
 # J'ai modifié toutes les commandes "sentry" en leur équivalent "sentinel"
@@ -213,7 +214,7 @@ las_givearrows: give an_arrow:16
 ## Lancement du test de tir
 #
 las_starttest: folder las_launching,las_objarrow,las_testpassed
-las_objarrow: objective start las_objarrow
+las_objan_arrow: objective start las_objarrow
 las_testpassed: tag add las_testpassed
 las_launching: folder las_mess5,las_mess6,las_launching2 delay:1
 las_mess5: 'message &6&oLe test de tir va commencer! Préparez vous!'
@@ -417,7 +418,7 @@ message4: 'message &6Frank &f: Je n''ai pas réussi à retrouver l''&6Objet. &4O
 message5: 'message &4Erek &f: Tu n''es qu''un bon à rien &6Frank &f! Tu ne parviens même pas à t''approcher d''un misérable voleur!'
 message6: 'message &6Frank &f: Mais, Chef ... ! J''ai fait ce que j''ai pu ... !'
 message7: 'message &4Erek &f: Non &6Frank &f, pour tant de médiocrité, tu vas payer la peine capitale !'
-message8: 'message &6Frank &f: S''il vous plaît! Je vous en supplie! Non, ayez pitié !!'
+message8: 'message &6Frank &f: S''il vous plaît! Je vous en supplie! Non, ayez pitié!!'
 message9: 'message &4Erek &f: Meurt &6Frank&f!'
 folder_attack: folder folder_attack_expl,frank_depop,end_message
 folder_attack_expl: explosion 0 0 3 -7160;79;3506;Gaia

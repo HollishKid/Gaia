@@ -1,3 +1,4 @@
+!!!conversation!!!Soldat_Ryan
 quester: 'Soldat_Ryan'
 first: salut,jyvais,mhh
 stop: 'false'
@@ -9,14 +10,14 @@ stop: 'false'
 NPC_options:
   salut:
     text: 'Salut, qui est-tu ?'
-    conditions: 'Soldat_Ryan,!Ryan_trouve'
+    conditions: Soldat_Ryan,!Ryan_trouve
     pointers: recrue
   ok:
     text: 'Ok merci, jeune recrue. Je me mets en route.'
     events: Ryan_trouve_tous
   jyvais:
     text: 'Ok, j''y vais, retourne prévenir le soldat Anxieux.'
-    conditions: 'Ryan_trouve'
+    conditions: Ryan_trouve
   mhh:
     text: 'Mhh, ce livre est intéressant !'
 #############

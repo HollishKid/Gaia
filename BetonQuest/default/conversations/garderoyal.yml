@@ -1,3 +1,4 @@
+!!!conversation!!!garderoyal
 quester: 'Garde Royal'
 first: unknown,welcome
 stop: 'false'
@@ -5,10 +6,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Parlez à l''&2Intendant&a&o, il vous attend !'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   welcome:
     text: 'Bonjour !'
-    conditions: 'intendant_done'
+    conditions: intendant_done
     pointers: bonjour,qui,chateau,intendant,roi
   qui_rep:
     text: 'Je suis un membre de la Garde Royale d''Athelas.'

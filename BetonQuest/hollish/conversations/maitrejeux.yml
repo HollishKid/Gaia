@@ -1,3 +1,4 @@
+!!!conversation!!!maitrejeux
 quester: 'Maître de Jeu'
 first: welcome
 stop: 'false'
@@ -6,76 +7,12 @@ stop: 'false'
 #        #
 NPC_options:
   welcome:
-    text: 'Salut, &2%player% &a&o! En quoi puis-je aider ?'
-    pointers: games_create,games_join,questions
-  questions_rep:
-    text: 'Aucun Horloger ne m''a instruit pour vous répondre pour l''instant. Je pourrais très bientôt vous aider !'
-#
-# Games
-#
-  games_rep:
-    text: 'Bien entendu! Voici votre interface de Réglages.'
-    conditions: '!games_launched'
-    events: uhc_open
-  games_rep_occupied:
-    text: 'Il semblerait que ce jeu soit déjà en cours ou en préparation.'
-    conditions: 'games_launched'
-  games_join_rep:
-    text: 'Très bien, je vais vous inscrire...'
-    conditions: 'games_uhc_1'
-    events: uhc_team1
-  games_join_team_rep:
-    text: 'Dans quelle équipe voulez vous être?'
-    conditions: 'uhc_teams'
-    pointers: uhc_teams1,uhc_teams1_full,uhc_teams2,uhc_teams2_full,uhc_teams3,uhc_teams3_full,uhc_teams4,uhc_teams4_full
-  games_join_none:
-    text: 'Il semblerait qu''aucune partie ne soit en cours de préparation !'
-    conditions: '!games_launched'
+    text: 'Salut, &2%player% &a&o! \nTu es venu pour jouer ?'
+    pointers: games_create
 #        #
 # Joueur #
 #        #
 player_options:
-#
-# Games
-#
   games_create:
-    text: 'Je veux créer une partie !'
-    pointers: games_rep,games_rep_occupied
-  games_join:
-    text: 'Je veux rejoindre la partie !'
-    conditions: '!has_team'
-    pointers: games_join_rep,games_join_team_rep,games_join_none
-  uhc_teams1:
-    text: 'Equipe &4Feu'
-    conditions: 'uhc_teams,!uhc_team1_full'
-    events: uhc_team1
-  uhc_teams1_full:
-    text: 'Equipe &4Feu &c -- PLEINE !'
-    conditions: 'uhc_team1_full'
-  uhc_teams2:
-    text: 'Equipe &fAir'
-    conditions: 'uhc_teams,!uhc_team2_full'
-    events: uhc_team2
-  uhc_teams2_full:
-    text: 'Equipe &fAir &c -- PLEINE !'
-    conditions: 'uhc_team2_full'
-  uhc_teams3:
-    text: 'Equipe &6Terre'
-    conditions: 'uhc_teams3,!uhc_team3_full'
-    events: uhc_team3
-  uhc_teams3_full:
-    text: 'Equipe &6Terre &c -- PLEINE !'
-    conditions: 'uhc_team3_full'
-  uhc_teams4:
-    text: 'Equipe &9Eau'
-    conditions: 'games_uhc_team4,!uhc_team4_full'
-    events: uhc_team4
-  uhc_teams4_full:
-    text: 'Equipe &9Eau &c -- PLEINE !'
-    conditions: 'uhc_team4_full'
-#
-# Questions
-#
-  questions:
-    text: 'J''ai une question concernant les Jeux !'
-    pointers: questions_rep
+    text: 'Je voudrais voir les parties disponibles !'
+    events: jeu_creator

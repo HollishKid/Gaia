@@ -1,3 +1,4 @@
+!!!conversation!!!aang
 quester: 'Aang'
 first: welcome,welcomebis
 stop: 'false'
@@ -9,7 +10,7 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Qui êtes vous ?! Personne n''est jamais venu ici sans que j''en sois prévenu !'
-    conditions: '!tag_aang'
+    conditions: !tag_aang
     pointers: raconter
   welcomebis:
     text: 'Que puis-je pour vous ?'
@@ -49,11 +50,11 @@ NPC_options:
     events: tag_ardere_aang_del,aang_baton_obj,journal_aang_baton,journal_fiole_for_wand_del
   aang_baton_done_rep:
     text: 'Excellent ! J''espère que tu te souviens du mot pour faire apparaître une Baguette ?'
-    conditions: 'ingredients_air_wand'
+    conditions: ingredients_air_wand
     pointers: p1,p2,p3,p4,p5
   aang_baton_done_rep_not:
     text: 'Pour faire apparaître la Baguette Magique tu dois avoir la Fiole d''Air calmée, un Bâton ET un espace de libre dans ton inventaire.'
-    conditions: '!ingredients_air_wand'
+    conditions: !ingredients_air_wand
   faux:
     text: 'Il semblerait que vous vous soyez trompé dans le mot d''apparition...'
   air_wand:
@@ -78,11 +79,11 @@ player_options:
     pointers: temple_rep
   preuve:
     text: 'Donnez moi quelque chose qui prouve que je sois venu ici pour l''amener à l''Erudit !'
-    conditions: '!livre_air,!airtemple_magic_learning'
+    conditions: !livre_air,!airtemple_magic_learning
     pointers: preuve_rep
   preuve_perdue:
     text: 'J''ai perdu le livre de sorts que vous m''avez donné !'
-    conditions: 'livre_air,!airtemple_magic_learning'
+    conditions: livre_air,!airtemple_magic_learning
     pointers: book_give_rep_bis
   book_give:
     text: 'Avec plaisir, je suis sûr que l''Erudit sera convaincu !'
@@ -95,30 +96,30 @@ player_options:
 #
   magic:
     text: 'Pouvez vous m''en apprendre plus sur la Magie de l''Air ?'
-    conditions: 'airtemple_magic_learning,!milo_fiole,!milo_fiole1,!tag_ardere_aang,!tag_aang_baton,!air_wand'
+    conditions: airtemple_magic_learning,!milo_fiole,!milo_fiole1,!tag_ardere_aang,!tag_aang_baton,!air_wand
     pointers: magic_rep
   fiole:
     text: 'J''ai la fiole que vous m''avez demandé !'
-    conditions: 'milo_fiole,fiole_have'
+    conditions: milo_fiole,fiole_have
     pointers: fiole_rep
   fiole_air:
     text: 'J''ai capturé de l''air du Continent Est !'
-    conditions: 'milo_fiole1'
+    conditions: milo_fiole1
     pointers: fiole_air_rep
   fiole_air_done:
     text: 'J''ai réussi à canaliser l''énergie de la fiole.'
-    conditions: 'tag_ardere_aang'
+    conditions: tag_ardere_aang
     pointers: fiole_air_done_rep
   aang_baton_done:
     text: 'J''ai ramené un bâton pour en faire une Baguette de l''Air !'
-    conditions: 'tag_aang_baton'
+    conditions: tag_aang_baton
     pointers: aang_baton_done_rep,aang_baton_done_rep_not
 #
 #
 #
   air_wand_upgrade:
     text: 'Je voudrais améliorer ma Baguette d''Air.'
-    conditions: 'air_wand'
+    conditions: air_wand
     pointers: air_wand_upgrade_fine
 ##
 # Réponses pour faire apparaître/Configurer la Baguette Magique INFORMATIONAL ONLY, NO USAGE !

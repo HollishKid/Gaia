@@ -1,3 +1,4 @@
+!!!conversation!!!Recruteur
 quester: 'Recruteur'
 first: bonjour,occuper
 stop: 'false'
@@ -9,7 +10,7 @@ stop: 'false'
 NPC_options:
   bonjour:
     text: 'Bonjour, vous êtes là pour le recrutement ?'
-    conditions: 'Donner_Lettre'
+    conditions: Donner_Lettre
     events: Del_Journal
     pointers: lettre
   r1:

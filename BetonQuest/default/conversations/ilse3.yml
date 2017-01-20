@@ -1,3 +1,4 @@
+!!!conversation!!!ilse3
 quester: 'Kilian'
 first: unknown,hostile,neutre,amical,honore,exalte,delay_ilse3
 stop: 'false'
@@ -5,26 +6,26 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Vous êtes inconnu dans cette ville. Parlez à l''&2Intendant &a&o!'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   delay_ilse3:
     text: 'Encore toi ? Tu parles beaucoup toi !'
   hostile:
     text: 'Crocodile ! Je n''en peux plus des Aventuriers qui squatent la ville !'
-    conditions: '!neutre,!delay_ilse3'
+    conditions: !neutre,!delay_ilse3
     pointers: ville,mechant
   neutre:
     text: 'Je ne comprends pas pourquoi tout le monde s''inquiète autant à propos des Forces du Mal !'
-    conditions: 'neutre,!amical,!delay_ilse3'
+    conditions: neutre,!amical,!delay_ilse3
   amical:
     text: 'On m''a dit qu''il allait faire beau cette semaine ! Temps parfait pour prendre la mer !'
-    conditions: 'amical,!honore,!delay_ilse3'
+    conditions: amical,!honore,!delay_ilse3
   honore:
     text: 'J''aimerais beaucoup partir lors d''une de vos aventures avec vous &2%player% &a&o!'
-    conditions: 'honore,!exalte,!delay_ilse3'
+    conditions: honore,!exalte,!delay_ilse3
     pointers: ravi,non
   exalte:
     text: 'Je suis vraiment content d''être en votre présence &2%player% &a&o!'
-    conditions: 'exalte,!delay_ilse3'
+    conditions: exalte,!delay_ilse3
 #Options du joueur
 player_options:
   ville:

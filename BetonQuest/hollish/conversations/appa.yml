@@ -1,3 +1,4 @@
+!!!conversation!!!appa
 quester: 'Moine'
 first: bonjour
 stop: 'false'
@@ -19,9 +20,9 @@ player_options:
     pointers: qui_rep
   temple:
     text: 'Je voudrais retourner au Temple de l''Air !'
-    conditions: 'tag_aang'
+    conditions: tag_aang
     pointers: temple_rep
   athelas:
     text: 'Je voudrais retourner à Athelas !'
-    conditions: 'tag_aang'
+    conditions: tag_aang
     pointers: athelas_rep

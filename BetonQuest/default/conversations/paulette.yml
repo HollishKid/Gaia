@@ -1,3 +1,4 @@
+!!!conversation!!!paulette
 quester: 'Paulette'
 first: unknown,normal,occupe1,occupe2,occupe3,occupe_inprogress1,occupe_inprogress2,occupe_inprogress3
 stop: 'false'
@@ -7,10 +8,10 @@ stop: 'false'
 NPC_options:
   unknown:
     text: 'Je ne vous ai jamais vu. Parlez à l''&2Intendant &a&o!'
-    conditions: '!intendant_done'
+    conditions: !intendant_done
   normal:
     text: 'Salutation! Bienvenue dans mon humble auberge !'
-    conditions: 'timer_paulette'
+    conditions: timer_paulette
     pointers: boire,chambre,bonjour,francis_carrot
   chambre_rep:
     text: 'Ah! Je suis navré de l''entendre, toutes mes chambres sont prises...'
@@ -20,20 +21,20 @@ NPC_options:
 #
   occupe_inprogress1:
     text: 'J''espère que vous n''avez pas oublié de porter mon gâteau à mon fils ?!'
-    conditions: '!timer_paulette,tag_fils_paulette'
+    conditions: !timer_paulette,tag_fils_paulette
     pointers: francis_carrot
   occupe_inprogress2:
     text: 'J''espère que vous n''avez pas oublié mes oeufs ?!'
-    conditions: '!timer_paulette,paulette_oeuf'
+    conditions: !timer_paulette,paulette_oeuf
     pointers: aide2_bis,francis_carrot
   occupe_inprogress3:
     text: 'J''espère que vous n''avez pas oublié Madame ?!'
-    conditions: '!timer_paulette,madame'
+    conditions: !timer_paulette,madame
     pointers: francis_carrot
 #
   occupe1:
     text: 'Je n''ai pas le temps, je dois partir bientôt faire une livraison...'
-    conditions: 'paulette1,!timer_paulette,!tag_fils_paulette,intendant_done'
+    conditions: paulette1,!timer_paulette,!tag_fils_paulette,intendant_done
     events: paulette_cleaner
     pointers: aide1,non,francis_carrot
   livraison_rep:
@@ -41,7 +42,7 @@ NPC_options:
     events: paulette_occupe1
   occupe2:
     text: 'Je suis trop occupée, j''ai besoin d''oeufs pour faire ma pâte !'
-    conditions: 'paulette2,!timer_paulette,!paulette_oeuf,intendant_done'
+    conditions: paulette2,!timer_paulette,!paulette_oeuf,intendant_done
     events: paulette_cleaner
     pointers: aide2,aide2_bis,non,francis_carrot
   ressources_rep:
@@ -52,7 +53,7 @@ NPC_options:
     events: paulette_ressources_done
   occupe3:
     text: 'J''ai une cliente qui attends son repas dans sa chambre, je ne peux pas vous parler.'
-    conditions: 'paulette3,!timer_paulette,!madame,intendant_done'
+    conditions: paulette3,!timer_paulette,!madame,intendant_done
     events: paulette_cleaner
     pointers: aide3,non,francis_carrot
   madame_rep:
@@ -88,7 +89,7 @@ player_options:
     pointers: ressources_rep
   aide2_bis:
     text: 'J''ai les oeufs qu''il vous faut !'
-    conditions: 'paulette_oeuf,paulette_oeuf_have'
+    conditions: paulette_oeuf,paulette_oeuf_have
     pointers: aide2_bis_rep
   aide3:
     text: 'Je peux m''en occuper si vous voulez !'
@@ -97,6 +98,6 @@ player_options:
     text: 'Je reviendrais plus tard.'
   francis_carrot:
     text: 'J''ai les 10 carrottes que Francis vous fait parvenir !'
-    conditions: 'francis_carrot_have,tag_francis_carot'
+    conditions: francis_carrot_have,tag_francis_carot
     events: francis_livraison_done
     pointers: merci_carrot

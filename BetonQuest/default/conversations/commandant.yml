@@ -1,3 +1,4 @@
+!!!conversation!!!commandant
 quester: 'Commandant'
 first: inconnu,connu
 stop: 'false'
@@ -10,7 +11,7 @@ NPC_options:
 #Joueurs sans la quête Transport auprès de l'Intendant
   inconnu:
     text: 'Oyé jeune voyageur!'
-    conditions: '!autorisation_bateau'
+    conditions: !autorisation_bateau
     pointers: qui,inconnu_keske
   inconnu_rep:
     text: 'Ce serait avec plaisir, mais il faut l''autorisation de l''Intendant. Vous devez être citoyen d''Athelas puis demander un laissez-passer à l''Intendant !'
@@ -18,7 +19,7 @@ NPC_options:
     text: 'Je suis Commandant dans la flotte Royale d''Athelas, en charge des Transports.'
   connu:
     text: 'Oyé jeune matelot!'
-    conditions: 'autorisation_bateau'
+    conditions: autorisation_bateau
     pointers: qui,voyager
   voyage_rep:
     text: 'Très bien! Où allez vous cette fois?'

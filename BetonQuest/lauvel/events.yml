@@ -1,14 +1,15 @@
+!!!events!!!
 #
 # Quêtes Secondaires
 #
 #Sir_James
 Sir_tresor: tag add Sir_tresor
-Sir_Journal: journal add sir_James_Journal
+Sir_Journal: journal add Sir_James_Journal
 Sir_tresor_objt: objective start Sir_tresor_objt
 #
 Tresor_Trouve_tous: folder Tresor_mess,Tresor_Journal1,Tresor_Journal2,Tresor_Tag delay:4
 Tresor_mess: 'message &dAprès avoir remarqué une croix sous la queue, vous cresez est trouvé un coffre au trésor.'
-Tresor_Journal1: journal del sir_James_Journal
+Tresor_Journal1: journal del Sir_James_Journal
 Tresor_Journal2: journal add Coffre_Tresor_Journal
 Tresor_Tag: tag add Tresor_trouve
 #

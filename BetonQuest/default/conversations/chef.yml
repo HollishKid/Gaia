@@ -1,3 +1,4 @@
+!!!conversation!!!chef
 quester: 'Chef'
 first: livraison
 stop: 'false'
@@ -20,11 +21,11 @@ NPC_options:
 player_options:
   bonjour:
     text: 'Paul m''envoie pour vous livrer le pain!'
-    conditions: 'pain_paul,tag_pain_paul'
+    conditions: pain_paul,tag_pain_paul
     pointers: oui
   bonjour_francis:
     text: 'Francis m''envoie pour vous livrer les betteraves!'
-    conditions: 'betteraves_urgent,betteraves_have'
+    conditions: betteraves_urgent,betteraves_have
     pointers: merci
   rien:
     text: 'Rien, j''allais justement partir!'

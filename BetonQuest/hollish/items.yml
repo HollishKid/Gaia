@@ -1,3 +1,4 @@
+!!!items!!!
 pack_varko: CHEST data:0 name:'§2Paquet_de_§dVarko' lore:';§8§oA_livrer_au;§8§oSanctuaire;§2Objet_de_Quête'
 orno_book: WRITTEN_BOOK data:0 lore:'Un_vieux_manuel_du_Savoir_de_la_Magie;§2Objet_de_Quête'
 orno_book_beta: WRITTEN_BOOK data:0 lore:'Manuscrit_d''un_Mage;§2Objet_de_Quête'

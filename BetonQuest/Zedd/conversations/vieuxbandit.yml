@@ -1,3 +1,4 @@
+!!!conversation!!!vieuxbandit
 quester: 'Vieux Bandit'
 first: n1,n2,n3,n4
 stop: 'false'
@@ -9,19 +10,19 @@ stop: 'false'
 NPC_options:
   n1:
     text: 'Bel endroit pour pêcher n''est-ce pas ?'
-    conditions: '!or_q1start,!or_etape2,!or_etape3'
+    conditions: !or_q1start,!or_etape2,!or_etape3
     pointers: p1,p2
   n2:
     text: 'Alors, ça mord ?'
-    conditions: 'or_q1start'
+    conditions: or_q1start
     pointers: or_q1check,nop2
   n3:
     text: 'Alors &2%player%&a&o, que voulais-tu me demander ?'
-    conditions: 'or_etape2'
+    conditions: or_etape2
     pointers: or_etape2,refusal
   n4:
     text: 'Encore toi ? Fiches le camp veux-tu ?!'
-    conditions: 'or_etape3'
+    conditions: or_etape3
     pointers: new_key,rien
   rep1:
     text: 'Un simple veillard qui aime les joies simples de la nature... Ce n''est pas crédible ?'
@@ -68,7 +69,7 @@ player_options:
     text: 'C''est bien vrai.'
   p2:
     text: 'Qui êtes-vous en réalité ?'
-    conditions: 'ynv_q2start'
+    conditions: ynv_q2start
     pointers: rep1
   sisi:
     text: 'Si bien sur !'
@@ -84,7 +85,7 @@ player_options:
     pointers: nopq1
   or_q1check:
     text: 'Voici vos Poissons grillés.'
-    conditions: 'or_fish'
+    conditions: or_fish
     pointers: or_reward1
   nop2:
     text: 'Pas vraiment ...'
@@ -113,7 +114,7 @@ player_options:
     text: 'Je ne me rappelle plus.'
   new_key:
     text: 'J''ai perdu la clé de la cache, il m''en faut une autre !'
-    conditions: '!ynv_q3done'
+    conditions: !ynv_q3done
     pointers: sur
   ouida:
     text: 'Je paierai.'

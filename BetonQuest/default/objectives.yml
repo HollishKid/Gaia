@@ -1,3 +1,4 @@
+!!!objectives!!!
 #
 # Objectifs Permanents
 #
@@ -9,6 +10,7 @@ obj_salaire_timer: delay 60 events:salaire interval:1200
 #
 #Deprecated so far
 #taxes_permanent: delay 10080 events:taxation,taxes_permanent
+#
 banking: variable
 #
 banking_compte_on1: delay 0 conditions:compte_tempo_defined events:banking_compte_tempo_done interval:27
@@ -18,7 +20,6 @@ banking_compte_delay: delay 7 events:banking_compte_delay_over interval:1200
 banking_poche_on1: delay 0 conditions:poche_tempo_defined events:banking_poche_tempo_done interval:27
 banking_poche_on2: delay 0 conditions:poche_tempo_wrong events:banking_tempo_wrong interval:52
 banking_poche_delay: delay 7 events:banking_poche_delay_over interval:1200
-
 #
 # Praying
 #
@@ -26,7 +27,6 @@ spiritualium1: location -6630;110;3000;Gaia;50 conditions:sneaking,in_spirituali
 spiritualium2: location -6824;70;2635;Gaia;50 conditions:sneaking,in_spiritualium events:pray
 spiritualium3: location -7100;70;2300;Gaia;200 conditions:sneaking,in_spiritualium events:pray
 pray_timer: delay 30 events:pray_over interval:1200
-
 #
 vulgarite_timer: delay 3 events:vulgarite_time_up
 vulgarite_immediat: delay 0 conditions:vulgarite3 events:hollish.prison_god_testerfer

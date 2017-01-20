@@ -1,3 +1,4 @@
+!!!conversation!!!gardien
 quester: 'Gardien'
 first: hello
 stop: 'false'
@@ -17,11 +18,11 @@ NPC_options:
     pointers: oui,non
   oui_rep1:
     text: 'Bonne mine à vous !'
-    conditions: 'money_100'
+    conditions: money_100
     events: mine_acces_folder
   oui_rep2:
     text: 'Il semblerait que vous n''ayez pas assez d''argent !'
-    conditions: '!money_100'
+    conditions: !money_100
   non_rep:
     text: 'Ah, tant pis pour vous. Les accès privilégiés se gagnent vous savez !'
 #############
@@ -35,7 +36,7 @@ player_options:
     pointers: qui_rep
   miner:
     text: 'Je souhaiterais miner dans la mine.'
-    conditions: '!autorisation_mineur'
+    conditions: !autorisation_mineur
     pointers: miner_rep
   oui:
     text: 'Oui! Voici &d¤100'

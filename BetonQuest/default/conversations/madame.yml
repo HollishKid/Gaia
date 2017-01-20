@@ -1,3 +1,4 @@
+!!!conversation!!!madame
 quester: 'Madame'
 first: the_first,second
 stop: 'false'
@@ -7,11 +8,11 @@ stop: 'false'
 NPC_options:
   the_first:
     text: 'Bonjour...'
-    conditions: '!madame_betteraves'
+    conditions: !madame_betteraves
     pointers: paulette,bonjour
   second:
     text: 'Re-bonjour ...'
-    conditions: 'madame_betteraves'
+    conditions: madame_betteraves
     pointers: quoi,betteraves
   paulette_rep:
     text: 'Ah! Je meurs de faim, nourrissez moi ! Amenez moi une &dsoupe de betteraves &a&o!'
@@ -28,13 +29,13 @@ player_options:
     text: 'Bonjour à vous ! Et ... aurevoir !'
   paulette:
     text: 'Paulette m''envoie pour savoir ce que vous souhaiteriez manger...'
-    conditions: 'madame'
+    conditions: madame
     pointers: paulette_rep
   quoi:
     text: 'C''est quoi exactement que désiriez ?'
     pointers: quoi_rep
   betteraves:
     text: 'Voici une soupe de betteraves pour Madame !'
-    conditions: 'madame_betteraves_have'
+    conditions: madame_betteraves_have
     events: betteraves_done
     pointers: merci
