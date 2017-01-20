@@ -1,4 +1,4 @@
-quester: Aldwin
+quester: 'Aldwin'
 first: n1
 stop: 'false'
 ##########################
@@ -9,8 +9,8 @@ stop: 'false'
 NPC_options:
 #
   n1:
-    text: Voulez vous sortir du donjon?
-    pointer: oui,non
+    text: 'Voulez vous sortir du donjon?'
+    pointers: oui,non
 #
 ##########################
 #                        #
@@ -20,8 +20,8 @@ NPC_options:
 player_options:
 #
   oui:
-    text: Oui.
-    event: hol_out
+    text: 'Oui.'
+    events: hol_out
   non:
-    text: Non.
-    
+    text: 'Non.'
+

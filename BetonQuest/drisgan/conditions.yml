@@ -2,7 +2,7 @@
 # Ne pas laisser de lignes blaches dans les fichiers
 quest_drisgan: tag Crox.ikonq1_start
 obrien: tag obrien
-height: height 72
+the_height: height 72
 succes: tag succes
 echec: tag echec
 echec2: tag echec2
@@ -162,7 +162,7 @@ hol_c18: party 1000 hol_r18 count:1
 #
 #
 hol_checkall: or hol_c1,hol_c2,hol_c3,hol_c4,hol_c5,hol_c6,hol_c7,hol_c8,hol_c9,hol_c10,hol_c11,hol_c12,hol_c13,hol_c14,hol_c15,hol_c16,hol_c17,hol_c18
-hol_checkin: or hol_r1,hol_r2,hol_r3,hol_r4,hol_r5,hol_r6,hol_r7,hol_r8,hol_r9,hol_r10,hol_r11,hol_r12,hol_r13,hol_r14,hol_r15,hol_r16,hol_r17,hol_r18 
+hol_checkin: or hol_r1,hol_r2,hol_r3,hol_r4,hol_r5,hol_r6,hol_r7,hol_r8,hol_r9,hol_r10,hol_r11,hol_r12,hol_r13,hol_r14,hol_r15,hol_r16,hol_r17,hol_r18
 #
 #
 hol_shrekdead: tag hol_shrekdead
@@ -174,7 +174,7 @@ hol_residuscheck: item residus_de_poudre:5
 hol_residuscheck1: item residus_de_poudre:1
 hol_tnt_inhand: hand erek_tnt
 hol_redblock: and hol_redblock1,hol_insalleb3
-hol_redblock1: testforblock -7435;51;3274;Gaia redstone_block
+hol_redblock1: testforblock -7435;51;3274;Gaia REDSTONE_BLOCK
 hol_insalleb3: region hol_salleb3
 #
 #

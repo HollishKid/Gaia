@@ -1,4 +1,4 @@
-quester: Garde Royal
+quester: 'Garde Royal'
 first: livraison
 stop: 'false'
 ################
@@ -6,16 +6,16 @@ stop: 'false'
 ################
 NPC_options:
   livraison:
-    text: ...
-    pointer: bonjour
+    text: '...'
+    pointers: bonjour
   oui:
-    text: Elle m'envoie à manger c'est ça ? Merci pour le voyage !
-    event: livraison_paulette_done
+    text: 'Elle m''envoie à manger c''est ça ? Merci pour le voyage !'
+    events: livraison_paulette_done
 ###################
 #Options du joueur#
 ###################
 player_options:
   bonjour:
-    text: Vous êtes le fils de Paulette ? J'ai quelque chose  pour vous !
-    condition: gateau_paulette,tag_fils_paulette
-    pointer: oui
+    text: 'Vous êtes le fils de Paulette ? J''ai quelque chose  pour vous !'
+    conditions: 'gateau_paulette,tag_fils_paulette'
+    pointers: oui

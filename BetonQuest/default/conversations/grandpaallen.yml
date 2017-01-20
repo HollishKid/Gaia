@@ -1,80 +1,50 @@
 quester: 'Papy Allen'
-first: '0,1,2'
-final_events: ''
+first: n0,n1,n2
 stop: 'false'
 NPC_options:
 #Prise de décision du gd pa
-  '0':
-    text: Je vois que vous n'êtes pas d'ici. Parlez à l'&2Intendant &a&o!
+  n0:
+    text: 'Je vois que vous n''êtes pas d''ici. Parlez à l''&2Intendant &a&o!'
     conditions: '!intendant_done'
-  '1':
+  n1:
     text: 'Namaste jeune aventurier ! Tu semble débrouillard dans ton genre... J''aurai éventuellement un service à te demander... Mais répondrais-tu à une question simple avant cela ?'
     conditions: '!gdpa_done,intendant_done'
-    events: ''
-    pointer: 'point1,point2'
-  '2':
+    pointers: point1,point2
+  n2:
     text: 'Alors comment se déroule tes voyages ? As-tu réussis à trouver la Guilde des Aventuriers ?'
     conditions: 'gdpa_done'
-    events: ''
-    pointer: 'oui,non'
-  'rep_oui':
+    pointers: oui,non
+  rep_oui:
     text: 'Sans bouche ni dent, je dévore les montagnes et réduis la roche en poussière... Que suis-je ?'
-    conditions: ''
-    events: ''
-    pointer: 'rep1,rep2'
-  'rep_non':
+    pointers: rep1,rep2
+  rep_non:
     text: 'Cordialement.'
-    conditions: ''
-    events: ''
-    pointer: ''
-  'bonne_rep':
+  bonne_rep:
     text: 'Bien joué ! Tu as l''esprit vif il semblerait, cela te seras utile. Pars à la recherche de la Guilde des Aventuriers, du coté ouest de la baie d''Athelas.'
-    conditions: ''
-    events: 'gdpa_done'
-    pointer: ''
-  'mauvaise_rep':
+    events: gdpa_done
+  mauvaise_rep:
     text: 'Dommage, mauvaise réponse ! Mais je sens de la bonne volonté en toi, pars à la recherche de la Guilde des Aventuriers, du coté ouest de la baie. Une fois sur place va te présenter au barman si tu cherche du travail.'
-    conditions: ''
-    events: 'gdpa_done'
-    pointer: ''
-  'ravi':
+    events: gdpa_done
+  ravi:
     text: 'Tu m''en vois ravi pour toi !'
-    conditions: ''
-    events: ''
-    pointer: ''
-  'paravi':
+  paravi:
     text: 'Ah ? As tu bien cherché au sud du château ? La Guilde est ce bâtiment encastré dans la colline de l''autre coté de la ville.'
-    conditions: ''
-    events: ''
-    pointer: ''
 player_options:
-  'point1':
+  point1:
     text: 'Posez votre question.'
-    conditions: ''
-    events: ''
-    pointer: 'rep_oui'
-  'point2':
+    pointers: rep_oui
+  point2:
     text: 'Je préfère passer mon chemin.'
-    conditions: ''
-    events: ''
-    pointer: 'rep_non'
-  'rep1':
+    pointers: rep_non
+  rep1:
     text: 'Le vent !'
-    conditions: ''
-    events: ''
-    pointer: 'bonne_rep'
-  'rep2':
+    pointers: bonne_rep
+  rep2:
     text: 'Le temps !'
-    conditions: ''
-    events: ''
-    pointer: 'mauvaise_rep'
-  'oui':
+    pointers: mauvaise_rep
+  oui:
     text: 'Oui.'
-    conditions: ''
-    events: ''
-    pointer: 'ravi'
-  'non':
+    pointers: ravi
+  non:
     text: 'Non.'
-    conditions: ''
-    events: ''
-    pointer: 'paravi'
+    pointers: paravi

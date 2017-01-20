@@ -1,25 +1,25 @@
-quester: Erme
+quester: 'Erme'
 first: premier
 stop: 'false'
 #Options du NPC
 NPC_options:
   premier:
-    text: Bonjour à vous !
-    pointer: intendant,spawn,quoi
+    text: 'Bonjour à vous !'
+    pointers: intendant,spawn,quoi
   intendant_rep:
-    text: Consultes ton &2Journal de Progression &a&oou &2http://gaia-minecraft.enjin.com/gallery &a&o.
+    text: 'Consultes ton &2Journal de Progression &a&oou &2http://gaia-minecraft.enjin.com/gallery &a&o.'
   spawn_rep:
-    text: Utilises &2/spawn &a&opour y aller.
+    text: 'Utilises &2/spawn &a&opour y aller.'
   quoi_rep:
-    text: Consultes ton &2Journal de Progression &a&o! Tu peux aussi demander de l'aide à &dSofia &a&o!
+    text: 'Consultes ton &2Journal de Progression &a&o! Tu peux aussi demander de l''aide à &dSofia &a&o!'
 #Options du joueur
 player_options:
   intendant:
-    text: Je suis à la recherche de l'Intendant.
-    pointer: intendant_rep
+    text: 'Je suis à la recherche de l''Intendant.'
+    pointers: intendant_rep
   spawn:
-    text: Je cherche le Spawn.
-    pointer: spawn_rep
+    text: 'Je cherche le Spawn.'
+    pointers: spawn_rep
   quoi:
-    text: Je ne sais pas quoi faire...
-    pointer: quoi_rep
+    text: 'Je ne sais pas quoi faire...'
+    pointers: quoi_rep

@@ -1,4 +1,4 @@
-quester: Curuvar
+quester: 'Curuvar'
 first: unknown,welcome,member
 stop: 'false'
 #                   #
@@ -8,29 +8,29 @@ stop: 'false'
 #                   #
 NPC_options:
   unknown:
-    text: Qui pourriez vous bien être ?! Allez voir l'&2Intendant &a&o!
+    text: 'Qui pourriez vous bien être ?! Allez voir l''&2Intendant &a&o!'
     conditions: '!gestionnaire'
   welcome:
-    text: Salut jeune inconnu ! Quel destin t'amène ici, en ce jour ?
+    text: 'Salut jeune inconnu ! Quel destin t''amène ici, en ce jour ?'
     conditions: 'gestionnaire,!alchimiste'
-    pointer: presentation,become_member,rien
+    pointers: presentation,become_member,rien
   pres_ok:
-    text: Parfaitement, je serais ... \ncurieux ... \nde recroiser ton chemin en ce monde.... !
+    text: 'Parfaitement, je serais ... \ncurieux ... \nde recroiser ton chemin en ce monde.... !'
     events: found_guild1,guild_tester
   member_ok:
-    text: Parfaitement parfait !! Cette Guilde se concentre sur l'Art de l'Alchimie!  \nLe Menu de la Guilde te permet de choisir ce métier parmis d'autres avantages !
-    event: alchimiste
-    pointer: menu,merci
+    text: 'Parfaitement parfait !! Cette Guilde se concentre sur l''Art de l''Alchimie!  \nLe Menu de la Guilde te permet de choisir ce métier parmis d''autres avantages !'
+    events: alchimiste
+    pointers: menu,merci
 #
 #
 # Add any guild-specific quests in pointers of "member"
   member:
-    text: Bienvenue dans votre guilde, &2%player% &a&o!
-    conditions: alchimiste
-    pointer: menu,merci
+    text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
+    conditions: 'alchimiste'
+    pointers: menu,merci
   alchimiste_menu:
-    text: Le voilà !
-    event: alchimiste_menu
+    text: 'Le voilà !'
+    events: alchimiste_menu
 #                   #
 #                   #
 # Options du Joueur #
@@ -38,17 +38,17 @@ NPC_options:
 #                   #
 player_options:
   presentation:
-    text: Je viens me présenter de la part de l'Intendant !
+    text: 'Je viens me présenter de la part de l''Intendant !'
     conditions: 'guilde_alchimistes'
-    pointer: pres_ok
+    pointers: pres_ok
   become_member:
-    text: Je veux devenir membre de la Guilde des Alchimistes !
-    condition: '!alchimiste,intendant_done'
-    pointer: member_ok
+    text: 'Je veux devenir membre de la Guilde des Alchimistes !'
+    conditions: '!alchimiste,intendant_done'
+    pointers: member_ok
   menu:
-    text: Je voudrais accéder au Menu de la Guilde.
-    pointer: alchimiste_menu
+    text: 'Je voudrais accéder au Menu de la Guilde.'
+    pointers: alchimiste_menu
   rien:
-    text: Je ne saurais dire...
+    text: 'Je ne saurais dire...'
   merci:
-    text: Merci ! Au revoir !
+    text: 'Merci ! Au revoir !'

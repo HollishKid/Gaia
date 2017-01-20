@@ -1,23 +1,23 @@
-quester: Pattefol
+quester: 'Pattefol'
 first: back
 stop: 'false'
 NPC_options:
   back:
-    text: Bonjour à vous &2%player% &a&o!
-    pointer: qui,contre,athelas
+    text: 'Bonjour à vous &2%player% &a&o!'
+    pointers: qui,contre,athelas
   qui_rep:
-    text: Je m'appelle &2Pattefol&a&o, l'&2Amiral &a&om'a ammené sur cette expédition pour gérer le stock d'armes à bord du navire.
+    text: 'Je m''appelle &2Pattefol&a&o, l''&2Amiral &a&om''a ammené sur cette expédition pour gérer le stock d''armes à bord du navire.'
   contre_rep:
-    text: Vous n'avez jamais encore entendu parler des Forces Maléfiques qui ont une partie de ce monde ? La nuit et lorsque vous vous aventurez hors des murs d'une ville, vous les rencontrerez à coup sûr !
+    text: 'Vous n''avez jamais encore entendu parler des Forces Maléfiques qui ont une partie de ce monde ? La nuit et lorsque vous vous aventurez hors des murs d''une ville, vous les rencontrerez à coup sûr !'
   athelas_rep:
     text: '&dAthelas &a&o est la première ville fondée par le Roi &6Ubu&a&o, depuis c''est devenu une des places fortes contre les Forces Maléfiques. Vous y trouverez l''Armée Royale à l''extrême Sud-Est de la Ville !'
 player_options:
   qui:
-    text: Qui êtes vous ?
-    pointer: qui_rep
+    text: 'Qui êtes vous ?'
+    pointers: qui_rep
   contre:
-    text: Savez vous contre quoi le roi se bat ?
-    pointer: contre_rep
+    text: 'Savez vous contre quoi le roi se bat ?'
+    pointers: contre_rep
   athelas:
-    text: On m'a dit qu'on allait à Athelas; c'est quoi cette ville ?
-    pointer: athelas_rep
+    text: 'On m''a dit qu''on allait à Athelas; c''est quoi cette ville ?'
+    pointers: athelas_rep

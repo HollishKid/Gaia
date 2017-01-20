@@ -1,4 +1,4 @@
-quester: Stacy
+quester: 'Stacy'
 first: n1,n2
 stop: 'false'
 ##########################
@@ -8,11 +8,11 @@ stop: 'false'
 ##########################
 NPC_options:
   n1:
-    text: Le maitre va vous recevoir.
-    conditions: makarov_access
-    event: stacy_open
+    text: 'Le maitre va vous recevoir.'
+    conditions: 'makarov_access'
+    events: stacy_open
   n2:
-    text: Le maitre est occupé. Revenez plus tard.
+    text: 'Le maitre est occupé. Revenez plus tard.'
     conditions: '!makarov_access'
 #
 ##########################

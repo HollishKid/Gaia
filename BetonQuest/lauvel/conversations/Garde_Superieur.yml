@@ -1,4 +1,4 @@
-quester: Garde Supérieur
+quester: 'Garde Supérieur'
 first: sauveur,alors,bonjour
 stop: 'false'
 ###########
@@ -10,28 +10,28 @@ NPC_options:
   sauveur:
     text: 'Salut &2%player% &a&o, l''aventurier. Tu est un de ceux qui doivent secourir &dHistoria.'
     conditions: 'int_hist,!Hist_Tag'
-    pointer: non,oui
+    pointers: non,oui
   oui2:
     text: 'Toute à fais ! Je suis la pour surveillée toute allée et venue d''&dHistoria.'
-    pointer: quel
+    pointers: quel
   non2:
-    text: Alors, je suis désolé pour toi mais par ordre du Roi toute personne non autorisé est interdit d'entré !
+    text: 'Alors, je suis désolé pour toi mais par ordre du Roi toute personne non autorisé est interdit d''entré !'
   mission:
-    text: Votre mission sera de vous infiltré en tant que garde royal pour recherhcer des informations sur ce que le Roi manigance et de le détrôner !
-    pointer: manigance, infiltrer
+    text: 'Votre mission sera de vous infiltré en tant que garde royal pour recherhcer des informations sur ce que le Roi manigance et de le détrôner !'
+    pointers: manigance,infiltrer
   rumeur:
-    text: D'après les rumeurs, le Roi aurais quelque choses à avoir avec les plusieur disparition de voyageur d'&dAthélas.\n&a&oMais le fais aussi que le roi cherche beaucoup de garde cache quelque chose !
-    pointer: infiltrer
+    text: 'D''après les rumeurs, le Roi aurais quelque choses à avoir avec les plusieur disparition de voyageur d''&dAthélas.\n&a&oMais le fais aussi que le roi cherche beaucoup de garde cache quelque chose !'
+    pointers: infiltrer
   recrue:
-    text: Ta réputation est trahisseur mais on ne connais pas ton visage, alors je tes inscrit comme recrue sous un faux nom. \nPrend ça, avec, tu pourras facilement être recruté.
-    events: 'donner_lettre,Lettre_Journal,Hist_Tag,Entre_Chateau'
-    pointer: accord
+    text: 'Ta réputation est trahisseur mais on ne connais pas ton visage, alors je tes inscrit comme recrue sous un faux nom. \nPrend ça, avec, tu pourras facilement être recruté.'
+    events: donner_lettre,Lettre_Journal,Hist_Tag,Entre_Chateau
+    pointers: accord
   alors:
-    text: Alors, comment avance votre mission ?! 
+    text: 'Alors, comment avance votre mission ?!'
     conditions: 'Hist_Tag'
   bonjour:
-    text: Bonjour &2%player% &a&o, on s'ennuie ? 
-    events: 'defaut_tous,Tresor_Journal1,Tag_del1'
+    text: 'Bonjour &2%player% &a&o, on s''ennuie ?'
+    events: defaut_tous,Tresor_Journal1,Tag_del1
 #############
 #           #
 #   Joueur  #
@@ -39,19 +39,19 @@ NPC_options:
 #############
 player_options:
   oui:
-    text: Oui, vous devais être le garde supérieur.
-    pointer: oui2
+    text: 'Oui, vous devais être le garde supérieur.'
+    pointers: oui2
   non:
-    text: Non, je visite seulement.
-    pointer: non2
+    text: 'Non, je visite seulement.'
+    pointers: non2
   quel:
-    text: Je vois. Quel est ma mission ?
-    pointer: mission 
+    text: 'Je vois. Quel est ma mission ?'
+    pointers: mission
   manigance:
-    text: Manigance ? 
-    pointer: rumeur
+    text: 'Manigance ?'
+    pointers: rumeur
   infiltrer:
-    text: M'infiltrer !!! mais comment ?
-    pointer: recrue
+    text: 'M''infiltrer !!! mais comment ?'
+    pointers: recrue
   accord:
-    text: Je comprend, je ferais ce qu'il faut, à bientôt !
+    text: 'Je comprend, je ferais ce qu''il faut, à bientôt !'
