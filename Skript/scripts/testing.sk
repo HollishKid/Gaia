@@ -1,3 +1,7 @@
+#
+#Ne fonctionne qu'avec des items de base, pas de custom recipies
+#on craft:
+#	message "Warm for your feet!"
 command /teamtesting:
 	trigger:
 		set {redteam.%player%} to 1
@@ -18,6 +22,18 @@ on damage:
 #make the player shoot a creeper at speed 10
 #shoot a pig from the creeper
 
+#DETECTS BUT WEIRDLY
+#on vehicle collide with entity:
+#    if event-entity is a player:
+#        message "Collision !" to player
+#        make player damage event-entity by 2
+#    if event-entity is a pig:
+#        broadcast "Hit !"
+
+command /mcmmotester:
+	trigger:
+		message "Fishing %fishing level of player%"
+
 command /timetester:
 	trigger:
 		set {last.login.%player%} to now
@@ -26,7 +42,8 @@ command /timetester:
 command /timetester2:
 	trigger:
 		send email with subject "Ceci est un message ! Malheureusement je ne sais pas encore faire des lignes séparés. On va se contenter d'un truc de merde." with message "Mail Test" to "hollishkid@gmail.com"
-
+#on join:
+#	send resourcepack "[url]" to player
 #		
 #						#
 #						#
