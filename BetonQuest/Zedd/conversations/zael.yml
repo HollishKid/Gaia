@@ -1,4 +1,4 @@
-quester: Zael
+quester: 'Zael'
 first: n1,n2,n3,n4,n5,n6,n7,n8,n9
 stop: 'false'
 ##########################
@@ -9,93 +9,93 @@ stop: 'false'
 NPC_options:
 #
   n1:
-    text: Bonjour aventurier &2%player%&a&o.
+    text: 'Bonjour aventurier &2%player%&a&o.'
     conditions: '!zae_inconvers,!zae_q1done'
-    pointer: bjr,taf,check1
+    pointers: bjr,taf,check1
   pitch:
-    text: La maitre m'a demandé de m'occuper de certaines perturbations arcanique dans la région. Tu pourrais effectivement m'aider sur le sujet. Cela t'intéresse ?
-    pointer: oui,non
+    text: 'La maitre m''a demandé de m''occuper de certaines perturbations arcanique dans la région. Tu pourrais effectivement m''aider sur le sujet. Cela t''intéresse ?'
+    pointers: oui,non
   toobad:
-    text: Eh bien va chercher du travail ailleurs dans ce cas !
+    text: 'Eh bien va chercher du travail ailleurs dans ce cas !'
   zae_q1start:
-    text: Bien. Tu vas prendre cet &2Hypercapaciteur bidulotron&a&o, il te permettra de mesurer les composantes arcaniques aux endroits sensibles.
-    event: zae_q1startfold,zae_givehyper,zae_inconvers
+    text: 'Bien. Tu vas prendre cet &2Hypercapaciteur bidulotron&a&o, il te permettra de mesurer les composantes arcaniques aux endroits sensibles.'
+    events: zae_q1startfold,zae_givehyper,zae_inconvers
   hypercap_regive:
-    text: Ne le perd pas cette fois, ces appareils ne sont pas donnés !
-    event: zae_takehyper,zae_q1retry
+    text: 'Ne le perd pas cette fois, ces appareils ne sont pas donnés !'
+    events: zae_takehyper,zae_q1retry
   zae_q1reward:
-    text: Bien, voyons voir ce que ça donne...
-    conditions: hypercap_inbag
-    event: zae_q1reward
+    text: 'Bien, voyons voir ce que ça donne...'
+    conditions: 'hypercap_inbag'
+    events: zae_q1reward
   zae_nohypercap:
-    text: Il me faut l'&2Hypercapaciteur&a&o pour en lire les relevés !
+    text: 'Il me faut l''&2Hypercapaciteur&a&o pour en lire les relevés !'
     conditions: '!hypercap_inbag'
 #
 ### 2eme étape
 #
   n2:
-    text: Ah, &2%player%&a&o, je vais encore avoir besoin de tes services. Es-tu disponible ?
+    text: 'Ah, &2%player%&a&o, je vais encore avoir besoin de tes services. Es-tu disponible ?'
     conditions: 'zae_q1done,!zae_inconvers,!zae_q2start,!zae_q2done'
-    pointer: p1,p2
+    pointers: p1,p2
   prise_q2:
-    text: Bien, il semblerait que les rélevés de la &dBibliothèque&a&o et du &dGrand marché&a&o soient normaux. En revanche, celui du &dChateau&a&o présente des anomalies. Il va nous falloir approfondir l'enquête.
-    event: zae_q2startfold,zae_inconvers
+    text: 'Bien, il semblerait que les rélevés de la &dBibliothèque&a&o et du &dGrand marché&a&o soient normaux. En revanche, celui du &dChateau&a&o présente des anomalies. Il va nous falloir approfondir l''enquête.'
+    events: zae_q2startfold,zae_inconvers
   n3:
-    text: Alors tu as trouvé la faille ?
+    text: 'Alors tu as trouvé la faille ?'
     conditions: 'zae_q2start,!zae_inconvers'
-    pointer: check2,hyperreg_lost
+    pointers: check2,hyperreg_lost
   hyperreg_regive:
-    text: Ne le perd pas cette fois, ces appareils ne sont pas donnés !
-    event: zae_takehyperreg,zae_q2retry
+    text: 'Ne le perd pas cette fois, ces appareils ne sont pas donnés !'
+    events: zae_takehyperreg,zae_q2retry
   repq2:
-    text: Bien joué &2%player%&a&o! Je vais regarder les données enregistrées par l'&2Hypercapaciteur&a&o pour savoir à quoi nous avons à faire... 
-    conditions: hyperreg_inbag
-    event: zae_q2reward
+    text: 'Bien joué &2%player%&a&o! Je vais regarder les données enregistrées par l''&2Hypercapaciteur&a&o pour savoir à quoi nous avons à faire...'
+    conditions: 'hyperreg_inbag'
+    events: zae_q2reward
   nohyperreg:
-    text: Il me faut l'&2Hypercapaciteur&a&o pour en lire les relevés !
+    text: 'Il me faut l''&2Hypercapaciteur&a&o pour en lire les relevés !'
     conditions: '!hyperreg_inbag'
 #
 ### 3ème étape
 #
   n4:
-    text: J'ai terminé d'analyser les données que tu m'as rapporté. Il semblerait que la situation soit plus grave que prévu. Es-tu prêt pour la suite ?
+    text: 'J''ai terminé d''analyser les données que tu m''as rapporté. Il semblerait que la situation soit plus grave que prévu. Es-tu prêt pour la suite ?'
     conditions: 'zae_q2done,!zae_inconvers,!zae_q3start,!zae_q3done'
-    pointer: p3,p4
+    pointers: p3,p4
   zae_q3start:
-    text: Bien. Il se trouve qu'en fait cette perturbations arcanique est due à une brèche dans les défenses magiques du chateau.
-    event: zae_q3startfold,zae_inconvers
+    text: 'Bien. Il se trouve qu''en fait cette perturbations arcanique est due à une brèche dans les défenses magiques du chateau.'
+    events: zae_q3startfold,zae_inconvers
   n5:
-    text: As-tu trouvé ce qu'il me manquait ?
+    text: 'As-tu trouvé ce qu''il me manquait ?'
     conditions: 'zae_q3start,!zae_inconvers'
-    pointer: check3
+    pointers: check3
   zae_q3reward:
-    text: Parfait! Laisse moi une minute, que je finalise le mélange...
-    event: zae_q3reward
+    text: 'Parfait! Laisse moi une minute, que je finalise le mélange...'
+    events: zae_q3reward
 #
 ### 4ème étape
 #
   n6:
-    text: Nous sommes enfin prêt à fermer ce portail une fois pour toute ! Peux-tu t'en charger ?
+    text: 'Nous sommes enfin prêt à fermer ce portail une fois pour toute ! Peux-tu t''en charger ?'
     conditions: 'zae_q3done,!zae_q4start,!zae_q4done,!zae_inconvers'
-    pointer: n6oui,p4
+    pointers: n6oui,p4
   zae_q4start:
-    text: Rassures toi, la tâche devrait être simple, il suffit d'utiliser ce &2Brouilleur arcanique&a&o sur le portail ! J'attendrai la nouvelle de ton succès !
-    event: zae_q4startfold
+    text: 'Rassures toi, la tâche devrait être simple, il suffit d''utiliser ce &2Brouilleur arcanique&a&o sur le portail ! J''attendrai la nouvelle de ton succès !'
+    events: zae_q4startfold
   n7:
-    text: Tout s'est bien passé ?
+    text: 'Tout s''est bien passé ?'
     conditions: 'zae_q4start,!zae_inconvers'
-    pointer: check4
+    pointers: check4
   zae_q4reward:
-    text: Tu as atteris devant le village au sud-ouest d'&dAthelas &a&o? C'est &dDrisgan&a&o, un village plus ou moins indépendant... Mais il y a fort à parier que ce portail menait la-bas à l'origine !
-    event: zae_q4reward,zae_inconvers
+    text: 'Tu as atteris devant le village au sud-ouest d''&dAthelas &a&o? C''est &dDrisgan&a&o, un village plus ou moins indépendant... Mais il y a fort à parier que ce portail menait la-bas à l''origine !'
+    events: zae_q4reward,zae_inconvers
 #
 ### End of ZAEL
 #
   n8:
-    text: Bonjour %player%, ravi de voir que tu te portes bien.
+    text: 'Bonjour %player%, ravi de voir que tu te portes bien.'
     conditions: 'random_50,zae_q4done,!zae_inconvers'
   n9:
-    text: Les rumeurs qui impliquent &dDrisgan&a&o dans des affaires louches ne font qu'augmenter. Soit prudent si ton chemin se dirige par là-bas...
+    text: 'Les rumeurs qui impliquent &dDrisgan&a&o dans des affaires louches ne font qu''augmenter. Soit prudent si ton chemin se dirige par là-bas...'
     conditions: 'zae_q4done,!zae_inconvers'
 #
 ##########################
@@ -106,58 +106,58 @@ NPC_options:
 player_options:
 #
   bjr:
-    text: Bonjour.
+    text: 'Bonjour.'
   taf:
-    text: Avez-vous du travail pour moi ?
+    text: 'Avez-vous du travail pour moi ?'
     conditions: '!zae_q1start,!zae_q1done'
-    pointer: pitch
+    pointers: pitch
   oui:
-    text: Oui.
-    pointer: zae_q1start
+    text: 'Oui.'
+    pointers: zae_q1start
   non:
-    text: Non.
-    pointer: toobad
+    text: 'Non.'
+    pointers: toobad
   check1:
-    text: J'ai effectué les relevés.
-    conditions: zae_loc1,zae_loc2,zae_loc3
-    pointer: zae_nohypercap,zae_q1reward
+    text: 'J''ai effectué les relevés.'
+    conditions: 'zae_loc1,zae_loc2,zae_loc3'
+    pointers: zae_nohypercap,zae_q1reward
   hypercap_lost:
-    text: J'ai perdu mon Hypercapaciteur Bidulotron ou il ne marche plus !
+    text: 'J''ai perdu mon Hypercapaciteur Bidulotron ou il ne marche plus !'
     conditions: 'zae_q1start'
 # Commenting this out to patch peoples objectives getting lost (?)
 #    this allows them to manually restart them.
 #    1 item is removed extra in hypercap_regive
 #    conditions: '!hypercap_inbag'
-    pointer: hypercap_regive
+    pointers: hypercap_regive
   p1:
-    text: Pas de problème.
-    pointer: prise_q2
+    text: 'Pas de problème.'
+    pointers: prise_q2
   p2:
-    text: Pas vraiment...
+    text: 'Pas vraiment...'
   check2:
-    text: Je l'ai trouvé !
-    conditions: zae_faille
-    pointer: repq2,nohyperreg
+    text: 'Je l''ai trouvé !'
+    conditions: 'zae_faille'
+    pointers: repq2,nohyperreg
   hyperreg_lost:
-    text: J'ai perdu mon Hypercapaciteur Bidulotron ou il ne marche plus !
+    text: 'J''ai perdu mon Hypercapaciteur Bidulotron ou il ne marche plus !'
 # Commenting this out to patch peoples objectives getting lost (?)
 #    this allows them to manually restart them.
 #    1 item is removed extra in hyperreg_give
 #    conditions: '!hyperreg_inbag'
-    pointer: hyperreg_regive
+    pointers: hyperreg_regive
   p3:
-    text: Oui.
-    pointer: zae_q3start
+    text: 'Oui.'
+    pointers: zae_q3start
   p4:
-    text: Non.
+    text: 'Non.'
   check3:
-    text: Voici vos Gouttes de lave.
-    conditions: zae_lavatear
-    pointer: zae_q3reward
+    text: 'Voici vos Gouttes de lave.'
+    conditions: 'zae_lavatear'
+    pointers: zae_q3reward
   n6oui:
-    text: Oui.
-    pointer: zae_q4start
+    text: 'Oui.'
+    pointers: zae_q4start
   check4:
-    text: Oui, mais la faille m'a téléporté en s'effondrant !
-    conditions: zae_portalclosed
-    pointer: zae_q4reward
+    text: 'Oui, mais la faille m''a téléporté en s''effondrant !'
+    conditions: 'zae_portalclosed'
+    pointers: zae_q4reward

@@ -1,4 +1,4 @@
-quester: Jozef
+quester: 'Jozef'
 first: n1
 stop: 'true'
 ##########################
@@ -10,12 +10,11 @@ stop: 'true'
 #
 # Je me suis permis de "comment out" cette quête, vu qu'elle n'est pas actuellement utilisée
 #  Lutcha étant en développement !
-#   '115': lutcha a été réaffecté.
 #
 #
 NPC_options:
-  n1: 
-    text: grmbl... Où a bien pu passer ce manuscrit ? Il me semblait pourtant être sur une de ces étagères...
+  n1:
+    text: 'grmbl... Où a bien pu passer ce manuscrit ? Il me semblait pourtant être sur une de ces étagères...'
 #    pointer: oui1,non1
 #  next1:
 #    text: Humpf... J'en doute mais après tout, je n'ai plus grand chose à perdre... \nJe suis à la recherche d'un traité de généalogie, intitulé &6Croisements divers et variés&a&o, qui avait été rammené d'une lointaine contrée sudiste par un aventurier comme vous même... \nJe pensais donc qu'il serait entreposé ici mais je me trompais visiblement. Si jamais vous mettiez la main dessus, soyez gentil et rammenez le moi !

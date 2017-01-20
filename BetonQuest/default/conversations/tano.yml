@@ -1,4 +1,4 @@
-quester: Tano
+quester: 'Tano'
 first: unknown,welcome,member
 stop: 'false'
 #                   #
@@ -8,41 +8,41 @@ stop: 'false'
 #                   #
 NPC_options:
   unknown:
-    text: Qui êtes vous ?! Allez voir l'&2Intendant &a&o!
+    text: 'Qui êtes vous ?! Allez voir l''&2Intendant &a&o!'
     conditions: '!gestionnaire'
   welcome:
-    text: Salut jeune pousse ! Que puis-je pour toi ?
+    text: 'Salut jeune pousse ! Que puis-je pour toi ?'
     conditions: 'gestionnaire,!bucheron'
-    pointer: presentation,become_member,foret,rien
+    pointers: presentation,become_member,foret,rien
   pres_ok:
-    text: Ok ! Reviens me voir quand tu seras officiellement reconnu par l'&2Intendant &a&o!
+    text: 'Ok ! Reviens me voir quand tu seras officiellement reconnu par l''&2Intendant &a&o!'
     events: found_guild8,guild_tester
   member_ok:
-    text: Excellent, bienvenue ! Notre Guilde se concentre sur la Coupe de Bois ! \nLe Menu de la Guilde te permet de choisir ce métier parmis d'autres avantages !
-    event: bucheron
-    pointer: menu,merci
+    text: 'Excellent, bienvenue ! Notre Guilde se concentre sur la Coupe de Bois ! \nLe Menu de la Guilde te permet de choisir ce métier parmis d''autres avantages !'
+    events: bucheron
+    pointers: menu,merci
 #
 #
 # Add any guild-specific quests in pointers of "member"
   member:
-    text: Bienvenue dans votre guilde, &2%player% &a&o!
-    conditions: bucheron
-    pointer: menu,foret,merci
+    text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
+    conditions: 'bucheron'
+    pointers: menu,foret,merci
   bucheron_menu:
-    text: Le voilà !
-    event: bucheron_menu
+    text: 'Le voilà !'
+    events: bucheron_menu
 #
 # Forest Acces Handler
-#  
+#
   entry:
-    text: Bien entendu, cela vous coûtera &d¤100 &a&opour un accès de &d10 minutes&a&o.
-    pointer: dac,non
+    text: 'Bien entendu, cela vous coûtera &d¤100 &a&opour un accès de &d10 minutes&a&o.'
+    pointers: dac,non
   entry_exe1:
-    text: Parfait, bonne coupe!
-    conditions: money_100
+    text: 'Parfait, bonne coupe!'
+    conditions: 'money_100'
     events: foret_folder_entry
   entry_exe2:
-    text: Il semblerait que vous n'ayez pas assez d'argent!
+    text: 'Il semblerait que vous n''ayez pas assez d''argent!'
     conditions: '!money_100'
     events: foret_folder_entry
 #                   #
@@ -52,30 +52,31 @@ NPC_options:
 #                   #
 player_options:
   presentation:
-    text: Je viens me présenter de la part de l'Intendant !
+    text: 'Je viens me présenter de la part de l''Intendant !'
     conditions: 'guilde_bucherons'
-    pointer: pres_ok
+    pointers: pres_ok
   become_member:
-    text: Je veux devenir membre de la Guilde des Bûcherons !
-    condition: '!bucheron,intendant_done'
-    pointer: member_ok
+    text: 'Je veux devenir membre de la Guilde des Bûcherons !'
+    conditions: '!bucheron,intendant_done'
+    pointers: member_ok
   menu:
-    text: Je voudrais accéder au Menu de la Guilde.
-    pointer: bucheron_menu
+    text: 'Je voudrais accéder au Menu de la Guilde.'
+    pointers: bucheron_menu
   rien:
-    text: Rien du tout...
+    text: 'Rien du tout...'
   merci:
-    text: Merci ! Au revoir !
+    text: 'Merci ! Au revoir !'
 #
 # Forest Handler
-#  
+#
   foret:
-    text: Je voudrais accéder à la Fôret!
+    text: 'Je voudrais accéder à la Fôret!'
     conditions: '!foret_athelas'
-    pointer: entry
+    pointers: entry
   dac:
-    text: D'accord! Voici &d¤100
-    pointer: entry_exe1,entry_exe2
+    text: 'D''accord! Voici &d¤100'
+    pointers: entry_exe1,entry_exe2
   non:
-    text: Non merci! Aurevoir!
+    text: 'Non merci! Aurevoir!'
+
 

@@ -1,4 +1,4 @@
-# 
+#
 # Conditions
 #             For Gaïa
 #                       By Hollish
@@ -43,7 +43,7 @@ spirituality5000: point default.spirituality 5000
 spirituality10000: point default.spirituality 10000
 #
 #
-# Fables 
+# Fables
 #
 #
 fables_t1p1: tag fables_t1p1
@@ -86,7 +86,7 @@ fables_t3p4_have: item fables_t3p4
 # TRAIN
 #
 ##########
-riding: riding minecart
+is_riding: riding minecart
 #
 tag_train_village: tag train_village
 destination_village: tag destination_village
@@ -234,14 +234,7 @@ mageentry_approved: tag mageentry_approved
 #
 #
 #
-wand1_inventory: and wand1_inventory1,!wand_air
-wand1_inventory1: wand inventory name:airbender
-wand2_inventory: and wand2_inventory1,!wand_fire
-wand2_inventory1: wand inventory name:firebender
-wand3_inventory: and wand3_inventory1,!wand_earth
-wand3_inventory1: wand inventory name:earthbender
-wand4_inventory: and wand4_inventory1,!wand_water
-wand4_inventory1: wand inventory name:waterbender
+wand_inventory: wand inventory
 wand_air: wand hand name:airbender
 wand_earth: wand hand name:earthbender
 wand_water: wand hand name:waterbender
@@ -275,7 +268,6 @@ other_fire_faction: or earth,water,air
 #
 #
 wand_hand: wand hand
-wand_inventory: wand inventory
 baguette_magic_missile: tag baguette_magic_missile
 baguette_flare: tag baguette_flare
 #
@@ -338,9 +330,6 @@ tag_aang_baton: tag tag_aang_baton
 empty_1: empty 1
 ingredients_air_wand: and aang_baton_have,fiole_air_calmed_have,empty_1
 air_wand: tag air_wand
-fire_wand: tag fire_wand
-earth_wand: tag earth_wand
-water_wand: tag water_wand
 #
 # Erudits (autres, tempo)
 #
@@ -360,9 +349,9 @@ hollish_here: party 500 inside_louvre any:hollish count:2
 inside_louvre: region pre_louvre
 screen_on: testforblock -9731;81;2362;Gaia STONE
 #
-# 
 #
-#  Ingor 
+#
+#  Ingor
 #
 #
 ##################################
@@ -433,17 +422,12 @@ north_bridge_repair_have: and stone_bricks200,planks100
 stone_bricks200: item stone_bricks:200
 planks100: item planks:100
 #
-# 
 #
-#  JEUX 
+#
+#  JEUX
 #
 #
 ##################################
-assault_started: testforblock -6591;75;2917;Gaia GLOWSTONE
-#
-#
-#
-# OLD STUFF
 uhc_tag: tag uhc
 uhc_in: region uhc
 uhc_in_lobby: region uhc_lobby

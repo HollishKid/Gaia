@@ -1,4 +1,4 @@
-quester: Jimbo
+quester: 'Jimbo'
 first: n1,n2,n3,n4,in_progress,n5,n6
 stop: 'false'
 ##########################
@@ -11,64 +11,64 @@ NPC_options:
 ## quête en cours
 #
   in_progress:
-    text: Je suis occupé avec les affaires de la guilde. \nReviens quand tu auras accompli ta tâche.
-    conditions: in_progress
-    pointer: IP_q1,IP_q2
+    text: 'Je suis occupé avec les affaires de la guilde. \nReviens quand tu auras accompli ta tâche.'
+    conditions: 'in_progress'
+    pointers: IP_q1,IP_q2
   help_q1:
-    text: L'arène est juste à coté de la guilde, en direction de l'ouest.
+    text: 'L''arène est juste à coté de la guilde, en direction de l''ouest.'
   help_q2:
-    text: Le sergent doit se trouver dans l'un des batiments militaire, au sud-est de la ville.    
+    text: 'Le sergent doit se trouver dans l''un des batiments militaire, au sud-est de la ville.'
 #
 ## 1ere étape
 #
   n1:
-    text: Salutations &2%player%&a&o. Que puis-je faire pour t'aider ?
+    text: 'Salutations &2%player%&a&o. Que puis-je faire pour t''aider ?'
     conditions: '!jim_q1start,!jim_q1done,!event1_win'
-    pointer: p1,p2,p3
+    pointers: p1,p2,p3
   rep1:
-    text: Je suis le responsable du recrutement pour la &6Guilde des Aventuriers&a&o. \nSi quelqu'un veut en faire partie, c'est à moi qu'il faut s'adresser !
-    pointer: p4,p5,p3
+    text: 'Je suis le responsable du recrutement pour la &6Guilde des Aventuriers&a&o. \nSi quelqu''un veut en faire partie, c''est à moi qu''il faut s''adresser !'
+    pointers: p4,p5,p3
   rep2:
-    text: Désolé, je ne fourni de travail qu'aux membres de la Guilde.
-    pointer: p4,p3
+    text: 'Désolé, je ne fourni de travail qu''aux membres de la Guilde.'
+    pointers: p4,p3
   rep3:
-    text: Le maitre m'accorde sa confiance, donc il suffit de me convaincre ! \nEnvie de savoir si tu es à la hauteur petit ?
-    pointer: p6,p3
+    text: 'Le maitre m''accorde sa confiance, donc il suffit de me convaincre ! \nEnvie de savoir si tu es à la hauteur petit ?'
+    pointers: p6,p3
   rep4:
-    text: En plus de te fournir un travail pour vivre tu veux dire ? \nUne franche camaraderie entre hommes détérminés n'est-elle pas suffisante ?
-    pointer: p7,p8
+    text: 'En plus de te fournir un travail pour vivre tu veux dire ? \nUne franche camaraderie entre hommes détérminés n''est-elle pas suffisante ?'
+    pointers: p7,p8
   rep5:
-    text: Ahah ils tombent tous dans le panneau ! \nC'est parti, t'as plus qu'à me prouver ta valeur ! \nVa jusqu'à l'arène qui se situe à l'ouest de la guilde. Une fois la bas, parle à &3Maximus&a&o, dis lui que je t'envoi...
-    event: jim_q1go
+    text: 'Ahah ils tombent tous dans le panneau ! \nC''est parti, t''as plus qu''à me prouver ta valeur ! \nVa jusqu''à l''arène qui se situe à l''ouest de la guilde. Une fois la bas, parle à &3Maximus&a&o, dis lui que je t''envoi...'
+    events: jim_q1go
   q1start:
-    text: Dans ce cas, rend toi à l'arène située à l'ouest de la guilde. \nUne fois sur place, trouve &3Maximus&a&o, dis lui que je t'envoi.
-    event: jim_q1go
+    text: 'Dans ce cas, rend toi à l''arène située à l''ouest de la guilde. \nUne fois sur place, trouve &3Maximus&a&o, dis lui que je t''envoi.'
+    events: jim_q1go
   n2:
-    text: Alors tu as battu &4Takeo&a&o hein ? Pas mal, tu pourras peut-être nous être utile. \nLe maître de la guilde va te recevoir maintenant. \nTu le trouveras dans son bureau a l'étage.
+    text: 'Alors tu as battu &4Takeo&a&o hein ? Pas mal, tu pourras peut-être nous être utile. \nLe maître de la guilde va te recevoir maintenant. \nTu le trouveras dans son bureau a l''étage.'
     conditions: 'event1_win,!jim_q1done'
-    event: jim_firstend,max_journal_del
+    events: jim_firstend,max_journal_del
 #
 ## 2eme étape
 #
   n3:
-    text: Bien, maintenant que tu es officiellement un membre de la guilde je peux te recommander pour certains travaux... \nPour ton premier travail, tu va aller voir le &2sergent Ynvgard&a&o. \nTu lui porteras assistance jusqu'à ce qu'il en décide autrement. 
+    text: 'Bien, maintenant que tu es officiellement un membre de la guilde je peux te recommander pour certains travaux... \nPour ton premier travail, tu va aller voir le &2sergent Ynvgard&a&o. \nTu lui porteras assistance jusqu''à ce qu''il en décide autrement.'
     conditions: 'jim_q1done,!in_progress,maka_etape1,!ynv_q3done'
-    event: jim_2ndstart,max_journal_del
+    events: jim_2ndstart,max_journal_del
 #
 ## 3eme étage
 #
   n4:
-    text: Le &2Srg Ynvgard&a&o m'a déjà fait part de ton succès, je dois dire que cela fait plaisir à entendre ! \nC'est toujours bon pour l'image de la guilde !
+    text: 'Le &2Srg Ynvgard&a&o m''a déjà fait part de ton succès, je dois dire que cela fait plaisir à entendre ! \nC''est toujours bon pour l''image de la guilde !'
     conditions: 'ynv_q3done,!jim_inconvers,!jim_q2done'
-    event: jim_q2ending,jim_inconvers
+    events: jim_q2ending,jim_inconvers
 #
 ## End JIMBO
 #
   n5:
-    text: Salut &2%player%&a&o, on se promène ?
+    text: 'Salut &2%player%&a&o, on se promène ?'
     conditions: 'random_50,!jim_inconvers,jim_q2done'
   n6:
-    text: De nouvelles recrues se sont encore présentées, peut-être les as-tu inspiré !
+    text: 'De nouvelles recrues se sont encore présentées, peut-être les as-tu inspiré !'
     conditions: '!jim_inconvers,jim_q2done'
 #
 ##########################
@@ -79,32 +79,32 @@ NPC_options:
 player_options:
 #
   p1:
-    text: Qui êtes vous ?
-    pointer: rep1
+    text: 'Qui êtes vous ?'
+    pointers: rep1
   p2:
-    text: Avez-vous du travail pour moi ?
-    pointer: rep2
+    text: 'Avez-vous du travail pour moi ?'
+    pointers: rep2
   p3:
-    text: Tout va bien, merci.
+    text: 'Tout va bien, merci.'
   p4:
-    text: Et comment peut-on devenir membre de cette guilde ?
-    pointer: rep3
+    text: 'Et comment peut-on devenir membre de cette guilde ?'
+    pointers: rep3
   p5:
-    text: Quels sont les avantages d'en faire partie ?
-    pointer: rep4
+    text: 'Quels sont les avantages d''en faire partie ?'
+    pointers: rep4
   p6:
-    text: J'en suis !
-    pointer: q1start
+    text: 'J''en suis !'
+    pointers: q1start
   p7:
-    text: Je veux devenir membre !
-    pointer: rep5
+    text: 'Je veux devenir membre !'
+    pointers: rep5
   p8:
-    text: Très peu pour moi, merci...
+    text: 'Très peu pour moi, merci...'
   IP_q1:
-    text: Où se trouve l'arène ?
-    conditions: in_progress,jim_q1start
-    pointer: help_q1
+    text: 'Où se trouve l''arène ?'
+    conditions: 'in_progress,jim_q1start'
+    pointers: help_q1
   IP_q2:
-    text: Où se trouve le sergent ?
-    conditions: in_progress,jim_q2start
-    pointer: help_q2
+    text: 'Où se trouve le sergent ?'
+    conditions: 'in_progress,jim_q2start'
+    pointers: help_q2

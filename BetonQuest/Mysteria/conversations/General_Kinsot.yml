@@ -1,4 +1,4 @@
-quester: Général Kinsot
+quester: 'Général Kinsot'
 first: welcome,welcomebis
 stop: 'false'
 #   Options   #
@@ -6,37 +6,37 @@ stop: 'false'
 #     NPC     #
 NPC_options:
   welcome:
-    text: Bonjour à toi %player% ! Garderos m'a prévenu de ton arrivée !
+    text: 'Bonjour à toi %player% ! Garderos m''a prévenu de ton arrivée !'
     conditions: 'voir_superieur,!motif_donner,!tour_du_village'
-    pointer: motif
+    pointers: motif
   welcomebis:
-    text: Bonjour %player% ! Tu as besoin de quelque chose ?
+    text: 'Bonjour %player% ! Tu as besoin de quelque chose ?'
     conditions: 'voir_superieur,motif_donner,tour_du_village'
-    pointer: quete
+    pointers: quete
   motif_rep:
-    text: Oui, et j'aimerais voir ce motif du roi avant de continuer cette discussion !
+    text: 'Oui, et j''aimerais voir ce motif du roi avant de continuer cette discussion !'
     conditions: '!motif_donner'
     events: motif_donner
-    pointer: quete
+    pointers: quete
   quete_rep:
-    text: Fais un tour dans le village et reviens me voir dès que tu en auras appris un peu plus sur cet endroit !
+    text: 'Fais un tour dans le village et reviens me voir dès que tu en auras appris un peu plus sur cet endroit !'
     events: tour_du_village
-    pointer: accord,village
+    pointers: accord,village
   village_info:
-    text: En sortant du port, dirige toi vers le château, ensuite, va à gauche, tu y trouveras le village et ses habitants là-bas !
+    text: 'En sortant du port, dirige toi vers le château, ensuite, va à gauche, tu y trouveras le village et ses habitants là-bas !'
 #   Options   #
 
 #    Joueur   #
 player_options:
-  motif: 
-    text: Donc vous savez en ce qui concerne le motif de ma présence devant vous ?
+  motif:
+    text: 'Donc vous savez en ce qui concerne le motif de ma présence devant vous ?'
     conditions: '!motif_donner'
-    pointer: motif_rep
+    pointers: motif_rep
   quete:
-    text: Que dois-je faire à présent ?
-    pointer: quete_rep
+    text: 'Que dois-je faire à présent ?'
+    pointers: quete_rep
   accord:
-    text: Très bien, je reviendrais vous voir une fois cette tâche accomplie !
+    text: 'Très bien, je reviendrais vous voir une fois cette tâche accomplie !'
   village:
-    text: Où se trouve le village ?
-    pointer: village_info
+    text: 'Où se trouve le village ?'
+    pointers: village_info

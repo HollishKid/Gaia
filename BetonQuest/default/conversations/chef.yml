@@ -1,4 +1,4 @@
-quester: Chef
+quester: 'Chef'
 first: livraison
 stop: 'false'
 ################
@@ -6,25 +6,25 @@ stop: 'false'
 ################
 NPC_options:
   livraison:
-    text: Que faites vous dans ma cuisine?!
-    pointer: bonjour,bonjour_francis,rien
+    text: 'Que faites vous dans ma cuisine?!'
+    pointers: bonjour,bonjour_francis,rien
   oui:
-    text: Ah! Très bien. Bonne journée à vous!
-    event: livraison_paul_done
+    text: 'Ah! Très bien. Bonne journée à vous!'
+    events: livraison_paul_done
   merci:
-    text: Ah! Très bien. Faites moi le plaisir de lui rendre cette tarte!
-    event: tarte_chef,tag_tarte_chef,take_francis_betteraves
+    text: 'Ah! Très bien. Faites moi le plaisir de lui rendre cette tarte!'
+    events: tarte_chef,tag_tarte_chef,take_francis_betteraves
 ###################
 #Options du joueur#
 ###################
 player_options:
   bonjour:
-    text: Paul m'envoie pour vous livrer le pain!
-    condition: pain_paul,tag_pain_paul
-    pointer: oui
+    text: 'Paul m''envoie pour vous livrer le pain!'
+    conditions: 'pain_paul,tag_pain_paul'
+    pointers: oui
   bonjour_francis:
-    text: Francis m'envoie pour vous livrer les betteraves!
-    condition: betteraves_urgent,betteraves_have
-    pointer: merci
+    text: 'Francis m''envoie pour vous livrer les betteraves!'
+    conditions: 'betteraves_urgent,betteraves_have'
+    pointers: merci
   rien:
-    text: Rien, j'allais justement partir!
+    text: 'Rien, j''allais justement partir!'

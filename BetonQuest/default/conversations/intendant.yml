@@ -1,4 +1,4 @@
-quester: Intendant
+quester: 'Intendant'
 first: welcome,welcome_ecuyer,ecuyer
 stop: 'false'
 ############
@@ -8,132 +8,132 @@ stop: 'false'
 ############
 NPC_options:
   welcome:
-    text: Salutations à vous, &2%player%&a&o.
+    text: 'Salutations à vous, &2%player%&a&o.'
     conditions: '!int_inconvers,!intendant_next_phase'
-    pointer: first,gestionnaire,guildsfound,guildsnotfound,bat,bat_done,signing_progress,signing_done,loca,autre
+    pointers: the_first,gestionnaire,guildsfound,guildsnotfound,bat,bat_done,signing_progress,signing_done,loca,autre
   welcome_ecuyer:
     text: 'Salutations &2%player% &a&o! Je suis ravi de vous revoir. \nVous avez été recommandé par Makarov de la Guilde des Aventuriers et le Mage du Sanctuaire.'
-    condition: '!int_inconvers,intendant_next_phase,!grade_ecuyer'
-    event: welcome_ecuyer
+    conditions: 'intendant_next_phase,!grade_ecuyer'
+    events: welcome_ecuyer
   ecuyer:
     text: 'Salutations &2Écuyer %player% &a&o! En quoi puis-je vous aider ?'
-    condition: '!int_inconvers,grade_ecuyer'
-    pointer: bat,bat_done,signing_progress,signing_done,loca,autre
-    
+    pointers: bat,bat_done,signing_progress,signing_done,loca,autre
+
 #
 #
-#    
+#
   first_rep:
-    text: Je vous souhaite au nom du &2Roi Kahn &a&ola bienvenue dans notre ville d'&dAthelas&a&o. \nLaissez moi acter votre venue dans notre ville sur le registre royal.
-    event: int_first,int_inconvers,j_entry_int_del
+    text: 'Je vous souhaite au nom du &2Roi Kahn &a&ola bienvenue dans notre ville d''&dAthelas&a&o. \nLaissez moi acter votre venue dans notre ville sur le registre royal.'
+    events: int_first,int_inconvers,j_entry_int_del
 #
 #
   gestionnaire_found:
-    text: Très bien ! Maintenant, vous devez savoir que vous pouvez développer beaucoup de Compétences pour en faire bénéficier la Ville d'Athelas. \nAllez voir TOUS les Maîtres de Guildes dans la ville pour en apprendre plus sur leurs corps de métiers. \nChacun d'eux pourra alors vous proposer de rejoindre sa Guilde pour des avantages exclusifs !
+    text: 'Très bien ! Maintenant, vous devez savoir que vous pouvez développer beaucoup de Compétences pour en faire bénéficier la Ville d''Athelas. \nAllez voir TOUS les Maîtres de Guildes dans la ville pour en apprendre plus sur leurs corps de métiers. \nChacun d''eux pourra alors vous proposer de rejoindre sa Guilde pour des avantages exclusifs !'
     events: find_guilds
   gestionnairenotfound_rep:
-    text: Vous devez aller rencontrer le &2Gestionnaire &a&odans son bureau, à droite en sortant d'ici. \nUtilisez votre Journal de Progression si vous êtes perdu !
+    text: 'Vous devez aller rencontrer le &2Gestionnaire &a&odans son bureau, à droite en sortant d''ici. \nUtilisez votre Journal de Progression si vous êtes perdu !'
 #
   guildsfound_rep:
-    text: Très bien ! J'ai donc le plaisir de vous acceuillir comme citoyen de la Ville d'&dAthelas &a&o! \nVous pourrez désormais vous rendre utile auprès des différents citoyens de la ville.
+    text: 'Très bien ! J''ai donc le plaisir de vous acceuillir comme citoyen de la Ville d''&dAthelas &a&o! \nVous pourrez désormais vous rendre utile auprès des différents citoyens de la ville.'
     events: intendant_done,j_entry_intendant
   guildsnotfound_rep:
     text: 'Vous devez rencontrer TOUS les Maîtres de Guilde de le Ville. Il y en a 8 en tout. \nVotre Journal de Progression indique leurs positions. \nUtilisez la Carte s''il vous la faut : &b http://gaia-minecraft.enjin.com/gallery'
 #
   autre_rep:
-    text: Que voulez vous savoir?
-    pointer: qui,salaire,villes,dynmap,nom
+    text: 'Que voulez vous savoir?'
+    pointers: qui,salaire,villes,dynmap,nom
 #
   bat_rep:
-    text: Vous devrez compléter une formation auprès de Jacopo avant cela. \nRendez vous sur le port d'Athelas, à côté du bâteau de transport pour le retrouver !
-    event: jacopo_init
+    text: 'Vous devrez compléter une formation auprès de Jacopo avant cela. \nRendez vous sur le port d''Athelas, à côté du bâteau de transport pour le retrouver !'
+    events: jacopo_init
   bat_done_rep:
-    text: Il me l'a fait savoir ! Avant de vous autoriser je dois vous faire signer un contrat. \nLisez tout attentivement avant de signer !
+    text: 'Il me l''a fait savoir ! Avant de vous autoriser je dois vous faire signer un contrat. \nLisez tout attentivement avant de signer !'
     events: navigation_give_contract,navigation_signing
   signing_progress_rep:
-    text: En voici un autre, tâchez de ne pas le perdre cette fois !
+    text: 'En voici un autre, tâchez de ne pas le perdre cette fois !'
     events: navigation_give_contract
   signing_done_rep:
-    text: Excellent, j'en prends une copie et je vous laisse l'original. \nVous pouvez désormais naviguer sur les bateaux de la Flotte Royale d'Athelas ! \nPrenez cet argent aussi, vous en aurez besoin !
+    text: 'Excellent, j''en prends une copie et je vous laisse l''original. \nVous pouvez désormais naviguer sur les bateaux de la Flotte Royale d''Athelas ! \nPrenez cet argent aussi, vous en aurez besoin !'
     events: navigation_reward
 #
   loca_rep:
-    text: Référrez vous au &2Gestionnaire&a&o, qui se trouve dans son bureau, au sein du château, en sortant par la grosse porte à droite !
+    text: 'Référrez vous au &2Gestionnaire&a&o, qui se trouve dans son bureau, au sein du château, en sortant par la grosse porte à droite !'
   qui_rep:
-    text: Je suis l'Intendant du Roi d'Athelas. \nJe gère les affaires courantes de cette ville et du royaume lui appartenant.
+    text: 'Je suis l''Intendant du Roi d''Athelas. Je gère les affaires courantes de cette ville et du royaume lui appartenant.'
   nom_rep:
-    text: Ah... L'information est mon métier, jeune aventurier.. \nJ'ai des petits oiseaux sur tous les continents de Gaïa.
+    text: 'Ah ... L''information est mon métier, jeune aventurier .. J''ai des petits oiseaux sur tous les continents de Gaïa.'
   dynmap_rep:
-    text: '&dSofia &a&opourra vous renseigner. \nUtilisez &bhttp://www.gaia-minecraft.enjin.com/ &a&opour toutes les informations.'
+    text: '&dSofia &a&opourra vous renseigner ... Utilisez &bhttp://www.gaia-minecraft.enjin.com/ &a&opour toutes les informations.'
   salaire_rep:
     text: 'Ce calcul se fait ainsi: &f¤&a&o100 (&fBase&a&o) &f+ &a&oPoints de réputation (&fPart Variable&a&o) \nVotre Salaire est aussi influencé par votre niveau de Compétence dans votre Guilde et de votre Grade Royal.'
   villes_rep:
-    text: Renseignez vous en cliquant ici :\n&b http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Continent_Est
+    text: 'Renseignez vous en cliquant ici:&b http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Continent_Est'
 ############
 #          #
 #  JOUEUR  #
 #          #
 ############
 player_options:
-  first: 
-    text: Je suis venu répondre à l'appel du Roi !
-    condition: '!intendant'
+  the_first:
+    text: 'Je suis venu répondre à l''appel du Roi !'
+    conditions: '!intendant'
     events: tag_intendant
-    pointer: first_rep
+    pointers: first_rep
   gestionnaire:
-    text: J'ai fait ce que le Gestionnaire m'a demandé !
-    condition: gestionnaire,!intendant_done,gestionnaire_found
-    pointer: gestionnaire_found
+    text: 'J''ai fait ce que le Gestionnaire m''a demandé !'
+    conditions: 'gestionnaire,!intendant_done,gestionnaire_found'
+    pointers: gestionnaire_found
   gestionnairenotfound:
-    text: Qu'est-ce que je dois faire déjà ?
-    condition: intendant,!intendant_done,!gestionnaire
-    pointer: gestionnairenotfound_rep
+    text: 'Qu''est-ce que je dois faire déjà ?'
+    conditions: 'intendant,!intendant_done,!gestionnaire'
+    pointers: gestionnairenotfound_rep
   guildsfound:
-    text: J'ai trouvé toutes les Guildes !
-    condition: guildes_all,intendant,journal_guilds_found,!intendant_done
-    pointer: guildsfound_rep
+    text: 'J''ai trouvé toutes les Guildes !'
+    conditions: 'guildes_all,intendant,journal_guilds_found,!intendant_done'
+    pointers: guildsfound_rep
   guildsnotfound:
-    text: Qu'est-ce que je dois faire déjà ?
-    condition: 'intendant,!intendant_done,!guildes_all,gestionnaire'
-    pointer: guildsnotfound_rep
+    text: 'Qu''est-ce que je dois faire déjà ?'
+    conditions: 'intendant,!intendant_done,!guildes_all,gestionnaire'
+    pointers: guildsnotfound_rep
 #
   bat:
-    text: Je voudrais naviguer sur les bateaux et accéder au Continent Est.
-    condition: 'intendant_done,!autorisation_bateau'
-    pointer: bat_rep
+    text: 'Je voudrais naviguer sur les bateaux et accéder au Continent Est.'
+    conditions: 'intendant_done,!autorisation_bateau'
+    pointers: bat_rep
   bat_done:
-    text: J'ai fini ma formation avec Jacopo !
-    condition: 'jacopo_done,!navigation_signing,!autorisation_bateau'
-    pointer: bat_done_rep
+    text: 'J''ai fini ma formation avec Jacopo !'
+    conditions: 'jacopo_done,!navigation_signing,!autorisation_bateau'
+    pointers: bat_done_rep
   signing_progress:
-    text: J'ai perdu le contrat que je devais signer.
-    condition: 'jacopo_done,navigation_signing,!navigation_signed,!autorisation_bateau'
-    pointer: signing_progress_rep
+    text: 'J''ai perdu le contrat que je devais signer.'
+    conditions: 'jacopo_done,navigation_signing,!navigation_signed,!autorisation_bateau'
+    pointers: signing_progress_rep
   signing_done:
-    text: J'ai signé le contrat que je devais signer.
-    condition: 'jacopo_done,navigation_signed,!autorisation_bateau'
-    pointer: signing_done_rep
+    text: 'J''ai signé le contrat que je devais signer.'
+    conditions: 'jacopo_done,navigation_signed,!autorisation_bateau'
+    pointers: signing_done_rep
 #
   loca:
-    text: Je voudrais louer une maison ou un terrain à Athelas.
-    condition: 'intendant_done'
-    pointer: loca_rep
+    text: 'Je voudrais louer une maison ou un terrain à Athelas.'
+    conditions: 'intendant_done'
+    pointers: loca_rep
   autre:
-    text: Poser une autre question...
-    condition: 'intendant_done'
-    pointer: autre_rep
+    text: 'Poser une autre question...'
+    conditions: 'intendant_done'
+    pointers: autre_rep
   qui:
-    text: Qui êtes vous?
-    pointer: qui_rep
+    text: 'Qui êtes vous?'
+    pointers: qui_rep
   salaire:
-    text: Comment est calculé mon salaire ?
-    pointer: salaire_rep
+    text: 'Comment est calculé mon salaire ?'
+    pointers: salaire_rep
   villes:
-    text: Comment fonder une Ville ?
-    pointer: villes_rep
+    text: 'Comment fonder une Ville ?'
+    pointers: villes_rep
   nom:
-    text: Comment connaissez-vous mon nom ?!
-    pointer: nom_rep
+    text: 'Comment connaissez-vous mon nom ?!'
+    pointers: nom_rep
   dynmap:
-    text: Comment se repérer?
-    pointer: dynmap_rep
+    text: 'Comment se repérer?'
+    pointers: dynmap_rep
+

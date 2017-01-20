@@ -1,4 +1,4 @@
-quester: Vieux Bandit
+quester: 'Vieux Bandit'
 first: n1,n2,n3,n4
 stop: 'false'
 ##########################
@@ -8,55 +8,55 @@ stop: 'false'
 ##########################
 NPC_options:
   n1:
-    text: Bel endroit pour pêcher n'est-ce pas ?
+    text: 'Bel endroit pour pêcher n''est-ce pas ?'
     conditions: '!or_q1start,!or_etape2,!or_etape3'
-    pointer: p1,p2
+    pointers: p1,p2
   n2:
-    text: Alors, ça mord ?
-    conditions: or_q1start
-    pointer: or_q1check,nop2
+    text: 'Alors, ça mord ?'
+    conditions: 'or_q1start'
+    pointers: or_q1check,nop2
   n3:
-    text: Alors &2%player%&a&o, que voulais-tu me demander ?
-    conditions: or_etape2
-    pointer: or_etape2,refusal
+    text: 'Alors &2%player%&a&o, que voulais-tu me demander ?'
+    conditions: 'or_etape2'
+    pointers: or_etape2,refusal
   n4:
-    text: Encore toi ? Fiches le camp veux-tu ?!
-    conditions: or_etape3
-    pointer: new_key,rien
+    text: 'Encore toi ? Fiches le camp veux-tu ?!'
+    conditions: 'or_etape3'
+    pointers: new_key,rien
   rep1:
-    text: Un simple veillard qui aime les joies simples de la nature... Ce n'est pas crédible ?
-    pointer: sisi,nono
+    text: 'Un simple veillard qui aime les joies simples de la nature... Ce n''est pas crédible ?'
+    pointers: sisi,nono
   merci:
-    text: Ah merci, je savais bien que je ne pouvais pas être percé à jour si facilement !
+    text: 'Ah merci, je savais bien que je ne pouvais pas être percé à jour si facilement !'
   doute:
-    text: Mmmh... Peut-être avez vous raison. Mais j'aime particulièrement la pêche ! Disons que si tu m'apporte &65 Poissons grillés &a&oon pourra discuter un peu ok ?
-    pointer: ok,nop,force
+    text: 'Mmmh... Peut-être avez vous raison. Mais j''aime particulièrement la pêche ! Disons que si tu m''apporte &65 Poissons grillés &a&oon pourra discuter un peu ok ?'
+    pointers: ok,nop,force
   nopq1:
-    text: Permet moi d'en douter, mais fais comme bon te semble !
+    text: 'Permet moi d''en douter, mais fais comme bon te semble !'
   startq1:
-    text: Bien! Tu peux m'emprunter une canne à pêche si tu veux, dans mon coffre. Tu y trouvera également quelques bûches pour faire fonctionner le four.
-    event: or_startq1
+    text: 'Bien! Tu peux m''emprunter une canne à pêche si tu veux, dans mon coffre. Tu y trouvera également quelques bûches pour faire fonctionner le four.'
+    events: or_startq1
   or_reward1:
-    text: Aaaah je commencais justement à avoir un petit creux !
-    event: or_reward1,or_etape2
+    text: 'Aaaah je commencais justement à avoir un petit creux !'
+    events: or_reward1,or_etape2
   force_rep:
-    text: Baisse d'un ton jeune homme ou tu le regretteras.
-    pointer: dsl,reforce
+    text: 'Baisse d''un ton jeune homme ou tu le regretteras.'
+    pointers: dsl,reforce
   or_rep1:
-    text: Tout dépend pour quelles raisons tu la recherche. Je ne vais pas trahir les miens pour quelques poissons ! Même s'il m'ont bannis du village...
-    pointer: pk,raison
+    text: 'Tout dépend pour quelles raisons tu la recherche. Je ne vais pas trahir les miens pour quelques poissons ! Même s''il m''ont bannis du village...'
+    pointers: pk,raison
   raison2:
-    text: Disons que nous étions en désaccord sur leur dernier projet. J'estimais les risques de représailles trop grand pour que cela vaille la peine de le mettre à execution.
-    pointer: repre
+    text: 'Disons que nous étions en désaccord sur leur dernier projet. J''estimais les risques de représailles trop grand pour que cela vaille la peine de le mettre à execution.'
+    pointers: repre
   or2:
-    text: Je savais que ce projet était trop risqué! Ils auraient du m'écouter... 
-    pointer: repre
+    text: 'Je savais que ce projet était trop risqué! Ils auraient du m''écouter...'
+    pointers: repre
   okok:
-    text: Ca va j'ai compris... Prend cette clé, utilisée sur le bloc de fer qui se trouve sous le village, elle permet d'accéder à la cache secrète. L'objet s'y trouve peut-être, mais je n'en sais pas plus...
-    event: or_end
+    text: 'Ca va j''ai compris... Prend cette clé, utilisée sur le bloc de fer qui se trouve sous le village, elle permet d''accéder à la cache secrète. L''objet s''y trouve peut-être, mais je n''en sais pas plus...'
+    events: or_end
   sur:
-    text: Mmmh... Si tu veux, mais il faudra me payer &6500¤&a&o. Tu la veux toujours ?
-    pointer: ouida,nonda
+    text: 'Mmmh... Si tu veux, mais il faudra me payer &6500¤&a&o. Tu la veux toujours ?'
+    pointers: ouida,nonda
 #
 ##########################
 #                        #
@@ -65,61 +65,61 @@ NPC_options:
 ##########################
 player_options:
   p1:
-    text: C'est bien vrai.
+    text: 'C''est bien vrai.'
   p2:
-    text: Qui êtes-vous en réalité ?
-    conditions: ynv_q2start
-    pointer: rep1
+    text: 'Qui êtes-vous en réalité ?'
+    conditions: 'ynv_q2start'
+    pointers: rep1
   sisi:
-    text: Si bien sur !
-    pointer: merci
+    text: 'Si bien sur !'
+    pointers: merci
   nono:
-    text: Au milieu de ces monstres la nuit ? Je crois que vous cachez votre jeu !
-    pointer: doute
+    text: 'Au milieu de ces monstres la nuit ? Je crois que vous cachez votre jeu !'
+    pointers: doute
   ok:
-    text: Marché conclu !
-    pointer: startq1
+    text: 'Marché conclu !'
+    pointers: startq1
   nop:
-    text: Inutile, je n'ai pas besoin de vous.
-    pointer: nopq1
+    text: 'Inutile, je n''ai pas besoin de vous.'
+    pointers: nopq1
   or_q1check:
-    text: Voici vos Poissons grillés.
-    conditions: or_fish
-    pointer: or_reward1
+    text: 'Voici vos Poissons grillés.'
+    conditions: 'or_fish'
+    pointers: or_reward1
   nop2:
-    text: Pas vraiment ...
+    text: 'Pas vraiment ...'
   force:
-    text: Je n'ai que faire de tes poissons vieil homme ! Tu vas me dire ce que je veux savoir !
-    pointer: force_rep
+    text: 'Je n''ai que faire de tes poissons vieil homme ! Tu vas me dire ce que je veux savoir !'
+    pointers: force_rep
   dsl:
-    text: Désolé, je ne sais pas ce qu'il m'a pris.
-    pointer: startq1
+    text: 'Désolé, je ne sais pas ce qu''il m''a pris.'
+    pointers: startq1
   reforce:
-    text: Je n'ai que faire de tes menaces ! En garde !!
-    event: or_hostile
+    text: 'Je n''ai que faire de tes menaces ! En garde !!'
+    events: or_hostile
   or_etape2:
-    text: Je cherche la cache secrète du village. Vous ne pourriez pas m'aider à la trouver ?
-    pointer: or_rep1
+    text: 'Je cherche la cache secrète du village. Vous ne pourriez pas m''aider à la trouver ?'
+    pointers: or_rep1
   pk:
-    text: Pourquoi vous ont-ils bannis du village ?
-    pointer: raison2
+    text: 'Pourquoi vous ont-ils bannis du village ?'
+    pointers: raison2
   raison:
-    text: Je suis envoyé par l'armée royale à la recherche d'un objet que ces bandits ont dérobés !
-    pointer: or2
+    text: 'Je suis envoyé par l''armée royale à la recherche d''un objet que ces bandits ont dérobés !'
+    pointers: or2
   repre:
-    text: Je ne suis qu'un éclaireur, les représailles risquent de continuer si l'armée ne trouve pas ce qu'elle cherche.
-    pointer: okok
+    text: 'Je ne suis qu''un éclaireur, les représailles risquent de continuer si l''armée ne trouve pas ce qu''elle cherche.'
+    pointers: okok
   refusal:
-    text: Je ne me rappelle plus.
+    text: 'Je ne me rappelle plus.'
   new_key:
-    text: J'ai perdu la clé de la cache, il m'en faut une autre !
+    text: 'J''ai perdu la clé de la cache, il m''en faut une autre !'
     conditions: '!ynv_q3done'
-    pointer: sur
+    pointers: sur
   ouida:
-    text: Je paierai.
-    event: or_keyrenew
+    text: 'Je paierai.'
+    events: or_keyrenew
   nonda:
-    text: Je ferai sans.
+    text: 'Je ferai sans.'
   rien:
-    text: Rien, désolé.
+    text: 'Rien, désolé.'
 #

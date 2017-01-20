@@ -1,4 +1,4 @@
-quester: Officier
+quester: 'Officier'
 first: hello
 stop: 'false'
 ################
@@ -8,15 +8,15 @@ stop: 'false'
 ################
 NPC_options:
   hello:
-    text: Salut, que fais tu ici ?
-    pointer: nether,qui,rien
+    text: 'Salut, que fais tu ici ?'
+    pointers: nether,qui,rien
   nether_rep:
-    text: Cet endroit est gardé par un vieux démon, un des anciens Nethériens. Es-tu sûr de vouloir entrer là dedans ? \n&2&oPour faire ce donjon, vous devez être 2 au minimum ! \n&2&oLe donjon commencera 1 minute après l'inscription du premier participant !
-    pointer: nether_enter
+    text: 'Cet endroit est gardé par un vieux démon, un des anciens Nethériens. Es-tu sûr de vouloir entrer là dedans ? \n&2&oPour faire ce donjon, vous devez être 2 au minimum ! \n&2&oLe donjon commencera 1 minute après l''inscription du premier participant !'
+    pointers: nether_enter
   qui_rep:
-    text: Officier de l'armée d'Athelas, assigné à garder cette entrée vers le Nether contre les aventuriers imprudents. \nSurtout pour tenter de garder ce qu'il y a là dedans, à l'intérieur...
+    text: 'Officier de l''armée d''Athelas, assigné à garder cette entrée vers le Nether contre les aventuriers imprudents. \nSurtout pour tenter de garder ce qu''il y a là dedans, à l''intérieur...'
   jeu_de_mot_de_lyrtix:
-    text: J'espère que tu ne BRULES pas d'impatience !
+    text: 'J''espère que tu ne BRULES pas d''impatience !'
 ################
 #              #
 # Texte Joueur #
@@ -24,14 +24,14 @@ NPC_options:
 ################
 player_options:
   nether:
-    text: Je cherche un accès au Nether !
-    pointer: nether_rep
+    text: 'Je cherche un accès au Nether !'
+    pointers: nether_rep
   qui:
-    text: Qui es-tu pour me demander ça ?
-    pointer: qui_rep
+    text: 'Qui es-tu pour me demander ça ?'
+    pointers: qui_rep
   rien:
-    text: Rien, je ne fais que passer...
+    text: 'Rien, je ne fais que passer...'
   nether_enter:
-    text: Absolument, je suis prêt à affronter ces monstre!
-    event: nether_portal_entrance
-    pointer: jeu_de_mot_de_lyrtix
+    text: 'Absolument, je suis prêt à affronter ces monstre!'
+    events: nether_portal_entrance
+    pointers: jeu_de_mot_de_lyrtix

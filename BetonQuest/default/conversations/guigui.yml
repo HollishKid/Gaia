@@ -1,25 +1,25 @@
-quester: guigui
+quester: 'guigui'
 first: hello
 stop: 'false'
 #Options du NPC
 NPC_options:
   hello:
-    text: Bonjour &2%player%&a&o, je suis &dguigui&a&o, Builder sur Gaïa.
-    pointer: role,citation,sens
-  role_rep: 
-    text: J'investis beaucoup de mon temps dans la réalisation des bâtiments dans le monde de Gaïa.
+    text: 'Bonjour &2%player%&a&o, je suis &dguigui&a&o, Builder sur Gaïa.'
+    pointers: role,citation,sens
+  role_rep:
+    text: 'J''investis beaucoup de mon temps dans la réalisation des bâtiments dans le monde de Gaïa.'
   citation_rep:
-    text: Nul ne sert de courrir, il faut partir à point.
+    text: 'Nul ne sert de courrir, il faut partir à point.'
   sens_rep:
-    text: Vivre heureux et sans galère.
+    text: 'Vivre heureux et sans galère.'
 #Options du joueur
 player_options:
   role:
-    text: Quel est ton rôle sur Gaïa ?
-    pointer: role_rep
+    text: 'Quel est ton rôle sur Gaïa ?'
+    pointers: role_rep
   citation:
-    text: Quelle est ta citation préférée ?
-    pointer: citation_rep
+    text: 'Quelle est ta citation préférée ?'
+    pointers: citation_rep
   sens:
-    text: Quel est le Sens de la Vie ?
-    pointer: sens_rep
+    text: 'Quel est le Sens de la Vie ?'
+    pointers: sens_rep

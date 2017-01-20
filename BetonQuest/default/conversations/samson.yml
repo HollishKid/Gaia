@@ -1,71 +1,48 @@
 quester: 'Samson'
-first: '0,1,2'
-final_events: ''
+first: n0,n1,n2
 stop: 'false'
 NPC_options:
 #Joueurs sans la quête Transport auprès de l'Intendant
-  '0':
+  n0:
     text: 'Je ne vous connais pas ! Vous devez d''abord parler à l''&2Intendant !'
-    condition: '!intendant_done'
-  '1':
+    conditions: '!intendant_done'
+  n1:
     text: 'Il y des gens qui voient le futur dans les flammes...'
     conditions: '!samson_inprogress,intendant_done'
-    events: ''
-    pointer: 'point1'
-  '2':
+    pointers: point1
+  n2:
     text: 'Eh bien ? Pas encore fait ?'
     conditions: 'samson_inprogress'
-    events: ''
-    pointer: 'check_done1,bye'
-  'rep_oui':
+    pointers: check_done1,bye
+  rep_oui:
     text: 'Ce vieux sénile ? Il passe son temps à poser des énigmes stupides aux gens et n''a aucune idée de ce qu''il se passe vraiment dans le monde. Etes-vous un peu plus curieux ?'
-    conditions: ''
-    events: ''
-    pointer: 'point2,point3'
-  'proposal':
+    pointers: point2,point3
+  proposal:
     text: 'Commencez par gravir au sommet de &dLa Cime Verdoyante&a&o, à l''extrémité ouest de la ville. De la, vous aurez un appercu du chemin qu''on a parcouru pour en arriver là. Revenez me voir ensuite.'
-    conditions: ''
-    events: 'samsonq1,remove_startQG,samson_inprogress'
-    pointer: ''
-  'fin1':
+    events: samsonq1,remove_startQG,samson_inprogress
+  fin1:
     text: 'Alors vous l''avez ressentie aussi? Peu de gens y parviennent à cette distance, mais ce que vous avez senti n''est autre que le &dPoint d''Infection de l''Ouest&a&o. Ces forces maléfiques rêvent de reprendre le contrôle de cette partie du continent.'
-    conditions: ''
-    events: 'samson_q1done,samson_endprogress,samson_reward1'
-    pointer: 'suite1,bye'
-  'rep_suite1':
+    events: samson_q1done,samson_endprogress,samson_reward1
+    pointers: suite1,bye
+  rep_suite1:
     text: 'Oui-da... Certainement... Mais il vous manque encore de l''experience. Revenez me voir plus tard.'
-    conditions: ''
-    events: ''
-    pointer: ''
 #Joueurs autorisés à voyag
 player_options:
-  'point1':
+  point1:
     text: 'Grandpa Allen m''a envoyé vous voir, que puis-je faire pour vous ?'
     conditions: 'start_questguild'
-    events: ''
-    pointer: 'rep_oui'
-  'point2':
+    pointers: rep_oui
+  point2:
     text: 'Je veux savoir ce qu''il se passe.'
-    conditions: ''
-    events: ''
-    pointer: 'proposal'
-  'point3':
+    pointers: proposal
+  point3:
     text: 'Les ignorants sont bénis.'
-    conditions: ''
-    events: ''
-    pointer: ''
-  'check_done1':
+  check_done1:
     text: 'J''ai gravi la Cime, et bien que la vue de la ville à mes pieds m''ait enchanté, j''ai ressenti comme une présence maléfique... Que pouvez vous me dire la dessus ?'
     conditions: 'cimereached'
-    events: ''
-    pointer: 'fin1'
-  'bye':
+    pointers: fin1
+  bye:
     text: 'Au revoir.'
-    conditions: ''
-    events: ''
-    pointer: ''
-  'suite1':
+  suite1:
     text: 'Et peut-on faire quelque chose à ce sujet ?'
-    conditions: ''
-    events: ''
-    pointer: 'rep_suite1'
+    pointers: rep_suite1

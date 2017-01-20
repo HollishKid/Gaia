@@ -1,4 +1,4 @@
-quester: Itsuki
+quester: 'Itsuki'
 first: n1,n2
 stop: 'false'
 ##########################
@@ -8,19 +8,19 @@ stop: 'false'
 ##########################
 NPC_options:
   n1:
-    text: Bien le bonjour, jeune membre de notre Guilde des Aventuriers ! Serais-tu intéressé par les contrats de guilde ?
+    text: 'Bien le bonjour, jeune membre de notre Guilde des Aventuriers ! Serais-tu intéressé par les contrats de guilde ?'
     conditions: '!its_inconvers,!its_rang1'
-    pointer: oui,non
+    pointers: oui,non
   rep1:
-    text: Les contrats de guilde sont des tâches courantes, qui nous sont transmises par les services royaux afin que des aventuriers les accomplissent.
-    event: its_beginnerfold,its_inconvers
+    text: 'Les contrats de guilde sont des tâches courantes, qui nous sont transmises par les services royaux afin que des aventuriers les accomplissent.'
+    events: its_beginnerfold,its_inconvers
   n2:
-    text: Contrats de guilde
+    text: 'Contrats de guilde'
     conditions: '!its_inconvers,its_rang1'
-    pointer: rang1,non_merci
+    pointers: rang1,non_merci
   menu_rang1:
-    text: Rang 1
-    pointer: rang1_go,rang1_claim,au_revoir
+    text: 'Rang 1'
+    pointers: rang1_go,rang1_claim,au_revoir
 #
 ##########################
 #                        #
@@ -31,21 +31,21 @@ NPC_options:
 player_options:
 #
   oui:
-    text: Dites m'en plus.
-    pointer: rep1
+    text: 'Dites m''en plus.'
+    pointers: rep1
   non:
-    text: Pas le moins du monde.
+    text: 'Pas le moins du monde.'
   non_merci:
-    text: Non merci.
+    text: 'Non merci.'
   au_revoir:
-    text: Au revoir
+    text: 'Au revoir'
   rang1:
-    text: Rang 1
-    pointer: menu_rang1
+    text: 'Rang 1'
+    pointers: menu_rang1
   rang1_go:
-    text: Commencer un contrat &l(aucun contrat disponible pour le moment.)
+    text: 'Commencer un contrat &l(aucun contrat disponible pour le moment.)'
 #Tempoed out.
 #    event: its_checkstartr1
   rang1_claim:
-    text: Récupérer une récompense
-    event: its_checkclaimr1
+    text: 'Récupérer une récompense'
+    events: its_checkclaimr1

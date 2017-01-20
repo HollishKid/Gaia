@@ -1,6 +1,6 @@
 #
 #
-# 
+#
 # Conditions
 #
 #                Default
@@ -124,11 +124,11 @@ skin_premade: and reput_athelas2,votes5
 #
 ######################################
 #
-compte_tempo_defined: variable %objective.banking.depot% \d+
-compte_tempo_wrong: variable %objective.banking.depot% \D+
+compte_tempo_defined: 'variable %objective.banking.depot% \d+'
+compte_tempo_wrong: 'variable %objective.banking.depot% \D+'
 #
-poche_tempo_defined: variable %objective.banking.retrait% \d+
-poche_tempo_wrong: variable %objective.banking.retrait% \D+
+poche_tempo_defined: 'variable %objective.banking.retrait% \d+'
+poche_tempo_wrong: 'variable %objective.banking.retrait% \D+'
 #
 compte_enough: money %objective.banking.depot%
 poche_enough: point compte %objective.banking.retrait%
@@ -207,14 +207,14 @@ on_bat_est6: location -3538;65;-944;Gaia;33
 on_bat_est7: location -756;65;456;Gaia;33
 #
 divine: tag divine
-spawn: tag spawn
+has_spawn: tag has_spawn
 athelas: tag athelas
 zedds: tag zedds
 pirateden: tag pirateden
 soulstorm: tag soulstorm
 frontest: tag frontest
 jumaker: tag jumaker
-or_spawn: or spawn,divine
+or_spawn: or has_spawn,divine
 or_athelas: or athelas,divine
 or_zedds: or zedds,divine
 or_pirateden: or pirateden,divine
@@ -273,7 +273,7 @@ makarov_recommandation: journal Zedd.maka_tempo_journal_intendant
 mage_recommandation: journal hollish.mage_entry_branching_out
 #
 #
-# Grades 
+# Grades
 #
 #
 grade_ecuyer: tag grade_ecuyer
@@ -321,7 +321,7 @@ job_repair_have4: item craft_gold:5
 job_guilde_combat1: or job_swords,job_axes,job_unarmed
 job_guilde_combat2: or job_swords,job_archer,job_unarmed
 job_guilde_combat3: or job_archer,job_axes,job_unarmed
-job_guilde_combat4: or job_swords,job_axes,job_archer 
+job_guilde_combat4: or job_swords,job_axes,job_archer
 #
 job_archer: tag job_archer
 job_archer_done: tag job_archer_done
@@ -415,7 +415,7 @@ bucheron: tag bucheron
 #
 #
 # Métiers
-# 
+#
 #
 #
 metier_have: or metier_poings,metier_epees,metier_haches,metier_arc,metier_alchimiste,metier_acrobate,metier_peche,metier_apprivoiseur,metier_herboriste,metier_mineur,metier_reparation,metier_excavation,metier_bucheron
@@ -844,31 +844,8 @@ craft_jambes_diamant_tempo_have: item diamond_legs
 #
 craft_pieds_diamant_have: item craft_pieds_diamant
 craft_pieds_diamant_tempo_have: item diamond_boots
-#
-#
-# Skript Extentions
-#
-#
-empty_inventory: and empty_inv,empty_armor
-empty_inv: empty 36
-empty_armor: and !ea1,!ea2,!ea3,!ea4,!ea5,!ea6,!ea7,!ea8,!ea9,!ea10,!ea11,!ea12,!ea13,!ea14,!ea15,!ea16,!ea17,!ea18,!ea19,!ea20
-ea1: armor leather_boots
-ea2: armor leather_pants
-ea3: armor leather_tunic
-ea4: armor leather_helmet
-ea5: armor iron_boots
-ea6: armor iron_legs
-ea7: armor iron_chestplate
-ea8: armor iron_helmet
-ea9: armor chain_boots
-ea10: armor chain_legs
-ea11: armor chain_body
-ea12: armor chain_helmet
-ea13: armor gold_boots
-ea14: armor gold_legs
-ea15: armor gold_plate
-ea16: armor gold_helmet
-ea17: armor diamond_boots
-ea18: armor diamond_legs
-ea19: armor diamond_body
-ea20: armor diamond_helmet
+
+
+
+
+
