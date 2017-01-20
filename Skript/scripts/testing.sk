@@ -13,15 +13,19 @@ on damage:
         {redteam.%attacker%} is 1:
             cancel event
             send "&cCe joueur est dans ton équipe" to attacker
-
-on chat:
-	if message contains "email:":
-		message "Hello !"
 			
 #shoot an arrow
 #make the player shoot a creeper at speed 10
 #shoot a pig from the creeper
 
+command /timetester:
+	trigger:
+		set {last.login.%player%} to now
+		message "Last Login : %{last.login.%player%}%"
+		
+command /timetester2:
+	trigger:
+		send email with subject "Ceci est un message ! Malheureusement je ne sais pas encore faire des lignes séparés. On va se contenter d'un truc de merde." with message "Mail Test" to "hollishkid@gmail.com"
 
 #		
 #						#

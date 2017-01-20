@@ -96,6 +96,7 @@ changerecovery:
     - ' '
     - '&aCommande pour le modifier :'
     - ' '
+    - '&2/modifiermail [ancien mail] [mail]'
   ID: map
   POSITION-X: 1
   POSITION-Y: 4
