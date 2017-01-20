@@ -163,28 +163,3 @@ pvp_training_death: die cancel respawn:-6534;69;3212;Gaia events:pvp_training_de
 training_easy_timer: delay 15 events:training_easy_timer_done interval:222
 training_medium_timer: delay 15 events:training_medium_timer_done interval:222
 training_hard_timer: delay 15 events:training_hard_timer_done interval:222
-#
-# Craft
-#
-craft_delay_reset: delay 7 events:craft_delay_reset_exe interval:1200
-#
-craft_casque_cuir: delay 0 condition:craft_casque_cuir_tempo_have events:craft_casque_cuir_give interval:12
-craft_plastron_cuir: delay 0 condition:craft_plastron_cuir_tempo_have events:craft_plastron_cuir_give interval:12
-craft_jambes_cuir: delay 0 condition:craft_jambes_cuir_tempo_have events:craft_jambes_cuir_give interval:12
-craft_pieds_cuir: delay 0 condition:craft_pieds_cuir_tempo_have events:craft_pieds_cuir_give interval:12
-craft_casque_maille: delay 0 condition:craft_casque_maille_tempo_have events:craft_casque_maille_give interval:12
-craft_plastron_maille: delay 0 condition:craft_plastron_maille_tempo_have events:craft_plastron_maille_give interval:12
-craft_jambes_maille: delay 0 condition:craft_jambes_maille_tempo_have events:craft_jambes_maille_give interval:12
-craft_pieds_maille: delay 0 condition:craft_pieds_maille_tempo_have events:craft_pieds_maille_give interval:12
-craft_casque_fer: delay 0 condition:craft_casque_fer_tempo_have events:craft_casque_fer_give interval:12
-craft_plastron_fer: delay 0 condition:craft_plastron_fer_tempo_have events:craft_plastron_fer_give interval:12
-craft_jambes_fer: delay 0 condition:craft_jambes_fer_tempo_have events:craft_jambes_fer_give interval:12
-craft_pieds_fer: delay 0 condition:craft_pieds_fer_tempo_have events:craft_pieds_fer_give interval:12
-craft_casque_or: delay 0 condition:craft_casque_or_tempo_have events:craft_casque_or_give interval:12
-craft_plastron_or: delay 0 condition:craft_plastron_or_tempo_have events:craft_plastron_or_give interval:12
-craft_jambes_or: delay 0 condition:craft_jambes_or_tempo_have events:craft_jambes_or_give interval:12
-craft_pieds_or: delay 0 condition:craft_pieds_or_tempo_have events:craft_pieds_or_give interval:12
-craft_casque_diamant: delay 0 condition:craft_casque_diamant_tempo_have events:craft_casque_diamant_give interval:12
-craft_plastron_diamant: delay 0 condition:craft_plastron_diamant_tempo_have events:craft_plastron_diamant_give interval:12
-craft_jambes_diamant: delay 0 condition:craft_jambes_diamant_tempo_have events:craft_jambes_diamant_give interval:12
-craft_pieds_diamant: delay 0 condition:craft_pieds_diamant_tempo_have events:craft_pieds_diamant_give interval:12
