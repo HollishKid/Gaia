@@ -1,4 +1,4 @@
-quester: Ermite
+quester: 'Ermite'
 first: hello
 stop: 'false'
 ############
@@ -8,7 +8,7 @@ stop: 'false'
 ############
 NPC_options:
   hello:
-    text: Soyez patient, &2%player%&a&o, nous sommes bientôt arrivés ...
+    text: 'Soyez patient, &2%player%&a&o, nous sommes bientôt arrivés ...'
 ############
 #          #
 #  JOUEUR  #

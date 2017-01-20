@@ -1,4 +1,4 @@
-quester: Soldat Deprimer
+quester: 'Soldat Deprimer'
 first: aie,retour,millemerci,vousnepouvez
 stop: 'false'
 ###########
@@ -8,37 +8,37 @@ stop: 'false'
 ###########
 NPC_options:
   millemerci:
-    text: Je vous remercie de votre aide !
+    text: 'Je vous remercie de votre aide !'
     conditions: 'Loyer_Done'
   vousnepouvez:
-    text: Ah, que faire ? Que faire ? Je ne sais plus quoi faire!
+    text: 'Ah, que faire ? Que faire ? Je ne sais plus quoi faire!'
   aie:
-    text: Aie, je suis bien embêter, comment je vais faire ?!
+    text: 'Aie, je suis bien embêter, comment je vais faire ?!'
     conditions: 'Besoin_Aide,!Loyer_Done,!Cruel_Tag,!Bonter_Tag'
-    pointer: bonjour
+    pointers: bonjour
   loyer:
     text: 'Ah, bonjour ... Tu est nouveau ? Le Chef d''Escadron ma demander d''allé chercher le loyer d''une femme qui veut pas payer. \nMais le prix à était doubler par le Roi est elle veut pas payer ! Je ne sais plus quoi faire, je risque d''être virer !'
-    pointer: laissemoifaire
+    pointers: laissemoifaire
   ou:
-    text: 'Elle s''occupe de l''auberge à côtés du port ! Elle se nomme Claire.'  
-    events: 'Quetes_Loyer'
+    text: 'Elle s''occupe de l''auberge à côtés du port ! Elle se nomme Claire.'
+    events: Quetes_Loyer
   retour:
-    text: Vous revoilà !
+    text: 'Vous revoilà !'
     conditions: 'Loyer_Payer,!Loyer_Done'
-    pointer: voila
+    pointers: voila
   maiscomment:
-    text: Mais comment avez vous fais ?!
-    pointer: bonter,cruel
+    text: 'Mais comment avez vous fais ?!'
+    pointers: bonter,cruel
   jevois:
-    text: Je vois ! je vais pas te forcer mais merci !
-    events: 'Defaut_Loyer'
+    text: 'Je vois ! je vais pas te forcer mais merci !'
+    events: Defaut_Loyer
   jevois2:
-    text: Je vois ! Mais je suis pas douer pour mentir !
-    events: 'Defaut_Loyer'
-    pointer: qui
+    text: 'Je vois ! Mais je suis pas douer pour mentir !'
+    events: Defaut_Loyer
+    pointers: qui
   ah:
     text: '...*bouche bée*'
-    events: 'Defaut_Loyer'
+    events: Defaut_Loyer
 #############
 #           #
 #   Joueur  #
@@ -47,21 +47,21 @@ NPC_options:
 player_options:
   bonjour:
     text: 'Qu''est-ce qui ce passe ? Pourquoi est tu si hésitant et déprimer ?'
-    pointer: loyer
+    pointers: loyer
   laissemoifaire:
-    text: Laisse moi mon occupé, où habite-t-elle ?
-    pointer: ou
+    text: 'Laisse moi mon occupé, où habite-t-elle ?'
+    pointers: ou
   voila:
-    text: Voilà le loyer comme promis !
-    pointer: maiscomment
+    text: 'Voilà le loyer comme promis !'
+    pointers: maiscomment
   bonter:
-    text: C'est un secret ! 
+    text: 'C''est un secret !'
     conditions: 'Bonter_Tag'
-    pointer: jevois
+    pointers: jevois
   cruel:
-    text: Facile, fallais juste la menacer !
+    text: 'Facile, fallais juste la menacer !'
     conditions: 'Cruel_Tag'
-    pointer: jevois2
+    pointers: jevois2
   qui:
-    text: Qui à dis que je menter ?
-    pointer: ah
+    text: 'Qui à dis que je menter ?'
+    pointers: ah

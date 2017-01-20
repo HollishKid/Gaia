@@ -3,4 +3,4 @@ first: back
 stop: 'false'
 NPC_options:
   back:
-    text: Bonjour Je suis %npc% !
+    text: 'Bonjour Je suis %npc% !'

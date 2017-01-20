@@ -1,4 +1,4 @@
-quester: Larca
+quester: 'Larca'
 first: unknown,welcome,member
 stop: 'false'
 #                   #
@@ -8,29 +8,29 @@ stop: 'false'
 #                   #
 NPC_options:
   unknown:
-    text: Je ne vous connais pas ! Allez voir l'&2Intendant &a&o!
+    text: 'Je ne vous connais pas ! Allez voir l''&2Intendant &a&o!'
     conditions: '!gestionnaire'
   welcome:
-    text: Salut jeune athlète ! Que viens tu faire aujourd'hui ?
+    text: 'Salut jeune athlète ! Que viens tu faire aujourd''hui ?'
     conditions: 'gestionnaire,!acrobate'
-    pointer: presentation,become_member,rien
+    pointers: presentation,become_member,rien
   pres_ok:
-    text: Ok ! Je vous acceuillerais avec plaisir lorsque vous serez officiellement Citoyen !
+    text: 'Ok ! Je vous acceuillerais avec plaisir lorsque vous serez officiellement Citoyen !'
     events: found_guild2,guild_tester
   member_ok:
-    text: Très bien, bienvenue parmi nous ! Notre Guilde spécialise dans les arts du corps, l'Acrobatie. \nLe Menu de la Guilde te permet de choisir ce métier parmis d'autres avantages !
-    event: acrobate
-    pointer: menu,merci
+    text: 'Très bien, bienvenue parmi nous ! Notre Guilde spécialise dans les arts du corps, l''Acrobatie. \nLe Menu de la Guilde te permet de choisir ce métier parmis d''autres avantages !'
+    events: acrobate
+    pointers: menu,merci
 #
 #
 # Add any guild-specific quests in pointers of "member"
   member:
-    text: Bienvenue dans votre guilde, &2%player% &a&o!
-    conditions: acrobate
-    pointer: menu,merci
+    text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
+    conditions: 'acrobate'
+    pointers: menu,merci
   acrobate_menu:
-    text: Le voilà !
-    event: acrobate_menu
+    text: 'Le voilà !'
+    events: acrobate_menu
 #                   #
 #                   #
 # Options du Joueur #
@@ -38,17 +38,17 @@ NPC_options:
 #                   #
 player_options:
   presentation:
-    text: Je viens me présenter de la part de l'Intendant !
+    text: 'Je viens me présenter de la part de l''Intendant !'
     conditions: 'guilde_acrobates'
-    pointer: pres_ok
+    pointers: pres_ok
   become_member:
-    text: Je veux devenir membre de la Guilde des Acrobates !
-    condition: '!acrobate,intendant_done'
-    pointer: member_ok
+    text: 'Je veux devenir membre de la Guilde des Acrobates !'
+    conditions: '!acrobate,intendant_done'
+    pointers: member_ok
   menu:
-    text: Je voudrais accéder au Menu de la Guilde.
-    pointer: acrobate_menu
+    text: 'Je voudrais accéder au Menu de la Guilde.'
+    pointers: acrobate_menu
   rien:
-    text: Rien du tout...
+    text: 'Rien du tout...'
   merci:
-    text: Merci ! Au revoir !
+    text: 'Merci ! Au revoir !'

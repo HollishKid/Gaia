@@ -124,27 +124,25 @@ effects:
     circles: 20
     grow: 3
     radius: 5
-cancel: {}
 variables:
-  uhc11: Hollish
+  uhc11: 'Hollish'
   random1: '201343679852'
-  uhc12: vide
-  uhc13: vide
-  uhc14: vide
-  uhc15: vide
-  uhc21: vide
-  uhc22: vide
-  uhc23: vide
-  uhc24: vide
-  uhc25: vide
-  uhc31: vide
-  uhc32: vide
-  uhc33: vide
-  uhc34: vide
-  uhc35: vide
-  uhc41: vide
-  uhc42: vide
-  uhc43: vide
-  uhc44: vide
-  uhc45: vide
-journal_main_page: {}
+  uhc12: 'vide'
+  uhc13: 'vide'
+  uhc14: 'vide'
+  uhc15: 'vide'
+  uhc21: 'vide'
+  uhc22: 'vide'
+  uhc23: 'vide'
+  uhc24: 'vide'
+  uhc25: 'vide'
+  uhc31: 'vide'
+  uhc32: 'vide'
+  uhc33: 'vide'
+  uhc34: 'vide'
+  uhc35: 'vide'
+  uhc41: 'vide'
+  uhc42: 'vide'
+  uhc43: 'vide'
+  uhc44: 'vide'
+  uhc45: 'vide'

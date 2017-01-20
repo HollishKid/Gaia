@@ -1,4 +1,4 @@
-quester: Zael
+quester: 'Zael'
 first: n1,n2
 stop: 'false'
 ##########################
@@ -9,10 +9,10 @@ stop: 'false'
 NPC_options:
 #
   n1:
-    text: Tu devrais aller voir le &2Chef Jimbo&a&o maintenant, il me semble qu'il a du travail pour toi.
+    text: 'Tu devrais aller voir le &2Chef Jimbo&a&o maintenant, il me semble qu''il a du travail pour toi.'
     conditions: '!jim_q2done'
-    event: zae_conversdone
+    events: zae_conversdone
   n2:
-    text: Ah, tant que j'y pense, le maitre a demandé à te voir dès que tu reviendrais. Monte vite le voir !
+    text: 'Ah, tant que j''y pense, le maitre a demandé à te voir dès que tu reviendrais. Monte vite le voir !'
     conditions: 'jim_q2done'
-    event: makarov_access,zae_conversdone,jim_q23_journal_del
+    events: makarov_access,zae_conversdone,jim_q23_journal_del

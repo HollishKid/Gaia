@@ -1,4 +1,4 @@
-quester: Aldwin
+quester: 'Aldwin'
 first: n1,n2,n3,n4
 stop: 'false'
 ##########################
@@ -12,15 +12,15 @@ NPC_options:
     text: '...'
     conditions: '!eko_q3start,!eko_q3done,!ald_inconvers'
   n2:
-    text: Pssst! %player%, parlez moins fort, de l'autre coté de cette porte se trouve &4Erek&a&o et sa bande de mercenaires!
+    text: 'Pssst! %player%, parlez moins fort, de l''autre coté de cette porte se trouve &4Erek&a&o et sa bande de mercenaires!'
     conditions: '!ald_inconvers,eko_q3start,!hol_firstgo,!eko_q3done,!hol_done'
-    event: ald_firstgo,ald_inconvers
+    events: ald_firstgo,ald_inconvers
   n3:
-    text: Voulez vous pénétrer dans &4La Tanière du Traître&a&o?
+    text: 'Voulez vous pénétrer dans &4La Tanière du Traître&a&o?'
     conditions: '!ald_inconvers,hol_access,!hol_timer'
-    pointer: rep1,rep2
+    pointers: rep1,rep2
   n4:
-    text: Vous devriez vous reposer un peu avant de recommencer.(Temps restant avant réinitialisation:&d %objective.hol_delay.left% &a&o)
+    text: 'Vous devriez vous reposer un peu avant de recommencer.(Temps restant avant réinitialisation:&d %objective.hol_delay.left% &a&o)'
     conditions: 'hol_timer'
 #
 #
@@ -32,9 +32,9 @@ NPC_options:
 player_options:
 #
   rep1:
-    text: Je le veux!
-    event: hol_startfolder,hol_in
+    text: 'Je le veux!'
+    events: hol_startfolder,hol_in
   rep2:
-    text: Non merci !
+    text: 'Non merci !'
 #
 #

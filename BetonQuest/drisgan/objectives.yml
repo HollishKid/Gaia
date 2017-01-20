@@ -8,7 +8,7 @@ las_objarrow: arrow -7167;64.5;3563.5;Gaia;3.5 events:las_arrowhit
 #
 ########## Eko
 #
-eko_q2obj: mmobkill hol_add amount:3 event:eko_q2droplettre
+eko_q2obj: mmobkill hol_add amount:3 events:eko_q2droplettre
 #
 ########## Black Hole Erek
 #

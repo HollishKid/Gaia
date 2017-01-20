@@ -1,4 +1,4 @@
-quester: Lasswell
+quester: 'Lasswell'
 first: n1
 stop: 'false'
 ##########################
@@ -9,9 +9,9 @@ stop: 'false'
 NPC_options:
 #
   n1:
-    text: Tu as accomplis le travail? Eh bien on peut dire que tu n'auras pas volé cette récompense!
+    text: 'Tu as accomplis le travail? Eh bien on peut dire que tu n''auras pas volé cette récompense!'
     conditions: '!las_inconvers,hol_done,!eko_q3done'
-    event: las_inconvers,las2_holreward
+    events: las_inconvers,las2_holreward
   n2:
-    text: Sors de ce bureau !
+    text: 'Sors de ce bureau !'
     conditions: '!las_inconvers,hol_done,eko_q3done'

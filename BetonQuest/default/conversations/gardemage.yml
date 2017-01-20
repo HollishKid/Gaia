@@ -1,17 +1,18 @@
-quester: Garde Mage
+quester: 'Garde Mage'
 first: unknown,open
 stop: 'false'
 NPC_options:
   unknown:
-    text: Vous n'êtes pas de cette ville ! Parlez à l'&2Intendant &a&o!
+    text: 'Vous n''êtes pas de cette ville ! Parlez à l''&2Intendant &a&o!'
     conditions: '!intendant_done'
   open:
-    text: Bienvenue &2%player%&a&o, que &6Gaïa &a&ovous guide.
-    condition: intendant_done
-    pointer: quel
+    text: 'Bienvenue &2%player%&a&o, que &6Gaïa &a&ovous guide.'
+    conditions: 'intendant_done'
+    pointers: quel
   quel_rep:
-    text: C'est un lieu consacré à &6Gaïa&a&o, on l'appelle le &dSanctuaire&a&o.
+    text: 'C''est un lieu consacré à &6Gaïa&a&o, on l''appelle le &dSanctuaire&a&o.'
 player_options:
   quel:
-    text: Quel est cet endroit?
-    pointer: quel_rep
+    text: 'Quel est cet endroit?'
+    pointers: quel_rep
+

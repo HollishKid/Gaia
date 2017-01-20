@@ -1,49 +1,49 @@
-quester: Olaf
+quester: 'Olaf'
 first: unknown,hostile,neutre,amical,honore,exalte,delay_ilse2
 stop: 'false'
 #Options du NPC
 NPC_options:
   unknown:
-    text: Vous êtes inconnu dans cette ville. Parlez à l'&2Intendant &a&o!
-    condition: '!intendant_done'
+    text: 'Vous êtes inconnu dans cette ville. Parlez à l''&2Intendant &a&o!'
+    conditions: '!intendant_done'
   delay_ilse2:
-    text: Je trouve que vous me parlez un peu souvent... !
-    conditions: delay_ilse2
+    text: 'Je trouve que vous me parlez un peu souvent... !'
+    conditions: 'delay_ilse2'
   hostile:
-    text: Tu cherches la bagarre toi ? Vas-t-en de là avant que je te mette une autre giffle! 
+    text: 'Tu cherches la bagarre toi ? Vas-t-en de là avant que je te mette une autre giffle!'
     conditions: '!neutre,!delay_ilse2'
-    events: baffe 
+    events: baffe
   neutre:
-    text: Bonjour &2%player%&a&o ! Comment allez vous ?
+    text: 'Bonjour &2%player%&a&o ! Comment allez vous ?'
     conditions: 'neutre,!amical,!delay_ilse2'
-    pointer: bonjour,tagueule
+    pointers: bonjour,tagueule
   amical:
-    text: J'espère que vous avez une maison avec de solides murs ! Les rumeurs sur les nouveaux &dPortails Magiques &a&osont de plus en plus inquiétantes !
+    text: 'J''espère que vous avez une maison avec de solides murs ! Les rumeurs sur les nouveaux &dPortails Magiques &a&osont de plus en plus inquiétantes !'
     conditions: 'amical,!honore,!delay_ilse2'
-    pointer: nopb,pd
+    pointers: nopb,pd
   honore:
-    text: On dit que vous êtes un vaillant Aventurier ! Votre présence ici me rassure énormément !
+    text: 'On dit que vous êtes un vaillant Aventurier ! Votre présence ici me rassure énormément !'
     conditions: 'honore,!exalte,!delay_ilse2'
-    pointer: merci,pd2
+    pointers: merci,pd2
   exalte:
-    text: Heureusement que de vaillants Aventuriers comme vous soient ici pour prêter main forte contre les Forces du Mal !
+    text: 'Heureusement que de vaillants Aventuriers comme vous soient ici pour prêter main forte contre les Forces du Mal !'
     conditions: 'exalte,!delay_ilse2'
 #Options du joueur
 player_options:
   bonjour:
-    text: Bonjour à vous!
+    text: 'Bonjour à vous!'
     events: reput_athelas1_positif,delay_ilse2
   tagueule:
-    text: Dégagez de mon chemin !
-    events:  reput_athelas1_negatif,delay_ilse2
+    text: 'Dégagez de mon chemin !'
+    events: reput_athelas1_negatif,delay_ilse2
   nopb:
-    text: Ne vous en faites pas, je sais me défendre !
+    text: 'Ne vous en faites pas, je sais me défendre !'
   pd:
-    text: Peureux! Mêlez vous de vos affaires ! 
+    text: 'Peureux! Mêlez vous de vos affaires !'
     events: reput_athelas1_negatif,delay_ilse2
   merci:
-    text: Merci à vous! Vous êtes bien gentil !
+    text: 'Merci à vous! Vous êtes bien gentil !'
     events: reput_athelas2_positif,delay_ilse2
   pd2:
-    text: On dirait que vous êtes amoureux ! Vous voulez mon portrait ?!
+    text: 'On dirait que vous êtes amoureux ! Vous voulez mon portrait ?!'
     events: reput_athelas3_negatif,delay_ilse2

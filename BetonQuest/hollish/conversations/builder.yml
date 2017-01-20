@@ -1,13 +1,13 @@
-quester: Hollish
+quester: 'Hollish'
 first: welcome,goodbye
 stop: 'false'
 NPC_options:
   welcome:
-    text: Bienvenue dans ta zone, &2%player%&a&o!
-    condition: builder,!builder_in
+    text: 'Bienvenue dans ta zone, &2%player%&a&o!'
+    conditions: 'builder,!builder_in'
     events: builder_in,gm_1_builder
   goodbye:
-    text: Reviens nous vite, &2%player%&a&o!
-    condition: builder,builder_in
+    text: 'Reviens nous vite, &2%player%&a&o!'
+    conditions: 'builder,builder_in'
     events: builder_out,gm_0_builder
 player_options:

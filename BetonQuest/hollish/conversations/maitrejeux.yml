@@ -1,4 +1,4 @@
-quester: Maître de Jeu
+quester: 'Maître de Jeu'
 first: welcome
 stop: 'false'
 #        #
@@ -6,12 +6,12 @@ stop: 'false'
 #        #
 NPC_options:
   welcome:
-    text: Salut, &2%player% &a&o! \nTu es venu pour jouer ?
-    pointer: games_create
+    text: 'Salut, &2%player% &a&o! \nTu es venu pour jouer ?'
+    pointers: games_create
 #        #
 # Joueur #
 #        #
 player_options:
   games_create:
-    text: Je voudrais voir les parties disponibles !
+    text: 'Je voudrais voir les parties disponibles !'
     events: jeu_creator

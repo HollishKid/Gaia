@@ -1,4 +1,4 @@
-quester: Ardere
+quester: 'Ardere'
 first: welcome
 stop: 'false'
 #                #
@@ -8,46 +8,46 @@ stop: 'false'
 #                #
 NPC_options:
   welcome:
-    text: Que Gaïa vous guide, &2%player% &a&o!
-    pointer: milo,milobis,sanctuary,spirituality,chargeagain,charge,train,trainhave,merci
+    text: 'Que Gaïa vous guide, &2%player% &a&o!'
+    pointers: milo,milobis,sanctuary,spirituality,chargeagain,charge,train,trainhave,merci
   sanctuary_rep:
-    text: Vous êtes ici dans un &dSpiritualium&a&o, un petit recoin de spiritualité. Le grand &dSanctuaire &a&oest au Nord-Ouest d'ici.
+    text: 'Vous êtes ici dans un &dSpiritualium&a&o, un petit recoin de spiritualité. Le grand &dSanctuaire &a&oest au Nord-Ouest d''ici.'
   milo_rep:
-    text: Hmmmm... Cette fiole est agitée en effet... \nVous devrez la rapprocher du ciel, pour qu'elle se calme. \nAmenez là en haut de la montagne au nord d'ici. A son sommet, vous verrez qu'elle se calmera. \nAttention tout de même, cela ne fonctionnera que si vous vous y rendez pendant le coeur de la nuit, aux alentours de minuit donc !
+    text: 'Hmmmm... Cette fiole est agitée en effet... \nVous devrez la rapprocher du ciel, pour qu''elle se calme. \nAmenez là en haut de la montagne au nord d''ici. A son sommet, vous verrez qu''elle se calmera. \nAttention tout de même, cela ne fonctionnera que si vous vous y rendez pendant le coeur de la nuit, aux alentours de minuit donc !'
     events: journal_fiole_sommet,obj_fiole_sommet,journal_milo_ardere_del
   milobis_rep:
-    text: Excellent ! &2Aang &a&osera content de l'apprendre ! Cette fiole est très puissante en énergie d'Air maintenant.
-    event: tag_ardere_aang,journal_fiole_sommet_done_del,journal_fiole_for_wand
+    text: 'Excellent ! &2Aang &a&osera content de l''apprendre ! Cette fiole est très puissante en énergie d''Air maintenant.'
+    events: tag_ardere_aang,journal_fiole_sommet_done_del,journal_fiole_for_wand
   spirituality_rep:
-    text: Que voulez vous savoir ?
-    pointer: whycharge,whattodo,spirituality_win
+    text: 'Que voulez vous savoir ?'
+    pointers: whycharge,whattodo,spirituality_win
   whycharge_rep:
-    text: Une fois un os chargé, vous pouvez l'enterrer dans un bloc d'herbe et ainsi augmenter vos points de Spiritualité. \nAttention tout de même, si vous trouvez ou obtenez des Os Chargés autrement que par un moine, vous devrez parler à l'un de nous pour pouvoir enterrer ces Os Chargés !
+    text: 'Une fois un os chargé, vous pouvez l''enterrer dans un bloc d''herbe et ainsi augmenter vos points de Spiritualité. \nAttention tout de même, si vous trouvez ou obtenez des Os Chargés autrement que par un moine, vous devrez parler à l''un de nous pour pouvoir enterrer ces Os Chargés !'
   whattodo_rep:
-    text: Les points de Spiritualité permettent d'augmenter vos compétences grâce à la Magie. Parlez à l'&2Apprenti &a&oau &dSanctuaire &a&opour en savoir plus !
+    text: 'Les points de Spiritualité permettent d''augmenter vos compétences grâce à la Magie. Parlez à l''&2Apprenti &a&oau &dSanctuaire &a&opour en savoir plus !'
   chargeagain_rep:
-    text: Vous pouvez désormer enterrer des os chargé.
+    text: 'Vous pouvez désormer enterrer des os chargé.'
     events: default.spirituality_activator
   charge_no_have:
-    text: Vous n'avez pas d'os non chargé sur vous...
-    condition: '!os_have1'
+    text: 'Vous n''avez pas d''os non chargé sur vous...'
+    conditions: '!os_have1'
   charge_have:
-    text: Biensur ! Combien voulez vous que j'en charge ?
-    condition: os_have1
-    pointer: c1,ctous
+    text: 'Biensur ! Combien voulez vous que j''en charge ?'
+    conditions: 'os_have1'
+    pointers: c1,ctous
   c1_rep:
-    text: Le voilà !
-    event: os_charge1,default.spirituality_activator
+    text: 'Le voilà !'
+    events: os_charge1,default.spirituality_activator
   ctous_rep:
-    text: Les voilà !
-    event: os_chargeall,default.spirituality_activator
+    text: 'Les voilà !'
+    events: os_chargeall,default.spirituality_activator
   spirituality_win_rep:
-    text: Je connais un rituel qui vous permet de gagner plus de Spiritualité. Il vous suffit de vous accroupir dans un Spiritualium pendant 10 secondes. \nAinsi vous gagnerez deux fois plus de Spiritualité pendant 30 minutes lorsque vous enterez un Os Chargé !
+    text: 'Je connais un rituel qui vous permet de gagner plus de Spiritualité. Il vous suffit de vous accroupir dans un Spiritualium pendant 10 secondes. \nAinsi vous gagnerez deux fois plus de Spiritualité pendant 30 minutes lorsque vous enterez un Os Chargé !'
   train_rep:
-    text: Pas de souci, mais aidez moi à les réparer d'abord, passez moi 3 lingots de fer pour réparer ces vieux rails !
+    text: 'Pas de souci, mais aidez moi à les réparer d''abord, passez moi 3 lingots de fer pour réparer ces vieux rails !'
     events: journal_train_village,tag_train_village
   trainhave_rep:
-    text: Excellent ! Vous pourrez désormais prendre le train depuis notre gare et venir ici depuis la Gare Centrale d'Athelas !
+    text: 'Excellent ! Vous pourrez désormais prendre le train depuis notre gare et venir ici depuis la Gare Centrale d''Athelas !'
     events: destination_village_tag,journal_train_village_del,tag_train_village_del,take_train_iron
 #                #
 
@@ -56,60 +56,61 @@ NPC_options:
 #                #
 player_options:
   merci:
-    text: Merci !
+    text: 'Merci !'
   sanctuary:
-    text: Je cherche le Sanctuaire...
-    pointer: sanctuary_rep
+    text: 'Je cherche le Sanctuaire...'
+    pointers: sanctuary_rep
   milo:
-    text: Aang m'a envoyé avec cette fiole agitée. Il m'a dit que je pourrais canaliser son énergie ici.
+    text: 'Aang m''a envoyé avec cette fiole agitée. Il m''a dit que je pourrais canaliser son énergie ici.'
     conditions: 'tag_milo_ardere,!ardere_in_progress'
-    pointer: milo_rep
+    pointers: milo_rep
   milobis:
-    text: La fiole semble s'être calmée. Que devrais-je faire maintenant ?
+    text: 'La fiole semble s''être calmée. Que devrais-je faire maintenant ?'
     conditions: 'fiole_air_calmed_have,!tag_ardere_aang'
-    pointer: milobis_rep
+    pointers: milobis_rep
 #
 #
 #
   train:
-    text: Je voudrais utiliser le train de votre village !
-    condition: '!tag_train_village,!destination_village'
-    pointer: train_rep
+    text: 'Je voudrais utiliser le train de votre village !'
+    conditions: '!tag_train_village,!destination_village'
+    pointers: train_rep
   trainhave:
-    text: J'ai les 3 lingots de fer pour réparer la ligne de train !
-    condition: 'tag_train_village,!destination_village,train_have_iron'
-    pointer: trainhave_rep
-    
+    text: 'J''ai les 3 lingots de fer pour réparer la ligne de train !'
+    conditions: 'tag_train_village,!destination_village,train_have_iron'
+    pointers: trainhave_rep
+
 #
 #
 #
   spirituality:
-    text: Je voudrais en savoir un peu plus sur la spiritualité.
-    pointer: spirituality_rep
+    text: 'Je voudrais en savoir un peu plus sur la spiritualité.'
+    pointers: spirituality_rep
   whycharge:
-    text: Pourquoi charger des os ?
-    pointer: whycharge_rep
+    text: 'Pourquoi charger des os ?'
+    pointers: whycharge_rep
   whattodo:
-    text: Que faire avec mes points de Spiritualité ?
-    pointer : whattodo_rep
+    text: 'Que faire avec mes points de Spiritualité ?'
+    pointers: whattodo_rep
   chargeagain:
-    text: Je veux pouvoir enterrer des os chargés !
-    pointer: chargeagain_rep
+    text: 'Je veux pouvoir enterrer des os chargés !'
+    pointers: chargeagain_rep
   charge:
-    text: Pouvez vous charger ces os ?
-    pointer: charge_have,charge_no_have
+    text: 'Pouvez vous charger ces os ?'
+    pointers: charge_have,charge_no_have
 #
 #
 #
   c1:
-    text: Un s'il vous plaît !
-    pointer: c1_rep
+    text: 'Un s''il vous plaît !'
+    pointers: c1_rep
   ctous:
-    text: Tous s'il vous plaît !
-    condition: os_have2
-    pointer: ctous_rep
+    text: 'Tous s''il vous plaît !'
+    conditions: 'os_have2'
+    pointers: ctous_rep
 #
   spirituality_win:
-    text: Je voudrais gagner plus de Spiritualité !
-    pointer: spirituality_win_rep
-    
+    text: 'Je voudrais gagner plus de Spiritualité !'
+    pointers: spirituality_win_rep
+
+

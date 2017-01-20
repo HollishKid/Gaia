@@ -1,7 +1,7 @@
-quester: Loto
+quester: 'Loto'
 first: n1,n2,n3
 stop: 'true'
-prefix: 'tick'
+prefix: tick
 ##########################
 #                        #
 #       NPC OPTIONS      #
@@ -9,14 +9,14 @@ prefix: 'tick'
 ##########################
 NPC_options:
   n1:
-    text: "&6&oDONG!"
+    text: '"&6&oDONG!"'
     conditions: 'loto_start,!diamond,random_36'
-    event: choix_diamond
+    events: choix_diamond
   n2:
-    text: "&6&oDING!"
+    text: '"&6&oDING!"'
     conditions: 'loto_start,diamond'
-    event: roulette
+    events: roulette
   n3:
-    text: "&6&oDING!"
+    text: '"&6&oDING!"'
     conditions: 'loto_start,gold'
-    event: roulette
+    events: roulette

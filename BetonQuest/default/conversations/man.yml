@@ -1,20 +1,20 @@
-quester: Jacopo
-first: start,back
+quester: 'Jacopo'
+first: the_start,back
 stop: 'false'
 NPC_options:
-  start:
-    text: Bonjour à vous !
+  the_start:
+    text: 'Bonjour à vous !'
     conditions: '!amiral'
   back:
-    text: L'&2Amiral &a&om'a ordonné de vous ramener dans le port d'&dAthelas&a&o, êtes vous prêt à partir ?
-    conditions: amiral
-    pointer: oui,non
+    text: 'L''&2Amiral &a&om''a ordonné de vous ramener dans le port d''&dAthelas&a&o, êtes vous prêt à partir ?'
+    conditions: 'amiral'
+    pointers: oui,non
   depart:
-    text: Très bien! Rappelez vous d'aller voir l'&2Intendant &a&orapidement une fois en ville, il vous dira que faire ! \n&cNe vous souciez pas de la nourriture pour l'instant, votre barre de faim ne diminuera pas tant que vous êtes en formation avec l'&2Intendant&c.
+    text: 'Très bien! Rappelez vous d''aller voir l''&2Intendant &a&orapidement une fois en ville, il vous dira que faire ! \n&cNe vous souciez pas de la nourriture pour l''instant, votre barre de faim ne diminuera pas tant que vous êtes en formation avec l''&2Intendant&c.'
     events: teleport_start,tag_remover_begin,reput_athelas_init,jac_fold
 player_options:
   oui:
-    text: Oui, je suis prêt à affronter la ville !
-    pointer: depart
+    text: 'Oui, je suis prêt à affronter la ville !'
+    pointers: depart
   non:
-    text: Non, je préfère encore rester un peu sur le bâteau.
+    text: 'Non, je préfère encore rester un peu sur le bâteau.'

@@ -3,7 +3,7 @@
 #
 #voir_superieur1: location -9009;64;4626;Gaia;5 conditions:deja_vu events:voir_superieur_done
 tour_du_village: location -8948;83;4655;Gaia;5 conditions:voir_superieur_done events:tour_du_village_done
-voir_superieur: action right 193 conditions:deja_vu events:voir_superieur_done loc:-9009;64;4626;Gaia;1
+voir_superieur: action right SPRUCE_DOOR conditions:deja_vu events:voir_superieur_done loc:-9009;64;4626;Gaia;1
 #
 # Aktarion #
 #
@@ -28,14 +28,14 @@ louk_qE1: location -8869;82;4564;Gaia;5 conditions:louk_qE1 events:louk_objq1
 #louk_qch3: action right 54 loc:-8881;93;4561;Gaia;3 events:louk_tagch3,louk_tagch3_1,louk_objch3m,louk_verchall
 louk_objchall: location -8869;82;4564;Gaia;5 events:louk_chest_testerall
 louk_qE2: location -8798;80;4682;Gaia;5 events:louk_qE3
-louk_qE3: action right 58 loc:-8798;79;4684;Gaia;3 events:louk_qE4
+louk_qE3: action right WORKBENCH loc:-8798;79;4684;Gaia;3 events:louk_qE4
 #
 # Hollish Proposition
 #
-louk_qch1: action right 54 loc:-8851;77;4540;Gaia;3 events:louk_chest_tester1
-louk_qch2: action right 54 loc:-8881;93;4561;Gaia;3 events:louk_chest_tester2 cancel
-louk_qch3: action right 54 loc:-8829;84;4500;Gaia;3 events:louk_chest_tester3 cancel
+louk_qch1: action right CHEST loc:-8851;77;4540;Gaia;3 events:louk_chest_tester1
+louk_qch2: action right CHEST loc:-8881;93;4561;Gaia;3 events:louk_chest_tester2 cancel
+louk_qch3: action right CHEST loc:-8829;84;4500;Gaia;3 events:louk_chest_tester3 cancel
 #
 # Tatsu #
 #
-tatsu_q1: action right 58 loc:-8677;74;4410;Gaia;3 conditions:tatsu_q1 events:tatsu_q1_1
+tatsu_q1: action right WORKBENCH loc:-8677;74;4410;Gaia;3 conditions:tatsu_q1 events:tatsu_q1_1
