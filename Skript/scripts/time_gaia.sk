@@ -47,32 +47,79 @@ on load:
 #
 every 52 minutes in "Gaia":
 	set {hour.system} to "%hour%"
-
+#
+# At 5 o'clock
+#   East Continent reset
+#
 	if {hour.system} is "5":
 
 		if {day.index} is 7:
 			loop {place.location.1::*}:
 				set block at loop-value to air
-			wait 5 ticks
+			wait 22 ticks
 			loop {break.location.1::*}:
 				set block at loop-value to {break.type.1::%loop-index%}
 			clear {break.location.1::*}
 			clear {break.type.1::*}
 			clear {place.location.1::*}
-			wait 5 ticks
+			wait 22 ticks
 			
 		else:
 			set {day.index.temp} to {day.index::1} + 1
 			loop {place.location.%{day.index.temp}%::*}:
 				set block at loop-value to air
-			wait 5 ticks
+			wait 22 ticks
 			loop {break.location.%{day.index.temp}%::*}:
 				set block at loop-value to {break.type.%{day.index.temp}%::%loop-index%}
 			clear {break.location.%{day.index.temp}%::*}
 			clear {break.type.%{day.index.temp}%::*}
 			clear {place.location.%{day.index.temp}%::*}
-			wait 5 ticks
+			wait 22 ticks
+	
 #
 # ADD IN SERVER RESTART
 #
-
+#		At this level. (at 5 after East reset)
+#		
+#
+# Every 52 minutes BUT at 5 o'clock
+#   Avoids overload
+#
+	else:
+		loop all players:
+			if loop-player is in the region "dwarf_mine":
+				command "tppos %loop-player% -6604 63 2736" from console
+				message "La mine était instable, vous avez été évacué !"
+			if loop-player is in the region "mine_athelas_mine":
+				command "tppos %loop-player% -6803 66 2904" from console
+				message "La mine était instable, vous avez été évacué !"
+			if loop-player is in the region "mine_athelas_mine2":
+				command console "tppos %loop-player% -6603 66 2904"
+				message "La mine était instable, vous avez été évacué !"
+		wait 2 ticks	
+		loop {place.location.mine1::*}:
+			set block at loop-value to air
+		wait 2 ticks
+		loop {place.location.mine2::*}:
+			set block at loop-value to air
+		wait 2 ticks
+		loop {place.location.mine3::*}:
+			set block at loop-value to air
+		wait 2 ticks
+		loop {break.location.mine1::*}:
+			set block at loop-value to {break.type.mine1::%loop-index%}
+		clear {break.location.mine1::*}
+		clear {break.type.mine1::*}
+		clear {place.location.mine1::*}
+		wait 2 ticks
+		loop {break.location.mine2::*}:
+			set block at loop-value to {break.type.mine2::%loop-index%}
+		clear {break.location.mine2::*}
+		clear {break.type.mine2::*}
+		clear {place.location.mine2::*}
+		wait 2 ticks
+		loop {break.location.mine3::*}:
+			set block at loop-value to {break.type.mine3::%loop-index%}
+		clear {break.location.mine3::*}
+		clear {break.type.mine3::*}
+		clear {place.location.mine3::*}
