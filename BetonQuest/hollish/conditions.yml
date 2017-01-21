@@ -336,7 +336,7 @@ tag_ardere_aang: tag tag_ardere_aang
 aang_baton_have: item baton
 tag_aang_baton: tag tag_aang_baton
 empty_1: empty 1
-ingredients_air_wand: and aang_baton_have,fiole_air_calmed_have,empty_1
+ingredients_air_wand: and fiole_air_calmed_have,empty_1
 air_wand: tag air_wand
 fire_wand: tag fire_wand
 earth_wand: tag earth_wand

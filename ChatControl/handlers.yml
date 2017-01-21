@@ -92,11 +92,7 @@ tradelogger:
   Write_To_File: logs/tradelog.txt
   
 teleportlogger:
-  Write_To_File: logs/teleportlog.txt  
-
-compliment:
-  Execute_Commands:
-    - bq point %player add compliment 1
+  Write_To_File: logs/teleportlog.txt
     
 ilce:
   Execute_Commands:
