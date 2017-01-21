@@ -82,6 +82,26 @@ on load:
 # NPC mover
 #
 #
+options:
+	npcmovers: 52 and 54 and 316 and 321 and 320 and 318 and 228 and 229 and 319 and 69
+	x: -6975 and -6974 and -6997 and -6997 and -6951 and -6784 and -6796 and -6969 and -6718 and -6567
+	y: 73 and 73 and 84 and 84 and 64 and 64 and 64 and 73 and 72 and 66
+	z: 2959 and 2952 and 2959 and 2952 and 2966  and 2793 and 2793 and 2957 and 3026 and 3192
+	r: 0 and 0 and 0 and 0 and 3 and 0 and 0 and 3 and 1 and 7
+	
+	
+	x2: -6973 and -6923 and -7022 and -7003 and -6930  and -6799 and -6825 and -6886 and -6708 and -6558
+	y2: 74 and 64 and 89 and 89 and 64 and 64 and 64 and 64 and 73 and 72
+	z2: 2973 and 2959 and 2971 and 2936 and 2992  and 2809 and 2816 and 2971 and 3024 and 3160
+	r2: 2 and 6 and 3 and 2 and 5 and 4 and 3 and 3 and 2 and 3
+	
+	
+	x3: -6976 and -6883 and -7049 and -6999 and -6905  and -6763 and -6863 and -6864 and -6702 and -6576
+	y3: 75 and 62 and 87 and 91 and 64 and 65 and 64 and 64 and 68 and 63
+	z3: 2989 and 2916 and 2978 and 2920 and 3009  and 2821 and 2839 and 2992 and 2947 and 3160
+	r3: 3 and 3 and 4 and 2 and 3 and 3 and 5 and 3 and 4 and 2
+
+
 every 30 seconds in world "Gaia":       
     set {_x} to a random integer between -6920 and -6930
     set {_z} to a random integer between 2961 and 2951
@@ -93,33 +113,144 @@ every 30 seconds in world "Gaia":
     move citizen 80 to location of {_loc}
 
 	
-every 30 seconds in world "Gaia":
-#	if time in world "Gaia" is greater than 00:01:
-#		if time in world "Gaia" is smaller than 5:00:
-#			broadcast "lower than 5:00"
+every 22 seconds in world "Gaia":
+	if time in world "Gaia" is greater than 00:01:
+		if time in world "Gaia" is smaller than 5:00:
+			clear {npcmovers::*}
+			clear {npc_x::*}
+			clear {npc_y::*}
+			clear {npc_z::*}
+			clear {npc_r::*}
+			wait 7 ticks
+			loop {@npcmovers}:
+				add loop-value to {npcmovers::*}
+			loop {@x}:
+				add loop-value to {npc_x::*}
+			loop {@y}:
+				add loop-value to {npc_y::*}
+			loop {@z}:
+				add loop-value to {npc_z::*}
+			loop {@r}:
+				add loop-value to {npc_r::*}
+			wait 5 ticks
+			loop {npc_x::*}:
+				add a random integer between 0 and {npc_r::%loop-index%} to {npc_x::%loop-index%}
+			loop {npc_z::*}:
+				add a random integer between 0 and {npc_r::%loop-index%} to {npc_z::%loop-index%}
+			wait 5 ticks
+			loop {npcmovers::*}:
+				set {loc} to location at 0, 0, 0 of the world "Gaia"
+				set x coordinate of {loc} to {npc_x::%loop-index%}
+				set y coordinate of {loc} to {npc_y::%loop-index%}
+				set z coordinate of {loc} to {npc_z::%loop-index%}
+				move citizen {npcmovers::%loop-index%} to location of {loc}
+				wait 2 ticks
+			clear {npcmovers::*}
+			clear {npc_x::*}
+			clear {npc_y::*}
+			clear {npc_r::*}
 	if time in world "Gaia" is greater than 5:00:
 		if time in world "Gaia" is smaller than 12:00:
-			broadcast "lower than 12:00"
+			clear {npcmovers::*}
+			clear {npc_x2::*}
+			clear {npc_y2::*}
+			clear {npc_z2::*}
+			clear {npc_r2::*}
+			wait 7 ticks
+			loop {@npcmovers}:
+				add loop-value to {npcmovers::*}
+			loop {@x2}:
+				add loop-value to {npc_x2::*}
+			loop {@y2}:
+				add loop-value to {npc_y2::*}
+			loop {@z2}:
+				add loop-value to {npc_z2::*}
+			loop {@r2}:
+				add loop-value to {npc_r2::*}
+			wait 5 ticks
+			loop {npc_x2::*}:
+				add a random integer between 0 and {npc_r2::%loop-index%} to {npc_x2::%loop-index%}
+			loop {npc_z2::*}:
+				add a random integer between 0 and {npc_r2::%loop-index%} to {npc_z2::%loop-index%}
+			wait 5 ticks
+			loop {npcmovers::*}:
+				set x coordinate of {loc} to {npc_x2::%loop-index%}
+				set y coordinate of {loc} to {npc_y2::%loop-index%}
+				set z coordinate of {loc} to {npc_z2::%loop-index%}
+				move citizen {npcmovers::%loop-index%} to location of {loc}
+			clear {npcmovers::*}
+			clear {npc_x2::*}
+			clear {npc_y2::*}
+			clear {npc_r2::*}
 	if time in world "Gaia" is greater than 12:00:
 		if time in world "Gaia" is smaller than 19:00:
-			broadcast "lower than 19:00"
+			clear {npcmovers::*}
+			clear {npc_x3::*}
+			clear {npc_y3::*}
+			clear {npc_z3::*}
+			clear {npc_r3::*}
+			wait 7 ticks
+			loop {@npcmovers}:
+				add loop-value to {npcmovers::*}
+			loop {@x3}:
+				add loop-value to {npc_x3::*}
+			loop {@y3}:
+				add loop-value to {npc_y3::*}
+			loop {@z3}:
+				add loop-value to {npc_z3::*}
+			loop {@r3}:
+				add loop-value to {npc_r3::*}
+			wait 5 ticks
+			loop {npc_x3::*}:
+				add a random integer between 0 and {npc_r3::%loop-index%} to {npc_x3::%loop-index%}
+			loop {npc_z3::*}:
+				add a random integer between 0 and {npc_r3::%loop-index%} to {npc_z3::%loop-index%}
+			wait 5 ticks
+			loop {npcmovers::*}:
+				set x coordinate of {loc} to {npc_x3::%loop-index%}
+				set y coordinate of {loc} to {npc_y3::%loop-index%}
+				set z coordinate of {loc} to {npc_z3::%loop-index%}
+				move citizen {npcmovers::%loop-index%} to location of {loc}
+			clear {npcmovers::*}
+			clear {npc_x3::*}
+			clear {npc_y3::*}
+			clear {npc_r3::*}
 	if time in world "Gaia" is greater than 19:00:
-		broadcast "greater than 19:00"
+		clear {npcmovers::*}
+		clear {npc_x::*}
+		clear {npc_y::*}
+		clear {npc_z::*}
+		clear {npc_r::*}
+		wait 7 ticks
+		loop {@npcmovers}:
+			add loop-value to {npcmovers::*}
+		loop {@x}:
+			add loop-value to {npc_x::*}
+		loop {@y}:
+			add loop-value to {npc_y::*}
+		loop {@z}:
+			add loop-value to {npc_z::*}
+		loop {@r}:
+			add loop-value to {npc_r::*}
+		wait 5 ticks
+		loop {npc_x::*}:
+			add a random integer between 0 and {npc_r::%loop-index%} to {npc_x::%loop-index%}
+		loop {npc_z::*}:
+			add a random integer between 0 and {npc_r::%loop-index%} to {npc_z::%loop-index%}
+		wait 5 ticks
+		loop {npcmovers::*}:
+			set {loc} to location at 0, 0, 0 of the world "Gaia"
+			set x coordinate of {loc} to {npc_x::%loop-index%}
+			set y coordinate of {loc} to {npc_y::%loop-index%}
+			set z coordinate of {loc} to {npc_z::%loop-index%}
+			move citizen {npcmovers::%loop-index%} to location of {loc}
+			wait 2 ticks
+		clear {npcmovers::*}
+		clear {npc_x::*}
+		clear {npc_y::*}
+		clear {npc_r::*}
 
-options:
-	npcmovers: 316
-	x: -6975 and 191 and 201 and 211 and 221
-	y: 183 and 193
-	z: 182 and 192 and 202 and 212 and 223
-	r: 1 and 2 and 3 and 4 and 5
-	x2: -6973 and 191 and 201 and 211 and 221
-	y2: 183 and 193
-	z2: 182 and 192 and 202 and 212 and 223
-	r2: 1 and 3
-	x3: -6975 and 191 and 201 and 211 and 221
-	y3: 183 and 193
-	z3: 182 and 192 and 202 and 212 and 223
-	r3: 1 and 2 and 3 and 4 and 5
+
 	
 
 command /testing1:
@@ -141,18 +272,20 @@ command /testing1:
 		loop {@r}:
 			add loop-value to {npc_r::*}
 		wait 5 ticks
-		loop {x::*}:
+		loop {npc_x::*}:
 			add a random integer between 0 and {npc_r::%loop-index%} to {npc_x::%loop-index%}
-		loop {z::*}:
+		loop {npc_z::*}:
 			add a random integer between 0 and {npc_r::%loop-index%} to {npc_z::%loop-index%}
 		wait 5 ticks
 		loop {npcmovers::*}:
-			set x coordinate of {_loc} to {npc_x::%loop-index%}
-			set y coordinate of {_loc} to {npc_y::%loop-index%}
-			set z coordinate of {_loc} to {npc_z::%loop-index%}
-			move citizen {npcmovers::%loop-index%} to location of {_loc}
+			set {loc} to location at 0, 0, 0 of the world "Gaia"
+			set x coordinate of {loc} to {npc_x::%loop-index%}
+			set y coordinate of {loc} to {npc_y::%loop-index%}
+			set z coordinate of {loc} to {npc_z::%loop-index%}
+			move citizen {npcmovers::%loop-index%} to location of {loc}
+			wait 2 ticks
 		loop {npcmovers::*}:
-			message "%loop-value% a bougé x: %{x::%loop-index%}% z: %{z::%loop-index%}% r: %{r::%loop-index%}%!"
+			message "%loop-value% a bougé x: %{npc_x::%loop-index%}% z: %{npc_z::%loop-index%}% r: %{npc_r::%loop-index%}%!"
 		clear {npcmovers::*}
 		clear {npc_x::*}
 		clear {npc_y::*}
@@ -177,19 +310,55 @@ command /testing2:
 		loop {@r2}:
 			add loop-value to {npc_r2::*}
 		wait 5 ticks
-		loop {x::*}:
+		loop {npc_x2::*}:
 			add a random integer between 0 and {npc_r2::%loop-index%} to {npc_x2::%loop-index%}
-		loop {z::*}:
+		loop {npc_z2::*}:
 			add a random integer between 0 and {npc_r2::%loop-index%} to {npc_z2::%loop-index%}
 		wait 5 ticks
 		loop {npcmovers::*}:
-			set x coordinate of {_loc} to {npc_x2::%loop-index%}
-			set y coordinate of {_loc} to {npc_y2::%loop-index%}
-			set z coordinate of {_loc} to {npc_z2::%loop-index%}
-			move citizen {npcmovers::%loop-index%} to location of {_loc}
+			set x coordinate of {loc} to {npc_x2::%loop-index%}
+			set y coordinate of {loc} to {npc_y2::%loop-index%}
+			set z coordinate of {loc} to {npc_z2::%loop-index%}
+			move citizen {npcmovers::%loop-index%} to location of {loc}
 		loop {npcmovers::*}:
-			message "%loop-value% a bougé x: %{x::%loop-index%}% z: %{z::%loop-index%}% r: %{r::%loop-index%}%!"
+			message "%loop-value% a bougé x: %{npc_x2::%loop-index%}% z: %{npc_z2::%loop-index%}% r: %{npc_r2::%loop-index%}%!"
 		clear {npcmovers::*}
 		clear {npc_x2::*}
 		clear {npc_y2::*}
 		clear {npc_r2::*}
+		
+command /testing3:
+	trigger:
+		clear {npcmovers::*}
+		clear {npc_x3::*}
+		clear {npc_y3::*}
+		clear {npc_z3::*}
+		clear {npc_r3::*}
+		wait 7 ticks
+		loop {@npcmovers}:
+			add loop-value to {npcmovers::*}
+		loop {@x3}:
+			add loop-value to {npc_x3::*}
+		loop {@y3}:
+			add loop-value to {npc_y3::*}
+		loop {@z3}:
+			add loop-value to {npc_z3::*}
+		loop {@r3}:
+			add loop-value to {npc_r3::*}
+		wait 5 ticks
+		loop {npc_x3::*}:
+			add a random integer between 0 and {npc_r3::%loop-index%} to {npc_x3::%loop-index%}
+		loop {npc_z3::*}:
+			add a random integer between 0 and {npc_r3::%loop-index%} to {npc_z3::%loop-index%}
+		wait 5 ticks
+		loop {npcmovers::*}:
+			set x coordinate of {loc} to {npc_x3::%loop-index%}
+			set y coordinate of {loc} to {npc_y3::%loop-index%}
+			set z coordinate of {loc} to {npc_z3::%loop-index%}
+			move citizen {npcmovers::%loop-index%} to location of {loc}
+		loop {npcmovers::*}:
+			message "%loop-value% a bougé x: %{npc_x3::%loop-index%}% z: %{npc_z3::%loop-index%}% r: %{npc_r3::%loop-index%}%!"
+		clear {npcmovers::*}
+		clear {npc_x3::*}
+		clear {npc_y3::*}
+		clear {npc_r3::*}
