@@ -31,10 +31,9 @@ tatsu_q1: tag tatsu_q1
 tatsu_q1_1: tag tatsu_q1_1
 tatsu_qdone: tag tatsu_qdone
 #    Porte 1  #
-acces_porte1: tag acces_porte1
+acces_porte1: tag manual_acces_porte1
 porte1_door_check: party 9999 porte1_door_checker count:1
 porte1_door_checker: region mysteria_porte1
 #
 #
 #
-
