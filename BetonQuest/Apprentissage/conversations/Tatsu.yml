@@ -1,4 +1,4 @@
-quester: Tatsu
+quester: 'Tatsu'
 first: welcome,welcomebis
 stop: 'false'
 #
@@ -6,27 +6,28 @@ stop: 'false'
 #
 NPC_options:
   welcome:
-    text: Je ne m'attendais pas à voir passer un aventurier en ces lieux si lointains de la ville
+    text: 'Je ne m''attendais pas Ã  voir passer un aventurier en ces lieux si lointains de la ville'
     conditions: '!tatsu_dv'
     events: tatsu_dv
-    pointer: yop
+    pointers: yop
   welcomebis:
-    text:
+    text: 'Bonjour'
   tatsu_dq:
-    text: Il s'avère qu'il y à peu, j'ai perdu un objet d'une grande valeur sentimentale
-    pointer: tatsu_qa,tatsu_qr
+    text: 'Il s''avÃ¨re qu''il y Ã  peu, j''ai perdu un objet d''une grande valeur sentimentale'
+    pointers: tatsu_qa,tatsu_qr
   tatsu_qi:
-    text: C'est un vieux couteau, mais sa valeur est immense, je me souviens l'avoir laissé dans la cave d'une maison abandonnée
+    text: 'C''est un vieux couteau, mais sa valeur est immense, je me souviens l''avoir laissÃ© dans la cave d''une maison abandonnÃ©e'
 #
 #  Options Joueur
 #
 player_options:
   yop:
-    text: Bien le bonjour ! Avez-vous besoin d'aide ?
-    pointer: tatsu_dq
+    text: 'Bien le bonjour ! Avez-vous besoin d''aide ?'
+    pointers: tatsu_dq
   tatsu_qa:
-    text: Je compatis face à cette perte, je peux vous aider à le retrouver si vous le souhaitez
+    text: 'Je compatis face Ã  cette perte, je peux vous aider Ã  le retrouver si vous le souhaitez'
     events: tatsu_q1
-    pointer: tatsu_qi
+    pointers: tatsu_qi
   tatsu_qr:
-    text: Je n'ai pas l'habitude de fréquenter ces lieux, bon courage
+    text: 'Je n''ai pas l''habitude de frÃ©quenter ces lieux, bon courage'
+

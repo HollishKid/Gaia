@@ -1,2 +1,3 @@
 #   Tatsu   #
-tatsu_knife: STONE_SWORD data:0 name:§2Vieux_couteau lore:§8§oCe_couteau_a_une;§8§ogrande_valeur_sentimentale;§2Objet_de_Quête
+tatsu_knife: STONE_SWORD data:0 name:'Â§2Vieux_couteau' lore:'Â§8Â§oCe_couteau_a_une;Â§8Â§ogrande_valeur_sentimentale;Â§2Objet_de_QuÃªte'
+

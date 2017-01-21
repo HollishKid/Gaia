@@ -1,4 +1,4 @@
-﻿#
+#
 # Garderos et Kinsot #
 #
 journal_garderos_quete: 'Garderos m''a dit d''aller voir son superieur pour confirmer ma présence sous motif.'
@@ -6,8 +6,8 @@ journal_superieur_quete: 'J''ai pu voir le supérieur de Garderos qui m''a deman
 #
 # Aktarion
 #
-akt_qtE1: 'Direction le camp des brigands &a(-8869;82;4564) après la demande d''Aktarion'
-akt_qtE2: 'J''ai retrouvé l''objet d''Aktarion ! Il faut que j''aille lui ramener !'
+akt_qE1: 'Direction le camp des brigands &a(-8869;82;4564) après la demande d''Aktarion'
+akt_qE2: 'J''ai retrouvé l''objet d''Aktarion ! Il faut que j''aille lui ramener !'
 #
 # Loukran
 #
@@ -19,4 +19,4 @@ louk_qE4: 'Je viens de trouver une plante et un journal, je devrais rapporter ce
 # Tatsu
 #
 tatsu_q1: 'Tatsu m''a envoyé chercher son objet qu''il a perdu il y a peu'
-tatsu_q1_1: 'J''ai retrouvé l'objet en question, je devrais le rapporter à Tatsu'
+tatsu_q1_1: 'J''ai retrouvé l''objet en question, je devrais le rapporter à Tatsu'
