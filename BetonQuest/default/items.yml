@@ -67,18 +67,18 @@ oakwoodslab: WOOD_STEP data:0
 spiderblood: SLIME_BALL data:0 name:'§dSpider_Blood' lore:'§oBeerk...'
 oakleaves: LEAVES data:0
 waterbucket: WATER_BUCKET data:0
-flask_nighthaste: POTION data:0 name:'Flacon_de_hâte_nocturne' lore:'§8Par_Gretchen_Inc.;§cNotice:_Peut_causer_des_troubles_intestinaux.'
+flask_nighthaste: POTION data:0 name:'Flacon_de_hâte_nocturne' lore:'§8Par_Gretchen_Inc.;§cNotice:_Peut_causer_des_troubles_intestinaux.' type:UNCRAFTABLE effects:NIGHT_VISION:1:90,SPEED:2:90
 waterbottle: POTION data:0 type:WATER
 goldencarrot: GOLDEN_CARROT data:0
-flask_strength: POTION data:0 name:'Flacon_de_robustesse' lore:'§8Par_Gretchen_Inc.;§cNotice:_Peut_causer_des_troubles_cardiaques.'
-flask_suspect: POTION data:0 name:'Flacon_suspect' lore:'§8Par_Gretchen_Inc.;§cNotice:_Peut_causer_des_troubles_cérébraux.'
+flask_strength: POTION data:0 name:'Flacon_de_robustesse' lore:'§8Par_Gretchen_Inc.;§cNotice:_Peut_causer_des_troubles_cardiaques.' type:UNCRAFTABLE effects:REGENERATION:1:90,DAMAGE_RESISTANCE:1:90
+flask_suspect: POTION data:0 name:'Flacon_suspect' lore:'§8Par_Gretchen_Inc.;§cNotice:_Peut_causer_des_troubles_cérébraux.' type:UNCRAFTABLE effects:SLOW:1:30,WEAKNESS:1:30
 boat: BOAT data:0
 list: BLAZE_ROD data:0 name:'§2Brouilleur_arcanique' lore:';§8§oDevrait_suffire_à_rendre;§8§ole_portail_inutilisable.;§2Objet_de_Quête'
-the: POTION data:0 name:'§2Thé_de_Nimuë'
+the: POTION data:0 name:'§2Thé_de_Nimuë' type:UNCRAFTABLE
 recall_token: COMPASS data:0 name:'§6Recall_Token§4_(§c5_utilisations§4)' lore:'§o§aTeleport_to_waypoints;§c5_utilisations'
 ami_pack: CHEST data:0 name:'§2Pack_de_survie' lore:';§8§oCLIC_DROIT_pour_utiliser;§8§oun_objet_tenu_en_main;§2Objet_de_Quête'
 tarte: PUMPKIN_PIE data:0
-the_basic: POTION data:0 name:'§2Thé'
+the_basic: POTION data:0 name:'§2Thé' type:UNCRAFTABLE effects:REGENERATION:1:90
 soupe_betteraves: BEETROOT_SOUP data:0
 gateau_paulette: CAKE data:0 name:'§2Gâteau_de_Paulette'
 egg: EGG data:0
@@ -87,7 +87,7 @@ ble: WHEAT data:0
 carrot: CARROT_ITEM data:0
 betteraves: BEETROOT data:0
 tarte_chef: CAKE data:0 name:'§2Gâteau_du_Chef'
-goupil_head: SKULL_ITEM data:3 name:'§rGoupilDC16'
+goupil_head: SKULL_ITEM data:3 name:'§rGoupilDC16' owner:goupildc16
 wheat_seed: SEEDS data:0
 pumpkin_seed: PUMPKIN_SEEDS data:0
 pasteque_seed: MELON_SEEDS data:0
@@ -98,7 +98,7 @@ coal: COAL data:0
 coal_ore: COAL_ORE data:0
 rope: STRING data:0
 lapis: INK_SACK data:4
-epee1: GOLD_SWORD data:0 name:'§aÉpée_1er_Âge' lore:'§6Cet_épée_est_forgée_par_les;§6premiers_habitants_de_Gaïa;_;Rareté:_§aLégendaire'
+epee1: GOLD_SWORD data:0 name:'§aÉpée_1er_Âge' lore:'§6Cet_épée_est_forgée_par_les;§6premiers_habitants_de_Gaïa;_;Rareté:_§aLégendaire' enchants:DAMAGE_UNDEAD:4,DAMAGE_ARTHROPODS:4
 bone: BONE data:0 name:'none'
 bone_charged: BONE data:0 name:'§6Os_Chargé' lore:'§7§oOs_chargé_en_spiritualité;§7§oà_enterrer_sous_de_l''herbe;_;§8§oSi_je_ne_peux_pas_l''enterrer;§8§oje_devrais_demander;§8§oconseil_à_un_Moine.'
 bone_gros: BONE data:0 name:'§2Gros_Os' lore:'§8§oJe_devrais_l''amener_au;§8§oMoine_François_au_spiritualium;§8§oau_centre_d''Athelas.;§2Objet_de_Quête'
@@ -113,26 +113,26 @@ stone_block: STONE data:0
 stone_stairs: COBBLESTONE_STAIRS data:0
 Plume: FEATHER data:0
 Plume_etrange: FEATHER data:0 name:'Plume_étrange' lore:'Elle_semble_porter_le_poids_du_monde...'
-craft_casque_cuir: LEATHER_HELMET data:0 name:'§aCasque_Cuir_Tanné' lore:'§e§oCe_cuir_renforcé;§e§oest_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun'
-craft_plastron_cuir: LEATHER_CHESTPLATE data:0 name:'§aPlastron_Cuir_Tanné' lore:'§e§oCe_cuir_renforcé;§e§oest_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun'
-craft_jambes_cuir: LEATHER_LEGGINGS data:0 name:'§aBottes_Cuir_Tanné' lore:'§e§oCe_cuir_renforcé;§e§oest_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun'
-craft_pieds_cuir: LEATHER_BOOTS data:0 name:'§aBottes_Cuir_Tanné' lore:'§e§oCe_cuir_renforcé;§e§oest_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun'
-craft_casque_maille: CHAINMAIL_HELMET data:0 name:'§aCasque_en_Mailles' lore:'§e§oCes_mailles_renforcées;§e§osont_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun'
-craft_plastron_maille: CHAINMAIL_CHESTPLATE data:0 name:'§aPlastron_en_Mailles' lore:'§e§oCes_mailles_renforcées;§e§osont_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun'
-craft_jambes_maille: CHAINMAIL_LEGGINGS data:0 name:'§aJambières_en_Mailles' lore:'§e§oCes_mailles_renforcées;§e§osont_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun'
-craft_pieds_maille: CHAINMAIL_BOOTS data:0 name:'§aBottes_en_Mailles' lore:'§e§oCes_mailles_renforcées;§e§osont_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun'
-craft_casque_fer: IRON_HELMET data:0 name:'§aCasque_Fer_Forgé' lore:'§e§oCe_fer_forgé;§e§oest_très_dense_!;_;§7§oRareté_:_§aCommun'
-craft_plastron_fer: IRON_CHESTPLATE data:0 name:'§aPlastron_Fer_Forgé' lore:'§e§oCe_fer_forgé;§e§oest_très_dense_!;_;§7§oRareté_:_§aCommun'
-craft_jambes_fer: IRON_LEGGINGS data:0 name:'§aJambières_Fer_Forgé' lore:'§e§oCe_fer_forgé;§e§oest_très_dense_!;_;§7§oRareté_:_§aCommun'
-craft_pieds_fer: IRON_BOOTS data:0 name:'§aBottes_Fer_Forgé' lore:'§e§oCe_fer_forgé;§e§oest_très_dense_!;_;§7§oRareté_:_§aCommun'
-craft_casque_or: GOLD_HELMET data:0 name:'§aCasque_Or_Décoré' lore:'§e§oCet_or_est;§e§ojoliment_travaillé_!;_;§7§oRareté_:_§aCommun'
-craft_plastron_or: GOLD_CHESTPLATE data:0 name:'§aPlastron_Or_Décoré' lore:'§e§oCet_or_est;§e§ojoliment_travaillé_!;_;§7§oRareté_:_§aCommun'
-craft_jambes_or: GOLD_LEGGINGS data:0 name:'§aJambières_Or_Décoré' lore:'§e§oCet_or_est;§e§ojoliment_travaillé_!;_;§7§oRareté_:_§aCommun'
-craft_pieds_or: GOLD_BOOTS data:0 name:'§aBottes_Or_Décoré' lore:'§e§oCet_or_est;§e§ojoliment_travaillé_!;_;§7§oRareté_:_§aCommun'
-craft_casque_diamant: DIAMOND_HELMET data:0 name:'§aCasque_Diamant_Noble' lore:'§e§oCe_diamant_est;§e§od''une_qualité_rare_!;_;§7§oRareté_:_§aCommun'
-craft_plastron_diamant: DIAMOND_CHESTPLATE data:0 name:'§aPlastron_Diamant_Noble' lore:'§e§oCe_diamant_est;§e§od''une_qualité_rare_!;_;§7§oRareté_:_§aCommun'
-craft_jambes_diamant: DIAMOND_LEGGINGS data:0 name:'§aJambières_Diamant_Noble' lore:'§e§oCe_diamant_est;§e§od''une_qualité_rare_!;_;§7§oRareté_:_§aCommun'
-craft_pieds_diamant: DIAMOND_BOOTS data:0 name:'§aBottes_Diamant_Noble' lore:'§e§oCe_diamant_est;§e§od''une_qualité_rare_!;_;§7§oRareté_:_§aCommun'
+craft_casque_cuir: LEATHER_HELMET data:0 name:'§aCasque_Cuir_Tanné' lore:'§e§oCe_cuir_renforcé;§e§oest_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_plastron_cuir: LEATHER_CHESTPLATE data:0 name:'§aPlastron_Cuir_Tanné' lore:'§e§oCe_cuir_renforcé;§e§oest_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_jambes_cuir: LEATHER_LEGGINGS data:0 name:'§aBottes_Cuir_Tanné' lore:'§e§oCe_cuir_renforcé;§e§oest_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_pieds_cuir: LEATHER_BOOTS data:0 name:'§aBottes_Cuir_Tanné' lore:'§e§oCe_cuir_renforcé;§e§oest_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_casque_maille: CHAINMAIL_HELMET data:0 name:'§aCasque_en_Mailles' lore:'§e§oCes_mailles_renforcées;§e§osont_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_plastron_maille: CHAINMAIL_CHESTPLATE data:0 name:'§aPlastron_en_Mailles' lore:'§e§oCes_mailles_renforcées;§e§osont_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_jambes_maille: CHAINMAIL_LEGGINGS data:0 name:'§aJambières_en_Mailles' lore:'§e§oCes_mailles_renforcées;§e§osont_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_pieds_maille: CHAINMAIL_BOOTS data:0 name:'§aBottes_en_Mailles' lore:'§e§oCes_mailles_renforcées;§e§osont_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_casque_fer: IRON_HELMET data:0 name:'§aCasque_Fer_Forgé' lore:'§e§oCe_fer_forgé;§e§oest_très_dense_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_plastron_fer: IRON_CHESTPLATE data:0 name:'§aPlastron_Fer_Forgé' lore:'§e§oCe_fer_forgé;§e§oest_très_dense_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_jambes_fer: IRON_LEGGINGS data:0 name:'§aJambières_Fer_Forgé' lore:'§e§oCe_fer_forgé;§e§oest_très_dense_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_pieds_fer: IRON_BOOTS data:0 name:'§aBottes_Fer_Forgé' lore:'§e§oCe_fer_forgé;§e§oest_très_dense_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_casque_or: GOLD_HELMET data:0 name:'§aCasque_Or_Décoré' lore:'§e§oCet_or_est;§e§ojoliment_travaillé_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_plastron_or: GOLD_CHESTPLATE data:0 name:'§aPlastron_Or_Décoré' lore:'§e§oCet_or_est;§e§ojoliment_travaillé_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_jambes_or: GOLD_LEGGINGS data:0 name:'§aJambières_Or_Décoré' lore:'§e§oCet_or_est;§e§ojoliment_travaillé_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_pieds_or: GOLD_BOOTS data:0 name:'§aBottes_Or_Décoré' lore:'§e§oCet_or_est;§e§ojoliment_travaillé_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_casque_diamant: DIAMOND_HELMET data:0 name:'§aCasque_Diamant_Noble' lore:'§e§oCe_diamant_est;§e§od''une_qualité_rare_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_plastron_diamant: DIAMOND_CHESTPLATE data:0 name:'§aPlastron_Diamant_Noble' lore:'§e§oCe_diamant_est;§e§od''une_qualité_rare_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_jambes_diamant: DIAMOND_LEGGINGS data:0 name:'§aJambières_Diamant_Noble' lore:'§e§oCe_diamant_est;§e§od''une_qualité_rare_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
+craft_pieds_diamant: DIAMOND_BOOTS data:0 name:'§aBottes_Diamant_Noble' lore:'§e§oCe_diamant_est;§e§od''une_qualité_rare_!;_;§7§oRareté_:_§aCommun' enchants:DURABILITY:3
 craft_leather: LEATHER data:0 name:'Cuir_Tanné' lore:'Ce_cuir_est;beaucoup_plus_robuste_!'
 craft_string: STRING data:0 name:'Mailles' lore:'Cette_maille_fera;une_armure_correcte.'
 craft_iron: IRON_INGOT data:0 name:'Fer_Forgé' lore:'Ce_fer_est;très_dense_!'
