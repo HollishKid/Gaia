@@ -235,7 +235,7 @@ on load:
 #
 on inventory close:
     if player's inventory contains chainmail helmet named "Casque de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
-		
+	
         remove chainmail helmet named "Casque de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
         remove chainmail helmet named "Casque de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's helmet
         if player meets betonquest condition "fonte_2":
@@ -362,7 +362,7 @@ on inventory close:
         remove diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare." from player's inventory
         remove diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare." from player's chestplate
         if player meets betonquest condition "fonte_18":
-			command "mm items give %player% plastron_diamant"
+            command "mm items give %player% plastron_diamant"
         else:
             message "&dNiveau &218 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare.":

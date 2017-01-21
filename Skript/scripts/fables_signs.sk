@@ -1,0 +1,43 @@
+on rightclick on sign:
+    if line 1 of the clicked block is "Fables":
+        if line 2 of the clicked block is "~":
+            if line 3 of the clicked block is "Tome 1":
+                if line 4 of the clicked block is "Partie 1":
+                    fire betonquest event "hollish.fables_t1p1" for player
+                if line 4 of the clicked block is "Partie 2":
+                    fire betonquest event "hollish.fables_t1p2" for player
+                if line 4 of the clicked block is "Partie 3":
+                    fire betonquest event "hollish.fables_t1p3" for player
+                if line 4 of the clicked block is "Partie 4":
+                    fire betonquest event "hollish.fables_t1p4" for player
+                if line 4 of the clicked block is "Partie 5":
+                    fire betonquest event "hollish.fables_t1p5" for player
+            if line 3 of the clicked block is "Tome 2":
+                if line 4 of the clicked block is "Partie 1":
+                    fire betonquest event "hollish.fables_t2p1" for player
+                if line 4 of the clicked block is "Partie 2":
+                    fire betonquest event "hollish.fables_t2p2" for player
+                if line 4 of the clicked block is "Partie 3":
+                    fire betonquest event "hollish.fables_t2p3" for player
+                if line 4 of the clicked block is "Partie 4":
+                    fire betonquest event "hollish.fables_t2p4" for player
+            if line 3 of the clicked block is "Tome 3":
+                if line 4 of the clicked block is "Partie 1":
+                    fire betonquest event "hollish.fables_t3p1" for player
+                if line 4 of the clicked block is "Partie 2":
+                    fire betonquest event "hollish.fables_t3p2" for player
+                if line 4 of the clicked block is "Partie 3":
+                    fire betonquest event "hollish.fables_t3p3" for player
+                if line 4 of the clicked block is "Partie 4":
+                    fire betonquest event "hollish.fables_t3p4" for player
+#
+#
+# Protection
+#
+#
+on sign change:
+    if line 1 is "Fables":
+        if line 2 is "~":
+            if player's gamemode is survival:
+                cancel event
+                message "&dVous ne parvenez pas à créer cette Pancarte."
