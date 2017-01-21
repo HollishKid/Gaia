@@ -30,21 +30,13 @@ on damage:
 #    if event-entity is a pig:
 #        broadcast "Hit !"
 
-command /mcmmotester:
-	trigger:
-		message "Fishing %fishing level of player%"
-
-command /timetester:
-	trigger:
-		set {last.login.%player%} to now
-		message "Last Login : %{last.login.%player%}%"
-		
-command /timetester2:
-	trigger:
-		send email with subject "Ceci est un message ! Malheureusement je ne sais pas encore faire des lignes séparés. On va se contenter d'un truc de merde." with message "Mail Test" to "hollishkid@gmail.com"
-#on join:
-#	send resourcepack "[url]" to player
-#		
+#
+#SAME AS ON LOGIN THIS DOES NOT DOWNLOAD PROPERLY		
+#command /ressourcepacktester:
+#	trigger:
+#		send resourcepack "https://www.dropbox.com/s/drnvydf8xhile1y/MedievalDarkness.zip?dl=1" to player
+#
+#
 #						#
 #						#
 #		SkyWars			#

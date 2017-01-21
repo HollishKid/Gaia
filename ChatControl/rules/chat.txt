@@ -414,10 +414,6 @@ then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à inst
 #
 #######################
 
-# Compliments
-match (sympa|cool|génial|genial|super|nice|j'adore|jador|j'aim|dechire|déchire|trop bien|niquel)
-handle as compliment
-
 # Hollish
 match (hollish|holish)
 then replace &aHollish&7
@@ -439,11 +435,11 @@ match guigui
 then replace &aguigui&7
 
 # Cubto_Mania
-match (c+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(b+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(o+|)(\s+|\.+|\*+|)(_+|)(\s+|\.+|\*+|)(m+|)(\s+|\.+|\*+|)(a+|)(\s+|\.+|\*+|)(n+|)(\s+|\.+|\*+|)(i+|)(\s+|\.+|\*+|)(a+|)(\s+|\.+|\*+|)
+match (c+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(b+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(o+|)(\s+|\.+|\*+|)(_+|)(\s+|\.+|\*+|)(m+|)(\s+|\.+|\*+|)(a+|)(\s+|\.+|\*+|)(n+|)(\s+|\.+|\*+|)(i+|)(\s+|\.+|\*+|)(a+|)
 then replace &aCubto_Mania&7
 
 # Sparadra59
-match \b(s+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(d+|)(\s+|\.+|\*+|)(r+|a+|)(\s+|\.+|\*+|)(a+|r+|)(\s+|\.+|\*+|)(9+|5+|)(\s+|\.+|\*+|)(9+|5+|)(\s+|\.+|\*+|)
+match \b(s+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(d+|)(\s+|\.+|\*+|)(r+|a+|)(\s+|\.+|\*+|)(a+|r+|)(\s+|\.+|\*+|)(9+|5+|)(\s+|\.+|\*+|)(9+|5+|)
 then replace &aSparadra59&7
 
 # Gaïa
