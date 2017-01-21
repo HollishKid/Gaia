@@ -1,0 +1,39 @@
+#   Lieutenant Hashor   #
+histoire_mysteria_tag: tag histoire_mysteria_tag
+#   Roi Ubu   #
+renconter_roi: tag rencontrer_roi
+message_intendant: tag message_intendant
+#   Garderos   #
+deja_vu: tag garderos_deja_vu
+voir_superieur: tag voir_superieur
+#   Général Kinsot   #
+motif_donner: tag motif_donner
+tour_du_village: tag tour_du_village
+voir_superieur_done: tag voir_superieur_done
+#   Aktarion   #
+akt_qE1: tag akt_qE1
+akt_qE2: tag akt_qE2
+akt_qdone: tag akt_qdone
+akt_tool: item akt_tool:1
+Bkilled: tag Bkilled
+#   Loukran   #
+louk_dv: tag louk_dv
+louk_qE1: tag louk_qE1
+louk_ch1: tag louk_ch1
+louk_ch2: tag louk_ch2
+louk_ch3: tag louk_ch3
+louk_qE2: tag louk_qE2
+louk_qE3: tag louk_qE3
+louk_qE4: tag louk_qE4
+#   Tatsu   #
+tatsu_dv: tag tatsu_dv
+tatsu_q1: tag tatsu_q1
+tatsu_q1_1: tag tatsu_q1_1
+tatsu_qdone: tag tatsu_qdone
+#    Porte 1  #
+acces_porte1: tag manual_acces_porte1
+porte1_door_check: party 9999 porte1_door_checker count:1
+porte1_door_checker: region mysteria_porte1
+#
+#
+#

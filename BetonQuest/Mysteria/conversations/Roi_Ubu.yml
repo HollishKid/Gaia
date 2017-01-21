@@ -1,0 +1,29 @@
+quester: 'Roi_Ubu'
+first: welcome,welcomebis
+stop: 'false'
+#   Options   #
+
+#     NPC     #
+NPC_options:
+  welcome:
+    text: 'Bienvenue à toi %player% ! Te faut-il quelque chose ?'
+    conditions: '!renconter_roi,message_intendant'
+    events: demande_royale
+    pointers: message
+  welcomebis:
+    text: 'Te revoilà %player% ! As-tu une demande à me faire ?'
+    conditions: 'renconter_roi'
+    pointers: fils_du_roi,probleme,sorry
+#   Options   #
+
+#    Joueur   #
+player_options:
+  message:
+    text: 'Bonjour à vous roi Ubu ! Je viens de la part de l''Intendant qui m''a confié votre message.'
+    conditions: 'renconter_roi'
+  fils_du_roi:
+    text: 'Parlez moi de votre fils, qui est-il exactement ?'
+  probleme:
+    text: 'Avez-vous des problèmes concernant les évenements récents ?'
+  sorry:
+    text: 'Désolé pour le dérangement, je ne fais que passer.'

@@ -1,0 +1,41 @@
+#
+# Garderos & Général Kinsot #
+#
+#voir_superieur1: location -9009;64;4626;Gaia;5 conditions:deja_vu events:voir_superieur_done
+tour_du_village: location -8948;83;4655;Gaia;5 conditions:voir_superieur_done events:tour_du_village_done
+voir_superieur: action right SPRUCE_DOOR conditions:deja_vu events:voir_superieur_done loc:-9009;64;4626;Gaia;1
+#
+# Aktarion #
+#
+akt_quest: location -8869;82;4564;Gaia;5 conditions:akt_qE1 events:akt_objq1
+#akt_objkill: mmobkill brigand amount:10 events:Bkilled,akt_questE2 notify
+akt_objkillB1: mmobkill brigand amount:1 events:akt_brigkilled1,Bkill1
+akt_objkillB2: mmobkill brigand amount:1 events:akt_brigkilled2,Bkill2
+akt_objkillB3: mmobkill brigand amount:1 events:akt_brigkilled3,Bkill3
+akt_objkillB4: mmobkill brigand amount:1 events:akt_brigkilled4,Bkill4
+akt_objkillB5: mmobkill brigand amount:1 events:akt_brigkilled5,Bkill5
+akt_objkillB6: mmobkill brigand amount:1 events:akt_brigkilled6,Bkill6
+akt_objkillB7: mmobkill brigand amount:1 events:akt_brigkilled7,Bkill7
+akt_objkillB8: mmobkill brigand amount:1 events:akt_brigkilled8,Bkill8
+akt_objkillB9: mmobkill brigand amount:1 events:akt_brigkilled9,Bkill9
+akt_objkillB10: mmobkill brigand amount:1 events:Bkill10,Bkilled,akt_qE2
+#
+# Loukran #
+#
+louk_qE1: location -8869;82;4564;Gaia;5 conditions:louk_qE1 events:louk_objq1
+#louk_qch1: action right 54 loc:-8851;77;4540;Gaia;3 events:louk_tagch1,louk_objch1m,louk_verch2
+#louk_qch2: action right 54 loc:-8884;79;4522;Gaia;3 events:louk_tagch2,louk_tagch2_1,louk_objch2m,louk_verch3
+#louk_qch3: action right 54 loc:-8881;93;4561;Gaia;3 events:louk_tagch3,louk_tagch3_1,louk_objch3m,louk_verchall
+louk_objchall: location -8869;82;4564;Gaia;5 events:louk_chest_testerall
+louk_qE2: location -8798;80;4682;Gaia;5 events:louk_qE3
+louk_qE3: action right WORKBENCH loc:-8798;79;4684;Gaia;3 events:louk_qE4
+#
+# Hollish Proposition
+#
+louk_qch1: action right CHEST loc:-8851;77;4540;Gaia;3 events:louk_chest_tester1
+louk_qch2: action right CHEST loc:-8881;93;4561;Gaia;3 events:louk_chest_tester2 cancel
+louk_qch3: action right CHEST loc:-8829;84;4500;Gaia;3 events:louk_chest_tester3 cancel
+#
+# Tatsu #
+#
+tatsu_q1: action right CHEST loc:-8677;74;4410;Gaia;3 conditions:tatsu_q1 events:tatsu_q1_1
