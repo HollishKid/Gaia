@@ -2,11 +2,11 @@ pack_varko: CHEST data:0 name:'§2Paquet_de_§dVarko' lore:';§8§oA_livrer_au;�
 orno_book: WRITTEN_BOOK data:0 lore:'Un_vieux_manuel_du_Savoir_de_la_Magie;§2Objet_de_Quête'
 orno_book_beta: WRITTEN_BOOK data:0 lore:'Manuscrit_d''un_Mage;§2Objet_de_Quête'
 book_and_quill: BOOK_AND_QUILL data:0
-baton: STICK data:0
+baton: STICK
 tarte: PUMPKIN_PIE data:0
 fiole: GLASS_BOTTLE data:0
-fiole_air: GLASS_BOTTLE data:0 lore:'Une_fiole_agitée_avec_air_du_Continent_Est;§2Objet_de_Quête'
-fiole_air_calmed: GLASS_BOTTLE name:'§2Fiole_d''Air' lore:'Une_fiole_calme_avec_air_du_Continent_Est;§2Objet_de_Quête'
+fiole_air: GLASS_BOTTLE data:0 lore:'Une_fiole_agitée;avec_air_du_Continent_Est;§2Objet_de_Quête'
+fiole_air_calmed: GLASS_BOTTLE name:'§2Fiole_d''Air' lore:'Une_fiole_calme;avec_air_du_Continent_Est;§2Objet_de_Quête'
 bone: BONE data:0 name:'none'
 bone_charged: BONE data:0 name:'§6Os_Chargé' lore:'§7§oOs_chargé_en_spiritualité;§7§oà_enterrer_sous_de_l''herbe;_;§8§oSi_je_ne_peux_pas_l''enterrer;§8§oje_devrais_demander;§8§oconseil_à_un_Moine.'
 bone_gros: BONE data:0 name:'§2Gros_Os' lore:'§8§oJe_devrais_l''amener_au;§8§oMoine_François_au_spiritualium;§8§oau_centre_d''Athelas.;§2Objet_de_Quête'

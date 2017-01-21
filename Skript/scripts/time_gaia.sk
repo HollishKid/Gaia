@@ -85,18 +85,7 @@ every 52 minutes in "Gaia":
 # Every 52 minutes BUT at 5 o'clock
 #   Avoids overload
 #
-	else:
-		loop all players:
-			if loop-player is in the region "dwarf_mine":
-				command "tppos %loop-player% -6604 63 2736" from console
-				message "La mine était instable, vous avez été évacué !"
-			if loop-player is in the region "mine_athelas_mine":
-				command "tppos %loop-player% -6803 66 2904" from console
-				message "La mine était instable, vous avez été évacué !"
-			if loop-player is in the region "mine_athelas_mine2":
-				command console "tppos %loop-player% -6603 66 2904"
-				message "La mine était instable, vous avez été évacué !"
-		wait 2 ticks	
+	else:	
 		loop {place.location.mine1::*}:
 			set block at loop-value to air
 		wait 2 ticks

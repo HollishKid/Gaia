@@ -153,50 +153,41 @@ npcs:
   '441': expert
 journal_main_page:
   line1:
-    text: '     --¤--'
+    text: '-------- ¤ --------'
     priority: 1
   line2:
-    text: 'Journal de Progression'
+    text: '    Progression'
     priority: 2
   line3:
-    text: '   de %player%'
+    text: '     de &6%player%'
     priority: 3
   line4:
     text: ' '
     priority: 4
   line5:
-    text: '  Points de Quête:'
+    text: 'Compétences : &2%ph.mcmmo_power_level%'
     priority: 5
   line6:
-    text: '   %point.quest_points.amount%'
+    text: 'Points de Quête : &2%point.quest_points.amount%'
     priority: 6
   line7:
-    text: ' '
+    text: 'Réputation : &2%point.reput_athelas.amount%'
     priority: 7
   line8:
-    text: ' '
+    text: 'Spiritualité : &2%point.spirituality.amount%'
     priority: 8
   line9:
-    text: ' '
+    text: 'Points de Vote : &2%point.votes.amount%'
     priority: 9
   line11:
-    text: 'En Poche: ¤%ph.vault_eco_balance_fixed%'
+    text: 'En Poche : &a¤&2%ph.vault_eco_balance_fixed%'
     priority: 11
   line12:
-    text: 'En Banque: ¤%point.compte.amount%'
+    text: 'En Banque : &a¤&2%point.compte.amount%'
     priority: 12
-  line13:
-    text: 'Réputation: %point.reput_athelas.amount%'
-    priority: 13
-  line14:
-    text: 'Spiritualité: %point.spirituality.amount%'
-    priority: 14
   line15:
-    text: 'Points de Vote: %point.votes.amount%'
-    priority: 15
-  line16:
-    text: '     --¤--'
-    priority: 16
+    text: '-------- ¤ --------'
+    priority: 13
 variables:
   lastplayerkiller: 'thisisamessagethathastobefiltered'
   lastplayerkilled: 'sanson75'
