@@ -10,16 +10,16 @@ compass:
   akt_quest:
     name: '&aCamp de &4Brigands'
     location: -8869;82;4564;Gaia
-    item: scroll
+    item: akt_tool
   aktarion:
     name: '&9Aktarion'
     location: -8943;85;4628;Gaia
-    item: scroll
+    item: kolysword
   tatsu_q1:
     name: '&aCave abandonnée'
     location: -8676;79;4407;Gaia
-    item: scroll
+    item: tatsu_knife
   tatsu_q1_1:
     name: '&3Tatsu'
     location: -8692;97;4432;Gaia
-    item: scroll
+    item: tatsu_knife

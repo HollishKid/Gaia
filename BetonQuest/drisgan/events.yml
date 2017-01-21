@@ -144,7 +144,7 @@ eko_mess8: 'message &6&oVous récupérez une lettre cachetée.'
 eko_givelettre: give lettre_cachetee:1
 #
 # replaced eko_q3startfolder with tempo_redirect
-eko_q2donefolder: folder eko_takelettre,eko_q2done,eko_q2end,eko_q2reward,tempo_redirect delay:2
+eko_q2donefolder: folder eko_takelettre,eko_q2done,eko_q2end,eko_q2reward,eko_conversdone,tempo_redirect delay:2
 eko_q2reward: folder eko_givechainlegs,eko_givechainlegsmess
 eko_givechainlegs: 'command mm i give %player% chainlegs'
 eko_givechainlegsmess: 'message &6&oVous recevez des &aJambières annelées&6&o.'
