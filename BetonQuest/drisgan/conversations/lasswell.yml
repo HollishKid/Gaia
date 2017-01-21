@@ -1,4 +1,4 @@
-quester: Lasswell
+quester: 'Lasswell'
 first: n1,n2,n3,n4
 stop: 'false'
 ##########################
@@ -9,31 +9,31 @@ stop: 'false'
 NPC_options:
 #
   n1:
-    text: Recrue suivante, &2%player%&a&o. \nBien. \nOn t'as envoyé ici car tu es à la recherche de la fortune, et te voilà sur le point de te faire égorger au fond d'une cave obscure...
+    text: 'Recrue suivante, &2%player%&a&o. \nBien. \nOn t''as envoyé ici car tu es à la recherche de la fortune, et te voilà sur le point de te faire égorger au fond d''une cave obscure...'
     conditions: 'eko_q1start,!las_inconvers,!las_gotest,!las_q1start'
-    event: las_fold1,las_inconvers
+    events: las_fold1,las_inconvers
   n2:
-    text: Prêt à passer le test ?
+    text: 'Prêt à passer le test ?'
     conditions: '!las_inconvers,las_gotest,!las_testpassed'
-    pointer: oui,non,buy_bow,buy_arrows
+    pointers: oui,non,buy_bow,buy_arrows
   moneyokbow:
-    text: Voilà ton arc.
-    conditions: money_1500
-    event: las_buybow
+    text: 'Voilà ton arc.'
+    conditions: 'money_1500'
+    events: las_buybow
   moneyokarrows:
-    text: Voilà tes flèches.
-    conditions: money_1500
-    event: las_buyarrows
+    text: 'Voilà tes flèches.'
+    conditions: 'money_1500'
+    events: las_buyarrows
   nomoney:
-    text: Et avec quoi vas-tu payer ? On essaye de m'arnaquer ??
+    text: 'Et avec quoi vas-tu payer ? On essaye de m''arnaquer ??'
     conditions: '!money_1500'
   n3:
-    text: Alors, voyons voir tes résultats...
+    text: 'Alors, voyons voir tes résultats...'
     conditions: 'las_testpassed,las_gotest,!las_inconvers'
-    event: las_inconvers,las_equalizer
+    events: las_inconvers,las_equalizer
   n4:
-    text: Que fais-tu encore ici ? Aurais-tu peur d'accomplir la tâche que je t'ai confié ?
-    conditions: las_q1start
+    text: 'Que fais-tu encore ici ? Aurais-tu peur d''accomplir la tâche que je t''ai confié ?'
+    conditions: 'las_q1start'
 #
 ##########################
 #                        #
@@ -43,13 +43,13 @@ NPC_options:
 player_options:
 #
   oui:
-    text: Je suis prêt.
-    event: las_starttest
+    text: 'Je suis prêt.'
+    events: las_starttest
   non:
-    text: Je ne suis pas encore prêt.
+    text: 'Je ne suis pas encore prêt.'
   buy_bow:
-    text: J'aurais besoin d'un arc. (1500¤)
-    pointer: moneyokbow,nomoney
+    text: 'J''aurais besoin d''un arc. (1500¤)'
+    pointers: moneyokbow,nomoney
   buy_arrows:
-    text: J'aurai besoin de flêches. (x16 - 1500¤)
-    pointer: moneyokarrows,nomoney
+    text: 'J''aurai besoin de flêches. (x16 - 1500¤)'
+    pointers: moneyokarrows,nomoney

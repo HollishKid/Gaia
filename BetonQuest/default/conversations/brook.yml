@@ -1,4 +1,4 @@
-quester: Brook
+quester: 'Brook'
 first: n1,n2,n3,n4,n5
 stop: 'false'
 #
@@ -6,18 +6,18 @@ stop: 'false'
 #
 NPC_options:
   n1:
-    text: La bière du &dPoney Fringant&a&o est la meilleure du pays fils!
-    conditions: random20 
+    text: 'La bière du &dPoney Fringant&a&o est la meilleure du pays fils!'
+    conditions: 'random20'
   n2:
-    text: Cette ville est vraiment magnifique!
-    conditions: random40
+    text: 'Cette ville est vraiment magnifique!'
+    conditions: 'random40'
   n3:
-    text: Je rêve d'une bonne vieille omelette aux cèpes...
-    conditions: random60
+    text: 'Je rêve d''une bonne vieille omelette aux cèpes...'
+    conditions: 'random60'
   n4:
-    text: T'aurais pas une pièce petit?
-    conditions: random80
+    text: 'T''aurais pas une pièce petit?'
+    conditions: 'random80'
   n5:
-    text: Va voir &2Tad le pêcheur&a&o, il t'apprendra à pêcher.
-    conditions: random100
+    text: 'Va voir &2Tad le pêcheur&a&o, il t''apprendra à pêcher.'
+    conditions: 'random100'
 player_options:

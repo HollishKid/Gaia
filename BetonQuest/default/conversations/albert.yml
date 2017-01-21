@@ -1,7 +1,7 @@
-quester: albert
+quester: 'albert'
 first: n1
 stop: 'false'
 #
 NPC_options:
   n1:
-    text: On dirait que ce courant va quelque part... Je me demande jusqu'ou, mais j'ai peur de nager...
+    text: 'On dirait que ce courant va quelque part... Je me demande jusqu''ou, mais j''ai peur de nager...'

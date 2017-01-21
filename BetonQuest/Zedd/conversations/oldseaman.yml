@@ -1,90 +1,90 @@
 quester: 'Tad le Pêcheur'
-first: 'n1,2,2a,3,4'
+first: n1,n2,n2a,n3,n4
 stop: 'false'
 NPC_options:
   n1:
-    text: Ahoy la bleusaille ! Alors on est attiré par les mystères de la mer ?
+    text: 'Ahoy la bleusaille ! Alors on est attiré par les mystères de la mer ?'
     conditions: '!seaman_startq1,!seaman_q1done'
-    pointer: point1,point2
-  2:
-    text: Alors ca avance ces aventures ?
-    conditions: seaman_startq1
-    pointer: check1
-  2a:
-    text: Alors ca avance ces aventures ?
-    conditions: seaman_startq2
-    pointer: check2
-  3:
-    text: Prêt pour la suite moussaillon ?
-    conditions: seaman_q1done
-    pointer: seaman_suiteoui,seaman_suitenon
-  4:
-    text: Ah &2%player% &a&o! Que fais tu dans le coin ?
-    conditions: seaman_q2done
-    pointer: final1,final2,final3
+    pointers: point1,point2
+  n2:
+    text: 'Alors ca avance ces aventures ?'
+    conditions: 'seaman_startq1'
+    pointers: check1
+  n2a:
+    text: 'Alors ca avance ces aventures ?'
+    conditions: 'seaman_startq2'
+    pointers: check2
+  n3:
+    text: 'Prêt pour la suite moussaillon ?'
+    conditions: 'seaman_q1done'
+    pointers: seaman_suiteoui,seaman_suitenon
+  n4:
+    text: 'Ah &2%player% &a&o! Que fais tu dans le coin ?'
+    conditions: 'seaman_q2done'
+    pointers: final1,final2,final3
   rep_oui:
-    text: Voilà qui est dit mon garcon ! Et le meilleur moyen de les trouver... pêcher ! Tu veux tenter le coup ?
-    pointer: priseq1,declineq1
+    text: 'Voilà qui est dit mon garcon ! Et le meilleur moyen de les trouver... pêcher ! Tu veux tenter le coup ?'
+    pointers: priseq1,declineq1
   confirm1:
-    text: On va commencer par te procurer une canne à pêche! Va me chercher &62x bâton en bois&a&o et je te monterai une ligne dessus !
-    event: seaman_startq1
+    text: 'On va commencer par te procurer une canne à pêche! Va me chercher &62x bâton en bois&a&o et je te monterai une ligne dessus !'
+    events: seaman_startq1
   seaman_reward1:
-    text: Bien! On va pouvoir commencer les choses sérieuses !
-    event: seaman_reward1,seaman_q1done
+    text: 'Bien! On va pouvoir commencer les choses sérieuses !'
+    events: seaman_reward1,seaman_q1done
   suite1:
-    text: Bien! Il va falloir essayer ta canne à pêche maintenant ! Essaye de pêcher &65 poissons cru&a&o et rapporte-les moi !
-    event: seaman_startq2
+    text: 'Bien! Il va falloir essayer ta canne à pêche maintenant ! Essaye de pêcher &65 poissons cru&a&o et rapporte-les moi !'
+    events: seaman_startq2
   seaman_reward2:
-    text: Belle prise matelot! Bouge pas je vais te les faire griller que tu puisse apprécier le fruit de tes effort ! Et reviens de temps en temps, si tu as besoin que je te monte une nouvelle canne ou que tu veux faire griller plus de poissons !!
-    event: seaman_reward2,seaman_q2done
+    text: 'Belle prise matelot! Bouge pas je vais te les faire griller que tu puisse apprécier le fruit de tes effort ! Et reviens de temps en temps, si tu as besoin que je te monte une nouvelle canne ou que tu veux faire griller plus de poissons !!'
+    events: seaman_reward2,seaman_q2done
   finalrep1:
-    text: Il me faut deux &7Bâton de bois&a&o pour que je te fasse ça.
+    text: 'Il me faut deux &7Bâton de bois&a&o pour que je te fasse ça.'
     conditions: '!seaman_stick1'
   finalrep1a:
-    text: Pas de souci, fais moi voir ces bouts de bois la...
-    conditions: seaman_stick1
-    event: seaman_takestick,seaman_r2,seaman_mess1
+    text: 'Pas de souci, fais moi voir ces bouts de bois la...'
+    conditions: 'seaman_stick1'
+    events: seaman_takestick,seaman_r2,seaman_mess1
   finalrep2:
-    text: Il faut que tu apporte 5x &7Poisson Cru&a&o pour que je te les cuisine !
+    text: 'Il faut que tu apporte 5x &7Poisson Cru&a&o pour que je te les cuisine !'
     conditions: '!seaman_fish'
   finalrep2a:
-    text: Envoi les poissons, je fais chauffer la braise !!
-    conditions: seaman_fish
-    event: seaman_takefish,seaman_r4,seaman_mess2
+    text: 'Envoi les poissons, je fais chauffer la braise !!'
+    conditions: 'seaman_fish'
+    events: seaman_takefish,seaman_r4,seaman_mess2
   finalrep3:
-    text: Eh bien bonjour !
+    text: 'Eh bien bonjour !'
 player_options:
   point1:
-    text: Elle doit receler bien des trésors...
-    pointer: rep_oui
+    text: 'Elle doit receler bien des trésors...'
+    pointers: rep_oui
   point2:
-    text: Pas vraiment...
+    text: 'Pas vraiment...'
   priseq1:
-    text: Comment dois-je faire ?
-    pointer: confirm1
+    text: 'Comment dois-je faire ?'
+    pointers: confirm1
   declineq1:
-    text: Non merci.
+    text: 'Non merci.'
   check1:
-    text: Voici vos bâtons de bois !
-    conditions: seaman_stick1
-    event: seaman_takestick,seaman_endq1
-    pointer: seaman_reward1
+    text: 'Voici vos bâtons de bois !'
+    conditions: 'seaman_stick1'
+    events: seaman_takestick,seaman_endq1
+    pointers: seaman_reward1
   seaman_suiteoui:
-    text: Oui
-    pointer: suite1
+    text: 'Oui'
+    pointers: suite1
   seaman_suitenon:
-    text: Non
+    text: 'Non'
   check2:
-    text: Voici vos poissons !
-    conditions: seaman_fish
-    event: seaman_endq2,seaman_takefish
-    pointer: seaman_reward2
+    text: 'Voici vos poissons !'
+    conditions: 'seaman_fish'
+    events: seaman_endq2,seaman_takefish
+    pointers: seaman_reward2
   final1:
-    text: Il me faut une nouvelle ligne de pêche !
-    pointer: finalrep1,finalrep1a
+    text: 'Il me faut une nouvelle ligne de pêche !'
+    pointers: finalrep1,finalrep1a
   final2:
-    text: Je voudrais faire griller du poisson !
-    pointer: finalrep2,finalrep2a
+    text: 'Je voudrais faire griller du poisson !'
+    pointers: finalrep2,finalrep2a
   final3:
-    text: Je passais juste dire bonjour !
-    pointer: finalrep3
+    text: 'Je passais juste dire bonjour !'
+    pointers: finalrep3

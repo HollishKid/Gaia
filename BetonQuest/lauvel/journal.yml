@@ -1,20 +1,20 @@
 #Ne pas oublier d'enlever l'entry une fois terminée
-sir_James_Journal: 'Je dois récupérer le trésor d''un pirate grâce à l''égnime que Sir James m''a raconté.'
+Sir_James_Journal: 'Je dois récupérer le trésor d''un pirate grâce à l''égnime que Sir James m''a raconté.'
 Coffre_Tresor_Journal: 'J''ai trouvé le coffre au trésor, je devrais retourner voir Sir James.'
 #
 Lettre_Journal: 'Je dois allez au bureau de recrutement au château pour être engager en tant que recrue.'
 Chef_Journal: 'Je devrais allez rencontre mon chef d''escadron se trouvant dans sa chambre.'
 Aide_Journal: 'Le Chef d''escadron vous demande de venir en aide au soldat ou bien aider le physicien!'
 #
-Ryan_Journal: 'Vous devez trouver le &dsoldat Ryan &0&oqui est en train de lire à la blibliothèque.' 
+Ryan_Journal: 'Vous devez trouver le &dsoldat Ryan &0&oqui est en train de lire à la blibliothèque.'
 Ryan_Journal2: 'Vous avez trouver le soldat Ryan est part voir le général retourne prévenir le soldat anxieux.'
 #
-Loyer_Journal: 'Vous devez aller chercher le loyer chez &dl''aubergiste &0à côtés du port.' 
+Loyer_Journal: 'Vous devez aller chercher le loyer chez &dl''aubergiste &0à côtés du port.'
 Loyer_Journal2: 'Vous avez fait une bonne action maintenant retourner voir le soldat Déprimer.'
 Loyer_Journal3: 'Vous avez fais une mauvaise action maintenant retourner voir le soldat Déprimer.'
 #
 Physicien_journal1: 'Le Physicien Drizz vous demande d''allez chercher un certains livre situer à la blibliothèque. Demander à la blibliothècaire si besoin.'
-Physicien_journal2: 'Vous avez trouver le livre que recherche le Physicien Drizz. Allé lui ramener.' 
+Physicien_journal2: 'Vous avez trouver le livre que recherche le Physicien Drizz. Allé lui ramener.'
 #
 Quetes_promo_journal1: 'Vous devez enquêtez sur les bruits étranges pendant la nuit au moulin.'
 Quetes_promo_journal2: 'Vous devez retourner faire votre rapport au Chef d''escouade'

@@ -1,5 +1,5 @@
-quester: Amiral
-first: start,end,unwelcome
+quester: 'Amiral'
+first: the_start,end,unwelcome
 stop: 'false'
 ############
 #          #
@@ -7,19 +7,19 @@ stop: 'false'
 #          #
 ############
 NPC_options:
-  start:
-    text: Ah &2%player% &a&o! J'allais justement t'envoyer chercher, nous sommes arrivés à notre destination, &dAthelas &a&o! Es-tu prêt à débarquer ?
+  the_start:
+    text: 'Ah &2%player% &a&o! J''allais justement t''envoyer chercher, nous sommes arrivés à notre destination, &dAthelas &a&o! Es-tu prêt à débarquer ?'
     conditions: '!ami_inconvers,!amiral,!player'
     events: ami_mess1
-    pointer: oui,non
+    pointers: oui,non
   go:
-    text: Bien! Voici un &2pack de survie&a&o. Il contient un peu d'équipement, quelques outils et de la nourriture. Mais plus important encore, il contient ton &2Journal de Progression &a&o!
+    text: 'Bien! Voici un &2pack de survie&a&o. Il contient un peu d''équipement, quelques outils et de la nourriture. Mais plus important encore, il contient ton &2Journal de Progression &a&o!'
     events: ami_inconvers,ami_pack
   end:
-    text: Désolé &2%player%&a&o, mais je dois me concentrer sur mon navire maintenant. Tu devrais aller en ville, parles à &2Jacopo&a&o, il est à tribord !
-    condition: '!ami_inconvers,amiral'
+    text: 'Désolé &2%player%&a&o, mais je dois me concentrer sur mon navire maintenant. Tu devrais aller en ville, parles à &2Jacopo&a&o, il est à tribord !'
+    conditions: '!ami_inconvers,amiral'
   unwelcome:
-    text: Encore toi &2%player% &a&o?! Tu devrais être en ville entrain d'assister les habitants d'Athelas !!
+    text: 'Encore toi &2%player% &a&o?! Tu devrais être en ville entrain d''assister les habitants d''Athelas !!'
 ############
 #          #
 #  JOUEUR  #
@@ -27,7 +27,7 @@ NPC_options:
 ############
 player_options:
   oui:
-    text: Je suis prêt !
-    pointer: go
+    text: 'Je suis prêt !'
+    pointers: go
   non:
-    text: Pas encore.
+    text: 'Pas encore.'

@@ -1,32 +1,31 @@
 #
 # Objectifs Permanents
 #
-die_permanent: die event:die_permanent
-kill_permanent: kill 1 required:player event:kill_permanent
+die_permanent: die events:die_permanent
+kill_permanent: kill 1 required:player events:kill_permanent
 obj_salaire_timer: delay 60 events:salaire interval:1200
 #
 # Banking
 #
 #Deprecated so far
 #taxes_permanent: delay 10080 events:taxation,taxes_permanent
+#
 banking: variable
 #
-banking_compte_on1: delay 0 condition:compte_tempo_defined events:banking_compte_tempo_done interval:27
-banking_compte_on2: delay 0 condition:compte_tempo_wrong events:banking_tempo_wrong interval:52
-banking_compte_delay: delay 7 event:banking_compte_delay_over interval:1200
+banking_compte_on1: delay 0 conditions:compte_tempo_defined events:banking_compte_tempo_done interval:27
+banking_compte_on2: delay 0 conditions:compte_tempo_wrong events:banking_tempo_wrong interval:52
+banking_compte_delay: delay 7 events:banking_compte_delay_over interval:1200
 #
-banking_poche_on1: delay 0 condition:poche_tempo_defined events:banking_poche_tempo_done interval:27
-banking_poche_on2: delay 0 condition:poche_tempo_wrong events:banking_tempo_wrong interval:52
-banking_poche_delay: delay 7 event:banking_poche_delay_over interval:1200
-
+banking_poche_on1: delay 0 conditions:poche_tempo_defined events:banking_poche_tempo_done interval:27
+banking_poche_on2: delay 0 conditions:poche_tempo_wrong events:banking_tempo_wrong interval:52
+banking_poche_delay: delay 7 events:banking_poche_delay_over interval:1200
 #
 # Praying
 #
-spiritualium1: location -6630;110;3000;Gaia;50 condition:sneaking,in_spiritualium events:pray
-spiritualium2: location -6824;70;2635;Gaia;50 condition:sneaking,in_spiritualium events:pray
-spiritualium3: location -7100;70;2300;Gaia;200 condition:sneaking,in_spiritualium events:pray
+spiritualium1: location -6630;110;3000;Gaia;50 conditions:sneaking,in_spiritualium events:pray
+spiritualium2: location -6824;70;2635;Gaia;50 conditions:sneaking,in_spiritualium events:pray
+spiritualium3: location -7100;70;2300;Gaia;200 conditions:sneaking,in_spiritualium events:pray
 pray_timer: delay 30 events:pray_over interval:1200
-
 #
 vulgarite_timer: delay 3 events:vulgarite_time_up
 vulgarite_immediat: delay 0 conditions:vulgarite3 events:hollish.prison_god_testerfer
@@ -34,7 +33,7 @@ vulgarite_immediat: delay 0 conditions:vulgarite3 events:hollish.prison_god_test
 # Intendant
 #   & Gestionnaire
 #
-gestionnaire_obj: action right 60 conditions:seeds_inhand,in_athelas events:hoe_testeur loc:-5000;60;5000;Gaia;7000
+gestionnaire_obj: action right SOIL conditions:seeds_inhand,in_athelas events:hoe_testeur loc:-5000;60;5000;Gaia;7000
 guild_temporizer_delay: delay 720 events:guild_temporizer_delay_exe interval:1200
 #
 #
@@ -68,25 +67,25 @@ job_swords_temporizer: delay 720 events:job_swords_temporizer_over interval:1200
 job_unarmed_delay: delay 720 events:job_unarmed_temporizer_over interval:1200
 job_unarmed_temporizer: delay 720 events:job_unarmed_temporizer_over interval:1200
 #
-job_unarmed_zombie_kill: mmobkill zombielvl amount:20 condition:holding_nothing events:job_unarmed_zombie_kill_done notify
-job_unarmed_skeleton_kill: mmobkill skeletonlvl amount:10 condition:holding_nothing events:job_unarmed_skeleton_kill_done notify
-job_unarmed_spider_kill: mmobkill spiderlvl amount:5 condition:holding_nothing events:job_unarmed_spider_kill_done notify
+job_unarmed_zombie_kill: mmobkill zombielvl amount:20 conditions:holding_nothing events:job_unarmed_zombie_kill_done notify
+job_unarmed_skeleton_kill: mmobkill skeletonlvl amount:10 conditions:holding_nothing events:job_unarmed_skeleton_kill_done notify
+job_unarmed_spider_kill: mmobkill spiderlvl amount:5 conditions:holding_nothing events:job_unarmed_spider_kill_done notify
 #
-job_swords_zombie_kill: mmobkill zombielvl amount:20 condition:holding_sword events:job_swords_zombie_kill_done notify
-job_swords_skeleton_kill: mmobkill skeletonlvl amount:10 condition:holding_sword events:job_swords_skeleton_kill_done notify
-job_swords_spider_kill: mmobkill spiderlvl amount:5 condition:holding_sword events:job_swords_spider_kill_done notify
+job_swords_zombie_kill: mmobkill zombielvl amount:20 conditions:holding_sword events:job_swords_zombie_kill_done notify
+job_swords_skeleton_kill: mmobkill skeletonlvl amount:10 conditions:holding_sword events:job_swords_skeleton_kill_done notify
+job_swords_spider_kill: mmobkill spiderlvl amount:5 conditions:holding_sword events:job_swords_spider_kill_done notify
 #
-job_axes_zombie_kill: mmobkill zombielvl amount:20 condition:holding_axe events:job_axes_zombie_kill_done notify
-job_axes_skeleton_kill: mmobkill skeletonlvl amount:10 condition:holding_axe events:job_axes_skeleton_kill_done notify
-job_axes_spider_kill: mmobkill spiderlvl amount:5 condition:holding_axe events:job_axes_spider_kill_done notify
+job_axes_zombie_kill: mmobkill zombielvl amount:20 conditions:holding_axe events:job_axes_zombie_kill_done notify
+job_axes_skeleton_kill: mmobkill skeletonlvl amount:10 conditions:holding_axe events:job_axes_skeleton_kill_done notify
+job_axes_spider_kill: mmobkill spiderlvl amount:5 conditions:holding_axe events:job_axes_spider_kill_done notify
 #
-job_archer_zombie_kill: mmobkill zombielvl amount:20 condition:holding_bow events:job_archer_zombie_kill_done notify
-job_archer_skeleton_kill: mmobkill skeletonlvl amount:10 condition:holding_bow events:job_archer_skeleton_kill_done notify
-job_archer_spider_kill: mmobkill spiderlvl amount:5 condition:holding_bow events:job_archer_spider_kill_done notify
+job_archer_zombie_kill: mmobkill zombielvl amount:20 conditions:holding_bow events:job_archer_zombie_kill_done notify
+job_archer_skeleton_kill: mmobkill skeletonlvl amount:10 conditions:holding_bow events:job_archer_skeleton_kill_done notify
+job_archer_spider_kill: mmobkill spiderlvl amount:5 conditions:holding_bow events:job_archer_spider_kill_done notify
 #
 job_fishing_delay: delay 720 events:job_fishing_temporizer_over interval:1200
 job_fishing_temporizer: delay 720 events:job_fishing_temporizer_over interval:1200
-job_fishing: fish raw_fish:0 20 events:job_fishing_fish_done notify
+job_fishing: fish RAW_FISH:0 20 events:job_fishing_fish_done notify
 #
 job_alchimiste_delay: delay 720 events:job_alchimiste_temporizer_over interval:1200
 job_alchimiste_temporizer: delay 720 events:job_alchimiste_temporizer_over interval:1200
@@ -94,7 +93,7 @@ job_alchimiste: potion mundane_potion 30 events:job_alchimiste_potion_done notif
 #
 job_herboriste_delay: delay 720 events:job_herboriste_temporizer_over interval:1200
 job_herboriste_temporizer: delay 720 events:job_herboriste_temporizer_over interval:1200
-job_herboriste: action right 60 conditions:seeds_inhand events:job_herboriste_wheat_done loc:-5000;60;5000;Gaia;7000
+job_herboriste: action right SOIL conditions:seeds_inhand events:job_herboriste_wheat_done loc:-5000;60;5000;Gaia;7000
 #
 job_apprivoiseur_delay: delay 720 events:job_apprivoiseur_temporizer_over interval:1200
 job_apprivoiseur_temporizer: delay 720 events:job_apprivoiseur_temporizer_over interval:1200
@@ -118,23 +117,23 @@ foret_obj_logout: logout events:foret_abandon
 #
 # Donjon Nether
 #
-nether_donjon_logout_event: logout events:nether_donjon_logout_event_exe
-nether_donjon_quitter: delay 0 conditions:!in_nether_donjon event:die_permanent_donjon_exe
+nether_donjon_logout_events: logout events:nether_donjon_logout_event_exe
+nether_donjon_quitter: delay 0 conditions:!in_nether_donjon events:die_permanent_donjon_exe
 nether_donjon_minions_killer: mmobkill zombie_minion amount:6 events:nether_donjon_minions_killed
 nether_donjon_objective_boss: mmobkill netherien amount:1 events:netherien_killed
 #
 #
-nether_donjon2_logout_event: logout events:nether_donjon2_logout_event_exe
-nether_donjon2_quitter: delay 0 conditions:!in_nether_donjon2 event:die_permanent_donjon_exe
+nether_donjon2_logout_events: logout events:nether_donjon2_logout_event_exe
+nether_donjon2_quitter: delay 0 conditions:!in_nether_donjon2 events:die_permanent_donjon_exe
 nether_donjon2_minions_killer: mmobkill zombie_minion2 amount:6 events:nether_donjon2_minions_killed
 nether_donjon2_objective_boss: mmobkill netherien2 amount:1 events:nether_donjon2_netherien_killed
 #
 #
 #
 cimereached: location -6440;140;3201;Gaia;15 conditions:samsonq1 events:remove_samsonq1,cimemess,cimemess_folder
-plume_etrange: action right any condition:plume_have events:plume_etrange loc:-6682;69;2922;Gaia;1
+plume_etrange: action right any conditions:plume_have events:plume_etrange loc:-6682;69;2922;Gaia;1
 jacopo_bat: craft boat 1 events:jacopo_boat_crafted
-obj_find_sam: location -6805;64;2792;Gaia;3 condition:tag_sam events:sam_found
+obj_find_sam: location -6805;64;2792;Gaia;3 conditions:tag_sam events:sam_found
 ami_clickpack: action right any conditions:ami_packinhand events:ami_givefolder
 obj_ermite_bat: location -6208;63;3321;Gaia;2 events:hollish.voyage_ermite_folder
 delay_ilse2: delay 60 events:delay_ilse2_up interval:1200
@@ -169,23 +168,24 @@ training_hard_timer: delay 15 events:training_hard_timer_done interval:222
 #
 craft_delay_reset: delay 7 events:craft_delay_reset_exe interval:1200
 #
-craft_casque_cuir: delay 0 condition:craft_casque_cuir_tempo_have events:craft_casque_cuir_give interval:12
-craft_plastron_cuir: delay 0 condition:craft_plastron_cuir_tempo_have events:craft_plastron_cuir_give interval:12
-craft_jambes_cuir: delay 0 condition:craft_jambes_cuir_tempo_have events:craft_jambes_cuir_give interval:12
-craft_pieds_cuir: delay 0 condition:craft_pieds_cuir_tempo_have events:craft_pieds_cuir_give interval:12
-craft_casque_maille: delay 0 condition:craft_casque_maille_tempo_have events:craft_casque_maille_give interval:12
-craft_plastron_maille: delay 0 condition:craft_plastron_maille_tempo_have events:craft_plastron_maille_give interval:12
-craft_jambes_maille: delay 0 condition:craft_jambes_maille_tempo_have events:craft_jambes_maille_give interval:12
-craft_pieds_maille: delay 0 condition:craft_pieds_maille_tempo_have events:craft_pieds_maille_give interval:12
-craft_casque_fer: delay 0 condition:craft_casque_fer_tempo_have events:craft_casque_fer_give interval:12
-craft_plastron_fer: delay 0 condition:craft_plastron_fer_tempo_have events:craft_plastron_fer_give interval:12
-craft_jambes_fer: delay 0 condition:craft_jambes_fer_tempo_have events:craft_jambes_fer_give interval:12
-craft_pieds_fer: delay 0 condition:craft_pieds_fer_tempo_have events:craft_pieds_fer_give interval:12
-craft_casque_or: delay 0 condition:craft_casque_or_tempo_have events:craft_casque_or_give interval:12
-craft_plastron_or: delay 0 condition:craft_plastron_or_tempo_have events:craft_plastron_or_give interval:12
-craft_jambes_or: delay 0 condition:craft_jambes_or_tempo_have events:craft_jambes_or_give interval:12
-craft_pieds_or: delay 0 condition:craft_pieds_or_tempo_have events:craft_pieds_or_give interval:12
-craft_casque_diamant: delay 0 condition:craft_casque_diamant_tempo_have events:craft_casque_diamant_give interval:12
-craft_plastron_diamant: delay 0 condition:craft_plastron_diamant_tempo_have events:craft_plastron_diamant_give interval:12
-craft_jambes_diamant: delay 0 condition:craft_jambes_diamant_tempo_have events:craft_jambes_diamant_give interval:12
-craft_pieds_diamant: delay 0 condition:craft_pieds_diamant_tempo_have events:craft_pieds_diamant_give interval:12
+craft_casque_cuir: delay 0 conditions:craft_casque_cuir_tempo_have events:craft_casque_cuir_give interval:12
+craft_plastron_cuir: delay 0 conditions:craft_plastron_cuir_tempo_have events:craft_plastron_cuir_give interval:12
+craft_jambes_cuir: delay 0 conditions:craft_jambes_cuir_tempo_have events:craft_jambes_cuir_give interval:12
+craft_pieds_cuir: delay 0 conditions:craft_pieds_cuir_tempo_have events:craft_pieds_cuir_give interval:12
+craft_casque_maille: delay 0 conditions:craft_casque_maille_tempo_have events:craft_casque_maille_give interval:12
+craft_plastron_maille: delay 0 conditions:craft_plastron_maille_tempo_have events:craft_plastron_maille_give interval:12
+craft_jambes_maille: delay 0 conditions:craft_jambes_maille_tempo_have events:craft_jambes_maille_give interval:12
+craft_pieds_maille: delay 0 conditions:craft_pieds_maille_tempo_have events:craft_pieds_maille_give interval:12
+craft_casque_fer: delay 0 conditions:craft_casque_fer_tempo_have events:craft_casque_fer_give interval:12
+craft_plastron_fer: delay 0 conditions:craft_plastron_fer_tempo_have events:craft_plastron_fer_give interval:12
+craft_jambes_fer: delay 0 conditions:craft_jambes_fer_tempo_have events:craft_jambes_fer_give interval:12
+craft_pieds_fer: delay 0 conditions:craft_pieds_fer_tempo_have events:craft_pieds_fer_give interval:12
+craft_casque_or: delay 0 conditions:craft_casque_or_tempo_have events:craft_casque_or_give interval:12
+craft_plastron_or: delay 0 conditions:craft_plastron_or_tempo_have events:craft_plastron_or_give interval:12
+craft_jambes_or: delay 0 conditions:craft_jambes_or_tempo_have events:craft_jambes_or_give interval:12
+craft_pieds_or: delay 0 conditions:craft_pieds_or_tempo_have events:craft_pieds_or_give interval:12
+craft_casque_diamant: delay 0 conditions:craft_casque_diamant_tempo_have events:craft_casque_diamant_give interval:12
+craft_plastron_diamant: delay 0 conditions:craft_plastron_diamant_tempo_have events:craft_plastron_diamant_give interval:12
+craft_jambes_diamant: delay 0 conditions:craft_jambes_diamant_tempo_have events:craft_jambes_diamant_give interval:12
+craft_pieds_diamant: delay 0 conditions:craft_pieds_diamant_tempo_have events:craft_pieds_diamant_give interval:12
+

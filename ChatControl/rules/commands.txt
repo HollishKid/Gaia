@@ -1,0 +1,75 @@
+# -------------------------------------------------------------------------------
+# This file manages rules in commands (messages beginning with /)
+# and includes rules from rules.txt.
+#
+# File by default contain examples that you can safely remove or change.
+#
+# For help, see notes in rules.txt file.
+# -------------------------------------------------------------------------------
+
+#
+# Contrôles de commandes
+#
+match ^/op\b
+ignore perm chatcontrol.bypass.rules
+then warn &cNe tentez pas d'exécuter ce type de commandes.
+then notify notification.commandes &f[&cNote Admin&f] &2%player &ca exécuté: &f%message &c. Est-ce normal?
+then deny
+then log
+
+match ^/(gm|gamemode)
+ignore perm chatcontrol.bypass.rules
+then warn &cNe tentez pas d'exécuter ce type de commandes.
+then notify chatcontrol.commandes &f[&cNote Admin&f] &2%player &ca exécuté: &f%message &c. Est-ce normal?
+then deny
+then log
+
+match ^/t \?
+ignore perm chatcontrol.bypass.rules
+then warn &cVeuillez utiliser &a/resident &cet&f/&cou &a/maire &cpour gérer vos affaires de Ville.
+then notify notification.commandes &f[&cNote Admin&f] &2%player &ca exécuté: &f%message &c. Est-ce normal?
+then deny
+
+match ^/town \?
+ignore perm chatcontrol.bypass.rules
+then warn &cVeuillez utiliser &a/resident &cet&f/&cou &a/maire &cpour gérer vos affaires de Ville.
+then notify notification.commandes &f[&cNote Admin&f] &2%player &ca exécuté: &f%message &c. Est-ce normal?
+then deny
+
+match ^/towny \?
+ignore perm chatcontrol.bypass.rules
+then warn &cVeuillez utiliser &a/resident &cet&f/&cou &a/maire &cpour gérer vos affaires de Ville.
+then notify notification.commandes &f[&cNote Admin&f] &2%player &ca exécuté: &f%message &c. Est-ce normal?
+then deny
+
+match ^/resident \?
+ignore perm chatcontrol.bypass.rules
+then warn &cVeuillez utiliser &a/resident &cet&f/&cou &a/maire &cpour gérer vos affaires de Ville.
+then notify notification.commandes &f[&cNote Admin&f] &2%player &ca exécuté: &f%message &c. Est-ce normal?
+then deny
+
+match ^/res \?
+ignore perm chatcontrol.bypass.rules
+then warn &cVeuillez utiliser &a/resident &cet&f/&cou &a/maire &cpour gérer vos affaires de Ville.
+then notify notification.commandes &f[&cNote Admin&f] &2%player &ca exécuté: &f%message &c. Est-ce normal?
+then deny
+
+match ^/nation \?
+ignore perm chatcontrol.bypass.rules
+then warn &cVeuillez utiliser &a/resident &cet&f/&cou &a/maire &cpour gérer vos affaires de Ville.
+then notify notification.commandes &f[&cNote Admin&f] &2%player &ca exécuté: &f%message &c. Est-ce normal?
+then deny
+
+#match ^/balance|^/spawn|^/home|^/sethome
+#then warn &dPensez à utiliser le &2/menu &dpour accéder à toutes vos options.
+
+match ^/trade
+then warn &cPour échanger, faites Shift + Clic-Droit sur la personne de votre choix.
+then deny
+
+match ^/pay
+then warn  &cPour éviter les arnaques, utilisez l'interface d'échange. Clic-droit sur la personne avec qui échanger.
+handle as tradelogger
+
+match ^/tp
+handle as teleportlogger

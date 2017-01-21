@@ -1,4 +1,4 @@
-quester: seimag
+quester: 'seimag'
 first: n1
 stop: 'true'
 #
@@ -10,10 +10,10 @@ stop: 'true'
 #
 NPC_options:
   n1:
-    text: Soif de connaissances mon ami ? Tu es donc venu au bon endroit pour ça !
-    pointer: check_joze
+    text: 'Soif de connaissances mon ami ? Tu es donc venu au bon endroit pour ça !'
+    pointers: check_joze
   rep1:
-    text: Mmmmh... Il se pourrait que je me rappelle de quelque chose... Un auteur sudiste, si je ne m'abuse... Vous devriez demander à &3Lutcha&a&o, qui habite la &dColline verdoyante&a&o, juste sous la chapelle, il pourra vous renseigner.
+    text: 'Mmmmh... Il se pourrait que je me rappelle de quelque chose... Un auteur sudiste, si je ne m''abuse... Vous devriez demander à &3Lutcha&a&o, qui habite la &dColline verdoyante&a&o, juste sous la chapelle, il pourra vous renseigner.'
 #
 ##########################
 #                        #
@@ -23,6 +23,6 @@ NPC_options:
 #
 player_options:
   check_joze:
-    text: Je suis à la recherche d'un ouvrage en particulier, &6Croisements divers et variés&b, en avez vous déjà entendu parler?
-    conditions: joze_q1
-    pointer: rep1
+    text: 'Je suis à la recherche d''un ouvrage en particulier, &6Croisements divers et variés&b, en avez vous déjà entendu parler?'
+    conditions: 'joze_q1'
+    pointers: rep1

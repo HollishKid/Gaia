@@ -1,6 +1,6 @@
 #
 #
-# 
+#
 # EVENTS
 #
 #
@@ -10,8 +10,8 @@
 #                 By Hollish
 #
 #
-###################################################################
-nothing: tag remove inexistent_tag
+################################################################### THIS IS A MESSAGE FOR SPARADRA59
+nothing: tag del inexistent_tag
 #
 permanent_1minute: folder motd_randomizer
 #
@@ -24,18 +24,18 @@ quest_point_5: folder default.quest_point_5
 #
 #
 motd_randomizer: folder motd1,motd2,motd3,motd4,motd5,motd6,motd7,motd8,motd9 random:1
-motd1: command tm abc -silent animation:motd1
-motd2: command tm abc -silent animation:motd2
-motd3: command tm abc -silent animation:motd3
-motd4: command tm abc -silent animation:motd4
-motd5: command tm abc -silent animation:motd5
-motd6: command tm abc -silent animation:motd6
-motd7: command tm abc -silent animation:motd7
-motd8: command tm abc -silent animation:motd8
-motd9: command tm abc -silent animation:motd9
+motd1: 'command tm abc -silent animation:motd1'
+motd2: 'command tm abc -silent animation:motd2'
+motd3: 'command tm abc -silent animation:motd3'
+motd4: 'command tm abc -silent animation:motd4'
+motd5: 'command tm abc -silent animation:motd5'
+motd6: 'command tm abc -silent animation:motd6'
+motd7: 'command tm abc -silent animation:motd7'
+motd8: 'command tm abc -silent animation:motd8'
+motd9: 'command tm abc -silent animation:motd9'
 #
 #
-# 
+#
 # OPERATIONS SUR ARGENT
 #
 #
@@ -127,29 +127,29 @@ meca13: folder meca14,message13,npc_mage delay:11
 meca14: folder meca15,message14,npc_erudit delay:11
 meca15: folder meca16,message15,npc_moine delay:9
 meca16: folder meca17,message16,npc_minion delay:9
-meca17: folder meca18,message17, delay:8
+meca17: folder meca18,message17 delay:8
 meca18: folder meca19,npc_mage_off,npc_erudit_off,npc_moine_off,npc_minion_off delay:7
 meca19: folder meca20,image_biblio_off delay:6
 meca20: folder meca21,teleport_back delay:6
 meca21: folder end_histoire delay:7
 end_histoire: conversation mageentry
 message_welcome: 'message &dMage &f: &a&oN''ayez pas peur &2%player%&a&o, vous êtes toujours vivant! Je suis entré dans votre esprit pour mieux vous conter mon histoire...'
-message1: message &a&oTout cela commence il y a fort longtemps, pendant la Première Ere de notre temps, juste après la création du monde par &6Gaïa&a&o.
-message2: message &a&oLe monde était alors harmonieux et opulent et la population prenait le temps d'apprécier son opulence et sa force.
-message3: message &a&oLes habitants de cette Première Ere ont certainnement réussi à maîtriser cette force. Cet Art de Maîtrise est aujourd'hui perdu.
-message4: message &a&oIl ne reste plus que les mythes des temples qui furent alors érigés, quatre au total. Un temple par élément constituant ce monde.
-message5: message &a&oUn temple du Feu.
-message6: message &a&oUn temple de l'Eau.
-message7: message &a&oUn temple de la Terre.
-message8: message &a&oUn temple de l'Air.
-message9: message &a&oSelon les récits, ces temples furent abandonnés lors de l'avènement de la Seconde Ere, beaucoup plus tumultueuse avec l'arrivée de Forces Maléfiques sur Gaïa.
-message10: message &6Gaïa &a&oaurait alors caché ces temples pour empêcher ces Forces de s'emparer de leur Spiritualité. Certains Mages pensent qu'elle en a simplement obstrué le passage, mais personne ne les a jamais revu depuis la fin de la Première Ere.
-message11: message &a&oLes habitants qui habitaient les temples sont alors devenus nomades, empportant leurs Spiritualité avec eux ...
-message12: message &a&oAu début de la Troisième et actuelle Ere, &6Ubu &a&oa fait ériger le &dSanctuaire &a&opour tenter de rassembler les informations sur ces temples et leur Spiritualité.
-message13: message &a&oDans ce &dSanctuaire&a&o, &6Ubu &a&oordonna aux 13 plus sages de son entourage de réunir tous les documents qui instruisaient sur les temples et de développer les pouvoirs qu'ils y trouvaient.
-message14: message &a&oIl nomma ensuite 4 Érudits pour qu'ils diffusent le savoir.
-message15: message &a&oCes Érudits forment alors les Moines, qui sont chargées de rapporter leur savoir à la population actuelle et de façon locale.
-message16: message &a&oLes Moines doivent d'abord passer par l'apprentissage en étant Minion auprès de tous les Érudits du &dSanctuaire&a&o.
+message1: 'message &a&oTout cela commence il y a fort longtemps, pendant la Première Ere de notre temps, juste après la création du monde par &6Gaïa&a&o.'
+message2: 'message &a&oLe monde était alors harmonieux et opulent et la population prenait le temps d''apprécier son opulence et sa force.'
+message3: 'message &a&oLes habitants de cette Première Ere ont certainnement réussi à maîtriser cette force. Cet Art de Maîtrise est aujourd''hui perdu.'
+message4: 'message &a&oIl ne reste plus que les mythes des temples qui furent alors érigés, quatre au total. Un temple par élément constituant ce monde.'
+message5: 'message &a&oUn temple du Feu.'
+message6: 'message &a&oUn temple de l''Eau.'
+message7: 'message &a&oUn temple de la Terre.'
+message8: 'message &a&oUn temple de l''Air.'
+message9: 'message &a&oSelon les récits, ces temples furent abandonnés lors de l''avènement de la Seconde Ere, beaucoup plus tumultueuse avec l''arrivée de Forces Maléfiques sur Gaïa.'
+message10: 'message &6Gaïa &a&oaurait alors caché ces temples pour empêcher ces Forces de s''emparer de leur Spiritualité. Certains Mages pensent qu''elle en a simplement obstrué le passage, mais personne ne les a jamais revu depuis la fin de la Première Ere.'
+message11: 'message &a&oLes habitants qui habitaient les temples sont alors devenus nomades, empportant leurs Spiritualité avec eux ...'
+message12: 'message &a&oAu début de la Troisième et actuelle Ere, &6Ubu &a&oa fait ériger le &dSanctuaire &a&opour tenter de rassembler les informations sur ces temples et leur Spiritualité.'
+message13: 'message &a&oDans ce &dSanctuaire&a&o, &6Ubu &a&oordonna aux 13 plus sages de son entourage de réunir tous les documents qui instruisaient sur les temples et de développer les pouvoirs qu''ils y trouvaient.'
+message14: 'message &a&oIl nomma ensuite 4 Érudits pour qu''ils diffusent le savoir.'
+message15: 'message &a&oCes Érudits forment alors les Moines, qui sont chargées de rapporter leur savoir à la population actuelle et de façon locale.'
+message16: 'message &a&oLes Moines doivent d''abord passer par l''apprentissage en étant Minion auprès de tous les Érudits du &dSanctuaire&a&o.'
 message17: 'message &4Mage &f: &a&oVoici où nous en sommes donc de nos jours. Préparez vous, je vais progressivement vous faire revenir à vous même...'
 #
 #
@@ -175,27 +175,27 @@ image_atemp_off: setblock AIR -7144;101;2409;Gaia
 monde_off_eff: explosion 0 0 5 -7110;134;2436;Gaia
 image_biblio_off: setblock AIR -7144;101;2417;Gaia
 npc_mage: folder npc_mage191_on,npc_mage191_eff delay:0
-npc_mage191_on: command npc spawn 191
+npc_mage191_on: 'command npc spawn 191'
 npc_erudit: folder npc_erudit192_on,npc_erudit193_on,npc_erudit192_eff,npc_erudit193_eff delay:0
-npc_erudit192_on: command npc spawn 192
-npc_erudit193_on: command npc spawn 193
+npc_erudit192_on: 'command npc spawn 192'
+npc_erudit193_on: 'command npc spawn 193'
 npc_moine: folder npc_moine194_on,npc_moine195_on,npc_moine194_eff,npc_moine195_eff delay:0
-npc_moine194_on: command npc spawn 194
-npc_moine195_on: command npc spawn 195
+npc_moine194_on: 'command npc spawn 194'
+npc_moine195_on: 'command npc spawn 195'
 npc_minion: folder npc_minion196_on,npc_minion197_on,npc_minion196_eff,npc_minion197_eff delay:0
-npc_minion196_on: command npc spawn 196
-npc_minion197_on: command npc spawn 197
+npc_minion196_on: 'command npc spawn 196'
+npc_minion197_on: 'command npc spawn 197'
 npc_mage_off: folder npc_mage191_off,npc_mage191_eff delay:0
-npc_mage191_off: command npc despawn 191
+npc_mage191_off: 'command npc despawn 191'
 npc_erudit_off: folder npc_erudit192_off,npc_erudit193_off,npc_erudit192_eff,npc_erudit193_eff delay:0
-npc_erudit192_off: command npc despawn 192
-npc_erudit193_off: command npc despawn 193
+npc_erudit192_off: 'command npc despawn 192'
+npc_erudit193_off: 'command npc despawn 193'
 npc_moine_off: folder npc_moine194_off,npc_moine195_off,npc_moine194_eff,npc_moine195_eff delay:0
-npc_moine194_off: command npc despawn 194
-npc_moine195_off: command npc despawn 195
+npc_moine194_off: 'command npc despawn 194'
+npc_moine195_off: 'command npc despawn 195'
 npc_minion_off: folder npc_minion196_off,npc_minion197_off,npc_minion196_eff,npc_minion197_eff delay:0
-npc_minion196_off: command npc despawn 196
-npc_minion197_off: command npc despawn 197
+npc_minion196_off: 'command npc despawn 196'
+npc_minion197_off: 'command npc despawn 197'
 npc_mage191_eff: explosion 0 0 1 -7110;136;2428;Gaia
 npc_erudit192_eff: explosion 0 0 1 -7112;132;2428;Gaia
 npc_erudit193_eff: explosion 0 0 1 -7108;132;2428;Gaia
@@ -220,9 +220,9 @@ journal_orno_book_bis: journal add journal_orno_book_bis
 journal_orno_book_bis_del: journal del journal_orno_book_bis
 journal_mageentry: journal add journal_mageentry
 journal_mageentry_del: journal del journal_mageentry
-orno_title1: command title %player% times 20 100 20
-orno_title2: command title %player% title {"text":"Baguette Magique","color":"light_purple"}
-orno_title3: command title %player% subtitle {"text":"Retrouver Orno, l'historier","italic":true,"color":"yellow"}
+orno_title1: 'command title %player% times 20 100 20'
+orno_title2: 'command title %player% title {"text":"Baguette Magique","color":"light_purple"}'
+orno_title3: 'command title %player% subtitle {"text":"Retrouver Orno, l''historier","italic":true,"color":"yellow"}'
 orno_book: folder tag_orno_book,obj_orno_book,journal_find_orno_del,journal_orno_book delay:0
 tag_orno_book: tag add orno_book
 obj_orno_book: objective start orno_book
@@ -230,9 +230,9 @@ orno_beta: folder journal_orno_book_bis,tag_orno_beta,obj_orno_beta,journal_orno
 tag_orno_beta: tag add orno_beta
 obj_orno_beta: objective start orno_beta
 orno_end: folder tag_remove_orno_beta,tag_remove_orno,tag_remove_ornobook,tag_orno_end,journal_orno_book_bis_del,journal_mageentry,orno_book_tagged_del2 delay:0
-tag_remove_orno: tag remove orno
-tag_remove_ornobook: tag remove orno_book
-tag_remove_orno_beta: tag remove orno_beta
+tag_remove_orno: tag del orno
+tag_remove_ornobook: tag del orno_book
+tag_remove_orno_beta: tag del orno_beta
 tag_orno_end: tag add orno_end
 orno_book_give: give orno_book
 orno_book_tagged: tag add orno_book_tagged
@@ -240,8 +240,8 @@ orno_book_tagged_del: tag del orno_book_tagged
 orno_book_tagged2: tag add orno_book_tagged2
 orno_book_tagged_del2: tag del orno_book_tagged2
 orno_book_beta_give: give orno_book_beta
-message_book: message &dVous trouvez un livre avec le bon titre, écrit par &2Orno&d, vous le prenez de l'étagère.
-message_book_beta: message &dVous trouvez un livre avec le bon titre, écrit par &2Mage Pratus&d, vous le prenez de l'étagère.
+message_book: 'message &dVous trouvez un livre avec le bon titre, écrit par &2Orno&d, vous le prenez de l''étagère.'
+message_book_beta: 'message &dVous trouvez un livre avec le bon titre, écrit par &2Mage Pratus&d, vous le prenez de l''étagère.'
 #
 #
 # Passage chez les Érudits
@@ -249,13 +249,13 @@ message_book_beta: message &dVous trouvez un livre avec le bon titre, écrit par
 mageentry_approved: tag add mageentry_approved
 # A garder pour les commandes !
 apparition: folder baton_remove,baguette_give,configuration,journal_erudits delay:0
-baguette_give: command wandp %player% default
+baguette_give: 'command wandp %player% default'
 configuration: folder baguette_magic_missile,baguette_flare,baguette_magic_missile_tag,baguette_flare_tag,tag_porteur_baguette,tag_remove_mage_entry,mana_points_set delay:0
-baguette_magic_missile: command wandp %player% add missile
-baguette_flare: command wandp %player% add flare
+baguette_magic_missile: 'command wandp %player% add missile'
+baguette_flare: 'command wandp %player% add flare'
 baguette_magic_missile_tag: tag add baguette_magic_missile
 baguette_flare_tag: tag add baguette_flare
-tag_remove_mage_entry: tag remove tag_mage_entry
+tag_remove_mage_entry: tag del tag_mage_entry
 tag_porteur_baguette: tag add porteur_baguette
 mana_points_set: point mana 100
 #
@@ -265,7 +265,7 @@ mana_points_set: point mana 100
 #
 ###########################################
 #
-spiritgui: command cc open spiritgui.yml %player%
+spiritgui: 'command cc open spiritgui.yml %player%'
 #
 os_charge1: folder os_take1,os_give1
 os_take1: take bone:1
@@ -290,21 +290,21 @@ varko_pack_delivered: folder Zedd.var_q2_journal_del,journal_apprenti,give_gros_
 give_gros_os: give bone_gros
 take_varko_pack: take pack_varko
 tag_apprenti_francois: tag add apprenti_francois
-tag_apprenti_francois_del: tag remove apprenti_francois
+tag_apprenti_francois_del: tag del apprenti_francois
 #
 burry_gros_os: folder journal_apprenti_del,journal_francois,tag_apprenti_francois_del,obj_gros_os
 obj_gros_os: objective start obj_gros_os
 burried_gros_os: folder tag_burried_gros_os,bone_message,take_gros_os,journal_francois_del,journal_francois2,default.point_spirituality50
 tag_burried_gros_os: tag add burried_gros_os
-tag_burried_gros_os_del: tag remove burried_gros_os
+tag_burried_gros_os_del: tag del burried_gros_os
 take_gros_os: take bone_gros
 bone_message: folder bone_message1,bone_message2,bone_message3
-bone_message1: command tm amsg -silent %player% &d&oVous creusez un trou dans la terre...
+bone_message1: 'command tm amsg -silent %player% &d&oVous creusez un trou dans la terre...'
 bone_message2: folder bone_message21 delay:2
-bone_message21: command tm amsg -silent %player% &d&oVous mettez le Gros Os dedans...
+bone_message21: 'command tm amsg -silent %player% &d&oVous mettez le Gros Os dedans...'
 bone_message3: folder bone_message31,bone_message32 delay:3
-bone_message31: command tm amsg -silent %player% &d&oVous sentez une forte présence de Spiritualité !
-bone_message32: message &dVous devriez retrouner voir le &2Moine François &a&opour lui faire part de cet effet spirituel.
+bone_message31: 'command tm amsg -silent %player% &d&oVous sentez une forte présence de Spiritualité !'
+bone_message32: 'message &dVous devriez retrouner voir le &2Moine François &a&opour lui faire part de cet effet spirituel.'
 #
 varkopack_done: folder tag_burried_gros_os_del,journal_francois2_del,Zedd.var_q2start_del,Zedd.var_q2done,default.quest_point1
 #
@@ -350,14 +350,14 @@ meka2: folder meka3,messag3 delay:10
 meka3: folder meka4,messag4 delay:12
 meka4: folder meka5,messag5 delay:7
 meka5: folder title_air1,title_air2,title_air3 delay:10
-messag1: message &a&oVous connaissez l'Histoire des Quatre Temples, raconté si bien par le &2Mage &a&oà l'entrée, sachez que le &dTemple de l'Air &a&opourrait bel et bien exister.
-messag2: message &a&oJe suis en contact avec un vieil Ermite, peut être l'avez vous déjà rencontré. Il navigue beaucoup avec son petit bâteau et s'éloigne parfois beaucoup vers l'Est.
-messag3: message &a&oIl témoigne d'une chute d'eau, venue du ciel, en plein milieu de la Mer à l'Est. Je suis entrain de chercher confirmation dans la littérature de récits similaires.
-messag4: message &a&oTout mes minions ont été affectés à la tâche, je vais les superviser. Allez de l'avant retrouver cet &2Ermite&a&o, il devrait se trouver sur son île préférée, au Sud-Est d'Athelas, dans la mer.
-messag5: message &a&oTentez de le convaincre de vous montrer la chute d'eau ! Vous pourrez ainsi prendre les devants pendant que nous recherchons davantage dans la Bibliothèque !
-title_air1: command title %player% times 20 100 20
-title_air2: command title %player% subtitle {"text":"Retrouver l'Ermite","italic":true,"color":"gold"}
-title_air3: command title %player% title {"text":"Le Temple de l'Air","color":"blue"}
+messag1: 'message &a&oVous connaissez l''Histoire des Quatre Temples, raconté si bien par le &2Mage &a&oà l''entrée, sachez que le &dTemple de l''Air &a&opourrait bel et bien exister.'
+messag2: 'message &a&oJe suis en contact avec un vieil Ermite, peut être l''avez vous déjà rencontré. Il navigue beaucoup avec son petit bâteau et s''éloigne parfois beaucoup vers l''Est.'
+messag3: 'message &a&oIl témoigne d''une chute d''eau, venue du ciel, en plein milieu de la Mer à l''Est. Je suis entrain de chercher confirmation dans la littérature de récits similaires.'
+messag4: 'message &a&oTout mes minions ont été affectés à la tâche, je vais les superviser. Allez de l''avant retrouver cet &2Ermite&a&o, il devrait se trouver sur son île préférée, au Sud-Est d''Athelas, dans la mer.'
+messag5: 'message &a&oTentez de le convaincre de vous montrer la chute d''eau ! Vous pourrez ainsi prendre les devants pendant que nous recherchons davantage dans la Bibliothèque !'
+title_air1: 'command title %player% times 20 100 20'
+title_air2: 'command title %player% subtitle {"text":"Retrouver l''Ermite","italic":true,"color":"gold"}'
+title_air3: 'command title %player% title {"text":"Le Temple de l''Air","color":"blue"}'
 #
 #
 livre_air_inspection: folder air_book_inspection1,bookmeka1 delay:3
@@ -392,35 +392,27 @@ mequa7: folder mequa8,messa5,ermite_boat_off delay:5
 mequa8: folder mequa9,messa6 delay:9
 mequa9: folder mequa10,messa7 delay:8
 mequa10: folder messa8,obj_air_mill,journal_obj_airmill delay:8
-tag_voyage_air_remove: tag remove voyage_air
+tag_voyage_air_remove: tag del voyage_air
 tag_done_voyage_air: tag add voyage_air_done
-tag_air_loser_remove: tag remove air_temple_loser
-ermite_spawn: command npc spawn 343
-ermite_despawn: command npc despawn 343
-ermite2_spawn: command npc spawn 344
-ermite2_despawn: command npc despawn 344
-ermite3_spawn: command npc spawn 345
-ermite3_despawn: command npc despawn 345
+tag_air_loser_remove: tag del air_temple_loser
+ermite_spawn: 'command npc spawn 343'
+ermite_despawn: 'command npc despawn 343'
+ermite2_spawn: 'command npc spawn 344'
+ermite2_despawn: 'command npc despawn 344'
+ermite3_spawn: 'command npc spawn 345'
+ermite3_despawn: 'command npc despawn 345'
 ermite_boat_on: setblock AIR -6193;65;3329;Gaia
 ermite_boat_off: setblock REDSTONE_TORCH_ON -6193;65;3329;Gaia
 ermite_boat2_on: setblock AIR -6191;65;3329;Gaia
 ermite_boat2_off: setblock REDSTONE_TORCH_ON -6191;65;3329;Gaia
-messa1: 'message &4Ermite&f: &a&oNous voilà prêts pour le départ, j''espère que vous
-  vous sentez prêt! Ceci va durer un petit moment ... !'
-messa2: 'message &4Ermite&f: &a&oNous nous approchons du point où il me semble l''avoir
-  vu ...'
-messa3: 'message &4Ermite&f: &a&oJ''ai remarqué que le crépuscule y était permament
-  dans les parages, le soleil semblait fixe dans le ciel!'
+messa1: 'message &4Ermite&f: &a&oNous voilà prêts pour le départ, j''espère que vous vous sentez prêt! Ceci va durer un petit moment ... !'
+messa2: 'message &4Ermite&f: &a&oNous nous approchons du point où il me semble l''avoir vu ...'
+messa3: 'message &4Ermite&f: &a&oJ''ai remarqué que le crépuscule y était permament dans les parages, le soleil semblait fixe dans le ciel!'
 messa4: 'message &4Ermite&f: &a&oNous y voilà!'
-messa5: 'message &4Ermite&f: &a&oJ''ai comme l''impression de voir quelque chose dans
-  le ciel, quelque chose de grand!'
-messa6: 'message &4Ermite&f: &a&oC''est incroyable!! La chute d''eau semble être
-  le seul contact avec la mer et une île flottante!'
-messa7: 'message &4Ermite&f: &a&oIl doit y avoir un moyen de la rejoindre ...! Je
-  suis trop âgé pour faire ça, mais essayez de remonter le courant de la chute, vers
-  le haut!'
-messa8: 'message &4Ermite&f: &a&oUne fois que vous serez en haut, je retournerais
-  à mon île, pour prévenir l''&2Erudit de l''Air &a&o de cette découverte grandiose!'
+messa5: 'message &4Ermite&f: &a&oJ''ai comme l''impression de voir quelque chose dans le ciel, quelque chose de grand!'
+messa6: 'message &4Ermite&f: &a&oC''est incroyable!! La chute d''eau semble êtrele seul contact avec la mer et une île flottante!'
+messa7: 'message &4Ermite&f: &a&oIl doit y avoir un moyen de la rejoindre ...! Je suis trop âgé pour faire ça, mais essayez de remonter le courant de la chute, vers le haut!'
+messa8: 'message &4Ermite&f: &a&oUne fois que vous serez en haut, je retournerais à mon île, pour prévenir l''&2Erudit de l''Air &a&o de cette découverte grandiose!'
 #
 #
 # Temple de l'Air
@@ -446,9 +438,9 @@ air_meka4: folder air_temple4_off delay:2
 air_meka5: folder air_temple_attained,title_airmill1,title_airmill2,title_airmill3 delay:1
 air_temple_attained: 'message &aVous arrivez sur l''île la plus grande. Essayez de retrouver Aang.'
 #
-title_airmill1: command title %player% times 20 100 20
-title_airmill2: command title %player% subtitle {"text":"Trouver Aang","italic":true,"color":"gold"}
-title_airmill3: command title %player% title {"text":"Le Temple de l'Air","color":"blue"}
+title_airmill1: 'command title %player% times 20 100 20'
+title_airmill2: 'command title %player% subtitle {"text":"Trouver Aang","italic":true,"color":"gold"}'
+title_airmill3: 'command title %player% title {"text":"Le Temple de l''Air","color":"blue"}'
 obj_air_temple_loc1: objective start obj_air_temple_loc1
 obj_air_temple_loc2: objective start obj_air_temple_loc2
 obj_air_temple_loc3: objective start obj_air_temple_loc3
@@ -475,24 +467,24 @@ air_temple_lose_message: 'message &dVous ne parvenez pas à trouver &2Aang&d, vo
 # Mechanics
 #
 air_temple1_on: setblock REDSTONE_TORCH_ON -6748;57;2979;Gaia
-air_temple1_off: folder air_temple1_off_exe delay:3 condition:!air_parcours_occupied2
+air_temple1_off: folder air_temple1_off_exe delay:3 conditions:!air_parcours_occupied2
 air_temple1_off_exe: setblock AIR -6748;57;2979;Gaia
 air_temple2_on: setblock REDSTONE_TORCH_ON -6750;57;2979;Gaia
-air_temple2_off: folder air_temple2_off_exe delay:3 condition:!air_parcours_occupied2
+air_temple2_off: folder air_temple2_off_exe delay:3 conditions:!air_parcours_occupied2
 air_temple2_off_exe: setblock AIR -6750;57;2979;Gaia
 air_temple3_on: setblock REDSTONE_TORCH_ON -6752;57;2979;Gaia
-air_temple3_off: folder air_temple3_off_exe delay:3 condition:!air_parcours_occupied2
+air_temple3_off: folder air_temple3_off_exe delay:3 conditions:!air_parcours_occupied2
 air_temple3_off_exe: setblock AIR -6752;57;2979;Gaia
 air_temple4_on: setblock REDSTONE_TORCH_ON -6754;57;2979;Gaia
-air_temple4_off: folder air_temple4_off_exe delay:3 condition:!air_parcours_occupied2
+air_temple4_off: folder air_temple4_off_exe delay:3 conditions:!air_parcours_occupied2
 air_temple4_off_exe: setblock AIR -6754;57;2979;Gaia
 #
 # Aang
 #
 tag_aang: tag add aang
-aang_sort: command wandp %player% add peek
+aang_sort: 'command wandp %player% add peek'
 baguette_peek_tag: tag add baguette_peek
-livre_air_give: command mgive %player% book:airbending
+livre_air_give: 'command mgive %player% book:airbending'
 tag_livre_air: tag add livre_air
 #
 # Milo -- or not -- taken over by Aang for Wand Creation
@@ -516,10 +508,10 @@ obj_milo_fiole: objective start obj_milo_fiole
 obj_air_catcher: objective start obj_air_catcher
 milo_fiole_mess: 'message &dJ''ai fabriqué une fiole! Je devrais la rapporter à &2Aang &dau Temple de l''Air.'
 tag_milo_fiole: tag add milo_fiole
-tag_remove_fiole: tag remove milo_fiole
+tag_remove_fiole: tag del milo_fiole
 milo_fiole1: tag add milo_fiole1
-milo_fiole1_remove: tag remove milo_fiole1
-air_captured: message &dJ''ai réussi à capturer de l''air du continent de l''Est. La fiole semble s''agiter!
+milo_fiole1_remove: tag del milo_fiole1
+air_captured: 'message &dJ''ai réussi à capturer de l''air du continent de l''Est. La fiole semble s''agiter!'
 take_fiole: take fiole:1
 give_fiole_air_est: give fiole_air:1
 take_fiole_air_est: take fiole_air:1
@@ -527,14 +519,14 @@ tag_milo_ardere: tag add milo_ardere
 tag_milo_ardere_del: tag del milo_ardere
 obj_fiole_sommet: objective start obj_fiole_sommet
 fiole_calmed: folder fiole_calmed1,journal_fiole_sommet_del,journal_fiole_sommet_done,take_fiole_air_est,give_fiole_air_calmed,atom,tag_milo_ardere_del
-fiole_calmed1: message &dLa Fiole semble se calmer... Je devrais la rapporter au &2moine Ardere&d.
+fiole_calmed1: 'message &dLa Fiole semble se calmer... Je devrais la rapporter au &2moine Ardere&d.'
 give_fiole_air_calmed: give fiole_air_calmed:1
 take_fiole_air_calmed: take fiole_air_calmed:1
 tag_ardere_aang: tag add tag_ardere_aang
 tag_ardere_aang_del: tag del tag_ardere_aang
 aang_baton_obj: objective start aang_baton_obj
 aang_baton_obj_done: folder aang_baton_obj_done_mess,tag_aang_baton
-aang_baton_obj_done_mess: message &dJe devrais ramener ce Bâton à &2Aang &dau Temple de l'Air !
+aang_baton_obj_done_mess: 'message &dJe devrais ramener ce Bâton à &2Aang &dau Temple de l''Air !'
 tag_aang_baton: tag add tag_aang_baton
 tag_aang_baton_del: tag del tag_aang_baton
 #
@@ -545,7 +537,7 @@ baton_remove: take baton:1
 air_mana_points_set: point air_mana 100
 air_mana_regen_set: point air_mana_regen 5
 tag_air_wand: tag add air_wand
-give_air_wand: command wandp %player% airbender
+give_air_wand: 'command wandp %player% airbender'
 #
 #
 #
@@ -565,19 +557,73 @@ tag_erudit_feu: tag add erudit_feu
 #
 #Generic
 #
-air_wand_menu: command cc open airwand %player%
+air_wand_menu: 'command cc open airwand %player%'
 #
-too_much_mana: message &dVous avez trop de Mana sur cette Baguette pour pouvoir en rajouter !
-no_spirit: message &dVous n'avez pas assez de points de Spiritualité pour faire cela !
-spell_have: message &dVous possédez déjà ce sort.
+# This artefact reparation requires manual update anytime a new wand, spell or other configuration added.
+#   Between different wands there must be check on which wand is held by player.
+#   This is required to configure each wand based on tags.
+#   Below is 1st cycle of testing (air bender).
+#   Each cycle must be launched individually from "ilce" (check for case lost wand is not airwand)
+#
+ilce: folder ilce_air,ilce_fire,ilce_earth,ilce_water
+#
+ilce_air: if air_wand ilce_air2 else nothing
+ilce_air2: if wand1_inventory air_wand_have_hand else ilce_airbis
+ilce_airbis: if wand_air wand_air_configure else ilce_air3
+ilce_air3: folder ilce_air4,ilce_air5,ilce_air6
+ilce_air4: 'message &d&oIl semblerait que vous ayez perdu votre Baguette de l''Air.'
+ilce_air5: 'command wandp %player% airbender'
+ilce_air6: folder ilce_air7 delay:1
+ilce_air7: if wand_air wand_air_configure else air_wand_have_hand
+#
+wand_air_configure: folder wand_air_c1,wand_air_c2
+wand_air_c1: 'message &d&oLa Baguette d''Air que vous tenez en main va être réenchantée. Ne la lâchez pas...'
+wand_air_c2: if air_airblast wand_air_blast else wand_air_c3
+wand_air_c3: if air_bomb wand_air_bomb else wand_air_c4
+wand_air_c4: if air_suction wand_air_suction else wand_air_c5
+wand_air_c5: if air_tornado wand_air_tornado else wand_air_c6
+wand_air_c6: if air_poussee wand_air_poussee else wand_air_c7
+wand_air_c7: if air_shield wand_air_shield else wand_air_c8
+wand_air_c8: if air_enhancedspeed wand_air_enhancedspeed else wand_air_c9
+wand_air_c9: if air_scooter wand_air_scooter else wand_air_c10
+wand_air_c10: if air_breathofwind wand_air_breathofwind else regenup_air_exe3
+#
+wand_air_blast: folder air_airblast_exe1,wand_air_c3
+wand_air_bomb: folder air_bomb_exe1,wand_air_c4
+wand_air_suction: folder suction_exe1,wand_air_c5
+wand_air_tornado: folder air_tornado_exe1,wand_air_c6
+wand_air_poussee: folder air_poussee_exe1,wand_air_c7
+wand_air_shield: folder air_shield_exe1,wand_air_c8
+wand_air_enhancedspeed: folder air_enhancedspeed_exe1,wand_air_c9
+wand_air_scooter: folder air_scooter_exe1,wand_air_c10
+wand_air_breathofwind: folder air_breathofwind_exe1,regenup_air_exe3
+#
+#
+# Disabled with nothings while there are no other wands.
+ilce_fire: if fire_wand ilce_fire2 else nothing
+ilce_fire2: if wand2_inventory nothing else nothing
+#ilce_fire3:
+ilce_earth: if earth_wand ilce_earth2 else nothing
+ilce_earth2: if wand3_inventory nothing else nothing
+#ilce_earth3:
+ilce_water: if water_wand ilce_water2 else nothing
+ilce_water2: if wand4_inventory nothing else nothing
+#ilce_fire3:
+#
+air_wand_have_hand: 'message &d&oPour remettre votre Baguette à niveau, tenez la dans la main et prononcez le mot d''apparition.'
+#
+#
+too_much_mana: 'message &dVous avez trop de Mana sur cette Baguette pour pouvoir en rajouter !'
+no_spirit: 'message &dVous n''avez pas assez de points de Spiritualité pour faire cela !'
+spell_have: 'message &dVous possédez déjà ce sort.'
 #
 #AirBook
 #
 airbook_give: if spirituality1 airbook_give_exe else no_spirit
 airbook_give_exe: folder airbook_give_exe1,airbook_give_exe2,airbook_give_exe3
-airbook_give_exe1: command mgive %player% book:airbending
+airbook_give_exe1: 'command mgive %player% book:airbending'
 airbook_give_exe2: point default.spirituality -1
-airbook_give_exe3: message &dVous recevez un Livre de Magie de l'Air.
+airbook_give_exe3: 'message &dVous recevez un Livre de Magie de l''Air.'
 #
 #Mana
 #
@@ -587,7 +633,7 @@ manaup_air2: if !air_mana_200 manaup_air_exe else too_much_mana
 manaup_air_exe: folder manaup_air_exe1,manaup_air_exe2
 manaup_air_exe1: point air_mana 5
 manaup_air_exe2: folder manaup_air_exe3,manaup_air_exe4 delay:1
-manaup_air_exe3: command wandp %player% configure xp_max %point.air_mana.amount%
+manaup_air_exe3: 'command wandp %player% configure xp_max %point.air_mana.amount%'
 manaup_air_exe4: folder manaup_air_exe5 delay:1
 manaup_air_exe5: point default.spirituality -100
 #
@@ -597,7 +643,7 @@ regenup_air2: if !air_mana_regen_20 regenup_air_exe else too_much_mana
 regenup_air_exe: folder regenup_air_exe1,regenup_air_exe2
 regenup_air_exe1: point air_mana_regen 1
 regenup_air_exe2: folder regenup_air_exe3,regenup_air_exe4 delay:1
-regenup_air_exe3: command wandp %player% configure xp_regeneration %point.air_mana_regen.amount%
+regenup_air_exe3: 'command wandp %player% configure xp_regeneration %point.air_mana_regen.amount%'
 regenup_air_exe4: folder regenup_air_exe5 delay:1
 regenup_air_exe5: point default.spirituality -250
 #
@@ -607,7 +653,7 @@ air_airblast: if air_airblast spell_have else air_airblast1
 air_airblast1: if wand_air air_airblast2 else no_wand_hand_air
 air_airblast2: if spirituality2000 air_airblast_exe else no_spirit
 air_airblast_exe: folder air_airblast_exe1,air_airblast_exe2,air_airblast_exe3
-air_airblast_exe1: command wandp %player% add airblast
+air_airblast_exe1: 'command wandp %player% add airblast'
 air_airblast_exe2: tag add air_airblast
 air_airblast_exe3: point default.spirituality -2000
 #
@@ -615,7 +661,7 @@ air_airbomb: if air_bomb spell_have else air_bomb1
 air_bomb1: if wand_air air_bomb2 else no_wand_hand_air
 air_bomb2: if spirituality2000 air_bomb_exe else no_spirit
 air_bomb_exe: folder air_bomb_exe1,air_bomb_exe2,air_bomb_exe3
-air_bomb_exe1: command wandp %player% add airbomb
+air_bomb_exe1: 'command wandp %player% add airbomb'
 air_bomb_exe2: tag add air_bomb
 air_bomb_exe3: point default.spirituality -2000
 #
@@ -623,7 +669,7 @@ air_suction: if air_suction spell_have else suction1
 suction1: if wand_air suction2 else no_wand_hand_air
 suction2: if spirituality1500 suction_exe else no_spirit
 suction_exe: folder suction_exe1,suction_exe2,suction_exe3
-suction_exe1: command wandp %player% add suction
+suction_exe1: 'command wandp %player% add suction'
 suction_exe2: tag add air_suction
 suction_exe3: point default.spirituality -1500
 #
@@ -631,7 +677,7 @@ air_tornade: if air_tornado spell_have else air_tornado1
 air_tornado1: if wand_air air_tornado2 else no_wand_hand_air
 air_tornado2: if spirituality10000 air_tornado_exe else no_spirit
 air_tornado_exe: folder air_tornado_exe1,air_tornado_exe2,air_tornado_exe3
-air_tornado_exe1: command wandp %player% add tornade
+air_tornado_exe1: 'command wandp %player% add tornade'
 air_tornado_exe2: tag add air_tornado
 air_tornado_exe3: point default.spirituality -10000
 #
@@ -639,7 +685,7 @@ air_poussee: if air_poussee spell_have else air_poussee1
 air_poussee1: if wand_air air_poussee2 else no_wand_hand_air
 air_poussee2: if spirituality2000 air_poussee_exe else no_spirit
 air_poussee_exe: folder air_poussee_exe1,air_poussee_exe2,air_poussee_exe3
-air_poussee_exe1: command wandp %player% add poussee
+air_poussee_exe1: 'command wandp %player% add poussee'
 air_poussee_exe2: tag add air_poussee
 air_poussee_exe3: point default.spirituality -2000
 #
@@ -647,7 +693,7 @@ air_airshield: if air_shield spell_have else air_shield1
 air_shield1: if wand_air air_shield2 else no_wand_hand_air
 air_shield2: if spirituality3000 air_shield_exe else no_spirit
 air_shield_exe: folder air_shield_exe1,air_shield_exe2,air_shield_exe3
-air_shield_exe1: command wandp %player% add airshield
+air_shield_exe1: 'command wandp %player% add airshield'
 air_shield_exe2: tag add air_shield
 air_shield_exe3: point default.spirituality -3000
 #
@@ -655,7 +701,7 @@ air_enhancedspeed: if air_enhancedspeed spell_have else air_enhancedspeed1
 air_enhancedspeed1: if wand_air air_enhancedspeed2 else no_wand_hand_air
 air_enhancedspeed2: if spirituality5000 air_enhancedspeed_exe else no_spirit
 air_enhancedspeed_exe: folder air_enhancedspeed_exe1,air_enhancedspeed_exe2,air_enhancedspeed_exe3
-air_enhancedspeed_exe1: command wandp %player% add enhancedspeed
+air_enhancedspeed_exe1: 'command wandp %player% add enhancedspeed'
 air_enhancedspeed_exe2: tag add air_enhancedspeed
 air_enhancedspeed_exe3: point default.spirituality -5000
 #
@@ -663,7 +709,7 @@ air_airscooter: if air_scooter spell_have else air_scooter1
 air_scooter1: if wand_air air_scooter2 else no_wand_hand_air
 air_scooter2: if spirituality5000 air_scooter_exe else no_spirit
 air_scooter_exe: folder air_scooter_exe1,air_scooter_exe2,air_scooter_exe3
-air_scooter_exe1: command wandp %player% add airscooter
+air_scooter_exe1: 'command wandp %player% add airscooter'
 air_scooter_exe2: tag add air_scooter
 air_scooter_exe3: point default.spirituality -5000
 #
@@ -671,11 +717,11 @@ air_breathofwind: if air_breathofwind spell_have else air_breathofwind1
 air_breathofwind1: if wand_air air_breathofwind2 else no_wand_hand_air
 air_breathofwind2: if spirituality5000 air_breathofwind_exe else no_spirit
 air_breathofwind_exe: folder air_breathofwind_exe1,air_breathofwind_exe2,air_breathofwind_exe3
-air_breathofwind_exe1: command wandp %player% add airshield
+air_breathofwind_exe1: 'command wandp %player% add airshield'
 air_breathofwind_exe2: tag add air_breathofwind
 air_breathofwind_exe3: point default.spirituality -5000
 #
-no_wand_hand_air: message &dVous ne tenez pas votre Baguette de l'Air dans votre main, tenez la pour pouvoir la modifier !
+no_wand_hand_air: 'message &dVous ne tenez pas votre Baguette de l''Air dans votre main, tenez la pour pouvoir la modifier !'
 #
 #
 #
@@ -705,17 +751,17 @@ obj_nauco_weapons1: objective start obj_nauco_weapons1
 obj_nauco_weapons2: objective start obj_nauco_weapons2
 nauco_weapons1_done: folder obj_nauco_weapons1_mess,obj_nauco_weapons1_tag,nauco_tester
 nauco_weapons2_done: folder obj_nauco_weapons2_mess,obj_nauco_weapons2_tag,nauco_tester
-obj_nauco_weapons1_mess: message &dJ'ai forgé assez de haches pour &2Nauco&d.
+obj_nauco_weapons1_mess: 'message &dJ''ai forgé assez de haches pour &2Nauco&d.'
 obj_nauco_weapons1_tag: tag add nauco_weapons1
 obj_nauco_weapons1_tag_del: tag del nauco_weapons1
-obj_nauco_weapons2_mess: message &dJ'ai forgé suffisement de plastrons pour &2Nauco&d.
+obj_nauco_weapons2_mess: 'message &dJ''ai forgé suffisement de plastrons pour &2Nauco&d.'
 obj_nauco_weapons2_tag: tag add nauco_weapons2
 obj_nauco_weapons2_tag_del: tag del nauco_weapons2
 nauco_tester: folder nauco_tester_exe delay:1
 nauco_tester_exe: if nauco_weapons nauco_weapons_done else nauco_weapons_continue
-nauco_weapons_continue: message &dJe n'ai pourtant pas tout à fait fini la commande de &2Nauco&d. Je devrais continuer comme il est indiqué dans mon Journal de Progression.
+nauco_weapons_continue: 'message &dJe n''ai pourtant pas tout à fait fini la commande de &2Nauco&d. Je devrais continuer comme il est indiqué dans mon Journal de Progression.'
 nauco_weapons_done: folder nauco_weapons_done_mess,journal_nauco_weapons_done
-nauco_weapons_done_mess: message &dJ'ai fini la commande de &2Nauco&d. Je devrais lui apporter les haches et les plastrons !
+nauco_weapons_done_mess: 'message &dJ''ai fini la commande de &2Nauco&d. Je devrais lui apporter les haches et les plastrons !'
 #
 # Dwarf Castle Tester
 #
@@ -738,10 +784,10 @@ dwarf_castle_tester8: if tag_sancossi sancossi_enabler else dwarf_castle_unallow
 #
 #
 dwarf_castle_occupied_exe: folder dwarf_castle_occupied_exe1,dwarf_castle_out
-dwarf_castle_occupied_exe1: message &dQuelqu'un est déjà dans ce château, vous devriez revenir plus tard.
+dwarf_castle_occupied_exe1: 'message &dQuelqu''un est déjà dans ce château, vous devriez revenir plus tard.'
 dwarf_castle_unallowed: folder dwarf_castle_out,dwarf_castle_out_mess
 dwarf_castle_out: teleport -6348;91;2687;Gaia
-dwarf_castle_out_mess: message &dCe château semble trop dangereux, je devrais consulter les Nains d'&2Ingor &davant d'y entrer !
+dwarf_castle_out_mess: 'message &dCe château semble trop dangereux, je devrais consulter les Nains d''&2Ingor &davant d''y entrer !'
 #
 # Phase Executor
 #
@@ -778,16 +824,16 @@ dwarf_bridge2_tester: if dwarf_bridge2_tag dwarf_bridge2_open else dwarf_bridge2
 dwarf_bridge2_open: setblock REDSTONE_TORCH_ON -6323;80;2672;Gaia
 dwarf_bridge2_close: folder dwarf_bridge2_close1,dwarf_bridge2_close2,dwarf_bridge2_close3
 dwarf_bridge2_close1: setblock AIR -6323;80;2672;Gaia
-dwarf_bridge2_close2: message &dJe devrais aider les Nains avec leur château à l'Est avant de traverser ce pont.
+dwarf_bridge2_close2: 'message &dJe devrais aider les Nains avec leur château à l''Est avant de traverser ce pont.'
 dwarf_bridge2_close3: teleport -6371;92;2674;Gaia
 #
 dwarf_hall_tester: if dwarf_hall dwarf_hall_welcome else dwarf_hall_unwelcome
 dwarf_hall_welcome: folder dwarf_hall_welcome1,dwarf_hall_welcome2,dwarf_hall_welcome3
-dwarf_hall_welcome1: command title %player% times 40 140 40
-dwarf_hall_welcome2: command title %player% title {"text":" ","bold":true,"italic":true,"color":"dark_purple"}
-dwarf_hall_welcome3: command title %player% subtitle {"text":"Hall d'Ingor","italic":true,"color":"gray"}
+dwarf_hall_welcome1: 'command title %player% times 40 140 40'
+dwarf_hall_welcome2: 'command title %player% title {"text":" ","bold":true,"italic":true,"color":"dark_purple"}'
+dwarf_hall_welcome3: 'command title %player% subtitle {"text":"Hall d''Ingor","italic":true,"color":"gray"}'
 dwarf_hall_unwelcome: folder dwarf_hall_unwelcome1,dwarf_hall_unwelcome2
-dwarf_hall_unwelcome1: message &dVous n'avez pas encore accès au Hall des Nains. Aidez Casar d'abord !
+dwarf_hall_unwelcome1: 'message &dVous n''avez pas encore accès au Hall des Nains. Aidez Casar d''abord !'
 dwarf_hall_unwelcome2: teleport -6434;91;2686;Gaia
 #
 # Sancossi
@@ -800,10 +846,10 @@ sancossi_kill_obj: objective start sancossi_kill_obj
 obj_rally_dwarves: objective start obj_rally_dwarves
 sancossi_abandon_obj: objective start sancossi_abandon_obj
 sancossi_start_message: folder sancossi_start_message1,sancossi_start_message2,sancossi_start_message3,sancossi_start_message4
-sancossi_start_message1: message &dRendez-vous sur la place centrale pour que les &2Nains d'Ingor &dse rallient à vous !
-sancossi_start_message2: command title %player% times 20 100 20
-sancossi_start_message3: command title %player% title {"text":"Combattez Sancossi","color":"red"}
-sancossi_start_message4: command title %player% subtitle {"text":"Bon courage !","color":"light_purple"}
+sancossi_start_message1: 'message &dRendez-vous sur la place centrale pour que les &2Nains d''Ingor &dse rallient à vous !'
+sancossi_start_message2: 'command title %player% times 20 100 20'
+sancossi_start_message3: 'command title %player% title {"text":"Combattez Sancossi","color":"red"}'
+sancossi_start_message4: 'command title %player% subtitle {"text":"Bon courage !","color":"light_purple"}'
 #
 rally_dwarves: folder rally_dwarves1,rally_dwarves2,rally_dwarves3
 rally_dwarves1: mspawnmob -6305;96;2650;Gaia nainsingor:1 1
@@ -812,27 +858,27 @@ rally_dwarves3: mspawnmob -6283;95;2672;Gaia nainsingor:1 1
 #
 #
 sancossi_killed: folder sancossi_killed1,sancossi_killed2,sancossi_killed3,journal_sancossi_del,journal_backto_casar,sancossi_tag_del,sancossi_done_tag
-sancossi_killed1: command title %player% times 20 100 20
-sancossi_killed2: command title %player% title {"text":"Sancossi Vaincu !","color":"green"}
-sancossi_killed3: command title %player% subtitle {"text":"Vous libérez le Château","color":"gray"}
+sancossi_killed1: 'command title %player% times 20 100 20'
+sancossi_killed2: 'command title %player% title {"text":"Sancossi Vaincu !","color":"green"}'
+sancossi_killed3: 'command title %player% subtitle {"text":"Vous libérez le Château","color":"gray"}'
 sancossi_done_tag: tag add sancossi_done
 sancossi_done_tag_del: tag del sancossi_done
 #
 sancossi_abandon: folder sancossi_abandon1,sancossi_abandon2,sancossi_abandon3,sancossi_abandon4,sancossi_abandon5
 sancossi_abandon1: objective delete sancossi_kill_obj
 sancossi_abandon2: objective delete obj_rally_dwarves
-sancossi_abandon3: command mm mobs kill sancossi 
-sancossi_abandon4: command mm mobs kill nainsingor
-sancossi_abandon5: message &c&lVous perdez le combat contre &2Sancossi &c&l!
+sancossi_abandon3: 'command mm mobs kill sancossi'
+sancossi_abandon4: 'command mm mobs kill nainsingor'
+sancossi_abandon5: 'message &c&lVous perdez le combat contre &2Sancossi &c&l!'
 #
 #
 # Rebuilding Ingor Castle
 #
 #           Starts With Back to Casar
 sancossi_kill_rewards: folder sancossi_kill_reward1,sancossi_kill_reward2,sancossi_kill_reward3,quest_point_2
-sancossi_kill_reward1: command addxp %player% minage 2000
-sancossi_kill_reward2: command addxp %player% poings 2500
-sancossi_kill_reward3: command eco give %player% 3000
+sancossi_kill_reward1: 'command addxp %player% minage 2000'
+sancossi_kill_reward2: 'command addxp %player% poings 2500'
+sancossi_kill_reward3: 'command eco give %player% 3000'
 #
 tag_sancossi_done_tempo: tag add sancossi_done_tempo
 tag_sancossi_done_tempo_del: tag del sancossi_done_tempo
@@ -911,10 +957,10 @@ journal_killed_spree_del: journal del journal_killed_spree
 journal_north_bridge_repair: journal add journal_north_bridge_repair
 journal_north_bridge_repair_del: journal del journal_north_bridge_repair
 tag_casar_killingspree: tag add casar_killingspree
-tag_casar_killingspree_del: tag remove casar_killingspree
+tag_casar_killingspree_del: tag del casar_killingspree
 objective_casar_killingspree: objective start objective_casar_killingspree
 casar_killed_spree: folder tag_casar_killingspree_del,killed_spree_mess,journal_killed_spree,journal_casar_killingspree_del
-killed_spree_mess: message &dVous avez tué assez de Goblins, retournez voir &2Casar &dpour lui annoncer la nouvelle !
+killed_spree_mess: 'message &dVous avez tué assez de Goblins, retournez voir &2Casar &dpour lui annoncer la nouvelle !'
 take_repair_bridge: folder stone_bricks200,planks100
 stone_bricks200: take stone_bricks:200
 planks100: take planks:100
@@ -931,17 +977,17 @@ entry_north_allow: 'command region addmember north %player% -w Gaia'
 ###################################################################
 mine_athelas_tester: if !autorisation_mineur voleur else nothing
 voleur: folder mine_teleport_out,voleur_message delay:0
-voleur_message: message &d&oVous ne pouvez pas entrer dans la mine sans l'autorisation du &2Gardien &d&o!
+voleur_message: 'message &d&oVous ne pouvez pas entrer dans la mine sans l''autorisation du &2Gardien &d&o!'
 #
 mine_acces_folder: folder mine_pay,mine_acces,mine_chrono,mine_message_in1,mine_message_in2,mine_message_in3,mine_obj_distance,mine_obj_logout delay:0
-mine_pay: command eco take %player% 100
+mine_pay: 'command eco take %player% 100'
 mine_acces: tag add autorisation_mineur
-mine_message_in1: command title %player% times 20 100 20
-mine_message_in2: command title %player% title {"text":"Mine d'Athelas","color":"gray"}
-mine_message_in3: command title %player% subtitle ["",{"text":"10 minutes","color":"light_purple"},{"text":" d'accès aux ressources","color":"white"}]
+mine_message_in1: 'command title %player% times 20 100 20'
+mine_message_in2: 'command title %player% title {"text":"Mine d''Athelas","color":"gray"}'
+mine_message_in3: 'command title %player% subtitle ["",{"text":"10 minutes","color":"light_purple"},{"text":" d''accès aux ressources","color":"white"}]'
 mine_obj_distance: objective start mine_obj_distance
 mine_obj_distance_exe: folder mine_obj_distance_exe1,mine_obj_distance_exe2
-mine_obj_distance_exe1: message &dSi vous quittez la mine, vous perdrez vos droits d'accès!
+mine_obj_distance_exe1: 'message &dSi vous quittez la mine, vous perdrez vos droits d''accès!'
 mine_obj_distance_exe2: objective start mine_obj_distance_exe
 mine_obj_logout: objective start mine_obj_logout
 mine_chrono: folder mine_time_up delay:600
@@ -953,23 +999,23 @@ mine_obj_distance_remove2: objective delete mine_obj_distance
 mine_obj_death_remove2: objective delete mine_obj_distance_exe
 mine_obj_logout_remove: objective delete mine_obj_logout
 mine_acces_deny: folder mine_acces_deny_exe delay:3
-mine_acces_deny_exe: tag remove autorisation_mineur
+mine_acces_deny_exe: tag del autorisation_mineur
 mine_teleport_out: if or_in_mine_athelas mine_teleport_out_exe else mine_acces_deny_exe
 mine_teleport_out_exe: teleport -6804;66;2905;Gaia
 mine_message_out_master: folder mine_message_out1,mine_message_out2,mine_message_out3 conditions:autorisation_mineur
-mine_message_out1: command title %player% times 20 100 20
-mine_message_out2: command title %player% title {"text":"Mine d'Athelas","color":"gray"}
-mine_message_out3: command title %player% subtitle {"text":"Temps expiré","color":"light_purple"}
+mine_message_out1: 'command title %player% times 20 100 20'
+mine_message_out2: 'command title %player% title {"text":"Mine d''Athelas","color":"gray"}'
+mine_message_out3: 'command title %player% subtitle {"text":"Temps expiré","color":"light_purple"}'
 #
 mine_time_not_up_exe: folder mine_acces_deny,mine_teleport_out,mine_message_out11,mine_message_out21,mine_message_out31,mine_message_remboursement,mine_repay,daily_mine_reset_off,mine_reset_exe delay:1
-mine_message_out11: command title %player% times 20 100 20
-mine_message_out21: command title %player% title {"text":"Mine d'Athelas","color":"gray"}
-mine_message_out31: command title %player% subtitle {"text":"La Mine va se régénerer","color":"light_purple"}
-mine_message_remboursement: message &dLa Mine doit être régénérée, vos accès n'étant pas expirés, vous avez été remboursé ¤100. Merci pour votre compréhension.
-mine_repay: command eco give %player% 100
+mine_message_out11: 'command title %player% times 20 100 20'
+mine_message_out21: 'command title %player% title {"text":"Mine d''Athelas","color":"gray"}'
+mine_message_out31: 'command title %player% subtitle {"text":"La Mine va se régénerer","color":"light_purple"}'
+mine_message_remboursement: 'message &dLa Mine doit être régénérée, vos accès n''étant pas expirés, vous avez été remboursé ¤100. Merci pour votre compréhension.'
+mine_repay: 'command eco give %player% 100'
 #
 mine_abandon: folder mine_abandon_message,mine_acces_deny,mine_obj_remove delay:0
-mine_abandon_message: message &dVous perdez les droits d'accès à la Mine d'Athelas.
+mine_abandon_message: 'message &dVous perdez les droits d''accès à la Mine d''Athelas.'
 #
 # Daily Mine Reset
 #
@@ -998,7 +1044,7 @@ castle_door_check: if castle_door_check castle_time else castle_door_closer
 castle_door_closer: folder castle_door_close_exe,tag_remove_global_athelas
 castle_door_open_exe: setblock REDSTONE_TORCH_ON -7017;86;2937;Gaia
 castle_door_close_exe: setblock AIR -7017;86;2937;Gaia
-tag_remove_global_athelas: command bq delete tag hollish.global_hollish.castle_door
+tag_remove_global_athelas: 'command bq delete tag hollish.global_hollish.castle_door'
 #
 #
 # Porte Bibliothèque
@@ -1010,7 +1056,7 @@ biblio_door_check: if biblio_door_check biblio_time else biblio_closer
 biblio_closer: folder biblio_door_close_exe,tag_remove_global_biblio
 biblio_door_open_exe: setblock REDSTONE_TORCH_ON -6726;61;2890;Gaia
 biblio_door_close_exe: setblock AIR -6726;61;2890;Gaia
-tag_remove_global_biblio: command bq delete tag hollish.global_hollish.biblio_door
+tag_remove_global_biblio: 'command bq delete tag hollish.global_hollish.biblio_door'
 #
 #
 # Porte Sanctuaire
@@ -1022,7 +1068,7 @@ sanctuary_door_check: if sanctuary_door_check sanctuary_time else sanctuary_clos
 sanctuary_closer: folder porte_sanctuary_exe_close,tag_remove_global_sanctuary
 porte_sanctuary_exe: setblock REDSTONE_TORCH_ON -7113;64;2444;Gaia
 porte_sanctuary_exe_close: setblock AIR -7113;64;2444;Gaia
-tag_remove_global_sanctuary: command bq delete tag hollish.global_hollish.sanctuary_door
+tag_remove_global_sanctuary: 'command bq delete tag hollish.global_hollish.sanctuary_door'
 #
 #
 #
@@ -1036,7 +1082,7 @@ tag_remove_global_sanctuary: command bq delete tag hollish.global_hollish.sanctu
 salon_grand_voyageur: if !votes50 salon_grand_voyageur_out else sgv_welcome
 salon_grand_voyageur_out: folder salon_grand_voyageur_tele,sgv_message delay:0
 salon_grand_voyageur_tele: teleport -6535;74;3161;Gaia
-sgv_message: command bq event %player% default.sgv_message
+sgv_message: 'command bq event %player% default.sgv_message'
 sgv_welcome: folder sgv_welcome1,sgv_welcome2,sgv_welcome3
 sgv_welcome1: 'command title %player% times 20 100 20'
 sgv_welcome2: 'command title %player% title {"text":"Salon Grand Voyageur","italic":true,"color":"dark_purple"}'
@@ -1047,7 +1093,7 @@ sgv_welcome3: 'command title %player% subtitle {"text":"Bienvenue à vous","colo
 salon_banquier: if !votes100 salon_banquier_out else sb_welcome
 salon_banquier_out: folder salon_banquier_tele,sb_message delay:0
 salon_banquier_tele: teleport -6577;75;3092;Gaia
-sb_message: command bq event %player% default.sb_message
+sb_message: 'command bq event %player% default.sb_message'
 sb_welcome: folder sb_welcome1,sb_welcome2,sb_welcome3
 sb_welcome1: 'command title %player% times 20 100 20'
 sb_welcome2: 'command title %player% title {"text":"Salon Banquier","italic":true,"color":"dark_purple"}'
@@ -1058,7 +1104,7 @@ sb_welcome3: 'command title %player% subtitle {"text":"Bienvenue à vous","color
 salon_bibliotheque: if salon_biblio salon_biblio_out else sbib_welcome
 salon_biblio_out: folder salon_biblio_tele,sbib_message delay:0
 salon_biblio_tele: teleport -6651;115;2883;Gaia
-sbib_message: command bq event %player% default.sbib_message
+sbib_message: 'command bq event %player% default.sbib_message'
 sbib_welcome: folder sbib_welcome1,sbib_welcome2,sbib_welcome3
 sbib_welcome1: 'command title %player% times 20 100 20'
 sbib_welcome2: 'command title %player% title {"text":"Salon d''Honneur","italic":true,"color":"dark_purple"}'
@@ -1084,7 +1130,7 @@ journal_train_village_del: journal del journal_train_village
 journal_sanctuary_train: journal add journal_sanctuary_train
 journal_sanctuary_train_del: journal del journal_sanctuary_train
 tag_train_village: tag add train_village
-tag_train_village_del: tag remove train_village
+tag_train_village_del: tag del train_village
 sanctuary_train_tag: tag add sanctuary_train
 sanctuary_train_tag_del: tag del sanctuary_train
 destination_village_tag: tag add destination_village
@@ -1100,22 +1146,22 @@ destination_dwarf: tag add destination_dwarf
 #  Buy a ticket with a timed permission !
 #
 #
-open_train_gui: command cc open trains %player%
+open_train_gui: 'command cc open trains %player%'
 #
 ticket_pay: if money_50 ticket_have_test else ticket_no_fund
 ticket_have_test: if train_ticket train_ticket_have else ticket_pay_exe
 #
 ticket_no_fund: folder ticket_no_fund1,ticket_no_fund2
-ticket_no_fund1: message &d&lVous n'avez pas assez d'argent pour acheter un ticket !
-ticket_no_fund2: message &f¤&2&l%ph.vault_eco_balance_fixed% &f/ &f¤&2&l50
-train_ticket_have: message &d&lVous avez un ticket encore valable !
+ticket_no_fund1: 'message &d&lVous n''avez pas assez d''argent pour acheter un ticket !'
+ticket_no_fund2: 'message &f¤&2&l%ph.vault_eco_balance_fixed% &f/ &f¤&2&l50'
+train_ticket_have: 'message &d&lVous avez un ticket encore valable !'
 #
 ticket_pay_exe: folder ticket_pay_exe1,ticket_tag,ticket_timer,ticket_confirmation,ticket_timed_perm,give_train_ticket,obj_train_ticket_reader delay:0
-ticket_pay_exe1: command eco take %player% 50
+ticket_pay_exe1: 'command eco take %player% 50'
 ticket_timer: objective start ticket_timer
 ticket_tag: tag add train_ticket
-ticket_timed_perm: command pex user %player% timed add train.ticket 900
-ticket_confirmation: message &d&lTicket acheté ! Sélectionnez une destination auprès de l'Ailguilleur !
+ticket_timed_perm: 'command pex user %player% timed add train.ticket 900'
+ticket_confirmation: 'message &d&lTicket acheté ! Sélectionnez une destination auprès de l''Ailguilleur !'
 give_train_ticket: give train_ticket
 obj_train_ticket_reader: objective start obj_train_ticket_reader
 #
@@ -1126,17 +1172,17 @@ train_ticket_reader: folder train_ticker_reader_re,train_ticker_readerexe
 train_ticker_readerexe: 'message &d&lVotre ticket est valable pendant encore : &2%objective.ticket_timer.left%'
 train_ticker_reader_re: folder obj_train_ticket_reader delay:3
 unvalid_ticket: folder unvalid_ticket_mess,take_unvalid_tickets
-unvalid_ticket_mess: message &d&lTicket non valide.
+unvalid_ticket_mess: 'message &d&lTicket non valide.'
 #unvalid emptier (is this used ?!, see above, ticket removed when unvalid)
 ticket_unvalid: if train_ticket ticket_still_valid else take_unvalid_tickets
-ticket_still_valid: message &dUn de vos tickets est encore valide !
+ticket_still_valid: 'message &dUn de vos tickets est encore valide !'
 take_unvalid_tickets: take train_ticket:%item.train_ticket.amount%
 #
 # Ticket Up
 #
 ticket_over: folder ticket_remover,ticket_done_mess,obj_train_ticket_reader_del,give_train_ticket_del delay:1
-ticket_remover: tag remove train_ticket
-ticket_done_mess: message &d&lVotre ticket de train a expiré.
+ticket_remover: tag del train_ticket
+ticket_done_mess: 'message &d&lVotre ticket de train a expiré.'
 obj_train_ticket_reader_del: objective delete obj_train_ticket_reader
 give_train_ticket_del: take train_ticket
 #
@@ -1146,8 +1192,8 @@ give_train_ticket_del: take train_ticket
 #
 # Avez vous vot'ticket ?! (OBSOLETE, ChestCommands VIEW-PERMISSION used)
 # Etes vous déjà à la gare ?
-# 
-# 
+#
+#
 destination_gare: if gare_loc already_there else gare_departure
 destination_guilde: if guilde_loc already_there else guilde_departure
 destination_porteo: if porteo_loc already_there else porteo_departure
@@ -1162,17 +1208,17 @@ destination_sanctuary: if sanctuary_loc already_there else destination_sanctuary
 destination_sanctuary2: if destination_sanctuary sanct_departure else no_sanctuary_go
 #
 # No you Kant !
-already_there: message &d&lVous êtes déjà dans cette gare !
-no_valid_ticket: message &d&lVous n'avez pas de Ticket de Train valide !
-no_dwarf_go: message &dVous n'avez pas accès à cette destination, parlez au Nain &2Casar &dà Ingor !
-no_village_go: message &dVous n'avez pas accès à cette destination, parlez au &2Moine Ardère &d!
-no_sanctuary_go: message &dVous n'avez pas accès à cette destination, parlez à l'&fAiguilleur &dà la gare du Sanctuaire !
+already_there: 'message &d&lVous êtes déjà dans cette gare !'
+no_valid_ticket: 'message &d&lVous n''avez pas de Ticket de Train valide !'
+no_dwarf_go: 'message &dVous n''avez pas accès à cette destination, parlez au Nain &2Casar &dà Ingor !'
+no_village_go: 'message &dVous n''avez pas accès à cette destination, parlez au &2Moine Ardère &d!'
+no_sanctuary_go: 'message &dVous n''avez pas accès à cette destination, parlez à l''&fAiguilleur &dà la gare du Sanctuaire !'
 #
 # Yes you Ken !
 #
 #  Add the specific destination tag (after clearing older)
 #   Checker Where player is to spawn the cart (after clearing previous "current" locations objectives)
-#   
+#
 gare_departure: folder tag_train_remover,depart_obj_remover,depart_gare,cur_loc_check,mess_gare
 guilde_departure: folder tag_train_remover,depart_obj_remover,depart_guilde,cur_loc_check,mess_guilde
 porteo_departure: folder tag_train_remover,depart_obj_remover,depart_porteo,cur_loc_check,mess_porteo
@@ -1183,15 +1229,15 @@ nains_departure: folder tag_train_remover,depart_obj_remover,depart_nains,cur_lo
 village_departure: folder tag_train_remover,depart_obj_remover,depart_village,cur_loc_check,mess_village
 sanct_departure: folder tag_train_remover,depart_obj_remover,depart_sanct,cur_loc_check,mess_sanct
 #
-mess_gare: message &dVous choissez la destination de la Gare Centrale d'Athelas. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.
-mess_guilde: message &dVous choissez la destination de Guilde des Aventuriers. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.
-mess_porteo: message &dVous choissez la destination de la Porte Ouest d'Athelas. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.
-mess_chateau: message &dVous choissez la destination du Château Royal d'Athelas. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.
-mess_porten: message &dVous choissez la destination de la Porte Nord d'Athelas. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.
-mess_gm: message &dVous choissez la destination du Grand Marché d'Athelas. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.
-mess_nains: message &dVous choissez la destination d'Ingor, la Ville des Nains. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.
-mess_village: message &dVous choissez la destination du Village. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.
-mess_sanct: message &dVous choissez la destination du Sanctuaire. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.
+mess_gare: 'message &dVous choissez la destination de la Gare Centrale d''Athelas. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.'
+mess_guilde: 'message &dVous choissez la destination de Guilde des Aventuriers. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.'
+mess_porteo: 'message &dVous choissez la destination de la Porte Ouest d''Athelas. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.'
+mess_chateau: 'message &dVous choissez la destination du Château Royal d''Athelas. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.'
+mess_porten: 'message &dVous choissez la destination de la Porte Nord d''Athelas. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.'
+mess_gm: 'message &dVous choissez la destination du Grand Marché d''Athelas. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.'
+mess_nains: 'message &dVous choissez la destination d''Ingor, la Ville des Nains. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.'
+mess_village: 'message &dVous choissez la destination du Village. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.'
+mess_sanct: 'message &dVous choissez la destination du Sanctuaire. Approchez vous du quai de départ et montez dans le wagonnet qui apparaît.'
 #
 # Current Location Checker
 #
@@ -1211,7 +1257,7 @@ cur_loc_check7: if dwarf_loc nains_summon else cur_loc_check8
 cur_loc_check8: if village_loc village_summon else cur_loc_check9
 cur_loc_check9: if sanctuary_loc sanct_summon else cur_loc_check_error
 #
-cur_loc_check_error: message &c&lErreur Fatale 404-72t. &cSignalez cette erreur auprès du Staff. &aMerci&c. 
+cur_loc_check_error: 'message &c&lErreur Fatale 404-72t. &cSignalez cette erreur auprès du Staff. &aMerci&c.'
 #
 #
 #
@@ -1244,7 +1290,7 @@ porteo_summon_obj: objective start porteo_summon_obj
 porteo_summon_depart: folder porteo_depart,porteo_summon_obj2 delay:1
 porteo_depart: setblock REDSTONE_TORCH_ON -7061;66;3157;Gaia
 porteo_summon_obj2: folder porteo_depart_off delay:2
-porteo_depart_off: setblock AIR -7061;66;3157;Gaia 
+porteo_depart_off: setblock AIR -7061;66;3157;Gaia
 # Chateau
 chateau_summon: objective start chateau_summon
 chateau_summon_exe: folder chateau_summon_command,chateau_summon_obj delay:0
@@ -1262,7 +1308,7 @@ porten_summon_obj: objective start porten_summon_obj
 porten_summon_depart: folder porten_depart,porten_summon_obj2 delay:1
 porten_depart: setblock REDSTONE_TORCH_ON -6756;63;2799;Gaia
 porten_summon_obj2: folder porten_depart_off delay:2
-porten_depart_off: setblock AIR -6756;63;2799;Gaia 
+porten_depart_off: setblock AIR -6756;63;2799;Gaia
 # Grand Marché
 gm_summon: objective start gm_summon
 gm_summon_exe: folder gm_summon_command,gm_summon_obj delay:0
@@ -1306,15 +1352,15 @@ sanct_depart_off: setblock AIR -7019;62;2494;Gaia
 # Destination Remover
 #
 tag_train_remover: folder tag_train_nains_remove,tag_train_village_remove,tag_train_sanct_remove,tag_train_gare_remove,tag_train_guilde_remove,tag_train_porteo_remove,tag_train_chateau_remove,tag_train_porten_remove,tag_train_gm_remove
-tag_train_gare_remove: tag remove train_gare
-tag_train_guilde_remove: tag remove train_guilde
-tag_train_porteo_remove: tag remove train_porteo
-tag_train_chateau_remove: tag remove train_chateau
-tag_train_porten_remove: tag remove train_porten
-tag_train_gm_remove: tag remove train_gm
-tag_train_nains_remove: tag remove train_nains
-tag_train_village_remove: tag remove train_village
-tag_train_sanct_remove: tag remove train_sanct
+tag_train_gare_remove: tag del train_gare
+tag_train_guilde_remove: tag del train_guilde
+tag_train_porteo_remove: tag del train_porteo
+tag_train_chateau_remove: tag del train_chateau
+tag_train_porten_remove: tag del train_porten
+tag_train_gm_remove: tag del train_gm
+tag_train_nains_remove: tag del train_nains
+tag_train_village_remove: tag del train_village
+tag_train_sanct_remove: tag del train_sanct
 #
 # Local Objective remover
 #
@@ -1368,8 +1414,8 @@ in_train_tester: objective start in_train_tester
 in_train_tester_del: objective delete in_train_tester
 in_train_tester_out: folder money_50,damage_5,quitter_sauvagement,quitter_sauvagement2,tag_train_remover,ticket_out
 damage_5: damage 5
-quitter_sauvagement: message &d&lVous tombez du train en mouvement !
-quitter_sauvagement2: message &d&lVous vous blessez et perdez &2¤50 &d&ldans votre chute !
+quitter_sauvagement: 'message &d&lVous tombez du train en mouvement !'
+quitter_sauvagement2: 'message &d&lVous vous blessez et perdez &2¤50 &d&ldans votre chute !'
 ticket_out: folder ticket_remover,obj_train_ticket_reader_del,give_train_ticket_del delay:1
 #
 # Arrivals
@@ -1390,7 +1436,7 @@ gare_timer_arrival: folder gare_timer_arrival_exe delay:2
 gare_timer_arrival_exe: setblock REDSTONE_TORCH_ON -6573;59;3147;Gaia
 gare_out: folder gare_out_exe,gare_mess delay:17
 gare_out_exe: teleport -6525;70;3165;Gaia
-gare_mess: message &dVous arrivez à la Gare Centrale d'Athelas.
+gare_mess: 'message &dVous arrivez à la Gare Centrale d''Athelas.'
 # Guilde
 guilde_arrival: if train_guilde guilde_arrival_exe else nothing
 guilde_arrival_exe: folder guilde_torche,guilde_timer_arrival,guilde_out,tag_train_remover,in_train_tester_del delay:0
@@ -1399,7 +1445,7 @@ guilde_timer_arrival: folder guilde_timer_arrival_exe delay:2
 guilde_timer_arrival_exe: setblock REDSTONE_TORCH_ON -6913;63;3160;Gaia
 guilde_out: folder guilde_out_exe,guilde_mess delay:3
 guilde_out_exe: teleport -6917;67;3169;Gaia
-guilde_mess: message &dVous arrivez à la Guilde des Aventuriers.
+guilde_mess: 'message &dVous arrivez à la Guilde des Aventuriers.'
 # Porte Ouest
 porteo_arrival: if train_porteo porteo_arrival_exe else nothing
 porteo_arrival_exe: folder porteo_torche,porteo_timer_arrival,porteo_out,tag_train_remover,in_train_tester_del delay:0
@@ -1408,7 +1454,7 @@ porteo_timer_arrival: folder porteo_timer_arrival_exe delay:2
 porteo_timer_arrival_exe: setblock REDSTONE_TORCH_ON -7066;65;3169;Gaia
 porteo_out: folder porteo_out_exe,porteo_mess delay:3
 porteo_out_exe: teleport -7056;68;3160;Gaia
-porteo_mess: message &dVous arrivez à la Porte Ouest d'Athelas.
+porteo_mess: 'message &dVous arrivez à la Porte Ouest d''Athelas.'
 # Chateau
 chateau_arrival: if train_chateau chateau_arrival_exe else nothing
 chateau_arrival_exe: folder chateau_torche,chateau_timer_arrival,chateau_out,tag_train_remover,in_train_tester_del delay:0
@@ -1417,7 +1463,7 @@ chateau_timer_arrival: folder chateau_timer_arrival_exe delay:2
 chateau_timer_arrival_exe: setblock AIR -6948;62;2941;Gaia
 chateau_out: folder chateau_out_exe,chateau_mess delay:3
 chateau_out_exe: teleport -6938;65;2936;Gaia
-chateau_mess: message &dVous arrivez au Château Royal d'Athelas.
+chateau_mess: 'message &dVous arrivez au Château Royal d''Athelas.'
 # Porte Nord
 porten_arrival: if train_porten porten_arrival_exe else nothing
 porten_arrival_exe: folder porten_torche,porten_timer_arrival,porten_out,tag_train_remover,in_train_tester_del delay:0
@@ -1426,7 +1472,7 @@ porten_timer_arrival: folder porten_timer_arrival_exe delay:3
 porten_timer_arrival_exe: setblock AIR -6765;63;2804;Gaia
 porten_out: folder porten_out_exe,porten_mess delay:3
 porten_out_exe: teleport -6761;66;2794;Gaia
-porten_mess: message &dVous arrivez à la Porte Nord d'Athelas.
+porten_mess: 'message &dVous arrivez à la Porte Nord d''Athelas.'
 # Grand Marché
 gm_arrival: if train_gm gm_arrival_exe else nothing
 gm_arrival_exe: folder gm_torche,gm_timer_arrival,gm_out,tag_train_remover,in_train_tester_del delay:0
@@ -1435,7 +1481,7 @@ gm_timer_arrival: folder gm_timer_arrival_exe delay:2
 gm_timer_arrival_exe: setblock AIR -6610;79;2960;Gaia
 gm_out: folder gm_out_exe,gm_out_mess delay:3
 gm_out_exe: teleport -6619;82;2963;Gaia
-gm_out_mess: message &dVous arrivez au Grand Marché.
+gm_out_mess: 'message &dVous arrivez au Grand Marché.'
 #
 cross1: if train_out cross1_exe else nothing
 cross1_exe: folder cross1_torch,cross1_torch_delay
@@ -1469,7 +1515,7 @@ cross5_torch_delay_off: setblock AIR -6828;67;2583;Gaia
 cross5_out: folder in_train_tester_del,cross5_out2
 cross5_out2: folder cross5_out_exe,cross5_mess delay:3
 cross5_out_exe: teleport -6834;69;2594;Gaia
-cross5_mess: message &dVous arrivez au Village.
+cross5_mess: 'message &dVous arrivez au Village.'
 #
 cross6: if train_sanct cross6_exe else nothing
 cross6_exe: folder cross6_torch,cross6_torch_delay
@@ -1484,7 +1530,7 @@ cross7_torch_delay: folder cross7_torch_delay_off delay:3
 cross7_torch_delay_off: setblock AIR -6835;67;2582;Gaia
 cross7_out: folder cross5_out_exe,cross5_mess delay:4
 cross7_out_exe: teleport -6834;69;2594;Gaia
-cross7_mess: message &dVous arrivez au Village.
+cross7_mess: 'message &dVous arrivez au Village.'
 #
 cross8: if train_sanct cross8_out else cross8_exe
 cross8_exe: folder cross8_torch,cross8_torch_delay,in_train_tester_del
@@ -1493,7 +1539,7 @@ cross8_torch_delay: folder cross8_torch_delay_off delay:3
 cross8_torch_delay_off: setblock AIR -7010;62;2490;Gaia
 cross8_out: folder cross8_out_exe,cross8_mess delay:3
 cross8_out_exe: teleport -7013;65;2498;Gaia
-cross8_mess: message &dVous arrivez au Sanctuaire.
+cross8_mess: 'message &dVous arrivez au Sanctuaire.'
 #
 crosstation: if train_in crosstation_exe else nothing
 crosstation_exe: folder crosstation_torch,crosstation_torch_delay
@@ -1508,7 +1554,7 @@ crosstation2_torch_delay: folder crosstation2_torch_delay_off delay:3
 crosstation2_torch_delay_off: setblock AIR -7010;62;2490;Gaia
 crosstation2_out: folder crosstation2_out_exe,crosstation2_mess delay:17
 crosstation2_out_exe: teleport -6487;98;2767;Gaia
-crosstation2_mess: message &dVous arrivez à Ingor, la Ville des Nains.
+crosstation2_mess: 'message &dVous arrivez à Ingor, la Ville des Nains.'
 #
 crosstation3: if train_nains crosstation3_exe else nothing
 crosstation3_exe: folder crosstation3_torch,crosstation3_torch_delay,crosstation3_exe,in_train_tester_del,crosstation3_out
@@ -1517,7 +1563,7 @@ crosstation3_torch_delay: folder crosstation3_torch_delay_off delay:3
 crosstation3_torch_delay_off: setblock AIR -6505;70;2824;Gaia
 crosstation3_out: folder crosstation3_out_exe,crosstation3_mess delay:17
 crosstation3_out_exe: teleport -6487;98;2767;Gaia
-crosstation3_mess: message &dVous arrivez à Ingor, la Ville des Nains.
+crosstation3_mess: 'message &dVous arrivez à Ingor, la Ville des Nains.'
 #
 crosstation4: if train_vill_or_sanct crosstation4_exe else nothing
 crosstation4_exe: folder crosstation4_torch,crosstation4_torch_delay
@@ -1542,29 +1588,29 @@ prison_god1: folder prison_essentials_user1,prison_essentials_user12,prison_esse
 prison_god2: folder prison_essentials_user2,prison_essentials_user22,prison_essentials_user23,prison_avertissement,vulgarite_remover,prison_information,money_500
 prison_god3: folder prison_essentials_user3,prison_essentials_user32,prison_essentials_user33,prison_avertissement,vulgarite_remover,prison_information,money_1000
 #
-prison_essentials_user1: command jail %player% jail_athelas 15m
-prison_essentials_user12: command mute %player% 15m
-prison_essentials_user13: command pex user %player% timed add -discordmc.chat 900
-prison_essentials_user2: command jail %player% jail_athelas 30m
-prison_essentials_user22: command mute %player% 30m
-prison_essentials_user23: command pex user %player% timed add -discordmc.chat 1800
-prison_essentials_user3: command jail %player% jail_athelas 1h
-prison_essentials_user32: command mute %player% 1h
-prison_essentials_user33: command pex user %player% timed add -discordmc.chat 3600
+prison_essentials_user1: 'command jail %player% jail_athelas 15m'
+prison_essentials_user12: 'command mute %player% 15m'
+prison_essentials_user13: 'command pex user %player% timed add -discordmc.chat 900'
+prison_essentials_user2: 'command jail %player% jail_athelas 30m'
+prison_essentials_user22: 'command mute %player% 30m'
+prison_essentials_user23: 'command pex user %player% timed add -discordmc.chat 1800'
+prison_essentials_user3: 'command jail %player% jail_athelas 1h'
+prison_essentials_user32: 'command mute %player% 1h'
+prison_essentials_user33: 'command pex user %player% timed add -discordmc.chat 3600'
 #
 prison_avertissement: point avertissements 1
 vulgarite_remover: folder default.vulgarite_reset_exe
 prison_information: folder prison_information1,prison_information2,prison_information3,prison_information4 delay:5
-prison_information1: message &cVous avez été envoyé dans la prison publique d'Athelas.
-prison_information2: message &cEn venant ici, vous cumulez des avertissements...
-prison_information3: message &cAu bout de 5 avertissements, vous serez banni pour 48 heures.
-prison_information4: message &cVous avez été averti &2%point.avertissements.amount% &c/&25 &cfois !
+prison_information1: 'message &cVous avez été envoyé dans la prison publique d''Athelas.'
+prison_information2: 'message &cEn venant ici, vous cumulez des avertissements...'
+prison_information3: 'message &cAu bout de 5 avertissements, vous serez banni pour 48 heures.'
+prison_information4: 'message &cVous avez été averti &2%point.avertissements.amount% &c/&25 &cfois !'
 #
 #
 temp_ban: folder temp_ban_exe,temp_ban_reset,temp_ban_message delay:5
 temp_ban_message: folder temp_ban_message_exe,temp_ban_broadcast
-temp_ban_message_exe: message &cVous avez été averti &25 &cfois, vous allez être banni pour 12 heures de Gaïa.
-temp_ban_broadcast: command broadcast &2%player% &ca été banni pendant 48 heures de Gaïa.
+temp_ban_message_exe: 'message &cVous avez été averti &25 &cfois, vous allez être banni pour 12 heures de Gaïa.'
+temp_ban_broadcast: 'command broadcast &2%player% &ca été banni pendant 48 heures de Gaïa.'
 temp_ban_reset: point avertissements *0
 temp_ban_exe: folder temp_bannissement delay:5
 temp_bannissement: 'command tempban %player% 48h 1s Vous avez été averti 5 fois.'
@@ -1625,17 +1671,17 @@ button1: conversation jarvis
 #
 button_on: folder block_screen,screen_movein1,screenin_timer1 delay:1
 block_screen: setblock STONE -9731;81;2362;Gaia
-screen_movein1: command hd align y serverinfo ref2
+screen_movein1: 'command hd align y serverinfo ref2'
 screenin_timer1: folder screen_movein2 delay:1
-screen_movein2: command hd align xz serverinfo ref2
+screen_movein2: 'command hd align xz serverinfo ref2'
 #
 # OFF
 #
 button_off: folder unblock_screen,screen_moveout1,screenout_timer1 delay:1
 unblock_screen: setblock AIR -9731;81;2362;Gaia
-screen_moveout1: command hd align xz serverinfo ref
+screen_moveout1: 'command hd align xz serverinfo ref'
 screenout_timer1: folder screen_moveout2 delay:1
-screen_moveout2: command hd align y serverinfo ref
+screen_moveout2: 'command hd align y serverinfo ref'
 #
 # Escalier
 #
@@ -1646,26 +1692,26 @@ stairs_close: setblock AIR -9725;58;2384;Gaia
 #
 # Builders
 #
-# 
+#
 ###################################################################################################
 builder_master: conversation builder
 builder_in: tag add builder_in
-builder_out: tag remove builder_in
-gm_1_builder: command gm creative %player%
-gm_0_builder: command gm survival %player%
+builder_out: tag del builder_in
+gm_1_builder: 'command gm creative %player%'
+gm_0_builder: 'command gm survival %player%'
 ###################################################################################################
 #
 #
 # Récompenses de Bugs trouvés
 #
-# 
+#
 ###################################################################################################
 bug_verified: folder bug_message,bug_money,default.reput_athelas1_positif delay:1
 bug_message: folder bug_message1,bug_message2,bug_message3 delay:1
-bug_message1: command title %player% times 40 200 40
-bug_message2: command title %player% subtitle {"text":"Merci de votre aide!","italic":true,"color":"gray"}
-bug_message3: command title %player% title {"text":"Bug Identifié","bold":true,"color":"green"}
-bug_money: command eco give %player% 200
+bug_message1: 'command title %player% times 40 200 40'
+bug_message2: 'command title %player% subtitle {"text":"Merci de votre aide!","italic":true,"color":"gray"}'
+bug_message3: 'command title %player% title {"text":"Bug Identifié","bold":true,"color":"green"}'
+bug_money: 'command eco give %player% 200'
 ###################################################################################################
 ###################################################################################################
 ###################################################################################################
@@ -1674,10 +1720,10 @@ bug_money: command eco give %player% 200
 ###################################################################################################
 ###################################################################################################
 #
-jeu_creator: command cc open jeucreator %player%
+jeu_creator: 'command cc open jeucreator %player%'
 #
 #
-uhc_open: command cc open jeucreator %player%
+uhc_open: 'command cc open jeucreator %player%'
 #
 #
 #
@@ -1686,7 +1732,7 @@ uhc_open: command cc open jeucreator %player%
 #
 #####################
 #
-# IMPLEMENT A "CANCEL ON START" (IF COMPATIBLE WITH CANCEL EVENT) 
+# IMPLEMENT A "CANCEL ON START" (IF COMPATIBLE WITH CANCEL EVENT)
 uhc1_create: setblock REDSTONE_BLOCK -6587;66;2914;Gaia
 uhc2_create: setblock REDSTONE_BLOCK -6587;66;2915;Gaia
 uhc3_create: setblock REDSTONE_BLOCK -6587;66;2916;Gaia
@@ -1702,13 +1748,13 @@ uhc4_create: setblock REDSTONE_BLOCK -6587;66;2917;Gaia
 # OFF
 uhc_mobspawning_off: folder uhc_mobspawning_torch,uhc_mobspawning_sign,uhc_mobspawning_off_exe
 uhc_mobspawning_torch: setblock REDSTONE_BLOCK -6591;66;2911;Gaia
-uhc_mobspawning_sign: command setblock -6592 71 2916 wall_sign 4 replace {Text1:"Règle:", Text2:"¤", Text3:"Spawn de Monstres", Text4:"Désactivé"}
-uhc_mobspawning_off_exe: command region flag uhc -w Gaia MOB-SPAWNING deny
+uhc_mobspawning_sign: 'command setblock -6592 71 2916 wall_sign 4 replace {Text1:"Règle:", Text2:"¤", Text3:"Spawn de Monstres", Text4:"Désactivé"}'
+uhc_mobspawning_off_exe: 'command region flag uhc -w Gaia MOB-SPAWNING deny'
 # ON
 uhc_mobspawning_on: folder uhc_mobspawning_torch_on,uhc_mobspawning_sign_on,uhc_mobspawning_on_exe
 uhc_mobspawning_torch_on: setblock AIR -6591;66;2911;Gaia
-uhc_mobspawning_sign_on: command setblock -6592 71 2916 wall_sign 4 replace {Text1:"Règle:", Text2:"¤", Text3:"Spawn de Monstres", Text4:"Activé"}
-uhc_mobspawning_on_exe: command region flag uhc -w Gaia MOB-SPAWNING
+uhc_mobspawning_sign_on: 'command setblock -6592 71 2916 wall_sign 4 replace {Text1:"Règle:", Text2:"¤", Text3:"Spawn de Monstres", Text4:"Activé"}'
+uhc_mobspawning_on_exe: 'command region flag uhc -w Gaia MOB-SPAWNING'
 #
 #
 # DynMap
@@ -1716,11 +1762,11 @@ uhc_mobspawning_on_exe: command region flag uhc -w Gaia MOB-SPAWNING
 # HIDDEN OFF
 uhc_dynmap_off: folder uhc_dynmap_torch,uhc_dynmap_sign
 uhc_dynmap_torch: setblock REDSTONE_BLOCK -6590;66;2911;Gaia
-uhc_dynmap_sign: command setblock -6592 71 2918 wall_sign 4 replace {Text1:"Règle:", Text2:"Caché sur", Text3:"Carte Dynamique", Text4:"Désactivé"}
+uhc_dynmap_sign: 'command setblock -6592 71 2918 wall_sign 4 replace {Text1:"Règle:", Text2:"Caché sur", Text3:"Carte Dynamique", Text4:"Désactivé"}'
 # HIDDEN ON
 uhc_dynmap_on: folder uhc_dynmap_torch_on,uhc_dynmap_sign_on
 uhc_dynmap_torch_on: setblock AIR -6590;66;2911;Gaia
-uhc_dynmap_sign_on: command setblock -6592 71 2918 wall_sign 4 replace {Text1:"Règle:", Text2:"Caché sur", Text3:"Carte Dynamique", Text4:"Activé"}
+uhc_dynmap_sign_on: 'command setblock -6592 71 2918 wall_sign 4 replace {Text1:"Règle:", Text2:"Caché sur", Text3:"Carte Dynamique", Text4:"Activé"}'
 #
 #
 # GAME TIME
@@ -1730,36 +1776,36 @@ uhc_time_20: folder uhc_time_20_torch,uhc_time_20_sign1,uhc_time_20_sign2
 uhc_time_20_torch: folder uhc_time_torch_reset,uhc_time_torch_set20 delay:0
 uhc_time_torch_set20: folder uhc_time_torch_set20_exe delay:2
 uhc_time_torch_set20_exe: setblock REDSTONE_BLOCK -6590;66;2920;Gaia
-uhc_time_20_sign1: command setblock -6592 70 2916 wall_sign 4 replace {Text1:"Temps de Jeu:", Text2:"¤", Text3:"20 Minutes"}
-uhc_time_20_sign2: command setblock -6592 70 2918 wall_sign 4 replace {Text1:"Temps de Paix:", Text2:"¤", Text3:"10 Minutes"}
+uhc_time_20_sign1: 'command setblock -6592 70 2916 wall_sign 4 replace {Text1:"Temps de Jeu:", Text2:"¤", Text3:"20 Minutes"}'
+uhc_time_20_sign2: 'command setblock -6592 70 2918 wall_sign 4 replace {Text1:"Temps de Paix:", Text2:"¤", Text3:"10 Minutes"}'
 #30
 uhc_time_30: folder uhc_time_30_torch,uhc_time_30_sign1,uhc_time_30_sign2
 uhc_time_30_torch: folder uhc_time_torch_reset,uhc_time_torch_set30 delay:0
 uhc_time_torch_set30: folder uhc_time_torch_set30_exe delay:2
 uhc_time_torch_set30_exe: setblock REDSTONE_BLOCK -6591;66;2920;Gaia
-uhc_time_30_sign1: command setblock -6592 70 2916 wall_sign 4 replace {Text1:"Temps de Jeu:", Text2:"¤", Text3:"30 Minutes"}
-uhc_time_30_sign2: command setblock -6592 70 2918 wall_sign 4 replace {Text1:"Temps de Paix:", Text2:"¤", Text3:"15 Minutes"}
+uhc_time_30_sign1: 'command setblock -6592 70 2916 wall_sign 4 replace {Text1:"Temps de Jeu:", Text2:"¤", Text3:"30 Minutes"}'
+uhc_time_30_sign2: 'command setblock -6592 70 2918 wall_sign 4 replace {Text1:"Temps de Paix:", Text2:"¤", Text3:"15 Minutes"}'
 #40
 uhc_time_40: folder uhc_time_40_torch,uhc_time_40_sign1,uhc_time_40_sign2
 uhc_time_40_torch: folder uhc_time_torch_reset,uhc_time_torch_set40 delay:0
 uhc_time_torch_set40: folder uhc_time_torch_set40_exe delay:2
 uhc_time_torch_set40_exe: setblock REDSTONE_BLOCK -6592;66;2920;Gaia
-uhc_time_40_sign1: command setblock -6592 70 2916 wall_sign 4 replace {Text1:"Temps de Jeu:", Text2:"¤", Text3:"40 Minutes"}
-uhc_time_40_sign2: command setblock -6592 70 2918 wall_sign 4 replace {Text1:"Temps de Paix:", Text2:"¤", Text3:"20 Minutes"}
+uhc_time_40_sign1: 'command setblock -6592 70 2916 wall_sign 4 replace {Text1:"Temps de Jeu:", Text2:"¤", Text3:"40 Minutes"}'
+uhc_time_40_sign2: 'command setblock -6592 70 2918 wall_sign 4 replace {Text1:"Temps de Paix:", Text2:"¤", Text3:"20 Minutes"}'
 #50
 uhc_time_50: folder uhc_time_50_torch,uhc_time_50_sign1,uhc_time_50_sign2
 uhc_time_50_torch: folder uhc_time_torch_reset,uhc_time_torch_set50 delay:0
 uhc_time_torch_set50: folder uhc_time_torch_set50_exe delay:2
 uhc_time_torch_set50_exe: setblock REDSTONE_BLOCK -6593;66;2920;Gaia
-uhc_time_50_sign1: command setblock -6592 70 2916 wall_sign 4 replace {Text1:"Temps de Jeu:", Text2:"¤", Text3:"50 Minutes"}
-uhc_time_50_sign2: command setblock -6592 70 2918 wall_sign 4 replace {Text1:"Temps de Paix:", Text2:"¤", Text3:"25 Minutes"}
+uhc_time_50_sign1: 'command setblock -6592 70 2916 wall_sign 4 replace {Text1:"Temps de Jeu:", Text2:"¤", Text3:"50 Minutes"}'
+uhc_time_50_sign2: 'command setblock -6592 70 2918 wall_sign 4 replace {Text1:"Temps de Paix:", Text2:"¤", Text3:"25 Minutes"}'
 #60
 uhc_time_60: folder uhc_time_60_torch,uhc_time_60_sign1,uhc_time_60_sign2
 uhc_time_60_torch: folder uhc_time_torch_reset,uhc_time_torch_set60 delay:0
 uhc_time_torch_set60: folder uhc_time_torch_set60_exe delay:2
 uhc_time_torch_set60_exe: setblock REDSTONE_BLOCK -6594;66;2920;Gaia
-uhc_time_60_sign1: command setblock -6592 70 2916 wall_sign 4 replace {Text1:"Temps de Jeu:", Text2:"¤", Text3:"60 Minutes"}
-uhc_time_60_sign2: command setblock -6592 70 2918 wall_sign 4 replace {Text1:"Temps de Paix:", Text2:"¤", Text3:"30 Minutes"}
+uhc_time_60_sign1: 'command setblock -6592 70 2916 wall_sign 4 replace {Text1:"Temps de Jeu:", Text2:"¤", Text3:"60 Minutes"}'
+uhc_time_60_sign2: 'command setblock -6592 70 2918 wall_sign 4 replace {Text1:"Temps de Paix:", Text2:"¤", Text3:"30 Minutes"}'
 #
 #
 #
@@ -1768,24 +1814,24 @@ uhc_time_60_sign2: command setblock -6592 70 2918 wall_sign 4 replace {Text1:"Te
 #
 #######################
 uhc_ready: folder uhc_broadcast,uhc_torch_on,uhcsubscribe_sign1,uhcsubscribe_sign2,uhc_folder_specific delay:0
-uhc_broadcast: command broadcast &aUn Jeu à été lancé par &2%player%&a. Rejoignez &2(-6600,70,2920)&a!
+uhc_broadcast: 'command broadcast &aUn Jeu à été lancé par &2%player%&a. Rejoignez &2(-6600,70,2920)&a!'
 uhc_torch_on: setblock REDSTONE_BLOCK -6589;70;2917;Gaia
-uhcsubscribe_sign1: command setblock -6592 70 2916 wall_sign 4 replace {Text1:"- - -", Text2:"INSCRIVEZ-VOUS", Text3:"en parlant au", Text4:"Maître de Jeux"}
-uhcsubscribe_sign2: command setblock -6592 70 2918 wall_sign 4 replace {Text1:"- - -", Text2:"INSCRIVEZ-VOUS", Text3:"en parlant au", Text4:"Maître de Jeux"}
+uhcsubscribe_sign1: 'command setblock -6592 70 2916 wall_sign 4 replace {Text1:"- - -", Text2:"INSCRIVEZ-VOUS", Text3:"en parlant au", Text4:"Maître de Jeux"}'
+uhcsubscribe_sign2: 'command setblock -6592 70 2918 wall_sign 4 replace {Text1:"- - -", Text2:"INSCRIVEZ-VOUS", Text3:"en parlant au", Text4:"Maître de Jeux"}'
 #
 uhc_folder_specific: folder uhc_folder1,uhc_folder2,uhc_folder3,uhc_folder4 delay:1
-uhc_folder1: folder uhc_broadcast1,uhc_sign1 condition:games_uhc_1
-uhc_broadcast1: command broadcast &aLe Jeu est une &cSurvie &aen &cIndividuel&a! 
-uhc_sign1: command setblock -6592 71 2917 wall_sign 4 replace {Text1:"Jeu ouvert:", Text2:"SURVIE", Text3:"En Individuel", Text4:"par %player%"}
-uhc_folder2: folder uhc_broadcast2,uhc_sign2 condition:games_uhc_team2
-uhc_broadcast2: command broadcast &aLe Jeu est une &cSurvie &aen &c2 Equipes&a!
-uhc_sign2: command setblock -6592 71 2917 wall_sign 4 replace {Text1:"Jeu ouvert:", Text2:"SURVIE", Text3:"En 2 Equipes", Text4:"par %player%"}
-uhc_folder3: folder uhc_broadcast3,uhc_sign3 condition:games_uhc_team3
-uhc_broadcast3: command broadcast &aLe Jeu est une &cSurvie &aen &c3 Equipes&a!
-uhc_sign3: command setblock -6592 71 2917 wall_sign 4 replace {Text1:"Jeu ouvert:", Text2:"SURVIE", Text3:"En 3 Equipes", Text4:"par %player%"}
-uhc_folder4: folder uhc_broadcast4,uhc_sign4 condition:games_uhc_team4
-uhc_broadcast4: command broadcast &aLe Jeu est une &cSurvie &aen &c4 Equipes&a!
-uhc_sign4: command setblock -6592 71 2917 wall_sign 4 replace {Text1:"Jeu ouvert:", Text2:"SURVIE", Text3:"En 4 Equipes", Text4:"par %player%"}
+uhc_folder1: folder uhc_broadcast1,uhc_sign1 conditions:games_uhc_1
+uhc_broadcast1: 'command broadcast &aLe Jeu est une &cSurvie &aen &cIndividuel&a!'
+uhc_sign1: 'command setblock -6592 71 2917 wall_sign 4 replace {Text1:"Jeu ouvert:", Text2:"SURVIE", Text3:"En Individuel", Text4:"par %player%"}'
+uhc_folder2: folder uhc_broadcast2,uhc_sign2 conditions:games_uhc_team2
+uhc_broadcast2: 'command broadcast &aLe Jeu est une &cSurvie &aen &c2 Equipes&a!'
+uhc_sign2: 'command setblock -6592 71 2917 wall_sign 4 replace {Text1:"Jeu ouvert:", Text2:"SURVIE", Text3:"En 2 Equipes", Text4:"par %player%"}'
+uhc_folder3: folder uhc_broadcast3,uhc_sign3 conditions:games_uhc_team3
+uhc_broadcast3: 'command broadcast &aLe Jeu est une &cSurvie &aen &c3 Equipes&a!'
+uhc_sign3: 'command setblock -6592 71 2917 wall_sign 4 replace {Text1:"Jeu ouvert:", Text2:"SURVIE", Text3:"En 3 Equipes", Text4:"par %player%"}'
+uhc_folder4: folder uhc_broadcast4,uhc_sign4 conditions:games_uhc_team4
+uhc_broadcast4: 'command broadcast &aLe Jeu est une &cSurvie &aen &c4 Equipes&a!'
+uhc_sign4: 'command setblock -6592 71 2917 wall_sign 4 replace {Text1:"Jeu ouvert:", Text2:"SURVIE", Text3:"En 4 Equipes", Text4:"par %player%"}'
 #
 #
 #
@@ -1825,11 +1871,11 @@ uhc_team11_torch: setblock REDSTONE_BLOCK -6590;71;2911;Gaia conditions:!uhc1
 uhc_tag11: tag add uhc conditions:!uhc1
 uhc_place1: tag add uhc_place1 conditions:!uhc1,games_uhc_1
 uhc_sign11: folder uhc_sign11_exe,uhc_team11_var conditions:!uhc1,games_uhc_1
-uhc_sign11_exe: command setblock -6592 71 2911 wall_sign 4 replace {Text1:"Joueur 1", Text2:"- - -", Text3:"%player%", Text4:"- - -"} 
+uhc_sign11_exe: 'command setblock -6592 71 2911 wall_sign 4 replace {Text1:"Joueur 1", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team11_tag: tag add uhc_team1 conditions:!uhc1,!games_uhc_1
 uhc_team11_sign: folder uhc_team11_sign_exe,uhc_team11_var conditions:!uhc1,!games_uhc_1
-uhc_team11_sign_exe: command setblock -6592 71 2911 wall_sign 4 replace {Text1:"Equipe Feu", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team11_var: command bq config set hollish.main.variables.uhc11 %player%
+uhc_team11_sign_exe: 'command setblock -6592 71 2911 wall_sign 4 replace {Text1:"Equipe Feu", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team11_var: 'command bq config set hollish.main.variables.uhc11 %player%'
 uhc_team_meka11: folder uhc_team12 delay:1
 
 uhc_team12: folder uhc_team12_torch,uhc_tag12,uhc_place2,uhc_sign12,uhc_team12_tag,uhc_team12_sign,uhc_team_meka12 conditions:!has_team
@@ -1837,11 +1883,11 @@ uhc_team12_torch: setblock REDSTONE_BLOCK -6590;71;2912;Gaia conditions:!uhc2
 uhc_tag12: tag add uhc conditions:!uhc2
 uhc_place2: tag add uhc_place2 conditions:!uhc2,games_uhc_1
 uhc_sign12: folder uhc_sign12_exe,uhc_team12_var conditions:!uhc2,games_uhc_1
-uhc_sign12_exe: command setblock -6592 71 2912 wall_sign 4 replace {Text1:"Joueur 2", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign12_exe: 'command setblock -6592 71 2912 wall_sign 4 replace {Text1:"Joueur 2", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team12_tag: tag add uhc_team1 conditions:!uhc2,!games_uhc_1
 uhc_team12_sign: folder uhc_team12_sign_exe,uhc_team12_var conditions:!uhc2,!games_uhc_1
-uhc_team12_sign_exe: command setblock -6592 71 2912 wall_sign 4 replace {Text1:"Equipe Feu", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team12_var: command bq config set hollish.main.variables.uhc12 %player%
+uhc_team12_sign_exe: 'command setblock -6592 71 2912 wall_sign 4 replace {Text1:"Equipe Feu", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team12_var: 'command bq config set hollish.main.variables.uhc12 %player%'
 uhc_team_meka12: folder uhc_team13 delay:1
 
 uhc_team13: folder uhc_team13_torch,uhc_tag13,uhc_place3,uhc_sign13,uhc_team13_tag,uhc_team13_sign,uhc_team_meka13 conditions:!has_team
@@ -1849,11 +1895,11 @@ uhc_team13_torch: setblock REDSTONE_BLOCK -6590;71;2913;Gaia conditions:!uhc3
 uhc_tag13: tag add uhc conditions:!uhc3
 uhc_place3: tag add uhc_place3 conditions:!uhc3,games_uhc_1
 uhc_sign13: folder uhc_sign13_exe,uhc_team13_var conditions:!uhc3,games_uhc_1
-uhc_sign13_exe: command setblock -6592 71 2913 wall_sign 4 replace {Text1:"Joueur 3", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign13_exe: 'command setblock -6592 71 2913 wall_sign 4 replace {Text1:"Joueur 3", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team13_tag: tag add uhc_team1 conditions:!uhc3,!games_uhc_1
 uhc_team13_sign: folder uhc_team13_sign_exe,uhc_team13_var conditions:!uhc3,!games_uhc_1
-uhc_team13_sign_exe: command setblock -6592 71 2913 wall_sign 4 replace {Text1:"Equipe Feu", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team13_var: command bq config set hollish.main.variables.uhc13 %player%
+uhc_team13_sign_exe: 'command setblock -6592 71 2913 wall_sign 4 replace {Text1:"Equipe Feu", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team13_var: 'command bq config set hollish.main.variables.uhc13 %player%'
 uhc_team_meka13: folder uhc_team14 delay:1
 
 uhc_team14: folder uhc_team14_torch,uhc_tag14,uhc_place4,uhc_sign14,uhc_team14_tag,uhc_team14_sign,uhc_team_meka14 conditions:!has_team
@@ -1861,11 +1907,11 @@ uhc_team14_torch: setblock REDSTONE_BLOCK -6590;71;2914;Gaia conditions:!uhc4
 uhc_tag14: tag add uhc conditions:!uhc4
 uhc_place4: tag add uhc_place4 conditions:!uhc4,games_uhc_1
 uhc_sign14: folder uhc_sign14_exe,uhc_team14_var conditions:!uhc4,games_uhc_1
-uhc_sign14_exe: command setblock -6592 71 2914 wall_sign 4 replace {Text1:"Joueur 4", Text2:"- - -", Text3:"%player%", Text4:"- - -"} 
+uhc_sign14_exe: 'command setblock -6592 71 2914 wall_sign 4 replace {Text1:"Joueur 4", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team14_tag: tag add uhc_team1 conditions:!uhc4,!games_uhc_1
 uhc_team14_sign: folder uhc_team14_sign_exe,uhc_team14_var conditions:!uhc4,!games_uhc_1
-uhc_team14_sign_exe: command setblock -6592 71 2914 wall_sign 4 replace {Text1:"Equipe Feu", Text2:"- - -", Text3:"%player%", Text4:"- - -"} 
-uhc_team14_var: command bq config set hollish.main.variables.uhc14 %player%
+uhc_team14_sign_exe: 'command setblock -6592 71 2914 wall_sign 4 replace {Text1:"Equipe Feu", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team14_var: 'command bq config set hollish.main.variables.uhc14 %player%'
 uhc_team_meka14: folder uhc_team15 delay:1
 
 uhc_team15: folder uhc_team15_torch,uhc_tag15,uhc_place5,uhc_sign15,uhc_team15_tag,uhc_team15_sign,uhc_team_meka15 conditions:!has_team
@@ -1873,11 +1919,11 @@ uhc_team15_torch: setblock REDSTONE_BLOCK -6590;71;2915;Gaia conditions:!uhc5
 uhc_tag15: tag add uhc conditions:!uhc5
 uhc_place5: tag add uhc_place5 conditions:!uhc5,games_uhc_1
 uhc_sign15: folder uhc_sign15_exe,uhc_team15_var conditions:!uhc5,games_uhc_1
-uhc_sign15_exe: command setblock -6592 71 2915 wall_sign 4 replace {Text1:"Joueur 5", Text2:"- - -", Text3:"%player%", Text4:"- - -"} 
+uhc_sign15_exe: 'command setblock -6592 71 2915 wall_sign 4 replace {Text1:"Joueur 5", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team15_tag: tag add uhc_team1 conditions:!uhc5,!games_uhc_1
 uhc_team15_sign: folder uhc_team15_sign_exe,uhc_team15_var conditions:!uhc5,!games_uhc_1
-uhc_team15_sign_exe: command setblock -6592 71 2915 wall_sign 4 replace {Text1:"Equipe Feu", Text2:"- - -", Text3:"%player%", Text4:"- - -"} 
-uhc_team15_var: command bq config set hollish.main.variables.uhc15 %player%
+uhc_team15_sign_exe: 'command setblock -6592 71 2915 wall_sign 4 replace {Text1:"Equipe Feu", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team15_var: 'command bq config set hollish.main.variables.uhc15 %player%'
 uhc_team_meka15: folder uhc_team2 conditions:games_uhc_1 delay:1
 #
 # Team 2
@@ -1887,11 +1933,11 @@ uhc_team21_torch: setblock REDSTONE_BLOCK -6590;71;2919;Gaia conditions:!uhc6
 uhc_tag21: tag add uhc conditions:!uhc6
 uhc_place6: tag add uhc_place6 conditions:!uhc6,games_uhc_1
 uhc_sign16: folder uhc_sign16_exe,uhc_team21_var conditions:!uhc6,games_uhc_1
-uhc_sign16_exe: command setblock -6592 71 2919 wall_sign 4 replace {Text1:"Joueur 6", Text2:"- - -", Text3:"%player%", Text4:"- - -"} 
+uhc_sign16_exe: 'command setblock -6592 71 2919 wall_sign 4 replace {Text1:"Joueur 6", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team21_tag: tag add uhc_team2 conditions:!uhc6,!games_uhc_1
 uhc_team21_sign: folder uhc_team21_sign_exe,uhc_team21_var conditions:!uhc6,!games_uhc_1
-uhc_team21_sign_exe: command setblock -6592 71 2919 wall_sign 4 replace {Text1:"Equipe Air", Text2:"- - -", Text3:"%player%", Text4:"- - -"} 
-uhc_team21_var: command bq config set hollish.main.variables.uhc21 %player%
+uhc_team21_sign_exe: 'command setblock -6592 71 2919 wall_sign 4 replace {Text1:"Equipe Air", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team21_var: 'command bq config set hollish.main.variables.uhc21 %player%'
 uhc_team_meka21: folder uhc_team22 delay:1
 
 uhc_team22: folder uhc_team22_torch,uhc_tag22,uhc_place7,uhc_sign17,uhc_team22_tag,uhc_team22_sign,uhc_team_meka22 conditions:!has_team
@@ -1899,11 +1945,11 @@ uhc_team22_torch: setblock REDSTONE_BLOCK -6590;71;2920;Gaia conditions:!uhc7
 uhc_tag22: tag add uhc conditions:!uhc7
 uhc_place7: tag add uhc_place7 conditions:!uhc7,games_uhc_1
 uhc_sign17: folder uhc_sign17_exe,uhc_team22_var conditions:!uhc7,games_uhc_1
-uhc_sign17_exe: command setblock -6592 71 2920 wall_sign 4 replace {Text1:"Joueur 7", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign17_exe: 'command setblock -6592 71 2920 wall_sign 4 replace {Text1:"Joueur 7", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team22_tag: tag add uhc_team2 conditions:!uhc7,!games_uhc_1
 uhc_team22_sign: folder uhc_team22_sign_exe,uhc_team22_var conditions:!uhc7,!games_uhc_1
-uhc_team22_sign_exe: command setblock -6592 71 2920 wall_sign 4 replace {Text1:"Equipe Air", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team22_var: command bq config set hollish.main.variables.uhc22 %player%
+uhc_team22_sign_exe: 'command setblock -6592 71 2920 wall_sign 4 replace {Text1:"Equipe Air", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team22_var: 'command bq config set hollish.main.variables.uhc22 %player%'
 uhc_team_meka22: folder uhc_team23 delay:1
 
 uhc_team23: folder uhc_team23_torch,uhc_tag23,uhc_place8,uhc_sign18,uhc_team23_tag,uhc_team23_sign,uhc_team_meka23 conditions:!has_team
@@ -1911,11 +1957,11 @@ uhc_team23_torch: setblock REDSTONE_BLOCK -6590;71;2921;Gaia conditions:!uhc8
 uhc_tag23: tag add uhc conditions:!uhc8
 uhc_place8: tag add uhc_place8 conditions:!uhc8,games_uhc_1
 uhc_sign18: folder uhc_sign18_exe,uhc_team23_var conditions:!uhc8,games_uhc_1
-uhc_sign18_exe: command setblock -6592 71 2921 wall_sign 4 replace {Text1:"Joueur 8", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign18_exe: 'command setblock -6592 71 2921 wall_sign 4 replace {Text1:"Joueur 8", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team23_tag: tag add uhc_team2 conditions:!uhc8,!games_uhc_1
 uhc_team23_sign: folder uhc_team23_sign_exe,uhc_team23_var conditions:!uhc8,!games_uhc_1
-uhc_team23_sign_exe: command setblock -6592 71 2921 wall_sign 4 replace {Text1:"Equipe Air", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team23_var: command bq config set hollish.main.variables.uhc23 %player%
+uhc_team23_sign_exe: 'command setblock -6592 71 2921 wall_sign 4 replace {Text1:"Equipe Air", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team23_var: 'command bq config set hollish.main.variables.uhc23 %player%'
 uhc_team_meka23: folder uhc_team24 delay:1
 
 uhc_team24: folder uhc_team24_torch,uhc_tag24,uhc_place9,uhc_sign19,uhc_team24_tag,uhc_team24_sign,uhc_team_meka24 conditions:!has_team
@@ -1923,11 +1969,11 @@ uhc_team24_torch: setblock REDSTONE_BLOCK -6590;71;2922;Gaia conditions:!uhc9
 uhc_tag24: tag add uhc conditions:!uhc9
 uhc_place9: tag add uhc_place9 conditions:!uhc9,games_uhc_1
 uhc_sign19: folder uhc_sign19_exe,uhc_team24_var conditions:!uhc9,games_uhc_1
-uhc_sign19_exe: command setblock -6592 71 2922 wall_sign 4 replace {Text1:"Joueur 9", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign19_exe: 'command setblock -6592 71 2922 wall_sign 4 replace {Text1:"Joueur 9", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team24_tag: tag add uhc_team2 conditions:!uhc9,!games_uhc_1
 uhc_team24_sign: folder uhc_team24_sign_exe,uhc_team24_var conditions:!uhc9,!games_uhc_1
-uhc_team24_sign_exe: command setblock -6592 71 2922 wall_sign 4 replace {Text1:"Equipe Air", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team24_var: command bq config set hollish.main.variables.uhc24 %player%
+uhc_team24_sign_exe: 'command setblock -6592 71 2922 wall_sign 4 replace {Text1:"Equipe Air", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team24_var: 'command bq config set hollish.main.variables.uhc24 %player%'
 uhc_team_meka24: folder uhc_team25 delay:1
 
 uhc_team25: folder uhc_team25_torch,uhc_tag25,uhc_place10,uhc_sign110,uhc_team25_tag,uhc_team25_sign,uhc_team_meka25 conditions:!has_team
@@ -1935,11 +1981,11 @@ uhc_team25_torch: setblock REDSTONE_BLOCK -6590;71;2923;Gaia conditions:!uhc10
 uhc_tag25: tag add uhc conditions:!uhc10
 uhc_place10: tag add uhc_place10 conditions:!uhc10,games_uhc_1
 uhc_sign110: folder uhc_sign110_exe,uhc_team25_var conditions:!uhc10,games_uhc_1
-uhc_sign110_exe: command setblock -6592 71 2923 wall_sign 4 replace {Text1:"Joueur 10", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign110_exe: 'command setblock -6592 71 2923 wall_sign 4 replace {Text1:"Joueur 10", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team25_tag: tag add uhc_team2 conditions:!uhc10,!games_uhc_1
 uhc_team25_sign: folder uhc_team25_sign_exe,uhc_team25_var conditions:!uhc10,!games_uhc_1
-uhc_team25_sign_exe: command setblock -6592 71 2923 wall_sign 4 replace {Text1:"Equipe Air", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team25_var: command bq config set hollish.main.variables.uhc25 %player%
+uhc_team25_sign_exe: 'command setblock -6592 71 2923 wall_sign 4 replace {Text1:"Equipe Air", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team25_var: 'command bq config set hollish.main.variables.uhc25 %player%'
 uhc_team_meka25: folder uhc_team3 conditions:games_uhc_1 delay:1
 #
 # Team 3
@@ -1949,11 +1995,11 @@ uhc_team31_torch: setblock REDSTONE_BLOCK -6590;69;2911;Gaia conditions:!uhc11
 uhc_tag31: tag add uhc conditions:!uhc11
 uhc_place11: tag add uhc_place11 conditions:!uhc11,games_uhc_1
 uhc_sign111: folder uhc_sign111_exe,uhc_team31_var conditions:!uhc11,games_uhc_1
-uhc_sign111_exe: command setblock -6592 69 2911 wall_sign 4 replace {Text1:"Joueur 11", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign111_exe: 'command setblock -6592 69 2911 wall_sign 4 replace {Text1:"Joueur 11", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team31_tag: tag add uhc_team3 conditions:!uhc11,!games_uhc_1
 uhc_team31_sign: folder uhc_team31_sign_exe,uhc_team31_var conditions:!uhc11,!games_uhc_1
-uhc_team31_sign_exe: command setblock -6592 69 2911 wall_sign 4 replace {Text1:"Equipe Terre", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team31_var: command bq config set hollish.main.variables.uhc31 %player%
+uhc_team31_sign_exe: 'command setblock -6592 69 2911 wall_sign 4 replace {Text1:"Equipe Terre", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team31_var: 'command bq config set hollish.main.variables.uhc31 %player%'
 uhc_team_meka31: folder uhc_team32 delay:1
 
 uhc_team32: folder uhc_team32_torch,uhc_tag32,uhc_place12,uhc_sign112,uhc_team32_tag,uhc_team32_sign,uhc_team_meka32 conditions:!has_team
@@ -1961,11 +2007,11 @@ uhc_team32_torch: setblock REDSTONE_BLOCK -6590;69;2912;Gaia conditions:!uhc12
 uhc_tag32: tag add uhc conditions:!uhc12
 uhc_place12: tag add uhc_place12 conditions:!uhc12,games_uhc_1
 uhc_sign112: folder uhc_sign112_exe,uhc_team32_var conditions:!uhc12,games_uhc_1
-uhc_sign112_exe: command setblock -6592 69 2912 wall_sign 4 replace {Text1:"Joueur 12", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign112_exe: 'command setblock -6592 69 2912 wall_sign 4 replace {Text1:"Joueur 12", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team32_tag: tag add uhc_team3 conditions:!uhc12,!games_uhc_1
 uhc_team32_sign: folder uhc_team32_sign_exe,uhc_team32_var conditions:!uhc12,!games_uhc_1
-uhc_team32_sign_exe: command setblock -6592 69 2912 wall_sign 4 replace {Text1:"Equipe Terre", Text2:"- - -", Text3:"%player%", Text4:"- - -"} 
-uhc_team32_var: command bq config set hollish.main.variables.uhc12 %player%
+uhc_team32_sign_exe: 'command setblock -6592 69 2912 wall_sign 4 replace {Text1:"Equipe Terre", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team32_var: 'command bq config set hollish.main.variables.uhc12 %player%'
 uhc_team_meka32: folder uhc_team33 delay:1
 
 uhc_team33: folder uhc_team33_torch,uhc_tag33,uhc_place13,uhc_sign113,uhc_team33_tag,uhc_team33_sign,uhc_team_meka33 conditions:!has_team
@@ -1973,11 +2019,11 @@ uhc_team33_torch: setblock REDSTONE_BLOCK -6590;69;2913;Gaia conditions:!uhc13
 uhc_tag33: tag add uhc conditions:!uhc13
 uhc_place13: tag add uhc_place13 conditions:!uhc13,games_uhc_1
 uhc_sign113: folder uhc_sign113_exe,uhc_team33_var conditions:!uhc13,games_uhc_1
-uhc_sign113_exe: command setblock -6592 69 2913 wall_sign 4 replace {Text1:"Joueur 13", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign113_exe: 'command setblock -6592 69 2913 wall_sign 4 replace {Text1:"Joueur 13", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team33_tag: tag add uhc_team3 conditions:!uhc13,!games_uhc_1
 uhc_team33_sign: folder uhc_team33_sign_exe,uhc_team33_var conditions:!uhc13,!games_uhc_1
-uhc_team33_sign_exe: command setblock -6592 69 2913 wall_sign 4 replace {Text1:"Equipe Terre", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team33_var: command bq config set hollish.main.variables.uhc33 %player%
+uhc_team33_sign_exe: 'command setblock -6592 69 2913 wall_sign 4 replace {Text1:"Equipe Terre", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team33_var: 'command bq config set hollish.main.variables.uhc33 %player%'
 uhc_team_meka33: folder uhc_team34 delay:1
 
 uhc_team34: folder uhc_team34_torch,uhc_tag34,uhc_place14,uhc_sign114,uhc_team34_tag,uhc_team34_sign,uhc_team_meka34 conditions:!has_team
@@ -1985,11 +2031,11 @@ uhc_team34_torch: setblock REDSTONE_BLOCK -6590;69;2914;Gaia conditions:!uhc14
 uhc_tag34: tag add uhc conditions:!uhc14
 uhc_place14: tag add uhc_place14 conditions:!uhc14,games_uhc_1
 uhc_sign114: folder uhc_sign114_exe,uhc_team34_var conditions:!uhc14,games_uhc_1
-uhc_sign114_exe: command setblock -6592 69 2914 wall_sign 4 replace {Text1:"Joueur 14", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign114_exe: 'command setblock -6592 69 2914 wall_sign 4 replace {Text1:"Joueur 14", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team34_tag: tag add uhc_team3 conditions:!uhc14,!games_uhc_1
 uhc_team34_sign: folder uhc_team34_sign_exe,uhc_team34_var conditions:!uhc14,!games_uhc_1
-uhc_team34_sign_exe: command setblock -6592 69 2914 wall_sign 4 replace {Text1:"Equipe Terre", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team34_var: command bq config set hollish.main.variables.uhc34 %player%
+uhc_team34_sign_exe: 'command setblock -6592 69 2914 wall_sign 4 replace {Text1:"Equipe Terre", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team34_var: 'command bq config set hollish.main.variables.uhc34 %player%'
 uhc_team_meka34: folder uhc_team35 delay:1
 
 uhc_team35: folder uhc_team35_torch,uhc_tag35,uhc_place15,uhc_sign115,uhc_team35_tag,uhc_team35_sign,uhc_team_meka35 conditions:!has_team
@@ -1997,11 +2043,11 @@ uhc_team35_torch: setblock REDSTONE_BLOCK -6590;69;2915;Gaia conditions:!uhc15
 uhc_tag35: tag add uhc conditions:!uhc15
 uhc_place15: tag add uhc_place15 conditions:!uhc15,games_uhc_1
 uhc_sign115: folder uhc_sign115_exe,uhc_team35_var conditions:!uhc15,games_uhc_1
-uhc_sign115_exe: command setblock -6592 69 2915 wall_sign 4 replace {Text1:"Joueur 15", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign115_exe: 'command setblock -6592 69 2915 wall_sign 4 replace {Text1:"Joueur 15", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team35_tag: tag add uhc_team3 conditions:!uhc15,!games_uhc_1
 uhc_team35_sign: folder uhc_team35_sign_exe,uhc_team35_var conditions:!uhc15,!games_uhc_1
-uhc_team35_sign_exe: command setblock -6592 69 2915 wall_sign 4 replace {Text1:"Equipe Terre", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team35_var: command bq config set hollish.main.variables.uhc35 %player%
+uhc_team35_sign_exe: 'command setblock -6592 69 2915 wall_sign 4 replace {Text1:"Equipe Terre", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team35_var: 'command bq config set hollish.main.variables.uhc35 %player%'
 uhc_team_meka35: folder uhc_team4 conditions:games_uhc_1 delay:1
 #
 # Team 4
@@ -2011,11 +2057,11 @@ uhc_team41_torch: setblock REDSTONE_BLOCK -6590;69;2919;Gaia conditions:!uhc16
 uhc_tag41: tag add uhc conditions:!uhc16
 uhc_place16: tag add uhc_place16 conditions:!uhc16,games_uhc_1
 uhc_sign116: folder uhc_sign116_exe,uhc_team41_var conditions:!uhc16,games_uhc_1
-uhc_sign116_exe: command setblock -6592 69 2919 wall_sign 4 replace {Text1:"Joueur 16", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign116_exe: 'command setblock -6592 69 2919 wall_sign 4 replace {Text1:"Joueur 16", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team41_tag: tag add uhc_team4 conditions:!uhc16,!games_uhc_1
 uhc_team41_sign: folder uhc_team41_sign_exe,uhc_team41_var conditions:!uhc16,!games_uhc_1
-uhc_team41_sign_exe: command setblock -6592 69 2919 wall_sign 4 replace {Text1:"Equipe Eau", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team41_var: command bq config set hollish.main.variables.uhc41 %player%
+uhc_team41_sign_exe: 'command setblock -6592 69 2919 wall_sign 4 replace {Text1:"Equipe Eau", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team41_var: 'command bq config set hollish.main.variables.uhc41 %player%'
 uhc_team_meka41: folder uhc_team42 delay:1
 
 uhc_team42: folder uhc_team42_torch,uhc_tag42,uhc_place17,uhc_sign117,uhc_team42_tag,uhc_team42_sign,uhc_team_meka42 conditions:!has_team
@@ -2023,11 +2069,11 @@ uhc_team42_torch: setblock REDSTONE_BLOCK -6590;69;2920;Gaia conditions:!uhc17
 uhc_tag42: tag add uhc conditions:!uhc17
 uhc_place17: tag add uhc_place17 conditions:!uhc17,games_uhc_1
 uhc_sign117: folder uhc_sign117_exe,uhc_team42_var conditions:!uhc17,games_uhc_1
-uhc_sign117_exe: command setblock -6592 69 2920 wall_sign 4 replace {Text1:"Joueur 17", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign117_exe: 'command setblock -6592 69 2920 wall_sign 4 replace {Text1:"Joueur 17", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team42_tag: tag add uhc_team4 conditions:!uhc17,!games_uhc_1
 uhc_team42_sign: folder uhc_team42_sign_exe,uhc_team42_var conditions:!uhc17,!games_uhc_1
-uhc_team42_sign_exe: command setblock -6592 69 2920 wall_sign 4 replace {Text1:"Equipe Eau", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team42_var: command bq config set hollish.main.variables.uhc42 %player%
+uhc_team42_sign_exe: 'command setblock -6592 69 2920 wall_sign 4 replace {Text1:"Equipe Eau", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team42_var: 'command bq config set hollish.main.variables.uhc42 %player%'
 uhc_team_meka42: folder uhc_team43 delay:1
 
 uhc_team43: folder uhc_team43_torch,uhc_tag43,uhc_place18,uhc_sign118,uhc_team43_tag,uhc_team43_sign,uhc_team_meka43 conditions:!has_team
@@ -2035,11 +2081,11 @@ uhc_team43_torch: setblock REDSTONE_BLOCK -6590;69;2921;Gaia conditions:!uhc18
 uhc_tag43: tag add uhc conditions:!uhc18
 uhc_place18: tag add uhc_place18 conditions:!uhc18,games_uhc_1
 uhc_sign118: folder uhc_sign118_exe,uhc_team43_var conditions:!uhc18,games_uhc_1
-uhc_sign118_exe: command setblock -6592 69 2921 wall_sign 4 replace {Text1:"Joueur 18", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign118_exe: 'command setblock -6592 69 2921 wall_sign 4 replace {Text1:"Joueur 18", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team43_tag: tag add uhc_team4 conditions:!uhc18,!games_uhc_1
 uhc_team43_sign: folder uhc_team43_sign_exe,uhc_team43_var conditions:!uhc18,!games_uhc_1
-uhc_team43_sign_exe: command setblock -6592 69 2921 wall_sign 4 replace {Text1:"Equipe Eau", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team43_var: command bq config set hollish.main.variables.uhc43 %player%
+uhc_team43_sign_exe: 'command setblock -6592 69 2921 wall_sign 4 replace {Text1:"Equipe Eau", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team43_var: 'command bq config set hollish.main.variables.uhc43 %player%'
 uhc_team_meka43: folder uhc_team44 delay:1
 
 uhc_team44: folder uhc_team44_torch,uhc_tag44,uhc_place19,uhc_sign119,uhc_team44_tag,uhc_team44_sign,uhc_team_meka44 conditions:!has_team
@@ -2047,24 +2093,24 @@ uhc_team44_torch: setblock REDSTONE_BLOCK -6590;69;2922;Gaia conditions:!uhc19
 uhc_tag44: tag add uhc conditions:!uhc19
 uhc_place19: tag add uhc_place19 conditions:!uhc19,games_uhc_1
 uhc_sign119: folder uhc_sign119_exe,uhc_team44_var conditions:!uhc19,games_uhc_1
-uhc_sign119_exe: command setblock -6592 69 2922 wall_sign 4 replace {Text1:"Joueur 19", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign119_exe: 'command setblock -6592 69 2922 wall_sign 4 replace {Text1:"Joueur 19", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_team44_tag: tag add uhc_team4 conditions:!uhc19,!games_uhc_1
 uhc_team44_sign: folder uhc_team44_sign_exe,uhc_team44_var conditions:!uhc19,!games_uhc_1
-uhc_team44_sign_exe: command setblock -6592 69 2922 wall_sign 4 replace {Text1:"Equipe Eau", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team44_var: command bq config set hollish.main.variables.uhc44 %player%
+uhc_team44_sign_exe: 'command setblock -6592 69 2922 wall_sign 4 replace {Text1:"Equipe Eau", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team44_var: 'command bq config set hollish.main.variables.uhc44 %player%'
 uhc_team_meka44: folder uhc_team45 delay:1
 
 uhc_team45: folder uhc_team45_torch,uhc_tag45,uhc_place20,uhc_sign120,uhc_team45_tag,uhc_team45_sign conditions:!has_team
 uhc_team45_torch: setblock REDSTONE_BLOCK -6590;69;2923;Gaia conditions:!uhc20
 uhc_place20: tag add uhc_place20 conditions:!uhc20,games_uhc_1
 uhc_sign120: folder uhc_sign120_exe,uhc_team45_var conditions:!uhc20,games_uhc_1
-uhc_sign120_exe: command setblock -6592 69 2923 wall_sign 4 replace {Text1:"Joueur 20", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
+uhc_sign120_exe: 'command setblock -6592 69 2923 wall_sign 4 replace {Text1:"Joueur 20", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
 uhc_tag45: tag add uhc conditions:!uhc20
 uhc_team45_tag: tag add uhc_team4 conditions:!uhc20,!games_uhc_1
 uhc_team45_sign: folder uhc_team45_sign_exe,uhc_team45_var conditions:!uhc20,!games_uhc_1
-uhc_team45_sign_exe: command setblock -6592 69 2923 wall_sign 4 replace {Text1:"Equipe Eau", Text2:"- - -", Text3:"%player%", Text4:"- - -"}
-uhc_team45_var: command bq config set hollish.main.variables.uhc45 %player%
-# Listener avec le party au moment du LANCEMENT DU JEU 
+uhc_team45_sign_exe: 'command setblock -6592 69 2923 wall_sign 4 replace {Text1:"Equipe Eau", Text2:"- - -", Text3:"%player%", Text4:"- - -"}'
+uhc_team45_var: 'command bq config set hollish.main.variables.uhc45 %player%'
+# Listener avec le party au moment du LANCEMENT DU JEU
 # -CLOTURER (games_started)
 # Objectifs: Kill & Die & Region Leave (=personnal remover)
 # -KinvBackup
@@ -2084,7 +2130,7 @@ uhc_team45_var: command bq config set hollish.main.variables.uhc45 %player%
 #
 # SET Timer (Periodic messages including timer of delay objective on GAME MAKER using party events)
 # SET Timer relative to game lenght PER PLAYER for CANCEL! This will avoid disconnected players, plus allow for players to disconnect and conitnue game
-# 
+#
 #
 # WAIT 5
 #
@@ -2097,35 +2143,35 @@ uhc_delay_gamemaker: folder uhc_delay_gamemaker_exe delay:60
 uhc_started: setblock REDSTONE_BLOCK -6587;66;2913;Gaia
 #ALL placed in party event to affect all participatings players
 uhc_started_partymembers: party 15000 tag_uhc uhc_kinvbackup,uhc_regionmember,uhc_team_skins,uhc_start_message30,uhc_start_message301,uhc_start_meka1
-uhc_kinvbackup: command kinv backup %player%
-uhc_regionmember: command region addmember uhc -w Gaia %player%
+uhc_kinvbackup: 'command kinv backup %player%'
+uhc_regionmember: 'command region addmember uhc -w Gaia %player%'
 #
 uhc_team_skins: folder uhc_team_skins1,uhc_team_skins2,uhc_team_skins3,uhc_team_skins4 conditions:uhc_teams
 uhc_team_skins1: folder uhc_team_skins1_exe conditions:uhc_team1
-uhc_team_skins1_exe: command skinsrestorer set %player% lava
+uhc_team_skins1_exe: 'command skinsrestorer set %player% lava'
 uhc_team_skins2: folder uhc_team_skins2_exe conditions:uhc_team2
-uhc_team_skins2_exe: command skinsrestorer set %player% water
+uhc_team_skins2_exe: 'command skinsrestorer set %player% water'
 uhc_team_skins3: folder uhc_team_skins3_exe conditions:uhc_team3
-uhc_team_skins3_exe: command skinsrestorer set %player% dirt
+uhc_team_skins3_exe: 'command skinsrestorer set %player% dirt'
 uhc_team_skins4: folder uhc_team_skins4_exe conditions:uhc_team4
-uhc_team_skins4_exe: command skinsrestorer set %player% aang
+uhc_team_skins4_exe: 'command skinsrestorer set %player% aang'
 #
 #
 uhc_start_message30: folder uhc_start_message30_global,uhc_start_message30_teams delay:1
-uhc_start_message30_global: message &aLe Jeu va commencer dans &c30 secondes&a!
+uhc_start_message30_global: 'message &aLe Jeu va commencer dans &c30 secondes&a!'
 uhc_start_message30_teams: folder uhc_start_message301,uhc_start_message302,uhc_start_message303,uhc_start_message304 delay:1 conditions:uhc_teams
 #
-uhc_start_message301: folder uhc_start_message3011,uhc_start_message3012 condition:uhc_team1
-uhc_start_message3011: message &aVous êtes dans l'équipe du &cFeu&a!
+uhc_start_message301: folder uhc_start_message3011,uhc_start_message3012 conditions:uhc_team1
+uhc_start_message3011: 'message &aVous êtes dans l''équipe du &cFeu&a!'
 uhc_start_message3012: 'message &aMembres de l''équipe: &2$uhc11$&a, &2$uhc12$&a, &2$uhc13$&a, &2$uhc14$&a, &2$uhc15$'
-uhc_start_message302: folder uhc_start_message3021,uhc_start_message3022 condition:uhc_team2
-uhc_start_message3021: message &aVous êtes dans l'équipe de l'&cAir&a!
+uhc_start_message302: folder uhc_start_message3021,uhc_start_message3022 conditions:uhc_team2
+uhc_start_message3021: 'message &aVous êtes dans l''équipe de l''&cAir&a!'
 uhc_start_message3022: 'message &aMembres de l''équipe: &2$uhc21$&a, &2$uhc22$&a, &2$uhc23$&a, &2$uhc24$&a, &2$uhc25$'
-uhc_start_message303: folder uhc_start_message3031,uhc_start_message3032 condition:uhc_team3
-uhc_start_message3031: message &aVous êtes dans l'équipe de la &cTerre&a!
+uhc_start_message303: folder uhc_start_message3031,uhc_start_message3032 conditions:uhc_team3
+uhc_start_message3031: 'message &aVous êtes dans l''équipe de la &cTerre&a!'
 uhc_start_message3032: 'message &aMembres de l''équipe: &2$uhc31$&a, &2$uhc32$&a, &2$uhc33$&a, &2$uhc34$&a, &2$uhc35$'
-uhc_start_message304: folder uhc_start_message3041,uhc_start_message3042 condition:uhc_team4
-uhc_start_message3041: message &aVous êtes dans l'équipe de l'&cEau&a!
+uhc_start_message304: folder uhc_start_message3041,uhc_start_message3042 conditions:uhc_team4
+uhc_start_message3041: 'message &aVous êtes dans l''équipe de l''&cEau&a!'
 uhc_start_message3042: 'message &aMembres de l''équipe: &2$uhc41$&a, &2$uhc42$&a, &2$uhc43$&a, &2$uhc44$&a, &2$uhc45$'
 #
 #
@@ -2133,15 +2179,15 @@ uhc_start_meka1: folder uhc_teleportin,uhc_dynmap_hide,uhc_clearinv,uhc_title,uh
 #
 uhc_teleportin: teleport -10414;25;4912;Gaia
 uhc_dynmap_hide: folder uhc_dynmap_hide_exe conditions:uhc_dynmaphide
-uhc_dynmap_hide_exe: command dynmap hide %player%
-uhc_clearinv: command clear %player%
+uhc_dynmap_hide_exe: 'command dynmap hide %player%'
+uhc_clearinv: 'command clear %player%'
 uhc_title: folder uhc_title1,uhc_title2,uhc_title3,uhc_rules delay:1
-uhc_title1: command title %player% times 40 200 40
-uhc_title2: command title %player% subtitle {"text":"Règles dans le tchat","italic":true}
-uhc_title3: command title %player% title {"text":"Jeu - Survie","bold":true,"color":"red"}
+uhc_title1: 'command title %player% times 40 200 40'
+uhc_title2: 'command title %player% subtitle {"text":"Règles dans le tchat","italic":true}'
+uhc_title3: 'command title %player% title {"text":"Jeu - Survie","bold":true,"color":"red"}'
 uhc_rules: folder uhc_rules1,uhc_rules2,uhc_rules3,uhc_rules4,uhc_rules5,uhc_rules6,uhc_rules7,uhc_rules8,uhc_rules9,uhc_rules10,uhc_rules11,uhc_rules12,uhc_rules13,uhc_rules14 delay:1
-uhc_rules1: message &f------------------------- &a~ &c¤ &a~ &f-------------------------
-uhc_rules2: message &f------------------------&aRègles de la Partie&f------------------
+uhc_rules1: 'message &f------------------------- &a~ &c¤ &a~ &f-------------------------'
+uhc_rules2: 'message &f------------------------&aRègles de la Partie&f------------------'
 uhc_rules3: folder uhc_rules31 conditions:uhc_time20
 uhc_rules31: 'message &fDurée de la partie: &a20 minutes - &fPaix: &a10 minutes'
 uhc_rules4: folder uhc_rules41 conditions:uhc_time30
@@ -2152,13 +2198,13 @@ uhc_rules6: folder uhc_rules61 conditions:uhc_time50
 uhc_rules61: 'message &fDurée de la partie: &a50 minutes'
 uhc_rules7: folder uhc_rules71 conditions:uhc_time60
 uhc_rules71: 'message &fDurée de la partie: &a60 minutes'
-uhc_rules8: message Vous démarrez sans aucune affaire, à vous de vous armer au plus vite!
-uhc_rules9: message Une fois le temps de Paix expiré, le PvP sera autorisé.
-uhc_rules10: message Eliminez alors au plus vite vos adversaires. Vous avez &cune seule vie&f!
+uhc_rules8: 'message Vous démarrez sans aucune affaire, à vous de vous armer au plus vite!'
+uhc_rules9: 'message Une fois le temps de Paix expiré, le PvP sera autorisé.'
+uhc_rules10: 'message Eliminez alors au plus vite vos adversaires. Vous avez &cune seule vie&f!'
 uhc_rules11: 'message ATTENTION: ne blessez pas vos alliés!'
-uhc_rules12: message A la fin de la partie, tout le monde sera téléporté dans l'arène
-uhc_rules13: message pour départager les survivants!
-uhc_rules14: message &aBon courage!
+uhc_rules12: 'message A la fin de la partie, tout le monde sera téléporté dans l''arène'
+uhc_rules13: 'message pour départager les survivants!'
+uhc_rules14: 'message &aBon courage!'
 #
 # Objectives avec sortie fin de Game
 #
@@ -2185,50 +2231,50 @@ uhc_obj_kill_team2_done: folder uhc_obj_kill_teams,uhc_kill_event2
 uhc_obj_kill_team3_done: folder uhc_obj_kill_teams,uhc_kill_event3
 uhc_obj_kill_team4_done: folder uhc_obj_kill_teams,uhc_kill_event4
 #
-uhc_kill_event: if uhc_players_left_check uhc_continues else uhc_winner 
+uhc_kill_event: if uhc_players_left_check uhc_continues else uhc_winner
 uhc_kill_event1: if uhc_players_left_check1 uhc_continues else uhc_winner
 uhc_kill_event2: if uhc_players_left_check2 uhc_continues else uhc_winner
 uhc_kill_event3: if uhc_players_left_check3 uhc_continues else uhc_winner
 uhc_kill_event4: if uhc_players_left_check4 uhc_continues else uhc_winner
 #
-uhc_continues: command broadcast &2%player% &cvient d'éliminer un adversaire en Jeu - Survie!
+uhc_continues: 'command broadcast &2%player% &cvient d''éliminer un adversaire en Jeu - Survie!'
 #
 uhc_winner: folder uhc_winner1,uhc_winner2,uhc_winner3,uhc_winner4,uhc_winner_solo
 uhc_points_win: point uhc_victory 1
 uhc_points_lose: point uhc_lost 1
-uhc_price: command eco give %player% 200
+uhc_price: 'command eco give %player% 200'
 #
 uhc_winner_solo: folder uhc_winner_solo_exe conditions:games_uhc_1
 uhc_winner_solo_exe: folder uhc_continues,uhc_winner_solo_exe2,uhc_price,uhc_points_win,uhc_points_solo_losers,uhc_teleportout,uhc_over delay:2
-uhc_winner_solo_exe2: command broadcast &2%player% &cvient de remporter le Jeu - Survie en Solo!
+uhc_winner_solo_exe2: 'command broadcast &2%player% &cvient de remporter le Jeu - Survie en Solo!'
 uhc_points_solo_losers: party 15000 uhc_tag,uhc_outside uhc_points_lose
 #
 uhc_winner1: folder uhc_winner1_exe conditions:uhc_team1
 uhc_winner1_exe: folder uhc_continues,uhc_winner1_exe2,uhc_price1,uhc_points1_losers,uhc_teleportout,uhc_over delay:3
-uhc_winner1_exe2: command broadcast &2%player% &cvient de remporter le Jeu - Survie pour l'équipe du FEU!
+uhc_winner1_exe2: 'command broadcast &2%player% &cvient de remporter le Jeu - Survie pour l''équipe du FEU!'
 uhc_price1: party 15000 uhc_team1 uhc_price,uhc_points_win
 uhc_points1_losers: party 15000 uhc_tag,uhc_outside,!uhc_team1 uhc_points_lose
 #
 uhc_winner2: folder uhc_winner2_exe conditions:uhc_team2
 uhc_winner2_exe: folder uhc_continues,uhc_winner2_exe2,uhc_price2,uhc_points2_losers,uhc_teleportout,uhc_over delay:3
-uhc_winner2_exe2: command broadcast &2%player% &cvient de remporter le Jeu - Survie pour l'équipe de l'AIR!
+uhc_winner2_exe2: 'command broadcast &2%player% &cvient de remporter le Jeu - Survie pour l''équipe de l''AIR!'
 uhc_price2: party 15000 uhc_team2 uhc_price,uhc_points_win
 uhc_points2_losers: party 15000 uhc_tag,uhc_outside,!uhc_team2 uhc_points_lose
 #
 uhc_winner3: folder uhc_winner3_exe conditions:uhc_team3
 uhc_winner3_exe: folder uhc_continues,uhc_winner3_exe2,uhc_price3,uhc_points3_losers,uhc_teleportout,uhc_over delay:3
-uhc_winner3_exe2: command broadcast &2%player% &cvient de remporter le Jeu - Survie pour l'équipe de l'EAU!
+uhc_winner3_exe2: 'command broadcast &2%player% &cvient de remporter le Jeu - Survie pour l''équipe de l''EAU!'
 uhc_price3: party 15000 uhc_team3 uhc_price,uhc_points_win
 uhc_points3_losers: party 15000 uhc_tag,uhc_outside,!uhc_team3 uhc_points_lose
 #
 uhc_winner4: folder uhc_winner4_exe conditions:uhc_team4
 uhc_winner4_exe: folder uhc_continues,uhc_winner4_exe2,uhc_price4,uhc_points4_losers,uhc_teleportout,uhc_over delay:3
-uhc_winner4_exe2: command broadcast &2%player% &cvient de remporter le Jeu - Survie pour l'équipe de la TERRE!
+uhc_winner4_exe2: 'command broadcast &2%player% &cvient de remporter le Jeu - Survie pour l''équipe de la TERRE!'
 uhc_price4: party 15000 uhc_team4 uhc_price,uhc_points_win
 uhc_points4_losers: party 15000 uhc_tag,uhc_outside,!uhc_team4 uhc_points_lose
 #
 uhc_death: folder uhc_deathbroadcast
-uhc_deathbroadcast: command broadcast &2%player% &aest mort pendant le Jeu - Survie.
+uhc_deathbroadcast: 'command broadcast &2%player% &aest mort pendant le Jeu - Survie.'
 #
 uhc_teleportout: party 15000 uhc_in uhc_teleportout_exe
 uhc_teleportout_exe: teleport -6597;70;2917;Gaia
@@ -2242,13 +2288,13 @@ uhc_over: folder uhc_cancel
 #
 # AVEC MEKA FIN DE GAME SI & TIMER
 uhc_delay_gamemaker_exe: folder uhc_timer,uhc_op_gamemaker,uhc_delay_gamemaker_exe1,uhc_delay_gamemaker_exe2,uhc_delay_gamemaker_exe10,uhc_delay_gamemaker_exe3 delay:1
-uhc_op_gamemaker: command op %player%
-uhc_delay_gamemaker_exe1: sudo /pos1 -10419,23,4918
-uhc_delay_gamemaker_exe2: sudo /pos2 -10409,23,4908
-uhc_delay_gamemaker_exe10: sudo /set air
+uhc_op_gamemaker: 'command op %player%'
+uhc_delay_gamemaker_exe1: 'sudo /pos1 -10419,23,4918'
+uhc_delay_gamemaker_exe2: 'sudo /pos2 -10409,23,4908'
+uhc_delay_gamemaker_exe10: 'sudo /set air'
 uhc_delay_gamemaker_exe3: folder uhc_delay_gamemaker_exe4,uhc_delay_gamemaker_exe5 delay:3
-uhc_delay_gamemaker_exe4: sudo /undo
-uhc_delay_gamemaker_exe5: command deop %player%
+uhc_delay_gamemaker_exe4: 'sudo /undo'
+uhc_delay_gamemaker_exe5: 'command deop %player%'
 #
 #
 # Réglage TIMER
@@ -2411,10 +2457,10 @@ uhc_var51: setblock AIR -6596;66;2920;Gaia
 uhc_timer_peace_exe: folder uhc_timer_peace_exe1,uhc_timer_peace_exe2
 uhc_timer_peace_exe1: party 15000 tag_uhc uhc_timer_peace_title
 uhc_timer_peace_title: folder uhc_timer_peace_title1,uhc_timer_peace_title2,uhc_timer_peace_title3
-uhc_timer_peace_title1: command title %player% times 40 200 40
-uhc_timer_peace_title2: command title %player% subtitle {"text":"Expiré","bold":true,"color":"dark_red"}
-uhc_timer_peace_title3: command title %player% title {"text":"Temps de Paix","italic":true,"color":"red"}
-uhc_timer_peace_exe2: command region flag uhc -w Gaia pvp allow
+uhc_timer_peace_title1: 'command title %player% times 40 200 40'
+uhc_timer_peace_title2: 'command title %player% subtitle {"text":"Expiré","bold":true,"color":"dark_red"}'
+uhc_timer_peace_title3: 'command title %player% title {"text":"Temps de Paix","italic":true,"color":"red"}'
+uhc_timer_peace_exe2: 'command region flag uhc -w Gaia pvp allow'
 uhc_time_up: folder nothing
 #INSERT TELEPORTATION TO FINAL ARENA IN UHC TIME UP
 
@@ -2427,7 +2473,7 @@ uhc_time_up: folder nothing
 #######################
 uhc_cancel: folder uhc_peace_restorer,uhc_game_reset,uhc_signs_remove,uhc_team_tag_remove,uhc_time_torch_reset,uhc_player_torch_reset,uhc_player_sign_reset,uhc_perms_remover,uhc_mobspawning_torch_on,uhc_dynmap_torch_on,uhc_var_emptier delay:0
 #
-uhc_peace_restorer: command region flag uhc -w Gaia pvp deny
+uhc_peace_restorer: 'command region flag uhc -w Gaia pvp deny'
 #LIGHT Resetter
 uhc_game_reset: folder uhc1_remove,uhc2_remove,uhc3_remove,uhc4_remove delay:1
 uhc1_remove: setblock AIR -6587;66;2914;Gaia
@@ -2436,40 +2482,40 @@ uhc3_remove: setblock AIR -6587;66;2916;Gaia
 uhc4_remove: setblock AIR -6587;66;2917;Gaia
 #Visuals Remover/Resetter
 uhc_signs_remove: folder uhcpropose_sign,uhcpropose_sign1,uhcpropose_sign2,uhcpropose_sign3,uhcpropose_sign4 delay:2
-uhcpropose_sign: command setblock -6592 71 2917 wall_sign 4 replace {Text1:"- - -", Text2:"AUCUN", Text3:"Jeu en cours", Text4:"- - -"}
-uhcpropose_sign1: command setblock -6592 70 2916 wall_sign 4 replace {Text1:"- - -", Text2:"PROPOSEZ UN JEU", Text3:"en parlant au", Text4:"Maître de Jeux"}
-uhcpropose_sign2: command setblock -6592 70 2918 wall_sign 4 replace {Text1:"- - -", Text2:"PROPOSEZ UN JEU", Text3:"en parlant au", Text4:"Maître de Jeux"}
-uhcpropose_sign3: setblock AIR -6592;71;2916;Gaia 
-uhcpropose_sign4: setblock AIR -6592;71;2918;Gaia 
+uhcpropose_sign: 'command setblock -6592 71 2917 wall_sign 4 replace {Text1:"- - -", Text2:"AUCUN", Text3:"Jeu en cours", Text4:"- - -"}'
+uhcpropose_sign1: 'command setblock -6592 70 2916 wall_sign 4 replace {Text1:"- - -", Text2:"PROPOSEZ UN JEU", Text3:"en parlant au", Text4:"Maître de Jeux"}'
+uhcpropose_sign2: 'command setblock -6592 70 2918 wall_sign 4 replace {Text1:"- - -", Text2:"PROPOSEZ UN JEU", Text3:"en parlant au", Text4:"Maître de Jeux"}'
+uhcpropose_sign3: setblock AIR -6592;71;2916;Gaia
+uhcpropose_sign4: setblock AIR -6592;71;2918;Gaia
 #Tag Remover
 #
 #USE REMOVE ENTIRELY FROM DATABSE "PURGE" COMMANDS, ESCAPES DISCONNECTED PERSONS NOT FOUND
 uhc_team_tag_remove: folder uhc_tag_remover_uhc,uhc_team_tag_remove1,uhc_team_tag_remove2,uhc_team_tag_remove3,uhc_team_tag_remove4,uhc_solo_tag_remove1,uhc_solo_tag_remove2,uhc_solo_tag_remove3,uhc_solo_tag_remove4,uhc_solo_tag_remove5,uhc_solo_tag_remove6,uhc_solo_tag_remove7,uhc_solo_tag_remove8,uhc_solo_tag_remove9,uhc_solo_tag_remove10,uhc_solo_tag_remove11,uhc_solo_tag_remove12,uhc_solo_tag_remove13,uhc_solo_tag_remove14,uhc_solo_tag_remove15,uhc_solo_tag_remove16,uhc_solo_tag_remove17,uhc_solo_tag_remove18,uhc_solo_tag_remove19,uhc_solo_tag_remove20 delay:3
-uhc_tag_remover_uhc: command bq delete tag uhc
-uhc_team_tag_remove1: command bq delete tag uhc_team1
-uhc_team_tag_remove2: command bq delete tag uhc_team2
-uhc_team_tag_remove3: command bq delete tag uhc_team3
-uhc_team_tag_remove4: command bq delete tag uhc_team4
-uhc_solo_tag_remove1: command bq delete tag uhc_place1
-uhc_solo_tag_remove2: command bq delete tag uhc_place2
-uhc_solo_tag_remove3: command bq delete tag uhc_place3
-uhc_solo_tag_remove4: command bq delete tag uhc_place4
-uhc_solo_tag_remove5: command bq delete tag uhc_place5
-uhc_solo_tag_remove6: command bq delete tag uhc_place6
-uhc_solo_tag_remove7: command bq delete tag uhc_place7
-uhc_solo_tag_remove8: command bq delete tag uhc_place8
-uhc_solo_tag_remove9: command bq delete tag uhc_place9
-uhc_solo_tag_remove10: command bq delete tag uhc_place10
-uhc_solo_tag_remove11: command bq delete tag uhc_place11
-uhc_solo_tag_remove12: command bq delete tag uhc_place12
-uhc_solo_tag_remove13: command bq delete tag uhc_place13
-uhc_solo_tag_remove14: command bq delete tag uhc_place14
-uhc_solo_tag_remove15: command bq delete tag uhc_place15
-uhc_solo_tag_remove16: command bq delete tag uhc_place16
-uhc_solo_tag_remove17: command bq delete tag uhc_place17
-uhc_solo_tag_remove18: command bq delete tag uhc_place18
-uhc_solo_tag_remove19: command bq delete tag uhc_place19
-uhc_solo_tag_remove20: command bq delete tag uhc_place20
+uhc_tag_remover_uhc: 'command bq delete tag uhc'
+uhc_team_tag_remove1: 'command bq delete tag uhc_team1'
+uhc_team_tag_remove2: 'command bq delete tag uhc_team2'
+uhc_team_tag_remove3: 'command bq delete tag uhc_team3'
+uhc_team_tag_remove4: 'command bq delete tag uhc_team4'
+uhc_solo_tag_remove1: 'command bq delete tag uhc_place1'
+uhc_solo_tag_remove2: 'command bq delete tag uhc_place2'
+uhc_solo_tag_remove3: 'command bq delete tag uhc_place3'
+uhc_solo_tag_remove4: 'command bq delete tag uhc_place4'
+uhc_solo_tag_remove5: 'command bq delete tag uhc_place5'
+uhc_solo_tag_remove6: 'command bq delete tag uhc_place6'
+uhc_solo_tag_remove7: 'command bq delete tag uhc_place7'
+uhc_solo_tag_remove8: 'command bq delete tag uhc_place8'
+uhc_solo_tag_remove9: 'command bq delete tag uhc_place9'
+uhc_solo_tag_remove10: 'command bq delete tag uhc_place10'
+uhc_solo_tag_remove11: 'command bq delete tag uhc_place11'
+uhc_solo_tag_remove12: 'command bq delete tag uhc_place12'
+uhc_solo_tag_remove13: 'command bq delete tag uhc_place13'
+uhc_solo_tag_remove14: 'command bq delete tag uhc_place14'
+uhc_solo_tag_remove15: 'command bq delete tag uhc_place15'
+uhc_solo_tag_remove16: 'command bq delete tag uhc_place16'
+uhc_solo_tag_remove17: 'command bq delete tag uhc_place17'
+uhc_solo_tag_remove18: 'command bq delete tag uhc_place18'
+uhc_solo_tag_remove19: 'command bq delete tag uhc_place19'
+uhc_solo_tag_remove20: 'command bq delete tag uhc_place20'
 #Time Torch Resetter                                                                                                                      #MUST delay:0 (uhc_time_torch_reset)
 uhc_time_torch_reset: folder uhc_time_torch_reset20,uhc_time_torch_reset30,uhc_time_torch_reset40,uhc_time_torch_reset50,uhc_time_torch_reset60 delay:0
 uhc_time_torch_reset20: setblock AIR -6590;66;2920;Gaia
@@ -2480,83 +2526,83 @@ uhc_time_torch_reset60: setblock AIR -6594;66;2920;Gaia
 #Player Torch Reset
 uhc_player_torch_reset: folder uhc1,uhc2,uhc3,uhc4,uhc5,uhc6,uhc7,uhc8,uhc9,uhc10,uhc11,uhc12,uhc13,uhc14,uhc15,uhc16,uhc17,uhc18,uhc19,uhc20 delay:5
 #Team1
-uhc1: setblock AIR -6590;71;2911;Gaia 
-uhc2: setblock AIR -6590;71;2912;Gaia 
-uhc3: setblock AIR -6590;71;2913;Gaia 
-uhc4: setblock AIR -6590;71;2914;Gaia 
-uhc5: setblock AIR -6590;71;2915;Gaia 
+uhc1: setblock AIR -6590;71;2911;Gaia
+uhc2: setblock AIR -6590;71;2912;Gaia
+uhc3: setblock AIR -6590;71;2913;Gaia
+uhc4: setblock AIR -6590;71;2914;Gaia
+uhc5: setblock AIR -6590;71;2915;Gaia
 #Team2
-uhc6: setblock AIR -6590;71;2919;Gaia 
-uhc7: setblock AIR -6590;71;2920;Gaia 
-uhc8: setblock AIR -6590;71;2921;Gaia 
-uhc9: setblock AIR -6590;71;2922;Gaia 
-uhc10: setblock AIR -6590;71;2923;Gaia 
+uhc6: setblock AIR -6590;71;2919;Gaia
+uhc7: setblock AIR -6590;71;2920;Gaia
+uhc8: setblock AIR -6590;71;2921;Gaia
+uhc9: setblock AIR -6590;71;2922;Gaia
+uhc10: setblock AIR -6590;71;2923;Gaia
 #Team3
-uhc11: setblock AIR -6590;69;2911;Gaia 
-uhc12: setblock AIR -6590;69;2912;Gaia 
-uhc13: setblock AIR -6590;69;2913;Gaia 
-uhc14: setblock AIR -6590;69;2914;Gaia 
-uhc15: setblock AIR -6590;69;2915;Gaia 
+uhc11: setblock AIR -6590;69;2911;Gaia
+uhc12: setblock AIR -6590;69;2912;Gaia
+uhc13: setblock AIR -6590;69;2913;Gaia
+uhc14: setblock AIR -6590;69;2914;Gaia
+uhc15: setblock AIR -6590;69;2915;Gaia
 #Team4
-uhc16: setblock AIR -6590;69;2919;Gaia 
-uhc17: setblock AIR -6590;69;2920;Gaia 
-uhc18: setblock AIR -6590;69;2921;Gaia 
-uhc19: setblock AIR -6590;69;2922;Gaia 
-uhc20: setblock AIR -6590;69;2923;Gaia 
+uhc16: setblock AIR -6590;69;2919;Gaia
+uhc17: setblock AIR -6590;69;2920;Gaia
+uhc18: setblock AIR -6590;69;2921;Gaia
+uhc19: setblock AIR -6590;69;2922;Gaia
+uhc20: setblock AIR -6590;69;2923;Gaia
 #Player Sign Reset
 uhc_player_sign_reset: folder uhc12bis,uhc22,uhc32,uhc42,uhc52,uhc62,uhc72,uhc82,uhc92,uhc102,uhc112,uhc122,uhc132,uhc142,uhc152,uhc162,uhc172,uhc182,uhc192,uhc202 delay:6
 #Team1
-uhc12bis: setblock AIR -6592;71;2911;Gaia 
-uhc22: setblock AIR -6592;71;2912;Gaia 
-uhc32: setblock AIR -6592;71;2913;Gaia 
-uhc42: setblock AIR -6592;71;2914;Gaia 
-uhc52: setblock AIR -6592;71;2915;Gaia 
+uhc12bis: setblock AIR -6592;71;2911;Gaia
+uhc22: setblock AIR -6592;71;2912;Gaia
+uhc32: setblock AIR -6592;71;2913;Gaia
+uhc42: setblock AIR -6592;71;2914;Gaia
+uhc52: setblock AIR -6592;71;2915;Gaia
 #Team2
-uhc62: setblock AIR -6592;71;2919;Gaia 
-uhc72: setblock AIR -6592;71;2920;Gaia 
-uhc82: setblock AIR -6592;71;2921;Gaia 
-uhc92: setblock AIR -6592;71;2922;Gaia 
-uhc102: setblock AIR -6592;71;2923;Gaia 
+uhc62: setblock AIR -6592;71;2919;Gaia
+uhc72: setblock AIR -6592;71;2920;Gaia
+uhc82: setblock AIR -6592;71;2921;Gaia
+uhc92: setblock AIR -6592;71;2922;Gaia
+uhc102: setblock AIR -6592;71;2923;Gaia
 #Team3
-uhc112: setblock AIR -6592;69;2911;Gaia 
-uhc122: setblock AIR -6592;69;2912;Gaia 
-uhc132: setblock AIR -6592;69;2913;Gaia 
-uhc142: setblock AIR -6592;69;2914;Gaia 
-uhc152: setblock AIR -6592;69;2915;Gaia 
+uhc112: setblock AIR -6592;69;2911;Gaia
+uhc122: setblock AIR -6592;69;2912;Gaia
+uhc132: setblock AIR -6592;69;2913;Gaia
+uhc142: setblock AIR -6592;69;2914;Gaia
+uhc152: setblock AIR -6592;69;2915;Gaia
 #Team4
-uhc162: setblock AIR -6592;69;2919;Gaia 
-uhc172: setblock AIR -6592;69;2920;Gaia 
-uhc182: setblock AIR -6592;69;2921;Gaia 
-uhc192: setblock AIR -6592;69;2922;Gaia 
-uhc202: setblock AIR -6592;69;2923;Gaia 
+uhc162: setblock AIR -6592;69;2919;Gaia
+uhc172: setblock AIR -6592;69;2920;Gaia
+uhc182: setblock AIR -6592;69;2921;Gaia
+uhc192: setblock AIR -6592;69;2922;Gaia
+uhc202: setblock AIR -6592;69;2923;Gaia
 #Perms Remover
 uhc_perms_remover: folder uhc_perms_remover1,uhc_perms_remover2,uhc_perms_remover3,uhc_perms_remover4 delay:5
-uhc_perms_remover1: command pex user %player% remove uhc.time
-uhc_perms_remover2: command pex user %player% remove uhc.dyn
-uhc_perms_remover3: command pex user %player% remove uhc.mobs
-uhc_perms_remover4: command pex user %player% remove uhc.start
+uhc_perms_remover1: 'command pex user %player% remove uhc.time'
+uhc_perms_remover2: 'command pex user %player% remove uhc.dyn'
+uhc_perms_remover3: 'command pex user %player% remove uhc.mobs'
+uhc_perms_remover4: 'command pex user %player% remove uhc.start'
 #Variable Emptier
 uhc_var_emptier: folder uhc_team11_var_empty,uhc_team12_var_empty,uhc_team13_var_empty,uhc_team14_var_empty,uhc_team15_var_empty,uhc_team21_var_empty,uhc_team22_var_empty,uhc_team23_var_empty,uhc_team24_var_empty,uhc_team25_var_empty,uhc_team31_var_empty,uhc_team32_var_empty,uhc_team33_var_empty,uhc_team34_var_empty,uhc_team35_var_empty,uhc_team41_var_empty,uhc_team42_var_empty,uhc_team43_var_empty,uhc_team44_var_empty,uhc_team45_var_empty delay:7
-uhc_team11_var_empty: command bq config set hollish.main.variables.uhc11 [vide]
-uhc_team12_var_empty: command bq config set hollish.main.variables.uhc12 [vide]
-uhc_team13_var_empty: command bq config set hollish.main.variables.uhc13 [vide]
-uhc_team14_var_empty: command bq config set hollish.main.variables.uhc14 [vide]
-uhc_team15_var_empty: command bq config set hollish.main.variables.uhc15 [vide]
-uhc_team21_var_empty: command bq config set hollish.main.variables.uhc21 [vide]
-uhc_team22_var_empty: command bq config set hollish.main.variables.uhc22 [vide]
-uhc_team23_var_empty: command bq config set hollish.main.variables.uhc23 [vide]
-uhc_team24_var_empty: command bq config set hollish.main.variables.uhc24 [vide]
-uhc_team25_var_empty: command bq config set hollish.main.variables.uhc25 [vide]
-uhc_team31_var_empty: command bq config set hollish.main.variables.uhc31 [vide]
-uhc_team32_var_empty: command bq config set hollish.main.variables.uhc32 [vide]
-uhc_team33_var_empty: command bq config set hollish.main.variables.uhc33 [vide]
-uhc_team34_var_empty: command bq config set hollish.main.variables.uhc34 [vide]
-uhc_team35_var_empty: command bq config set hollish.main.variables.uhc35 [vide]
-uhc_team41_var_empty: command bq config set hollish.main.variables.uhc41 [vide]
-uhc_team42_var_empty: command bq config set hollish.main.variables.uhc42 [vide]
-uhc_team43_var_empty: command bq config set hollish.main.variables.uhc43 [vide]
-uhc_team44_var_empty: command bq config set hollish.main.variables.uhc44 [vide]
-uhc_team45_var_empty: command bq config set hollish.main.variables.uhc45 [vide]
+uhc_team11_var_empty: 'command bq config set hollish.main.variables.uhc11 [vide]'
+uhc_team12_var_empty: 'command bq config set hollish.main.variables.uhc12 [vide]'
+uhc_team13_var_empty: 'command bq config set hollish.main.variables.uhc13 [vide]'
+uhc_team14_var_empty: 'command bq config set hollish.main.variables.uhc14 [vide]'
+uhc_team15_var_empty: 'command bq config set hollish.main.variables.uhc15 [vide]'
+uhc_team21_var_empty: 'command bq config set hollish.main.variables.uhc21 [vide]'
+uhc_team22_var_empty: 'command bq config set hollish.main.variables.uhc22 [vide]'
+uhc_team23_var_empty: 'command bq config set hollish.main.variables.uhc23 [vide]'
+uhc_team24_var_empty: 'command bq config set hollish.main.variables.uhc24 [vide]'
+uhc_team25_var_empty: 'command bq config set hollish.main.variables.uhc25 [vide]'
+uhc_team31_var_empty: 'command bq config set hollish.main.variables.uhc31 [vide]'
+uhc_team32_var_empty: 'command bq config set hollish.main.variables.uhc32 [vide]'
+uhc_team33_var_empty: 'command bq config set hollish.main.variables.uhc33 [vide]'
+uhc_team34_var_empty: 'command bq config set hollish.main.variables.uhc34 [vide]'
+uhc_team35_var_empty: 'command bq config set hollish.main.variables.uhc35 [vide]'
+uhc_team41_var_empty: 'command bq config set hollish.main.variables.uhc41 [vide]'
+uhc_team42_var_empty: 'command bq config set hollish.main.variables.uhc42 [vide]'
+uhc_team43_var_empty: 'command bq config set hollish.main.variables.uhc43 [vide]'
+uhc_team44_var_empty: 'command bq config set hollish.main.variables.uhc44 [vide]'
+uhc_team45_var_empty: 'command bq config set hollish.main.variables.uhc45 [vide]'
 #
 #
 # Récupération du TIMER
@@ -2569,18 +2615,18 @@ uhc_torch_start_off: setblock AIR -6587;66;2913;Gaia
 
 
 
-# ADD-IN INDIVIDUAL REMOVER (TIMED, NO LOGOUT) 
+# ADD-IN INDIVIDUAL REMOVER (TIMED, NO LOGOUT)
 # DYNMAP UNHIDE COMMAND! PER PLAYER
 # SKINS RESTORER
 # INVENTORY RESTORER
-uhc_dynmap_unhide_exe: command dynmap show %player%
+uhc_dynmap_unhide_exe: 'command dynmap show %player%'
 uhc_readd_diepermanent: objective start default.die_permanent
 ###################################################################################################
 #
 #
 #
 # Random Number Creator
-# 
+#
 #
 #
 ###################################################################################################
@@ -2590,16 +2636,16 @@ number2: folder number_maker_exe delay:1
 number3: folder number_maker_exe delay:2
 number4: folder number_maker_exe delay:3
 number_maker_exe: folder number_exe1,number_exe2,number_exe3,number_exe4,number_exe5,number_exe6,number_exe7,number_exe8,number_exe9,number_exe10 random:1
-number_exe1: command bq config add hollish.main.variables.random1 1
-number_exe2: command bq config add hollish.main.variables.random1 2
-number_exe3: command bq config add hollish.main.variables.random1 3
-number_exe4: command bq config add hollish.main.variables.random1 4
-number_exe5: command bq config add hollish.main.variables.random1 5
-number_exe6: command bq config add hollish.main.variables.random1 6
-number_exe7: command bq config add hollish.main.variables.random1 7
-number_exe8: command bq config add hollish.main.variables.random1 8
-number_exe9: command bq config add hollish.main.variables.random1 9
-number_exe10: command bq config add hollish.main.variables.random1 0
+number_exe1: 'command bq config add hollish.main.variables.random1 1'
+number_exe2: 'command bq config add hollish.main.variables.random1 2'
+number_exe3: 'command bq config add hollish.main.variables.random1 3'
+number_exe4: 'command bq config add hollish.main.variables.random1 4'
+number_exe5: 'command bq config add hollish.main.variables.random1 5'
+number_exe6: 'command bq config add hollish.main.variables.random1 6'
+number_exe7: 'command bq config add hollish.main.variables.random1 7'
+number_exe8: 'command bq config add hollish.main.variables.random1 8'
+number_exe9: 'command bq config add hollish.main.variables.random1 9'
+number_exe10: 'command bq config add hollish.main.variables.random1 0'
 number_maker_report: folder number_maker_report_exe delay:4
 number_maker_report_exe: 'message Random Number set to &a $random1$'
 ###################################################################################################
@@ -2607,7 +2653,7 @@ number_maker_report_exe: 'message Random Number set to &a $random1$'
 #
 #
 # FireWorks
-# 
+#
 #               EffectLib
 #
 #
@@ -2622,7 +2668,7 @@ earth: particle Earth
 dna: particle Dna
 fountain: particle Fountain
 star: particle Star
-text: particle Text
+the_text: particle Text
 wave: particle Wave
 ###################################################################################################
 ###################################################################################################
@@ -2646,7 +2692,7 @@ wave: particle Wave
 # 1 - Définition les //pos1 & 2 [CUBOID SEULEMENT]
 #      # /sudo %player% [MUST BE AUTHORIZED /pos1 etc.]
 #      # //pos1 contains 0 //pos2 contains 256
-# 2 - Call /co rollback t:[time] r:#worldedit 
+# 2 - Call /co rollback t:[time] r:#worldedit
 # 3 - Remove Precious Stones Orphans
 # 4 - Set timer of 43200minutes on delay objective to launch JARIVS as reminder
 #
@@ -2664,73 +2710,73 @@ wave: particle Wave
 # Code --MASTER commented out for security
 ###
 #east_folder_master: folder message_rollback,cuboid,east_folder1 delay:1
-message_rollback: message &aLe &cRollBack &adu Continent Est va débuter dans &c10 secondes &a...
-cuboid: sudo /sel cuboid
+message_rollback: 'message &aLe &cRollBack &adu Continent Est va débuter dans &c10 secondes &a...'
+cuboid: 'sudo /sel cuboid'
 #
 #1
 east_folder1: folder pos1_1,pos2_1,rollback_1,east_waiter1 delay:10
-pos1_1: sudo /pos1 2000,0,7000
-pos2_1: sudo /pos2 -1000,256,5500
-rollback_1: sudo co rollback t:30d r:#worldedit e:Hollish,Zedd
+pos1_1: 'sudo /pos1 2000,0,7000'
+pos2_1: 'sudo /pos2 -1000,256,5500'
+rollback_1: 'sudo co rollback t:30d r:#worldedit e:Hollish,Zedd'
 #2
 east_waiter1: folder east_folder2,east_waiter2 delay:60
 east_folder2: folder pos1_2,pos2_2,rollback_2 delay:1
-pos1_2: sudo /pos1 2000,0,5500
-pos2_2: sudo /pos2 -3000,256,3500
-rollback_2: sudo co rollback t:30d r:#worldedit e:Hollish,Zedd
+pos1_2: 'sudo /pos1 2000,0,5500'
+pos2_2: 'sudo /pos2 -3000,256,3500'
+rollback_2: 'sudo co rollback t:30d r:#worldedit e:Hollish,Zedd'
 #3
 east_waiter2: folder east_folder3,east_waiter3 delay:60
 east_folder3: folder pos1_3,pos2_3,rollback_3 delay:1
-pos1_3: sudo /pos1 2000,0,3500
-pos2_3: sudo /pos2 -2000,256,2500
-rollback_3: sudo co rollback t:30d r:#worldedit e:Hollish,Zedd
+pos1_3: 'sudo /pos1 2000,0,3500'
+pos2_3: 'sudo /pos2 -2000,256,2500'
+rollback_3: 'sudo co rollback t:30d r:#worldedit e:Hollish,Zedd'
 #4
 east_waiter3: folder east_folder4,east_waiter4 delay:60
 east_folder4: folder pos1_4,pos2_4,rollback_4 delay:1
-pos1_4: sudo /pos1 2000,0,2500
-pos2_4: sudo /pos2 -3000,256,1500
-rollback_4: sudo co rollback t:30d r:#worldedit e:Hollish,Zedd
+pos1_4: 'sudo /pos1 2000,0,2500'
+pos2_4: 'sudo /pos2 -3000,256,1500'
+rollback_4: 'sudo co rollback t:30d r:#worldedit e:Hollish,Zedd'
 #5
 east_waiter4: folder east_folder5,east_waiter5 delay:60
 east_folder5: folder pos1_5,pos2_5,rollback_5 delay:1
-pos1_5: sudo /pos1 1500,0,1500
-pos2_5: sudo /pos2 -3500,256,1000
-rollback_5: sudo co rollback t:30d r:#worldedit e:Hollish,Zedd
+pos1_5: 'sudo /pos1 1500,0,1500'
+pos2_5: 'sudo /pos2 -3500,256,1000'
+rollback_5: 'sudo co rollback t:30d r:#worldedit e:Hollish,Zedd'
 #6
 east_waiter5: folder east_folder6,east_waiter6 delay:60
 east_folder6: folder pos1_6,pos2_6,rollback_6 delay:1
-pos1_6: sudo /pos1 1500,0,1000
-pos2_6: sudo /pos2 -4750,256,0
-rollback_6: sudo co rollback t:30d r:#worldedit e:Hollish,Zedd
+pos1_6: 'sudo /pos1 1500,0,1000'
+pos2_6: 'sudo /pos2 -4750,256,0'
+rollback_6: 'sudo co rollback t:30d r:#worldedit e:Hollish,Zedd'
 #7
 east_waiter6: folder east_folder7,east_waiter7 delay:60
 east_folder7: folder pos1_7,pos2_7,rollback_7 delay:1
-pos1_7: sudo /pos1 500,0,0
-pos2_7: sudo /pos2 -4750,256,-500
-rollback_7: sudo co rollback t:30d r:#worldedit e:Hollish,Zedd
+pos1_7: 'sudo /pos1 500,0,0'
+pos2_7: 'sudo /pos2 -4750,256,-500'
+rollback_7: 'sudo co rollback t:30d r:#worldedit e:Hollish,Zedd'
 #8
 east_waiter7: folder east_folder8,east_waiter8 delay:60
 east_folder8: folder pos1_8,pos2_8,rollback_8 delay:1
-pos1_8: sudo /pos1 0,0,-500
-pos2_8: sudo /pos2 -6000,256,-1500
-rollback_8: sudo co rollback t:30d r:#worldedit e:Hollish,Zedd
+pos1_8: 'sudo /pos1 0,0,-500'
+pos2_8: 'sudo /pos2 -6000,256,-1500'
+rollback_8: 'sudo co rollback t:30d r:#worldedit e:Hollish,Zedd'
 #9
 east_waiter8: folder east_folder9,east_waiter9 delay:60
 east_folder9: folder pos1_9,pos2_9,rollback_9 delay:1
-pos1_9: sudo /pos1 -1000,0,-1500
-pos2_9: sudo /pos2 -6000,256,-2000
-rollback_9: sudo co rollback t:30d r:#worldedit e:Hollish,Zedd
+pos1_9: 'sudo /pos1 -1000,0,-1500'
+pos2_9: 'sudo /pos2 -6000,256,-2000'
+rollback_9: 'sudo co rollback t:30d r:#worldedit e:Hollish,Zedd'
 #10
 east_waiter9: folder east_folder10,east_waiter10 delay:60
 east_folder10: folder pos1_10,pos2_10,rollback_10 delay:1
-pos1_10: sudo /pos1 -2000,0,-2000
-pos2_10: sudo /pos2 -5500,256,-2500
-rollback_10: sudo co rollback t:30d r:#worldedit e:Hollish,Zedd
+pos1_10: 'sudo /pos1 -2000,0,-2000'
+pos2_10: 'sudo /pos2 -5500,256,-2500'
+rollback_10: 'sudo co rollback t:30d r:#worldedit e:Hollish,Zedd'
 #
 #Orphans
 east_waiter10: folder rollback_orphans,message_rollback_done delay:60
-rollback_orphans: sudo ps clean Gaia
-message_rollback_done: message &aLe &cRollBack &asur le Continent Est est &cterminé&a.
+rollback_orphans: 'sudo ps clean Gaia'
+message_rollback_done: 'message &aLe &cRollBack &asur le Continent Est est &cterminé&a.'
 ########################################################################
 #
 #
@@ -2805,9 +2851,9 @@ fables_t3p4_tag: tag add fables_t3p4
 fables_t3p4_give: give fables_t3p4
 #
 fable_done: folder fable_done_mess,fables_score delay:1
-fable_done_mess: message &dVous avez déjà récupéré ce livre de Fables.
+fable_done_mess: 'message &dVous avez déjà récupéré ce livre de Fables.'
 fables_mess: folder fables_mess_exe,fables_score,fables_spirituality20 delay:1
-fables_mess_exe: message &dVous trouvez un &2livre de Fables &d! Vous gagnez &220 &dPoints de Spiritualité.
+fables_mess_exe: 'message &dVous trouvez un &2livre de Fables &d! Vous gagnez &220 &dPoints de Spiritualité.'
 fables_score: 'message &dActuellement &2%point.fables.amount% &d/ &213 &dlivres trouvés.'
 fables_point: point fables 1
 fables_spirituality20: point default.spirituality 20
