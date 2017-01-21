@@ -8,7 +8,7 @@ imiko_bow: BOW data:0 name:'§9Arc_celeste_d''§bImiko' lore:'§7Dégâts_d''ori
 cle_de_louk1: STICK data:0 name:'§2Petite_Clé' lore:'§8§oTrouvez_un_autre;§8§ocoffre_pour_insérer.;§2Objet_de_Quête'
 cle_de_louk2: STICK data:0 name:'§2Grosse_Clé' lore:'§8§oTrouvez_un_autre;§8§ocoffre_pour_insérer.;§2Objet_de_Quête'
 cargaison_pos: PAPER data:0 name:'§2Position_de_la_cargaison' lore:'§8§oCargaison_pillée_à;§8§ocette_position:;§a§o(-8798,80,4682);§2Objet_de_Quête'
-cargaison_j: BOOK_AND_QUILL data:0 name:'§2Journal_de_bord'
+cargaison_j: BOOK_AND_QUILL data:0 name:'§2Journal_de_bord' text:'Trajet:\nDépart_Apnoka\nDestination_Mysteria\n\nNote_de_cargaison:\n\nCela_fait_un_moment_que_nous_voyageons,_mais_j''espère_que_notre_route_ne_sera_pas_longue_et_qu''elle_sera_calme.|Jour_1:\n\nLe_départ_s''est_bien_déroulé,_nous_n''avons_eu_aucuns_soucis._Nous_espèrons_que_ce_voyage_ne_sera_pas_long.|Jour_2:\n\nNous_venons_d''arriver_dans_un_petit_village_accueillant_et_chaleureux,_mais_nous_devons_partir_de_si_tôt_pour_continuer_notre_trajet'
 louk_qpr: RED_ROSE data:2 name:'§dAllimythe' lore:'§8§oCette_plante_est;§8§od''une_rareté_absolue;§2Objet_de_Quête'
 #   Tatsu   #
 tatsu_knife: STONE_SWORD data:0 name:'§2Vieux_couteau' lore:'§8§oCe_couteau_a_une;§8§ogrande_valeur_sentimentale;§2Objet_de_Quête'

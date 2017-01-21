@@ -1,8 +1,4 @@
 #
-# Commentaire
-#
-#
-#
 #
 # Hollish Skripts
 #
@@ -97,10 +93,10 @@ every 30 seconds in world "Gaia":
     move citizen 80 to location of {_loc}
 
 	
-every 1 hour in world "Gaia":
-	if time in world "Gaia" is greater than 00:01:
-		if time in world "Gaia" is smaller than 5:00:
-			broadcast "lower than 5:00"
+every 30 seconds in world "Gaia":
+#	if time in world "Gaia" is greater than 00:01:
+#		if time in world "Gaia" is smaller than 5:00:
+#			broadcast "lower than 5:00"
 	if time in world "Gaia" is greater than 5:00:
 		if time in world "Gaia" is smaller than 12:00:
 			broadcast "lower than 12:00"
@@ -111,41 +107,89 @@ every 1 hour in world "Gaia":
 		broadcast "greater than 19:00"
 
 options:
-	npcmovers: 180 and 190 and 200 and 210 and 220
-	x: 181 and 191 and 201 and 211 and 221
+	npcmovers: 316
+	x: -6975 and 191 and 201 and 211 and 221
 	y: 183 and 193
 	z: 182 and 192 and 202 and 212 and 223
 	r: 1 and 2 and 3 and 4 and 5
+	x2: -6973 and 191 and 201 and 211 and 221
+	y2: 183 and 193
+	z2: 182 and 192 and 202 and 212 and 223
+	r2: 1 and 3
+	x3: -6975 and 191 and 201 and 211 and 221
+	y3: 183 and 193
+	z3: 182 and 192 and 202 and 212 and 223
+	r3: 1 and 2 and 3 and 4 and 5
 	
 
-command /testing:
+command /testing1:
 	trigger:
+		clear {npcmovers::*}
+		clear {npc_x::*}
+		clear {npc_y::*}
+		clear {npc_z::*}
+		clear {npc_r::*}
+		wait 7 ticks
 		loop {@npcmovers}:
 			add loop-value to {npcmovers::*}
 		loop {@x}:
-			add loop-value to {x::*}
+			add loop-value to {npc_x::*}
 		loop {@y}:
-			add loop-value to {y::*}
+			add loop-value to {npc_y::*}
 		loop {@z}:
-			add loop-value to {z::*}
+			add loop-value to {npc_z::*}
 		loop {@r}:
-			add loop-value to {r::*}
+			add loop-value to {npc_r::*}
 		wait 5 ticks
 		loop {x::*}:
-			add a random integer between 0 and {r::%loop-index%} to {x::%loop-index%}
+			add a random integer between 0 and {npc_r::%loop-index%} to {npc_x::%loop-index%}
 		loop {z::*}:
-			add a random integer between 0 and {r::%loop-index%} to {z::%loop-index%}
+			add a random integer between 0 and {npc_r::%loop-index%} to {npc_z::%loop-index%}
 		wait 5 ticks
 		loop {npcmovers::*}:
-			set x coordinate of {_loc} to {x::%loop-index%}
-			set y coordinate of {_loc} to {y::%loop-index%}
-			set z coordinate of {_loc} to {z::%loop-index%}
+			set x coordinate of {_loc} to {npc_x::%loop-index%}
+			set y coordinate of {_loc} to {npc_y::%loop-index%}
+			set z coordinate of {_loc} to {npc_z::%loop-index%}
 			move citizen {npcmovers::%loop-index%} to location of {_loc}
-		wait 3 ticks
-		move citizen 80 to location of {_loc}
 		loop {npcmovers::*}:
 			message "%loop-value% a bougé x: %{x::%loop-index%}% z: %{z::%loop-index%}% r: %{r::%loop-index%}%!"
 		clear {npcmovers::*}
-		clear {x::*}
-		clear {y::*}
-		clear {r::*}
+		clear {npc_x::*}
+		clear {npc_y::*}
+		clear {npc_r::*}
+		
+command /testing2:
+	trigger:
+		clear {npcmovers::*}
+		clear {npc_x2::*}
+		clear {npc_y2::*}
+		clear {npc_z2::*}
+		clear {npc_r2::*}
+		wait 7 ticks
+		loop {@npcmovers}:
+			add loop-value to {npcmovers::*}
+		loop {@x2}:
+			add loop-value to {npc_x2::*}
+		loop {@y2}:
+			add loop-value to {npc_y2::*}
+		loop {@z2}:
+			add loop-value to {npc_z2::*}
+		loop {@r2}:
+			add loop-value to {npc_r2::*}
+		wait 5 ticks
+		loop {x::*}:
+			add a random integer between 0 and {npc_r2::%loop-index%} to {npc_x2::%loop-index%}
+		loop {z::*}:
+			add a random integer between 0 and {npc_r2::%loop-index%} to {npc_z2::%loop-index%}
+		wait 5 ticks
+		loop {npcmovers::*}:
+			set x coordinate of {_loc} to {npc_x2::%loop-index%}
+			set y coordinate of {_loc} to {npc_y2::%loop-index%}
+			set z coordinate of {_loc} to {npc_z2::%loop-index%}
+			move citizen {npcmovers::%loop-index%} to location of {_loc}
+		loop {npcmovers::*}:
+			message "%loop-value% a bougé x: %{x::%loop-index%}% z: %{z::%loop-index%}% r: %{r::%loop-index%}%!"
+		clear {npcmovers::*}
+		clear {npc_x2::*}
+		clear {npc_y2::*}
+		clear {npc_r2::*}
