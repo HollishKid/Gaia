@@ -451,7 +451,7 @@ obj_distance_air_temple: objective start obj_distance_air_temple
 # LOSE
 #
 air_temple_lose: folder tag_moine_air_del,air_temple_lose_teleport,air_temple_lose_message,tag_air_temple_loser,obj_distance_air_temple_remove,obj_air_temple_loc1_remove,obj_air_temple_loc2_remove,obj_air_temple_loc3_remove,obj_air_temple_loc4_remove,obj_air_temple_loc5_remove,air_temple_closer_test delay:2
-air_temple_closer_test: folder air_temple_closer_test_executor delay:2
+air_temple_closer_test: folder air_temple_closer_test_executor,obj_distance_air_temple_remove delay:5
 air_temple_closer_test_executor: if air_parcours_occupied nothing else air_temple_closer_test_exe
 air_temple_closer_test_exe: folder air_temple1_off,air_temple2_off,air_temple3_off,air_temple4_off
 tag_air_temple_loser: tag add air_temple_loser
@@ -987,7 +987,7 @@ mine_message_in2: 'command title %player% title {"text":"Mine d''Athelas","color
 mine_message_in3: 'command title %player% subtitle ["",{"text":"10 minutes","color":"light_purple"},{"text":" d''accès aux ressources","color":"white"}]'
 mine_obj_distance: objective start mine_obj_distance
 mine_obj_distance_exe: folder mine_obj_distance_exe1,mine_obj_distance_exe2
-mine_obj_distance_exe1: 'message &dSi vous quittez la mine, vous perdrez vos droits d''accès!'
+mine_obj_distance_exe1: 'message &dSi vous quittez la mine, vous perdez vos droits d''accès !'
 mine_obj_distance_exe2: objective start mine_obj_distance_exe
 mine_obj_logout: objective start mine_obj_logout
 mine_chrono: folder mine_time_up delay:600
@@ -1002,10 +1002,11 @@ mine_acces_deny: folder mine_acces_deny_exe delay:3
 mine_acces_deny_exe: tag del autorisation_mineur
 mine_teleport_out: if or_in_mine_athelas mine_teleport_out_exe else mine_acces_deny_exe
 mine_teleport_out_exe: teleport -6804;66;2905;Gaia
-mine_message_out_master: folder mine_message_out1,mine_message_out2,mine_message_out3 conditions:autorisation_mineur
+mine_message_out_master: folder mine_message_out1,mine_message_out2,mine_message_out3,mine_message_out4 conditions:autorisation_mineur
 mine_message_out1: 'command title %player% times 20 100 20'
 mine_message_out2: 'command title %player% title {"text":"Mine d''Athelas","color":"gray"}'
 mine_message_out3: 'command title %player% subtitle {"text":"Temps expiré","color":"light_purple"}'
+mine_message_out4: 'message &dVotre temps de minage a expiré.'
 #
 mine_time_not_up_exe: folder mine_acces_deny,mine_teleport_out,mine_message_out11,mine_message_out21,mine_message_out31,mine_message_remboursement,mine_repay,daily_mine_reset_off,mine_reset_exe delay:1
 mine_message_out11: 'command title %player% times 20 100 20'

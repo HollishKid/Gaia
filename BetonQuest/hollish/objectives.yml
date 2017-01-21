@@ -61,7 +61,7 @@ book_erudit: craft book_and_quill 1 events:tag_erudit_book
 #
 #
 obj_air_mill: location -2912;186;2868;Gaia;4 events:air_mill_attained
-obj_distance_air_temple: delay 0 conditions:!air_obj_distance_exe,tag_moine_air events:air_temple_lose
+obj_distance_air_temple: delay 0 conditions:!air_obj_distance_exe,tag_moine_air events:air_temple_lose interval:22
 obj_air_temple_loc1: location -2895;197;2877;Gaia;3 events:air_meka1
 obj_air_temple_loc2: location -2858;165;2885;Gaia;3 events:air_meka2
 obj_air_temple_loc3: location -2877;180;3049;Gaia;3 events:air_meka3

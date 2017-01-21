@@ -56,7 +56,7 @@ NPC_options:
 #    conditions: '!maka_inconvers,maka_q3start,condition_tempo_impossible'
   tempo_maka:
     text: 'Vous avez de nouvelles informations sur &dDrisgan &a&o?'
-    conditions: '!maka_inconvers,maka_q3start,drisgan.eko_tempo'
+    conditions: '!maka_inconvers,maka_q2start,drisgan.eko_tempo'
     pointers: nein,tempo_rep
   tempo_maka_rep:
     text: 'Excellent ! On va attendre de voir ce que va faire &2Eko &a&o; gardes un oeil sur lui ! \nEn attendant, je te recommande auprès de l''&2Intendant pour tous tes services rendus !'

@@ -1,7 +1,7 @@
 DominationStick: BLAZE_ROD data:0 name:'§6Baton_de_domination' lore:'§oKaterina_sera_impressionnée;§o_par_votre_gros_bâton.'
 bow: BOW data:0
 an_arrow: ARROW data:0
-iron_sword1: IRON_SWORD data:0 name:'§aEpée_robuste' lore:'§eDe_bonne_facture.;_;§7§oRareté_:_§aRare&2Quest_Item'
+iron_sword1: IRON_SWORD data:0 name:'§aEpée_robuste' lore:'§eDe_bonne_facture.;_;§7§oRareté_:_§aRare&2Quest_Item' enchants:KNOCKBACK:1
 residus_de_poudre: SULPHUR data:0 name:'§2Résidus_de_poudre' lore:';§6_Utilisez_5_résidus_pour;§6_créer_une_charge_explosive!'
 erek_tnt: TNT data:0 name:'§2Charge_explosive' lore:';§6_Placez_la_sous_le_balcon;§6_pour_atteindre_Erek!'
 lettre_cachetee: PAPER data:0 name:'§2Lettre_cachetée' lore:';§6Une_paire_de_dagues;§6en_ornent_le_cachet.'
