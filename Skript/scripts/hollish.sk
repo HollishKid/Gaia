@@ -79,7 +79,9 @@ on load:
 	delete file "Gaia/data/scoreboard.dat"
 #
 #
+#
 # NPC mover
+#
 #
 #
 options:
@@ -90,9 +92,9 @@ options:
 	r: 0 and 0 and 0 and 0 and 3 and 0 and 0 and 3 and 1 and 7
 	
 	
-	x2: -6973 and -6923 and -7022 and -7003 and -6930  and -6799 and -6825 and -6886 and -6708 and -6558
+	x2: -6975 and -6923 and -7022 and -7003 and -6930  and -6799 and -6825 and -6886 and -6708 and -6558
 	y2: 74 and 64 and 89 and 89 and 64 and 64 and 64 and 64 and 73 and 72
-	z2: 2973 and 2959 and 2971 and 2936 and 2992  and 2809 and 2816 and 2971 and 3024 and 3160
+	z2: 2971 and 2959 and 2971 and 2936 and 2992  and 2809 and 2816 and 2971 and 3024 and 3160
 	r2: 2 and 6 and 3 and 2 and 5 and 4 and 3 and 3 and 2 and 3
 	
 	
@@ -174,6 +176,7 @@ every 22 seconds in world "Gaia":
 				add a random integer between 0 and {npc_r2::%loop-index%} to {npc_z2::%loop-index%}
 			wait 5 ticks
 			loop {npcmovers::*}:
+				set {loc} to location at 0, 0, 0 of the world "Gaia"
 				set x coordinate of {loc} to {npc_x2::%loop-index%}
 				set y coordinate of {loc} to {npc_y2::%loop-index%}
 				set z coordinate of {loc} to {npc_z2::%loop-index%}
@@ -207,6 +210,7 @@ every 22 seconds in world "Gaia":
 				add a random integer between 0 and {npc_r3::%loop-index%} to {npc_z3::%loop-index%}
 			wait 5 ticks
 			loop {npcmovers::*}:
+				set {loc} to location at 0, 0, 0 of the world "Gaia"
 				set x coordinate of {loc} to {npc_x3::%loop-index%}
 				set y coordinate of {loc} to {npc_y3::%loop-index%}
 				set z coordinate of {loc} to {npc_z3::%loop-index%}
@@ -362,3 +366,25 @@ command /testing3:
 		clear {npc_x3::*}
 		clear {npc_y3::*}
 		clear {npc_r3::*}
+#
+#
+# Chester
+#
+#
+command /givethechester:
+	trigger:
+		give player a redstone torch named "&6Chester"
+
+on left click:
+	if player is holding a redstone torch named "&6Chester":
+		if targeted block is chest:
+			cancel event
+			message "Vous ajoutez un coffre au Chester"
+			add location of target block to {chester::*}
+		else:
+			cancel event
+			message "&cAucun coffre à cet emplacement."
+			if location of npc 80 is in the region "athelas":
+				message "here"
+			else:
+				message "help !"
