@@ -2317,11 +2317,11 @@ obj_salaire_timer: objective start obj_salaire_timer
 salaire: folder salaire_transmitter,salaire_suite delay:120
 salaire_transmitter: point salaire %point.reput_athelas.amount%
 salaire_suite: folder salaire_plus100,salaire_grade_tester delay:1
-salaire_plus100: point salaire +100
+salaire_plus100: point salaire 100
 #
 salaire_grade_tester: if grade_ecuyer salaire_add_grade_ecuyer_next else salaire_guild_tester
 salaire_add_grade_ecuyer_next: folder salaire_guild_tester,salaire_grade_ecuyer
-salaire_grade_ecuyer: point salaire +50
+salaire_grade_ecuyer: point salaire 50
 #
 salaire_guild_tester: if metier_have salaire_metier_tester1 else salaire_give_delay
 #
