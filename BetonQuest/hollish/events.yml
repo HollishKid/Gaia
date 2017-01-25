@@ -13,26 +13,12 @@
 ################################################################### THIS IS A MESSAGE FOR SPARADRA59
 nothing: tag del inexistent_tag
 #
-permanent_1minute: folder motd_randomizer
-#
 quest_point_1: folder default.quest_point_1
 quest_point_2: folder default.quest_point_2
 quest_point_3: folder default.quest_point_3
 quest_point_4: folder default.quest_point_4
 quest_point_5: folder default.quest_point_5
 #
-#
-#
-motd_randomizer: folder motd1,motd2,motd3,motd4,motd5,motd6,motd7,motd8,motd9 random:1
-motd1: 'command tm abc -silent animation:motd1'
-motd2: 'command tm abc -silent animation:motd2'
-motd3: 'command tm abc -silent animation:motd3'
-motd4: 'command tm abc -silent animation:motd4'
-motd5: 'command tm abc -silent animation:motd5'
-motd6: 'command tm abc -silent animation:motd6'
-motd7: 'command tm abc -silent animation:motd7'
-motd8: 'command tm abc -silent animation:motd8'
-motd9: 'command tm abc -silent animation:motd9'
 #
 #
 #
@@ -1008,7 +994,7 @@ mine_message_out2: 'command title %player% title {"text":"Mine d''Athelas","colo
 mine_message_out3: 'command title %player% subtitle {"text":"Temps expiré","color":"light_purple"}'
 mine_message_out4: 'message &dVotre temps de minage a expiré.'
 #
-mine_time_not_up_exe: folder mine_acces_deny,mine_teleport_out,mine_message_out11,mine_message_out21,mine_message_out31,mine_message_remboursement,mine_repay,daily_mine_reset_off,mine_reset_exe delay:1
+mine_time_not_up_exe: folder mine_acces_deny,mine_teleport_out,mine_message_out11,mine_message_out21,mine_message_out31,mine_message_remboursement,mine_repay delay:1
 mine_message_out11: 'command title %player% times 20 100 20'
 mine_message_out21: 'command title %player% title {"text":"Mine d''Athelas","color":"gray"}'
 mine_message_out31: 'command title %player% subtitle {"text":"La Mine va se régénerer","color":"light_purple"}'
@@ -1017,23 +1003,6 @@ mine_repay: 'command eco give %player% 100'
 #
 mine_abandon: folder mine_abandon_message,mine_acces_deny,mine_obj_remove delay:0
 mine_abandon_message: 'message &dVous perdez les droits d''accès à la Mine d''Athelas.'
-#
-# Daily Mine Reset
-#
-daily_mine_reset: folder daily_mine_reset_exe,daily_mine_reset_off,mine_reset_exe delay:0
-daily_mine_reset_exe: setblock REDSTONE_TORCH_ON -6810;62;2902;Gaia
-daily_mine_reset_off: folder daily_mine_reset_off_exe delay:1
-daily_mine_reset_off_exe: setblock AIR -6810;62;2902;Gaia
-#
-mine_reset_videur: if or_in_mine_athelas mine_time_not_up_exe else mine_acces_deny_exe
-mine_reset_exe: folder mine_schematic1,mine_meka delay:2
-mine_schematic1: setblock REDSTONE_TORCH_ON -6808;62;2902;Gaia
-mine_meka: folder mine_meka2,mine_schematic2 delay:1
-mine_schematic2: setblock REDSTONE_TORCH_ON -6806;62;2902;Gaia
-mine_meka2: folder mine_meka3,mine_schematic1_off delay:1
-mine_schematic1_off: setblock AIR -6808;62;2902;Gaia
-mine_meka3: folder mine_schematic2_off delay:1
-mine_schematic2_off: setblock AIR -6806;62;2902;Gaia
 #
 #
 # Porte Château Athelas

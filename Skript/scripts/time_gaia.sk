@@ -39,7 +39,24 @@ on load:
 			else:
 				add 1 to {last.logout.mailed.%loop-value%}
 				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus de trois mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
+#
+#
+# 3 minute intervaller
+#
+#
+every 3 minutes in "Gaia":
+	set {_random.motd} to a random integer between 1 and 9
+	execute console command "tm abc -silent ${motd%{_random.motd}%}"
+	set {_thief.treasure.security} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {_thief.treasure.security} to -6753
+	set y coordinate of {_thief.treasure.security} to 54
+	set z coordinate of {_thief.treasure.security} to 2975
+	set block at {_thief.treasure.security} to redstone torch on
+	wait 1 second
+	set block at {_thief.treasure.security} to air
+		
 
+				
 #
 #
 # Restart at 5 o'clock
@@ -85,7 +102,10 @@ every 52 minutes in "Gaia":
 # Every 52 minutes BUT at 5 o'clock
 #   Avoids overload
 #
-	else:	
+	else:
+#
+# Mine Manager
+#
 		loop {place.location.mine1::*}:
 			set block at loop-value to air
 		wait 2 ticks
@@ -112,3 +132,104 @@ every 52 minutes in "Gaia":
 		clear {break.location.mine3::*}
 		clear {break.type.mine3::*}
 		clear {place.location.mine3::*}
+		wait 5 seconds
+#
+# Chester
+#
+		add 32 wood to {random.item.list::*}
+		add 1 diamond to {random.item.list::*}
+		add 4 lapis to {random.item.list::*}
+		add 2 emerald to {random.item.list::*}
+		loop 20 times:
+			add 32 wood to {random.item.list::*}
+		loop 10 times:
+			add 5 gravel to {random.item.list::*}
+		loop 10 times:
+			add 12 stone to {random.item.list::*}
+		loop 10 times:
+			add 5 gold ingot to {random.item.list::*}
+		loop 10 times:
+			add 12 iron ingot to {random.item.list::*}
+# Food & Seeds
+		loop 10 times:
+			add 1 beef to {random.item.list::*}
+		loop 10 times:
+			add 2 porkchop to {random.item.list::*}
+		loop 10 times:
+			add 2 rabbit to {random.item.list::*}
+		loop 10 times:
+			add 2 apple to {random.item.list::*}
+		loop 10 times:
+			add 2 carrot to {random.item.list::*}
+		loop 10 times:
+			add 2 bread to {random.item.list::*}
+		loop 10 times:
+			add 2 potato to {random.item.list::*}
+		loop 10 times:
+			add 4 seeds to {random.item.list::*}
+# Tools
+		loop 7 times:
+			add 1 wood axe to {random.item.list::*}
+		loop 5 times:
+			add 1 stone axe to {random.item.list::*}
+		loop 3 times:
+			add 1 iron axe to {random.item.list::*}
+		add 1 gold axe to {random.item.list::*}
+		add 1 diamond axe to {random.item.list::*}
+		loop 7 times:
+			add 1 wood pickaxe to {random.item.list::*}
+		loop 5 times:
+			add 1 stone pickaxe to {random.item.list::*}
+		loop 3 times:
+			add 1 iron pickaxe to {random.item.list::*}
+		add 1 gold pickaxe to {random.item.list::*}
+		add 1 diamond pickaxe to {random.item.list::*}
+# Armor
+		loop 5 times:
+			add 1 bow to {random.item.list::*}
+		loop 7 times:
+			add 3 arrows to {random.item.list::*}
+		loop 10 times:
+			add 1 leather chestplate to {random.item.list::*}
+			add 1 leather helmet to {random.item.list::*}
+			add 1 leather boots to {random.item.list::*}
+			add 1 leather leggings to {random.item.list::*}
+			add 1 wood sword to {random.item.list::*}
+		loop 7 times:
+			add 1 chainmail chestplate to {random.item.list::*}
+			add 1 chainmail helmet to {random.item.list::*}
+			add 1 chainmail boots to {random.item.list::*}
+			add 1 chainmail leggings to {random.item.list::*}
+			add 1 stone sword to {random.item.list::*}
+		loop 5 times:
+			add 1 iron chestplate to {random.item.list::*}
+			add 1 iron helmet to {random.item.list::*}
+			add 1 iron boots to {random.item.list::*}
+			add 1 iron leggings to {random.item.list::*}
+			add 1 iron sword to {random.item.list::*}
+		loop 3 times:
+			add 1 gold chestplate to {random.item.list::*}
+			add 1 gold helmet to {random.item.list::*}
+			add 1 gold boots to {random.item.list::*}
+			add 1 gold leggings to {random.item.list::*}
+			add 1 gold sword to {random.item.list::*}
+		add 1 diamond chestplate to {random.item.list::*}
+		add 1 diamond helmet to {random.item.list::*}
+		add 1 diamond boots to {random.item.list::*}
+		add 1 diamond leggings to {random.item.list::*}
+		add 1 diamond sword to {random.item.list::*}		
+#
+# New & Fun
+#
+		add 3 experience bottle to {random.item.list::*}
+		add 1 chest named "&2Objet Inconnu" with lore "&8&oJe devrais consulter||&8&oun expert pour identifier||&8&ocet objet.|| ||&8&oIl y a un marché||&8&odevant chez Paulette||&8&opeut être que quelqu'un||&8&opourrait me renseigner !" to {random.item.list::*}
+		loop {chester::*}:
+			remove all items from inventory of block at {chester::%loop-index%}
+		wait 7 ticks
+		loop 3 times:
+			loop {chester::*}:
+				set {randomitem} to random element out of {random.item.list::*}
+				add a random item out of {randomitem} to the inventory of block at {chester::%loop-index%}
+		wait 7 ticks
+		clear {random.item.list::*}
+		clear {randomitem}

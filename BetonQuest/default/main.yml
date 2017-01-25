@@ -2,42 +2,23 @@ static:
   '23:58': forest_master
   '23:59': randomizer
   '10:56': forest_master
-  '11:07': chest_loot_timer
-  '12:07': chest_loot_timer
   '12:11': forest_master
   '13:02': forest_master
-  '13:07': chest_loot_timer
   '14:03': forest_master
-  '14:07': chest_loot_timer
   '15:04': forest_master
-  '15:07': chest_loot_timer
   '16:05': forest_master
-  '16:07': chest_loot_timer
   '17:06': forest_master
-  '17:08': chest_loot_timer
-  '18:09': chest_loot_timer
   '19:08': forest_master
-  '19:10': chest_loot_timer
   '20:17': forest_master
-  '20:07': chest_loot_timer
   '21:20': forest_master
-  '21:07': chest_loot_timer
   '22:21': forest_master
-  '22:07': chest_loot_timer
   '23:22': forest_master
-  '23:07': chest_loot_timer
   '00:24': forest_master
-  '00:07': chest_loot_timer
   '01:00': forest_master
-  '01:07': chest_loot_timer
   '02:01': forest_master
-  '02:07': chest_loot_timer
   '03:02': forest_master
-  '03:07': chest_loot_timer
   '04:03': forest_master
-  '04:07': chest_loot_timer
   '05:04': forest_master
-  '05:06': chest_loot_timer
 global_locations: cimereached,spiritualium1,spiritualium2,spiritualium3
 npcs:
   '1': amiral
