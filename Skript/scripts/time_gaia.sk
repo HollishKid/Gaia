@@ -20,6 +20,7 @@ on join:
 #
 on load:
 	set {day.index::*} to contents from url "https://gaia-minecraft.000webhostapp.com/day.php/"
+	set {day.index} to {day.index::1}
 	wait 5 minutes
 	loop {email.list::*}:
 		if difference between {last.logout.%loop-value%} and now is smaller than 3 days:
@@ -29,7 +30,7 @@ on load:
 				stop
 			else:
 				add 1 to {last.logout.mailed.%loop-value%}
-				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus d'un mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%loop-value%"
+				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus d'un mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
 		
 		if difference between {last.logout.%loop-value%} and now is smaller than 5 days:
 			stop
@@ -56,21 +57,15 @@ every 3 minutes in "Gaia":
 	set block at {_thief.treasure.security} to air
 		
 
-				
-#
-#
-# Restart at 5 o'clock
-#
-#
-every 52 minutes in "Gaia":
+
+every 1 minute in "Gaia":
 	set {hour.system} to "%hour%"
 #
 # At 5 o'clock
 #   East Continent reset
 #
-	if {hour.system} is "5":
-
-		if {day.index} is 7:
+	if {day.index} is "7":
+		if {hour.system} is "5":
 			loop {place.location.1::*}:
 				set block at loop-value to air
 			wait 22 ticks
@@ -82,7 +77,7 @@ every 52 minutes in "Gaia":
 			wait 22 ticks
 			
 		else:
-			set {day.index.temp} to {day.index::1} + 1
+			set {day.index.temp} to {day.index} + 1
 			loop {place.location.%{day.index.temp}%::*}:
 				set block at loop-value to air
 			wait 22 ticks
@@ -93,16 +88,30 @@ every 52 minutes in "Gaia":
 			clear {place.location.%{day.index.temp}%::*}
 			wait 22 ticks
 	
+	if {day.index} is "2":
+		if {hour.system} is "16":
+				broadcast "&aIl est entre 16 et 17 heures."
+				broadcast "&aMerci de rapporter le succès 48460-D2 à Hollish !"
+				execute console command "xprate 2 true"
+				wait 10 seconds
+				broadcast "&cEh non, ce n'était un test."
+				wait 3 seconds
+				execute console command "xprate reset"
+			else:
+				broadcast "&cMerci de rapporter l'erreur 48460-DX à Hollish !"
 #
-# ADD IN SERVER RESTART
+#				execute console command "setblock -6751 50 2971 redstone_torch 5 replace"
+#				
+#				execute console command "setblock -6751 50 2971 air 0 replace"
+
+# NOT GOOD, THIS REPEATS ACTIONS TOO OFTEN !
 #
-#		At this level. (at 5 after East reset)
-#		
+# Every Hour in Gaïa
 #
-# Every 52 minutes BUT at 5 o'clock
-#   Avoids overload
 #
-	else:
+#
+
+every 1 hour in "Gaia":
 #
 # Mine Manager
 #

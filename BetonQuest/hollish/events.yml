@@ -1518,7 +1518,7 @@ crosstation_torch_delay: folder crosstation_torch_delay_off delay:3
 crosstation_torch_delay_off: setblock AIR -6522;68;3152;Gaia
 #
 crosstation2: if train_nains crosstation2_exe else nothing
-crosstation2_exe: folder crosstation2_torch,crosstation2_torch_delay,crosstation2_exe,in_train_tester_del,crosstation2_out
+crosstation2_exe: folder crosstation2_torch,crosstation2_torch_delay,in_train_tester_del,crosstation2_out
 crosstation2_torch: setblock REDSTONE_TORCH_ON -7010;62;2490;Gaia
 crosstation2_torch_delay: folder crosstation2_torch_delay_off delay:3
 crosstation2_torch_delay_off: setblock AIR -7010;62;2490;Gaia
@@ -1527,7 +1527,7 @@ crosstation2_out_exe: teleport -6487;98;2767;Gaia
 crosstation2_mess: 'message &dVous arrivez à Ingor, la Ville des Nains.'
 #
 crosstation3: if train_nains crosstation3_exe else nothing
-crosstation3_exe: folder crosstation3_torch,crosstation3_torch_delay,crosstation3_exe,in_train_tester_del,crosstation3_out
+crosstation3_exe: folder crosstation3_torch,crosstation3_torch_delay,in_train_tester_del,crosstation3_out
 crosstation3_torch: setblock REDSTONE_TORCH_ON -6505;70;2824;Gaia
 crosstation3_torch_delay: folder crosstation3_torch_delay_off delay:3
 crosstation3_torch_delay_off: setblock AIR -6505;70;2824;Gaia

@@ -15,7 +15,7 @@ gestionnaire_progress_done_journal: 'J''ai planté assez de graines. Je devrais 
 gestionnaire_found: 'J''ai fait ce que le Gestionnaire m''a demandé. Je devrais retourner voir l''Intendant (-7035,70,2940).'
 #
 journal_jacopo_go: 'L''Intendant m''a dit d''aller voir Jacopo sur les quais d''Athelas, à côté du bâteau de transport.'
-journal_jacopo_bat: 'Jacopo m''a demandé de fabriquer un bateau pour mon entraînement en mer. Une fois que je l''ai crafté, je devrais le lui apporter !'
+journal_jacopo_bat: 'Jacopo m''a demandé de fabriquer un bateau en bois de chêne pour mon entraînement en mer. Une fois que je l''ai crafté, je devrais le lui apporter !'
 journal_jacopo_ermite: 'Jacopo m''a demandé de naviguer jusqu''à un Ermite sur une ile en sable au Sud-Est d''Athelas.'
 journal_ermite_back: 'J''ai navigué jusqu''à l''Ermite. Je devrais retourner voir Jacopo sur le port d''Athelas.'
 journal_jacopo_approuved: 'Ma formation auprès de Jacopo a été approuvée. Je devrais retourner voir l''Intendant.'

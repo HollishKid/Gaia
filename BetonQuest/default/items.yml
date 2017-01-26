@@ -72,7 +72,7 @@ waterbottle: POTION data:0 type:WATER
 goldencarrot: GOLDEN_CARROT data:0
 flask_strength: POTION data:0 name:Flacon_de_robustesse lore:§8Par_Gretchen_Inc.;§cNotice:_Peut_causer_des_troubles_cardiaques. type:UNCRAFTABLE effects:REGENERATION:1:90,DAMAGE_RESISTANCE:1:90
 flask_suspect: POTION data:0 name:Flacon_suspect lore:§8Par_Gretchen_Inc.;§cNotice:_Peut_causer_des_troubles_cérébraux. type:UNCRAFTABLE effects:SLOW:1:30,WEAKNESS:1:30
-boat: BOAT data:0
+boat: BOAT
 list: BLAZE_ROD data:0 name:§2Brouilleur_arcanique lore:;§8§oDevrait_suffire_à_rendre;§8§ole_portail_inutilisable.;§2Objet_de_Quête
 the: POTION data:0 name:§2Thé_de_Nimuë type:UNCRAFTABLE
 recall_token: COMPASS data:0 name:§6Recall_Token§4_(§c5_utilisations§4) lore:§o§aTeleport_to_waypoints;§c5_utilisations
