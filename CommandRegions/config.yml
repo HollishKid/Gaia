@@ -5,6 +5,16 @@
 #Perform certain commands when a player enters/leaves a specific WorldGuard region
 
 regions:
+    'air_temple':
+        enterConsoleCommands: ''
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands:
+        - 'bq event %player% hollish.air_temple_lose'
+        sendLeaveMessage: false
+        leaveMessage: ''
     'assault':
         enterConsoleCommands: ''
         enterPlayerCommands: ''
