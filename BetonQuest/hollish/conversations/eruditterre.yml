@@ -48,7 +48,7 @@ NPC_options:
 #
 #
   etudiant_refoule:
-    text: 'Ah ! Je suis ravi de l''apprendre, mais je ne prends pas d''étudiants à la volée. Parlez d''abord à l''Érudit de l''Air !'
+    text: 'Ah ! Je suis ravi de l''apprendre, mais je ne prends pas d''étudiants à la volée. \nParlez d''abord à l''Érudit de l''Air !'
     conditions: '!airtemple_magic_learning'
   etudiant:
     text: 'Très bien... Je vois que vous avez déjà été l''étudiant de l''Érudit de l''Air. \nCommençons votre instruction.'
@@ -63,7 +63,7 @@ NPC_options:
   connu:
     text: 'Vous revoilà mon petit caillou !'
     conditions: 'tag_erudit_terre'
-    pointers: qui,keske,aurevoir
+    pointers: pierre_perdu,qui,keske,aurevoir
 ############
 #          #
 #  JOUEUR  #
@@ -119,6 +119,10 @@ player_options:
   apprentissage:
     text: 'Je suis ici pour me présenter en tant que votre humble Étudiant.'
     pointers: etudiant,etudiant_refoule
+  pierre_perdu:
+    text: J'ai perdu la Pierre de Terre !
+    conditions: '!pierre_terre_have,terre_find'
+    events: pierre_perdu_give
 #######################################
 #
 #

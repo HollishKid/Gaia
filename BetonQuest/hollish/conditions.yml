@@ -342,7 +342,16 @@ fire_wand: tag fire_wand
 earth_wand: tag earth_wand
 water_wand: tag water_wand
 #
-# Erudits (autres, tempo)
+#
+# Érudit de la Terre
+#
+#
+pierre_terre_hand: hand pierre_terre
+pierre_terre_have: item pierre_terre
+region_north: region north
+terre_find: tag terre_find
+#
+# Érudits (autres, tempo)
 #
 earthtemple_magic_learning: tag earthtemple_magic_learning
 firetemple_magic_learning: tag firetemple_magic_learning

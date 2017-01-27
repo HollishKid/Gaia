@@ -84,6 +84,12 @@ sancossi_abandon_obj: delay 0 conditions:!dwarf_castle_occupied_exe events:sanco
 objective_casar_killingspree: mmobkill zombielvlnorth amount:15 events:casar_killed_spree notify
 #
 #
+# Érudit de la Terre
+#
+#
+terre_find: action right any conditions:pierre_terre_hand events:terre_find_exe 
+#
+#
 louvre_obj: password 'mellon' ignoreCase events:louvre_open
 #
 # MiniGames

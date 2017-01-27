@@ -16,7 +16,7 @@ NPC_options:
   jelag_rep:
     text: 'Installez &2Optifine &a&oà l''aide de ce lien (cliquez directement sur le lien) &b http://gaia-minecraft.enjin.com/guide'
   survie_rep:
-    text: 'Il vous faut trouver une maison à louer, trouvez un &2Gestionnaire &a&oau &dChâteau &a&oou au &dGrand Marché. Vous pourrez aussi prendre le bâteau pour fonder votre Ville sur le continent dangereux de l''Est !'
+    text: 'Il vous faut trouver une maison à louer, trouvez un &2Gestionnaire &a&oau &dChâteau &a&oou au &dGrand Marché&a&o. Vous pourrez aussi prendre le bâteau pour fonder votre Ville sur le continent dangereux de l''Est !'
   plot_rep:
     text: 'Pour ça il faut parler avec l''&2Intendant &a&ode la ville qui se trouve au &dChâteau d''Athelas&a&o, si vous êtes déjà passé le voir, adressez vous au &2gestionnaire&a&o.'
   mcmmo_rep:

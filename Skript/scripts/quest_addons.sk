@@ -1,0 +1,16 @@
+on load:
+	set {earth_temple_loc} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {earth_temple_loc} to -7411
+	set y coordinate of {earth_temple_loc} to 64
+	set z coordinate of {earth_temple_loc} to 355
+
+#
+# Érudit de la Terre
+#
+command /thisisatopsecreteruditterrelocationcommand:
+	trigger:
+		if player is in the region "north":
+			message "&d&oVous êtes à &2%distance between player's location and {earth_temple_loc}% &d&oblocs de la source de la Magie de la Terre."
+		else:
+			message "&cVous devez être dans le Grand Nord avant d''utiliser la &2Pierre de Terre&c."
+			message "&cSi vous n'y avez pas encore accès, renseignez-vous à la Ville d'Ingor."

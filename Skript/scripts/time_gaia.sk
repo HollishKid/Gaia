@@ -11,13 +11,15 @@
 #
 on quit:
 	set {last.logout.%player%} to now
+	remove player from {online.players::*}
 on join:
 	set {last.logout.mailed.%player%} to 0
+	add  player to {online.players::*}
 	wait 30 seconds
-	if {event.double.xp} is "1":
+	if {event.double.xp} is 1:
 		send player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 		message "&aTous les XP gagnés sont doublés tous les mercredis entre 16H et 20H !"
-	if {event.breach} is "1":
+	if {event.breach} is 1:
 		send player title "&c&lBrèche" with subtitle "Athelas est assiégé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 		message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"
 		
@@ -29,6 +31,8 @@ on join:
 on load:
 	set {day.index::*} to contents from url "https://gaia-minecraft.000webhostapp.com/day.php/"
 	set {day.index} to {day.index::1}
+	set {event.breach} to 0
+	set {event.double.xp} to 0
 	wait 5 minutes
 	loop {email.list::*}:
 		if difference between {last.logout.%loop-value%} and now is smaller than 3 days:
@@ -68,19 +72,20 @@ every 3 minutes in "Gaia":
 # Static Events
 #
 every 5 minutes in "Gaia":
+	set {hour.system} to "%hour%"
 #
 # Mercredi entre 16h et 20h
 #
 	if {day.index} is "3":
-		if {hour.system} is "16":
-			if {event.double.xp} is "0":
+		if {hour.system} is 16:
+			if {event.double.xp} is 0:
 				set {event.double.xp} to 1
 				execute console command "xprate 2 true"
 				loop all players:
 					send loop-player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 			
 		if {hour.system} is "20":
-			if {event.double.xp} is "1":
+			if {event.double.xp} is 1:
 				execute console command "xprate reset"
 				set {event.double.xp} to 0
 				loop all players:
@@ -89,23 +94,23 @@ every 5 minutes in "Gaia":
 # Vendredi entre 19h et 22h
 #
 	if {day.index} is "5":
-		if {hour.system} is "19":
-			if {event.breach} is "0":
+		if {hour.system} is "20":
+			if {event.breach} is 0:
 				set {event.breach} to 1
 				execute console command "setblock -6751 50 2971 redstone_torch 5 replace"
 				execute console command "region flag event_breach -w Gaia mob-spawning allow"
+				broadcast "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"
 				loop all players:
 					send loop-player title "&c&lBrèche" with subtitle "Athelas est assiégé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
-					message loop-player "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"
 			
 		if {hour.system} is "22":
-			if {event.breach} is "1":
+			if {event.breach} is 1:
 				set {event.breach} to 0
 				execute console command "setblock -6751 50 2971 air 0 replace"
 				execute console command "region flag event_breach -w Gaia mob-spawning deny"
+				broadcast "&aLa Brèche en -7050;3200 a été refermée."
 				loop all players:
 					send loop-player title "&aBrèche" with subtitle "&aEnnemi repoussé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
-					message loop-player "&aLa Brèche en -7050;3200 a été refermée."
 #
 #			
 #				
@@ -130,7 +135,6 @@ every 55 minutes in "Gaia":
 			clear {break.location.1::*}
 			clear {break.type.1::*}
 			clear {place.location.1::*}
-	wait 22 ticks
 	else:
 		if {hour.system} is "5":
 			set {day.index.temp} to {day.index} + 1

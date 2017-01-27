@@ -529,13 +529,40 @@ give_air_wand: 'command wandp %player% airbender'
 # Érudit de la Terre
 #
 #
+journal_terre_find: journal add journal_terre_find
+#
+tag_erudit_terre: tag add erudit_terre
+#
+erudit_terre_instruction_nord: folder terre_instruc1,terre_instruc_meka1
+terre_instruc_meka1: folder terre_instruc_meka2,terre_instruc2 delay:7
+terre_instruc_meka2: folder terre_instruc_meka3,terre_instruc3 delay:7
+terre_instruc_meka3: folder terre_instruc_meka4,terre_instruc4 delay:5
+terre_instruc_meka4: folder terre_instruc_meka5,terre_instruc5 delay:5
+terre_instruc_meka5: folder terre_instruc6,journal_terre_find,tag_terre_find,obj_terre_find,pierre_terre delay:5
+terre_instruc1: 'message &a&oLa localisation du Temple de la Terre est encore incertaine de nos jours.'
+terre_instruc2: 'message &a&oD''après mes recherches, ce temple se situe dans le Grand Nord.'
+terre_instruc3: 'message &a&oMalheureusement, cette vaste contrée est occupée par des hordes de Goblins.'
+terre_instruc4: 'message &a&oLes Nains d''Ingor ont donc bloqué l''accès par précaution.'
+terre_instruc5: 'message &a&oSi ce n''est pas déjà le cas, vous devriez voir si vous pouvez trouver un moyen de passer au Nord par Ingor.'
+terre_instruc6: 'message &a&oUne fois au Nord utilisez cette Pierre de Terre, elle permet de détecter la distance à une forme de Magie de la Terre.'
+#
+tag_terre_find: tag add terre_find
+obj_terre_find: objective start terre_find
+pierre_terre: give pierre_terre
+#
+terre_find_exe: folder obj_terre_find_delayed,obj_terre_sudo
+obj_terre_find_delayed: folder obj_terre_find delay:3
+obj_terre_sudo: sudo thisisatopsecreteruditterrelocationcommand
+#
+pierre_perdu_give: folder pierre_perdu_give1,pierre_terre
+pierre_perdu_give1: 'message &2Érudit &f: &a&oPrenez en soin cette fois !'
 
 #
 #
 #
 #
 tag_erudit_eau: tag add erudit_eau
-tag_erudit_terre: tag add erudit_terre
+
 tag_erudit_feu: tag add erudit_feu
 #
 #

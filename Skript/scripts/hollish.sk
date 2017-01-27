@@ -54,7 +54,7 @@ on vote:
 #
 #
 On death:
-	if victim is a player:
+	if {online.players::*} contains victim:
 		if attacker is a player:
 			Wait 17 ticks
 			set {_death_money.%player%} to victim's money
