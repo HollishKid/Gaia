@@ -51,7 +51,7 @@ cooked_mutton: COOKED_MUTTON data:0
 cooked_fish: COOKED_FISH data:0
 cooked_salmon: COOKED_FISH data:1
 clownfish: RAW_FISH data:2
-bread: BREAD data:0
+bread: BREAD
 cookedfish: COOKED_FISH data:0
 rawfish: RAW_FISH data:0
 rawsteack: RAW_BEEF data:0

@@ -35,12 +35,12 @@ os3_hand: hand bone_gros
 #
 spirituality1: point default.spirituality 1
 spirituality100: point default.spirituality 100
+spirituality150: point default.spirituality 150
+spirituality200: point default.spirituality 200
 spirituality250: point default.spirituality 250
-spirituality1500: point default.spirituality 1500
-spirituality2000: point default.spirituality 2000
-spirituality3000: point default.spirituality 3000
-spirituality5000: point default.spirituality 5000
-spirituality10000: point default.spirituality 10000
+spirituality300: point default.spirituality 300
+spirituality500: point default.spirituality 500
+spirituality1000: point default.spirituality 1000
 #
 #
 # Fables

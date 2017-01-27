@@ -31,28 +31,29 @@ NPC_options:
     text: 'Je suis étonné que vous n''en ayez pas encore vu en venant ici, ce sont les apprentis du &dSanctuaire &a&o, ils sont formés pour rejoindre la hiérarchie Spirituelle et ainsi s''occuper des lieux spirituels de ce monde.'
 ##
 #
-# JNew Guy
+# New Guy
 #
 #
 ##
   porteur:
-    text: 'Bien à vous &2%player%&a&o. Je sens en vous la présence d''une Spiritualité naissante...'
+    text: 'Bien à vous &2%player%&a&o. \nJe sens en vous la présence d''une Spiritualité naissante...'
     conditions: 'mageentry_approved,!tag_erudit_terre'
     pointers: terre1,terre2,terre3,terre4,terre5
   faux:
-    text: 'Je crains que malgré cela, vous n''ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité... Celle du Respect !'
+    text: 'Je crains que malgré cela, vous n''ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité... \nCelle du Respect !'
   acceptation:
-    text: 'Je suis ravi d''entendre que vous me présentez ce Respect. Puis-je savoir ce qui vous amène ?'
+    text: 'Je suis ravi d''entendre que vous me présentez ce Respect. \nPuis-je savoir ce qui vous amène ?'
     pointers: passer,apprentissage
 #
 #
 #
   etudiant_refoule:
-    text: 'Ah! Je suis ravi de l''apprendre, mais je ne prends pas d''étudiants à la volée. Parlez d''abord à l''Érudit de l''Air !'
+    text: 'Ah ! Je suis ravi de l''apprendre, mais je ne prends pas d''étudiants à la volée. Parlez d''abord à l''Érudit de l''Air !'
     conditions: '!airtemple_magic_learning'
   etudiant:
     text: 'Très bien... Je vois que vous avez déjà été l''étudiant de l''Érudit de l''Air. \nCommençons votre instruction.'
-#    events: tag_erudit_terre,erudit_terre_instruction_nord
+    conditions: 'airtemple_magic_learning'
+    events: tag_erudit_terre,erudit_terre_instruction_nord
 ##
 #
 # Jeune Spiritus
