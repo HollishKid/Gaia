@@ -1,0 +1,9 @@
+quester: 'Kam Lott'
+first: welcome
+stop: 'false'
+#                 #
+#   NPC Options   #
+#                 #
+NPC_options:
+  welcome:
+    text: 'Hello'

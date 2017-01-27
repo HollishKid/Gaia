@@ -4,7 +4,7 @@ brigand:
   Health: 68
   Damage: 3
   Equipment:
-  - 276:1
+  - 276:0
   Disguise:
     Type: player
     Player: '&4Brigand'
@@ -27,3 +27,97 @@ brigand:
     PreventOtherDrops: true
     PreventRandomEquipment: true
     ShowHealth: true
+    Despawn: true
+korghan:
+  Mobtype: baby_zombie
+  Display: '&cKorg''han'
+  Health: 68
+  Damage: 3
+  Equipment:
+  - korutsu_sword:5
+  - ardenko_axe:1
+  Disguise:
+    Type: player
+    Player: '&cKorg''han'
+    Skin: xX_Milky
+  Drops:
+  - brigandDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 RandomStroll
+  - 3 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget
+  Skills:
+  - command{c="bq event <target.name> Mysteria.kor_conv"} @trigger ~onInteract
+  Options:
+    FollowRange: 30
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    ShowHealth: true
+    Despawn: true
+bosskor:
+  Mobtype: baby_zombie
+  Display: '&cKorg''han'
+  Health: 68
+  Damage: 3
+  Equipment:
+  - korutsu_sword:5
+  - ardenko_axe:1
+  Disguise:
+    Type: player
+    Player: '&cKorg''han'
+    Skin: xX_Milky
+  Drops:
+  - brigandDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 RandomStroll
+  - 3 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget
+  - 2 players
+  Options:
+    FollowRange: 30
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    ShowHealth: true
+    Despawn: true
+mercenaire:
+  Mobtype: baby_zombie
+  Display: '&6Mercenaire'
+  Health: 68
+  Damage: 3
+  Equipment:
+  - 276:0
+  Disguise:
+    Type: player
+    Player: '&6Mercenaire'
+    Skin: xX_Milky
+  Drops:
+  - brigandDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 RandomStroll
+  - 3 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget
+  - 2 players
+  Options:
+    FollowRange: 30
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    ShowHealth: true
+    Despawn: true
