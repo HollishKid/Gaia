@@ -82,6 +82,8 @@ sancossi_kill_obj: mmobkill sancossi amount:1 events:sancossi_killed
 obj_rally_dwarves: location -6293;95;2664;Gaia;15 events:rally_dwarves
 sancossi_abandon_obj: delay 0 conditions:!dwarf_castle_occupied_exe events:sancossi_abandon
 objective_casar_killingspree: mmobkill zombielvlnorth amount:15 events:casar_killed_spree notify
+hrota_obj: mmobkill zombielvlnorth amount:30 conditions:around_ingor_mine events:hrota_tank_killed notify
+hrota_obj2: mmobkill skeletonlvlnorth amount:20 conditions:around_ingor_mine events:hrota_archer_killed notify
 #
 #
 # Érudit de la Terre
