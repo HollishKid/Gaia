@@ -49,6 +49,13 @@ cuir:
   NAME: 'Cuir Tanné'
   LORE:
   - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
   ID: 58
   POSITION-X: 4
   POSITION-Y: 2
@@ -59,6 +66,13 @@ mailles:
   NAME: 'Mailles'
   LORE:
   - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
   ID: 58
   POSITION-X: 5
   POSITION-Y: 2
@@ -69,6 +83,13 @@ fer:
   NAME: 'Fer Forgé'
   LORE:
   - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
   ID: 58
   POSITION-X: 6
   POSITION-Y: 2
@@ -79,6 +100,13 @@ or:
   NAME: 'Or Décoré'
   LORE:
   - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
   ID: 58
   POSITION-X: 7
   POSITION-Y: 2
@@ -89,7 +117,59 @@ diamant:
   NAME: 'Diamant Noble'
   LORE:
   - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
   ID: 58
   POSITION-X: 8
   POSITION-Y: 2
+  KEEP-OPEN: true
+  
+fer_volca:
+  COMMAND: 'open: craft_fer_volcanique.yml'
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+or_volca:
+  COMMAND: 'open: craft_or_volcanique.yml'
+  NAME: 'Or Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 7
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+diamant_volca:
+  COMMAND: 'open: craft_diamant_volcanique.yml'
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 8
+  POSITION-Y: 3
   KEEP-OPEN: true

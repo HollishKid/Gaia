@@ -1022,9 +1022,20 @@ entry_north_allow: 'command region addmember north %player% -w Gaia'
 # Ingor Volcano
 #
 #
-folder_ingor_mine_start: folder hrota_start,hrota_obj,journal_hrota
+ingor_forge_entry: if ingor_mine_access nothing else ingor_mine_out
+ingor_mine_out: folder ingor_mine_out1,ingor_mine_out2
+ingor_mine_out1: message &d&oCe Volcan semble trop dangereux, je devrais parler à Hrota d'abord !
+ingor_mine_out2: teleport -6501;84;2192;Gaia
+#
+journal_hrota: journal add journal_hrota
+journal_hrota_del: journal del journal_hrota
+journal_hrota_back: journal add journal_hrota_back
+journal_hrota_back_del: journal del journal_hrota_back
+#
+folder_ingor_mine_start: folder hrota_start,hrota_obj,hrota_obj2,journal_hrota
 hrota_start: tag add hrota_start
 hrota_obj: objective start hrota_obj
+hrota_obj2: objective start hrota_obj2
 hrota_tank_killed: folder tag_hrota_tank_killed,hrota_killer_tester
 tag_hrota_tank_killed: tag add hrota_killed_gobs1
 tag_hrota_tank_killed_del: tag del hrota_killed_gobs1
@@ -1035,10 +1046,8 @@ hrota_killer_tester: folder hrota_killer_tester_exe delay:2
 hrota_killer_tester_exe: if hrota_killed_gobs hrota_killed_gobs_done else nothing
 hrota_killed_gobs_done: folder journal_hrota_del,journal_hrota_back,hrota_killed_done
 hrota_killed_done: message &d&oVous venez de tuer suffisament de Gobelins. Retournez voir Hróta !
-journal_hrota: journal add journal_hrota
-journal_hrota_del: journal del journal_hrota
-journal_hrota_back: journal add journal_hrota_back
-journal_hrota_back_del: journal del journal_hrota_back
+folder_ingor_mine_done: folder journal_hrota_back_del,tag_hrota_archer_killed_del,tag_hrota_tank_killed_del,ingor_mine_access
+ingor_mine_access: tag add ingor_mine_access
 #
 #
 # Mine Athelas

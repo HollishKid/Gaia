@@ -5,6 +5,16 @@
 #Perform certain commands when a player enters/leaves a specific WorldGuard region
 
 regions:
+    'ingor_forge':
+        enterConsoleCommands:
+        - 'bq event %player% hollish.ingor_forge_entry'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
     'earth_temple_fall':
         enterConsoleCommands:
         - 'bq event %player% hollish.earth_temple_fall'

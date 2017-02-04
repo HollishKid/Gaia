@@ -85,14 +85,26 @@ on load:
 #
 command /givethechester:
 	trigger:
-		give player a redstone torch named "&6Chester"
+		if player's gamemode is creative:
+			give player a redstone torch named "&6Chester"
+			message "&aVoici le &6&oChester &a!"
+			clear {chester::*}
+		else:
+			message "&cVous ne pouvez pas exécuter cette commande en GameMode 0 !"
 
 on left click:
 	if player is holding a redstone torch named "&6Chester":
 		if targeted block is chest:
 			cancel event
-			message "Vous ajoutez un coffre au Chester"
-			add location of target block to {chester::*}
+			if {chester::*} is set:
+				if "%{chester::*}%" contains "%location of targeted block%":
+					message "&c&oCe coffre est déjà sur la liste Chester !"
+				else:
+					message "Vous ajoutez un coffre au Chester"
+					add location of target block to {chester::*}
+			else:
+				message "Vous ajoutez un coffre au Chester"
+				add location of target block to {chester::*}
 		else:
 			cancel event
 			message "&cAucun coffre à cet emplacement."

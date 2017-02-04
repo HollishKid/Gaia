@@ -94,7 +94,7 @@ every 5 minutes in "Gaia":
 # Vendredi entre 19h et 22h
 #
 	if {day.index} is "5":
-		if {hour.system} is "20":
+		if {hour.system} is "19":
 			if {event.breach} is 0:
 				set {event.breach} to 1
 				execute console command "setblock -6751 50 2971 redstone_torch 5 replace"
@@ -159,6 +159,9 @@ every 55 minutes in "Gaia":
 	loop {place.location.mine3::*}:
 		set block at loop-value to air
 	wait 2 ticks
+	loop {place.location.volcano::*}:
+		set block at loop-value to air
+	wait 2 ticks
 	loop {break.location.mine1::*}:
 		set block at loop-value to {break.type.mine1::%loop-index%}
 	clear {break.location.mine1::*}
@@ -176,6 +179,12 @@ every 55 minutes in "Gaia":
 	clear {break.location.mine3::*}
 	clear {break.type.mine3::*}
 	clear {place.location.mine3::*}
+	wait 2 ticks
+	loop {break.location.volcano::*}:
+		set block at loop-value to {break.type.volcano::%loop-index%}
+	clear {break.location.volcano::*}
+	clear {break.type.volcano::*}
+	clear {place.location.volcano::*}
 	wait 5 seconds
 #
 # Chester
@@ -270,7 +279,7 @@ every 55 minutes in "Gaia":
 	loop {chester::*}:
 		remove all items from inventory of block at {chester::%loop-index%}
 	wait 7 ticks
-	loop 3 times:
+	loop 2 times:
 		loop {chester::*}:
 			set {randomitem} to random element out of {random.item.list::*}
 			add a random item out of {randomitem} to the inventory of block at {chester::%loop-index%}
