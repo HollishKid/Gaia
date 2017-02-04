@@ -1,14 +1,14 @@
-mysteria1:
-  MobName: brigand
+mysteria3:
+  MobName: mercenaire
   World: Gaia
-  X: -8866
-  Y: 77
-  Z: 4537
-  Radius: 20
+  X: -8815
+  Y: 86
+  Z: 4628
+  Radius: 40
   UseTimer: true
-  MaxMobs: 20
+  MaxMobs: 30
   MobLevel: 1
-  MobsPerSpawn: 1
+  MobsPerSpawn: 3
   Cooldown: 7
   CooldownTimer: 0
   Warmup: 7

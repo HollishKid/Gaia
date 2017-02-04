@@ -1,18 +1,18 @@
-mysteria1:
-  MobName: brigand
+mysteria2:
+  MobName: korghan
   World: Gaia
-  X: -8866
-  Y: 77
-  Z: 4537
-  Radius: 20
+  X: -8735
+  Y: 67
+  Z: 4830
+  Radius: 1
   UseTimer: true
-  MaxMobs: 20
+  MaxMobs: 1
   MobLevel: 1
   MobsPerSpawn: 1
   Cooldown: 7
   CooldownTimer: 0
-  Warmup: 7
-  WarmupTimer: 0
+  Warmup: 60
+  WarmupTimer: 60
   CheckForPlayers: true
   ActivationRange: 40
   LeashRange: 30
