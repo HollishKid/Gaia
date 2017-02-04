@@ -31,28 +31,29 @@ NPC_options:
     text: 'Je suis étonné que vous n''en ayez pas encore vu en venant ici, ce sont les apprentis du &dSanctuaire &a&o, ils sont formés pour rejoindre la hiérarchie Spirituelle et ainsi s''occuper des lieux spirituels de ce monde.'
 ##
 #
-# JNew Guy
+# New Guy
 #
 #
 ##
   porteur:
-    text: 'Bien à vous &2%player%&a&o. Je sens en vous la présence d''une Spiritualité naissante...'
+    text: 'Bien à vous &2%player%&a&o. \nJe sens en vous la présence d''une Spiritualité naissante...'
     conditions: 'mageentry_approved,!tag_erudit_terre'
     pointers: terre1,terre2,terre3,terre4,terre5
   faux:
-    text: 'Je crains que malgré cela, vous n''ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité... Celle du Respect !'
+    text: 'Je crains que malgré cela, vous n''ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité... \nCelle du Respect !'
   acceptation:
-    text: 'Je suis ravi d''entendre que vous me présentez ce Respect. Puis-je savoir ce qui vous amène ?'
+    text: 'Je suis ravi d''entendre que vous me présentez ce Respect. \nPuis-je savoir ce qui vous amène ?'
     pointers: passer,apprentissage
 #
 #
 #
   etudiant_refoule:
-    text: 'Ah! Je suis ravi de l''apprendre, mais je ne prends pas d''étudiants à la volée. Parlez d''abord à l''Érudit de l''Air !'
+    text: 'Ah ! Je suis ravi de l''apprendre, mais je ne prends pas d''étudiants à la volée. \nParlez d''abord à l''Érudit de l''Air !'
     conditions: '!airtemple_magic_learning'
   etudiant:
     text: 'Très bien... Je vois que vous avez déjà été l''étudiant de l''Érudit de l''Air. \nCommençons votre instruction.'
-#    events: tag_erudit_terre,erudit_terre_instruction_nord
+    conditions: 'airtemple_magic_learning'
+    events: tag_erudit_terre,erudit_terre_instruction_nord
 ##
 #
 # Jeune Spiritus
@@ -62,7 +63,15 @@ NPC_options:
   connu:
     text: 'Vous revoilà mon petit caillou !'
     conditions: 'tag_erudit_terre'
-    pointers: qui,keske,aurevoir
+    pointers: pierre_perdu,borne_found,orno_done,qui,keske,aurevoir
+#
+#
+  borne_found_rep:
+    text: Hm... \nSi la Pierre de Terre l'a indiquée, c'est qu'elle doit avoir du sens. \nVas voir Orno à la Bibliothèque d'Athelas, il pourra sûrement nous aider !
+    events: folder_earth_orno
+  orno_done_rep:
+    text: Très bien ! \nCes Emeraudes Polies nécessitent des Emeraudes Brutes, qui sont minables uniquement dans les Mines d'Ingor. \nAllez voir si vous pouvez en obtenir 10 et revenez me voir !
+    events: folder_terre_ingor
 ############
 #          #
 #  JOUEUR  #
@@ -118,6 +127,18 @@ player_options:
   apprentissage:
     text: 'Je suis ici pour me présenter en tant que votre humble Étudiant.'
     pointers: etudiant,etudiant_refoule
+  pierre_perdu:
+    text: J'ai perdu la Pierre de Terre !
+    conditions: '!pierre_terre_have,terre_find'
+    events: pierre_perdu_give
+  borne_found:
+    text: J'ai trouvé une borne avec une inscription étrange.
+    condition: terre_found
+    pointer: borne_found_rep
+  orno_done:
+    text: Orno m'a dit que l'incantation nécessitait une Emeraude Polie.
+    condition: terre_orno_done
+    pointer: orno_done_rep
 #######################################
 #
 #

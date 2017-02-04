@@ -35,12 +35,12 @@ os3_hand: hand bone_gros
 #
 spirituality1: point default.spirituality 1
 spirituality100: point default.spirituality 100
+spirituality150: point default.spirituality 150
+spirituality200: point default.spirituality 200
 spirituality250: point default.spirituality 250
-spirituality1500: point default.spirituality 1500
-spirituality2000: point default.spirituality 2000
-spirituality3000: point default.spirituality 3000
-spirituality5000: point default.spirituality 5000
-spirituality10000: point default.spirituality 10000
+spirituality300: point default.spirituality 300
+spirituality500: point default.spirituality 500
+spirituality1000: point default.spirituality 1000
 #
 #
 # Fables
@@ -342,7 +342,19 @@ fire_wand: tag fire_wand
 earth_wand: tag earth_wand
 water_wand: tag water_wand
 #
-# Erudits (autres, tempo)
+#
+# Érudit de la Terre
+#
+#
+pierre_terre_hand: hand pierre_terre
+pierre_terre_have: item pierre_terre
+region_north: region north
+terre_find: tag terre_find
+terre_found: tag terre_found
+terre_orno: tag terre_orno
+terre_orno_done: tag terre_orno_done
+#
+# Érudits (autres, tempo)
 #
 earthtemple_magic_learning: tag earthtemple_magic_learning
 firetemple_magic_learning: tag firetemple_magic_learning
@@ -432,6 +444,15 @@ journal_north_bridge_repair: journal journal_north_bridge_repair
 north_bridge_repair_have: and stone_bricks200,planks100
 stone_bricks200: item stone_bricks:200
 planks100: item planks:100
+#
+# Hrota
+#
+hrota_start: tag hrota_start
+around_ingor_mine: location -6500;80;2200;Gaia;200
+hrota_killed_gobs: and hrota_killed_gobs1,hrota_killed_gobs2
+hrota_killed_gobs1: tag hrota_killed_gobs1
+hrota_killed_gobs2: tag hrota_killed_gobs2
+ingor_mine_access: tag ingor_mine_access
 #
 #
 #

@@ -1,0 +1,54 @@
+quester: 'Hróta'
+first: welcome,welcomebis,welcometres
+stop: 'false'
+#                #
+
+#  Options NPC   #
+
+#                #
+NPC_options:
+  welcome:
+    text: Oh ! Enchanté &2%player% &a&o! \nJ'ai entendu parler de tes exploits contre Sancossi ! \nQu'est-ce qui t'amène ici ?
+    conditions: '!hrota_start,!ingor_mine_access'
+    pointers: enter,rien
+  welcomebis:
+    text: Bonjour &2%player% &a&o!
+    conditions: 'hrota_start,!ingor_mine_access'
+    pointers: bonjour,done
+  welcometres:
+    text: Content de te revoir &2%player%&a&o.
+    conditions: 'ingor_mine_access'
+    pointers: idem,riches
+#
+#
+#
+  enter_rep:
+    text: Oh non ! Pas en l'état non ! \nTu devras d'abord disperser les troupes gobelins aux alentours ! \nTue &220 Archers Gobelins &a&oet &230 Gobelins dans un rayon de 200 blocs autour de cette entrée !
+    events: folder_ingor_mine_start
+  done_rep:
+    text: Excellent ! Je te laisse rentrer dans le Volcan. \nTu y trouveras beaucoup de richesses, mais sûrement beaucoup de Gobelins aussi !
+    events: folder_ingor_mine_done
+  riches_rep:
+    text: Les minerais sont particuliers dans cette mine. \nCes minerais pourront servir à crafter des armures, consulte ton /menu pour voir les Crafts Spéciaux.
+#                #
+
+# Options Joueur #
+
+#                #
+player_options:
+  idem:
+    text: Pareillement !
+  rien:
+    text: 'Je me balade...'
+  bonjour:
+    text: 'Bonjour à toi Hróta !'
+  enter:
+    text: 'Je voudrais entrer dans cette mine !'
+    pointers: enter_rep
+  done:
+    text: 'J''ai tué les Gobelins !'
+    conditions: hrota_killed_gobs
+    pointer: done_rep
+  riches:
+    text: 'Qu''est-ce que je peux miner dans ce Volcan ?'
+    pointer: riches_rep

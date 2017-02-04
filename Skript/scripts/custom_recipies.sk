@@ -1,3 +1,20 @@
+#
+#
+# Custom Crafting Recipes
+#
+#                           ~ H
+#
+#
+#    These can only be defined ONCE
+#      i.e. the same combination of ITEM TYPES can only be defined once.
+#           if 2 are identical, first one will be read only.
+#
+
+#
+#
+# Basique
+#
+#
 on load:
     new Recipe "casque_cuir"
     "casque_cuir".Recipe.setIngredient{1, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
@@ -184,48 +201,188 @@ on load:
 #
 #
     new Recipe "casque_diamant"
-    "casque_diamant".Recipe.setIngredient{1, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "casque_diamant".Recipe.setIngredient{2, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "casque_diamant".Recipe.setIngredient{3, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "casque_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "casque_diamant".Recipe.setIngredient{6, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
+    "casque_diamant".Recipe.setIngredient{1, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "casque_diamant".Recipe.setIngredient{2, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "casque_diamant".Recipe.setIngredient{3, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "casque_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "casque_diamant".Recipe.setIngredient{6, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
     "casque_diamant".Recipe.setIngredient{5, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
-    "casque_diamant".Recipe.setResult{1 diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare."};
+    "casque_diamant".Recipe.setResult{1 diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};
     "casque_diamant".Recipe.register{};
   
     new Recipe "plastron_diamant"
-    "plastron_diamant".Recipe.setIngredient{1, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "plastron_diamant".Recipe.setIngredient{3, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "plastron_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "plastron_diamant".Recipe.setIngredient{5, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "plastron_diamant".Recipe.setIngredient{6, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "plastron_diamant".Recipe.setIngredient{7, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "plastron_diamant".Recipe.setIngredient{8, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "plastron_diamant".Recipe.setIngredient{9, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
+    "plastron_diamant".Recipe.setIngredient{1, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "plastron_diamant".Recipe.setIngredient{3, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "plastron_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "plastron_diamant".Recipe.setIngredient{5, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "plastron_diamant".Recipe.setIngredient{6, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "plastron_diamant".Recipe.setIngredient{7, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "plastron_diamant".Recipe.setIngredient{8, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "plastron_diamant".Recipe.setIngredient{9, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
     "plastron_diamant".Recipe.setIngredient{2, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
-    "plastron_diamant".Recipe.setResult{1 diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare."};
+    "plastron_diamant".Recipe.setResult{1 diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};
     "plastron_diamant".Recipe.register{};
     
     new Recipe "jambes_diamant"
-    "jambes_diamant".Recipe.setIngredient{1, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "jambes_diamant".Recipe.setIngredient{2, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "jambes_diamant".Recipe.setIngredient{3, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "jambes_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "jambes_diamant".Recipe.setIngredient{6, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "jambes_diamant".Recipe.setIngredient{7, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "jambes_diamant".Recipe.setIngredient{9, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
+    "jambes_diamant".Recipe.setIngredient{1, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "jambes_diamant".Recipe.setIngredient{2, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "jambes_diamant".Recipe.setIngredient{3, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "jambes_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "jambes_diamant".Recipe.setIngredient{6, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "jambes_diamant".Recipe.setIngredient{7, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "jambes_diamant".Recipe.setIngredient{9, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
     "jambes_diamant".Recipe.setIngredient{5, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
-    "jambes_diamant".Recipe.setResult{1 diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare."};
+    "jambes_diamant".Recipe.setResult{1 diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};
     "jambes_diamant".Recipe.register{};
     
     new Recipe "pieds_diamant"
-    "pieds_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "pieds_diamant".Recipe.setIngredient{6, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "pieds_diamant".Recipe.setIngredient{7, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
-    "pieds_diamant".Recipe.setIngredient{9, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare."};
+    "pieds_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "pieds_diamant".Recipe.setIngredient{6, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "pieds_diamant".Recipe.setIngredient{7, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "pieds_diamant".Recipe.setIngredient{9, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
     "pieds_diamant".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
-    "pieds_diamant".Recipe.setResult{1 diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare."};
+    "pieds_diamant".Recipe.setResult{1 diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};
     "pieds_diamant".Recipe.register{};
+#
+#
+# Volcanique
+#
+#
+    new Recipe "casque_fer_volcanique"
+    "casque_fer_volcanique".Recipe.setIngredient{1, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "casque_fer_volcanique".Recipe.setIngredient{5, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "casque_fer_volcanique".Recipe.setIngredient{3, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "casque_fer_volcanique".Recipe.setIngredient{4, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "casque_fer_volcanique".Recipe.setIngredient{6, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "casque_fer_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "casque_fer_volcanique".Recipe.setResult{1 iron helmet named "Casque en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
+    "casque_fer_volcanique".Recipe.register{};
+  
+    new Recipe "plastron_fer_volcanique"
+    "plastron_fer_volcanique".Recipe.setIngredient{1, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.setIngredient{3, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.setIngredient{4, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.setIngredient{2, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.setIngredient{6, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.setIngredient{7, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.setIngredient{8, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.setIngredient{9, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.setResult{1 iron chestplate named "Plastron en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.register{};
+    
+    new Recipe "jambes_fer_volcanique"
+    "jambes_fer_volcanique".Recipe.setIngredient{1, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "jambes_fer_volcanique".Recipe.setIngredient{5, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "jambes_fer_volcanique".Recipe.setIngredient{3, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "jambes_fer_volcanique".Recipe.setIngredient{4, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "jambes_fer_volcanique".Recipe.setIngredient{6, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "jambes_fer_volcanique".Recipe.setIngredient{7, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "jambes_fer_volcanique".Recipe.setIngredient{9, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "jambes_fer_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "jambes_fer_volcanique".Recipe.setResult{1 iron leggings named "Jambières en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
+    "jambes_fer_volcanique".Recipe.register{};
+    
+    new Recipe "pieds_fer_volcanique"
+    "pieds_fer_volcanique".Recipe.setIngredient{4, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "pieds_fer_volcanique".Recipe.setIngredient{6, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "pieds_fer_volcanique".Recipe.setIngredient{7, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "pieds_fer_volcanique".Recipe.setIngredient{9, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "pieds_fer_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "pieds_fer_volcanique".Recipe.setResult{1 iron boots named "Bottes en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
+    "pieds_fer_volcanique".Recipe.register{};
+#
+#
+#
+    new Recipe "casque_or_volcanique"
+    "casque_or_volcanique".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setIngredient{5, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setIngredient{3, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setResult{1 gold helmet named "Casque en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
+    "casque_or_volcanique".Recipe.register{};
+  
+    new Recipe "plastron_or_volcanique"
+    "plastron_or_volcanique".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{3, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{2, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{7, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{8, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{9, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setResult{1 gold chestplate named "Plastron en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
+    "plastron_or_volcanique".Recipe.register{};
+    
+    new Recipe "jambes_or_volcanique"
+    "jambes_or_volcanique".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{5, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{3, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{7, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{9, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setResult{1 gold leggings named "Jambières en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
+    "jambes_or_volcanique".Recipe.register{};
+    
+    new Recipe "pieds_or_volcanique"
+    "pieds_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "pieds_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "pieds_or_volcanique".Recipe.setIngredient{7, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "pieds_or_volcanique".Recipe.setIngredient{9, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
+    "pieds_or_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "pieds_or_volcanique".Recipe.setResult{1 gold boots named "Bottes en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
+    "pieds_or_volcanique".Recipe.register{};
+#
+#
+#
+    new Recipe "casque_diamant_volcanique"
+    "casque_diamant_volcanique".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setIngredient{3, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setIngredient{5, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setResult{1 diamond helmet named "Casque en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.register{};
+  
+    new Recipe "plastron_diamant_volcanique"
+    "plastron_diamant_volcanique".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{3, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{2, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{7, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{8, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{9, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setResult{1 diamond chestplate named "Plastron en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.register{};
+    
+    new Recipe "jambes_diamant_volcanique"
+    "jambes_diamant_volcanique".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{3, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{5, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{7, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{9, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setResult{1 diamond leggings named "Jambières en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.register{};
+
+    new Recipe "pieds_diamant_volcanique"
+    "pieds_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "pieds_diamant_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "pieds_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "pieds_diamant_volcanique".Recipe.setIngredient{7, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "pieds_diamant_volcanique".Recipe.setIngredient{9, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "pieds_diamant_volcanique".Recipe.setResult{1 diamond boots named "Bottes en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
+    "pieds_diamant_volcanique".Recipe.register{};
 #
 #
 # A partir d'ici, tests à la fermeture d'un inventaire (on s'intéresse qu'aux tables de craft, mais pas moyen de le spécifier)
@@ -235,7 +392,6 @@ on load:
 #
 on inventory close:
     if player's inventory contains chainmail helmet named "Casque de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
-	
         remove chainmail helmet named "Casque de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
         remove chainmail helmet named "Casque de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's helmet
         if player meets betonquest condition "fonte_2":
@@ -351,31 +507,156 @@ on inventory close:
 #
 #
 #
-    if player's inventory contains diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare.":
-        remove diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare." from player's inventory
-        remove diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare." from player's helmet
+    if player's inventory contains diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
+        remove diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
+        remove diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's helmet
         if player meets betonquest condition "fonte_17":
             command "mm items give %player% casque_diamant"
         else:
             message "&dNiveau &217 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
-    if player's inventory contains diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare.":
-        remove diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare." from player's inventory
-        remove diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare." from player's chestplate
+    if player's inventory contains diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
+        remove diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
+        remove diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's chestplate
         if player meets betonquest condition "fonte_18":
             command "mm items give %player% plastron_diamant"
         else:
             message "&dNiveau &218 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
-    if player's inventory contains diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare.":
-        remove diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare." from player's inventory
-        remove diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare." from player's leggings
+    if player's inventory contains diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
+        remove diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
+        remove diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's leggings
         if player meets betonquest condition "fonte_19":
             command "mm items give %player% jambes_diamant"
         else:
             message "&dNiveau &219 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
-    if player's inventory contains diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare.":
-        remove diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare." from player's inventory
-        remove diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare." from player's shoes
+    if player's inventory contains diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
+        remove diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
+        remove diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's shoes
         if player meets betonquest condition "fonte_20":
             command "mm items give %player% pieds_diamant"
         else:
             message "&dNiveau &220 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+#
+# Volcanique
+#
+#
+    if player's inventory contains iron helmet named "Casque en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
+        remove iron helmet named "Casque en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
+        remove iron helmet named "Casque en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's helmet
+        if player meets betonquest condition "fonte_7":
+            command "mm items give %player% casque_fer_volcanique"
+        else:
+            message "&dNiveau &27 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains iron chestplate named "Plastron en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
+        remove iron chestplate named "Plastron en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
+        remove iron chestplate named "Plastron en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's chestplate
+        if player meets betonquest condition "fonte_8":
+            command "mm items give %player% plastron_fer_volcanique"
+        else:
+            message "&dNiveau &28 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains iron leggings named "Jambières en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
+        remove iron leggings named "Jambières en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
+        remove iron leggings named "Jambières en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's leggings
+        if player meets betonquest condition "fonte_9":
+            command "mm items give %player% jambes_fer_volcanique"
+        else:
+            message "&dNiveau &29 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains iron boots named "Bottes en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
+        remove iron boots named "Bottes en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
+        remove iron boots named "Bottes en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's shoes
+        if player meets betonquest condition "fonte_10":
+            command "mm items give %player% pieds_fer_volcanique"
+        else:
+            message "&dNiveau &210 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+#
+#
+#
+    if player's inventory contains gold helmet named "Casque en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
+        remove gold helmet named "Casque en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
+        remove gold helmet named "Casque en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's helmet
+        if player meets betonquest condition "fonte_12":
+            command "mm items give %player% casque_or_volcanique"
+        else:
+            message "&dNiveau &212 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains gold chestplate named "Plastron en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
+        remove gold chestplate named "Plastron en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
+        remove gold chestplate named "Plastron en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's chestplate
+        if player meets betonquest condition "fonte_13":
+            command "mm items give %player% plastron_or_volcanique"
+        else:
+            message "&dNiveau &213 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains gold leggings named "Jambières en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
+        remove gold leggings named "Jambières en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
+        remove gold leggings named "Jambières en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's leggings
+        if player meets betonquest condition "fonte_14":
+            command "mm items give %player% jambes_or_volcanique"
+        else:
+            message "&dNiveau &214 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains gold boots named "Bottes en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
+        remove gold boots named "Bottes en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
+        remove gold boots named "Bottes en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's shoes
+        if player meets betonquest condition "fonte_15":
+            command "mm items give %player% pieds_or_volcanique"
+        else:
+            message "&dNiveau &215 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+#
+#
+#
+    if player's inventory contains diamond helmet named "Casque en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
+        remove diamond helmet named "Casque en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
+        remove diamond helmet named "Casque en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's helmet
+        if player meets betonquest condition "fonte_17":
+            command "mm items give %player% casque_diamant_volcanique"
+        else:
+            message "&dNiveau &217 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains diamond chestplate named "Plastron en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
+        remove diamond chestplate named "Plastron en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
+        remove diamond chestplate named "Plastron en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's chestplate
+        if player meets betonquest condition "fonte_18":
+            command "mm items give %player% plastron_diamant_volcanique"
+        else:
+            message "&dNiveau &218 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains diamond leggings named "Jambières en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
+        remove diamond leggings named "Jambières en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
+        remove diamond leggings named "Jambières en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's leggings
+        if player meets betonquest condition "fonte_19":
+            command "mm items give %player% jambes_diamant_volcanique"
+        else:
+            message "&dNiveau &219 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains diamond boots named "Bottes en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
+        remove diamond boots named "Bottes en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
+        remove diamond boots named "Bottes en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's shoes
+        if player meets betonquest condition "fonte_20":
+            command "mm items give %player% pieds_diamant_volcanique"
+        else:
+            message "&dNiveau &220 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+#
+#
+# Custom Mining in Volcano
+#
+#
+on break:
+	if event-block is in the region "ingor_volcano":
+		if player's gamemode is survival:
+			if event-block is emerald ore:
+				cancel event
+				set event-block to air
+				drop 1 emerald with name "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."
+			if event-block is iron ore:
+				cancel event
+				set event-block to air
+				drop 1 iron ingot with name "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."
+			if event-block is gold ore:
+				cancel event
+				set event-block to air
+				drop 1 gold ingot with name "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."
+			if event-block is diamond ore:
+				cancel event
+				set event-block to air
+				drop 1 diamond with name "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."
+			if event-block is lapis ore:
+				cancel event
+				set event-block to air
+				drop 1 lapis with name "Lapis Volcanique" with lore "Ce Lapis provient||d'un volcan actif."
+			if event-block is obsidian:
+				cancel event
+				message "Cette obsidienne est trop dure pour être cassée..."

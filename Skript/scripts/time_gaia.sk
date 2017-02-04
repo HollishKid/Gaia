@@ -11,8 +11,18 @@
 #
 on quit:
 	set {last.logout.%player%} to now
+	remove player from {online.players::*}
 on join:
 	set {last.logout.mailed.%player%} to 0
+	add  player to {online.players::*}
+	wait 30 seconds
+	if {event.double.xp} is 1:
+		send player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+		message "&aTous les XP gagnés sont doublés tous les mercredis entre 16H et 20H !"
+	if {event.breach} is 1:
+		send player title "&c&lBrèche" with subtitle "Athelas est assiégé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+		message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"
+		
 #
 #
 # On Load
@@ -20,6 +30,9 @@ on join:
 #
 on load:
 	set {day.index::*} to contents from url "https://gaia-minecraft.000webhostapp.com/day.php/"
+	set {day.index} to {day.index::1}
+	set {event.breach} to 0
+	set {event.double.xp} to 0
 	wait 5 minutes
 	loop {email.list::*}:
 		if difference between {last.logout.%loop-value%} and now is smaller than 3 days:
@@ -29,7 +42,7 @@ on load:
 				stop
 			else:
 				add 1 to {last.logout.mailed.%loop-value%}
-				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus d'un mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%loop-value%"
+				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus d'un mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
 		
 		if difference between {last.logout.%loop-value%} and now is smaller than 5 days:
 			stop
@@ -39,21 +52,81 @@ on load:
 			else:
 				add 1 to {last.logout.mailed.%loop-value%}
 				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus de trois mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
+#
+#
+# 3 minute intervaller
+#
+#
+every 3 minutes in "Gaia":
+	set {_random.motd} to a random integer between 1 and 9
+	execute console command "tm abc -silent ${motd%{_random.motd}%}"
+	set {_thief.treasure.security} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {_thief.treasure.security} to -6753
+	set y coordinate of {_thief.treasure.security} to 54
+	set z coordinate of {_thief.treasure.security} to 2975
+	set block at {_thief.treasure.security} to redstone torch on
+	wait 1 second
+	set block at {_thief.treasure.security} to air
+#		
+#
+# Static Events
+#
+every 5 minutes in "Gaia":
+	set {hour.system} to "%hour%"
+#
+# Mercredi entre 16h et 20h
+#
+	if {day.index} is "3":
+		if {hour.system} is 16:
+			if {event.double.xp} is 0:
+				set {event.double.xp} to 1
+				execute console command "xprate 2 true"
+				loop all players:
+					send loop-player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+			
+		if {hour.system} is "20":
+			if {event.double.xp} is 1:
+				execute console command "xprate reset"
+				set {event.double.xp} to 0
+				loop all players:
+					send loop-player title "&aEvent Double XP" with subtitle "&cTerminé" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+#
+# Vendredi entre 19h et 22h
+#
+	if {day.index} is "5":
+		if {hour.system} is "19":
+			if {event.breach} is 0:
+				set {event.breach} to 1
+				execute console command "setblock -6751 50 2971 redstone_torch 5 replace"
+				execute console command "region flag event_breach -w Gaia mob-spawning allow"
+				broadcast "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"
+				loop all players:
+					send loop-player title "&c&lBrèche" with subtitle "Athelas est assiégé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+			
+		if {hour.system} is "22":
+			if {event.breach} is 1:
+				set {event.breach} to 0
+				execute console command "setblock -6751 50 2971 air 0 replace"
+				execute console command "region flag event_breach -w Gaia mob-spawning deny"
+				broadcast "&aLa Brèche en -7050;3200 a été refermée."
+				loop all players:
+					send loop-player title "&aBrèche" with subtitle "&aEnnemi repoussé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+#
+#			
+#				
+#			
 
 #
+# Every Hour in Gaïa
 #
-# Restart at 5 o'clock
 #
-#
-every 52 minutes in "Gaia":
-	set {hour.system} to "%hour%"
+every 55 minutes in "Gaia":	
 #
 # At 5 o'clock
 #   East Continent reset
-#
-	if {hour.system} is "5":
-
-		if {day.index} is 7:
+	set {hour.system} to "%hour%"
+	if {day.index} is "7":
+		if {hour.system} is "5":
 			loop {place.location.1::*}:
 				set block at loop-value to air
 			wait 22 ticks
@@ -62,10 +135,9 @@ every 52 minutes in "Gaia":
 			clear {break.location.1::*}
 			clear {break.type.1::*}
 			clear {place.location.1::*}
-			wait 22 ticks
-			
-		else:
-			set {day.index.temp} to {day.index::1} + 1
+	else:
+		if {hour.system} is "5":
+			set {day.index.temp} to {day.index} + 1
 			loop {place.location.%{day.index.temp}%::*}:
 				set block at loop-value to air
 			wait 22 ticks
@@ -74,41 +146,143 @@ every 52 minutes in "Gaia":
 			clear {break.location.%{day.index.temp}%::*}
 			clear {break.type.%{day.index.temp}%::*}
 			clear {place.location.%{day.index.temp}%::*}
-			wait 22 ticks
-	
+	wait 22 ticks
 #
-# ADD IN SERVER RESTART
+# Mine Manager
 #
-#		At this level. (at 5 after East reset)
-#		
+	loop {place.location.mine1::*}:
+		set block at loop-value to air
+	wait 2 ticks
+	loop {place.location.mine2::*}:
+		set block at loop-value to air
+	wait 2 ticks
+	loop {place.location.mine3::*}:
+		set block at loop-value to air
+	wait 2 ticks
+	loop {place.location.volcano::*}:
+		set block at loop-value to air
+	wait 2 ticks
+	loop {break.location.mine1::*}:
+		set block at loop-value to {break.type.mine1::%loop-index%}
+	clear {break.location.mine1::*}
+	clear {break.type.mine1::*}
+	clear {place.location.mine1::*}
+	wait 2 ticks
+	loop {break.location.mine2::*}:
+		set block at loop-value to {break.type.mine2::%loop-index%}
+	clear {break.location.mine2::*}
+	clear {break.type.mine2::*}
+	clear {place.location.mine2::*}
+	wait 2 ticks
+	loop {break.location.mine3::*}:
+		set block at loop-value to {break.type.mine3::%loop-index%}
+	clear {break.location.mine3::*}
+	clear {break.type.mine3::*}
+	clear {place.location.mine3::*}
+	wait 2 ticks
+	loop {break.location.volcano::*}:
+		set block at loop-value to {break.type.volcano::%loop-index%}
+	clear {break.location.volcano::*}
+	clear {break.type.volcano::*}
+	clear {place.location.volcano::*}
+	wait 5 seconds
 #
-# Every 52 minutes BUT at 5 o'clock
-#   Avoids overload
+# Chester
 #
-	else:	
-		loop {place.location.mine1::*}:
-			set block at loop-value to air
-		wait 2 ticks
-		loop {place.location.mine2::*}:
-			set block at loop-value to air
-		wait 2 ticks
-		loop {place.location.mine3::*}:
-			set block at loop-value to air
-		wait 2 ticks
-		loop {break.location.mine1::*}:
-			set block at loop-value to {break.type.mine1::%loop-index%}
-		clear {break.location.mine1::*}
-		clear {break.type.mine1::*}
-		clear {place.location.mine1::*}
-		wait 2 ticks
-		loop {break.location.mine2::*}:
-			set block at loop-value to {break.type.mine2::%loop-index%}
-		clear {break.location.mine2::*}
-		clear {break.type.mine2::*}
-		clear {place.location.mine2::*}
-		wait 2 ticks
-		loop {break.location.mine3::*}:
-			set block at loop-value to {break.type.mine3::%loop-index%}
-		clear {break.location.mine3::*}
-		clear {break.type.mine3::*}
-		clear {place.location.mine3::*}
+	add 32 wood to {random.item.list::*}
+	add 1 diamond to {random.item.list::*}
+	add 4 lapis to {random.item.list::*}
+	add 2 emerald to {random.item.list::*}
+	loop 20 times:
+		add 32 wood to {random.item.list::*}
+	loop 10 times:
+		add 5 gravel to {random.item.list::*}
+	loop 10 times:
+		add 12 stone to {random.item.list::*}
+	loop 10 times:
+		add 5 gold ingot to {random.item.list::*}
+	loop 10 times:
+		add 12 iron ingot to {random.item.list::*}
+# Food & Seeds
+	loop 10 times:
+		add 1 beef to {random.item.list::*}
+	loop 10 times:
+		add 2 porkchop to {random.item.list::*}
+	loop 10 times:
+		add 2 rabbit to {random.item.list::*}
+	loop 10 times:
+		add 2 apple to {random.item.list::*}
+	loop 10 times:
+		add 2 carrot to {random.item.list::*}
+	loop 10 times:
+		add 2 bread to {random.item.list::*}
+	loop 10 times:
+		add 2 potato to {random.item.list::*}
+	loop 10 times:
+		add 4 seeds to {random.item.list::*}
+# Tools
+	loop 7 times:
+		add 1 wood axe to {random.item.list::*}
+	loop 5 times:
+		add 1 stone axe to {random.item.list::*}
+	loop 3 times:
+		add 1 iron axe to {random.item.list::*}
+	add 1 gold axe to {random.item.list::*}
+	add 1 diamond axe to {random.item.list::*}
+	loop 7 times:
+		add 1 wood pickaxe to {random.item.list::*}
+	loop 5 times:
+		add 1 stone pickaxe to {random.item.list::*}
+	loop 3 times:
+		add 1 iron pickaxe to {random.item.list::*}
+		add 1 gold pickaxe to {random.item.list::*}
+		add 1 diamond pickaxe to {random.item.list::*}
+# Armor
+	loop 5 times:
+		add 1 bow to {random.item.list::*}
+	loop 7 times:
+		add 3 arrows to {random.item.list::*}
+	loop 10 times:
+		add 1 leather chestplate to {random.item.list::*}
+		add 1 leather helmet to {random.item.list::*}
+		add 1 leather boots to {random.item.list::*}
+		add 1 leather leggings to {random.item.list::*}
+		add 1 wood sword to {random.item.list::*}
+	loop 7 times:
+		add 1 chainmail chestplate to {random.item.list::*}
+		add 1 chainmail helmet to {random.item.list::*}
+		add 1 chainmail boots to {random.item.list::*}
+		add 1 chainmail leggings to {random.item.list::*}
+		add 1 stone sword to {random.item.list::*}
+	loop 5 times:
+		add 1 iron chestplate to {random.item.list::*}
+		add 1 iron helmet to {random.item.list::*}
+		add 1 iron boots to {random.item.list::*}
+		add 1 iron leggings to {random.item.list::*}
+		add 1 iron sword to {random.item.list::*}
+	loop 3 times:
+		add 1 gold chestplate to {random.item.list::*}
+		add 1 gold helmet to {random.item.list::*}
+		add 1 gold boots to {random.item.list::*}
+		add 1 gold leggings to {random.item.list::*}
+		add 1 gold sword to {random.item.list::*}
+	add 1 diamond chestplate to {random.item.list::*}
+	add 1 diamond helmet to {random.item.list::*}
+	add 1 diamond boots to {random.item.list::*}
+	add 1 diamond leggings to {random.item.list::*}
+	add 1 diamond sword to {random.item.list::*}		
+#
+# New & Fun
+#
+	add 3 experience bottle to {random.item.list::*}
+	add 1 chest named "&2Objet Inconnu" with lore "&8&oJe devrais consulter||&8&oun expert pour identifier||&8&ocet objet.|| ||&8&oIl y a un marché||&8&odevant chez Paulette||&8&opeut être que quelqu'un||&8&opourrait me renseigner !" to {random.item.list::*}
+	loop {chester::*}:
+		remove all items from inventory of block at {chester::%loop-index%}
+	wait 7 ticks
+	loop 2 times:
+		loop {chester::*}:
+			set {randomitem} to random element out of {random.item.list::*}
+			add a random item out of {randomitem} to the inventory of block at {chester::%loop-index%}
+	wait 7 ticks
+	clear {random.item.list::*}
+	clear {randomitem}
