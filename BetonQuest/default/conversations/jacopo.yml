@@ -23,7 +23,7 @@ NPC_options:
 # Debut Quête Naviguation
 #
   jacopo_start:
-    text: 'Parfait ! Avant de commencer un entraînement en mer, vas construire &d1 bâteau&a&o. \nJe demande bien à ce que ce soit toi qui le crafte ! \nOn ne navigue jamais aussi bien que sur son propre bâteau...'
+    text: 'Parfait ! Avant de commencer un entraînement en mer, vas construire &d1 bateau en bois de chêne&a&o. \nJe demande bien à ce que ce soit toi qui le crafte ! \nOn ne navigue jamais aussi bien que sur son propre bâteau...'
     events: journal_jacopo_go_del,obj_jacopo_bat,journal_jacopo_bat
   boat_not:
     text: 'Je vois que tu n''as toujours pas trouvé comment faire un bâteau. \nSi tu ne sais pas faire ça, comment veux-tu que je t''envoie en eaux profondes ?!'

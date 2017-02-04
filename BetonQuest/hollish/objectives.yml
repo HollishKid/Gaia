@@ -61,7 +61,6 @@ book_erudit: craft book_and_quill 1 events:tag_erudit_book
 #
 #
 obj_air_mill: location -2912;186;2868;Gaia;4 events:air_mill_attained
-obj_distance_air_temple: delay 0 conditions:!air_obj_distance_exe,tag_moine_air events:air_temple_lose interval:22
 obj_air_temple_loc1: location -2895;197;2877;Gaia;3 events:air_meka1
 obj_air_temple_loc2: location -2858;165;2885;Gaia;3 events:air_meka2
 obj_air_temple_loc3: location -2877;180;3049;Gaia;3 events:air_meka3
@@ -83,6 +82,14 @@ sancossi_kill_obj: mmobkill sancossi amount:1 events:sancossi_killed
 obj_rally_dwarves: location -6293;95;2664;Gaia;15 events:rally_dwarves
 sancossi_abandon_obj: delay 0 conditions:!dwarf_castle_occupied_exe events:sancossi_abandon
 objective_casar_killingspree: mmobkill zombielvlnorth amount:15 events:casar_killed_spree notify
+hrota_obj: mmobkill zombielvlnorth amount:30 conditions:around_ingor_mine events:hrota_tank_killed notify
+hrota_obj2: mmobkill skeletonlvlnorth amount:20 conditions:around_ingor_mine events:hrota_archer_killed notify
+#
+#
+# Érudit de la Terre
+#
+#
+terre_find: action right any conditions:pierre_terre_hand events:terre_find_exe 
 #
 #
 louvre_obj: password 'mellon' ignoreCase events:louvre_open

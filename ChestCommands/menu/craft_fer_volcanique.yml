@@ -7,7 +7,7 @@
 menu-settings:
 
   # name - appears as the title - REQUIRED
-  name: '&dCrafts de Fer'
+  name: '&dCrafts de Fer Volcanique'
 
   # rows - the number of rows of the chest - REQUIRED
   rows: 6
@@ -37,328 +37,328 @@ menu-settings:
 ######################
 
 fer1:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 1
   POSITION-Y: 1
   KEEP-OPEN: true
 
 fer2:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 2
-  POSITION-Y: 1
+  POSITION-Y: 2
   KEEP-OPEN: true
   
 fer3:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 3
   POSITION-Y: 1
   KEEP-OPEN: true
   
 fer4:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 1
   POSITION-Y: 2
   KEEP-OPEN: true
   
 fer5:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 3
   POSITION-Y: 2
   KEEP-OPEN: true
   
 emerald1:
-  NAME: 'Emeraude Polie'
+  NAME: 'Emeraude Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffiné !'
+  - '&d&oCet Emeraude provient'
+  - '&d&od''un volcan actif.'
   ID: 388
   POSITION-X: 2
-  POSITION-Y: 2
+  POSITION-Y: 1
   KEEP-OPEN: true
   
 fer_casque:
-  NAME: '&aCasque Fer Forgé'
+  NAME: '&9Casque Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &9Rare'
   ID: 306
   POSITION-X: 4
   POSITION-Y: 2
   KEEP-OPEN: true
   
 fer12:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 6
   POSITION-Y: 1
   KEEP-OPEN: true
 
 fer22:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 8
   POSITION-Y: 1
   KEEP-OPEN: true
   
 fer32:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 6
   POSITION-Y: 2
   KEEP-OPEN: true
   
 fer42:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 7
-  POSITION-Y: 2
+  POSITION-Y: 1
   KEEP-OPEN: true
   
 fer52:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 8
   POSITION-Y: 2
   KEEP-OPEN: true
   
 fer62:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 6
   POSITION-Y: 3
   KEEP-OPEN: true
   
 fer72:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 7
   POSITION-Y: 3
   KEEP-OPEN: true
   
 fer82:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 8
   POSITION-Y: 3
   KEEP-OPEN: true
   
 emerald12:
-  NAME: 'Emeraude Polie'
+  NAME: 'Emeraude Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffiné !'
+  - '&d&oCet Emeraude provient'
+  - '&d&od''un volcan actif.'
   ID: 388
   POSITION-X: 7
-  POSITION-Y: 1
+  POSITION-Y: 2
   KEEP-OPEN: true
   
 fer_plastron:
-  NAME: '&aPlastron Fer Forgé'
+  NAME: '&9Plastron Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &9Rare'
   ID: 307
   POSITION-X: 9
   POSITION-Y: 2
   KEEP-OPEN: true
   
 fer13:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 1
   POSITION-Y: 4
   KEEP-OPEN: true
 
 fer23:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 2
-  POSITION-Y: 4
+  POSITION-Y: 5
   KEEP-OPEN: true
   
 fer33:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 3
   POSITION-Y: 4
   KEEP-OPEN: true
   
 fer43:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 1
   POSITION-Y: 5
   KEEP-OPEN: true
   
 fer53:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 3
   POSITION-Y: 5
   KEEP-OPEN: true
   
 fer63:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 1
   POSITION-Y: 6
   KEEP-OPEN: true
   
 fer73:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 3
   POSITION-Y: 6
   KEEP-OPEN: true
   
 emerald13:
-  NAME: 'Emeraude Polie'
+  NAME: 'Emeraude Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffiné !'
+  - '&d&oCet Emeraude provient'
+  - '&d&od''un volcan actif.'
   ID: 388
   POSITION-X: 2
-  POSITION-Y: 5
+  POSITION-Y: 4
   KEEP-OPEN: true
   
 fer_jambes:
-  NAME: '&aJambières Fer Forgé'
+  NAME: '&9Jambières Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &9Rare'
   ID: 308
   POSITION-X: 4
   POSITION-Y: 5
   KEEP-OPEN: true
   
 fer14:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 6
   POSITION-Y: 5
   KEEP-OPEN: true
   
 fer24:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 8
   POSITION-Y: 5
   KEEP-OPEN: true
   
 fer34:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 6
   POSITION-Y: 6
   KEEP-OPEN: true
   
 fer44:
-  NAME: 'Fer Forgé'
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   ID: 265
   POSITION-X: 8
   POSITION-Y: 6
   KEEP-OPEN: true
   
 emerald14:
-  NAME: 'Emeraude Polie'
+  NAME: 'Emeraude Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffiné !'
+  - '&d&oCet Emeraude provient'
+  - '&d&od''un volcan actif.'
   ID: 388
   POSITION-X: 7
-  POSITION-Y: 6
+  POSITION-Y: 5
   KEEP-OPEN: true
   
 fer_pieds:
-  NAME: '&aBottes Fer Forgé'
+  NAME: '&9Bottes Fer Volcanique'
   LORE:
-  - '&d&oCe fer est'
-  - '&d&otrès dense !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &9Rare'
   ID: 309
   POSITION-X: 9
   POSITION-Y: 5

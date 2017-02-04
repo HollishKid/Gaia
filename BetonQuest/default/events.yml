@@ -14,20 +14,11 @@
 #                                Cross Package
 #
 ###################################################
-login_cleaner: folder login_cleaner_exe
-login_cleaner_exe: folder event_announcer delay:30
 #
 tweet_new_guy: folder tweet_new_guy1,tweet_new_guy2
 tweet_new_guy1: 'command sudo %player% tweet Je viens de rejoindre le serveur !'
 tweet_new_guy2: folder tweet_new_guy3 delay:2
 tweet_new_guy3: 'command sudo %player% tweet send'
-#
-event_announcer: if breche event_announcer_exe else nothing
-event_announcer_exe: folder event_announcer1,event_announcer2,event_announcer3,event_announcer4
-event_announcer1: 'command title %player% times 60 200 60'
-event_announcer2: 'command title %player% title {"text":"Brèche !","bold":true,"italic":true,"color":"dark_red"}'
-event_announcer3: 'command title %player% subtitle {"text":"Athelas est Assiégé !","italic":true,"color":"green"}'
-event_announcer4: 'message &c&lRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d''Athelas !'
 #
 #
 #Deprecated so far

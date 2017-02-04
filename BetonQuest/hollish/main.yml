@@ -1,5 +1,6 @@
 global_locations: sanctuary_door,biblio_door,castle_door
 npcs:
+  '79': hrota
   '120': aiguilleur_village
   '126': aiguilleur_nains
   '183': mageentry
