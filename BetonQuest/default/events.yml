@@ -925,12 +925,11 @@ herboriste2: folder herboriste22 delay:2
 herboriste22: tag add herboriste
 #
 bucheron: folder metier_cleaner,guilder_cleaner,bucheron2
-bucheron2: folder bucheron22,guilde_bucheron_bonus delay:2
+bucheron2: folder bucheron22 delay:2
 bucheron22: tag add bucheron
-guilde_bucheron_bonus: 'command region addmember foret_athelas2 %player% -w Gaia'
+#guilde_bucheron_bonus: 'command region addmember foret_athelas2 %player% -w Gaia'
 #
-guilder_cleaner: folder alchimiste3,acrobate3,guerrier3,pecheur3,mineur3,apprivoiseur3,herboriste3,bucheron3,guilde_bucheron_bonus_remove
-guilde_bucheron_bonus_remove: 'command region removemember foret_athelas2 %player% -w Gaia'
+guilder_cleaner: folder alchimiste3,acrobate3,guerrier3,pecheur3,mineur3,apprivoiseur3,herboriste3,bucheron3
 alchimiste3: tag del alchimiste
 acrobate3: tag del acrobate
 guerrier3: tag del guerrier
@@ -3617,21 +3616,10 @@ nether_donjon_teleport_out_exe2: 'message &d&lNe restez pas traîner là, ce mon
 #
 #
 #
-# Forêts
+# Forêt Athelas
 #
 #
 ####################
-forest_master: folder forest_reset1,forest_reset2
-#
-forest_reset1: folder forest_on,forest_exe1 delay:0
-forest_on: setblock REDSTONE_TORCH_ON -7046;64;2793;Gaia
-forest_exe1: folder forest_off delay:2
-forest_off: setblock AIR -7046;64;2793;Gaia
-#
-forest_reset2: folder forest2_on,forest2_exe1 delay:0
-forest2_on: setblock REDSTONE_TORCH_ON -6764;63;2664;Gaia
-forest2_exe1: folder forest2_off delay:2
-forest2_off: setblock AIR -6764;63;2664;Gaia
 #
 foret_folder_entry: folder tag_foret_athelas,foret_pay,foret_acces,foret_chrono,foret_message_in1,foret_message_in2,foret_message_in3,obj_distance_foret,foret_obj_logout delay:0
 tag_foret_athelas: tag add foret_athelas

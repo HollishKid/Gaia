@@ -29,6 +29,7 @@ on join:
 #
 #
 on load:
+	execute console command "region removemember foret_athelas -a -w Gaia"
 	set {day.index::*} to contents from url "https://gaia-minecraft.000webhostapp.com/day.php/"
 	set {day.index} to {day.index::1}
 	set {event.breach} to 0
@@ -179,6 +180,16 @@ every 55 minutes in "Gaia":
 	clear {break.location.mine3::*}
 	clear {break.type.mine3::*}
 	clear {place.location.mine3::*}
+	wait 2 ticks
+	loop {break.location.foret::*}:
+		set block at loop-value to {break.type.foret::%loop-index%}
+	clear {break.location.foret::*}
+	clear {break.type.foret::*}
+	wait 2 ticks
+	loop {break.location.foret2::*}:
+		set block at loop-value to {break.type.foret2::%loop-index%}
+	clear {break.location.foret2::*}
+	clear {break.type.foret2::*}
 	wait 2 ticks
 	loop {break.location.volcano::*}:
 		set block at loop-value to {break.type.volcano::%loop-index%}

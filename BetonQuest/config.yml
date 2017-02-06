@@ -1,4 +1,4 @@
-version: v48
+version: v51
 mysql:
   host: ''
   port: ''
@@ -57,14 +57,6 @@ conversation_colors:
   option: gray
   player: dark_green
   answer: white,gray,italic
-packages:
-- Random_events
-- default
-- Zedd
-- hollish
-- drisgan
-- lauvel
-- Mysteria
 journal:
   chars_per_page: '245'
   one_entry_per_page: 'true'
