@@ -8,6 +8,18 @@
 #                                                                                              ~ H
 
 crafting-recipes:
+    planches:
+        type: Furnace
+        ingredients:
+            'WOOD ': 1
+        results:
+            'WOOD|Planches Poncées|Ces planches ont|été renforcées. ': 1
+    stone:
+        type: Furnace
+        ingredients:
+            'STONE ': 1
+        results:
+            'STONE|Pierre Durcie|Cette pierre a été renforcée|par une seconde fonte. ': 1
     cuir:
         type: Furnace
         ingredients:

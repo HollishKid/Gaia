@@ -25,8 +25,9 @@ flask_nighthaste:
   Options:
     HideFlags: true
   Lore:
-  - '&8Made by Gretchen Inc.'
-  - '&cNotice: May cause liver failure.'
+  - '&8Par Gretchen Inc.'
+  - '&cNotice : Peut causer des'
+  - '&ctroubles intestinaux.'
   PotionEffects:
   - NIGHT_VISION 1800 1
   - SPEED 1800 1
@@ -37,8 +38,9 @@ flask_strength:
   Options:
     HideFlags: true
   Lore:
-  - '&8Made by Gretchen Inc.'
-  - '&cNotice: May cause heart failure.'
+  - '&8Par Gretchen Inc.'
+  - '&cNotice : Peut causer des'
+  - '&ctroubles cardiaques.'
   PotionEffects:
   - REGENERATION 1800 1
   - DAMAGE_RESISTANCE 1800 1
@@ -49,28 +51,12 @@ flask_suspect:
   Options:
     HideFlags: true
   Lore:
-  - '&8Made by Gretchen Inc.'
-  - '&cNotice: May cause brain failure.'
+  - '&8Par Gretchen Inc.'
+  - '&cNotice : Peut causer des'
+  - '&ctroubles cérébraux.'
   PotionEffects:
   - SLOW 600 1
   - WEAKNESS 600 1
-stick:
-  Id: 280
-  Data: 0
-  Amount: 1
-  Display: '&dStick'
-woodensword:
-  Id: 268
-  Data: 0
-  Amount: 1
-  Display: '&dWooden sword'
-quest_log:
-  Id: 403
-  Data: 0
-  Amount: 1
-  Display: '&2Journal des Quêtes'
-  Lore:
-  - '&8          par &aZ &8& &6H'
 fishingrod_common:
   Id: 346
   Data: 0

@@ -1,0 +1,74 @@
+# 
+#  Configuration
+#
+#
+helmets:
+- leather_helmet
+- chainmail_helmet
+- iron_helmet
+- golden_helmet
+- diamond_helmet
+chestplates:
+- leather_chestplate
+- chainmail_chestplate
+- iron_chestplate
+- golden_chestplate
+- diamond_chestplate
+leggings:
+- leather_leggings
+- chainmail_leggings
+- iron_leggings
+- golden_leggings
+- diamond_leggings
+boots:
+- leather_boots
+- chainmail_boots
+- iron_boots
+- golden_boots
+- diamond_boots
+swords:
+- wooden_sword
+- stone_sword
+- iron_sword
+- golden_sword
+- diamond_sword
+axes:
+- wooden_axe
+- stone_axe
+- iron_axe
+- golden_axe
+- diamond_axe
+attributes_armor:
+- maxHealth
+- knockbackResistance
+- movementSpeed
+- armor
+attributes_weapons:
+- maxHealth
+- knockbackResistance
+- movementSpeed
+- attackDamage
+- attackSpeed
+items_lore2:
+- peut
+- peut peut-être
+- peut sûrement
+- pourrait
+- pourrait peut-être
+- pourrait sûrement
+- devrait
+- devrait sûrement
+- doit sûrement
+- semble
+- semblerait
+- saura sûrement
+- saura peut être
+items_lore3:
+- aider.
+- m'aider.
+- venir en aide.
+- être utile
+- m'être utile.
+- être pratique.
+- servir à quelque chose.
+- faire ses preuves.

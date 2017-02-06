@@ -175,13 +175,7 @@ craft_custom:
   NAME: '&6&oCrafts Spéciaux'
   LORE:
   - '&oRecettes de Crafts'
-  - ' '
-  - '&cAttention :'
-  - '&oVous ne devez &lpas'
-  - '&odéjà avoir l''objet que'
-  - '&ovous craftez dans votre'
-  - '&oinventaire; &lmême'
-  - '&osous une autre forme !'
+  - '&ouniques sur Gaïa.'
   - ' '
   - '&oUtilisation :&l/crafts'
   ID: 58

@@ -390,6 +390,89 @@ pieds_diamant:
   - DURABILITY:1
 #
 #
+# ARMES
+#
+#
+epee_bois_ponce:
+  Id: 268
+  Data: 0
+  Display: '&aÉpée en Bois Poncé'
+  Lore:
+  - '&e&oCette pierre a été renforcée'
+  - '&e&opar une seconde fonte.'
+  - ' '
+  - '&7&oRareté : &aNon-Commun' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 7
+    OffHand:
+      Damage: 4 
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+hache_bois_ponce:
+  Id: 271
+  Data: 0
+  Display: '&aHache en Bois Poncé'
+  Lore:
+  - '&e&oCette pierre a été renforcée'
+  - '&e&opar une seconde fonte.'
+  - ' '
+  - '&7&oRareté : &aNon-Commun' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 7
+    OffHand:
+      Damage: 5
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+#
+#
+epee_pierre_dure:
+  Id: 272
+  Data: 0
+  Display: '&aÉpée en Pierre Durcie'
+  Lore:
+  - '&e&oCette pierre a été renforcée'
+  - '&e&opar une seconde fonte.'
+  - ' '
+  - '&7&oRareté : &aNon-Commun' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 7
+    OffHand:
+      Damage: 4 
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+hache_pierre_dure:
+  Id: 275
+  Data: 0
+  Display: '&aHache en Pierre Durcie'
+  Lore:
+  - '&e&oCette pierre a été renforcée'
+  - '&e&opar une seconde fonte.'
+  - ' '
+  - '&7&oRareté : &aNon-Commun' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 7
+    OffHand:
+      Damage: 5
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+#
+#
 #
 #  FER VOLCANIQUE
 #
