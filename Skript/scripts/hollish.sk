@@ -53,9 +53,8 @@ on vote:
 #  PVP Manager
 #
 #
-On death:
-	if {player.list::*} contains victim:
-		message "This testifies DEATH"
+On death of player:
+	if victim meets betonquest condition "player":
 		if attacker is a player:
 			Wait 17 ticks
 			set {_death_money.%player%} to victim's money
@@ -65,13 +64,14 @@ On death:
 			execute console command "eco give %attacker% %{_death_money_result.%player%}%"
 			send "&aVous volez &f¤&2%{_death_money_result.%victim%}% &ade &2%victim% &aen l'assasinant." to attacker
 			send "&cVous perdez &f¤&2%{_death_money_result.%victim%}% &crécupérés par &2%attacker%&c." to victim
+			give the victim's skull to the attacker
 
 #
 # Disables rain & thunder in all worlds
 #			
 on weather change to rain or thunder:
 	wait 1 minute
-	cancel event
+	set weather to sunny
 #			
 #
 #

@@ -44,7 +44,7 @@ commands:
   - console:/bq event <arg 1> hollish.prison_god_tester<arg 0>
   - '&2<arg 1> &d&oa été sanctionné niveau : &2<arg 0>'
   - ' '
-  - '&d&oUtilisez &aliberer [nom du joueur] &d&opour la/le libérer prématurément,'
+  - '&d&oUtilisez &aliberer [nom du joueur] &d&opour la/le libérer,'
   - '&d&oou lorsque la personne est bloquée en prison.'
   /liberer:
   - console:/bq event <arg 0> hollish.prison_free
