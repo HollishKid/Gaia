@@ -10,11 +10,11 @@ on break:
 		if player's gamemode is survival:
 			if town at player exists:
 				stop
-			if "%{place.location.%{day.index::1}%::*}%" contains "%location of event-block%":
+			if "%{place.location.%{day.index}%::*}%" contains "%location of event-block%":
 				stop
 			else:
-				add location of event-block to {break.location.%{day.index::1}%::*}
-				add type of event-block to {break.type.%{day.index::1}%::*}
+				add location of event-block to {break.location.%{day.index}%::*}
+				add type of event-block to {break.type.%{day.index}%::*}
 	else if event-block is in the region "mine_athelas_mine":
 		if "%{place.location.mine1::*}%" contains "%location of event-block%":
 			stop
@@ -59,7 +59,7 @@ on place:
 			if town at player exists:
 				stop
 			else:
-				add location of event-block to {place.location.%{day.index::1}%::*}
+				add location of event-block to {place.location.%{day.index}%::*}
 	else if event-block is in the region "mine_athelas_mine":
 		if player's gamemode is survival:
 			add location of event-block to {place.location.mine1::*}
