@@ -1,6 +1,5 @@
-#
-Sir_tresor_objt: location -6671;76;3098;Gaia;3 conditions:Sir_tresor events:Tresor_Trouve_tous
-Entre_Chateau: location -7856;61;3636;Gaia;3 conditions:Hist_Tag events:acces_chateau
-Physicien_book: action any BOOKSHELF loc:-6628;64;2893;Gaia;1 conditions:Physicien_tag events:Physicien_book_give,Physicien_message,Physicien_journal_reload,physique_book_tagged
-Quetes_promo_obj1: location -7814;68;3545;Gaia;15 conditions:Quetes_promo,night events:Quetes_promo_modspawn
+Sir_tresor_objt: location -6671;76;3098;Gaia 3 conditions:Sir_tresor events:Tresor_Trouve_tous
+Entre_Chateau: location -7856;61;3636;Gaia 3 conditions:Hist_Tag events:acces_chateau
+Physicien_book: action any BOOKSHELF loc:-6628;64;2893;Gaia range:1 conditions:Physicien_tag events:Physicien_book_give,Physicien_message,Physicien_journal_reload,physique_book_tagged
+Quetes_promo_obj1: location -7814;68;3545;Gaia 15 conditions:Quetes_promo,night events:Aventurier_Ensorceler
 Quetes_promo_obj2: mmobkill Aventurier_Ensorceler amount:1 events:Quetes_promo_Done

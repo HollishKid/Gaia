@@ -1,0 +1,45 @@
+quester: 'Alchimiste'
+first: alc_r1
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  alc_r1:
+    text: 'Bonjour, que voulez vous ?'
+    pointers: alc_q1,alc_q2
+  alc_r2:
+    text: 'Oh, mais ne toucher à rien. \nSi un troisième bras vous pousse dans le dos... cela est votre faute.'
+  alc_r3:
+    text: 'Oh, mais qu''est-ce que sais ?'
+    pointers: alc_q3
+  alc_r4:
+    text: 'Oh, et il voudrais savoir ce qui lui est arrivé ?'
+    pointers: alc_q4
+  acl_r5:
+    text: 'Oh, je m''en occupe'
+    events: Prend_Chair,Analyser
+    pointers: acl_q5
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  alc_q1:
+    text: 'Bonjour, je visiter juste.'
+    pointers: alc_r2
+  alc_q2:
+    text: 'Bonjour, le Chef d''escadron ma envoyer vous remmetre ceci pour que vous l''analyser.'
+    conditions: 'Alchimiste'
+    pointers: alc_r3
+  alc_q3:
+    text: 'C''est un bout de chair d''un guerrier muté trouver au moulin.'
+    pointers: alc_r4
+  alc_q4:
+    text: 'Oui, toute à fais.'
+    pointers: acl_r5
+  acl_q5:
+    text: 'Merci bien.'

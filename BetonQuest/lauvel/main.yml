@@ -15,3 +15,7 @@ npcs:
   '403': Physicien_Drizz
   '407': Chef_Escadron
   '408': Claire
+  '448': Alchimiste
+  '449': Jiang_Chen
+cancel: {}
+enabled: true

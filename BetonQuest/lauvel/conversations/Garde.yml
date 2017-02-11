@@ -23,17 +23,17 @@ NPC_options:
     text: 'Bien sur que non !'
   a1:
     text: 'Oui, il y a un soldat anxieux vers la blibliothèque !'
-    conditions: '!Ryan_Tag,Loyer_Done,Besoin_Aide'
+    conditions: '!Ryan_Done,Loyer_Done,Besoin_Aide'
   a2:
     text: 'Oui, il y a un soldat déprimer pas loin du garde supérieure !'
-    conditions: '!Loyer_Done,Ryan_Tag,Besoin_Aide'
+    conditions: '!Loyer_Done,Ryan_Done,Besoin_Aide'
   a3:
     text: 'Oui, il ya un soldat anxieux vers la blibliothèque et un soldat déprimer pas loin du garde supérieure !'
     conditions: 'Besoin_Aide'
 player_options:
   aide:
     text: 'Est-ce que vous connaissez des soldats qui aurais besoin d''aide ?'
-    conditions: 'Besoin_Aide,!Loyer_Done,!Ryan_Tag'
+    conditions: 'Besoin_Aide,!Loyer_Done,!Ryan_Done'
     pointers: a1,a2,a3
   oui:
     text: 'Oui, prenez soin de moi !'
@@ -41,4 +41,6 @@ player_options:
   pk:
     text: 'Pourquoi, vous croyez que je serais recalé ?'
     pointers: ahah2
+
+
 

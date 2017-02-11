@@ -30,6 +30,18 @@ NPC_options:
     text: 'Bien ! Après ça, revenez faire votre rapport.'
     events: Quetes_promo
     pointers: ok
+  chef_r1:
+    text: 'Alors avez vous trouvez quelque chose ?'
+    pointers: chef_q1,chef_q2
+  chef_r2:
+    text: 'Quoi! Qu''est-ce que vous faites là ? bougez vous !!!'
+  chef_r3:
+    text: 'Je comprend. Et vous dites que vous avez trouver un bout de chair de ce muté ?'
+    pointers: chef_q3,chef_q4
+  chef_r4:
+    text: 'Ok, je vois, ramené le à l''achimiste il devrais pouvoir l''analyser.'
+    events: alchimiste
+    pointers: chef_q5
 #############
 #           #
 #   Joueur  #
@@ -50,3 +62,23 @@ player_options:
     pointers: bien2
   ok:
     text: 'Oui, Chef !'
+  chef_q1:
+    text: 'Non, j''ai pas encore étais.'
+    conditions: 'Quetes_promo,!Aventurier_Ensorceler_kill'
+    pointers: chef_r2
+  chef_q2:
+    text: 'Oui. Voilà, pour commencer.'
+    conditions: 'Aventurier_Ensorceler_kill,!Quetes_promo'
+    events: mes_chef_q2
+    pointers: chef_r3
+  chef_q3:
+    text: 'Euh, Oui.'
+    pointers: chef_r4
+  chef_q4:
+    text: 'Bien sur le voici.'
+    pointers: chef_r4
+  chef_q5:
+    text: 'Ok, je mon occupe.'
+
+
+

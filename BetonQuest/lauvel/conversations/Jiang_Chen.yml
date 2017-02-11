@@ -1,0 +1,47 @@
+quester: 'Jiang Chen'
+first: jc_q1
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  jc_q1:
+    text: 'Bonjour à toi %player.'
+    pointers: jc_r1
+  jc_q2:
+    text: 'Je suis Jiang Chen un guerrier légendaire de la garde royal du Roi Ubu.'
+    pointers: jc_r2
+  jc_q3:
+    text: 'Je suis là comme envoyé pour vous parler des prochaines mission important'
+    pointers: jc_r3
+  jc_q4:
+    text: 'Vous serez envoyer dans une nouvelle ville nommé Historia ou régnais l''amour.'
+    pointers: jc_r4
+  jc_q5:
+    text: 'Oui depuis que le prince à pris le courronnement après la mort du Roi la ville à changer est à coupé les pont avec Athélas.\nUne mission vous sera donner par un le Garde supérieure qui est un ancien d''Athélas.'
+    pointers: jc_r5
+  jc_q6:
+    text: 'Nous le savons pas pour le moment mais vous serez informer en tant voulu.'
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  jc_r1:
+    text: 'Bonjour, mais qui êtes-vous ?'
+    pointers: jc_q2
+  jc_r2:
+    text: 'Oh, je vois. et que faites vous ici ?'
+    pointers: jc_q3
+  jc_r3:
+    text: 'Et qu''elles sont c''est mission ?'
+    pointers: jc_q4
+  jc_r4:
+    text: '"Regnais" ?'
+    pointers: jc_q5
+  jc_r5:
+    text: 'Ok, et quand devrais-je y aller ?'
+    pointers: jc_q6
