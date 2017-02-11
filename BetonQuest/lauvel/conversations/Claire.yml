@@ -1,4 +1,4 @@
-quester: Claire
+quester: 'Claire'
 first: loyer,gentil,mechante,inconnue
 stop: 'false'
 ###########
@@ -8,42 +8,42 @@ stop: 'false'
 ###########
 NPC_options:
   inconnue:
-    text: Bonjour à vous !
+    text: 'Bonjour à vous !'
     conditions: 'Hist_Tag'
   gentil:
-    text: Rebonjour ! Merci encore pour ton aide !
+    text: 'Rebonjour ! Merci encore pour ton aide !'
     conditions: 'Bonter_Tag,!Cruel_Tag'
   mechante:
-    text: Partez d'ici ! Je ne veux  plus vous revoier ici !
+    text: 'Partez d''ici ! Je ne veux  plus vous revoier ici !'
     conditions: 'Cruel_Tag,!Bonter_Tag'
   loyer:
-    text: Qu'est ce que vous voulez ? Vous venez encore pour le loyer ?
+    text: 'Qu''est ce que vous voulez ? Vous venez encore pour le loyer ?'
     conditions: 'Quetes_Loyer,!Loyer_Done'
-    pointer: oui
+    pointers: oui
   alors:
-    text: alors ça ne changera pas ! Je ne payerais pas !
-    pointer: pourquoi
+    text: 'alors ça ne changera pas ! Je ne payerais pas !'
+    pointers: pourquoi
   quoi:
-    text: Quoi, vous savez pas ?! Le roi à encore augmenter le loyer ! \nJ'aurais plus de quoi me nourrir mais aussi mes location.
-    pointer: desoler
+    text: 'Quoi, vous savez pas ?! Le roi à encore augmenter le loyer ! \nJ''aurais plus de quoi me nourrir mais aussi mes location.'
+    pointers: desoler
   prix:
-    text: Combien ? eh ben le loyer est monter à ¤1000.
-    pointer: payer,menacer
+    text: 'Combien ? eh ben le loyer est monter à ¤1000.'
+    pointers: payer,menacer
   menace2:
-    text: Je ne payerais pas ! Vous pouvez toujour attendre !
-    pointer: menace3,payer
+    text: 'Je ne payerais pas ! Vous pouvez toujour attendre !'
+    pointers: menace3,payer
   comment:
-    text: Comment ? Je ne peux accepter !
-    pointer: bonte
+    text: 'Comment ? Je ne peux accepter !'
+    pointers: bonte
   bonte2:
-    text: Alors, je ne peut qu'accepter, je vous remercie.
-    events: 'Verifier_Argent'
+    text: 'Alors, je ne peut qu''accepter, je vous remercie.'
+    events: Verifier_Argent
   menace4:
-    text: Vous n'allez pas oser faire ça ! Non, vous le penser vraiment ?
-    pointer: cruel
+    text: 'Vous n''allez pas oser faire ça ! Non, vous le penser vraiment ?'
+    pointers: cruel
   cruel2:
-    text: Non, tenez et virer de chez moi !
-    events: 'Loyer_Payer_Cruel,Quetes_Loyer2'
+    text: 'Non, tenez et virer de chez moi !'
+    events: Loyer_Payer_Cruel,Quetes_Loyer2
 #############
 #           #
 #   Joueur  #
@@ -51,26 +51,26 @@ NPC_options:
 #############
 player_options:
   oui:
-    text: Oui, toue à fais !
-    pointer: alors
+    text: 'Oui, toue à fais !'
+    pointers: alors
   pourquoi:
-    text: Pourquoi voulez vous pas payer votre loyer ?
-    pointer: quoi
+    text: 'Pourquoi voulez vous pas payer votre loyer ?'
+    pointers: quoi
   desoler:
-    text: Désoler, je suis nouveau ! Et combien s'éleve votre loyer ?
-    pointer: prix
+    text: 'Désoler, je suis nouveau ! Et combien s''éleve votre loyer ?'
+    pointers: prix
   payer:
-    text: Je vais payer le loyer à votre place !
-    pointer: comment
+    text: 'Je vais payer le loyer à votre place !'
+    pointers: comment
   menacer:
-    text: Vous allez quand même le payer !
-    pointer: menace2
+    text: 'Vous allez quand même le payer !'
+    pointers: menace2
   menace3:
-    text: Si vous ne voulez pas payer, je pillerais votre auberge pour vendre au montant de votre loyer !
-    pointer: menace4
+    text: 'Si vous ne voulez pas payer, je pillerais votre auberge pour vendre au montant de votre loyer !'
+    pointers: menace4
   bonte:
-    text: bien sur que si ! laisse moi vous rendre service !
-    pointer: bonte2
+    text: 'bien sur que si ! laisse moi vous rendre service !'
+    pointers: bonte2
   cruel:
-    text: voulez vous tenter le coup ?!
-    pointer: cruel2
+    text: 'voulez vous tenter le coup ?!'
+    pointers: cruel2

@@ -1,9 +1,9 @@
 #Choses à savoir pour un livre, attention, le BQ prend la première pour marquer la date de l'entry
-#50 pages long, with up to 256 characters per page, with line breaks counting as two characters. 
+#50 pages long, with up to 256 characters per page, with line breaks counting as two characters.
 #No page may be longer than 14 lines and each line can have an average of 19 characters, determined by the width of the used characters.
 #Ne pas oublier d'enlever l'entry une fois terminée
 player_stats: 'Temps de Jeu: %ph.statistic_time_played% Connections: %ph.statistic_join_game% Kills: %ph.statistic_player_kills% Morts: %ph.statistic_deaths% Blocs cassés: %ph.statistic_mine_block% Voyagé: %ph.statistic_walk_one_cm% Coffres Ouverts: %ph.statistic_chest_opened%'
-admin_stats: '%ph.pluginscount% Unique Joins: %ph.server_unique_joins% Uptime: %ph.server_uptime% %ph.server_ram_used% / %ph.server_ram_total%' 
+admin_stats: '%ph.pluginscount% Unique Joins: %ph.server_unique_joins% Uptime: %ph.server_uptime% %ph.server_ram_used% / %ph.server_ram_total%'
 #
 # Intendant
 #
@@ -15,7 +15,7 @@ gestionnaire_progress_done_journal: 'J''ai planté assez de graines. Je devrais 
 gestionnaire_found: 'J''ai fait ce que le Gestionnaire m''a demandé. Je devrais retourner voir l''Intendant (-7035,70,2940).'
 #
 journal_jacopo_go: 'L''Intendant m''a dit d''aller voir Jacopo sur les quais d''Athelas, à côté du bâteau de transport.'
-journal_jacopo_bat: 'Jacopo m''a demandé de fabriquer un bateau pour mon entraînement en mer. Une fois que je l''ai crafté, je devrais le lui apporter !'
+journal_jacopo_bat: 'Jacopo m''a demandé de fabriquer un bateau en bois de chêne pour mon entraînement en mer. Une fois que je l''ai crafté, je devrais le lui apporter !'
 journal_jacopo_ermite: 'Jacopo m''a demandé de naviguer jusqu''à un Ermite sur une ile en sable au Sud-Est d''Athelas.'
 journal_ermite_back: 'J''ai navigué jusqu''à l''Ermite. Je devrais retourner voir Jacopo sur le port d''Athelas.'
 journal_jacopo_approuved: 'Ma formation auprès de Jacopo a été approuvée. Je devrais retourner voir l''Intendant.'

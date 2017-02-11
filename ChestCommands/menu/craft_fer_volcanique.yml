@@ -1,0 +1,484 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dCrafts de Fer Volcanique'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+fer1:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+fer2:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+fer3:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 3
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+fer4:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+fer5:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+emerald1:
+  NAME: 'Emeraude Volcanique'
+  LORE:
+  - '&d&oCet Emeraude provient'
+  - '&d&od''un volcan actif.'
+  ID: 388
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+fer_casque:
+  NAME: '&9Casque Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 306
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+fer12:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 6
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+fer22:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 8
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+fer32:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+fer42:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 7
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+fer52:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+fer62:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+fer72:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 7
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+fer82:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 8
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+emerald12:
+  NAME: 'Emeraude Volcanique'
+  LORE:
+  - '&d&oCet Emeraude provient'
+  - '&d&od''un volcan actif.'
+  ID: 388
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+fer_plastron:
+  NAME: '&9Plastron Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 307
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+fer13:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 1
+  POSITION-Y: 4
+  KEEP-OPEN: true
+
+fer23:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+fer33:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+fer43:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 1
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+fer53:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 3
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+fer63:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 1
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+fer73:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 3
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+emerald13:
+  NAME: 'Emeraude Volcanique'
+  LORE:
+  - '&d&oCet Emeraude provient'
+  - '&d&od''un volcan actif.'
+  ID: 388
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+fer_jambes:
+  NAME: '&9Jambières Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 308
+  POSITION-X: 4
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+fer14:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+fer24:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 8
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+fer34:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 6
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+fer44:
+  NAME: 'Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
+  POSITION-X: 8
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+emerald14:
+  NAME: 'Emeraude Volcanique'
+  LORE:
+  - '&d&oCet Emeraude provient'
+  - '&d&od''un volcan actif.'
+  ID: 388
+  POSITION-X: 7
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+fer_pieds:
+  NAME: '&9Bottes Fer Volcanique'
+  LORE:
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 309
+  POSITION-X: 9
+  POSITION-Y: 5
+  KEEP-OPEN: true
+
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '58'
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 7
+  KEEP-OPEN: true
+ 
+blocker72:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 9
+  KEEP-OPEN: true

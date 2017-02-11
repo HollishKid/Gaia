@@ -1,29 +1,29 @@
-quester: Hollish
+quester: 'Hollish'
 first: hello
 stop: 'false'
 #Options du NPC
 NPC_options:
   hello:
-    text: Bonjour &2%player%&a&o, je suis &6Hollish&a&o, Co-Fondateur de Gaïa.
-    pointer: role,citation,sens
-    event: hollishpresentation
-  role_rep: 
-    text: Je m'occupe de tout ce que vous ne voyez pas, tout ce qui permet de faire fonctionner Gaïa le plus parfaitement possible.
-    event: hollishrole
+    text: 'Bonjour &2%player%&a&o, je suis &6Hollish&a&o, Co-Fondateur de Gaïa.'
+    pointers: role,citation,sens
+    events: hollishpresentation
+  role_rep:
+    text: 'Je m''occupe de tout ce que vous ne voyez pas, tout ce qui permet de faire fonctionner Gaïa le plus parfaitement possible.'
+    events: hollishrole
   citation_rep:
-    text: La Nature est un livre écrit en langage Mathématique.
-    event: hollish.atom,hollishcitation
+    text: 'La Nature est un livre écrit en langage Mathématique.'
+    events: hollish.atom,hollishcitation
   sens_rep:
-    text: http://files.enjin.com/1186825/Le_Penseur.jpg
-    event: hollish.helix
+    text: 'http://files.enjin.com/1186825/Le_Penseur.jpg'
+    events: hollish.helix
 #Options du joueur
 player_options:
   role:
-    text: Quel est ton rôle sur Gaïa ?
-    pointer: role_rep
+    text: 'Quel est ton rôle sur Gaïa ?'
+    pointers: role_rep
   citation:
-    text: Quelle est ta citation préférée ?
-    pointer: citation_rep
+    text: 'Quelle est ta citation préférée ?'
+    pointers: citation_rep
   sens:
-    text: Quel est le Sens de la Vie ?
-    pointer: sens_rep
+    text: 'Quel est le Sens de la Vie ?'
+    pointers: sens_rep

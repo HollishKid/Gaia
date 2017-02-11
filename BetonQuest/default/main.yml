@@ -1,65 +1,26 @@
 static:
   '23:58': forest_master
   '23:59': randomizer
-  '10:57': mine_master
   '10:56': forest_master
-  '11:07': chest_loot_timer
-  '12:02': mine_master
-  '12:07': chest_loot_timer
   '12:11': forest_master
   '13:02': forest_master
-  '13:03': mine_master
-  '13:07': chest_loot_timer
   '14:03': forest_master
-  '14:04': mine_master
-  '14:07': chest_loot_timer
   '15:04': forest_master
-  '15:05': mine_master
-  '15:07': chest_loot_timer
   '16:05': forest_master
-  '16:06': mine_master
-  '16:07': chest_loot_timer
   '17:06': forest_master
-  '17:07': mine_master
-  '17:08': chest_loot_timer
-  '18:08': mine_master
-  '18:09': chest_loot_timer
   '19:08': forest_master
-  '19:09': mine_master
-  '19:10': chest_loot_timer
   '20:17': forest_master
-  '20:20': mine_master
-  '20:07': chest_loot_timer
   '21:20': forest_master
-  '21:21': mine_master
-  '21:07': chest_loot_timer
   '22:21': forest_master
-  '22:22': mine_master
-  '22:07': chest_loot_timer
   '23:22': forest_master
-  '23:23': mine_master
-  '23:07': chest_loot_timer
-  00:24: forest_master
-  00:25: mine_master
-  00:07: chest_loot_timer
-  01:00: forest_master
-  01:01: mine_master
-  01:07: chest_loot_timer
-  02:01: forest_master
-  02:02: mine_master
-  02:07: chest_loot_timer
-  03:02: forest_master
-  03:03: mine_master
-  03:07: chest_loot_timer
-  04:03: forest_master
-  04:04: mine_master
-  04:07: chest_loot_timer
-  05:04: forest_master
-  05:05: mine_master
-  05:06: chest_loot_timer
+  '00:24': forest_master
+  '01:00': forest_master
+  '02:01': forest_master
+  '03:02': forest_master
+  '04:03': forest_master
+  '05:04': forest_master
 global_locations: cimereached,spiritualium1,spiritualium2,spiritualium3
 npcs:
-  '7': innkeeper
   '1': amiral
   '8': man
   '12': pattefol
@@ -97,8 +58,6 @@ npcs:
   '76': banker
   '77': banker
   '78': banker
-  '79': banker
-#  '80': banker
   '81': banker
   '89': adelaide
   '93': survivant
@@ -116,7 +75,6 @@ npcs:
   '111': jozef
   '113': seimag
   '114': foronar
-  '115': lutcha
   '118': paulette
   '119': sofia
   '125': officier2
@@ -174,70 +132,46 @@ npcs:
   '441': expert
 journal_main_page:
   line1:
-    text: '     --¤--'
-    conditions: ''
+    text: '-------- ¤ --------'
     priority: 1
   line2:
-    text: Journal de Progression
-    conditions: ''
+    text: '    Progression'
     priority: 2
   line3:
-    text: '   de %player%'
-    conditions: ''
+    text: '     de &6%player%'
     priority: 3
   line4:
     text: ' '
-    conditions: ''
     priority: 4
   line5:
-    text: '  Points de Quête:'
-    conditions: ''
+    text: 'Compétences : &2%ph.mcmmo_power_level%'
     priority: 5
   line6:
-    text: '   %point.quest_points.amount%'
-    conditions: ''
+    text: 'Points de Quête : &2%point.quest_points.amount%'
     priority: 6
   line7:
-    text: ' '
-    conditions: ''
+    text: 'Réputation : &2%point.reput_athelas.amount%'
     priority: 7
   line8:
-    text: ' '
-    conditions: ''
+    text: 'Spiritualité : &2%point.spirituality.amount%'
     priority: 8
   line9:
-    text: ' '
-    conditions: ''
+    text: 'Points de Vote : &2%point.votes.amount%'
     priority: 9
   line11:
-    text: 'En Poche: ¤%ph.vault_eco_balance_fixed%'
-    conditions: ''
+    text: 'En Poche : &a¤&2%ph.vault_eco_balance_fixed%'
     priority: 11
   line12:
-    text: 'En Banque: ¤%point.compte.amount%'
-    conditions: ''
+    text: 'En Banque : &a¤&2%point.compte.amount%'
     priority: 12
-  line13:
-    text: 'Réputation: %point.reput_athelas.amount%'
-    conditions: ''
-    priority: 13
-  line14:
-    text: 'Spiritualité: %point.spirituality.amount%'
-    conditions: ''
-    priority: 14
   line15:
-    text: 'Points de Vote: %point.votes.amount%'
-    conditions: ''
-    priority: 15
-  line16:
-    text: '     --¤--'
-    conditions: ''
-    priority: 16
-cancel: {}
+    text: '-------- ¤ --------'
+    priority: 13
 variables:
-  lastplayerkiller: thisisamessagethathastobefiltered
-  lastplayerkilled: sanson75
+  lastplayerkiller: 'thisisamessagethathastobefiltered'
+  lastplayerkilled: 'sanson75'
   playerkilledmoney: '18199.59613769039'
   arrowscore1: '1'
   arrowscore2: '2'
   arrowscore3: '3'
+

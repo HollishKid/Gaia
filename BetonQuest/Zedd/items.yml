@@ -9,7 +9,7 @@ key: TRIPWIRE_HOOK name:&eDemon_key lore:Used_probably_to_unlock_some_bars;&2Que
 pumpkin_pie: PUMPKIN_PIE data:0
 diamond: DIAMOND data:0
 chain_chestplate: CHAINMAIL_CHESTPLATE data:0
-chainchest_common: 'CHAINMAIL_CHESTPLATE data:0 name:§aCote_de_mailles lore: enchants:PROTECTION_ENVIRONMENTAL:1,PROTECTION_PROJECTILE:1'
+chainchest_common: CHAINMAIL_CHESTPLATE data:0 name:§aCote_de_mailles enchants:PROTECTION_ENVIRONMENTAL:1,PROTECTION_PROJECTILE:1
 steak: COOKED_BEEF data:0
 iron_bar: IRON_INGOT data:0
 bow_common: BOW data:0 name:§aArc_simple lore:;§8§oFabrication_simple;§8§omais_efficace! enchants:ARROW_DAMAGE:1
@@ -24,7 +24,7 @@ hypercap: WATCH data:0 name:§2Hypercapaciteur_Bidulotron lore:;§8§oPour_mesur
 hyperreg: WATCH data:0 name:§2Hypercapaciteur_Bidulotron lore:;§8§oRéglé_sur_la;§8§osensibilité_maximum;§2Objet_de_Quête
 nether_wart: NETHER_STALK data:0
 potion_closeportal: BLAZE_ROD data:0 name:§2Brouilleur_arcanique lore:;§8§oDevrait_suffire_à_rendre;§8§ole_portail_inutilisable.;§2Objet_de_Quête
-arrow: ARROW data:0
+an_arrow: ARROW data:0
 ombre_jaune: GOLD_BLOCK data:0 name:§2Ombre_Jaune lore:;§8§oDes_scènes_de_carnage_sont;§8§ogravées_sur_les_faces...;§2Objet_de_Quête
 gouttedelave: MAGMA_CREAM data:0 name:§2Goutte_de_lave lore:;§8§oLa_goutte_est_étrangement;§8§ofroide_au_contact...
 leather_oxy: LEATHER_HELMET data:0 name:§fMasque_de_plongée lore:_;§7§oRareté_:_§fCommun enchants:OXYGEN:1

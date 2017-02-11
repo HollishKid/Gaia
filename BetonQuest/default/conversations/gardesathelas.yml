@@ -1,16 +1,16 @@
-quester: Garde Royal
+quester: 'Garde Royal'
 first: unknown,jour,nuit
 stop: 'false'
 #Options du NPC
 NPC_options:
-  'unknown':
-    text: Vous n'êtes pas citoyen de cette ville, parles à l'&2Intendant &a&o!
+  unknown:
+    text: 'Vous n''êtes pas citoyen de cette ville, parles à l''&2Intendant &a&o!'
     conditions: '!intendant_done'
-  'jour':
-    text: Bonjour !
+  jour:
+    text: 'Bonjour !'
     conditions: 'day,intendant_done'
-  'nuit':
-    text: Bonsoir, vous ne devriez pas vous aventurer à l'extérieur de nuit, les monstres sont féroces !
+  nuit:
+    text: 'Bonsoir, vous ne devriez pas vous aventurer à l''extérieur de nuit, les monstres sont féroces !'
     conditions: '!day,intendant_done'
 #Options du joueur
 player_options:

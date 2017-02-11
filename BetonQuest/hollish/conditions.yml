@@ -1,4 +1,4 @@
-# 
+#
 # Conditions
 #             For Gaïa
 #                       By Hollish
@@ -35,15 +35,15 @@ os3_hand: hand bone_gros
 #
 spirituality1: point default.spirituality 1
 spirituality100: point default.spirituality 100
+spirituality150: point default.spirituality 150
+spirituality200: point default.spirituality 200
 spirituality250: point default.spirituality 250
-spirituality1500: point default.spirituality 1500
-spirituality2000: point default.spirituality 2000
-spirituality3000: point default.spirituality 3000
-spirituality5000: point default.spirituality 5000
-spirituality10000: point default.spirituality 10000
+spirituality300: point default.spirituality 300
+spirituality500: point default.spirituality 500
+spirituality1000: point default.spirituality 1000
 #
 #
-# Fables 
+# Fables
 #
 #
 fables_t1p1: tag fables_t1p1
@@ -86,7 +86,7 @@ fables_t3p4_have: item fables_t3p4
 # TRAIN
 #
 ##########
-riding: riding minecart
+is_riding: riding minecart
 #
 tag_train_village: tag train_village
 destination_village: tag destination_village
@@ -234,7 +234,14 @@ mageentry_approved: tag mageentry_approved
 #
 #
 #
-wand_inventory: wand inventory
+wand1_inventory: and wand1_inventory1,!wand_air
+wand1_inventory1: wand inventory name:airbender
+wand2_inventory: and wand2_inventory1,!wand_fire
+wand2_inventory1: wand inventory name:firebender
+wand3_inventory: and wand3_inventory1,!wand_earth
+wand3_inventory1: wand inventory name:earthbender
+wand4_inventory: and wand4_inventory1,!wand_water
+wand4_inventory1: wand inventory name:waterbender
 wand_air: wand hand name:airbender
 wand_earth: wand hand name:earthbender
 wand_water: wand hand name:waterbender
@@ -268,6 +275,7 @@ other_fire_faction: or earth,water,air
 #
 #
 wand_hand: wand hand
+wand_inventory: wand inventory
 baguette_magic_missile: tag baguette_magic_missile
 baguette_flare: tag baguette_flare
 #
@@ -328,10 +336,25 @@ tag_ardere_aang: tag tag_ardere_aang
 aang_baton_have: item baton
 tag_aang_baton: tag tag_aang_baton
 empty_1: empty 1
-ingredients_air_wand: and aang_baton_have,fiole_air_calmed_have,empty_1
+ingredients_air_wand: and fiole_air_calmed_have,empty_1
 air_wand: tag air_wand
+fire_wand: tag fire_wand
+earth_wand: tag earth_wand
+water_wand: tag water_wand
 #
-# Erudits (autres, tempo)
+#
+# Érudit de la Terre
+#
+#
+pierre_terre_hand: hand pierre_terre
+pierre_terre_have: item pierre_terre
+region_north: region north
+terre_find: tag terre_find
+terre_found: tag terre_found
+terre_orno: tag terre_orno
+terre_orno_done: tag terre_orno_done
+#
+# Érudits (autres, tempo)
 #
 earthtemple_magic_learning: tag earthtemple_magic_learning
 firetemple_magic_learning: tag firetemple_magic_learning
@@ -349,9 +372,9 @@ hollish_here: party 500 inside_louvre any:hollish count:2
 inside_louvre: region pre_louvre
 screen_on: testforblock -9731;81;2362;Gaia STONE
 #
-# 
 #
-#  Ingor 
+#
+#  Ingor
 #
 #
 ##################################
@@ -422,9 +445,18 @@ north_bridge_repair_have: and stone_bricks200,planks100
 stone_bricks200: item stone_bricks:200
 planks100: item planks:100
 #
-# 
+# Hrota
 #
-#  JEUX 
+hrota_start: tag hrota_start
+around_ingor_mine: location -6500;80;2200;Gaia;200
+hrota_killed_gobs: and hrota_killed_gobs1,hrota_killed_gobs2
+hrota_killed_gobs1: tag hrota_killed_gobs1
+hrota_killed_gobs2: tag hrota_killed_gobs2
+ingor_mine_access: tag ingor_mine_access
+#
+#
+#
+#  JEUX
 #
 #
 ##################################

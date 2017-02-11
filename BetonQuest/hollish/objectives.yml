@@ -1,4 +1,4 @@
-# 
+#
 # OBJECTIVES
 #
 #             For Gaïa
@@ -36,19 +36,19 @@ sanct_summon: location -7019;62;2494;Gaia;4 events:sanct_summon_exe
 #
 #Get in Cart
 #
-gare_summon_obj: vehicle minecart event:gare_summon_depart,in_train_tester
-guilde_summon_obj: vehicle minecart event:guilde_summon_depart,in_train_tester
-porteo_summon_obj: vehicle minecart event:porteo_summon_depart,in_train_tester
-chateau_summon_obj: vehicle minecart event:chateau_summon_depart,in_train_tester
-porten_summon_obj: vehicle minecart event:porten_summon_depart,in_train_tester
-gm_summon_obj: vehicle minecart event:gm_summon_depart,in_train_tester
-nains_summon_obj: vehicle minecart event:nains_summon_depart,in_train_tester
-village_summon_obj: vehicle minecart event:village_summon_depart,in_train_tester
-sanct_summon_obj: vehicle minecart event:sanct_summon_depart,in_train_tester
+gare_summon_obj: vehicle minecart events:gare_summon_depart,in_train_tester
+guilde_summon_obj: vehicle minecart events:guilde_summon_depart,in_train_tester
+porteo_summon_obj: vehicle minecart events:porteo_summon_depart,in_train_tester
+chateau_summon_obj: vehicle minecart events:chateau_summon_depart,in_train_tester
+porten_summon_obj: vehicle minecart events:porten_summon_depart,in_train_tester
+gm_summon_obj: vehicle minecart events:gm_summon_depart,in_train_tester
+nains_summon_obj: vehicle minecart events:nains_summon_depart,in_train_tester
+village_summon_obj: vehicle minecart events:village_summon_depart,in_train_tester
+sanct_summon_obj: vehicle minecart events:sanct_summon_depart,in_train_tester
 #
 # Stay in Cart
 #
-in_train_tester: delay 0 condition:!riding events:in_train_tester_out
+in_train_tester: delay 0 conditions:!is_riding events:in_train_tester_out
 #
 mine_obj_distance: region mine_athelas_mine events:mine_obj_distance_exe
 mine_obj_distance_exe: delay 0 conditions:!or_in_mine_athelas events:mine_abandon interval:200
@@ -61,7 +61,6 @@ book_erudit: craft book_and_quill 1 events:tag_erudit_book
 #
 #
 obj_air_mill: location -2912;186;2868;Gaia;4 events:air_mill_attained
-obj_distance_air_temple: delay 0 conditions:!air_obj_distance_exe,tag_moine_air events:air_temple_lose
 obj_air_temple_loc1: location -2895;197;2877;Gaia;3 events:air_meka1
 obj_air_temple_loc2: location -2858;165;2885;Gaia;3 events:air_meka2
 obj_air_temple_loc3: location -2877;180;3049;Gaia;3 events:air_meka3
@@ -70,7 +69,7 @@ obj_air_temple_loc5: location -2928;158;3000;Gaia;2 events:air_meka5
 #
 obj_milo_fiole: craft fiole 1 events:milo_fiole_mess,tag_milo_fiole
 obj_air_catcher: action right any conditions:region_east,fiole_hand events:air_captured,take_fiole,give_fiole_air_est,milo_fiole1 loc:-5000;60;5000;Gaia;7000
-obj_fiole_sommet: location -6880;111;2530;Gaia;5 conditions:!midday,fiole_air_have event:fiole_calmed
+obj_fiole_sommet: location -6880;111;2530;Gaia;5 conditions:!midday,fiole_air_have events:fiole_calmed
 aang_baton_obj: craft baton 1 events:aang_baton_obj_done
 #
 obj_gros_os: action right GRASS conditions:os3_hand events:burried_gros_os loc:-5000;60;5000;Gaia;7000
@@ -83,9 +82,17 @@ sancossi_kill_obj: mmobkill sancossi amount:1 events:sancossi_killed
 obj_rally_dwarves: location -6293;95;2664;Gaia;15 events:rally_dwarves
 sancossi_abandon_obj: delay 0 conditions:!dwarf_castle_occupied_exe events:sancossi_abandon
 objective_casar_killingspree: mmobkill zombielvlnorth amount:15 events:casar_killed_spree notify
+hrota_obj: mmobkill zombielvlnorth amount:30 conditions:around_ingor_mine events:hrota_tank_killed notify
+hrota_obj2: mmobkill skeletonlvlnorth amount:20 conditions:around_ingor_mine events:hrota_archer_killed notify
 #
 #
-louvre_obj: password mellon ignoreCase events:louvre_open
+# Érudit de la Terre
+#
+#
+terre_find: action right any conditions:pierre_terre_hand events:terre_find_exe 
+#
+#
+louvre_obj: password 'mellon' ignoreCase events:louvre_open
 #
 # MiniGames
 #
@@ -96,4 +103,5 @@ uhc_obj_kill_team3: kill 1 required:uhc_not_team3 events:uhc_obj_kill_team3_done
 uhc_obj_kill_team4: kill 1 required:uhc_not_team4 events:uhc_obj_kill_team4_done
 #
 uhc_die: die cancel respawn:-10414;25;4912;Gaia events:uhc_death
+
 

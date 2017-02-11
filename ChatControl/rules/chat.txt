@@ -1,0 +1,491 @@
+# -------------------------------------------------------------------------------
+# This file manages rules in chat (not commands)
+# and includes rules from rules.txt.
+#
+# File by default contain examples that you can safely remove or change.
+#
+# For help, see notes in rules.txt file.
+# -------------------------------------------------------------------------------
+#
+
+#
+#
+# Hollish  Autocorrection
+#
+#
+#
+
+# bvn = Bienvenue
+match (\bbvn|bievenu\b)
+then replace Bienvenue
+
+# bjr = Bonjour
+match \bbjr\b
+then replace Bonjour
+
+# slt = Salut
+match \bslt\b
+then replace Salut
+
+# re = Rebonjour
+match ^\bre\b
+then replace Rebonjour
+
+# Tu fais quoi?
+match \btfk\b
+then replace &cTu fais quoi?&7
+
+# cc = coucou
+match \bcc\b
+then replace Coucou
+
+# ça va
+match (\bca va\b|\bsa va\b|\bsava\b|\bcava\b)
+then replace ça va
+
+# merci
+match (\bmrc\b|\bmersi\b)
+then replace &cmerci&7
+
+# désolé
+match (\bdsl\b|\bdéso\b|\bdeso\b|\bdésso\b|\bdesso\b)
+then replace &cdésolé&7
+
+#jve = je veux
+match (\bjve\b|\bjveu\b)
+then replace &cje veux&7
+
+# d'accord
+match (\bdac\b|\bd'ac\b|\bdako\b|\bdacord\b|\bd'acord\b|\bdaccord\b|\bd'accors\b|\bd'acors\b)
+then replace &cd'accord&7
+
+# m'aider
+match \bm'aidé\b
+then replace &cm'aider&7
+
+# qu'est-ce que
+match (\bqu'est ce que\b|\bkeske\b)
+then replace &cqu'est-ce que&7
+
+# argent
+match (\bargen\b|\bargan\b)
+then replace &cargent&7
+
+# pourquoi
+match \bpk\b
+then replace &cpourquoi&7
+
+# tu es où
+match (\bt ou\b|\btes ou\b|\btu est ou\b|\btu es ou\b)
+then replace &ctu es où&7
+
+# s'il te plaît
+match \bstp\b
+then replace &cs'il te plaît&7
+
+# s'il vous plaît
+match \bsvp\b
+then replace &cs'il vous plaît&7
+
+# rendez-vous
+match \brdv\b
+then replace &crendez-vous&7
+
+# toujours
+match \btj\b
+then replace &ctoujours&7
+
+# j'avoue
+match (\bjavou|javoue\b)
+then replace &cj'avoue&7
+
+# quoi
+match \bkoi\b
+then replace &cquoi&7
+
+# je te
+match \bjte\b
+then replace &cje te&7
+
+# j'ai
+match (\bjai\b|\bg\b)
+then replace &cj'ai&7
+
+# je suis
+match (\bchui|je sui\b)
+then replace &cje suis&7
+
+# c'était
+match (\bct\b|\bc t\b)
+then replace &cc'était&7
+
+# c'est
+match \bcest\b
+then replace &cc'est&7
+
+# qu'il
+match (\bkil\b|\bquil\b)
+then replace &cqu'il&7
+
+# dans
+match \bdan\b
+then replace &cdans&7
+
+# puis
+match \bpui\b
+then replace &cpuis&7
+
+# je ne sais pas
+match \bjsp\b
+then replace &cpuis&7
+
+##############################
+#
+#
+#
+#     REGEX vs Insultes
+#
+#
+#
+#                    2.0
+##############################
+
+#Merde
+match (m+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(r+)(\.+|\*+|)(((d+)(\s+|\.+|\*+|)(e+|2|))|2)
+handle as vulgarite
+
+#Connard Et Connasse
+match \b(c+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)((a+)(\s+|\.+|\*+|)(r+|s+)(\s+|\.+|\*+|)(d+|e+)|)\b
+handle as vulgarite
+
+#Ta gueule
+match \b(t+|)(\s+|\.+|\*+|)(a+|)(\s+|\.+|\*+|)(g+)(\s+|\.+|\*+|)(u+|e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(u+|e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(e+|)
+handle as vulgarite
+
+#
+# Misogynie & Autres Connards
+#
+
+#Saloppe
+match \b(s+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)((e+)|)(\s+|\.+|\*+|)(s+|)
+handle as vulgarite
+
+#Pute & Putain
+match \b(p+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)((e+)|(1+)|((a+|)(i+)(n+)))(\s+|\.+|\*+|)(s+|)\b
+handle as vulgarite
+
+#Fils de Pute
+match \b(f+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)((s+|e+)|)(\s+|\.+|\*+|)(de+|d+|2+|a+|à+|á+|ä+|â+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)((e+)|(1+)|((a+|)(i+)(n+)))(\s+|\.+|\*+|)(s+|)\b
+handle as vulgarite
+
+#Ta mère
+match \b(t+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(m+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)((e+)|)
+handle as vulgarite
+
+#Batard
+match \b(b+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(e+|d+|)
+handle as vulgarite
+
+#
+# Parties du Corps et Autres désagréments
+#
+
+#Foutre
+match \b(f+)(\s+|\.+|\*+|)(o+|)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(e+|)
+handle as vulgarite
+
+#Chier
+match \b(c+)(\s+|\.+|\*+|)(h+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+|)\b
+handle as vulgarite
+
+#Bordel
+match \b(b+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(d+)(\s+|\.+|\*+|)(e+|)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(s+|)
+handle as vulgarite
+
+#Burnes
+match \b(b+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(s+|)
+handle as vulgarite
+
+#Couilles
+match \b(c+)(\s+|\.+|\*+|)(o+|u+)(\s+|\.+|\*+|)(o+|u+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(e+|)(\s+|\.+|\*+|)(s+|)
+handle as vulgarite
+
+#Bite
+match \b(b+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(e+|)(\s+|\.+|\*+|)(r+|s+|)
+handle as vulgarite
+
+#Chatte
+match \b(c+)(\s+|\.+|\*+|)(h+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(s+|)\b
+handle as vulgarite
+
+#Cul
+match \b(c+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(s+|)\b
+handle as vulgarite
+
+#Pénis
+match \b(p+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(s+|)\b
+handle as vulgarite
+
+#Anus
+match \b(a+)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(s+|)\b
+handle as vulgarite
+
+#
+# Rapports Sexuels et Autres Plaisirs
+#
+
+#Baiser
+match \b(b+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(s)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+|)\b
+handle as vulgarite
+
+#Niquer
+match \b(n+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(q+)(\s+|\.+|\*+|)(u+|)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+|)\b
+handle as vulgarite
+
+#Branlette
+match \b(b+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(n+|)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+|t+|)(\s+|\.+|\*+|)(e+|)
+handle as vulgarite
+
+#Enculer
+match \b(e+)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)(c+|q+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+|s+|)(\s+|\.+|\*+|)
+handle as vulgarite
+
+#
+# Racisme, Homophobie & Autres Ignorances
+#
+
+#Nègre
+match \b(n+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+|)(\s+|\.+|\*+|)(g+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+|)(\s+|\.+|\*+|)(s+|)(\s+|\.+|\*+|)
+handle as vulgarite
+
+#Bougnoule
+match \b(b+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(u+|)(\s+|\.+|\*+|)(g+|)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)(i+|)(\s+|\.+|\*+|)(o+|u+)(\s+|\.+|\*+|)(o+|u+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(e+|)(\s+|\.+|\*+|)
+handle as vulgarite
+
+#Tappette
+match \b(t+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(t+)
+handle as vulgarite
+
+#Tarlouze
+match \b(t+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(s+|z+)(\s+|\.+|\*+|)(e+|)
+handle as vulgarite
+
+#
+# Raccourcis Individuels
+#
+#fdp
+match (f+)(\s+|\.+|\*+|)(d+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)
+handle as vulgarite
+
+#vtf
+match (v+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(f+)(\s+|\.+|\*+|)
+handle as vulgarite
+
+#tg
+match \b(t+)(\s+|\.+|\*+|)(g+)\b
+handle as vulgarite
+
+#pd
+match \b(p+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+|)(\s+|\.+|\*+|)(d+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+|)\b
+handle as vulgarite
+
+
+########################
+#
+#
+# Hollish Aid Program
+#
+#
+########################
+
+# Register
+match (registrer|register)
+then warn &d&oPour vous enregistrer, tapez &a/enregistrer &d&osuivi de DEUX fois le mot de passe de votre choix, séparés par un espace.
+
+# Click not Type!
+match (^1\b|^2\b|^3\b|^4\b|^5\b|^6\b|^&\b)
+then warn &d&oVous pouvez &dcliquer &d&osur les réponses proposées.
+
+# Can't see
+match (me vois pas|ne vois pas|me voit pas|ne voit pas|me vois|me voit|me voi|ne vois|ne voit|ne voi|te vois pas|te voit pas|te voi pas|te vois|te voit|te voi)
+then warn &d&oSi un joueur ne voit pas un autre joueur, essayez de vous déconnecter puis de vous reconnecter.
+
+# Carte Dynamique
+match (dynmap|minimap|carte|dyn|map)
+then warn &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+
+#Intendant Helper
+match (intendante|intendant|intendente|intendent|intendan\b|intendan\b)
+then replace &aintendant&7
+then warn &d&oSi vous êtes à la recherche de l'&2Intendant&d&o, il se trouve en (-7035,93,2936).        &d&oPensez à utiliser votre &dJournal de Progression &d&opour savoir où vous en êtes. &d&oMap Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+
+#Château Helper
+match (château|chateau|châto\b|châte\b|chate\b|chato\b)
+then replace &achâteau&7
+then warn &d&oSi vous êtes à la recherche du &aChâteau&d&o, il se trouve en (-6990,80,2955).         &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+
+#Guilde Helper
+match (guilde|guild\b)
+then replace &aguilde&7
+then warn &d&oSi vous êtes à la recherche de la &aGuilde&d&o, elle se trouve en (-6915,75,3165).        &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+
+#House Helper
+match (louer|loué|acheter|acheté|avoir) maison
+then warn &d&oSi vous voulez louer une maison, demandez le l'aide au &2Gestionnaire &d&oen (-7000,84,2965).
+
+#House Helper Bis
+match gestio
+then warn &d&oSi vous voulez louer une maison, demandez le l'aide au &2Gestionnaire &d&oen (-7000,84,2965).
+
+#Sanctuaire Helper
+match (sanctuaire|sanctuere|sanctuer\b|sanctuair\b|senctuaire\b|senctuere\b|senctuair\b|senctuer\b|santuaire|santuere|santuer\b|santuair\b|sentuer\b|senktu\b|sanktu\b)
+then replace &asanctuaire&7
+then warn &d&oSi vous êtes à la recherche du &aSanctuaire&d&o, il se trouve en (-7111,70,2444).           &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+
+#Gare Helper
+match \bgare\b
+then replace &agare&7
+then warn &d&oSi vous êtes à la recherche de la &aGare&d&o, elle se trouve en (-6540,70,3160).                &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+
+#Grand Marché Helper
+match (grand marché|grand marche|grand marcher|grand exchange|grand échange|grand echange)
+then replace &aGrand Marché&7
+then warn &d&oSi vous êtes à la recherche du &aGrand Marché&d&o, il se trouve en (-6650,70,2940).          &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+
+#Bibliothèque Helper
+match (\bbibliotheque\b|\bbibliothèque\b|\blibrairie\b)
+then replace &aBibliothèque&7
+then warn &d&oSi vous êtes à la recherche de la &aBibliothèque&d&o, elle se trouve en (-6730,70,2885).          &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+
+
+#Trade Helper
+match (acheter|acheté|vendre|échange|échanger|échangé)
+then warn &d&oSi vous cherchez à vendre ou acheter des affaires, rendez vous au &aGrand Marché&d&o en (-6650,70,2940).
+
+#Banque Helper
+match (banque|bank|banqu\b|banq\b)
+then replace &abanque&7
+then warn &d&oSi vous êtes à la recherche de la &aBanque&d&o, elle se trouve en (-6565,70,3111).           &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+
+#PNJ Helper
+match (pnj|npc)
+then warn &d&oSi vous avez des problèmes de &aPNJ&d&o, pensez à &aconsulter l'aide&a&o.                     &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.
+
+#Ilcë
+match (i+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(c+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)
+then deny
+handle as ilce
+
+#
+#
+#Lag Helper
+#
+#
+
+match (\blag\b|\blage\b|\blague\b)
+then replace &alag&7
+then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o.         &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.           &d&oGuide Optifine:&a http://gaia-minecraft.enjin.com/guide 
+
+match (\bbug|\bbeug)
+then replace &abug&7
+then warn &d&oSi vous avez reperé un bug, signalez le à un administrateur depuis votre interface d'aide dans le &f/menu&d&o. Si vous avez un problème de lag, tapez &alag &d&odans le tchat.
+
+match fps
+then replace &afps&7
+then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o.         &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.           &d&oGuide Optifine:&a http://gaia-minecraft.enjin.com/guide 
+
+match (crash|crach)
+then replace &acrash&7
+then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o.         &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.           &d&oGuide Optifine:&a http://gaia-minecraft.enjin.com/guide 
+
+match freez
+then replace &afreeze&7
+then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o.         &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.           &d&oGuide Optifine:&a http://gaia-minecraft.enjin.com/guide 
+
+match (rollback|rolback|rollbak|rollbac|rolbak|rolbac)
+then replace &arollback&7
+then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o.         &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.           &d&oGuide Optifine:&a http://gaia-minecraft.enjin.com/guide 
+
+#######################
+#
+#
+# Hollish Fun Program
+#
+#
+#######################
+
+# Hollish
+match (hollish|holish)
+then replace &aHollish&7
+
+# Hollish
+match (^hollish$|^holish$|^hollish \?$|^hollish\?$|^holish \?$|^holish\?$)
+then warn &aHollish&f: &cNe m'interpellez pas&f, posez votre question si elle est pertinente.
+
+# Zedd
+match (zedd|zed)
+then replace &aZedd&7
+
+# Lyrtix
+match (lyrtix\b|lirtyx\b|lyrti\b|\blirtix\b|lirty\b|\blytrix\b|\blytix\b)
+then replace &aLyrtix&7
+
+# guigui
+match guigui
+then replace &aguigui&7
+
+# Cubto_Mania
+match (c+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(b+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(o+|)(\s+|\.+|\*+|)(_+|)(\s+|\.+|\*+|)(m+|)(\s+|\.+|\*+|)(a+|)(\s+|\.+|\*+|)(n+|)(\s+|\.+|\*+|)(i+|)(\s+|\.+|\*+|)(a+|)
+then replace &aCubto_Mania&7
+
+# Sparadra59
+match \b(s+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(d+|)(\s+|\.+|\*+|)(r+|a+|)(\s+|\.+|\*+|)(a+|r+|)(\s+|\.+|\*+|)(9+|5+|)(\s+|\.+|\*+|)(9+|5+|)
+then replace &aSparadra59&7
+
+# Gaïa
+#match (gaia|gaïa)
+#then warn
+
+#
+#
+# Répétition Chiante & Other BullShit
+#
+#
+
+match (.)\1{6,}
+then deny
+then warn &cVeuillez ne pas spammer le tchat.
+
+match ^I joined from Android\b
+then deny
+then warn &cMerci de ne pas spammer le tchat avec vos messages de connection depuis des applications extérieures !
+
+#
+#
+# Unicode characters - making smileys
+#
+#
+
+match :\)
+then replace ☺
+
+match :-\)
+then replace ☺
+
+match :\(
+then replace ☹
+
+match :-\(
+then replace ☹
+
+match ;\)
+then replace ㋡
+
+match ;-\)
+then replace ㋡
+
+match \:star\:
+then replace ★
+
+match <3\b
+then replace ❤

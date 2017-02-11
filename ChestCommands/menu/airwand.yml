@@ -7,7 +7,7 @@
 menu-settings:
 
   # name - appears as the title - REQUIRED
-  name: '&dAir'
+  name: '&dBaguette d''Air'
 
   # rows - the number of rows of the chest - REQUIRED
   rows: 3
@@ -70,7 +70,7 @@ manaregenup:
     - 'de 1 par seconde'
     - ' '
     - '&cRequiert:'
-    - '&a250 &cPoints de Spiritualité'
+    - '&a100 &cPoints de Spiritualité'
     - ' '
     - '&c&one peut dépasser 20'
   POSITION-X: 6
@@ -107,7 +107,7 @@ airblast:
     - 'directe devant vous.'
     - ' '
     - '&cRequiert:'
-    - '&a1000 &cPoints de Spiritualité'
+    - '&a100 &cPoints de Spiritualité'
   POSITION-X: 1
   POSITION-Y: 3
 
@@ -124,7 +124,7 @@ airbomb:
     - 'toutes les directions'
     - ' '
     - '&cRequiert:'
-    - '&a2000 &cPoints de Spiritualité'
+    - '&a200 &cPoints de Spiritualité'
   POSITION-X: 3
   POSITION-Y: 3
 
@@ -139,7 +139,7 @@ suction:
     - 'Tirez votre cible vers vous.'
     - ' '
     - '&cRequiert:'
-    - '&a1500 &cPoints de Spiritualité'
+    - '&a150 &cPoints de Spiritualité'
   POSITION-X: 2
   POSITION-Y: 3
 
@@ -154,7 +154,7 @@ tornade:
     - 'Crée une Tornade destructrice.'
     - ' '
     - '&cRequiert:'
-    - '&a10 000 &cPoints de Spiritualité'
+    - '&a1000 &cPoints de Spiritualité'
   POSITION-X: 9
   POSITION-Y: 3
 
@@ -171,7 +171,7 @@ poussee:
     - 'l''Air qui vous entoure'
     - ' '
     - '&cRequiert:'
-    - '&a2000 &cPoints de Spiritualité'
+    - '&a200 &cPoints de Spiritualité'
   POSITION-X: 4
   POSITION-Y: 3
 
@@ -187,7 +187,7 @@ airshield:
     - 'avec un bouclier d''Air'
     - ' '
     - '&cRequiert:'
-    - '&a3000 &cPoints de Spiritualité'
+    - '&a300 &cPoints de Spiritualité'
   POSITION-X: 5
   POSITION-Y: 3
 
@@ -204,7 +204,7 @@ enhancedspeed:
     - 'l''Air qui vous entoure'
     - ' '
     - '&cRequiert:'
-    - '&a5000 &cPoints de Spiritualité'
+    - '&a500 &cPoints de Spiritualité'
   POSITION-X: 7
   POSITION-Y: 3
 
@@ -220,7 +220,7 @@ airscooter:
     - 'sur un coussin de d''Air'
     - ' '
     - '&cRequiert:'
-    - '&a5000 &cPoints de Spiritualité'
+    - '&a500 &cPoints de Spiritualité'
   POSITION-X: 8
   POSITION-Y: 3
 
@@ -238,6 +238,6 @@ breathofwind:
     - 'autour de vous'
     - ' '
     - '&cRequiert:'
-    - '&a5000 &cPoints de Spiritualité'
+    - '&a500 &cPoints de Spiritualité'
   POSITION-X: 6
   POSITION-Y: 3

@@ -1,25 +1,25 @@
-quester: Jumaker
+quester: 'Jumaker'
 first: hello
 stop: 'false'
 #Options du NPC
 NPC_options:
   hello:
-    text: Bonjour &2%player%&a&o, je suis &dJumaker&a&o, Builder sur Gaïa. (&cJe suis actuellement à la retaite&a&o)
-    pointer: role,citation,sens
-  role_rep: 
-    text: J'étais présent lors de la création du serveur. Vous trouverez peut être des constructions de ma main ...
+    text: 'Bonjour &2%player%&a&o, je suis &dJumaker&a&o, Builder sur Gaïa. (&cJe suis actuellement à la retaite&a&o)'
+    pointers: role,citation,sens
+  role_rep:
+    text: 'J''étais présent lors de la création du serveur. Vous trouverez peut être des constructions de ma main ...'
   citation_rep:
-    text: Je n'ai pas encore répondu à cette question.
+    text: 'Je n''ai pas encore répondu à cette question.'
   sens_rep:
-    text: Je n'ai pas encore répondu à cette question.
+    text: 'Je n''ai pas encore répondu à cette question.'
 #Options du joueur
 player_options:
   role:
-    text: Quel est ton rôle sur Gaïa?
-    pointer: role_rep
+    text: 'Quel est ton rôle sur Gaïa?'
+    pointers: role_rep
   citation:
-    text: Quelle est ta citation préférée?
-    pointer: citation_rep
+    text: 'Quelle est ta citation préférée?'
+    pointers: citation_rep
   sens:
-    text: Quel est le Sens de la Vie?
-    pointer: sens_rep
+    text: 'Quel est le Sens de la Vie?'
+    pointers: sens_rep

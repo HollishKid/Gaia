@@ -1,4 +1,4 @@
-quester: Milicien
+quester: 'Milicien'
 first: n1,n2,n3,n4,n5
 stop: 'false'
 #
@@ -6,18 +6,18 @@ stop: 'false'
 #
 NPC_options:
   n1:
-    text: Drisgan a été crée il y a fort longtemps par des marins, de l'époque du Roi Ubu ...
-    conditions: random20 
+    text: 'Drisgan a été crée il y a fort longtemps par des marins, de l''époque du Roi Ubu ...'
+    conditions: 'random20'
   n2:
-    text: L'emplacement de Drisgan est vraiment avantageux, une belle ouverture sur la mer !
-    conditions: random40
+    text: 'L''emplacement de Drisgan est vraiment avantageux, une belle ouverture sur la mer !'
+    conditions: 'random40'
   n3:
-    text: Ah! Drisgan! Quelle ville agréable et ... lucrative !!
-    conditions: random60
+    text: 'Ah! Drisgan! Quelle ville agréable et ... lucrative !!'
+    conditions: 'random60'
   n4:
-    text: Je suis nouveau ici, mais cet endroit me remplit bien les poches!!
-    conditions: random80
+    text: 'Je suis nouveau ici, mais cet endroit me remplit bien les poches!!'
+    conditions: 'random80'
   n5:
-    text: Il paraît l'île de Tortuga renfloue Brisgan en ressources opulentes!
-    conditions: random100
+    text: 'Il paraît l''île de Tortuga renfloue Brisgan en ressources opulentes!'
+    conditions: 'random100'
 player_options:

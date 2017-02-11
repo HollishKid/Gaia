@@ -1,4 +1,4 @@
-quester: Aktarion
+quester: 'Aktarion'
 first: welcome,welcomebis
 stop: 'false'
 #
@@ -6,83 +6,83 @@ stop: 'false'
 #
 NPC_options:
   welcome:
-    text: Hey ! T'es le nouveau venu qui arrive d'Athelas c'est ça ?
-    conditions: 'voir_superieur_done,!akt_qE1'
-    pointer: yop
+    text: 'Hey ! T''es le nouveau venu qui arrive d''Athelas c''est ça ?'
+    conditions: 'voir_superieur_done,!akt_qE1,!akt_qE2,!akt_qdone'
+    pointers: yop
   welcomebis:
-    text: Hey %player% ! Comment se passe ton aventure ?
-    pointer: calm,hard,quest_done,hist_akt
+    text: 'Hey %player% ! Comment se passe ton aventure ?'
+    pointers: calm,hard,quest_done,hist_akt
   selection:
-    text: Ca ne me dérangerais pas du tout, mais avant de répondre à tes questions, j'ai un service à te demander.
-    pointer: quest
+    text: 'Ca ne me dérangerais pas du tout, mais avant de répondre à tes questions, j''ai un service à te demander.'
+    pointers: quest
   quest_rep:
-    text: Depuis peu, je cherche un objet qui m'est très précieux, mais je n'ai que très peu d'infos sur son emplacement actuel.
-    pointer: accept,refus
+    text: 'Depuis peu, je cherche un objet qui m''est très précieux, mais je n''ai que très peu d''infos sur son emplacement actuel.'
+    pointers: accept,refus
   tips:
-    text: Va faire un tour dans le campement des brigands, il y sera peut être.
+    text: 'Va faire un tour dans le campement des brigands, il y sera peut être.'
   calm_rep:
-    text: J'ai eu des échos de tes exploits ! Beau travail !
+    text: 'J''ai eu des échos de tes exploits ! Beau travail !'
   hard_rep:
-    text: Le travail est dur parfois, mais il faut se mettre à la tâche !
+    text: 'Le travail est dur parfois, mais il faut se mettre à la tâche !'
   quest_done_rep:
-    text: Bien joué %player% ! Je t'en remercie ! Que choisis-tu ?
+    text: 'Bien joué %player% ! Je t''en remercie ! Que choisis-tu ?'
     events: akt_qdone
   hist_akt_rep:
-    text: Bien sûr ! Que veux tu savoir ?
-    pointer: who,where,what,how
+    text: 'Bien sûr ! Que veux tu savoir ?'
+    pointers: who,where,what,how
   who_rep:
-    text: Je me nomme Aktarion et je suis le forgeron du village, je suis un expert d'armes en tout genre !
+    text: 'Je me nomme Aktarion et je suis le forgeron du village, je suis un expert d''armes en tout genre !'
   where_rep:
-    text: Je viens d'un petit village du continent de l'est.
+    text: 'Je viens d''un petit village du continent de l''est.'
   what_rep:
-    text: Avec les voyages que j'ai fait, je suis tombé sur un aventurier qui m'a parlé de cet endroit, et depuis, j'y suis.
+    text: 'Avec les voyages que j''ai fait, je suis tombé sur un aventurier qui m''a parlé de cet endroit, et depuis, j''y suis.'
   how_rep:
-    text: Même moi, j'en arrive à me poser la question, mais maintenant que j'y suis, c'est une bonne chose !
-    pointer: how1
+    text: 'Même moi, j''en arrive à me poser la question, mais maintenant que j''y suis, c''est une bonne chose !'
+    pointers: how1
   how1_rep:
-    text: J'en ai comme tout le monde, mais je ne préfère pas en parler !
+    text: 'J''en ai comme tout le monde, mais je ne préfère pas en parler !'
 #
 #   Options Joueur
 #
 player_options:
   yop:
-    text: Oui, c'est bien ça ! J'aurais quelques questions à vous poser si ça ne vous dérange pas.
-    pointer: selection
+    text: 'Oui, c''est bien ça ! J''aurais quelques questions à vous poser si ça ne vous dérange pas.'
+    pointers: selection
   calm:
-    text: Elle se passe à merveille, mon aide est offerte à tout les villageois et ils sont très aimable.
-    pointer: calm_rep
+    text: 'Elle se passe à merveille, mon aide est offerte à tout les villageois et ils sont très aimable.'
+    pointers: calm_rep
   hard:
-    text: Je suis débordé de travail, les villageois m'en demande trop, je suis épuisé.
-    pointer: hard_rep
+    text: 'Je suis débordé de travail, les villageois m''en demande trop, je suis épuisé.'
+    pointers: hard_rep
   quest:
-    text: Je vous en prie, de quoi donc avez vous besoin ?
-    pointer: quest_rep
+    text: 'Je vous en prie, de quoi donc avez vous besoin ?'
+    pointers: quest_rep
   accept:
-    text: Je m'en occupe, ne vous en faîtes pas, je dois juste trouver un emplacement de recherche approximatif.
+    text: 'Je m''en occupe, ne vous en faîtes pas, je dois juste trouver un emplacement de recherche approximatif.'
     events: akt_qE1
-    pointer: tips
+    pointers: tips
   refus:
-    text: Je suis désolé, mais pour le moment, j'ai d'autres occupations ailleurs.
+    text: 'Je suis désolé, mais pour le moment, j''ai d''autres occupations ailleurs.'
   quest_done:
-    text: J'ai retrouvé ce qui vous appartient !
+    text: 'J''ai retrouvé ce qui vous appartient !'
     conditions: 'akt_tool,Bkilled,!akt_qdone'
-    pointer: quest_done_rep
+    pointers: quest_done_rep
   hist_akt:
-    text: Puis-je vous poser mes questions maintenant ?
-    conditions: akt_quest_done
-    pointer: hist_akt_rep
+    text: 'Puis-je vous poser mes questions maintenant ?'
+    conditions: 'akt_qdone'
+    pointers: hist_akt_rep
   who:
-    text: Qui êtes-vous réellement dans ce village ?
-    pointer: who_rep
+    text: 'Qui êtes-vous réellement dans ce village ?'
+    pointers: who_rep
   where:
-    text: D'où venez vous ?
-    pointer: where_rep
+    text: 'D''où venez vous ?'
+    pointers: where_rep
   what:
-    text: Pour quelles raisons avez vous rejoins cet endroit ?
-    pointer: what_rep
+    text: 'Pour quelles raisons avez vous rejoins cet endroit ?'
+    pointers: what_rep
   how:
-    text: Comment en êtes-vous arrivés à cette situation actuelle ?
-    pointer: how_rep
+    text: 'Comment en êtes-vous arrivés à cette situation actuelle ?'
+    pointers: how_rep
   how1:
-    text: Que voulez-vous dire par là ? Vous avez des soucis ?
-    pointer: how1_rep
+    text: 'Que voulez-vous dire par là ? Vous avez des soucis ?'
+    pointers: how1_rep

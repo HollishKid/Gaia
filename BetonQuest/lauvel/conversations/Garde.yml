@@ -1,4 +1,4 @@
-quester: Garde
+quester: 'Garde'
 first: halte,bonjour,recrue
 stop: 'false'
 ###########
@@ -8,37 +8,37 @@ stop: 'false'
 ###########
 NPC_options:
   halte:
-    text: Halte ! Vous n'avez pas accès à cette zone ! \n Allez voir le Garde Supérieur.
+    text: 'Halte ! Vous n''avez pas accès à cette zone ! \n Allez voir le Garde Supérieur.'
     conditions: '!Hist_Tag'
   bonjour:
-    text: Bonjour, jeune future recrue !
+    text: 'Bonjour, jeune future recrue !'
     conditions: 'Donner_Lettre'
   recrue:
-    text: Alors tu à finalement était recuter !
+    text: 'Alors tu à finalement était recuter !'
     conditions: 'Deuxieme_Escadron1'
-    pointer: oui,pk,aide
+    pointers: oui,pk,aide
   ahah:
-    text: Ahah, bien sur, bien sur !
+    text: 'Ahah, bien sur, bien sur !'
   ahah2:
-    text: Bien sur que non !
+    text: 'Bien sur que non !'
   a1:
-    text: Oui, il y a un soldat anxieux vers la blibliothèque !
+    text: 'Oui, il y a un soldat anxieux vers la blibliothèque !'
     conditions: '!Ryan_Tag,Loyer_Done,Besoin_Aide'
   a2:
-    text: Oui, il y a un soldat déprimer pas loin du garde supérieure !
+    text: 'Oui, il y a un soldat déprimer pas loin du garde supérieure !'
     conditions: '!Loyer_Done,Ryan_Tag,Besoin_Aide'
   a3:
-    text: Oui, il ya un soldat anxieux vers la blibliothèque et un soldat déprimer pas loin du garde supérieure !
+    text: 'Oui, il ya un soldat anxieux vers la blibliothèque et un soldat déprimer pas loin du garde supérieure !'
     conditions: 'Besoin_Aide'
 player_options:
   aide:
-    text: Est-ce que vous connaissez des soldats qui aurais besoin d'aide ?
+    text: 'Est-ce que vous connaissez des soldats qui aurais besoin d''aide ?'
     conditions: 'Besoin_Aide,!Loyer_Done,!Ryan_Tag'
-    pointer: a1,a2,a3
+    pointers: a1,a2,a3
   oui:
-    text: Oui, prenez soin de moi ! 
-    pointer: ahah
+    text: 'Oui, prenez soin de moi !'
+    pointers: ahah
   pk:
-    text: Pourquoi, vous croyez que je serais recalé ?
-    pointer: ahah2
-    
+    text: 'Pourquoi, vous croyez que je serais recalé ?'
+    pointers: ahah2
+

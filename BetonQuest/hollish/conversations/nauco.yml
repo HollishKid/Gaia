@@ -1,4 +1,4 @@
-quester: Nauco
+quester: 'Nauco'
 first: welcome,welcomebis
 stop: 'false'
 #                #
@@ -8,24 +8,24 @@ stop: 'false'
 #                #
 NPC_options:
   welcome:
-    text: Ô vieillesse ennemie ! Ce monstre de Goblin, &cSancossi &a&oest la pire des créatures en ce bas monde !
-    condition: '!tag_nauco'
-    pointer: helpyou,tantpis
+    text: 'Ô vieillesse ennemie ! Ce monstre de Goblin, &cSancossi &a&oest la pire des créatures en ce bas monde !'
+    conditions: '!tag_nauco'
+    pointers: helpyou,tantpis
   helpyou_rep:
-    text: Il a toujours cru au fond de lui qu'on pourrait reconquérir ce château. \nSoit ! Si tu as envie de te tuer en le traversant c'est ton souci ! \nPour le réparer, il nous faudra &d50 Pierres&a&o, &d10 Pierres Taillées &a&oet &d5 Escaliers en Pierre&a&o.
+    text: 'Il a toujours cru au fond de lui qu''on pourrait reconquérir ce château. \nSoit ! Si tu as envie de te tuer en le traversant c''est ton souci ! \nPour le réparer, il nous faudra &d50 Pierres&a&o, &d10 Pierres Taillées &a&oet &d5 Escaliers en Pierre&a&o.'
     events: journal_nauco_del,tag_nauco,journal_nauco_pierre
   welcomebis:
-    text: Un plaisir &2%player% &a&o!
-    condition: tag_nauco
-    pointer: stonehave,weaponshave,sancossi_killed,plaisir
+    text: 'Un plaisir &2%player% &a&o!'
+    conditions: 'tag_nauco'
+    pointers: stonehave,weaponshave,sancossi_killed,plaisir
   stonehave_rep:
-    text: Excellent ! Passe moi tout ça pour que je commence la réparation ! \nEn attendant, avant de traverser, il va nous falloir des armes solides. Forge donc toi même &d3 Haches en fer &a&oet &d3 Plastrons en fer &a&o! \nAmène les moi quand tu sera prêt pour te battre, je rallie 3 autres nains et t'en attendant et je répare ce pont !  
+    text: 'Excellent ! Passe moi tout ça pour que je commence la réparation ! \nEn attendant, avant de traverser, il va nous falloir des armes solides. Forge donc toi même &d3 Haches en fer &a&oet &d3 Plastrons en fer &a&o! \nAmène les moi quand tu sera prêt pour te battre, je rallie 3 autres nains et t''en attendant et je répare ce pont !'
     events: journal_nauco_pierre_del,take_bridge_materials,obj_nauco_weapons1,obj_nauco_weapons2,journal_nauco_armes
   weaponshave_rep:
-    text: Je vois... En attendant j'ai réparé le pont vers le château comme tu peux le voir. \nQuand tu seras prêt, tu pourras le traverser, 3 nains se rallieront à toi pour vaincre ce monstre, &cSancossi &d!
+    text: 'Je vois... En attendant j''ai réparé le pont vers le château comme tu peux le voir. \nQuand tu seras prêt, tu pourras le traverser, 3 nains se rallieront à toi pour vaincre ce monstre, &cSancossi &d!'
     events: journal_sancossi,sancossi_tag,dwarf_bridge1_tag,journal_nauco_weapons_done_del,journal_nauco_armes_del
   sancossi_killed_rep:
-    text: Je n'arrive pas à y croire ! C'est la meilleure nouvelle que mon peuple puisse entendre ! \nRetourne donner cette nouvelle à notre chef, &2Casar &a&o! Il te sera très reconnaissant !
+    text: 'Je n''arrive pas à y croire ! C''est la meilleure nouvelle que mon peuple puisse entendre ! \nRetourne donner cette nouvelle à notre chef, &2Casar &a&o! Il te sera très reconnaissant !'
 #                #
 
 # Options Joueur #
@@ -33,22 +33,22 @@ NPC_options:
 #                #
 player_options:
   helpyou:
-    text: Casar m'a envoyé pour réparer le pont !
-    condition: tag_casar,!tag_nauco
-    pointer: helpyou_rep
+    text: 'Casar m''a envoyé pour réparer le pont !'
+    conditions: 'tag_casar,!tag_nauco'
+    pointers: helpyou_rep
   stonehave:
-    text: J'ai la pierre qu'il faut pour le pont !
-    conditions: stone_chateau_nain,journal_nauco_pierre
-    pointer: stonehave_rep
+    text: 'J''ai la pierre qu''il faut pour le pont !'
+    conditions: 'stone_chateau_nain,journal_nauco_pierre'
+    pointers: stonehave_rep
   weaponshave:
-    text: J'ai les armes et les plastrons pour donner l'assaut !
-    conditions: nauco_weapons,journal_nauco_weapons_done
-    pointer: weaponshave_rep
+    text: 'J''ai les armes et les plastrons pour donner l''assaut !'
+    conditions: 'nauco_weapons,journal_nauco_weapons_done'
+    pointers: weaponshave_rep
   sancossi_killed:
-    text: J'ai tué Sancossi !
-    condition: tag_sancossi_done
-    pointer: sancossi_killed_rep
+    text: 'J''ai tué Sancossi !'
+    conditions: 'tag_sancossi_done'
+    pointers: sancossi_killed_rep
   tantpis:
-    text: Je préfère m'éloigner alors... !
+    text: 'Je préfère m''éloigner alors... !'
   plaisir:
-    text: Le plaisir est mien.
+    text: 'Le plaisir est mien.'

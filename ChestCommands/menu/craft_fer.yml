@@ -7,7 +7,7 @@
 menu-settings:
 
   # name - appears as the title - REQUIRED
-  name: '&dCraft de fer'
+  name: '&dCrafts de Fer'
 
   # rows - the number of rows of the chest - REQUIRED
   rows: 6

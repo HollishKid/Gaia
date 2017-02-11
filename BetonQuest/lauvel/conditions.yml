@@ -3,7 +3,7 @@
 int_hist: tag default.approuved_intendant
 night: time 7-19
 
-#Condition Quêtes Secondaire 
+#Condition Quêtes Secondaire
 #
 Sir_tresor: tag Sir_tresor
 Tresor_trouve: tag Tresor_trouve
@@ -27,7 +27,7 @@ Quetes_Loyer: tag Quetes_Loyer
 Cruel_Tag: tag Cruel_Tag
 Bonter_Tag: tag Bonter_Tag
 Loyer_Payer: tag Loyer_Payer
-money_Loyer: check money 1000
+money_Loyer: money 1000
 Loyer_Done: tag Loyer_Done
 #
 
@@ -36,6 +36,6 @@ Physicien_tag: tag Physicien_tag
 physicien_book_tagged: tag physicien_book_tagged
 #
 
-#Conditions Quêtes Principale 
+#Conditions Quêtes Principale
 #
 Quetes_promo: tag Quetes_promo

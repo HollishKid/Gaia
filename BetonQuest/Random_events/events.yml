@@ -2,24 +2,24 @@
 # Ne pas laisser de lignes blaches dans les fichiers
 choix_diamond: folder tag_diamond,roulette
 remove_diamond: folder rdiamond,tag_gold
-rdiamond: tag remove diamond
+rdiamond: tag del diamond
 tag_diamond: folder adiamond,remove_gold
 adiamond: tag add diamond
 tag_gold: tag add gold
-remove_gold: tag remove gold
+remove_gold: tag del gold
 loto_start: folder tag_lotostart,fold_init,mess_init,fold_roulette,tag_gold
-mess_init: message &dLe loto va bientôt démarrer!
+mess_init: 'message &dLe loto va bientôt démarrer!'
 tag_lotostart: tag add loto_start
 fold_roulette: folder start3,mess0 delay:1
-mess0: message &dDémarrage dans
+mess0: 'message &dDémarrage dans'
 start3: folder start4,mess3 delay:1
-mess3: message &d3 !
+mess3: 'message &d3 !'
 start4: folder start5,mess4 delay:1
-mess4: message &d2 !
+mess4: 'message &d2 !'
 start5: folder start6,mess5 delay:1
-mess5: message &d1 !!
+mess5: 'message &d1 !!'
 start6: folder mess6,pre_roulette delay:1
-mess6: message &d GO !!
+mess6: 'message &d GO !!'
 pre_roulette: conversation choix_diamond
 roulette: folder start_roulette delay:1
 start_roulette: conversation loto
@@ -58,201 +58,202 @@ rc14: objective delete loose14
 rc15: objective delete loose15
 rc16: objective delete loose16
 loose: folder remove_loto_start,mess_loose,desinit,rdiamond,remove_gold
-remove_loto_start: tag remove loto_start
-mess_loose: message &6Comment t'as perdu la!!
+remove_loto_start: tag del loto_start
+mess_loose: 'message &6Comment t''as perdu la!!'
 win: folder mess_win,remove_loto_start,desinit,rdiamond,remove_gold
-mess_win: message c'est gagné! c'est gagné!
+mess_win: 'message c''est gagné! c''est gagné!'
 bwin: folder mess_bwin,remove_loto_start,desinit,rdiamond,remove_gold
-mess_bwin: message &4&oBINGOOOOOOOOOOOOOOOOOO!!
+mess_bwin: 'message &4&oBINGOOOOOOOOOOOOOOOOOO!!'
 p1: folder place1,win1,tick1
-place1: setblock gold_block -6768;5;2975;Gaia
+place1: setblock GOLD_BLOCK -6768;5;2975;Gaia
 win1: objective start win1
 tick1: folder replace1,dewin1,pre_roulette delay:1
-replace1: setblock wool -6768;5;2975;Gaia
+replace1: setblock WOOL -6768;5;2975;Gaia
 dewin1: objective delete win1
 p2: folder place2,win2,tick2
-place2: setblock gold_block -6768;5;2974;Gaia
+place2: setblock GOLD_BLOCK -6768;5;2974;Gaia
 win2: objective start win2
 tick2: folder replace2,dewin2,pre_roulette delay:1
-replace2: setblock wool -6768;5;2974;Gaia
+replace2: setblock WOOL -6768;5;2974;Gaia
 dewin2: objective delete win2
 p3: folder place3,win3,tick3
-place3: setblock gold_block -6768;5;2973;Gaia
+place3: setblock GOLD_BLOCK -6768;5;2973;Gaia
 win3: objective start win3
 tick3: folder replace3,dewin3,pre_roulette delay:1
-replace3: setblock wool -6768;5;2973;Gaia
+replace3: setblock WOOL -6768;5;2973;Gaia
 dewin3: objective delete win3
 p4: folder place4,win4,tick4
-place4: setblock gold_block -6768;5;2972;Gaia
+place4: setblock GOLD_BLOCK -6768;5;2972;Gaia
 win4: objective start win4
 tick4: folder replace4,dewin4,pre_roulette delay:1
-replace4: setblock wool -6768;5;2972;Gaia
+replace4: setblock WOOL -6768;5;2972;Gaia
 dewin4: objective delete win4
 p5: folder place5,win5,tick5
-place5: setblock gold_block -6768;4;2975;Gaia
+place5: setblock GOLD_BLOCK -6768;4;2975;Gaia
 win5: objective start win5
 tick5: folder replace5,dewin5,pre_roulette delay:1
-replace5: setblock wool -6768;4;2975;Gaia
+replace5: setblock WOOL -6768;4;2975;Gaia
 dewin5: objective delete win5
 p6: folder place6,win6,tick6
-place6: setblock gold_block -6768;4;2974;Gaia
+place6: setblock GOLD_BLOCK -6768;4;2974;Gaia
 win6: objective start win6
 tick6: folder replace6,dewin6,pre_roulette delay:1
-replace6: setblock wool -6768;4;2974;Gaia
+replace6: setblock WOOL -6768;4;2974;Gaia
 dewin6: objective delete win6
 p7: folder place7,win7,tick7
-place7: setblock gold_block -6768;4;2973;Gaia
+place7: setblock GOLD_BLOCK -6768;4;2973;Gaia
 win7: objective start win7
 tick7: folder replace7,dewin7,pre_roulette delay:1
-replace7: setblock wool -6768;4;2973;Gaia
+replace7: setblock WOOL -6768;4;2973;Gaia
 dewin7: objective delete win7
 p8: folder place8,win8,tick8
-place8: setblock gold_block -6768;4;2972;Gaia
+place8: setblock GOLD_BLOCK -6768;4;2972;Gaia
 win8: objective start win8
 tick8: folder replace8,dewin8,pre_roulette delay:1
-replace8: setblock wool -6768;4;2972;Gaia
+replace8: setblock WOOL -6768;4;2972;Gaia
 dewin8: objective delete win8
 p9: folder place9,win9,tick9
-place9: setblock gold_block -6768;3;2975;Gaia
+place9: setblock GOLD_BLOCK -6768;3;2975;Gaia
 win9: objective start win9
 tick9: folder replace9,dewin9,pre_roulette delay:1
-replace9: setblock wool -6768;3;2975;Gaia
+replace9: setblock WOOL -6768;3;2975;Gaia
 dewin9: objective delete win9
 p10: folder place10,win10,tick10
-place10: setblock gold_block -6768;3;2974;Gaia
+place10: setblock GOLD_BLOCK -6768;3;2974;Gaia
 win10: objective start win10
 tick10: folder replace10,dewin10,pre_roulette delay:1
-replace10: setblock wool -6768;3;2974;Gaia
+replace10: setblock WOOL -6768;3;2974;Gaia
 dewin10: objective delete win10
 p11: folder place11,win11,tick11
-place11: setblock gold_block -6768;3;2973;Gaia
+place11: setblock GOLD_BLOCK -6768;3;2973;Gaia
 win11: objective start win11
 tick11: folder replace11,dewin11,pre_roulette delay:1
-replace11: setblock wool -6768;3;2973;Gaia
+replace11: setblock WOOL -6768;3;2973;Gaia
 dewin11: objective delete win11
 p12: folder place12,win12,tick12
-place12: setblock gold_block -6768;3;2972;Gaia
+place12: setblock GOLD_BLOCK -6768;3;2972;Gaia
 win12: objective start win12
 tick12: folder replace12,dewin12,pre_roulette delay:1
-replace12: setblock wool -6768;3;2972;Gaia
+replace12: setblock WOOL -6768;3;2972;Gaia
 dewin12: objective delete win12
 p13: folder place13,win13,tick13
-place13: setblock gold_block -6768;2;2975;Gaia
+place13: setblock GOLD_BLOCK -6768;2;2975;Gaia
 win13: objective start win13
 tick13: folder replace13,dewin13,pre_roulette delay:1
-replace13: setblock wool -6768;2;2975;Gaia
+replace13: setblock WOOL -6768;2;2975;Gaia
 dewin13: objective delete win13
 p14: folder place14,win14,tick14
-place14: setblock gold_block -6768;2;2974;Gaia
+place14: setblock GOLD_BLOCK -6768;2;2974;Gaia
 win14: objective start win14
 tick14: folder replace14,dewin14,pre_roulette delay:1
-replace14: setblock wool -6768;2;2974;Gaia
+replace14: setblock WOOL -6768;2;2974;Gaia
 dewin14: objective delete win14
 p15: folder place15,win15,tick15
-place15: setblock gold_block -6768;2;2973;Gaia
+place15: setblock GOLD_BLOCK -6768;2;2973;Gaia
 win15: objective start win15
 tick15: folder replace15,dewin15,pre_roulette delay:1
-replace15: setblock wool -6768;2;2973;Gaia
+replace15: setblock WOOL -6768;2;2973;Gaia
 dewin15: objective delete win15
 p16: folder place16,win16,tick16
-place16: setblock gold_block -6768;2;2972;Gaia
+place16: setblock GOLD_BLOCK -6768;2;2972;Gaia
 win16: objective start win16
 tick16: folder replace16,dewin16,pre_roulette delay:1
-replace16: setblock wool -6768;2;2972;Gaia
+replace16: setblock WOOL -6768;2;2972;Gaia
 dewin16: objective delete win16
 b1: folder bplace1,bwin1,btick1
-bplace1: setblock diamond_block -6768;5;2975;Gaia
+bplace1: setblock DIAMOND_BLOCK -6768;5;2975;Gaia
 bwin1: objective start bwin1
 btick1: folder breplace1,bdewin1,remove_diamond,pre_roulette delay:1
-breplace1: setblock wool -6768;5;2975;Gaia
+breplace1: setblock WOOL -6768;5;2975;Gaia
 bdewin1: objective delete bwin1
 b2: folder bplace2,bwin2,btick2
-bplace2: setblock diamond_block -6768;5;2974;Gaia
+bplace2: setblock DIAMOND_BLOCK -6768;5;2974;Gaia
 bwin2: objective start bwin2
 btick2: folder breplace2,bdewin2,remove_diamond,pre_roulette delay:1
-breplace2: setblock wool -6768;5;2974;Gaia
+breplace2: setblock WOOL -6768;5;2974;Gaia
 bdewin2: objective delete bwin2
 b3: folder bplace3,bwin3,btick3
-bplace3: setblock diamond_block -6768;5;2973;Gaia
+bplace3: setblock DIAMOND_BLOCK -6768;5;2973;Gaia
 bwin3: objective start bwin3
 btick3: folder breplace3,bdewin3,remove_diamond,pre_roulette delay:1
-breplace3: setblock wool -6768;5;2973;Gaia
+breplace3: setblock WOOL -6768;5;2973;Gaia
 bdewin3: objective delete bwin3
 b4: folder bplace4,bwin4,btick4
-bplace4: setblock diamond_block -6768;5;2972;Gaia
+bplace4: setblock DIAMOND_BLOCK -6768;5;2972;Gaia
 bwin4: objective start bwin4
 btick4: folder breplace4,bdewin4,remove_diamond,pre_roulette delay:1
-breplace4: setblock wool -6768;5;2972;Gaia
+breplace4: setblock WOOL -6768;5;2972;Gaia
 bdewin4: objective delete bwin4
 b5: folder bplace5,bwin5,btick5
-bplace5: setblock diamond_block -6768;4;2975;Gaia
+bplace5: setblock DIAMOND_BLOCK -6768;4;2975;Gaia
 bwin5: objective start bwin5
 btick5: folder breplace5,bdewin5,remove_diamond,pre_roulette delay:1
-breplace5: setblock wool -6768;4;2975;Gaia
+breplace5: setblock WOOL -6768;4;2975;Gaia
 bdewin5: objective delete bwin5
 b6: folder bplace6,bwin6,btick6
-bplace6: setblock diamond_block -6768;4;2974;Gaia
+bplace6: setblock DIAMOND_BLOCK -6768;4;2974;Gaia
 bwin6: objective start bwin6
 btick6: folder breplace6,bdewin6,remove_diamond,pre_roulette delay:1
-breplace6: setblock wool -6768;4;2974;Gaia
+breplace6: setblock WOOL -6768;4;2974;Gaia
 bdewin6: objective delete bwin6
 b7: folder bplace7,bwin7,btick7
-bplace7: setblock diamond_block -6768;4;2973;Gaia
+bplace7: setblock DIAMOND_BLOCK -6768;4;2973;Gaia
 bwin7: objective start bwin7
 btick7: folder breplace7,bdewin7,remove_diamond,pre_roulette delay:1
-breplace7: setblock wool -6768;4;2973;Gaia
+breplace7: setblock WOOL -6768;4;2973;Gaia
 bdewin7: objective delete bwin7
 b8: folder bplace8,bwin8,btick8
-bplace8: setblock diamond_block -6768;4;2972;Gaia
+bplace8: setblock DIAMOND_BLOCK -6768;4;2972;Gaia
 bwin8: objective start bwin8
 btick8: folder breplace8,bdewin8,remove_diamond,pre_roulette delay:1
-breplace8: setblock wool -6768;4;2972;Gaia
+breplace8: setblock WOOL -6768;4;2972;Gaia
 bdewin8: objective delete bwin8
 b9: folder bplace9,bwin9,btick9
-bplace9: setblock diamond_block -6768;3;2975;Gaia
+bplace9: setblock DIAMOND_BLOCK -6768;3;2975;Gaia
 bwin9: objective start bwin9
 btick9: folder breplace9,bdewin9,remove_diamond,pre_roulette delay:1
-breplace9: setblock wool -6768;3;2975;Gaia
+breplace9: setblock WOOL -6768;3;2975;Gaia
 bdewin9: objective delete bwin9
 b10: folder bplace10,bwin10,btick10
-bplace10: setblock diamond_block -6768;3;2974;Gaia
+bplace10: setblock DIAMOND_BLOCK -6768;3;2974;Gaia
 bwin10: objective start bwin10
 btick10: folder breplace10,bdewin10,remove_diamond,pre_roulette delay:1
-breplace10: setblock wool -6768;3;2974;Gaia
+breplace10: setblock WOOL -6768;3;2974;Gaia
 bdewin10: objective delete bwin10
 b11: folder bplace11,bwin11,btick11
-bplace11: setblock diamond_block -6768;3;2973;Gaia
+bplace11: setblock DIAMOND_BLOCK -6768;3;2973;Gaia
 bwin11: objective start bwin11
 btick11: folder breplace11,bdewin11,remove_diamond,pre_roulette delay:1
-breplace11: setblock wool -6768;3;2973;Gaia
+breplace11: setblock WOOL -6768;3;2973;Gaia
 bdewin11: objective delete bwin11
 b12: folder bplace12,bwin12,btick12
-bplace12: setblock diamond_block -6768;3;2972;Gaia
+bplace12: setblock DIAMOND_BLOCK -6768;3;2972;Gaia
 bwin12: objective start bwin12
 btick12: folder breplace12,bdewin12,remove_diamond,pre_roulette delay:1
-breplace12: setblock wool -6768;3;2972;Gaia
+breplace12: setblock WOOL -6768;3;2972;Gaia
 bdewin12: objective delete bwin12
 b13: folder bplace13,bwin13,btick13
-bplace13: setblock diamond_block -6768;2;2975;Gaia
+bplace13: setblock DIAMOND_BLOCK -6768;2;2975;Gaia
 bwin13: objective start bwin13
 btick13: folder breplace13,bdewin13,remove_diamond,pre_roulette delay:1
-breplace13: setblock wool -6768;2;2975;Gaia
+breplace13: setblock WOOL -6768;2;2975;Gaia
 bdewin13: objective delete bwin13
 b14: folder place14,win14,tick14
-bplace14: setblock diamond_block -6768;2;2974;Gaia
+bplace14: setblock DIAMOND_BLOCK -6768;2;2974;Gaia
 bwin14: objective start bwin14
 btick14: folder breplace14,bdewin14,remove_diamond,pre_roulette delay:1
-breplace14: setblock wool -6768;2;2974;Gaia
+breplace14: setblock WOOL -6768;2;2974;Gaia
 bdewin14: objective delete bwin14
 b15: folder bplace15,bwin15,btick15
-bplace15: setblock diamond_block -6768;2;2973;Gaia
+bplace15: setblock DIAMOND_BLOCK -6768;2;2973;Gaia
 bwin15: objective start bwin15
 btick15: folder breplace15,bdewin15,remove_diamond,pre_roulette delay:1
-breplace15: setblock wool -6768;2;2973;Gaia
+breplace15: setblock WOOL -6768;2;2973;Gaia
 bdewin15: objective delete bwin15
 b16: folder bplace16,bwin16,btick16
-bplace16: setblock diamond_block -6768;2;2972;Gaia
+bplace16: setblock DIAMOND_BLOCK -6768;2;2972;Gaia
 bwin16: objective start bwin16
 btick16: folder breplace16,bdewin16,remove_diamond,pre_roulette delay:1
-breplace16: setblock wool -6768;2;2972;Gaia
+breplace16: setblock WOOL -6768;2;2972;Gaia
 bdewin16: objective delete bwin16
+

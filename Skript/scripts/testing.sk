@@ -1,3 +1,19 @@
+#command /redemarrer:
+#	trigger:
+#		loop players:
+#			message "&a&lLe serveur va redémarrer dans 60 secondes !"
+#			message "&aNous serons de retour dans quelques instants."
+#			message "&a&oMerci de ne pas spammer la reconnection."
+#			wait 60 seconds
+#			message "&c&o2"
+#			kick loop-player because "&aGaïa revient dans quelques instants."
+#		restart server
+# There has to be a restart.sh !!
+#
+#
+#Ne fonctionne qu'avec des items de base, pas de custom recipies
+#on craft:
+#	message "Warm for your feet!"
 command /teamtesting:
 	trigger:
 		set {redteam.%player%} to 1
@@ -13,17 +29,26 @@ on damage:
         {redteam.%attacker%} is 1:
             cancel event
             send "&cCe joueur est dans ton équipe" to attacker
-
-on chat:
-	if message contains "email:":
-		message "Hello !"
 			
 #shoot an arrow
 #make the player shoot a creeper at speed 10
 #shoot a pig from the creeper
 
+#DETECTS BUT WEIRDLY
+#on vehicle collide with entity:
+#    if event-entity is a player:
+#        message "Collision !" to player
+#        make player damage event-entity by 2
+#    if event-entity is a pig:
+#        broadcast "Hit !"
 
-#		
+#
+#SAME AS ON LOGIN THIS DOES NOT DOWNLOAD PROPERLY		
+#command /ressourcepacktester:
+#	trigger:
+#		send resourcepack "https://www.dropbox.com/s/drnvydf8xhile1y/MedievalDarkness.zip?dl=1" to player
+#
+#
 #						#
 #						#
 #		SkyWars			#
@@ -121,8 +146,8 @@ command /thisistheskzminigameinscription:
 				
 				
 				else:
-				message "&c&oVous devez avoir un inventaire vide"
-				message "&c&opour pouvoir commencer ce jeu !"
+					message "&c&oVous devez avoir un inventaire vide"
+					message "&c&opour pouvoir commencer ce jeu !"
 			else:
 				message "&d&oCe minijeux a déjà commencé."
 				message "&d&oMerci d'attendre."	

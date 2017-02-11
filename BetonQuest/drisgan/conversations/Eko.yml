@@ -1,4 +1,4 @@
-quester: Eko
+quester: 'Eko'
 first: n1,n2,n3,n4,n_tempo,n5,n6
 stop: 'false'
 ##########################
@@ -9,26 +9,26 @@ stop: 'false'
 NPC_options:
 #
   n1:
-    text: Alors c'est toi &2%player% &a&o? &3Jones&a&o m'a parlé de ton exploit avec l'ombre jaune. \nJ'ai cru comprendre que tu étais à l'affut de nouvelles opportunités ?
+    text: 'Alors c''est toi &2%player% &a&o? &3Jones&a&o m''a parlé de ton exploit avec l''ombre jaune. \nJ''ai cru comprendre que tu étais à l''affut de nouvelles opportunités ?'
     conditions: 'kal_q2start,!eko_inconvers,!eko_q1start,!eko_q1done'
-    pointer: suite1,non
+    pointers: suite1,non
   rep1:
-    text: Tu es au bon endroit dans ce cas. \nLaisse moi me présenter correctement, je suis &2Eko&a&o, membre du &dSyndicat&a&o. \nNous sommes une organisation a but lucratif exclusivement !
-    event: eko_conv1,eko_inconvers,Zedd.kal_j3_del
+    text: 'Tu es au bon endroit dans ce cas. \nLaisse moi me présenter correctement, je suis &2Eko&a&o, membre du &dSyndicat&a&o. \nNous sommes une organisation a but lucratif exclusivement !'
+    events: eko_conv1,eko_inconvers,Zedd.kal_j3_del
   n2:
-    text: Eh bien? Effrayé par l'inconnu?
+    text: 'Eh bien? Effrayé par l''inconnu?'
     conditions: '!eko_inconvers,eko_q1start,!las_q1start'
   n3:
-    text: Tu as passé le test hein ? C'est un rituel que le chef impose à tous les nouveaux pour jauger de leur utilité... \nEnfin, je peux faire autre chose pour toi ?
+    text: 'Tu as passé le test hein ? C''est un rituel que le chef impose à tous les nouveaux pour jauger de leur utilité... \nEnfin, je peux faire autre chose pour toi ?'
     conditions: '!eko_inconvers,eko_q1done,las_q1start,!eko_q2start,!eko_q2done'
-    pointer: suite2,suite3
+    pointers: suite2,suite3
   rep2:
-    text: Le traître hein ? Étonnant que le chef envoie un aventurier s'occuper d'une chose comme celle la... \nMais soit !
-    event: eko_inconvers,eko_q2startfolder
+    text: 'Le traître hein ? Étonnant que le chef envoie un aventurier s''occuper d''une chose comme celle la... \nMais soit !'
+    events: eko_inconvers,eko_q2startfolder
   n4:
-    text: Comment avancent tes recherches ?
+    text: 'Comment avancent tes recherches ?'
     conditions: '!eko_inconvers,eko_q2start,!eko_q2done'
-    pointer: suite4,suite5
+    pointers: suite4,suite5
 #
 # Tempo Section
 #
@@ -37,16 +37,16 @@ NPC_options:
 #                J'ai redirigé vers Maka à partir d'ici,
 #                  la suite étant en développement.  ~ H
   rep3:
-    text: Intéressant... Voyons voir ce que cette lettre nous raconte... \nMerci, je vais continuer mes investigations et je te tiendrais au courant. \nTu pourras revenir me voir plus tard.
-    event: eko_inconvers,eko_q2donefolder
+    text: 'Intéressant... Voyons voir ce que cette lettre nous raconte... \nMerci, je vais continuer mes investigations et je te tiendrais au courant. \nTu pourras revenir me voir plus tard.'
+    events: eko_inconvers,eko_q2donefolder
   n_tempo:
-    text: Je suis toujours entrain d'analyser la lettre que tu m'as ramené. \nReviens me voir plus tard !
-    condition: '!eko_inconvers,eko_tempo'
+    text: 'Je suis toujours entrain d''analyser la lettre que tu m''as ramené. \nReviens me voir plus tard !'
+    conditions: '!eko_inconvers,eko_tempo'
   n5:
-    text: Va! Le temps presse!
+    text: 'Va! Le temps presse!'
     conditions: '!eko_inconvers,eko_q3start,!eko_q3done'
   n6:
-    text: J'ai appris que tu avais accomplis ta mission. \nFélicitations, tu es des nôtres désormais...
+    text: 'J''ai appris que tu avais accomplis ta mission. \nFélicitations, tu es des nôtres désormais...'
     conditions: '!eko_inconvers,eko_q3done'
 #
 #
@@ -58,20 +58,20 @@ NPC_options:
 player_options:
 #
   suite1:
-    text: Je guette toujours les bonnes occasions !
-    pointer: rep1
+    text: 'Je guette toujours les bonnes occasions !'
+    pointers: rep1
   non:
-    text: Désolé, je crois que je me suis trompé.
+    text: 'Désolé, je crois que je me suis trompé.'
   suite2:
-    text: Où puis-je trouver Erek ?
-    pointer: rep2
+    text: 'Où puis-je trouver Erek ?'
+    pointers: rep2
   suite3:
-    text: Tout va bien.
+    text: 'Tout va bien.'
   suite4:
-    text: J'ai trouvé cette &2Lettre cachetée&7 sur le corps d'un type louche !
-    conditions: eko_lettre
-    pointer: rep3
+    text: 'J''ai trouvé cette &2Lettre cachetée&7 sur le corps d''un type louche !'
+    conditions: 'eko_lettre'
+    pointers: rep3
   suite5:
-    text: Je n'ai pas encore trouvé le Trou Noir...
+    text: 'Je n''ai pas encore trouvé le Trou Noir...'
 #
 #

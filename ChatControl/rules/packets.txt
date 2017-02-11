@@ -1,0 +1,285 @@
+# -------------------------------------------------------------------------------
+# This file manages special rules that can overlaps messages sent by other
+# plugins or even the server, with the help of packets.
+#
+# You need ProtocolLib to enable this features.
+# 
+# This accepts only operators below:
+#
+# Valid operators:
+# match <regex> (A valid regular expression to match the checked message.)
+# then replace <message> (A word used to replace only the part of the matched message.)
+# then rewrite <message> (A message used to replace the whole checked message.)
+# then rewritein <world> <message> (A message used to replace the whole checked message in the specified world only. 
+#                                   You can use this together with 'rewrite' as a fallback on other worlds. It is possible 
+#                                   to add multiple operators in one rule for multiple worlds.)
+# dont verbose (Even if you have Verbose enabled the rule will be hidden from appearing in the console.)
+# then deny (Message will not be shown in the chat - cancels the packet.)
+#
+# For valid variables (e.g. %world) check out the header in the rules.txt file!
+#
+# Supports color codes with & and unicode characters when saved in UTF-8 encoding.
+# -------------------------------------------------------------------------------
+#
+#
+
+#
+#
+#
+# Hollish Server Cleaner
+#
+#
+#
+
+#Filter Helper
+match thisisamessagethathastobefiltered
+then deny
+
+# MCI Remover
+match ^MCI
+dont verbose
+then deny
+
+#Unknown
+match ^Unknown command.|^Something wrong
+dont verbose
+then rewrite &cOption indisponible.                                                                                           &dUtilisez &2/menu &dpour toutes les options.                                                            &d&oOu rengagez la conversation avec le PNJ auquel vous souhaitez parler.
+
+# Permissions
+match ^Sorry, you don't have enough permissions.*|^I'm sorry, but you do not have permission to perform this.*|^You do not have access to that command.|^Use the command|^This server is running|^Vous ne pouvez pas voir la page|^You are not permitted to do that. Are you in the right mode?|^You don't have permission|^Invalid Permissions|^You don't have permission to execute that command.|^Vous n'avez pas accès à cette commande.|^I'm sorry, but you do not have permission to perform this command.|^You do not have access to that command.|^You don't have permission.|^You do not have permissions for that command.|^You do not have any of the required|^You do not have sufficient permissions.|^You do not have permission to do that.
+dont verbose
+then rewrite &cVous ne pouvez pas exécuter cette commande.                                                   &dUtilisez &2/menu &dpour toutes les options.
+
+# ChestCommands
+match \[ChestCommands\]
+dont verbose
+then rewrite &cVous ne pouvez pas exécuter cette commande.                                                   &dUtilisez &2/menu &dpour toutes les options.
+
+# ChestCommands Bis
+match Developer|Commands
+dont verbose
+then deny
+
+# GUI Opening Lack of Permissions
+match ^You are missing the permission
+dont verbose
+then rewrite &cVous ne pouvez pas interagir avec votre Ville en étant sur un autre continent.
+
+# WorldGuard Canceller
+match ^Hey! Sorry, but you can't (use|place|break|PvP|open|change) (that|that block|vehicles|things) here.
+dont verbose
+then rewrite &cVous ne pouvez pas faire ça ici.
+
+match ^Hey! You are not permitted to enter this area.
+dont verbose
+then rewrite &cVous n'avez pas accès à cette zone.
+
+match You are not allowed to go there.
+dont verbose
+then rewrite &cVous ne pouvez pas faire ça ici.
+
+match ^Hey! Sorry, but you can't PvP here.
+dont verbose
+then deny
+
+match with custom flags plugin.$
+then deny
+
+# "X died" message Canceller
+match died$
+dont verbose
+then deny
+
+# Mailer
+match ^Set email subject!|^Sent!|^Set email to|^Set email body!
+dont verbose
+then deny
+
+# Twitter
+match Tweet has been created
+dont verbose
+then deny
+
+# Twitter 1
+match Twitter
+dont verbose
+then deny
+
+# Twitter 2
+match to send it or
+dont verbose
+then deny
+
+# Twitter 3
+match Je viens de rejoindre le serveur !
+dont verbose
+then deny
+
+
+# Nice hein?
+match ^That would be nice
+dont verbose
+then deny
+
+#WorldEdit
+match ^https://github.com/sk89q/worldedit/
+then deny
+
+match ^/worldedit cui: &6Complete CUI handshake (internal usage)
+then deny
+
+#WorldEdit Bis
+match ^----------- Platforms -----------|^WorldEdit version|^Founded by sk89q, and currently developed by|^----------- Capabilities -----------
+then deny
+
+# McMMO Armes et Outils
+match VOUS LEVEZ VOTRE (HOUE|EPEE|PIOCHE|HACHE|PELLE)|VOUS ABAISSEZ VOTRE (HOUE|EPEE|PIOCHE|HACHE|PELLE)
+dont verbose
+then deny
+
+#Other Random Stuff
+match Bukkit-Official|^CraftBook version|PermissionsEx|WGTreeFarmFlag
+then deny
+
+# McMMO Credits
+#match nossr50|Founder|Developer|Developers|Project|Useful|PayPal|IRC|Donation|detailed|Tips|February|Use|Reporting
+#then deny
+
+# McMMO Credits
+match CommandBlock at
+then deny
+
+#
+#
+# Discord Language checker
+#
+#
+##########
+#
+#
+#
+#     REGEX vs Insultes
+#
+#
+#
+#                    2.0
+##############################
+
+#Merde
+match (m+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(r+)(\.+|\*+|)(((d+)(\s+|\.+|\*+|)(e+|2|))|2)
+then replace *****
+
+#Connard Et Connasse
+match \b(c+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)((a+)(\s+|\.+|\*+|)(r+|s+)(\s+|\.+|\*+|)(d+|e+)|)\b
+then replace *****
+
+#Ta gueule
+match \b(t+|)(\s+|\.+|\*+|)(a+|)(\s+|\.+|\*+|)(g+)(\s+|\.+|\*+|)(u+|e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(u+|e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(e+|)
+then replace *****
+
+#
+# Misogynie & Autres Connards
+#
+
+#Saloppe
+match \b(s+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)((e+)|)(\s+|\.+|\*+|)(s+|)
+then replace *****
+
+#Pute & Putain
+match \b(p+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)((e+)|(1+)|((a+|)(i+)(n+)))(\s+|\.+|\*+|)(s+|)\b
+then replace *****
+
+#Fils de Pute
+match \b(f+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)((s+|e+)|)(\s+|\.+|\*+|)(de+|d+|2+|a+|à+|á+|ä+|â+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)((e+)|(1+)|((a+|)(i+)(n+)))(\s+|\.+|\*+|)(s+|)\b
+then replace *****
+
+#UNUSED since present in quests (SAM & MARIE)
+#Ta mère
+#match \b(t+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(m+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)((e+)|)
+#then replace *****
+
+#
+# Parties du Corps et Autres désagréments
+#
+
+#Foutre
+match \b(f+)(\s+|\.+|\*+|)(o+|)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(e+|)
+then replace *****
+
+#Chier
+match \b(c+)(\s+|\.+|\*+|)(h+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+|)\b
+then replace *****
+
+#Bordel
+match \b(b+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(d+)(\s+|\.+|\*+|)(e+|)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(s+|)
+then replace *****
+
+#Burnes
+match \b(b+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(s+|)
+then replace *****
+
+#Couilles
+match \b(c+)(\s+|\.+|\*+|)(o+|u+)(\s+|\.+|\*+|)(o+|u+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(e+|)(\s+|\.+|\*+|)(s+|)
+then replace *****
+
+#Bite
+match \b(b+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(e+|)(\s+|\.+|\*+|)(r+|s+|)
+then replace *****
+
+#Chatte
+match \b(c+)(\s+|\.+|\*+|)(h+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(s+|)\b
+then replace *****
+
+#Cul
+match \b(c+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(s+|)\b
+then replace *****
+
+#Pénis
+match \b(p+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(s+|)\b
+then replace *****
+
+#Anus
+match \b(a+)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(s+|)\b
+then replace *****
+
+#
+# Rapports Sexuels et Autres Plaisirs
+#
+
+#Baiser
+match \b(b+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(s)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+|)\b
+then replace *****
+
+#Niquer
+match \b(n+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(q+)(\s+|\.+|\*+|)(u+|)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+|)\b
+then replace *****
+
+#Branlette
+match \b(b+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(n+|)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+|t+|)(\s+|\.+|\*+|)(e+|)
+then replace *****
+
+#Enculer
+match \b(e+)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)(c+|q+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)(\s+|\.+|\*+|)(r+|s+|)(\s+|\.+|\*+|)
+then replace *****
+
+#
+# Racisme, Homophobie & Autres Ignorances
+#
+
+#Nègre
+match \b(n+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+|)(\s+|\.+|\*+|)(g+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+|)(\s+|\.+|\*+|)(s+|)(\s+|\.+|\*+|)
+then replace *****
+
+#Bougnoule
+match \b(b+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(u+|)(\s+|\.+|\*+|)(g+|)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)(i+|)(\s+|\.+|\*+|)(o+|u+)(\s+|\.+|\*+|)(o+|u+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(e+|)(\s+|\.+|\*+|)
+then replace *****
+
+#Tappette
+match \b(t+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(t+)
+then replace *****
+
+#
+# Raccourcis Individuels
+#
+match (\bfdp\b|\bpd\b)
+then replace *****

@@ -1,4 +1,4 @@
-quester: Chef d'escadron
+quester: 'Chef d''escadron'
 first: qui,promotion,mais
 stop: 'false'
 ###########
@@ -8,28 +8,28 @@ stop: 'false'
 ###########
 NPC_options:
   qui:
-    text: Qui ose me déranger ?
+    text: 'Qui ose me déranger ?'
     conditions: 'Recrutement_Tag'
-    pointer: jesuisunerecrue
+    pointers: jesuisunerecrue
   chef:
-    text: Quand on s'adresse à moi, on dit Chef !!! 
-    pointer: ouichef 
+    text: 'Quand on s''adresse à moi, on dit Chef !!!'
+    pointers: ouichef
   bien:
-    text: La Deuxième Escadron possède deux niveau Recrue et Soldat ! \nPour que tu deviens un soldat montre moi ton utilité et vas donc aider tes camarade ! \nAh, il y a aussi le &2physicien &a&oqui à besoin d'un coup de main ! \nEt ne me derange plus tant que je ne tes pas donner l'ordre !
-    events: 'Chef_tous'
+    text: 'La Deuxième Escadron possède deux niveau Recrue et Soldat ! \nPour que tu deviens un soldat montre moi ton utilité et vas donc aider tes camarade ! \nAh, il y a aussi le &2physicien &a&oqui à besoin d''un coup de main ! \nEt ne me derange plus tant que je ne tes pas donner l''ordre !'
+    events: Chef_tous
   mais:
-    text: Mais vous le faites tous exprès ! Allez voir ailleur si j'y suis !!!
+    text: 'Mais vous le faites tous exprès ! Allez voir ailleur si j''y suis !!!'
   promotion:
-    text: Bien, je vois que vous êtes un élément intérressant ! Que dirais vous de passez au rang de soldat ?
+    text: 'Bien, je vois que vous êtes un élément intérressant ! Que dirais vous de passez au rang de soldat ?'
     conditions: 'Loyer_Done,Ryan_Done,Physicien_Done'
-    pointer: rangsoldat1
+    pointers: rangsoldat1
   rangsoldat2:
-    text: J'ai reçu un rapport dans lequel des bruits étranges était émis depuis le moulin pendant la nuit ! \nEt je voudrais que vous enquêter puisque personne des autres recrue ose y allé. \nc'est à vous de joué !
-    pointer: rangsoldat3
+    text: 'J''ai reçu un rapport dans lequel des bruits étranges était émis depuis le moulin pendant la nuit ! \nEt je voudrais que vous enquêter puisque personne des autres recrue ose y allé. \nc''est à vous de joué !'
+    pointers: rangsoldat3
   bien2:
-    text: Bien ! Après ça, revenez faire votre rapport.
-    events: 'Quetes_promo'
-    pointer: ok
+    text: 'Bien ! Après ça, revenez faire votre rapport.'
+    events: Quetes_promo
+    pointers: ok
 #############
 #           #
 #   Joueur  #
@@ -37,16 +37,16 @@ NPC_options:
 #############
 player_options:
   jesuisunerecrue:
-    text: Désoler de vous déranger, je suis une nouvelle recrue, monsieur ! 
-    pointer: chef
+    text: 'Désoler de vous déranger, je suis une nouvelle recrue, monsieur !'
+    pointers: chef
   ouichef:
-    text: Oui, chef !!!
-    pointer: bien
+    text: 'Oui, chef !!!'
+    pointers: bien
   rangsoldat1:
-    text: Que dois-je faire ?
-    pointer: rangsoldat2
+    text: 'Que dois-je faire ?'
+    pointers: rangsoldat2
   rangsoldat3:
-    text: A vos ordre, Chef !
-    pointer: bien2
+    text: 'A vos ordre, Chef !'
+    pointers: bien2
   ok:
-    text: Oui, Chef !
+    text: 'Oui, Chef !'

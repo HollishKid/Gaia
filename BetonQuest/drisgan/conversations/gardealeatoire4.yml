@@ -1,4 +1,4 @@
-quester: Milicien
+quester: 'Milicien'
 first: n1,n2,n3,n4,n5
 stop: 'false'
 #
@@ -6,18 +6,18 @@ stop: 'false'
 #
 NPC_options:
   n1:
-    text: Lâche moi la grappe!
-    conditions: random20 
+    text: 'Lâche moi la grappe!'
+    conditions: 'random20'
   n2:
-    text: Allez fous le camp!
-    conditions: random40
+    text: 'Allez fous le camp!'
+    conditions: 'random40'
   n3:
-    text: Mais c'est que tu es fait pour énerver les gens toi!?
-    conditions: random60
+    text: 'Mais c''est que tu es fait pour énerver les gens toi!?'
+    conditions: 'random60'
   n4:
-    text: Tu veux te battre ou quoi?!
-    conditions: random80
+    text: 'Tu veux te battre ou quoi?!'
+    conditions: 'random80'
   n5:
-    text: Casse toi!!
-    conditions: random100
+    text: 'Casse toi!!'
+    conditions: 'random100'
 player_options:

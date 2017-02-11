@@ -1,0 +1,46 @@
+# CraftBook Custom Recipes. CraftBook Version: 3.9-SNAPSHOT
+# For more information on setting up custom recipes, see the wiki:
+# http://wiki.sk89q.com/wiki/CraftBook/Custom_crafting
+#
+#
+# This thing only allow ONE recipe per ITEM OUTPUT.
+#   i.e. you can only have one recipe that has "DIAMOND_LEGGINGS" in the "result" section.
+#                                                                                              ~ H
+
+crafting-recipes:
+    cuir:
+        type: Furnace
+        ingredients:
+            'LEATHER ': 1
+        results:
+            'LEATHER|Cuir Tanné|Ce cuir est|beaucoup plus robuste ! ': 1
+    maille:
+        type: Furnace
+        ingredients:
+            'STRING ': 1
+        results:
+            'STRING|Mailles|Cette maille fera|une armure correcte. ': 1
+    iron:
+        type: Furnace
+        ingredients:
+            'IRON_INGOT ': 1
+        results:
+            'IRON_INGOT|Fer Forgé|Ce fer est|très dense ! ': 1
+    gold:
+        type: Furnace
+        ingredients:
+            'GOLD_INGOT ': 1
+        results:
+            'GOLD_INGOT|Or Décoré|Cet or est|joliment travaillé... ': 1
+    diamond:
+        type: Furnace
+        ingredients:
+            'DIAMOND ': 1
+        results:
+            'DIAMOND|Diamant Noble|Ce diamant est|d''une qualité rare... ': 1
+    emerald:
+        type: Furnace
+        ingredients:
+            'EMERALD ': 1
+        results:
+            'EMERALD|Emeraude Polie|Cet Emeraude est|très raffiné ! ': 1

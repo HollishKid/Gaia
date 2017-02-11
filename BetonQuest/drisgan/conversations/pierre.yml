@@ -1,4 +1,4 @@
-quester: Shifoumi
+quester: 'Shifoumi'
 first: n1,n2,n3
 stop: 'true'
 ##########################
@@ -8,14 +8,14 @@ stop: 'true'
 ##########################
 NPC_options:
   n1:
-    text: "&7&oJe choisi les ciseaux!"
-    conditions: random60
-    event: shi_pierrewin
+    text: '"&7&oJe choisi les ciseaux!"'
+    conditions: 'random60'
+    events: shi_pierrewin
   n2:
-    text: "&7&oJe choisi la pierre!"
-    conditions: random40
-    event: shi_pierredraw
+    text: '"&7&oJe choisi la pierre!"'
+    conditions: 'random40'
+    events: shi_pierredraw
   n3:
-    text: "&7&oJe choisi la feuille!"
-    conditions: random100
-    event: shi_pierreloose
+    text: '"&7&oJe choisi la feuille!"'
+    conditions: 'random100'
+    events: shi_pierreloose

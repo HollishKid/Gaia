@@ -1,4 +1,4 @@
-quester: Maximus
+quester: 'Maximus'
 first: n1
 stop: 'false'
 ##########################
@@ -8,15 +8,15 @@ stop: 'false'
 ##########################
 NPC_options:
   n1:
-    text: Je suis le gardien de l'arène.
-    pointer: p1,p2,p5,p6
+    text: 'Je suis le gardien de l''arène.'
+    pointers: p1,p2,p5,p6
   gofight:
-    text: Que le combat commence !!
+    text: 'Que le combat commence !!'
   event1:
-    text: C'est simple ! Tu n'as qu'à entrer dans l'arène... et en ressortir vivant... !
-    pointer: p3,p4
+    text: 'C''est simple ! Tu n''as qu''à entrer dans l''arène... et en ressortir vivant... !'
+    pointers: p3,p4
   rep1:
-    text: Désolé mais il vous faut une autorisation du chef Jimbo pour cela. Vous pouvez le trouver à la &6Guilde des Aventuriers&a&o.
+    text: 'Désolé mais il vous faut une autorisation du chef Jimbo pour cela. Vous pouvez le trouver à la &6Guilde des Aventuriers&a&o.'
 ##########################
 #                        #
 #     player OPTIONS     #
@@ -25,22 +25,22 @@ NPC_options:
 player_options:
 #
   p1:
-    text: Le chef Jimbo m'a envoyé vous voir. Que dois-je faire ?
-    conditions: jim_q1start
-    pointer: event1
+    text: 'Le chef Jimbo m''a envoyé vous voir. Que dois-je faire ?'
+    conditions: 'jim_q1start'
+    pointers: event1
   p2:
-    text: Puis-je combattre dans l'arène ?
+    text: 'Puis-je combattre dans l''arène ?'
     conditions: '!jim_q1start,!max1'
-    pointer: rep1
+    pointers: rep1
   p3:
-    text: Je relèverai tous les défis !
-    event: fold1
+    text: 'Je relèverai tous les défis !'
+    events: fold1
   p4:
-    text: Je vais me préparer d'abord.
+    text: 'Je vais me préparer d''abord.'
   p5:
-    text: Je veux une revanche contre Takeo !
+    text: 'Je veux une revanche contre Takeo !'
     conditions: 'fight1,!jim_q1start'
-    event: event1
-    pointer: gofight
+    events: event1
+    pointers: gofight
   p6:
-    text: Force et honneur.
+    text: 'Force et honneur.'

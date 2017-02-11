@@ -1,4 +1,4 @@
-quester: Milicien
+quester: 'Milicien'
 first: etranger,connu
 stop: 'false'
 #
@@ -6,31 +6,31 @@ stop: 'false'
 #
 NPC_options:
   etranger:
-    text: Fous le camp d'ici avant que je te pourfende avec mon glaive !!
+    text: 'Fous le camp d''ici avant que je te pourfende avec mon glaive !!'
     conditions: '!drisgan'
-    pointer: mais
+    pointers: mais
   connu:
     text: 'Hé, salut &2%player% &a&o! Comment on va ? Tu veux rentrer ?'
-    conditions: drisgan
-    pointer: cava,oui,non
+    conditions: 'drisgan'
+    pointers: cava,oui,non
   open:
-    text: D'accord ! A bientôt !
+    text: 'D''accord ! A bientôt !'
     events: banditdooro,banditdoorc
   rep1:
-    text: Fallait le dire tout de suite ! Pas de souci alors, sois dorénavant le bienvenue dans la ville de &dDrisgan &a&o!
-    event: acces_drisgan,banditdooro,banditdoorc
+    text: 'Fallait le dire tout de suite ! Pas de souci alors, sois dorénavant le bienvenue dans la ville de &dDrisgan &a&o!'
+    events: acces_drisgan,banditdooro,banditdoorc
 #
 #PLAYER OPTIONS
 #
 player_options:
   cava:
-    text: Ca va bien merci.
+    text: 'Ca va bien merci.'
   oui:
-    text: Je veux bien rentrer oui !
-    pointer: open
+    text: 'Je veux bien rentrer oui !'
+    pointers: open
   non:
-    text: Non merci, je vais rester dehors ...
+    text: 'Non merci, je vais rester dehors ...'
   mais:
-   text: J'ai pourtant été envoyé par Kali Jones pour rencontrer Eko.
-   conditions: kal_q2start
-   pointer: rep1
+    text: 'J''ai pourtant été envoyé par Kali Jones pour rencontrer Eko.'
+    conditions: 'kal_q2start'
+    pointers: rep1

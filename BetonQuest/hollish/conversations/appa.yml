@@ -1,27 +1,27 @@
-quester: Moine
+quester: 'Moine'
 first: bonjour
 stop: 'false'
 NPC_options:
   bonjour:
-    text: Bonjour &2%player% &a&o!
-    pointer: qui,temple,athelas
+    text: 'Bonjour &2%player% &a&o!'
+    pointers: qui,temple,athelas
   qui_rep:
-    text: Je viens d'un pays lointain ...
+    text: 'Je viens d''un pays lointain ...'
   temple_rep:
-    text: Allons-y Jeune Maître de l'Air !
+    text: 'Allons-y Jeune Maître de l''Air !'
     events: appa_temple
   athelas_rep:
-    text: Allons-y Jeune Maître de l'Air !
+    text: 'Allons-y Jeune Maître de l''Air !'
     events: appa_athelas
 player_options:
   qui:
-    text: Qui êtes vous ?
-    pointer: qui_rep
+    text: 'Qui êtes vous ?'
+    pointers: qui_rep
   temple:
-    text: Je voudrais retourner au Temple de l'Air !
-    condition: tag_aang
-    pointer: temple_rep
+    text: 'Je voudrais retourner au Temple de l''Air !'
+    conditions: 'tag_aang'
+    pointers: temple_rep
   athelas:
-    text: Je voudrais retourner à Athelas !
-    condition: tag_aang
-    pointer: athelas_rep
+    text: 'Je voudrais retourner à Athelas !'
+    conditions: 'tag_aang'
+    pointers: athelas_rep
