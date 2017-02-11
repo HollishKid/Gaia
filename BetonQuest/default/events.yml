@@ -3675,32 +3675,32 @@ hollishrole: 'command jukebox sound %player% http://files.enjin.com/1186825/voic
 ###############################################################################
 historique_folder: folder meka,teleport_tableau1 delay:0
 meka: folder meka1,title_begin1 delay:0
-meka1: folder meka2,message1 delay:7
+meka1: folder meka2,message1 delay:3
 meka2: folder meka3,title_begin2 delay:3
-meka3: folder meka4,message2 delay:7
-meka4: folder meka5,message3 delay:15
+meka3: folder meka4,message2 delay:4
+meka4: folder meka5,message3 delay:7
 meka5: folder meka6,title_begin3,teleport_tableau2 delay:15
 meka6: folder meka7,message4 delay:7
-meka7: folder meka8,message5 delay:15
-meka8: folder meka9,message6 delay:15
-meka9: folder meka10,message7 delay:15
-meka10: folder meka11,message8 delay:15
-meka11: folder meka12,message9 delay:15
+meka7: folder meka8,message5 delay:7
+meka8: folder meka9,message6 delay:7
+meka9: folder meka10,message7 delay:7
+meka10: folder meka11,message8 delay:7
+meka11: folder meka12,message9 delay:7
 meka12: folder meka13,title_begin4,teleport_tableau3 delay:10
 meka13: folder meka14,message10 delay:7
-meka14: folder meka15,message11 delay:15
-meka15: folder meka16,message12 delay:15
+meka14: folder meka15,message11 delay:7
+meka15: folder meka16,message12 delay:7
 meka16: folder meka17,title_begin5,teleport_tableau4 delay:20
 meka17: folder meka18,message13 delay:7
-meka18: folder meka19,message14 delay:15
-meka19: folder meka20,message15 delay:15
-meka20: folder meka21,message16 delay:15
-meka21: folder meka22,message17 delay:15
+meka18: folder meka19,message14 delay:7
+meka19: folder meka20,message15 delay:7
+meka20: folder meka21,message16 delay:7
+meka21: folder meka22,message17 delay:7
 meka22: folder meka23,teleport_tableau5 delay:10
 meka23: folder meka24,message18 delay:3
-meka24: folder meka25,message19 delay:15
-meka25: folder meka26,message20 delay:15
-meka26: folder teleport_retour delay:15
+meka24: folder meka25,message19 delay:7
+meka25: folder meka26,message20 delay:7
+meka26: folder teleport_retour delay:7
 teleport_tableau1: folder teleport_tableau1_exe delay:1
 teleport_tableau1_exe: teleport -7235;80;2660;Gaia
 teleport_tableau2: folder teleport_tableau2_exe delay:0
@@ -3708,7 +3708,7 @@ teleport_tableau2_exe: teleport -708;38;356;Gaia_nether
 teleport_tableau3: folder teleport_tableau3_exe delay:0
 teleport_tableau3_exe: teleport -6747;15;3253;Gaia
 teleport_tableau4: folder teleport_tableau4_exe delay:0
-teleport_tableau4_exe: teleport -6938;131;2987;Gaia
+teleport_tableau4_exe: teleport -6938;121;2987;Gaia
 teleport_tableau5: folder teleport_tableau5_exe delay:0
 teleport_tableau5_exe: teleport -6703;76;3292;Gaia
 teleport_retour: folder teleport_retour_exe delay:0
@@ -3719,23 +3719,23 @@ title_begin12: 'command title %player% title {"text":"Histoire de Gaia","bold":t
 message1: 'message &2&oIl y a fort longtemps, &6Gaïa &2&ocréa ce monde. Voici son Histoire.'
 title_begin2: folder title_begin21,title_begin22,title_begin23 delay:0
 title_begin21: 'command title %player% times 20 100 20'
-title_begin22: 'command title %player% title {"text":"Première Ere","bold":true,"color":"dark_green"}'
+title_begin22: 'command title %player% title {"text":"Première Ère","bold":true,"color":"dark_green"}'
 title_begin23: 'command title %player% subtitle {"text":"Le monde opulent de Gaia","italic":true,"color":"blue"}'
-message2: 'message &2&oDurant cette première Ere, ce fut un monde plein de richesses, à partager par tous.'
+message2: 'message &2&oDurant cette première Ère, ce fut un monde plein de richesses, à partager par tous.'
 message3: 'message &2&oLa Paix et l''Abondance étaient alors le quotidien, mais cette richesse a rapidement attirée les convoitises d''autres Divinités ...'
 title_begin3: folder title_begin31,title_begin32,title_begin33 delay:0
 title_begin31: 'command title %player% times 20 100 20'
-title_begin32: 'command title %player% title {"text":"Deuxième Ere","bold":true,"color":"dark_green"}'
+title_begin32: 'command title %player% title {"text":"Deuxième Ère","bold":true,"color":"dark_green"}'
 title_begin33: 'command title %player% subtitle {"text":"L''arrivée des Forces du Mal","italic":true,"color":"blue"}'
 message4: 'message &2&oCes Divinités ont envoyé leur minions explorer le monde de &6Gaïa&2&o, et rappatrier ses ressources.'
 message5: 'message &2&oCes serviteurs du Mal ont d''abord vécu dans les profondeurs, à l''abri des regards et sans interférer avec le reste du monde.'
 message6: 'message &2&oCela ne pouvait durer longtemps, et ces créatures ont trouvé le moyen de se déplacer vers la surface du monde de &6Gaïa&2&o.'
-message7: 'message &2&oL''assaut contre les peuples libres de &6Gaïa fut donné et le monde de &6Gaïa &2&ofut plongé dans l''Obscurité pendant des décennies...'
+message7: 'message &2&oL''assaut contre les peuples libres de &6Gaïa &2&ofut donné et le monde fut plongé dans l''Obscurité pendant des décennies...'
 message8: 'message &2&o... mais l''espoir pour les peuples libres n''était pas éteint. Un Homme, nommé &6Ubu &2&ose dressa contre les serviteurs du Mal.'
 message9: 'message &2&oDans son sillage, une véritable Révolution organisée se construisit ...'
 title_begin4: folder title_begin41,title_begin42,title_begin43 delay:1
 title_begin41: 'command title %player% times 20 100 20'
-title_begin42: 'command title %player% title {"text":"Troisième Ere","bold":true,"color":"dark_green"}'
+title_begin42: 'command title %player% title {"text":"Troisième Ère","bold":true,"color":"dark_green"}'
 title_begin43: 'command title %player% subtitle {"text":"La Révolte contre les Forces du Mal","italic":true,"color":"blue"}'
 message10: 'message &2&oDes combats acharnés commencèrent et beaucoup de vies furent perdues.'
 message11: 'message &2&oMalgré cela, la Révolution continua, et &6Ubu &2&oet ses hommes réussirent à repousser l''ennemi jusqu''au Portail Magique qui leur permettait l''accès à la surface.'
