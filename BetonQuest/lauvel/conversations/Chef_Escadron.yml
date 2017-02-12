@@ -1,5 +1,5 @@
 quester: 'Chef d''escadron'
-first: qui,promotion,mais
+first: qui,promotion,chef_r1,mais
 stop: 'false'
 ###########
 #         #
@@ -32,6 +32,7 @@ NPC_options:
     pointers: ok
   chef_r1:
     text: 'Alors avez vous trouvez quelque chose ?'
+    conditions: 'Aventurier_Ensorceler_kill'
     pointers: chef_q1,chef_q2
   chef_r2:
     text: 'Quoi! Qu''est-ce que vous faites là ? bougez vous !!!'
@@ -79,6 +80,7 @@ player_options:
     pointers: chef_r4
   chef_q5:
     text: 'Ok, je mon occupe.'
+
 
 
 
