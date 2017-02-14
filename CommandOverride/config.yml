@@ -135,43 +135,34 @@ commands:
   /thisisthehelpopcommand:
   - WAIT 1
   - console:/vsign <player> helpop {data}
-  /destconfig:
-  - command:/npc speed 0.7
-  - command:/trait npcdestinations
+  /louer:
+  - op-command:/region define <arg 0>
   - WAIT 1
-  - command:/waypoint provider npcdestinations
-  /desthelper1:
-  - command:/npcdest addlocation 13000
+  - op-command:/region setpriority <arg 0> 50
   - WAIT 1
-  - command:/npcdest locwand 0 5 7 12 --blocks
-  /desthelper2:
-  - command:/npcdest addlocation 21000
+  - op-command:/as add rent <arg 0>
   - WAIT 1
-  - command:/npcdest locwand 1 5 7 15 --blocks
+  - op-command:/as setprice 7500 <arg 0>
   - WAIT 1
-  - command:/npcdest locweather 1 clear
-  /desthelper3:
-  - command:/npcdest addlocation 11000
+  - op-command:/as setduration 2 mois <arg 0>
   - WAIT 1
-  - command:/npcdest locwand 2 5 7 15 --blocks
+  - op-command:/as groupadd louvre <arg 0>
   - WAIT 1
-  - command:/npcdest locweather 2 clear
-  /desthelper4:
-  - command:/npcdest addlocation 23000
+  - op-command:/as addsign <arg 0>
+  /louer2:
+  - op-command:/region define <arg 0>
   - WAIT 1
-  - command:/npcdest locwand 3 5 7 15 --blocks
+  - op-command:/region setpriority <arg 0> 50
   - WAIT 1
-  - command:/npcdest locweather 3 clear
-  /renthelp:
-  - command:/region define <arg 0>
+  - op-command:/as add rent <arg 0>
   - WAIT 1
-  - command:/region setpriority <arg 0> 50
+  - op-command:/as setprice <arg 1> <arg 0>
   - WAIT 1
-  - command:/as add rent <arg 0>
+  - op-command:/as duration 3 jours <arg 0>
   - WAIT 1
-  - command:/as setprice <arg 1> <arg 0>
-  - WAIT 1
-  - command:/as addsign <arg 0>
+  - op-command:/as addsign <arg 0>
+  /louerajout:
+  - op-command:/as addsign <arg 0>
   /builderregionhelp:
   - command:/region setpriority <arg 0> 50
   - WAIT 1
