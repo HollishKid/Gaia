@@ -10,7 +10,7 @@ menu-settings:
   name: '&dBateau'
 
   # rows - the number of rows of the chest - REQUIRED
-  rows: 3
+  rows: 5
 
   # command - OPTIONAL (you can remove this or set it to '')
   # Bind multiple commands using ; (command: 'menu; m; me')
@@ -59,130 +59,331 @@ retour:
 athelascentral:
   COMMAND: 'console: bq event {player} default.bat_athelas_central'
   NAME: '&aAthelas Central'
-  ID: paper
+  ID: map
   LORE:
     - 'Vous amène au bateau'
     - 'au Centre d''Athelas'
     - 'en (-6602 65 3170)'
     - ' '
-    - '&4Coût: &f¤ &a100'
+    - '&4Coût : &f¤ &a100'
   POSITION-X: 1
-  POSITION-Y: 2
+  POSITION-Y: 3
 
 athelaseast:
   COMMAND: 'console: bq event {player} default.bat_athelas_east'
   NAME: '&aAthelas Est'
-  ID: paper
+  ID: map
   LORE:
     - 'Vous amène au bateau'
     - 'à l''Est d''Athelas'
     - 'en (-6445 65 3016)'
     - ' '
-    - '&4Coût: &f¤ &a100'
+    - '&4Coût : &f¤ &a100'
   POSITION-X: 2
-  POSITION-Y: 2
+  POSITION-Y: 3
+  
+chateaulouvre:
+  COMMAND: 'console: bq event {player} default.bat_athelas_louvre'
+  NAME: '&aChâteau du Louvre'
+  ID: map
+  LORE:
+    - 'Vous amène au port'
+    - 'du Château du Louvre'
+    - 'en (-10404 66 2996)'
+    - ' '
+    - '&4Coût : &f¤ &a200'
+    - '&cRequiert :'
+    - '- &aGrade &2Écuyer &aau moins'
+  POSITION-X: 4
+  POSITION-Y: 3
+  
+mysteria:
+  COMMAND: 'console: bq event {player} default.bat_mysteria'
+  NAME: '&aVille de Mysteria'
+  ID: map
+  LORE:
+    - 'Vous amène au port'
+    - 'de Mysteria'
+    - 'en (-8994 65 4604)'
+    - ' '
+    - '&4Coût : &f¤ &a200'
+    - '&cRequiert :'
+    - '- &aGrade &2Écuyer &aau moins'
+    - '- &fAvoir parlé au &2Lieut. Hashor'
+  POSITION-X: 5
+  POSITION-Y: 3
+  
+historia:
+  COMMAND: 'console: bq event {player} default.bat_historia'
+  NAME: '&aVille d''Historia'
+  ID: map
+  LORE:
+    - 'Vous amène au port'
+    - 'd''Historia'
+    - 'en (-7835 65 3683)'
+    - ' '
+    - '&4Coût : &f¤ &a200'
+    - '&cRequiert :'
+    - '- &aGrade &2Écuyer &aau moins'
+  POSITION-X: 6
+  POSITION-Y: 3
+  
+tortuga:
+  COMMAND: 'console: bq event {player} default.bat_tortuga'
+  NAME: '&aIle de Tortuga'
+  ID: map
+  LORE:
+    - 'Vous amène au port'
+    - 'de Tortuga'
+    - 'en (-7655 65 4240)'
+    - ' '
+    - '&4Coût : &f¤ &a200'
+    - '&cRequiert :'
+    - '- &aGrade &2Écuyer &aau moins'
+  POSITION-X: 7
+  POSITION-Y: 3
   
 est1:
   COMMAND: 'console: bq event {player} default.bat_est1'
   NAME: '&aContinent Est'
-  ID: paper
+  ID: map
   LORE:
     - 'Vous amène au bateau en'
     - '(-298 65 6781)'
     - ' '
-    - '&4Coût: &f¤ &a100'
-    - '&cRequiert: &f15 &apoints de Réputation'
+    - '&4Coût : &f¤ &a100'
+    - '&cRequiert :'
+    - '- &f15 &apoints de Réputation'
     - '(non déduits)'
   POSITION-X: 1
-  POSITION-Y: 3
+  POSITION-Y: 5
   
   
 est2:
   COMMAND: 'console: bq event {player} default.bat_est2'
   NAME: '&aContinent Est'
-  ID: paper
+  ID: map
   LORE:
     - 'Vous amène au bateau en'
     - '(474 65 5635)'
     - ' '
-    - '&4Coût: &f¤ &a100'
-    - '&cRequiert: &f10 &apoints de Réputation'
+    - '&4Coût : &f¤ &a100'
+    - '&cRequiert :'
+    - '- &f10 &apoints de Réputation'
     - '(non déduits)'
   POSITION-X: 2
-  POSITION-Y: 3
+  POSITION-Y: 5
   
   
 est3:
   COMMAND: 'console: bq event {player} default.bat_est3'
   NAME: '&aContinent Est'
-  ID: paper
+  ID: map
   LORE:
     - 'Vous amène au bateau en'
     - '(-406 65 4764)'
     - ' '
-    - '&4Coût: &f¤ &a100'
-    - '&cRequiert: &f15 &apoints de Réputation'
+    - '&4Coût : &f¤ &a100'
+    - '&cRequiert :'
+    - '- &f15 &apoints de Réputation'
     - '(non déduits)'
   POSITION-X: 3
-  POSITION-Y: 3
+  POSITION-Y: 5
   
   
 est4:
   COMMAND: 'console: bq event {player} default.bat_est4'
   NAME: '&aContinent Est'
-  ID: paper
+  ID: map
   LORE:
     - 'Vous amène au bateau en'
     - '(-1725 65 2838)'
     - ' '
-    - '&4Coût: &f¤ &a100'
-    - '&cRequiert: &f15 &apoints de Réputation'
+    - '&4Coût : &f¤ &a100'
+    - '&cRequiert :'
+    - '- &f15 &apoints de Réputation'
     - '(non déduits)'
   POSITION-X: 4
-  POSITION-Y: 3
+  POSITION-Y: 5
   
   
 est5:
   COMMAND: 'console: bq event {player} default.bat_est5'
   NAME: '&aContinent Est'
-  ID: paper
+  ID: map
   LORE:
     - 'Vous amène au bateau en'
     - '(-3048 65 1382)'
     - ' '
-    - '&4Coût: &f¤ &a100'
-    - '&cRequiert: &f15 &apoints de Réputation'
+    - '&4Coût : &f¤ &a100'
+    - '&cRequiert :'
+    - '- &f15 &apoints de Réputation'
     - '(non déduits)'
   POSITION-X: 5
-  POSITION-Y: 3
+  POSITION-Y: 5
   
   
 est6:
   COMMAND: 'console: bq event {player} default.bat_est6'
   NAME: '&aContinent Est'
-  ID: paper
+  ID: map
   LORE:
     - 'Vous amène au bateau en'
     - '(-3538 65 -944)'
     - ' '
-    - '&4Coût: &f¤ &a100'
-    - '&cRequiert: &f20 &apoints de Réputation'
+    - '&4Coût : &f¤ &a100'
+    - '&cRequiert :'
+    - '- &f20 &apoints de Réputation'
     - '(non déduits)'
   POSITION-X: 6
-  POSITION-Y: 3
+  POSITION-Y: 5
   
   
 est7:
   COMMAND: 'console: bq event {player} default.bat_est7'
   NAME: '&aContinent Est'
-  ID: paper
+  ID: map
   LORE:
     - 'Vous amène au bateau en'
     - '(-756 65 456)'
     - ' '
-    - '&4Coût: &f¤ &a100'
-    - '&cRequiert: &f30 &apoints de Réputation'
+    - '&4Coût : &f¤ &a100'
+    - '&cRequiert :'
+    - '- &f30 &apoints de Réputation'
     - '(non déduits)'
   POSITION-X: 7
-  POSITION-Y: 3
+  POSITION-Y: 5
   
+  
+blockera:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker72:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker92:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true

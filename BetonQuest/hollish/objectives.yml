@@ -108,6 +108,6 @@ uhc_obj_kill_team2: kill 1 required:uhc_not_team2 events:uhc_obj_kill_team2_done
 uhc_obj_kill_team3: kill 1 required:uhc_not_team3 events:uhc_obj_kill_team3_done
 uhc_obj_kill_team4: kill 1 required:uhc_not_team4 events:uhc_obj_kill_team4_done
 #
-uhc_die: die cancel respawn:-10414;25;4912;Gaia;events:uhc_death
+uhc_die: die cancel respawn:-10414;25;4912;Gaia events:uhc_death
 
 

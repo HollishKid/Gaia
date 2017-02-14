@@ -22,9 +22,9 @@ banking_poche_delay: delay 7 events:banking_poche_delay_over interval:1200
 #
 # Praying
 #
-spiritualium1: location -6630;110;3000;Gaia 50 conditions:sneaking,in_spiritualium events:pray
-spiritualium2: location -6824;70;2635;Gaia 50 conditions:sneaking,in_spiritualium events:pray
-spiritualium3: location -7100;70;2300;Gaia 200 conditions:sneaking,in_spiritualium events:pray
+spiritualium1: location -6630;110;3000;Gaia;50 conditions:sneaking,in_spiritualium events:pray
+spiritualium2: location -6824;70;2635;Gaia;50 conditions:sneaking,in_spiritualium events:pray
+spiritualium3: location -7100;70;2300;Gaia;200 conditions:sneaking,in_spiritualium events:pray
 pray_timer: delay 30 events:pray_over interval:1200
 #
 vulgarite_timer: delay 3 events:vulgarite_time_up
@@ -93,7 +93,7 @@ job_alchimiste: potion mundane_potion 30 events:job_alchimiste_potion_done notif
 #
 job_herboriste_delay: delay 720 events:job_herboriste_temporizer_over interval:1200
 job_herboriste_temporizer: delay 720 events:job_herboriste_temporizer_over interval:1200
-job_herboriste: action right SOIL conditions:seeds_inhand events:job_herboriste_wheat_done loc:-5000;60;5000;Gaia 7000
+job_herboriste: action right SOIL conditions:seeds_inhand events:job_herboriste_wheat_done loc:-5000;60;5000;Gaia;7000
 #
 job_apprivoiseur_delay: delay 720 events:job_apprivoiseur_temporizer_over interval:1200
 job_apprivoiseur_temporizer: delay 720 events:job_apprivoiseur_temporizer_over interval:1200
@@ -130,12 +130,12 @@ nether_donjon2_objective_boss: mmobkill netherien2 amount:1 events:nether_donjon
 #
 #
 #
-cimereached: location -6440;140;3201;Gaia 15 conditions:samsonq1 events:remove_samsonq1,cimemess,cimemess_folder
-plume_etrange: action right any conditions:plume_have events:plume_etrange loc:-6682;69;2922;Gaia 1
+cimereached: location -6440;140;3201;Gaia;15 conditions:samsonq1 events:remove_samsonq1,cimemess,cimemess_folder
+plume_etrange: action right any conditions:plume_have events:plume_etrange loc:-6682;69;2922;Gaia;1
 jacopo_bat: craft boat 1 events:jacopo_boat_crafted
-obj_find_sam: location -6805;64;2792;Gaia 3 conditions:tag_sam events:sam_found
+obj_find_sam: location -6805;64;2792;Gaia;3 conditions:tag_sam events:sam_found
 ami_clickpack: action right any conditions:ami_packinhand events:ami_givefolder
-obj_ermite_bat: location -6208;63;3321;Gaia 2 events:hollish.voyage_ermite_folder
+obj_ermite_bat: location -6208;63;3321;Gaia;2 events:hollish.voyage_ermite_folder
 delay_ilse2: delay 60 events:delay_ilse2_up interval:1200
 delay_ilse3: delay 60 events:delay_ilse3_up interval:1200
 nimue_timer: delay 60 events:nimue_timer_up interval:1200
@@ -147,14 +147,14 @@ obj_pain_francis: npcinteract 359 cancel conditions:tag_pain_francis events:pain
 #
 # Training Camp
 #
-obj_arc11: arrow -6473.5;85.5;3240.5;Gaia 0.6 events:obj_arc11,arrow_compteur,arrow_hit
-obj_arc12: arrow -6473.5;85.5;3230.5;Gaia 0.8 events:obj_arc12,arrow_compteur,arrow_hit
-obj_arc13: arrow -6473.5;82.5;3209.5;Gaia 0.6 events:obj_arc13,arrow_compteur,arrow_hit
-obj_arc14: arrow -6476.5;76.5;3196.5;Gaia 0.7 events:obj_arc14,arrow_compteur,arrow_hit
-obj_arc15: arrow -6476.5;86.5;3196.5;Gaia 0.7 events:obj_arc15,arrow_compteur,arrow_hit
-obj_arc16: arrow -6484.5;74.5;3183.5;Gaia 0.9 events:obj_arc16,arrow_compteur,arrow_hit
-obj_arc17: arrow -6491.5;83.5;3204.5;Gaia 0.7 events:obj_arc17,arrow_compteur,arrow_hit
-obj_arc18: arrow -6497.5;88.5;3209.5;Gaia 0.7 events:obj_arc18,arrow_compteur,arrow_hit
+obj_arc11: arrow -6473.5;85.5;3240.5;Gaia;0.6 events:obj_arc11,arrow_compteur,arrow_hit
+obj_arc12: arrow -6473.5;85.5;3230.5;Gaia;0.8 events:obj_arc12,arrow_compteur,arrow_hit
+obj_arc13: arrow -6473.5;82.5;3209.5;Gaia;0.6 events:obj_arc13,arrow_compteur,arrow_hit
+obj_arc14: arrow -6476.5;76.5;3196.5;Gaia;0.7 events:obj_arc14,arrow_compteur,arrow_hit
+obj_arc15: arrow -6476.5;86.5;3196.5;Gaia;0.7 events:obj_arc15,arrow_compteur,arrow_hit
+obj_arc16: arrow -6484.5;74.5;3183.5;Gaia;0.9 events:obj_arc16,arrow_compteur,arrow_hit
+obj_arc17: arrow -6491.5;83.5;3204.5;Gaia;0.7 events:obj_arc17,arrow_compteur,arrow_hit
+obj_arc18: arrow -6497.5;88.5;3209.5;Gaia;0.7 events:obj_arc18,arrow_compteur,arrow_hit
 #
 # PvP
 #

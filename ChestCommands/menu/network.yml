@@ -49,7 +49,7 @@ retour:
   NAME: '&6Retour'
   ID: stick
   LORE:
-    - 'Retour au menu basique des Aventuriers'
+    - 'Retour au Menu Principal'
   POSITION-X: 8
   POSITION-Y: 1
   

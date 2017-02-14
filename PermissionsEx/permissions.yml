@@ -63,15 +63,6 @@ groups:
     - -townywands.cmd.reload
     - -townywands.cmd.debug
     - -townywands.cmd.help
-    - -VotingPlugin.Commands.Vote.Total.Other
-    - -VotingPlugin.Commands.Vote.Help
-    - -VotingPlugin.Commands.Vote.Info
-    - -VotingPlugin.Commands.Vote.Info.Other
-    - -VotingPlugin.Commands.Vote.Last.Other
-    - -VotingPlugin.Commands.Vote.Next.Other
-    - -VotingPlugin.Commands.Vote.Party
-    - -VotingPlugin.Commands.Vote.Points
-    - -VotingPlugin.Commands.Vote.Points.Other
     - -pvpmanager.user
     - -mcmmo.ability.unarmed.disarm
     - -authme.player.captcha
@@ -142,6 +133,7 @@ groups:
     - chestcommands.open.music.yml
     - chestcommands.open.network.yml
     - chestcommands.open.villes.yml
+    - chestcommands.open.events.yml
     - chestcommands.open.craft_custom.yml
     - chestcommands.open.craft_furnace.yml
     - chestcommands.open.craft_diamant.yml
@@ -263,6 +255,7 @@ groups:
     - aventurier_est
     permissions:
     - grades.ecuyer
+    - areashop.limits.louvre
     options:
       rank: '798'
       prefix: '&6[&2Écuyer&6]&7'
@@ -12080,7 +12073,7 @@ users:
       name: TopiCube_MC
   35acdad7-c1da-312f-a119-b8c47d8e8836:
     group:
-    - moderator
+    - aventurier
     options:
       name: Cubto_mania
       prefix: ''
@@ -14917,7 +14910,7 @@ users:
       name: bangnhatgiang080
   a7fa86c9-4cb2-3480-b985-d583fa174d6f:
     group:
-    - aventurier_est
+    - aventurier
     options:
       name: MemouuCat
       prefix: '&6[&2Mineur&6]&7'
@@ -15755,7 +15748,7 @@ users:
       name: nicolas
   101653b5-f424-33b4-841f-f436b631eecd:
     group:
-    - aventurier_est
+    - aventurier
     options:
       name: disney3001
       prefix: '&6[&2Mineur&6]&7'
@@ -30871,7 +30864,6 @@ users:
   7e9a679b-0f9c-3961-b723-6513822155f7:
     group:
     - moderator
-    - ecuyer
     options:
       name: MrGaspachio
       prefix: ''
@@ -31876,3 +31868,8 @@ users:
     - debuttempo
     options:
       name: TheoLeDonuts
+  e9d3c5ed-2e6c-3d95-b063-4fa26bb0917c:
+    group:
+    - debuttempobis
+    options:
+      name: Tigrougaming
