@@ -60,6 +60,40 @@ cuir:
   POSITION-X: 4
   POSITION-Y: 2
   KEEP-OPEN: true
+  
+cuir2:
+  COMMAND: 'open: weapons_cuir.yml'
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 4
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+cuir3:
+  COMMAND: 'open: tools_cuir.yml'
+  NAME: 'Cuir Tanné'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true
 
 mailles:
   COMMAND: 'open: craft_mailles.yml'
@@ -77,6 +111,40 @@ mailles:
   POSITION-X: 5
   POSITION-Y: 2
   KEEP-OPEN: true
+  
+mailles2:
+  COMMAND: 'open: weapons_mailles.yml'
+  NAME: 'Mailles'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+mailles3:
+  COMMAND: 'open: tools_mailles.yml'
+  NAME: 'Mailles'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
 
 fer:
   COMMAND: 'open: craft_fer.yml'
@@ -92,6 +160,40 @@ fer:
   - '&osur la gauche.'
   ID: 58
   POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+fer2:
+  COMMAND: 'open: weapons_fer.yml'
+  NAME: 'Fer Forgé'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 6
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+fer3:
+  COMMAND: 'open: tools_fer.yml'
+  NAME: 'Fer Forgé'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 2
   POSITION-Y: 2
   KEEP-OPEN: true
   
@@ -112,6 +214,40 @@ or:
   POSITION-Y: 2
   KEEP-OPEN: true
   
+or2:
+  COMMAND: 'open: weapons_or.yml'
+  NAME: 'Or Décoré'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 7
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+or3:
+  COMMAND: 'open: tools_or.yml'
+  NAME: 'Or Décoré'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 1
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
 diamant:
   COMMAND: 'open: craft_diamant.yml'
   NAME: 'Diamant Noble'
@@ -127,6 +263,40 @@ diamant:
   ID: 58
   POSITION-X: 8
   POSITION-Y: 2
+  KEEP-OPEN: true
+  
+diamant2:
+  COMMAND: 'open: weapons_diamant.yml'
+  NAME: 'Diamant Noble'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 8
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+diamant3:
+  COMMAND: 'open: tools_diamant.yml'
+  NAME: 'Diamant Noble'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 2
+  POSITION-Y: 3
   KEEP-OPEN: true
   
 fer_volca:

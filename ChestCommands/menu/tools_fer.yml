@@ -1,0 +1,193 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dCrafts de Fer'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 7
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+fer1:
+  NAME: 'Fer Forgé'
+  LORE:
+  - '&d&oCe fer est'
+  - '&d&otrès dense !'
+  ID: 265
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+fer2:
+  NAME: 'Fer Forgé'
+  LORE:
+  - '&d&oCe fer est'
+  - '&d&otrès dense !'
+  ID: 265
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+fer3:
+  NAME: 'Fer Forgé'
+  LORE:
+  - '&d&oCe fer est'
+  - '&d&otrès dense !'
+  ID: 265
+  POSITION-X: 3
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+baton1:
+  NAME: 'Bâton'
+  LORE:
+  - '&d&oSimple bâton'
+  - '&d&od'utilisation en outillage !'
+  ID: 280
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+emerald1:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+fer_pioche:
+  NAME: '&aPioche Fer Forgé'
+  LORE:
+  - '&d&oCe fer est'
+  - '&d&otrès dense !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  ID: 257
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+fer12:
+  NAME: 'Fer Forgé'
+  LORE:
+  - '&d&oCe fer est'
+  - '&d&otrès dense !'
+  ID: 265
+  POSITION-X: 7
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+baton12:
+  NAME: 'Bâton'
+  LORE:
+  - '&d&oSimple bâton'
+  - '&d&od'utilisation en outillage !'
+  ID: 280
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+emerald12:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 7
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+fer_pelle:
+  NAME: '&aPelle Fer Forgé'
+  LORE:
+  - '&d&oCe fer est'
+  - '&d&otrès dense !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  ID: 256
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+fer13:
+  NAME: 'Fer Forgé'
+  LORE:
+  - '&d&oCe fer est'
+  - '&d&otrès dense !'
+  ID: 265
+  POSITION-X: 1
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+fer23:
+  NAME: 'Fer Forgé'
+  LORE:
+  - '&d&oCe fer est'
+  - '&d&otrès dense !'
+  ID: 265
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+baton13:
+  NAME: 'Bâton'
+  LORE:
+  - '&d&oSimple bâton'
+  - '&d&od'utilisation en outillage !'
+  ID: 280
+  POSITION-X: 2
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+emerald13:
+  NAME: 'Emeraude Polie'
+  LORE:
+  - '&d&oCet Emeraude est'
+  - '&d&otrès raffiné !'
+  ID: 388
+  POSITION-X: 2
+  POSITION-Y: 7
+  KEEP-OPEN: true
+  
+fer_houe:
+  NAME: '&aHoue Fer Forgé'
+  LORE:
+  - '&d&oCe fer est'
+  - '&d&otrès dense !'
+  - ' '
+  - '&7&oRareté : &aCommun'
+  ID: 292
+  POSITION-X: 4
+  POSITION-Y: 6
+  KEEP-OPEN: true
