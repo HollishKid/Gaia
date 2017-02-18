@@ -1,0 +1,241 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dÉvénements'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 4
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 5
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note harp'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+menu-close:
+  NAME: '&cFermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+  
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&6Retour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal'
+  POSITION-X: 8
+  POSITION-Y: 1
+
+day1:
+  NAME: '&aLundi'
+  ID: '35:4'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+day2:
+  NAME: '&aMardi'
+  ID: '35:1'
+  POSITION-X: 3
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+day3:
+  NAME: '&aMercredi'
+  ID: '35:3'
+  LORE:
+    - 'De 16h à 20h :'
+    - '&oDouble Expérience'
+    - '&otoutes compétences !'
+  POSITION-X: 4
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+day4:
+  NAME: '&aJeudi'
+  ID: '35:13'
+  POSITION-X: 5
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+day5:
+  NAME: '&aVendredi'
+  ID: '35:10'
+  LORE:
+    - 'De 19h à 22h :'
+    - '&oBrèche à Athelas'
+    - '&oaidez les troupes à'
+    - '&orepousser les revenants !'
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+day6:
+  NAME: '&aSamedi'
+  ID: '35:11'
+  POSITION-X: 7
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+day7:
+  NAME: '&aDimanche'
+  ID: '35:12'
+  POSITION-X: 8
+  POSITION-Y: 3
+  KEEP-OPEN: true
+
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker72:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker92:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true

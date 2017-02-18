@@ -107,7 +107,9 @@ eko_mess2: 'message &2Eko &f:&a&o Mais nos membres les plus doués en retirent d
 eko_fold2: folder eko_mess3,eko_fold3 delay:8
 eko_mess3: 'message &2Eko &f:&a&o Si ce genre de boulot t''intéresse, alors passe derrière le comptoir et actionne la torche dans la cave...'
 eko_fold3: folder eko_clean1,eko_q1start,eko_click,eko_conversdone,eko_j1 delay:1
-eko_clean1: tag del global.kal_q2start
+eko_clean1: tag del Zedd.kal_q2start
+eko_clean2: tag add Zedd.kal_q2done
+eko_clean3: journal del Zedd.kal_j3_del
 eko_q1start: tag add eko_q1start
 eko_click_delay: folder eko_click delay:2
 eko_click: objective start eko_click

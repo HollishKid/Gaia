@@ -428,7 +428,8 @@ blocker9:
   KEEP-OPEN: true
   
 blocker12:
-  NAME: ' '
+  COMMAND: 'open: craft_custom.yml'
+  NAME: '&aRetour aux Crafts'
   ID: '58'
   POSITION-X: 5
   POSITION-Y: 1

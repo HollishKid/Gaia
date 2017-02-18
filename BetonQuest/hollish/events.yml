@@ -1025,7 +1025,7 @@ entry_north_allow: 'command region addmember north %player% -w Gaia'
 ingor_forge_entry: if ingor_mine_access nothing else ingor_mine_out
 ingor_mine_out: folder ingor_mine_out1,ingor_mine_out2
 ingor_mine_out1: message &d&oCe Volcan semble trop dangereux, je devrais parler à Hrota d'abord !
-ingor_mine_out2: teleport -6501;84;2192;Gaia
+ingor_mine_out2: teleport -6501;85;2194;Gaia
 #
 journal_hrota: journal add journal_hrota
 journal_hrota_del: journal del journal_hrota
@@ -1643,23 +1643,38 @@ crosstation4_torch_delay_off: setblock AIR -6510;68;2828;Gaia
 #
 #
 ################################
+################################
+#
+#         PRISON  Events
+#
+################################
 prison_god_testerfer: if !avertissements_5 prison_god1 else temp_ban
 prison_god_testeror: if !avertissements_5 prison_god2 else temp_ban
 prison_god_testerdiamant: if !avertissements_5 prison_god3 else temp_ban
 #
-prison_god1: folder prison_essentials_user1,prison_essentials_user12,prison_essentials_user13,prison_avertissement,vulgarite_remover,prison_information
-prison_god2: folder prison_essentials_user2,prison_essentials_user22,prison_essentials_user23,prison_avertissement,vulgarite_remover,prison_information,money_500
-prison_god3: folder prison_essentials_user3,prison_essentials_user32,prison_essentials_user33,prison_avertissement,vulgarite_remover,prison_information,money_1000
+prison_god1: folder prison_bq_user1,prison_bq_user12,prison_bq_user13,prison_bq_user14,prison_avertissement,vulgarite_remover,prison_information
+prison_god2: folder prison_bq_user2,prison_bq_user22,prison_bq_user23,prison_bq_user24,prison_avertissement,vulgarite_remover,prison_information,money_500
+prison_god3: folder prison_bq_user3,prison_bq_user32,prison_bq_user33,prison_bq_user34,prison_avertissement,vulgarite_remover,prison_information,money_1000
 #
-prison_essentials_user1: 'command jail %player% jail_athelas 15m'
-prison_essentials_user12: 'command mute %player% 15m'
-prison_essentials_user13: 'command pex user %player% timed add -discordmc.chat 900'
-prison_essentials_user2: 'command jail %player% jail_athelas 30m'
-prison_essentials_user22: 'command mute %player% 30m'
-prison_essentials_user23: 'command pex user %player% timed add -discordmc.chat 1800'
-prison_essentials_user3: 'command jail %player% jail_athelas 1h'
-prison_essentials_user32: 'command mute %player% 1h'
-prison_essentials_user33: 'command pex user %player% timed add -discordmc.chat 3600'
+prison_bq_user1: teleport -6952;64;2977;Gaia
+prison_bq_user12: 'command mute %player% 15m'
+prison_bq_user13: 'command pex user %player% timed add -discordmc.chat 900'
+prison_bq_user14: objective start prison_bq_user1
+prison_bq_user2: teleport -6952;64;2977;Gaia
+prison_bq_user22: 'command mute %player% 30m'
+prison_bq_user23: 'command pex user %player% timed add -discordmc.chat 1800'
+prison_bq_user24: objective start prison_bq_user2
+prison_bq_user3: teleport -6952;64;2977;Gaia
+prison_bq_user32: 'command mute %player% 1h'
+prison_bq_user33: 'command pex user %player% timed add -discordmc.chat 3600'
+prison_bq_user34: objective start prison_bq_user3
+#
+prison_bq_user4: folder prison_free,prison_bq_user43
+prison_bq_user43: 'message &aVous avez été libéré(e), faites attention à vous !'
+prison_bq_user5: folder prison_free,prison_bq_user53
+prison_bq_user53: 'message &aVous avez été libéré(e) et nous espèrons que cette sanction n''était pas en vain !'
+prison_bq_user6: folder prison_free,prison_bq_user63
+prison_bq_user63: 'message &aVous avez été libéré(e), mais votre présence dans cette prison est toujours agréable !'
 #
 prison_avertissement: point avertissements 1
 vulgarite_remover: folder default.vulgarite_reset_exe
@@ -1672,11 +1687,14 @@ prison_information4: 'message &cVous avez été averti &2%point.avertissements.a
 #
 temp_ban: folder temp_ban_exe,temp_ban_reset,temp_ban_message delay:5
 temp_ban_message: folder temp_ban_message_exe,temp_ban_broadcast
-temp_ban_message_exe: 'message &cVous avez été averti &25 &cfois, vous allez être banni pour 12 heures de Gaïa.'
+temp_ban_message_exe: 'message &cVous avez été averti &25 &cfois, vous allez être banni pour 48 heures de Gaïa.'
 temp_ban_broadcast: 'command broadcast &2%player% &ca été banni pendant 48 heures de Gaïa.'
 temp_ban_reset: point avertissements *0
 temp_ban_exe: folder temp_bannissement delay:5
 temp_bannissement: 'command tempban %player% 48h 1s Vous avez été averti 5 fois.'
+#
+#
+prison_free: teleport -6952;64;2970;Gaia
 #########
 #
 #

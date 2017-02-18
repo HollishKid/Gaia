@@ -56,7 +56,7 @@ NPC_options:
 #    conditions: '!maka_inconvers,maka_q3start,condition_tempo_impossible'
   tempo_maka:
     text: 'Vous avez de nouvelles informations sur &dDrisgan &a&o?'
-    conditions: '!maka_inconvers,maka_q2start,drisgan.eko_tempo'
+    conditions: '!maka_inconvers,maka_q2start'
     pointers: nein,tempo_rep
   tempo_maka_rep:
     text: 'Excellent ! On va attendre de voir ce que va faire &2Eko &a&o; gardes un oeil sur lui ! \nEn attendant, je te recommande auprès de l''&2Intendant pour tous tes services rendus !'
@@ -92,4 +92,5 @@ player_options:
     text: 'Rien à vous dire non !'
   tempo_rep:
     text: 'Oui ! J''ai aidé Eko à trouver Erek le traitre !'
+    condition: 'drisgan.eko_tempo'
     pointers: tempo_maka_rep

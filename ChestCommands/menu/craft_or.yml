@@ -102,7 +102,7 @@ or_casque:
   - '&e&oCet or est'
   - '&e&ojoliment travaillé !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 314
   POSITION-X: 4
   POSITION-Y: 2
@@ -204,7 +204,7 @@ or_plastron:
   - '&e&oCet or est'
   - '&e&ojoliment travaillé !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 315
   POSITION-X: 9
   POSITION-Y: 2
@@ -296,7 +296,7 @@ or_jambes:
   - '&e&oCet or est'
   - '&e&ojoliment travaillé !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 316
   POSITION-X: 4
   POSITION-Y: 5
@@ -358,7 +358,7 @@ or_pieds:
   - '&e&oCet or est'
   - '&e&ojoliment travaillé !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 317
   POSITION-X: 9
   POSITION-Y: 5
@@ -428,7 +428,8 @@ blocker9:
   KEEP-OPEN: true
   
 blocker12:
-  NAME: ' '
+  COMMAND: 'open: craft_custom.yml'
+  NAME: '&aRetour aux Crafts'
   ID: '58'
   POSITION-X: 5
   POSITION-Y: 1

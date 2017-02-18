@@ -19,6 +19,12 @@ mine_athelas5: location -6892;57;2873;Gaia;5 conditions:!autorisation_mineur eve
 mine_athelas6: location -6831;50;2877;Gaia;11 conditions:!autorisation_mineur events:voleur
 mine_athelas7: location -6815;57;2907;Gaia;6 conditions:!autorisation_mineur events:voleur
 #
+#   PRISON Objectives
+#
+prison_bq_user1: delay 15 events:prison_bq_user4
+prison_bq_user2: delay 30 events:prison_bq_user5
+prison_bq_user3: delay 60 events:prison_bq_user6
+#
 ticket_timer: delay 15 events:ticket_over
 obj_train_ticket_reader: action right any conditions:train_ticket_hand events:ticket_reader
 #

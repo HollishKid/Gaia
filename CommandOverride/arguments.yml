@@ -28,3 +28,6 @@
 /envoyermdp:
   min: '1'
   message: '&4Pour vous envoyer un nouveau mot de passe tapez &c/envoyermdp &4suivi de votre adresse mail.'
+/louer:
+  min: '1'
+  message '&4Utilisation : /louer [nom_INTERNE_parcelle]'
