@@ -1,3 +1,67 @@
+#SKQuery with errors in console
+#on shoot:
+#    trail projectile with particle drip lava
+
+# SKript
+#
+#show wolf hearts on the clicked wolf
+#
+#BARRIER
+#BLOCK_CRACK
+#BLOCK_DUST    
+#CLOUD  		   
+#CRIT  		   
+#CRIT_MAGIC  		   
+#DRIP_LAVA  		   
+#DRIP_WATER  		   
+#ENCHANTMENT_TABLE  		   
+#EXPLOSION_HUGE  		   
+#EXPLOSION_LARGE  		   
+#EXPLOSION_NORMAL  		   
+#FIREWORKS_SPARK  		   
+#FLAME  		  
+#FOOTSTEP  		   
+#HEART  		 
+#ITEM_CRACK  		 
+#ITEM_TAKE  		 
+#LAVA  		   
+#MOB_APPEARANCE  		   
+#NOTE  		    
+#PORTAL  		   
+#REDSTONE  		  
+#SLIME  		   
+#SMOKE_LARGE  		   
+#SMOKE_NORMAL  		   
+#SNOW_SHOVEL  		   
+#SNOWBALL  		 
+#SPELL  		 
+#SPELL_INSTANT  		 
+#SPELL_MOB  		 
+#SPELL_MOB_AMBIENT  		 
+#SPELL_WITCH  
+#SUSPENDED  		   
+#SUSPENDED_DEPTH  
+#TOWN_AURA  		   
+#VILLAGER_ANGRY  		   
+#VILLAGER_HAPPY  		   
+#WATER_BUBBLE  		   
+#WATER_DROP  		   
+#WATER_SPLASH  
+#WATER_WAKE  
+#command /particle:
+#	trigger:
+#		play mob spawner flames at the targeted block to the player
+
+#on any move:
+#	if player meets betonquest condition "builder":
+#		spawn 2 FLAME particles at location of player for player offset by 0.4, 0.7, 0.4
+#	else if player meets betonquest condition "moderator":
+#		spawn 2 SMOKE_NORMAL particles at location of player for player offset by 0.4, 0.7, 0.4
+#	if player meets betonquest condition "creator":
+#		spawn 2 of particle flame at location of player
+#	else if player meets betonquest condition "founder":
+#		spawn 2 of particle flame at location of player
+
 #command /redemarrer:
 #	trigger:
 #		loop players:

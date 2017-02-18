@@ -1025,7 +1025,7 @@ entry_north_allow: 'command region addmember north %player% -w Gaia'
 ingor_forge_entry: if ingor_mine_access nothing else ingor_mine_out
 ingor_mine_out: folder ingor_mine_out1,ingor_mine_out2
 ingor_mine_out1: message &d&oCe Volcan semble trop dangereux, je devrais parler à Hrota d'abord !
-ingor_mine_out2: teleport -6501;84;2192;Gaia
+ingor_mine_out2: teleport -6501;85;2194;Gaia
 #
 journal_hrota: journal add journal_hrota
 journal_hrota_del: journal del journal_hrota

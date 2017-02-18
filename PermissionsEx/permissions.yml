@@ -141,6 +141,22 @@ groups:
     - chestcommands.open.craft_fer.yml
     - chestcommands.open.craft_cuir.yml
     - chestcommands.open.craft_mailles.yml
+    - chestcommands.open.weapons_cuir.yml
+    - chestcommands.open.weapons_mailles.yml
+    - chestcommands.open.weapons_fer.yml
+    - chestcommands.open.weapons_or.yml
+    - chestcommands.open.weapons_diamant.yml
+    - chestcommands.open.tools_cuir.yml
+    - chestcommands.open.tools_mailles.yml
+    - chestcommands.open.tools_fer.yml
+    - chestcommands.open.tools_or.yml
+    - chestcommands.open.tools_diamant.yml
+    - chestcommands.open.tools_fer_volcanique.yml
+    - chestcommands.open.tools_or_volcanique.yml
+    - chestcommands.open.weapons_fer_volcanique.yml
+    - chestcommands.open.weapons_or_volcanique.yml
+    - chestcommands.open.weapons_diamant_volcanique.yml
+    - chestcommands.open.tools_diamant_volcanique.yml
     - chestcommands.open.craft_diamant_volcanique.yml
     - chestcommands.open.craft_or_volcanique.yml
     - chestcommands.open.craft_fer_volcanique.yml
@@ -155,7 +171,7 @@ groups:
     - areashop.addfriend
     - areashop.delfriend
     - areashop.unrentown
-    - areashop.limits.athelas
+    - areashop.limits.citoyen
     - simpletrading.trade
     - Speechbubbles.user
     - ontime.track
@@ -246,7 +262,7 @@ groups:
     - aventurier
     permissions:
     - grades.ecuyer
-    - areashop.limits.louvre
+    - areashop.limits.ecuyer
     options:
       rank: '799'
       prefix: '&6[&2Écuyer&6]&7'
@@ -255,7 +271,7 @@ groups:
     - aventurier_est
     permissions:
     - grades.ecuyer
-    - areashop.limits.louvre
+    - areashop.limits.ecuyer
     options:
       rank: '798'
       prefix: '&6[&2Écuyer&6]&7'
@@ -583,6 +599,7 @@ users:
       name: Hollish
       prefix: ''
     permissions:
+    - -keepitems.keep
     - craftbook.variables.chat
     - craftbook.*
     - Pet.PetToMount
@@ -5218,8 +5235,7 @@ users:
     options:
       name: Azator
       prefix: '&6[&2Épéiste&6]&7'
-    permissions:
-    - mcmmo.perks.xp.10percentboost.swords
+    permissions: []
   f56ef01f-30f8-3307-9e4b-70fb0c98a8a2:
     group: []
     options:
@@ -9156,6 +9172,8 @@ users:
     group: []
   d1e40030-b80a-35a0-bfaf-4032bd2fc5ab:
     group: []
+    options:
+      name: victortur
   3ad49d23-e2ca-30eb-b3c2-65f169f84efb:
     group:
     - aventurier
@@ -12760,6 +12778,8 @@ users:
       name: Sparadra59
       prefix: ''
     permissions:
+    - -keepitems.keep
+    - mcmmo.perks.xp.10percentboost.swords
     - blockregen.bypass
     - Pet.blaze
     worlds:
@@ -16203,8 +16223,9 @@ users:
     - aventurier
     options:
       name: Mew666
-      prefix: '&6[&2Pêcheur&6]&7'
-    permissions: []
+      prefix: '&6[&2Mineur&6]&7'
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
   099a101b-6b80-3970-8ce2-6e62463aac7b:
     group:
     - debuttempobis
@@ -16316,7 +16337,8 @@ users:
     options:
       name: Kraeven
       prefix: '&6[&2Mineur&6]&7'
-    permissions: []
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
   28356f85-3d10-3476-b731-dadaf85b7c3c:
     group:
     - debuttempo
@@ -30360,7 +30382,9 @@ users:
     - builder
     options:
       name: mastodonte92
-    permissions: []
+      prefix: ''
+    permissions:
+    - mcmmo.perks.xp.10percentboost.herbalism
   5e866d10-6834-31b8-b8c7-57e696ea1537:
     group: []
     options:
@@ -30868,6 +30892,7 @@ users:
       name: MrGaspachio
       prefix: ''
     permissions:
+    - -keepitems.keep
     - mcmmo.perks.xp.10percentboost.mining
   42705293-e927-30b3-94c6-40054bde26d8:
     group: []
@@ -30889,7 +30914,7 @@ users:
       name: thedinko
   b5ff9607-2253-35c0-995a-212cd753b2c4:
     group:
-    - aventurier
+    - aventurier_est
     options:
       name: DarkAngel597
     permissions: []
@@ -31054,7 +31079,8 @@ users:
     options:
       name: neymo11
   9a9f2c9e-8c82-3ba7-af4e-f13d7e70fff5:
-    group: []
+    group:
+    - debuttempobis
     options:
       name: namagames
   2a23f76c-f2f7-35b6-ad9b-def88b612f97:
@@ -31132,7 +31158,7 @@ users:
       name: PowerDako
   09173b07-e82b-3dc7-b994-3ecdd72a0ca0:
     group:
-    - debuttempo
+    - debuttempobis
     options:
       name: Silveurt
   2e20cc04-d860-3df3-b7ea-8fffc4249061:
@@ -31173,7 +31199,7 @@ users:
     - aventurier
     options:
       name: KendallJenner
-      prefix: '&6[&2Échardier&6]&7'
+      prefix: ''
     permissions: []
   22498981-8bd5-3b97-93d7-8558a01555fb:
     group: []
@@ -31470,8 +31496,9 @@ users:
     - aventurier
     options:
       name: Lazone88
-      prefix: ''
-    permissions: []
+      prefix: '&6[&2Adepte&6]&7'
+    permissions:
+    - mcmmo.perks.xp.10percentboost.alchemy
   cf7648bb-dd91-36e9-8273-ce928fab193a:
     group:
     - aventurier
@@ -31479,6 +31506,7 @@ users:
       name: leny5910
       prefix: '&6[&2Mineur&6]&7'
     permissions:
+    - -keepitems.keep
     - mcmmo.perks.xp.10percentboost.mining
   ee3931d8-3183-337b-ba28-94f2dcb2f353:
     group: []
@@ -31563,8 +31591,9 @@ users:
     - aventurier
     options:
       name: Naytikzz
-      prefix: '&6[&2Archerot&6]&7'
-    permissions: []
+      prefix: '&6[&2Milicien&6]&7'
+    permissions:
+    - mcmmo.perks.xp.10percentboost.axes
   80381c04-3bcf-3cac-8009-2750b09d156b:
     group: []
     options:
@@ -31624,11 +31653,17 @@ users:
     - aventurier
     options:
       name: Aceo452
+      prefix: '&6[&2Mineur&6]&7'
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
   c103c87b-d877-3fa0-83b8-39f0da54f548:
     group:
     - aventurier
     options:
       name: TeePak
+      prefix: '&6[&2Mineur&6]&7'
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
   1df8a058-22fb-3db5-b632-43aebac9e48f:
     group:
     - aventurier
@@ -31775,12 +31810,16 @@ users:
     options:
       name: Mr_DraGoNixS
       prefix: '&6[&2Mineur&6]&7'
-    permissions: []
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
   a1edc327-cd4f-30bb-86ad-e5b88b46f6b1:
     group:
     - aventurier
     options:
       name: DarkWolff_657
+      prefix: '&6[&2Mineur&6]&7'
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
   04f40552-f41f-3574-9b8a-24048b25bd0b:
     group:
     - debuttempobis
@@ -31873,3 +31912,337 @@ users:
     - debuttempobis
     options:
       name: Tigrougaming
+  8cb26510-742e-3e5c-aedc-7a9b0cf08f84:
+    group: []
+    options:
+      name: Furigan
+  4de9995d-d389-2c1b-9825-8d35baff7a39:
+    group: []
+  74023bf8-9326-3079-ae70-fde37039f3dd:
+    group: []
+    options:
+      name: dasko252
+  0fea279d-5b83-3e88-bf46-e88e8ad81751:
+    group:
+    - aventurier
+    options:
+      name: sasaloria
+      prefix: '&6[&2Mineur&6]&7'
+    permissions: []
+  0ec347ae-a1bb-389e-9af0-f96d823d0bc4:
+    group:
+    - debuttempo
+    options:
+      name: cofred1234
+  6251ecf2-4e96-3271-81b3-3010aab5a019:
+    group: []
+    options:
+      name: KowZeSurYoutube
+  4c5f3f10-e9cf-3c07-a422-3d17da8287ad:
+    group: []
+    options:
+      name: Sparquin
+  386f57eb-9e41-3402-9a50-c2e32c6332da:
+    group: []
+    options:
+      name: nghia147895
+  a229083b-b583-3309-9343-859fb2228ad3:
+    group: []
+    options:
+      name: khoitc_jakitc123
+  d5eef218-10bd-3b7e-ae1a-b86b5f90fb53:
+    group: []
+    options:
+      name: Wolverine
+  f5d5a925-2af2-39ba-aaf9-b637601ce215:
+    group: []
+    options:
+      name: wolverine
+  883b7061-28e6-3a1a-b21b-f9e6fb14d3e6:
+    group:
+    - aventurier
+    options:
+      name: Faucon
+  0ded73a1-8124-3e3e-97f2-ccc1f900a4b1:
+    group: []
+    options:
+      name: xAlenkax
+  525cada9-43e8-3bb8-b547-e5a680cb1e69:
+    group: []
+    options:
+      name: TahaEne01Adn
+  b1add863-2902-37cf-a840-36ecd34ec7a0:
+    group:
+    - debuttempobis
+    options:
+      name: money
+  98c6f517-b201-3b51-87cb-7aa1de994df8:
+    group: []
+    options:
+      name: TurkAdam21
+  86a36329-12fe-3071-a5f3-025e51e77aea:
+    group:
+    - debuttempobis
+    options:
+      name: Atena13
+  3b1eaef1-da97-38bc-85b1-c6013d21f578:
+    group: []
+    options:
+      name: BEDUCVIET1
+  8512e56b-1623-3082-b774-6cab66f0703d:
+    group:
+    - aventurier
+    options:
+      name: Zandraz
+      prefix: '&6[&2Mineur&6]&7'
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
+  863d7fef-309e-358c-9415-1fc15140e9bd:
+    group: []
+    options:
+      name: FlashKill
+  87255b0c-80ea-32fb-8066-8351a6f6a855:
+    group: []
+    options:
+      name: bugrakink
+  7a3c62e3-bb64-372c-9ba0-413bbd7c451c:
+    group: []
+    options:
+      name: Charisk
+  61a163aa-c3f0-39b4-9ba9-12729a998eae:
+    group:
+    - debuttempobis
+    options:
+      name: Xenap
+  bc2781b7-2046-3fdf-9d8b-afdfcd773a93:
+    group: []
+    options:
+      name: Ludooo
+  aa1c05c3-17b8-3ed6-9472-005697223454:
+    group:
+    - aventurier
+    options:
+      name: Timeend
+  f9fbe42f-34d3-3f45-8c05-940c90b231d0:
+    group:
+    - debuttempobis
+    options:
+      name: grisman
+  dd9e2423-3520-3e79-a49d-89a7525fd351:
+    group:
+    - aventurier
+    options:
+      name: Tygrys_
+  0928e589-7ae1-3c40-9ca3-29155427ea09:
+    group: []
+    options:
+      name: popi
+  d93c1710-295b-3659-b3d7-abfbd386be0b:
+    group:
+    - debuttempobis
+    options:
+      name: Militaire2017
+  423416b5-6daa-36db-807f-825ebdbc85fb:
+    group: []
+    options:
+      name: liferec
+  b2cada29-2016-369d-be16-5148f420fd03:
+    group: []
+    options:
+      name: iojk21
+  3d0fd8db-75da-3d78-b227-a1ebc7086758:
+    group:
+    - debuttempobis
+    options:
+      name: Erisium_Viberon
+  b7cb8ad5-f526-3405-b33a-82d93153587e:
+    group: []
+    options:
+      name: trollgamme
+  c52ce013-dc3d-3d75-9304-b1fac9a5556a:
+    group:
+    - debuttempobis
+    options:
+      name: Castor1777
+  f67484c9-3ce6-3988-9b68-0c32f4e13b95:
+    group:
+    - aventurier
+    options:
+      name: simon80
+    permissions:
+    - -keepitems.keep
+  8b28b12a-c53f-326d-84a6-57f0b4bd675a:
+    group:
+    - aventurier
+    options:
+      name: Cortos
+  195297b5-acfe-33a9-a61f-fbbbdf216053:
+    group: []
+    options:
+      name: KBACO4EK
+  6215711c-7724-3477-8a4e-157429f17e91:
+    group:
+    - debuttempo
+    options:
+      name: GrandLeo67
+  def3183f-a650-3a31-9bab-beed07bee825:
+    group: []
+    options:
+      name: Darkkidd
+  f1b7d787-c442-3af5-beaa-ee87f65f6ca3:
+    group:
+    - debuttempo
+    options:
+      name: noxo_lol
+  5dd9448c-f8bd-365e-a652-2625652e5001:
+    group:
+    - debuttempobis
+    options:
+      name: TheSpeedy
+  eb2dae90-19fd-34b2-a137-8f00abacf416:
+    group: []
+    options:
+      name: XT6GlitcherYTB
+  8399fe7c-192d-3b64-8607-55d37068fe7d:
+    group:
+    - aventurier
+    options:
+      name: Xenot93
+  0dac3be8-a0d5-3736-aae3-369d667e0525:
+    group: []
+    options:
+      name: deadkilleur24
+  d1024c83-27bb-354c-9225-6ae758a30084:
+    group: []
+    options:
+      name: Attention
+  13c8d690-33df-3b56-9478-39441ff450cf:
+    group: []
+    options:
+      name: katiau
+  6b75714f-9525-3267-a02f-53ba085efca6:
+    group: []
+    options:
+      name: ZiTyReX
+  50b04b31-6db2-35e9-88a4-761788b613e1:
+    group:
+    - debuttempobis
+    options:
+      name: Ender2006
+  996aec62-04eb-3361-9b73-c600a1eedfdd:
+    group: []
+    options:
+      name: qwerty
+  bf8733bd-dacf-3144-89ff-e9533330aa6c:
+    group: []
+    options:
+      name: Troll
+  addf95ec-4d3e-3d50-9c0a-476b1508964a:
+    group: []
+    options:
+      name: Julojr44
+  20603eca-f5f4-3780-87c6-ffe85b455e81:
+    group: []
+    options:
+      name: LapinEnMousse
+  9f10af96-d7ed-3d57-a17d-144582513c19:
+    group: []
+    options:
+      name: Victor
+  1e7dc014-8669-3f75-a0b6-527362563a81:
+    group:
+    - debuttempo
+    options:
+      name: younas69
+  405cddee-ca7b-3fb7-a078-e80c5c294178:
+    group:
+    - debuttempobis
+    options:
+      name: Theo
+  3eccd2e8-53fd-33ab-bfe8-45d97c319b3c:
+    group:
+    - debuttempo
+    options:
+      name: Jojo_Ultimate500
+  fe5e0f1a-3bf0-335b-9d7e-6a5402185c69:
+    group: []
+    options:
+      name: haoiuy
+  3c3b8cda-cf00-3a22-a49a-5aed872f4dfe:
+    group: []
+    options:
+      name: xXIRAQI_GEMARXx
+  88a768ff-a5ee-3281-b312-4e31e0de301e:
+    group: []
+    options:
+      name: sully2220
+  d2297b08-2a6b-3008-bf1a-fea5cbbad503:
+    group: []
+    options:
+      name: UndeadVZLZ
+  5c14350d-8d1f-3189-a27d-708c974353fc:
+    group: []
+    options:
+      name: Flux_Derp
+  723bea7e-15ac-3765-a0ce-35dad1bd71b4:
+    group:
+    - debuttempo
+    options:
+      name: Silonix
+  6a9ac884-37d7-3eca-af40-5707b4ee1860:
+    group: []
+    options:
+      name: niguit
+  18dd8d95-78bc-302f-8f7d-dcb54022f6ea:
+    group: []
+    options:
+      name: b00ny
+  63e28aaa-2679-3a7b-ba73-64324d9fe0e2:
+    group: []
+    options:
+      name: vava30310
+  75af37aa-98e8-303d-84db-6d0baad6e3ff:
+    group: []
+    options:
+      name: adol
+  a41911ed-217a-34e4-bfa8-d9ff31a713db:
+    group: []
+    options:
+      name: Sir_NightPlayZ
+  91c8080a-49de-3d6c-8047-fc698f72d68e:
+    group: []
+    options:
+      name: lzmuffe
+  d5c7eaee-c033-33e4-b665-5a985c8f8aec:
+    group: []
+    options:
+      name: hao
+  c5368088-657a-3e07-85ca-c6f7b39d8313:
+    group: []
+    options:
+      name: Prode_Craft
+  e93b8327-8d86-3576-89ab-fc0ee81f32fe:
+    group: []
+    options:
+      name: Razecraft
+  f0f99308-ac4d-3289-85f8-ebb2e524cf31:
+    group:
+    - aventurier
+    options:
+      name: dydy59
+  2ca4b4fc-d507-31c1-b971-e852e9155b46:
+    group:
+    - debuttempo
+    options:
+      name: PokeGroudon
+  7e61f9be-3e0d-3ea4-8d15-909d50431fb2:
+    group:
+    - debuttempobis
+    options:
+      name: fox1346
+  13048490-d96c-2f41-99e6-72a248738900:
+    group: []
+  a161bb18-c824-3a9a-b5db-765ed86c192c:
+    group: []
+    options:
+      name: fracois62
