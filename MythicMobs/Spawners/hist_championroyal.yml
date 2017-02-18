@@ -22,4 +22,4 @@ hist_championroyal:
   Breakable: false
   Conditions:
   - playerwithin 30
-  ActiveMobs: 2
+  ActiveMobs: 0

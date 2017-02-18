@@ -30,3 +30,4 @@ player_options:
   quetes:
     text: 'Puis-je avoir des indications sur les quêtes à venir ?'
     pointers: quetes_rep
+

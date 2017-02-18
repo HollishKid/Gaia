@@ -22,4 +22,4 @@ archerroyal1:
   Breakable: false
   Conditions:
   - playerwithin 40
-  ActiveMobs: 1
+  ActiveMobs: 0

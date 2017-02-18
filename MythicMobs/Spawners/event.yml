@@ -21,4 +21,4 @@ event:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 9
+  ActiveMobs: 0
