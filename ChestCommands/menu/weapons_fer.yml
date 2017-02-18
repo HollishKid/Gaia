@@ -37,20 +37,20 @@ menu-settings:
 ######################
 
 fer1:
-  NAME: 'Fer ForgÈ'
+  NAME: 'Fer Forg√©'
   LORE:
   - '&d&oCe fer est'
-  - '&d&otrËs dense !'
+  - '&d&otr√®s dense !'
   ID: 265
   POSITION-X: 2
   POSITION-Y: 1
   KEEP-OPEN: true
 
 fer2:
-  NAME: 'Fer ForgÈ'
+  NAME: 'Fer Forg√©'
   LORE:
   - '&d&oCe fer est'
-  - '&d&otrËs dense !'
+  - '&d&otr√®s dense !'
   ID: 265
   POSITION-X: 2
   POSITION-Y: 2
@@ -60,59 +60,59 @@ emerald1:
   NAME: 'Emeraude Polie'
   LORE:
   - '&d&oCet Emeraude est'
-  - '&d&otrËs raffinÈ !'
+  - '&d&otr√®s raffin√© !'
   ID: 388
   POSITION-X: 2
   POSITION-Y: 3
   KEEP-OPEN: true
   
 fer_epee:
-  NAME: '&aEpÈe Fer ForgÈ'
+  NAME: '&aEp√©e Fer Forg√©'
   LORE:
   - '&d&oCe fer est'
-  - '&d&otrËs dense !'
+  - '&d&otr√®s dense !'
   - ' '
-  - '&7&oRaretÈ : &aCommun'
+  - '&7&oRaret√© : &aCommun'
   ID: 267
   POSITION-X: 4
   POSITION-Y: 2
   KEEP-OPEN: true
   
 fer12:
-  NAME: 'Fer ForgÈ'
+  NAME: 'Fer Forg√©'
   LORE:
   - '&d&oCe fer est'
-  - '&d&otrËs dense !'
+  - '&d&otr√®s dense !'
   ID: 265
   POSITION-X: 6
   POSITION-Y: 2
   KEEP-OPEN: true
 
 fer22:
-  NAME: 'Fer ForgÈ'
+  NAME: 'Fer Forg√©'
   LORE:
   - '&d&oCe fer est'
-  - '&d&otrËs dense !'
+  - '&d&otr√®s dense !'
   ID: 265
   POSITION-X: 6
   POSITION-Y: 1
   KEEP-OPEN: true
   
 fer32:
-  NAME: 'Fer ForgÈ'
+  NAME: 'Fer Forg√©'
   LORE:
   - '&d&oCe fer est'
-  - '&d&otrËs dense !'
+  - '&d&otr√®s dense !'
   ID: 265
   POSITION-X: 7
   POSITION-Y: 1
   KEEP-OPEN: true
   
 baton1:
-  NAME: 'B‚ton'
+  NAME: 'B√¢ton'
   LORE:
-  - '&d&oSimple b‚ton'
-  - '&d&od'utilisation en outillage !'
+  - '&d&oSimple b√¢ton'
+  - '&d&od''utilisation en outillage !'
   ID: 280
   POSITION-X: 7
   POSITION-Y: 2
@@ -122,20 +122,28 @@ emerald12:
   NAME: 'Emeraude Polie'
   LORE:
   - '&d&oCet Emeraude est'
-  - '&d&otrËs raffinÈ !'
+  - '&d&otr√®s raffin√©e !'
   ID: 388
   POSITION-X: 7
   POSITION-Y: 3
   KEEP-OPEN: true
   
 fer_hache:
-  NAME: '&aHache Fer ForgÈ'
+  NAME: '&aHache Fer Forg√©'
   LORE:
   - '&d&oCe fer est'
-  - '&d&otrËs dense !'
+  - '&d&otr√®s dense !'
   - ' '
-  - '&7&oRaretÈ : &aCommun'
+  - '&7&oRaret√© : &aCommun'
   ID: 258
   POSITION-X: 9
   POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker12:
+  COMMAND: 'open: craft_custom.yml'
+  NAME: '&aRetour aux Crafts'
+  ID: '58'
+  POSITION-X: 5
+  POSITION-Y: 1
   KEEP-OPEN: true

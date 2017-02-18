@@ -52,7 +52,7 @@ korghan:
   Skills:
   - command{c="bq event <target.name> Mysteria.kor_conv"} @trigger ~onInteract
   - summon{type=mercenaire;amount=2;radius=4} ~onDamaged 0.25
-  - message{m="&a<mob.name>&c Hahaha! Ralliez vous à moi mercenaires!"} @trigger ~onDamaged 0.25
+  - message{m="&a<mob.name>:&c Hahaha! Ralliez vous à moi mercenaires!"} @trigger ~onDamaged 0.25
   Options:
     FollowRange: 30
     AlwaysShowName: false

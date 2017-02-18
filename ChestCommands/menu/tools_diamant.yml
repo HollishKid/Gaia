@@ -40,7 +40,7 @@ diamant1:
   NAME: 'Diamant Noble'
   LORE:
   - '&d&oCe diamant est'
-  - '&d&od''une qualitÈ rare...'
+  - '&d&od''une qualit√©e rare...'
   ID: 264
   POSITION-X: 1
   POSITION-Y: 1
@@ -50,7 +50,7 @@ diamant2:
   NAME: 'Diamant Noble'
   LORE:
   - '&d&oCe diamant est'
-  - '&d&od''une qualitÈ rare...'
+  - '&d&od''une qualit√©e rare...'
   ID: 264
   POSITION-X: 2
   POSITION-Y: 1
@@ -60,17 +60,17 @@ diamant3:
   NAME: 'Diamant Noble'
   LORE:
   - '&d&oCe diamant est'
-  - '&d&od''une qualitÈ rare...'
+  - '&d&od''une qualit√©e rare...'
   ID: 264
   POSITION-X: 3
   POSITION-Y: 1
   KEEP-OPEN: true
   
 baton1:
-  NAME: 'B‚ton'
+  NAME: 'B√¢ton'
   LORE:
-  - '&d&oSimple b‚ton'
-  - '&d&od'utilisation en outillage !'
+  - '&d&oSimple b√¢ton'
+  - '&d&od''utilisation en outillage !'
   ID: 280
   POSITION-X: 2
   POSITION-Y: 2
@@ -80,7 +80,7 @@ emerald1:
   NAME: 'Emeraude Polie'
   LORE:
   - '&d&oCet Emeraude est'
-  - '&d&otrËs raffinÈ !'
+  - '&d&otr√®s raffin√© !'
   ID: 388
   POSITION-X: 2
   POSITION-Y: 3
@@ -90,9 +90,9 @@ diamant_pioche:
   NAME: '&aPioche en Diamant Noble'
   LORE:
   - '&e&oCe diamant est'
-  - '&e&od''une qualitÈ rare !'
+  - '&e&od''une qualit√©e rare !'
   - ' '
-  - '&7&oRaretÈ : &aCommun'
+  - '&7&oRaret√© : &aCommun'
   ID: 278
   POSITION-X: 4
   POSITION-Y: 2
@@ -102,17 +102,17 @@ diamant12:
   NAME: 'Diamant Noble'
   LORE:
   - '&d&oCe diamant est'
-  - '&d&od''une qualitÈ rare...'
+  - '&d&od''une qualit√©e rare...'
   ID: 264
   POSITION-X: 7
   POSITION-Y: 1
   KEEP-OPEN: true
   
 baton12:
-  NAME: 'B‚ton'
+  NAME: 'B√¢ton'
   LORE:
-  - '&d&oSimple b‚ton'
-  - '&d&od'utilisation en outillage !'
+  - '&d&oSimple b√¢ton'
+  - '&d&od''utilisation en outillage !'
   ID: 280
   POSITION-X: 7
   POSITION-Y: 2
@@ -122,7 +122,7 @@ emerald12:
   NAME: 'Emeraude Polie'
   LORE:
   - '&d&oCet Emeraude est'
-  - '&d&otrËs raffinÈ !'
+  - '&d&otr√®s raffin√© !'
   ID: 388
   POSITION-X: 7
   POSITION-Y: 3
@@ -132,9 +132,9 @@ diamant_pelle:
   NAME: '&aPelle en Diamant Noble'
   LORE:
   - '&e&oCe diamant est'
-  - '&e&od''une qualitÈ rare !'
+  - '&e&od''une qualit√©e rare !'
   - ' '
-  - '&7&oRaretÈ : &aCommun'
+  - '&7&oRaret√© : &aCommun'
   ID: 277
   POSITION-X: 9
   POSITION-Y: 2
@@ -144,7 +144,7 @@ diamant13:
   NAME: 'Diamant Noble'
   LORE:
   - '&d&oCe diamant est'
-  - '&d&od''une qualitÈ rare...'
+  - '&d&od''une qualit√©e rare...'
   ID: 264
   POSITION-X: 1
   POSITION-Y: 5
@@ -154,17 +154,17 @@ diamant23:
   NAME: 'Diamant Noble'
   LORE:
   - '&d&oCe diamant est'
-  - '&d&od''une qualitÈ rare...'
+  - '&d&od''une qualit√©e rare...'
   ID: 264
   POSITION-X: 2
   POSITION-Y: 5
   KEEP-OPEN: true
   
 baton13:
-  NAME: 'B‚ton'
+  NAME: 'B√¢ton'
   LORE:
-  - '&d&oSimple b‚ton'
-  - '&d&od'utilisation en outillage !'
+  - '&d&oSimple b√¢ton'
+  - '&d&od''utilisation en outillage !'
   ID: 280
   POSITION-X: 2
   POSITION-Y: 6
@@ -174,7 +174,7 @@ emerald13:
   NAME: 'Emeraude Polie'
   LORE:
   - '&d&oCet Emeraude est'
-  - '&d&otrËs raffinÈ !'
+  - '&d&otr√®s raffin√© !'
   ID: 388
   POSITION-X: 2
   POSITION-Y: 7
@@ -184,10 +184,130 @@ diamant_houe:
   NAME: '&aHoue en Diamant Noble'
   LORE:
   - '&e&oCe diamant est'
-  - '&e&od''une qualitÈ rare !'
+  - '&e&od''une qualit√©e rare !'
   - ' '
-  - '&7&oRaretÈ : &aCommun'
+  - '&7&oRaret√© : &aCommun'
   ID: 293
+  POSITION-X: 4
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blockeralpha:
+  COMMAND: 'open: craft_custom.yml'
+  NAME: '&aRetour aux Crafts'
+  ID: '58'
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
   POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
   POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 7
+  KEEP-OPEN: true
+ 
+blocker72:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 9
   KEEP-OPEN: true

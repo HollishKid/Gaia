@@ -9,7 +9,7 @@ lava_spawn:
   MaxMobs: 6
   MobLevel: 1
   MobsPerSpawn: 2
-  Cooldown: 40
+  Cooldown: 60
   CooldownTimer: 0
   Warmup: 10
   WarmupTimer: 0
@@ -21,4 +21,4 @@ lava_spawn:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 5
+  ActiveMobs: 0

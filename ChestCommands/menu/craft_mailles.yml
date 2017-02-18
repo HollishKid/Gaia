@@ -102,7 +102,7 @@ mailles_casque:
   - '&e&oCes mailles renforcées'
   - '&e&osont bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 302
   POSITION-X: 4
   POSITION-Y: 2
@@ -204,7 +204,7 @@ mailles_plastron:
   - '&e&oCes mailles renforcées'
   - '&e&osont bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 303
   POSITION-X: 9
   POSITION-Y: 2
@@ -296,7 +296,7 @@ mailles_jambes:
   - '&e&oCes mailles renforcées'
   - '&e&osont bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 304
   POSITION-X: 4
   POSITION-Y: 5
@@ -358,7 +358,7 @@ mailles_pieds:
   - '&e&oCes mailles renforcées'
   - '&e&osont bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 305
   POSITION-X: 9
   POSITION-Y: 5
@@ -428,7 +428,8 @@ blocker9:
   KEEP-OPEN: true
   
 blocker12:
-  NAME: ' '
+  COMMAND: 'open: craft_custom.yml'
+  NAME: '&aRetour aux Crafts'
   ID: '58'
   POSITION-X: 5
   POSITION-Y: 1

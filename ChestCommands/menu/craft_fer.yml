@@ -102,7 +102,7 @@ fer_casque:
   - '&d&oCe fer est'
   - '&d&otrès dense !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 306
   POSITION-X: 4
   POSITION-Y: 2
@@ -204,7 +204,7 @@ fer_plastron:
   - '&d&oCe fer est'
   - '&d&otrès dense !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 307
   POSITION-X: 9
   POSITION-Y: 2
@@ -296,7 +296,7 @@ fer_jambes:
   - '&d&oCe fer est'
   - '&d&otrès dense !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 308
   POSITION-X: 4
   POSITION-Y: 5
@@ -358,7 +358,7 @@ fer_pieds:
   - '&d&oCe fer est'
   - '&d&otrès dense !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 309
   POSITION-X: 9
   POSITION-Y: 5
@@ -428,7 +428,8 @@ blocker9:
   KEEP-OPEN: true
   
 blocker12:
-  NAME: ' '
+  COMMAND: 'open: craft_custom.yml'
+  NAME: '&aRetour aux Crafts'
   ID: '58'
   POSITION-X: 5
   POSITION-Y: 1

@@ -1,4 +1,4 @@
-######################
+﻿######################
 #+                  +#
 #   MENU SETTINGS    #
 #+                  +#
@@ -7,7 +7,7 @@
 menu-settings:
 
   # name - appears as the title - REQUIRED
-  name: '&dCraft de Cuir'
+  name: '&dCrafts de Fer Volcanique'
 
   # rows - the number of rows of the chest - REQUIRED
   rows: 3
@@ -36,79 +36,79 @@ menu-settings:
 #+                  +#
 ######################
 
-cuir1:
-  NAME: 'Cuir Tanné'
+fer1:
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
   POSITION-X: 2
   POSITION-Y: 1
   KEEP-OPEN: true
 
-cuir2:
-  NAME: 'Cuir Tanné'
+fer2:
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
   POSITION-X: 2
   POSITION-Y: 2
   KEEP-OPEN: true
   
-emerald1:
-  NAME: 'Emeraude Polie'
+redstone1:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffinée !'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 2
   POSITION-Y: 3
   KEEP-OPEN: true
   
-cuir_epee:
-  NAME: '&aEpée Cuir Tanné'
+fer_epee:
+  NAME: '&9Epée Fer Volcanique'
   LORE:
-  - '&e&oCe cuir renforcé'
-  - '&e&oest bien plus robuste !'
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
   - ' '
-  - '&7&oRareté : &aCommun'
-  ID: 268
+  - '&7&oRareté : &9Rare'
+  ID: 267
   POSITION-X: 4
   POSITION-Y: 2
   KEEP-OPEN: true
   
-cuir12:
-  NAME: 'Cuir Tanné'
+fer12:
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
   POSITION-X: 6
   POSITION-Y: 2
   KEEP-OPEN: true
 
-cuir13:
-  NAME: 'Cuir Tanné'
+fer22:
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
   POSITION-X: 6
   POSITION-Y: 1
   KEEP-OPEN: true
-
-cuir14:
-  NAME: 'Cuir Tanné'
+  
+fer32:
+  NAME: 'Fer Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  ID: 265
   POSITION-X: 7
   POSITION-Y: 1
   KEEP-OPEN: true
-
-baton1:
+  
+baton12:
   NAME: 'Bâton'
   LORE:
   - '&d&oSimple bâton'
@@ -117,27 +117,29 @@ baton1:
   POSITION-X: 7
   POSITION-Y: 2
   KEEP-OPEN: true
- 
-emerald12:
-  NAME: 'Cuir Tanné'
+  
+redstone12:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 7
   POSITION-Y: 3
   KEEP-OPEN: true
   
-cuir_hache:
-  NAME: 'Hache Cuir Tanné'
+fer_hache:
+  NAME: '&9Hache Fer Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 271
+  - '&d&oCe fer provient'
+  - '&d&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 258
   POSITION-X: 9
   POSITION-Y: 2
   KEEP-OPEN: true
-  
+    
 blocker1:
   COMMAND: 'open: craft_custom.yml'
   NAME: '&aRetour aux Crafts'

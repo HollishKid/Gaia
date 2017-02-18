@@ -1,4 +1,4 @@
-######################
+﻿######################
 #+                  +#
 #   MENU SETTINGS    #
 #+                  +#
@@ -7,12 +7,12 @@
 menu-settings:
 
   # name - appears as the title - REQUIRED
-  name: '&dCraft de Cuir'
+  name: '&dCraft de Diamant Volcanique'
 
   # rows - the number of rows of the chest - REQUIRED
   rows: 7
 
-  # command - OPTIONAL (you can remove this or set it to '')
+  # command - OPTIONAL (you can remove this diamant set it to '')
   # Bind multiple commands using ; (command: 'menu; m; me')
   command: ''
 
@@ -22,11 +22,11 @@ menu-settings:
   auto-refresh: 10
 
   # This command command will be execute when the menu is opened.
-  # Supports all the icon command types.
+  # Suppdiamantts all the icon command types.
   open-action: 'sound: block note pling'
 
   # open-with-item - OPTIONAL
-  # The menu will open only right-clicking with orange wool [35:1]
+  # The menu will open only right-clicking with diamantange wool [35:1]
   open-with-item: ''
 
 
@@ -36,32 +36,32 @@ menu-settings:
 #+                  +#
 ######################
 
-cuir1:
-  NAME: 'Cuir Tanné'
+diamant1:
+  NAME: 'Diamant Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
   POSITION-X: 1
   POSITION-Y: 1
   KEEP-OPEN: true
 
-cuir2:
-  NAME: 'Cuir Tanné'
+diamant2:
+  NAME: 'Diamant Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
   POSITION-X: 2
   POSITION-Y: 1
   KEEP-OPEN: true
   
-cuir3:
-  NAME: 'Cuir Tanné'
+diamant3:
+  NAME: 'Diamant Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
   POSITION-X: 3
   POSITION-Y: 1
   KEEP-OPEN: true
@@ -76,38 +76,38 @@ baton1:
   POSITION-Y: 2
   KEEP-OPEN: true
   
-emerald1:
-  NAME: 'Emeraude Polie'
+redstone1:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffinée !'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 2
   POSITION-Y: 3
   KEEP-OPEN: true
   
-cuir_pioche:
-  NAME: '&aPioche Cuir Tanné'
+diamant_pioche:
+  NAME: '&9Pioche en Diamant Volcanique'
   LORE:
-  - '&e&oCe cuir renforcé'
-  - '&e&oest bien plus robuste !'
+  - '&e&oCe diamant provient'
+  - '&e&od''un volcan actif'
   - ' '
-  - '&7&oRareté : &aCommun'
-  ID: 270
+  - '&7&oRareté : &9Rare'
+  ID: 278
   POSITION-X: 4
   POSITION-Y: 2
   KEEP-OPEN: true
   
-cuir12:
-  NAME: 'Cuir Tanné'
+diamant12:
+  NAME: 'Diamant Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
   POSITION-X: 7
   POSITION-Y: 1
   KEEP-OPEN: true
-
+  
 baton12:
   NAME: 'Bâton'
   LORE:
@@ -117,43 +117,45 @@ baton12:
   POSITION-X: 7
   POSITION-Y: 2
   KEEP-OPEN: true
- 
-emerald12:
-  NAME: 'Emeraude Polie'
+  
+redstone12:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffiné !'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 7
   POSITION-Y: 3
   KEEP-OPEN: true
   
-cuir_pelle:
-  NAME: '&aPelle Cuir Tanné'
+diamant_pelle:
+  NAME: '&9Pelle en Diamant Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 269
+  - '&e&oCe diamant provient'
+  - '&e&od''un volcan actif'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 277
   POSITION-X: 9
   POSITION-Y: 2
   KEEP-OPEN: true
   
-cuir13:
-  NAME: 'Cuir Tanné'
+diamant13:
+  NAME: 'Diamant Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
   POSITION-X: 1
   POSITION-Y: 5
   KEEP-OPEN: true
-
-cuir23:
-  NAME: 'Cuir Tanné'
+  
+diamant23:
+  NAME: 'Diamant Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
   POSITION-X: 2
   POSITION-Y: 5
   KEEP-OPEN: true
@@ -168,22 +170,24 @@ baton13:
   POSITION-Y: 6
   KEEP-OPEN: true
   
-emerald13:
-  NAME: 'Emeraude Polie'
+redstone13:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffinée !'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 2
   POSITION-Y: 7
   KEEP-OPEN: true
   
-cuir_houe:
-  NAME: '&aHoue Cuir Tanné'
+diamant_houe:
+  NAME: '&9Houe en Diamant Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 290
+  - '&e&oCe diamant provient'
+  - '&e&od''un volcan actif'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 293
   POSITION-X: 4
   POSITION-Y: 6
   KEEP-OPEN: true

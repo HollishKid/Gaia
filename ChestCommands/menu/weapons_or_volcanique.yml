@@ -1,4 +1,4 @@
-######################
+﻿######################
 #+                  +#
 #   MENU SETTINGS    #
 #+                  +#
@@ -7,7 +7,7 @@
 menu-settings:
 
   # name - appears as the title - REQUIRED
-  name: '&dCraft de Cuir'
+  name: '&dCraft d''Or Volcanique'
 
   # rows - the number of rows of the chest - REQUIRED
   rows: 3
@@ -36,79 +36,79 @@ menu-settings:
 #+                  +#
 ######################
 
-cuir1:
-  NAME: 'Cuir Tanné'
+or1:
+  NAME: 'Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCet or provient'
+  - '&d&od''un volcan actif.'
+  ID: 266
   POSITION-X: 2
   POSITION-Y: 1
   KEEP-OPEN: true
 
-cuir2:
-  NAME: 'Cuir Tanné'
+or2:
+  NAME: 'Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCet or provient'
+  - '&d&od''un volcan actif.'
+  ID: 266
   POSITION-X: 2
   POSITION-Y: 2
   KEEP-OPEN: true
   
-emerald1:
-  NAME: 'Emeraude Polie'
+redstone1:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffinée !'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 2
   POSITION-Y: 3
   KEEP-OPEN: true
   
-cuir_epee:
-  NAME: '&aEpée Cuir Tanné'
+or_epee:
+  NAME: '&9Epée en Or Volcanique'
   LORE:
-  - '&e&oCe cuir renforcé'
-  - '&e&oest bien plus robuste !'
+  - '&e&oCet or provient'
+  - '&e&od''un volcan actif.'
   - ' '
-  - '&7&oRareté : &aCommun'
-  ID: 268
+  - '&7&oRareté : &9Rare'
+  ID: 283
   POSITION-X: 4
   POSITION-Y: 2
   KEEP-OPEN: true
   
-cuir12:
-  NAME: 'Cuir Tanné'
+or12:
+  NAME: 'Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCet or provient'
+  - '&d&od''un volcan actif.'
+  ID: 266
   POSITION-X: 6
   POSITION-Y: 2
   KEEP-OPEN: true
 
-cuir13:
-  NAME: 'Cuir Tanné'
+or22:
+  NAME: 'Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCet or provient'
+  - '&d&od''un volcan actif.'
+  ID: 266
   POSITION-X: 6
   POSITION-Y: 1
   KEEP-OPEN: true
-
-cuir14:
-  NAME: 'Cuir Tanné'
+  
+or32:
+  NAME: 'Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCet or provient'
+  - '&d&od''un volcan actif.'
+  ID: 266
   POSITION-X: 7
   POSITION-Y: 1
   KEEP-OPEN: true
-
-baton1:
+  
+baton12:
   NAME: 'Bâton'
   LORE:
   - '&d&oSimple bâton'
@@ -117,23 +117,25 @@ baton1:
   POSITION-X: 7
   POSITION-Y: 2
   KEEP-OPEN: true
- 
-emerald12:
-  NAME: 'Cuir Tanné'
+  
+redstone12:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 7
   POSITION-Y: 3
   KEEP-OPEN: true
   
-cuir_hache:
-  NAME: 'Hache Cuir Tanné'
+or_hache:
+  NAME: '&9Hache en Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 271
+  - '&e&oCet or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 286
   POSITION-X: 9
   POSITION-Y: 2
   KEEP-OPEN: true

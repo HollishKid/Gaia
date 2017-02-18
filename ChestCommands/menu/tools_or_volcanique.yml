@@ -1,4 +1,4 @@
-######################
+﻿######################
 #+                  +#
 #   MENU SETTINGS    #
 #+                  +#
@@ -7,7 +7,7 @@
 menu-settings:
 
   # name - appears as the title - REQUIRED
-  name: '&dCraft de Cuir'
+  name: '&dCraft d''Or Volcanique'
 
   # rows - the number of rows of the chest - REQUIRED
   rows: 7
@@ -36,32 +36,32 @@ menu-settings:
 #+                  +#
 ######################
 
-cuir1:
-  NAME: 'Cuir Tanné'
+or1:
+  NAME: 'Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCet or provient'
+  - '&d&od''un volcan actif.'
+  ID: 266
   POSITION-X: 1
   POSITION-Y: 1
   KEEP-OPEN: true
 
-cuir2:
-  NAME: 'Cuir Tanné'
+or2:
+  NAME: 'Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCet or provient'
+  - '&d&od''un volcan actif.'
+  ID: 266
   POSITION-X: 2
   POSITION-Y: 1
   KEEP-OPEN: true
   
-cuir3:
-  NAME: 'Cuir Tanné'
+or3:
+  NAME: 'Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCet or provient'
+  - '&d&od''un volcan actif.'
+  ID: 266
   POSITION-X: 3
   POSITION-Y: 1
   KEEP-OPEN: true
@@ -76,38 +76,38 @@ baton1:
   POSITION-Y: 2
   KEEP-OPEN: true
   
-emerald1:
-  NAME: 'Emeraude Polie'
+redstone1:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffinée !'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 2
   POSITION-Y: 3
   KEEP-OPEN: true
   
-cuir_pioche:
-  NAME: '&aPioche Cuir Tanné'
+or_pioche:
+  NAME: '&9Pioche en Or Volcanique'
   LORE:
-  - '&e&oCe cuir renforcé'
-  - '&e&oest bien plus robuste !'
+  - '&e&oCet or provient'
+  - '&e&od''un volcan actif.'
   - ' '
-  - '&7&oRareté : &aCommun'
-  ID: 270
+  - '&7&oRareté : &9Rare'
+  ID: 285
   POSITION-X: 4
   POSITION-Y: 2
   KEEP-OPEN: true
   
-cuir12:
-  NAME: 'Cuir Tanné'
+or12:
+  NAME: 'Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCet or provient'
+  - '&d&od''un volcan actif.'
+  ID: 266
   POSITION-X: 7
   POSITION-Y: 1
   KEEP-OPEN: true
-
+  
 baton12:
   NAME: 'Bâton'
   LORE:
@@ -117,43 +117,45 @@ baton12:
   POSITION-X: 7
   POSITION-Y: 2
   KEEP-OPEN: true
- 
-emerald12:
-  NAME: 'Emeraude Polie'
+  
+redstone12:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffiné !'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 7
   POSITION-Y: 3
   KEEP-OPEN: true
   
-cuir_pelle:
-  NAME: '&aPelle Cuir Tanné'
+or_pelle:
+  NAME: '&9Pelle en Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 269
+  - '&e&oCet or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 284
   POSITION-X: 9
   POSITION-Y: 2
   KEEP-OPEN: true
   
-cuir13:
-  NAME: 'Cuir Tanné'
+or13:
+  NAME: 'Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCet or provient'
+  - '&d&od''un volcan actif.'
+  ID: 266
   POSITION-X: 1
   POSITION-Y: 5
   KEEP-OPEN: true
 
-cuir23:
-  NAME: 'Cuir Tanné'
+or23:
+  NAME: 'Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 334
+  - '&d&oCet or provient'
+  - '&d&od''un volcan actif.'
+  ID: 266
   POSITION-X: 2
   POSITION-Y: 5
   KEEP-OPEN: true
@@ -168,22 +170,24 @@ baton13:
   POSITION-Y: 6
   KEEP-OPEN: true
   
-emerald13:
-  NAME: 'Emeraude Polie'
+redstone13:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude est'
-  - '&d&otrès raffinée !'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 2
   POSITION-Y: 7
   KEEP-OPEN: true
   
-cuir_houe:
-  NAME: '&aHoue Cuir Tanné'
+or_houe:
+  NAME: '&9Houe en Or Volcanique'
   LORE:
-  - '&d&oCe cuir renforcé'
-  - '&d&oest bien plus robuste !'
-  ID: 290
+  - '&e&oCet or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 294
   POSITION-X: 4
   POSITION-Y: 6
   KEEP-OPEN: true

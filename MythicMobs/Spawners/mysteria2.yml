@@ -12,7 +12,7 @@ mysteria2:
   Cooldown: 7
   CooldownTimer: 0
   Warmup: 60
-  WarmupTimer: 60
+  WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40
   LeashRange: 30

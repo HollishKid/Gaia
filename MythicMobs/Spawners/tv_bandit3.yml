@@ -21,4 +21,4 @@ tv_bandit3:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 1
+  ActiveMobs: 0
