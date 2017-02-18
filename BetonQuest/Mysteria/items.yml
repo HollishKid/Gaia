@@ -1,14 +1,20 @@
+#
 #   Aktarion   #
+#
 akt_tool: IRON_PICKAXE name:§eOutil_fétiche_d'Aktarion lore:§8§oCet_outil_ne_ressemble;§8§oà_rien_de_connus;§2Objet_de_Quête
 kolysword: DIAMOND_SWORD data:0 name:§6Kolysword lore:§726_à_61_de_dégâts;§3§oArme_légendaire;§3§ode_l'ancien_temps;_;§7§oRareté_:_§6Légendaire
 korutsu_sword: DIAMOND_SWORD data:0 name:§4Epée_enflamée_de_§cKorutsu lore:§718_à_24_de_dégâts;§8§oArme_forgée_par_Aktarion;§a§oEn_souvenir_de_son_ami;;§7§oRareté_:_§3Rare
 ardenko_axe: DIAMOND_AXE data:0 name:§bHache_foudroyante_d'§3Ardenko lore:§714_à_21_de_dégâts_(Main_principale);§77_à_9_de_dégâts_(Main_secondaire);§8§oCette_hache_n'est_pas;§8§oun_outil_de_destruction;;§7§oRareté_:_§9Rare
 imiko_bow: BOW data:0 name:§9Arc_celeste_d'§bImiko lore:§7Dégâts_d'origine;§8§oCet_arc_est_une_union;§8§ode_la_terre_et_du_ciel;;§7§oRareté_:_§9Rare
+#
 #   Loukran   #
+#
 cle_de_louk1: STICK data:0 name:§2Petite_Clé lore:§8§oTrouvez_un_autre;§8§ocoffre_pour_insérer.;§2Objet_de_Quête
 cle_de_louk2: STICK data:0 name:§2Grosse_Clé lore:§8§oTrouvez_un_autre;§8§ocoffre_pour_insérer.;§2Objet_de_Quête
 cargaison_pos: PAPER data:0 name:§2Position_de_la_cargaison lore:§8§oCargaison_pillée_à;§8§ocette_position:;§a§o(-8798,80,4682);§2Objet_de_Quête
-cargaison_j: BOOK_AND_QUILL data:0 name:§2Journal_de_bord text:Trajet:\nDépart_Apnoka\nDestination_Mysteria\n\nNote_de_cargaison:\n\nCela_fait_un_moment_que_nous_voyageons,_mais_j'espère_que_notre_route_ne_sera_pas_longue_et_qu'elle_sera_calme.|Jour_1:\n\nLe_départ_s'est_bien_déroulé,_nous_n'avons_eu_aucuns_soucis._Nous_espèrons_que_ce_voyage_ne_sera_pas_long.|Jour_2:\n\nNous_venons_d'arriver_dans_un_petit_village_accueillant_et_chaleureux,_mais_nous_devons_partir_de_si_tôt_pour_continuer_notre_trajet
+cargaison_j: BOOK_AND_QUILL data:0 name:§2Journal_de_bord text:Trajet:\nDépart_Apnoka\nDestination_Mysteria\n\nNote_de_cargaison:\n\nNous_avons_fait_une_estimation_de_la_durée_du_voyage,_cela_ne_devrait_pas_durer_plus_de_10_jours.|Jour_1:\n\nLe_départ_s'est_bien_déroulé,_nous_n'avons_eu_aucuns_soucis._Nous_espèrons_que_ce_voyage_ne_sera_pas_long.|Jour_2:\n\nNous_venons_d'arriver_dans_un_petit_village_accueillant_et_chaleureux,_mais_nous_devons_partir_de_si_tôt_pour_continuer_notre_trajet|Jour_3:\n\nNous_venons_d'affronter_un_temps_désagréable,_mais_nous_en_sommes_sortit_avec_acharnement._Nous_espérons_que_la_destination_n'est_plus_très_loin.|Jour_4:\n\nNous_avons_subit_une_attaque_de_contrebandiers,_par_chance,_nous_les_avons_repousser_à_l'aide_de_partisans_qui_étaient_à_leurs_poursuite._Nous_avons_été_escortés_àla_ville_la_plus_proche_pour_un_ravitaillement.|Jour_5:\n\nSur_ce_qui_n'était_pas_prévu,_nous_avons_passé_la_nuit_dans_cette_ville_pour_nous_éviter_les_attaques_de_nuit_sournoises._C'est_avec_un_bon_réveil_que_nous_avons_reprit_route.|Jour_6:\n\nNous_sommes_presques_arrivés_à_Mysteria,_il_reste_encore_du_trajet_à_parcourir,_mais_nous_sommes_encore_en_forme_pour_la_suite_de_ce_qui_nous_attend.|Jour_7:\n\nVoilà_no.._somm.._ar....._Je.._Je.._Je_n'ai_plus..._la_force_d'écrire.._Il_§0me...faut§0_du_§0rep...os§0_Que_notre..._seigneur..._nous_vienne..._en..._aide...|Jour_8:\n\n......................................................................................................................................................
 louk_qpr: RED_ROSE data:2 name:§dAllimythe lore:§8§oCette_plante_est;§8§od'une_rareté_absolue;§2Objet_de_Quête
+#
 #   Tatsu   #
+#
 tatsu_knife: STONE_SWORD data:0 name:§2Vieux_couteau lore:§8§oCe_couteau_a_une;§8§ogrande_valeur_sentimentale;§2Objet_de_Quête

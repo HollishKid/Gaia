@@ -21,4 +21,4 @@ endghast4:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 1
+  ActiveMobs: 0

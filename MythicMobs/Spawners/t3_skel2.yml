@@ -22,4 +22,4 @@ t3_skel2:
   Breakable: false
   Conditions:
   - playerwithin 20
-  ActiveMobs: 1
+  ActiveMobs: 0

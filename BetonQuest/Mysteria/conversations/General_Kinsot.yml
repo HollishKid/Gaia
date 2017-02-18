@@ -40,3 +40,4 @@ player_options:
   village:
     text: 'Où se trouve le village ?'
     pointers: village_info
+
