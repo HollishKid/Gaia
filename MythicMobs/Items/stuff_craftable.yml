@@ -79,7 +79,7 @@ pieds_cuir:
 epee_cuir:
   Id: 268
   Data: 0
-  Display: '&aEpée Cuir Tanné'
+  Display: '&aÉpée Cuir Tanné'
   Lore:
   - '&e&oCe cuir renforcé'
   - '&e&oest bien plus robuste !'
@@ -389,7 +389,7 @@ pieds_fer:
 epee_fer:
   Id: 267
   Data: 0
-  Display: '&aEpée Fer Forgé'
+  Display: '&aÉpée Fer Forgé'
   Lore:
   - '&e&oCe fer forgé'
   - '&e&oest très dense !'
@@ -544,7 +544,7 @@ pieds_or:
 epee_or:
   Id: 283
   Data: 0
-  Display: '&aEpée Or Décoré'
+  Display: '&aÉpée Or Décoré'
   Lore:
   - '&e&oCet or est'
   - '&e&ojoliment travaillé !'
@@ -699,7 +699,7 @@ pieds_diamant:
 epee_diamant:
   Id: 276
   Data: 0
-  Display: '&aEpée Diamant Noble'
+  Display: '&aÉpée Diamant Noble'
   Lore:
   - '&e&oCe diamant est'
   - '&e&od''une qualité rare !'

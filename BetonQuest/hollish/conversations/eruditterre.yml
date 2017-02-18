@@ -21,14 +21,14 @@ NPC_options:
     text: 'Je suis un des 4 &3Érudits &a&odu &dSanctuaire&a&o. Je suis &dÉrudit &a&ode la Terre.'
     pointers: comment,autres
   keske_rep:
-    text: 'Cet endroit est consacré à la recherche sur la Terre en tant qu''élément. J''y fais mes recherches, j''y enseigne et j''y vis. Mon rôle est aussi d''enseigner les &3Minions.'
+    text: 'Cet endroit est consacré à la recherche sur la Terre en tant qu''élément. \nJ''y fais mes recherches, j''y enseigne et j''y vis. \nMon rôle est aussi d''enseigner les &3Minions.'
     pointers: minions
   comment_rep:
-    text: 'Cela veut dire que mes recherches portent sur la Terre en tant qu''élément consituant de notre monde. Plus particulièrement la Magie qui y est associée...'
+    text: 'Cela veut dire que mes recherches portent sur la Terre en tant qu''élément consituant de notre monde. \nPlus particulièrement la Magie qui y est associée...'
   autres_rep:
-    text: 'Nous spécialisons chacun dans l''un des éléments qui composent le monde de &6Gaïa &a&o; Terre, Air, Eau et Feu.'
+    text: 'Nous spécialisons chacun dans l''un des éléments qui composent le monde de &6Gaïa &a&o; \nTerre, Air, Eau et Feu.'
   minions_rep:
-    text: 'Je suis étonné que vous n''en ayez pas encore vu en venant ici, ce sont les apprentis du &dSanctuaire &a&o, ils sont formés pour rejoindre la hiérarchie Spirituelle et ainsi s''occuper des lieux spirituels de ce monde.'
+    text: 'Je suis étonné que vous n''en ayez pas encore vu en venant ici, ce sont les apprentis du &dSanctuaire&a&o. \nIls sont formés pour rejoindre la hiérarchie Spirituelle et ainsi s''occuper des lieux spirituels de ce monde.'
 ##
 #
 # New Guy
@@ -70,7 +70,7 @@ NPC_options:
     text: Hm... \nSi la Pierre de Terre l'a indiquée, c'est qu'elle doit avoir du sens. \nVas voir Orno à la Bibliothèque d'Athelas, il pourra sûrement nous aider !
     events: folder_earth_orno
   orno_done_rep:
-    text: Très bien ! \nCes Emeraudes Polies nécessitent des Emeraudes Brutes, qui sont minables uniquement dans les Mines d'Ingor. \nAllez voir si vous pouvez en obtenir 10 et revenez me voir !
+    text: Très bien ! \nCes Emeraude Volcanique sont minables uniquement dans les Mines d'Ingor. \nAllez voir si vous pouvez en obtenir 10 et revenez me voir !
     events: folder_terre_ingor
 ############
 #          #
@@ -136,7 +136,7 @@ player_options:
     condition: terre_found
     pointer: borne_found_rep
   orno_done:
-    text: Orno m'a dit que l'incantation nécessitait une Emeraude Polie.
+    text: Orno m'a dit que l'incantation nécessitait une Emeraude Volcanique.
     condition: terre_orno_done
     pointer: orno_done_rep
 #######################################

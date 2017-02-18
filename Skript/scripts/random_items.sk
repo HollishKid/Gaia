@@ -1,0 +1,240 @@
+#
+#
+#
+# Random Item Generator
+#
+#
+#  This needs reviewing in different "operations" in Attributes.
+#    Distinction to be made between 0 & 1 => Max Health & Armor & Damage are probably 0 with their own values (overrides vanilla, make scale big)
+#    Set these in {attributes} value when figured out.
+#
+#
+command /customitem:
+	trigger:
+		set {item_type} to a random integer between 1 and 7
+		loop yaml list "items_lore2" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {lore2_list::*}
+		set {lore2} to a random element out of {lore2_list::*}
+		loop yaml list "items_lore3" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {lore3_list::*}
+		set {lore3} to a random element out of {lore3_list::*}
+		#
+		#
+		if {item_type} is 1:
+			loop yaml list "helmets" from file "/plugins/Skript/scripts/config.yml":
+				add "%loop-value%" to {helmets::*}
+			set {item_name} to random element out of {helmets::*}
+			set {item_slot} to "head"
+		if {item_type} is 2:
+			loop yaml list "chestplates" from file "/plugins/Skript/scripts/config.yml":
+				add "%loop-value%" to {chestplates::*}
+			set {item_name} to random element out of {chestplates::*}
+			set {item_slot} to "chest"
+		if {item_type} is 3:
+			loop yaml list "leggings" from file "/plugins/Skript/scripts/config.yml":
+				add "%loop-value%" to {leggings::*}
+			set {item_name} to random element out of {leggings::*}
+			set {item_slot} to "legs"
+		if {item_type} is 4:
+			loop yaml list "boots" from file "/plugins/Skript/scripts/config.yml":
+				add "%loop-value%" to {boots::*}
+			set {item_name} to random element out of {boots::*}
+			set {item_slot} to "feet"
+		if {item_type} is 5:
+			loop yaml list "swords" from file "/plugins/Skript/scripts/config.yml":
+				add "%loop-value%" to {swords::*}
+			set {item_name} to random element out of {swords::*}
+			set {item_slot} to "mainhand"
+		if {item_type} is 6:
+			loop yaml list "axes" from file "/plugins/Skript/scripts/config.yml":
+				add "%loop-value%" to {axes::*}
+			set {item_name} to random element out of {axes::*}
+			set {item_slot} to "mainhand"
+		if {item_type} is 7:
+			set {item_name} to "bow"
+			set {item_slot} to "mainhand"
+		#
+		#
+		#		Composite attribute string creator
+		#
+		#
+		#- maxHealth (20,0)
+		#- knockbackResistance (ranges from 0 to 1)
+		#- movementSpeed (0.7)
+		#- attackDamage (1.0)
+		#- attackSpeed (4,0 = number of attacks per second 10 almost instantly)
+		#- armor (30max)
+
+
+		set {UUIDMost} to a random integer between 1 and 2000000000
+		set {UUIDLeast} to a random integer between 1 and 2000000000
+		set {maxh} to "0."
+		set {maxh1} to random integer between 0 and 3
+		set {maxh2} to random integer between 0 and 9
+		set {kbr} to "0."
+		set {kbr1} to a random integer between 0 and 3
+		set {kbr2} to a random integer between 0 and 9
+		set {mspeed} to "0."
+		set {mspeed1} to a random integer between 0 and 3
+		set {mspeed2} to a random integer between 0 and 9
+		set {adamage} to "0."
+		set {adamage1} to random integer between 0 and 3
+		set {adamage2} to random integer between 0 and 9
+		set {aspeed} to "0."
+		set {aspeed1} to a random integer between 0 and 3
+		set {aspeed2} to a random integer between 0 and 9
+		set {armor} to a random integer between 0 and 10
+		set {attributes_mh} to ""
+		set {attributes_kbr} to ""
+		set {attributes_ms} to ""
+		set {attributes_armor} to ""
+		set {attributes_ad} to ""
+		set {attributes_as} to ""
+		set {attributes_amount} to 0 or 1 or 2
+		
+		if {attributes_amount} is 0:
+			set {attributes} to ""
+		if {attributes_amount} is 1:
+			add 1 to {attributes_amount::*}
+		if {attributes_amount} is 2:
+			add 1 to {attributes_amount::*}
+			add 2 to {attributes_amount::*}
+		if {item_type} is 1 or 2 or 3 or 4: 
+			loop yaml list "attributes_armor" from file "/plugins/Skript/scripts/config.yml":
+				add "%loop-value%" to {attributes_1234::*}
+			loop {attributes_amount::*}:
+				set {attribute_name} to random element out of {attributes_1234::*}
+				if {attribute_name} is "maxHealth":
+					set {attributes_mh} to "{AttributeName:""generic.maxHealth"",Name:""generic.maxHealth"",Slot:""%{item_slot}%"",Amount:%{maxh}%%{maxh1}%%{maxh2}%,Operation:1,UUIDMost:%{UUIDMost}%,UUIDLeast:%{UUIDLeast}%}"
+				if {attribute_name} is "knockbackResistance":
+					set {attributes_kbr} to ",{AttributeName:""generic.knockbackResistance"",Name:""generic.knockbackResistance"",Slot:""%{item_slot}%"",Amount:%{kbr}%%{kbr1}%%{kbr2}%,Operation:1,UUIDMost:%{UUIDMost}%,UUIDLeast:%{UUIDLeast}%}"
+				if {attribute_name} is "movementSpeed":
+					set {attributes_ms} to ",{AttributeName:""generic.movementSpeed"",Name:""generic.movementSpeed"",Slot:""%{item_slot}%"",Amount:%{mspeed}%%{mspeed1}%%{mspeed2}%,Operation:1,UUIDMost:%{UUIDMost}%,UUIDLeast:%{UUIDLeast}%}"
+				if {attribute_name} is "armor":
+					set {attributes_armor} to ",{AttributeName:""generic.armor"",Name:""generic.armor"",Slot:""%{item_slot}%"",Amount:%{armor}%,Operation:1,UUIDMost:%{UUIDMost}%,UUIDLeast:%{UUIDLeast}%}"
+
+			set {attributes} to ",AttributeModifiers:[%{attributes_mh}%%{attributes_kbr}%%{attributes_ms}%%{attributes_armor}%]"
+				
+		if {item_type} is 5 or 6:
+			loop yaml list "attributes_weapons" from file "/plugins/Skript/scripts/config.yml":
+				add "%loop-value%" to {attributes_56::*}
+			loop {attributes_amount::*}:
+				set {attribute_name} to random element out of {attributes_56::*}
+				if {attribute_name} is "maxHealth":
+					set {attributes_mh} to "{AttributeName:""generic.maxHealth"",Name:""generic.maxHealth"",Slot:""%{item_slot}%"",Amount:%{maxh}%%{maxh1}%%{maxh2}%,Operation:1,UUIDMost:%{UUIDMost}%,UUIDLeast:%{UUIDLeast}%}"
+				if {attribute_name} is "knockbackResistance":
+					set {attributes_kbr} to ",{AttributeName:""generic.knockbackResistance"",Name:""generic.knockbackResistance"",Slot:""%{item_slot}%"",Amount:%{kbr}%%{kbr1}%%{kbr2}%,Operation:1,UUIDMost:%{UUIDMost}%,UUIDLeast:%{UUIDLeast}%}"
+				if {attribute_name} is "movementSpeed":
+					set {attributes_ms} to ",{AttributeName:""generic.movementSpeed"",Name:""generic.movementSpeed"",Slot:""%{item_slot}%"",Amount:%{mspeed}%%{mspeed1}%%{mspeed2}%,Operation:1,UUIDMost:%{UUIDMost}%,UUIDLeast:%{UUIDLeast}%}"
+				if {attribute_name} is "attackDamage":
+					set {attributes_ad} to ",{AttributeName:""generic.attackDamage"",Name:""generic.attackDamage"",Slot:""%{item_slot}%"",Amount:%{attackdamage}%,Operation:1,UUIDMost:%{UUIDMost}%,UUIDLeast:%{UUIDLeast}%}"
+				if {attribute_name} is "attackSpeed":
+					set {attributes_as} to ",{AttributeName:""generic.attackSpeed"",Name:""generic.attackSpeed"",Slot:""%{item_slot}%"",Amount:%{aspeed}%%{aspeed1}%%{aspeed2}%,Operation:1,UUIDMost:%{UUIDMost}%,UUIDLeast:%{UUIDLeast}%}"
+		
+			set {attributes} to ",AttributeModifiers:[%{attributes_mh}%%{attributes_kbr}%%{attributes_ms}%%{attributes_ad}%%{attributes_as}%]"
+			
+		if {item_type} is 7:	
+			set {attributes} to ""
+			
+
+	#
+	#
+	#      Composite enchant string creator.
+	#
+	#
+	#
+		set {enchants_amount} to 0 or 1 or 2 or 3
+		if {enchants_amount} is 1:
+			add 1 to {enchants_amount::*}
+		if {enchants_amount} is 2:
+			add 1 to {enchants_amount::*}
+			add 2 to {enchants_amount::*}
+		if {enchants_amount} is 3:
+			add 1 to {enchants_amount::*}
+			add 2 to {enchants_amount::*}
+			add 3 to {enchants_amount::*}
+		
+		if {item_type} is 1 or 2 or 3 or 4:	
+			loop {enchants_amount::*}:
+				set {enchant_id_%loop-index%} to 0 or 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10 or 34 or 70 or 71
+				set {enchant_level_%loop-index%} to a random integer between 1 and 4
+				set {enchant_%loop-index%} to "{id:%{enchant_id_%loop-index%}%,lvl:%{enchant_level_%loop-index%}%}"
+
+		if {item_type} is 5 or 6:
+			loop {enchants_amount::*}:
+				set {enchant_id_%loop-index%} to 16 or 17 or 18 or 19 or 20 or 21 or 22 or 23 or 24 or 25 or 26 or 27 or 28 or 29 or 30 or 31 or 32 or 33 or 34 or 35 or 70 or 71
+				set {enchant_level_%loop-index%} to a random integer between 1 and 4
+				set {enchant_%loop-index%} to "{id:%{enchant_id_%loop-index%}%,lvl:%{enchant_level_%loop-index%}%}"
+
+		if {item_type} is 7:
+			loop {enchants_amount::*}:
+				set {enchant_id_%loop-index%} to 48 or 49 or 50 or 51 or 34 or 70 or 71
+				set {enchant_level_%loop-index%} to a random integer between 1 and 4
+				set {enchant_%loop-index%} to "{id:%{enchant_id_%loop-index%}%,lvl:%{enchant_level_%loop-index%}%}"
+
+		if {enchants_amount} is 0:
+			set {enchantments} to ""
+		if {enchants_amount} is 1:
+			set {enchantments} to ",ench:[%{enchant_1}%]"
+		if {enchants_amount} is 2:
+			set {enchantments} to ",ench:[%{enchant_1}%,%{enchant_2}%]"
+		if {enchants_amount} is 3:
+			set {enchantments} to ",ench:[%{enchant_1}%,%{enchant_2}%,%{enchant_3}%]"
+			
+
+		execute console command "give %player% minecraft:%{item_name}% 1 0 {display:{Name:""&a&oObjet Curieux de %player%"",Lore:[""&e&oCet objet"",""&e&o%{lore2}%"",""&e&o%{lore3}%"","" "",""&7&oRareté : &kInconnue""]}%{enchantments}%%{attributes}%}"
+
+		message "%{item_name}%"
+		message "&e&oCet objet %{lore2}% %{lore3}%"
+		message "%{enchantments}%"
+		message "%{attributes}%"
+		clear {item_type}
+		clear {lore2_list::*}
+		clear {lore3_list::*}
+		clear {lore2}
+		clear {lore3}
+		clear {item_name}
+		clear {item_slot}
+		clear {helmets::*}
+		clear {chestplates::*}
+		clear {leggings::*}
+		clear {boots::*}
+		clear {swords::*}
+		clear {axes::*}
+
+		clear {attributes}
+		clear {attribute_name}
+		clear {attributes_amount}
+		clear {attributes_amount::*}
+		clear {attributes_1234::*}
+		clear {attributes_56::*}
+
+		clear {UUIDMost}
+		clear {UUIDLeast}
+		clear {maxh}
+		clear {maxh1}
+		clear {maxh2}
+		clear {kbr}
+		clear {kbr1}
+		clear {kbr2}
+		clear {mspeed}
+		clear {mspeed1}
+		clear {mspeed2}
+		clear {attackdamage}
+		clear {aspeed}
+		clear {aspeed1}
+		clear {aspeed2}
+		clear {armor}
+		clear {attributes_mh}
+		clear {attributes_kbr}
+		clear {attributes_ms}
+		clear {attributes_armor}
+		clear {attributes_ad}
+		clear {attributes_as}
+
+		clear {enchantments}
+		clear {enchant_1}
+		clear {enchant_2}
+		clear {enchant_3}
+		clear {enchants_amount}
+		clear {enchants_amount::*}

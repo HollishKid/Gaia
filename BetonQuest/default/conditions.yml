@@ -197,6 +197,10 @@ autorisation_bateau: tag autorisation_bateau
 #
 on_bat_athelas_central: location -6602;65;3170;Gaia;33
 on_bat_athelas_east: location -6445;65;3016;Gaia;33
+on_bat_louvre: location -10404;66;2996;Gaia;33
+on_bat_mysteria: location -8994;65;4604;Gaia;33
+on_bat_historia: location -7835;65;3683;Gaia;33
+on_bat_tortuga: location -7655;65;4240;Gaia;33
 #
 on_bat_est1: location -298;65;6781;Gaia;33
 on_bat_est2: location -474;65;5635;Gaia;33
@@ -276,7 +280,9 @@ mage_recommandation: journal hollish.mage_entry_branching_out
 # Grades
 #
 #
+or_ecuyer_sup: or grade_ecuyer,grade_baron
 grade_ecuyer: tag grade_ecuyer
+grade_baron: tag grade_baron
 #
 #
 #
@@ -623,7 +629,7 @@ nether_donjon_started: testforblock 727;84;1164;Gaia GLOWSTONE
 nether_donjon_last_raider_not: testforblock 728;23;1030;Gaia GLOWSTONE
 nether_donjon_party_condition: party 9999 nether_donjon_tag count:2
 nether_donjon_party_condition2: party 9999 in_nether_donjon count:1
-#nether_donjon_minions: monsters ZOMBIE:1,SKELETON:1 728;17;1093;Gaia;18
+#nether_donjon_minions: monsters ZOMBIE:1,SKELETON:1 728;17;1093;Gaia 18
 #
 # Zedd
 #

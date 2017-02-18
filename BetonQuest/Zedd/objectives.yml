@@ -1,6 +1,6 @@
 # Takeo
 # Takeo
-obj_reach: location -6981;63;3208;Gaia;2 events:close_gate,spawn_takeo,obj_reach2
+obj_reach: location -6981;63;3208;Gaia 2 events:close_gate,spawn_takeo,obj_reach2
 obj_reach2: delay 0 conditions:!region_arena events:takeo_clean,death_mess
 #
 logout_events: logout events:takeo_clean,death_mess
@@ -26,26 +26,26 @@ ynv_objkillM4: mmobkill moinevoleur amount:1 events:ynv_moinevoleurkilled4,Mkill
 ynv_objkillM5: mmobkill moinevoleur amount:1 events:Mkill5,Mkilled,ynv_MBkilled_check
 #
 # Feu d'artifice
-ynv_objfire: action right any conditions:in_thief_treasure,fire_condition2 events:ynv_popfolder loc:-7593;63;3068;Gaia;30
+ynv_objfire: action right any conditions:in_thief_treasure,fire_condition2 events:ynv_popfolder loc:-7593;63;3068;Gaia 30
 #
 #
 yre_objkill: mmobkill lieutenant amount:2 events:yre_killfolder
 #
 #
-or_obj1: action right chest events:or_chestloot loc:-7619;64;3044;Gaia;1
+or_obj1: action right chest events:or_chestloot loc:-7619;64;3044;Gaia 1
 #
 # Entrée dans la cache des voleurs
-obj_thiefkey: action right IRON_BLOCK conditions:thiefkey_inhand loc:-7593;63;3068;Gaia;1 events:thiefkey_if,thiefkey_reload_delay
+obj_thiefkey: action right IRON_BLOCK conditions:thiefkey_inhand loc:-7593;63;3068;Gaia 1 events:thiefkey_if,thiefkey_reload_delay
 #obj_inthieftreasure: region thief_treasure events:obj_outthieftreasure,thief_occupied_check
 #obj_outthieftreasure: delay 0 condition:!in_thief_treasure events:close_thieftreasure
 #
 #
-tv_coffre1: location -7545;91;3077;Gaia;2 events:tv_coffre1
-tv_coffre1click: action right chest events:tv_coffre1loot loc:-7546;90;3080;Gaia;1
-tv_coffre2: location -7596;58;3059;Gaia;2 events:tv_coffre2
-tv_coffre2click: action right chest events:tv_coffre2loot loc:-7597;59;3063;Gaia;1
-tv_coffre3click: action right chest events:tv_coffre3loot loc:-7601;59;3063;Gaia;1
-tv_coffre4click: action right chest events:tv_coffre4loot loc:-7603;58;3058;Gaia;1
+tv_coffre1: location -7545;91;3077;Gaia 2 events:tv_coffre1
+tv_coffre1click: action right chest events:tv_coffre1loot loc:-7546;90;3080;Gaia 1
+tv_coffre2: location -7596;58;3059;Gaia 2 events:tv_coffre2
+tv_coffre2click: action right chest events:tv_coffre2loot loc:-7597;59;3063;Gaia 1
+tv_coffre3click: action right chest events:tv_coffre3loot loc:-7601;59;3063;Gaia 1
+tv_coffre4click: action right chest events:tv_coffre4loot loc:-7603;58;3058;Gaia 1
 #
 zae_click1: action right any conditions:hypercap_inhand,loc_chatal events:zae_click1
 zae_click2: action right any conditions:hypercap_inhand,loc_biblio events:zae_click2
@@ -53,13 +53,13 @@ zae_click3: action right any conditions:hypercap_inhand,loc_grande events:zae_cl
 zae_click4: action right any conditions:hypercap_inhand events:zae_click4
 zae_clichyperreg: action right any conditions:hyperreg_inhand events:zae_starthyperreg
 zae_shootpotion: action right any conditions:potion_closeportal_inhand,inregion_faille events:zae_q4event
-kal_click: action right GOLD_BLOCK conditions:kal_q1start events:kal_collapse loc:-6836;11;3304;Gaia;2
-ut_coffre: location -6836;13;3254;Gaia;3 events:ut_coffre
-ut_coffre1click: action right chest events:ut_coffre1loot loc:-6843;12;3252;Gaia;2
-ut_coffre2click: action right chest events:ut_coffre2loot loc:-6843;12;3245;Gaia;2
-ut_coffre3click: action right chest events:ut_coffre3loot loc:-6829;12;3245;Gaia;2
-ut_coffre4click: action right chest events:ut_coffre4loot loc:-6836;12;3238;Gaia;2
-ut_coffre5click: action right chest events:ut_coffre5loot loc:-6829;12;3252;Gaia;2
+kal_click: action right GOLD_BLOCK conditions:kal_q1start events:kal_collapse loc:-6836;11;3304;Gaia 2
+ut_coffre: location -6836;13;3254;Gaia 3 events:ut_coffre
+ut_coffre1click: action right chest events:ut_coffre1loot loc:-6843;12;3252;Gaia 2
+ut_coffre2click: action right chest events:ut_coffre2loot loc:-6843;12;3245;Gaia 2
+ut_coffre3click: action right chest events:ut_coffre3loot loc:-6829;12;3245;Gaia 2
+ut_coffre4click: action right chest events:ut_coffre4loot loc:-6836;12;3238;Gaia 2
+ut_coffre5click: action right chest events:ut_coffre5loot loc:-6829;12;3252;Gaia 2
 #
 #
 ### Itsuki

@@ -1,24 +1,5 @@
 static:
-  '23:58': forest_master
   '23:59': randomizer
-  '10:56': forest_master
-  '12:11': forest_master
-  '13:02': forest_master
-  '14:03': forest_master
-  '15:04': forest_master
-  '16:05': forest_master
-  '17:06': forest_master
-  '19:08': forest_master
-  '20:17': forest_master
-  '21:20': forest_master
-  '22:21': forest_master
-  '23:22': forest_master
-  '00:24': forest_master
-  '01:00': forest_master
-  '02:01': forest_master
-  '03:02': forest_master
-  '04:03': forest_master
-  '05:04': forest_master
 global_locations: cimereached,spiritualium1,spiritualium2,spiritualium3
 npcs:
   '1': amiral
@@ -110,7 +91,9 @@ npcs:
   '367': banker_est
   '368': banker_est
   '377': maitrearmes
+  '378': commandant
   '382': banker_gare
+  '393': commandant
   '420': hollish
   '421': zedd
   '422': lyrtix
@@ -130,6 +113,8 @@ npcs:
   '439': kelva
   '440': moinefrancois
   '441': expert
+  '451': gatito
+  '452': commandant
 journal_main_page:
   line1:
     text: '-------- ¤ --------'

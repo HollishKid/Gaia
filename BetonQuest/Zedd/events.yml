@@ -746,6 +746,8 @@ kal_fold3: folder kal_mess7,kal_q2start,kal_conversdone,kal_j3 delay:8
 kal_mess7: 'message &2Kali Jones &f:&a&o Une fois dans la ville, cherche &2Eko&a&o. C''est mon supérieur dans le syndicat.'
 kal_q2start: tag add kal_q2start
 #
+kal_q2done: tag add kal_q2done
+#
 #
 #
 #

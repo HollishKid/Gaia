@@ -925,12 +925,11 @@ herboriste2: folder herboriste22 delay:2
 herboriste22: tag add herboriste
 #
 bucheron: folder metier_cleaner,guilder_cleaner,bucheron2
-bucheron2: folder bucheron22,guilde_bucheron_bonus delay:2
+bucheron2: folder bucheron22 delay:2
 bucheron22: tag add bucheron
-guilde_bucheron_bonus: 'command region addmember foret_athelas2 %player% -w Gaia'
+#guilde_bucheron_bonus: 'command region addmember foret_athelas2 %player% -w Gaia'
 #
-guilder_cleaner: folder alchimiste3,acrobate3,guerrier3,pecheur3,mineur3,apprivoiseur3,herboriste3,bucheron3,guilde_bucheron_bonus_remove
-guilde_bucheron_bonus_remove: 'command region removemember foret_athelas2 %player% -w Gaia'
+guilder_cleaner: folder alchimiste3,acrobate3,guerrier3,pecheur3,mineur3,apprivoiseur3,herboriste3,bucheron3
 alchimiste3: tag del alchimiste
 acrobate3: tag del acrobate
 guerrier3: tag del guerrier
@@ -2413,6 +2412,10 @@ no_reput15_bat_mess: 'message &dVous n''avez pas assez de points de Réputation 
 no_reput20_bat_mess: 'message &dVous n''avez pas assez de points de Réputation ! (&a%point.reput_athelas.amount% &f/ &c20&d)'
 no_reput30_bat_mess: 'message &dVous n''avez pas assez de points de Réputation ! (&a%point.reput_athelas.amount% &f/ &c30&d)'
 no_money100_mess: 'message &dVous n''avez pas assez d''argent pour aller à cette destination ! (&f¤ &a%money.left:100% &f/ &f¤ &c100&d)'
+no_money200_mess: 'message &dVous n''avez pas assez d''argent pour aller à cette destination ! (&f¤ &a%money.left:100% &f/ &f¤ &c200&d)'
+no_grade_bat_mess: 'message &dVous n''avez pas le Grade requis pour accéder à cet endroit.'
+no_mysteria_bat_mess: 'message &dVous devez parler au &2Lieutenant Hashor &dau deuxième étage du château Royal d''Athelas avant de naviguer vers Mysteria.'
+#
 bat_generic_teleport: teleport -4620;62;3848;Gaia
 bat_generic_message: 'message &dVous partez pour un long voyage...'
 #
@@ -2438,6 +2441,46 @@ bat_generic_athelas2: folder bat_generic_teleport,money_100,bat_generic_athelas2
 bat_generic_athelas2_mess: 'message &dVous arrivez sur la côte Est d''Athelas.'
 bat_generic_athelas2_timer: folder bat_generic_athelas2_teleport,bat_generic_athelas2_mess delay:45
 bat_generic_athelas2_teleport: teleport -6445;66;3016;Gaia
+#
+# Louvre
+bat_athelas_louvre: if on_bat_louvre on_bat_mess else bat_athelas_louvre1
+bat_athelas_louvre1: if grade_ecuyer bat_athelas_louvre2 else no_grade_bat_mess
+bat_athelas_louvre2: if money_200 bat_athelas_louvre22 else no_money200_mess
+#
+bat_athelas_louvre22: folder bat_generic_teleport,money_200,bat_athelas_louvre22_timer,bat_generic_message delay:1
+bat_athelas_louvre22_mess: 'message &dVous arrivez au Port du Château du Louvre.'
+bat_athelas_louvre22_timer: folder bat_athelas_louvre22_teleport,bat_athelas_louvre22_mess delay:45
+bat_athelas_louvre22_teleport: teleport -10404;66;2996;Gaia
+#
+# Mysteria
+bat_mysteria: if on_bat_mysteria on_bat_mess else bat_mysteria1
+bat_mysteria1: if Mysteria.message_royal bat_mysteria2 else no_mysteria_bat_mess
+bat_mysteria2: if money_200 bat_mysteria22 else no_money200_mess
+#
+bat_mysteria22: folder bat_generic_teleport,money_200,bat_mysteria22_timer,bat_generic_message delay:1
+bat_mysteria22_mess: 'message &dVous arrivez au Port de Mysteria.'
+bat_mysteria22_timer: folder bat_mysteria22_teleport,bat_mysteria22_mess delay:45
+bat_mysteria22_teleport: teleport -8994;65;4604;Gaia
+#
+# Historia
+bat_historia: if on_bat_historia on_bat_mess else bat_historia1
+bat_historia1: if grade_ecuyer bat_historia2 else no_grade_bat_mess
+bat_historia2: if money_200 bat_historia22 else no_money200_mess
+#
+bat_historia22: folder bat_generic_teleport,money_200,bat_historia22_timer,bat_generic_message delay:1
+bat_historia22_mess: 'message &dVous arrivez au Port d''Historia.'
+bat_historia22_timer: folder bat_historia22_teleport,bat_historia22_mess delay:45
+bat_historia22_teleport: teleport -7835;65;3683;Gaia
+#
+# Tortuga
+bat_tortuga: if on_bat_tortuga on_bat_mess else bat_tortuga1
+bat_tortuga1: if grade_ecuyer bat_tortuga2 else no_grade_bat_mess
+bat_tortuga2: if money_200 bat_tortuga22 else no_money200_mess
+#
+bat_tortuga22: folder bat_generic_teleport,money_200,bat_tortuga22_timer,bat_generic_message delay:1
+bat_tortuga22_mess: 'message &dVous arrivez au Port de Tortuga.'
+bat_tortuga22_timer: folder bat_tortuga22_teleport,bat_tortuga22_mess delay:45
+bat_tortuga22_teleport: teleport -7655;65;4240;Gaia
 #
 # 1
 bat_est1: if on_bat_est1 on_bat_mess else bat_est12
@@ -2508,17 +2551,6 @@ bat_generic7: folder bat_generic_teleport,money_100,bat_generic7_timer,bat_gener
 bat_generic7_mess: 'message &dVous arrivez sur le bateau en (&f-756 65 456&d).'
 bat_generic7_timer: folder bat_generic7_teleport,bat_generic7_mess delay:45
 bat_generic7_teleport: teleport -756;66;456;Gaia
-#
-# Deprecated (so far)
-#
-tele_spawn: teleport -6444;66;3018;Gaia
-tele_athelas: teleport -6603;65;3169;Gaia
-tele_zedds: teleport -1880;67;7466;Gaia
-tele_pirateden: teleport -7655;65;4240;Gaia
-tele_soulstorm: teleport -8887;67;3195;Gaia
-tele_frontest: teleport 475;67;5632;Gaia
-tele_jumaker: teleport -5168;67;-17;Gaia
-tele_vip_global: teleport -6596;78;2954;Gaia
 #
 #
 # Téléports
@@ -3617,21 +3649,10 @@ nether_donjon_teleport_out_exe2: 'message &d&lNe restez pas traîner là, ce mon
 #
 #
 #
-# Forêts
+# Forêt Athelas
 #
 #
 ####################
-forest_master: folder forest_reset1,forest_reset2
-#
-forest_reset1: folder forest_on,forest_exe1 delay:0
-forest_on: setblock REDSTONE_TORCH_ON -7046;64;2793;Gaia
-forest_exe1: folder forest_off delay:2
-forest_off: setblock AIR -7046;64;2793;Gaia
-#
-forest_reset2: folder forest2_on,forest2_exe1 delay:0
-forest2_on: setblock REDSTONE_TORCH_ON -6764;63;2664;Gaia
-forest2_exe1: folder forest2_off delay:2
-forest2_off: setblock AIR -6764;63;2664;Gaia
 #
 foret_folder_entry: folder tag_foret_athelas,foret_pay,foret_acces,foret_chrono,foret_message_in1,foret_message_in2,foret_message_in3,obj_distance_foret,foret_obj_logout delay:0
 tag_foret_athelas: tag add foret_athelas
@@ -3687,32 +3708,32 @@ hollishrole: 'command jukebox sound %player% http://files.enjin.com/1186825/voic
 ###############################################################################
 historique_folder: folder meka,teleport_tableau1 delay:0
 meka: folder meka1,title_begin1 delay:0
-meka1: folder meka2,message1 delay:7
+meka1: folder meka2,message1 delay:3
 meka2: folder meka3,title_begin2 delay:3
-meka3: folder meka4,message2 delay:7
-meka4: folder meka5,message3 delay:15
+meka3: folder meka4,message2 delay:4
+meka4: folder meka5,message3 delay:7
 meka5: folder meka6,title_begin3,teleport_tableau2 delay:15
 meka6: folder meka7,message4 delay:7
-meka7: folder meka8,message5 delay:15
-meka8: folder meka9,message6 delay:15
-meka9: folder meka10,message7 delay:15
-meka10: folder meka11,message8 delay:15
-meka11: folder meka12,message9 delay:15
+meka7: folder meka8,message5 delay:7
+meka8: folder meka9,message6 delay:7
+meka9: folder meka10,message7 delay:7
+meka10: folder meka11,message8 delay:7
+meka11: folder meka12,message9 delay:7
 meka12: folder meka13,title_begin4,teleport_tableau3 delay:10
 meka13: folder meka14,message10 delay:7
-meka14: folder meka15,message11 delay:15
-meka15: folder meka16,message12 delay:15
+meka14: folder meka15,message11 delay:7
+meka15: folder meka16,message12 delay:7
 meka16: folder meka17,title_begin5,teleport_tableau4 delay:20
 meka17: folder meka18,message13 delay:7
-meka18: folder meka19,message14 delay:15
-meka19: folder meka20,message15 delay:15
-meka20: folder meka21,message16 delay:15
-meka21: folder meka22,message17 delay:15
+meka18: folder meka19,message14 delay:7
+meka19: folder meka20,message15 delay:7
+meka20: folder meka21,message16 delay:7
+meka21: folder meka22,message17 delay:7
 meka22: folder meka23,teleport_tableau5 delay:10
 meka23: folder meka24,message18 delay:3
-meka24: folder meka25,message19 delay:15
-meka25: folder meka26,message20 delay:15
-meka26: folder teleport_retour delay:15
+meka24: folder meka25,message19 delay:7
+meka25: folder meka26,message20 delay:7
+meka26: folder teleport_retour delay:7
 teleport_tableau1: folder teleport_tableau1_exe delay:1
 teleport_tableau1_exe: teleport -7235;80;2660;Gaia
 teleport_tableau2: folder teleport_tableau2_exe delay:0
@@ -3720,7 +3741,7 @@ teleport_tableau2_exe: teleport -708;38;356;Gaia_nether
 teleport_tableau3: folder teleport_tableau3_exe delay:0
 teleport_tableau3_exe: teleport -6747;15;3253;Gaia
 teleport_tableau4: folder teleport_tableau4_exe delay:0
-teleport_tableau4_exe: teleport -6938;131;2987;Gaia
+teleport_tableau4_exe: teleport -6938;121;2987;Gaia
 teleport_tableau5: folder teleport_tableau5_exe delay:0
 teleport_tableau5_exe: teleport -6703;76;3292;Gaia
 teleport_retour: folder teleport_retour_exe delay:0
@@ -3731,23 +3752,23 @@ title_begin12: 'command title %player% title {"text":"Histoire de Gaia","bold":t
 message1: 'message &2&oIl y a fort longtemps, &6Gaïa &2&ocréa ce monde. Voici son Histoire.'
 title_begin2: folder title_begin21,title_begin22,title_begin23 delay:0
 title_begin21: 'command title %player% times 20 100 20'
-title_begin22: 'command title %player% title {"text":"Première Ere","bold":true,"color":"dark_green"}'
+title_begin22: 'command title %player% title {"text":"Première Ère","bold":true,"color":"dark_green"}'
 title_begin23: 'command title %player% subtitle {"text":"Le monde opulent de Gaia","italic":true,"color":"blue"}'
-message2: 'message &2&oDurant cette première Ere, ce fut un monde plein de richesses, à partager par tous.'
+message2: 'message &2&oDurant cette première Ère, ce fut un monde plein de richesses, à partager par tous.'
 message3: 'message &2&oLa Paix et l''Abondance étaient alors le quotidien, mais cette richesse a rapidement attirée les convoitises d''autres Divinités ...'
 title_begin3: folder title_begin31,title_begin32,title_begin33 delay:0
 title_begin31: 'command title %player% times 20 100 20'
-title_begin32: 'command title %player% title {"text":"Deuxième Ere","bold":true,"color":"dark_green"}'
+title_begin32: 'command title %player% title {"text":"Deuxième Ère","bold":true,"color":"dark_green"}'
 title_begin33: 'command title %player% subtitle {"text":"L''arrivée des Forces du Mal","italic":true,"color":"blue"}'
 message4: 'message &2&oCes Divinités ont envoyé leur minions explorer le monde de &6Gaïa&2&o, et rappatrier ses ressources.'
 message5: 'message &2&oCes serviteurs du Mal ont d''abord vécu dans les profondeurs, à l''abri des regards et sans interférer avec le reste du monde.'
 message6: 'message &2&oCela ne pouvait durer longtemps, et ces créatures ont trouvé le moyen de se déplacer vers la surface du monde de &6Gaïa&2&o.'
-message7: 'message &2&oL''assaut contre les peuples libres de &6Gaïa fut donné et le monde de &6Gaïa &2&ofut plongé dans l''Obscurité pendant des décennies...'
+message7: 'message &2&oL''assaut contre les peuples libres de &6Gaïa &2&ofut donné et le monde fut plongé dans l''Obscurité pendant des décennies...'
 message8: 'message &2&o... mais l''espoir pour les peuples libres n''était pas éteint. Un Homme, nommé &6Ubu &2&ose dressa contre les serviteurs du Mal.'
 message9: 'message &2&oDans son sillage, une véritable Révolution organisée se construisit ...'
 title_begin4: folder title_begin41,title_begin42,title_begin43 delay:1
 title_begin41: 'command title %player% times 20 100 20'
-title_begin42: 'command title %player% title {"text":"Troisième Ere","bold":true,"color":"dark_green"}'
+title_begin42: 'command title %player% title {"text":"Troisième Ère","bold":true,"color":"dark_green"}'
 title_begin43: 'command title %player% subtitle {"text":"La Révolte contre les Forces du Mal","italic":true,"color":"blue"}'
 message10: 'message &2&oDes combats acharnés commencèrent et beaucoup de vies furent perdues.'
 message11: 'message &2&oMalgré cela, la Révolution continua, et &6Ubu &2&oet ses hommes réussirent à repousser l''ennemi jusqu''au Portail Magique qui leur permettait l''accès à la surface.'

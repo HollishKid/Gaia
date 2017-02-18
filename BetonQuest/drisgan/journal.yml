@@ -1,16 +1,16 @@
-#Choses à savoir pour un livre, attention, le BQ prend la première pour marquer la date de l'entry
-#50 pages long, with up to 256 characters per page, with line breaks counting as two characters.
-#No page may be longer than 14 lines and each line can have an average of 19 characters, determined by the width of the used characters.
-#Ne pas oublier d'enlever l'entry une fois terminée
-#Il faut encore trouver un moyen de créer une page de garde mise à jour avec les quêtes faites
+#
+#
+# Drisgan
+#
+#
 eko_j1: 'Eko (-7153;3536) me propose un travail lucratif pour une rémunération dépassant tous les sommets. Il me suffit de passer derrière le comptoir, descendre à la cave et actionner la torche...'
-eko_j2: 'Eko (-7153;3536) m''envois chercher du côté du Trou Noir (-7327;3263) pour trouver des informations sur l''endroit ou se cache Erek. L''accès est dans un faille proche du Trou Noir.'
-eko_j3: 'Vous avez trouvé une lettre cachetée, il vaudrait mieux l''apporter à Eko (-7153;3536) tout de suite!'
+eko_j2: 'Eko (-7153;3536) m''envoie chercher du côté du Trou Noir (-7327;3263) pour trouver des informations sur l''endroit où se cache Erek. L''accès est dans un faille proche du Trou Noir.'
+eko_j3: 'Vous avez trouvé une lettre cachetée, il vaudrait mieux l''apporter à Eko (-7153;3536) tout de suite !'
 # Tempo
 maka_tempo_redirect_journal: 'Je devrais informer Makarov, le Chef de la Guilde des Aventuriers, de ce qui se passe à Drisgan.'
 #
 #
 eko_j4: 'L''heure de l''affrontement a sonné! Retrouvez l''éclaireur, Aldwin, au Trou Noir. (-7327;3263)'
 eko_j5: 'Vous avez éliminé le traître. L''heure est au retour triomphal auprès du chef des contrebandiers, Lasswell. (-7134;3520)'
-las_j1: 'Lasswell m''a demandé de supprimer Erek le traitre. Eko (-7153;3536) devrait pouvoir m''aider à le trouver.'
+las_j1: 'Lasswell m''a demandé de supprimer Erek le traître. Eko (-7153;3536) devrait pouvoir m''aider à le trouver.'
 las_j2: 'Suite des quêtes en cours d''écriture ... (Drisgan)'
