@@ -10,7 +10,7 @@ menu-settings:
   name: '&dCrafts Spéciaux'
 
   # rows - the number of rows of the chest - REQUIRED
-  rows: 7
+  rows: 9
 
   # command - OPTIONAL (you can remove this diamant set it to '')
   # Bind multiple commands using ; (command: 'menu; m; me')
@@ -328,6 +328,36 @@ fer_volca:
   - '&otrouve au Grand Nord.'
   ID: 58
   POSITION-X: 6
+  POSITION-Y: 9
+  KEEP-OPEN: true
+ 
+fer_volca2:
+  COMMAND: 'open: weapons_fer_volcanique.yml'
+  NAME: 'Armes en Fer Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 6
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+fer_volca3:
+  COMMAND: 'open: tools_fer_volcanique.yml'
+  NAME: 'Outils en Fer Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 6
   POSITION-Y: 7
   KEEP-OPEN: true
   
@@ -343,12 +373,72 @@ or_volca:
   - '&otrouve au Grand Nord.'
   ID: 58
   POSITION-X: 7
+  POSITION-Y: 9
+  KEEP-OPEN: true
+  
+or_volca2:
+  COMMAND: 'open: weapons_or_volcanique.yml'
+  NAME: 'Armes en Or Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 7
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+or_volca3:
+  COMMAND: 'open: tools_or_volcanique.yml'
+  NAME: 'Outils en Or Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 7
   POSITION-Y: 7
   KEEP-OPEN: true
   
 diamant_volca:
   COMMAND: 'open: craft_diamant_volcanique.yml'
   NAME: 'Armure en Diamant Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 8
+  POSITION-Y: 9
+  KEEP-OPEN: true
+  
+diamant_volca2:
+  COMMAND: 'open: weapons_diamant_volcanique.yml'
+  NAME: 'Armes en Diamant Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 8
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+diamant_volca3:
+  COMMAND: 'open: tools_diamant_volcanique.yml'
+  NAME: 'Outils en Diamant Volcanique'
   LORE:
   - '&oRecettes de Crafts'
   - ' '

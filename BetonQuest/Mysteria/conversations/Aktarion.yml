@@ -7,7 +7,7 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Hey ! T''es le nouveau venu qui arrive d''Athelas c''est ça ?'
-    conditions: 'voir_superieur_done,!akt_qE1,!akt_qE2,!akt_qdone'
+    conditions: 'voir_superieur_done,!akt_qE1,!akt_qE2,!akt_qE3,!akt_qdone'
     pointers: yop
   welcomebis:
     text: 'Hey %player% ! Comment se passe ton aventure ?'
@@ -86,3 +86,4 @@ player_options:
   how1:
     text: 'Que voulez-vous dire par là ? Vous avez des soucis ?'
     pointers: how1_rep
+

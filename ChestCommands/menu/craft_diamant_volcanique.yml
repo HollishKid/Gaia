@@ -53,7 +53,7 @@ diamant2:
   - '&d&od''un volcan actif...'
   ID: 264
   POSITION-X: 2
-  POSITION-Y: 2
+  POSITION-Y: 1
   KEEP-OPEN: true
   
 diamant3:
@@ -86,14 +86,14 @@ diamant5:
   POSITION-Y: 2
   KEEP-OPEN: true
   
-emerald1:
-  NAME: 'Emeraude Volcanique'
+redstone1:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude provient'
-  - '&d&od''un volcan actif'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 2
-  POSITION-Y: 1
+  POSITION-Y: 2
   KEEP-OPEN: true
   
 diamant_casque:
@@ -145,7 +145,7 @@ diamant42:
   - '&d&od''un volcan actif...'
   ID: 264
   POSITION-X: 7
-  POSITION-Y: 1
+  POSITION-Y: 2
   KEEP-OPEN: true
   
 diamant52:
@@ -188,14 +188,14 @@ diamant82:
   POSITION-Y: 3
   KEEP-OPEN: true
   
-emerald12:
-  NAME: 'Emeraude Volcanique'
+redstone12:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude provient'
-  - '&d&od''un volcan actif'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 7
-  POSITION-Y: 2
+  POSITION-Y: 1
   KEEP-OPEN: true
   
 diamant_plastron:
@@ -227,7 +227,7 @@ diamant23:
   - '&d&od''un volcan actif...'
   ID: 264
   POSITION-X: 2
-  POSITION-Y: 5
+  POSITION-Y: 4
   KEEP-OPEN: true
   
 diamant33:
@@ -280,14 +280,14 @@ diamant73:
   POSITION-Y: 6
   KEEP-OPEN: true
   
-emerald13:
-  NAME: 'Emeraude Volcanique'
+redstone13:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude provient'
-  - '&d&od''un volcan actif'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 2
-  POSITION-Y: 4
+  POSITION-Y: 5
   KEEP-OPEN: true
   
 diamant_jambes:
@@ -342,14 +342,14 @@ diamant44:
   POSITION-Y: 6
   KEEP-OPEN: true
   
-emerald14:
-  NAME: 'Emeraude Volcanique'
+redstone14:
+  NAME: 'Redstone Volcanique'
   LORE:
-  - '&d&oCet Emeraude provient'
-  - '&d&od''un volcan actif'
-  ID: 388
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
   POSITION-X: 7
-  POSITION-Y: 5
+  POSITION-Y: 6
   KEEP-OPEN: true
   
 diamant_pieds:
