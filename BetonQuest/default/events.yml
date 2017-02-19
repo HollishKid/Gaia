@@ -230,71 +230,6 @@ east_moderator_perms_off: 'command pex user %player% group set moderator'
 east_creator_perms_off: 'command pex user %player% group set horloger'
 east_founder_perms_off: 'message &6Bienvenue, Fondateur &a%player%&6. Votre groupe de permission n''a pas changé en quittant ce continent.'
 #
-#
-# TEMPO CLEANER TO BE REVIEWED WHEN SERVEUR CLEAN! (disabled)
-#builder_we_perms_on: folder menu_admin_gm1,bwe_perms1,bwe_perms2,bwe_perms3,bwe_perms4,bwe_perms5,bwe_perms6,bwe_perms7,bwe_perms8,bwe_perms9,bwe_perms10,bwe_perms11,bwe_perms12,bwe_perms13,bwe_perms14,bwe_towny1,bwe_towny2
-#
-menu_admin_gm1: 'command pex user %player% remove -menu.admin.gm1'
-bwe_towny1: 'command pex user %player% remove -towny.command.town.*'
-bwe_towny2: 'command pex user %player% remove -towny.town.*'
-#
-bwe_perms1: 'command pex user %player% remove -worldedit.region.replace'
-bwe_perms2: 'command pex user %player% remove -worldedit.region.set'
-bwe_perms3: 'command pex user %player% remove -worldedit.clipboard.copy'
-bwe_perms4: 'command pex user %player% remove -worldedit.clipboard.paste'
-bwe_perms5: 'command pex user %player% remove -worldedit.clipboard.rotate'
-bwe_perms6: 'command pex user %player% remove -worldedit.history.undo'
-bwe_perms7: 'command pex user %player% remove -worldedit.history.redo'
-bwe_perms8: 'command pex user %player% remove -worldedit.fixlava'
-bwe_perms9: 'command pex user %player% remove -worldedit.fixwater'
-bwe_perms10: 'command pex user %player% remove -worldedit.region.stack'
-bwe_perms11: 'command pex user %player% remove -worldedit.region.move'
-bwe_perms12: 'command pex user %player% remove -worldedit.drain'
-bwe_perms13: 'command pex user %player% remove -worldedit.selection.pos'
-bwe_perms14: 'command pex user %player% remove -worldedit.wand'
-#
-#
-# WIPWIPWIPWIPWIP
-# WAIT FOR GLOBAL POINTS IN BQ 1.9
-#
-pvp_killed: folder pvp_killed1,pvp_killed2
-pvp_killed1: 'command craftbook var define money %ph.vault_eco_balance_fixed% -n %player%'
-pvp_killed2: folder pvp_killed3 delay:1
-pvp_killed3: 'command craftbook var multiply money 0.1 -n %player%'
-#
-#
-# Die permanent
-#
-die_permanent: folder die_permanent_exe,die_title,die_permanent_money
-die_permanent_exe: objective start die_permanent
-die_permanent_money: money *0.9
-die_title: folder die_title1,die_title2,die_title3 delay:0
-die_title1: 'command title %player% times 60 100 60'
-die_title2: 'command title %player% title {"text":"Vous êtes mort!","bold":true,"color":"red"}'
-die_title3: 'command title %player% subtitle {"text":"-10% d''argent en poche","italic":true,"color":"light_purple"}'
-#
-#
-#  Kill
-#
-#
-#
-kill_permanent: folder kill_permanent_exe delay:0
-kill_permanent_exe: objective start kill_permanent
-#WAIT FOR GLOBAL POINTS IN BQ 1.9
-lastplayerkiller: 'command bq config set default.main.variables.lastplayerkiller %player%'
-kill_permanent_exe2: folder point_pkm,kill_permanent_exe3 delay:1
-point_pkm: point pkm $playerkilledmoney$
-kill_permanent_exe3: folder kill_permanent_exe4,point_pkm2 delay:1
-point_pkm2: point pkm *0.1
-kill_permanent_exe4: folder message_pkm,point_pkm3,pkm_remover_var,kill_permanent_exe5 delay:1
-point_pkm3: money %point.pkm.amount%
-message_pkm: 'message &c&oVous venez de tuer &2$lastplayerkilled$&c&o. Vous récupérez &f¤ &2%point.pkm.amount%&c&o.'
-kill_permanent_exe5: folder pkm_remover delay:1
-pkm_remover: 'command bq point %player% del pkm'
-pkm_remover_var: folder pkm_remove1,pkm_remove2,pkm_remove3 delay:1
-pkm_remove1: 'command bq config set default.main.variables.lastplayerkilled thisisamessagethathastobefiltered'
-pkm_remove2: 'command bq config set default.main.variables.lastplayerkiller thisisamessagethathastobefiltered'
-pkm_remove3: 'command bq config set default.main.variables.playerkilledmoney 0'
 #####################################
 #
 #
@@ -528,17 +463,17 @@ charon_store: 'command cc open charonnew.yml %player%'
 #
 # XP Boosters
 #
-xpboost2: if votes100 xp_boost_event2 else noxpboostvotes
-xpboost3: if votes150 xpboost3a else noxpboostvotes
+xpboost2: if votes50 xp_boost_event2 else noxpboostvotes
+xpboost3: if votes75 xpboost3a else noxpboostvotes
 xpboost3a: if reput_athelas10 xp_boost_event3 else noxpboostreput
-xpboost4: if votes200 xpboost4a else noxpboostvotes
+xpboost4: if votes100 xpboost4a else noxpboostvotes
 xpboost4a: if reput_athelas20 xp_boost_event4 else noxpboostreput
-xpboost_timer: 'command summon MinecartRideable -6760 50 2968'
+xpboost_timer: 'command thisisthexpboosttimercommandforonehour'
 #
 #
 xpboosttake50: point votes -50
+xpboosttake75: point votes -75
 xpboosttake100: point votes -100
-xpboosttake150: point votes -150
 xpboosttake10reput: point reput_athelas -10
 xpboosttake20reput: point reput_athelas -20
 #
@@ -550,18 +485,15 @@ noxpboostreput1: 'message &dVous n''avez pas assez de points de Réputation.'
 noxpboostreput2: 'message &dVous avez &2%point.reput_athelas.amount% &dPoint(s) de Réputation.'
 #
 xp_boost_event2: folder xp_boost_event2a,xp_boost_event2c,xpboosttake50,xpboost_timer
-xp_boost_event2a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l2 &dpendant &215 &dminutes !'
-#xp_boost_event2b: 'command broadcast &dToute votre expérience gagnée est multipliée par &2&l2 &d!'
+xp_boost_event2a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l2 &dpendant &21 &dHeure !'
 xp_boost_event2c: 'command xprate 2 true'
 #
-xp_boost_event3: folder xp_boost_event3a,xp_boost_event3c,xpboosttake100,xpboosttake10reput,xpboost_timer
-xp_boost_event3a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l3 &dpendant &215 &dminutes !'
-#xp_boost_event3b: 'command broadcast &dToute votre expérience gagnée est multipliée par &2&l3 &d!'
+xp_boost_event3: folder xp_boost_event3a,xp_boost_event3c,xpboosttake75,xpboosttake10reput,xpboost_timer
+xp_boost_event3a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l3 &dpendant &21 &dHeure !'
 xp_boost_event3c: 'command xprate 3 true'
 #
-xp_boost_event4: folder xp_boost_event4a,xp_boost_event4c,xpboosttake150,xpboosttake20reput,xpboost_timer
-xp_boost_event4a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l4 &dpendant &215 &dminutes !'
-#xp_boost_event4b: 'command broadcast &dToute votre expérience gagnée est multipliée par &2&l4 &dpendant &215 &dminutes !'
+xp_boost_event4: folder xp_boost_event4a,xp_boost_event4c,xpboosttake100,xpboosttake20reput,xpboost_timer
+xp_boost_event4a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l4 &dpendant &21 &dHeure !'
 xp_boost_event4c: 'command xprate 4 true'
 #
 # Skins
@@ -757,7 +689,7 @@ int_inconvers: tag add int_inconvers
 int_conversdone: tag del int_inconvers
 #
 #
-intendant_done: folder tag_intendant_done,journal_guilds_found_del,intendant_done_mess,die_permanent_exe,kill_permanent_exe,pex_citoyen,intendant_starter_stuff
+intendant_done: folder tag_intendant_done,journal_guilds_found_del,intendant_done_mess,pex_citoyen,intendant_starter_stuff
 tag_intendant_done: tag add intendant_done
 intendant_done_mess: folder intendant_done_mess1,intendant_done_mess11,intendant_done_mess2 delay:7
 intendant_done_mess1: 'message &2Intendant &f: &a&oJe vous conseille d''aller à la &dGuilde des Aventuriers &a&oet au &dSanctuaire&a&o. Vous y trouverez de quoi vous rendre utile pour aider Athelas !'
@@ -889,6 +821,12 @@ welcome_ecuyer_mess2: 'message &2Intendant &f: &a&oDe plus, vous allez avoir une
 welcome_ecuyer_mess3: 'message &2Intendant &f: &a&oPlus important encore, vous avez maintenant accès au second étage du Château.'
 welcome_ecuyer_mess4: 'message &2Intendant &f: &a&oVous y trouverez des envoyés politiques des grandes villes sur Gaïa.'
 welcome_ecuyer_mess5: 'message &2Intendant &f: &a&oJe vous recommande d''aller les voir, ils auront sûrement de quoi vous faire découvrir le monde !'
+#
+#
+# Grades Royaux
+#
+#
+open_grades_royaux: 'command cc open grades_royaux %player%'
 #
 #
 #
@@ -3002,8 +2940,7 @@ training_hard_timer_done: tag del training_hard_timer
 #
 pvp_training_master_timer: objective start pvp_training_timer
 pvp_training_master_timer_del: objective delete pvp_training_timer
-pvp_training_death: folder pvp_training_death_perma_del,pvp_training_death_tempo_add
-pvp_training_death_perma_del: objective delete die_permanent
+pvp_training_death: folder pvp_training_death_tempo_add
 pvp_training_death_tempo_add: objective start pvp_training_death
 pvp_training_tag: tag add pvp_training
 pvp_training_teleportin: teleport -6482;84;3251;Gaia
@@ -3046,7 +2983,7 @@ pvp_training_leaver: folder pvp_training_tag_del,pvp_training_death_restorer,pvp
 #
 pvp_training_despawn: 'command mm m kill dummy'
 pvp_training_tag_del: tag del pvp_training
-pvp_training_death_restorer: folder pvp_training_death_tempo_del,die_permanent_exe
+pvp_training_death_restorer: folder pvp_training_death_tempo_del
 pvp_training_death_tempo_del: objective delete pvp_training_death
 #
 #

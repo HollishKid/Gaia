@@ -16,11 +16,11 @@ midday: time 1-23
 #
 #############
 castle_door_check: party 99999 castle_door_checker count:1
-castle_door_checker: location -7013;89;2937;Gaia 7
+castle_door_checker: location -7013;89;2937;Gaia;7
 biblio_door_check: party 9999 biblio_door_checker count:1
-biblio_door_checker: location -6723;66;2885;Gaia 14
+biblio_door_checker: location -6723;66;2885;Gaia;14
 sanctuary_door_check: party 9999 sanctuary_door_checker count:1
-sanctuary_door_checker: location -7110;67;2441;Gaia 20
+sanctuary_door_checker: location -7110;67;2441;Gaia;20
 #
 #
 # Spirituality
@@ -103,15 +103,15 @@ train_ticket_hand: hand train_ticket
 #
 # Location Checker
 #
-gare_loc: location -6525;59;3161;Gaia 30
-guilde_loc: location -6920;63;3169;Gaia 30
-porteo_loc: location -7055;65;3159;Gaia 30
-chateau_loc: location -6934;62;2935;Gaia 30
-porten_loc: location -6758;63;2793;Gaia 30
-gm_loc: location -6619;81;2968;Gaia 30
-dwarf_loc: location -6486;98;2771;Gaia 30
-village_loc: location -6838;69;2595;Gaia 30
-sanctuary_loc: location -7017;65;2500;Gaia 30
+gare_loc: location -6525;59;3161;Gaia;30
+guilde_loc: location -6920;63;3169;Gaia;30
+porteo_loc: location -7055;65;3159;Gaia;30
+chateau_loc: location -6934;62;2935;Gaia;30
+porten_loc: location -6758;63;2793;Gaia;30
+gm_loc: location -6619;81;2968;Gaia;30
+dwarf_loc: location -6486;98;2771;Gaia;30
+village_loc: location -6838;69;2595;Gaia;30
+sanctuary_loc: location -7017;65;2500;Gaia;30
 #
 # Arrivées
 #
@@ -121,22 +121,22 @@ train_in: or train_gare,train_guilde,train_porteo,train_chateau,train_porten,tra
 train_vill_or_sanct: or train_village,train_sanct
 #individuelles
 train_gare: tag train_gare
-#train_gare_loc: location -6573;59;3147;Gaia 20
+#train_gare_loc: location -6573;59;3147;Gaia;20
 #
 train_guilde: tag train_guilde
-#train_guilde_loc: location -6913;63;3160;Gaia 20
+#train_guilde_loc: location -6913;63;3160;Gaia;20
 #
 train_porteo: tag train_porteo
-#train_porteo_loc: location -7066;65;3169;Gaia 20
+#train_porteo_loc: location -7066;65;3169;Gaia;20
 #
 train_chateau: tag train_chateau
-#train_chateau_loc: location -6948;62;2941;Gaia 20
+#train_chateau_loc: location -6948;62;2941;Gaia;20
 #
 train_porten: tag train_porten
-#train_porten_loc: location -6765;63;2804;Gaia 20
+#train_porten_loc: location -6765;63;2804;Gaia;20
 #
 train_gm: tag train_gm
-#train_gm_loc: location -6609;81;2959;Gaia 20
+#train_gm_loc: location -6609;81;2959;Gaia;20
 #
 train_nains: tag train_nains
 train_village: tag train_village
@@ -150,14 +150,14 @@ in_mine_athelas1: region mine_athelas_mine
 in_mine_athelas2: region mine_athelas_mine2
 inside_mine: party 100 inside_mine_or count:1
 inside_mine_or: or mine_athelas1,mine_athelas2,mine_athelas3,mine_athelas4,mine_athelas5,mine_athelas6,mine_athelas7
-mine_athelas1: location -6825;56;2900;Gaia 5
-mine_athelas2: location -6840;51;2887;Gaia 10
-mine_athelas3: location -6860;51;2882;Gaia 10
-mine_athelas4: location -6880;54;2877;Gaia 7
-mine_athelas5: location -6892;57;2873;Gaia 5
-mine_athelas6: location -6831;50;2877;Gaia 11
-mine_athelas7: location -6815;57;2907;Gaia 6
-mine_obj_distance_exe: location -6850;57;2888;Gaia 60
+mine_athelas1: location -6825;56;2900;Gaia;5
+mine_athelas2: location -6840;51;2887;Gaia;10
+mine_athelas3: location -6860;51;2882;Gaia;10
+mine_athelas4: location -6880;54;2877;Gaia;7
+mine_athelas5: location -6892;57;2873;Gaia;5
+mine_athelas6: location -6831;50;2877;Gaia;11
+mine_athelas7: location -6815;57;2907;Gaia;6
+mine_obj_distance_exe: location -6850;57;2888;Gaia;60
 time_up_mine: tag time_up_mine
 #
 #
@@ -448,7 +448,7 @@ planks100: item planks:100
 # Hrota
 #
 hrota_start: tag hrota_start
-around_ingor_mine: location -6500;80;2200;Gaia 200
+around_ingor_mine: location -6500;80;2200;Gaia;200
 hrota_killed_gobs: and hrota_killed_gobs1,hrota_killed_gobs2
 hrota_killed_gobs1: tag hrota_killed_gobs1
 hrota_killed_gobs2: tag hrota_killed_gobs2

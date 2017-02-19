@@ -1,8 +1,6 @@
 #
 # Objectifs Permanents
 #
-die_permanent: die events:die_permanent
-kill_permanent: kill 1 required:player events:kill_permanent
 obj_salaire_timer: delay 60 events:salaire interval:1200
 #
 # Banking

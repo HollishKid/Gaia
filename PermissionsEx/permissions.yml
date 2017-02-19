@@ -599,7 +599,6 @@ users:
       name: Hollish
       prefix: ''
     permissions:
-    - -keepitems.keep
     - craftbook.variables.chat
     - craftbook.*
     - Pet.PetToMount
@@ -12778,7 +12777,6 @@ users:
       name: Sparadra59
       prefix: ''
     permissions:
-    - -keepitems.keep
     - mcmmo.perks.xp.10percentboost.swords
     - blockregen.bypass
     - Pet.blaze
@@ -30892,7 +30890,6 @@ users:
       name: MrGaspachio
       prefix: ''
     permissions:
-    - -keepitems.keep
     - mcmmo.perks.xp.10percentboost.mining
   42705293-e927-30b3-94c6-40054bde26d8:
     group: []
@@ -31506,7 +31503,6 @@ users:
       name: leny5910
       prefix: '&6[&2Mineur&6]&7'
     permissions:
-    - -keepitems.keep
     - mcmmo.perks.xp.10percentboost.mining
   ee3931d8-3183-337b-ba28-94f2dcb2f353:
     group: []
@@ -32246,3 +32242,33 @@ users:
     group: []
     options:
       name: fracois62
+  0733caf8-95dc-3834-91e1-8d4ac2bac7a9:
+    group:
+    - debuttempobis
+    options:
+      name: Marlon21
+  3ea3c4f2-abe2-36ab-bc5e-726407e71d6e:
+    group:
+    - debuttempobis
+    options:
+      name: samsylla112
+    permissions: []
+  9e141d3e-f56f-3021-a702-befe0e2fa6b5:
+    group:
+    - aventurier
+    options:
+      name: doritos15
+  d1c3e7de-5934-30cc-a9db-147d328560b7:
+    group:
+    - debuttempo
+    options:
+      name: ftyxd
+  c480bd65-1cca-32db-91fd-a488a8394277:
+    group:
+    - debuttempobis
+    options:
+      name: OvRLoOse974
+  789bedf2-b279-3672-b3a6-dee485944f50:
+    group: []
+    options:
+      name: CodDogs

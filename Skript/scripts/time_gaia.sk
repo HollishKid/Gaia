@@ -44,6 +44,7 @@ command /admininfo:
 #
 #
 on load:
+	execute console command "xprate reset"
 	execute console command "region removemember foret_athelas -a -w Gaia"
 	set {day.index::*} to contents from url "https://gaia-minecraft.000webhostapp.com/day.php/"
 	set {day.index} to {day.index::1}

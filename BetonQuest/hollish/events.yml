@@ -2289,9 +2289,8 @@ uhc_rules14: 'message &aBon courage!'
 #
 # Objectives avec sortie fin de Game
 #
-uhc_obj: folder uhc_remove_diepermanent,uhc_obj_kill,uhc_obj_kill_teams,uhc_obj_die
+uhc_obj: folder uhc_obj_kill,uhc_obj_kill_teams,uhc_obj_die
 
-uhc_remove_diepermanent: objective delete default.die_permanent
 uhc_obj_die: objective start uhc_die
 uhc_obj_kill: folder uhc_obj_kill_solo conditions:games_uhc_1
 uhc_obj_kill_solo: objective start uhc_obj_kill_solo
@@ -2701,7 +2700,6 @@ uhc_torch_start_off: setblock AIR -6587;66;2913;Gaia
 # SKINS RESTORER
 # INVENTORY RESTORER
 uhc_dynmap_unhide_exe: 'command dynmap show %player%'
-uhc_readd_diepermanent: objective start default.die_permanent
 ###################################################################################################
 #
 #
