@@ -16,3 +16,6 @@
 /louer:
   permission: worldguard.*
   message: '&4Réservé aux Admins'
+/gaiapurge:
+  permission: essentials.vanish
+  message: '&4Réservé aux Admins'

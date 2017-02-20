@@ -77,6 +77,8 @@ on place:
 			add location of event-block to {place.location.volcano::*}
 
 on leaves decay:
-	if event-block is in the region "foret_athelas2":
+	if event-block is in the region "foret_athelas":
+		cancel event
+	else if event-block is in the region "foret_athelas2":
 		cancel event
 		

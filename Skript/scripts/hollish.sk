@@ -76,6 +76,25 @@ On death of player:
 on weather change to rain or thunder:
 	wait 1 minute
 	set weather to sunny
+
+#
+#
+# Enchant Plus
+#
+#               Disable enchanting of unbreakable items.
+#				Add spells from whispers.
+on enchant:
+	if tag "Unbreakable" of nbt of event-item is set:
+		cancel event
+		message "&d&oVous ne parvenez pas à enchanter cet objet."
+		message "&d&oÉtant incassable, il possède déjà trop de Spiritualité."
+	else:
+		loop yaml list "enchantments" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {enchantment_spell_list::*}
+		set {enchantment_spell} to a random element out of {enchantment_spell_list::*}
+		message "&2murmures &f: &6&o%{enchantment_spell}%"
+		loop {enchantment_spell_list::*}:
+			delete {enchantment_spell_list::%loop-index%}
 #			
 #
 #

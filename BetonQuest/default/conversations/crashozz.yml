@@ -1,17 +1,17 @@
-quester: 'Cubto_Mania'
+quester: 'crashozz'
 first: hello
 stop: 'false'
 #Options du NPC
 NPC_options:
   hello:
-    text: 'Bonjour &2%player%&a&o, je suis &dCubto_Mania&a&o, &2Modérateur en &4Chef &a&osur Gaïa.'
+    text: 'Bonjour &2%player%&a&o, je suis &dcrashozz&a&o, &2Développeur &a&osur Gaïa.'
     pointers: role,citation,sens
   role_rep:
-    text: 'Je gère la modération sur Gaïa et je me fais un plaisir d''aider les joueurs.'
+    text: 'C''est de coder...'
   citation_rep:
-    text: 'Qui ne tente rien n''a rien.'
+    text: 'Je n''ai pas encore répondu à cette question.'
   sens_rep:
-    text: 'Il y a toujours Espoir.'
+    text: 'Je n''ai pas encore répondu à cette question.'
 #Options du joueur
 player_options:
   role:

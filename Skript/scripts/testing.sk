@@ -59,8 +59,8 @@
 #		spawn 2 SMOKE_NORMAL particles at location of player for player offset by 0.4, 0.7, 0.4
 #	if player meets betonquest condition "creator":
 #		spawn 2 of particle flame at location of player
-#	else if player meets betonquest condition "founder":
-#		spawn 2 of particle flame at location of player
+#	if player meets betonquest condition "founder":
+#		show 2 FLAME particles at location of player for all players witin 50 meters of the player offset by 0.4, 0.7, 0.4
 
 #command /redemarrer:
 #	trigger:
@@ -78,6 +78,7 @@
 #Ne fonctionne qu'avec des items de base, pas de custom recipies
 #on craft:
 #	message "Warm for your feet!"
+
 command /teamtesting:
 	trigger:
 		set {redteam.%player%} to 1
