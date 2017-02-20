@@ -19,6 +19,7 @@ player: tag player
 day: time 7-19
 chest_loot_time: testforblock -6753;67;2967;Gaia GLOWSTONE
 sneaking: sneak
+sun: weather sun
 #
 #
 # Events

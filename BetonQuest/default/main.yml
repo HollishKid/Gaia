@@ -23,8 +23,8 @@ npcs:
   '45': jacopo
   '47': tano
   '50': fils_paulette
-  '52': garderoyal
-  '54': garderoyal
+  '52': gardespatrouilles
+  '54': gardespatrouilles
   '55': garderoyal
   '56': garderoyal
   '57': garderoyal
@@ -76,6 +76,9 @@ npcs:
   '306': pirinde
   '308': courtier
   '309': courtier
+  '318': gardespatrouilles
+  '321': gardespatrouilles
+  '325': gardespatrouilles
   '329': nimue
   '330': ilse
   '331': ilse2

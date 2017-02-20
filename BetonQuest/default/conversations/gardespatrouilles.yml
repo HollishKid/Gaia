@@ -1,5 +1,5 @@
 quester: 'Garde Royal'
-first: unknown,hostile,n1,n2,n3,j1,j2,j3,j4,j5,j6,j7,j8,j9,j10,j11,j12,j13,j14,j15,j16,j17,j18,j19,j20
+first: unknown,hostile,j1,j2,j3,j4,j5,j6,j7,j8,j9,j10,j11,j12,j13,j14,j15,j16,j17,j18,j19,j20
 stop: 'false'
 #Options du NPC
 NPC_options:
@@ -9,15 +9,6 @@ NPC_options:
   hostile:
     text: 'Votre réputation est au plus bas, je préfère ne pas m''entretenir avec vous.'
     condition: '!neutre'
-  n1:
-    text: 'Bonsoir, vous ne devriez pas vous aventurer à l''extérieur de nuit, les monstres sont féroces !'
-    conditions: '!day'
-  n2:
-    text: 'Bonsoir, évitez de vous promener dehors à une telle heure !'
-    conditions: '!day'
-  n3:
-    text: 'Bonsoir, sortez de la ville à vos risques et périls !'
-    conditions: '!day'
 # Neutre
   j1:
     text: 'Bonjour ! \nBelle journée n''est-ce pas ?'
