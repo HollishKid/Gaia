@@ -95,6 +95,16 @@ on enchant:
 		message "&2murmures &f: &6&o%{enchantment_spell}%"
 		loop {enchantment_spell_list::*}:
 			delete {enchantment_spell_list::%loop-index%}
+#
+#
+# Alcool
+#
+#
+on consume of 373:
+	if the 1st line of the item's lore is "&e&oCette bière est":
+		message "&6Hum ! Une bonne bière !"
+		apply nausea to the player for 22 seconds
+
 #			
 #
 #

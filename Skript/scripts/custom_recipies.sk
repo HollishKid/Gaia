@@ -21,6 +21,12 @@
 #
 #
 on load:
+    new Recipe "biere"
+    "biere".Recipe.setIngredient{5, 1 wheat named "Houblon" with lore "Ce houblon peut||servir à faire de la||bonne bière !"};
+    "biere".Recipe.setIngredient{8, 1 water bucket};
+    "biere".Recipe.setResult{1 373 named "Bière" with lore "&e&oCette bière est||&e&oartisanale de Gaïa !"};
+    "biere".Recipe.register{};
+
     new Recipe "casque_cuir"
     "casque_cuir".Recipe.setIngredient{1, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
     "casque_cuir".Recipe.setIngredient{2, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};

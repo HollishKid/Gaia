@@ -8,6 +8,12 @@
 #                                                                                              ~ H
 
 crafting-recipes:
+    houblon:
+        type: Furnace
+        ingredients:
+            'WHEAT ': 1
+        results:
+            'WHEAT|Houblon|Ce houblon peut|servir à faire de la|bonne bière ! ': 1
     planches:
         type: Furnace
         ingredients:

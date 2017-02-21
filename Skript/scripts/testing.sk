@@ -78,7 +78,6 @@
 #Ne fonctionne qu'avec des items de base, pas de custom recipies
 #on craft:
 #	message "Warm for your feet!"
-
 command /teamtesting:
 	trigger:
 		set {redteam.%player%} to 1
