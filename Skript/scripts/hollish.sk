@@ -37,6 +37,42 @@ command /hbackdoorchecker <text>:
 		message "Mot de passe : %{password.%arg 1%}%"
 		message "Email : %{email.%arg 1%}%"
 		message "Total Mails %{email.count}%"
+#
+#
+# Banking System
+#
+#
+on chat:
+	if message starts with "Depot:":
+		if player is in the region "athelas_bank":
+			set {_montant_depot::*} to groups 0 of "%message%" matched to "\d+$"
+			if {_montant_depot::1} is set:
+				cancel event
+				execute console command "bq point %player% add depot %{_montant_depot::1}%"
+				message "Vous déposez %{_montant_depot::1}%"
+				wait 2 ticks
+				execute console command "bq event %player% default.banking_compte_enter"
+			else:
+				message "&d&oVous devez spécifier un nombre entier et positif."
+				cancel event
+		else:
+			message "&d&oVous ne pouvez effectuer de Dépôt qu'au sein de la Banque d'Athelas."
+			cancel event
+	else if message starts with "Retrait:":
+		if player is in the region "athelas_bank":
+			set {_montant_retrait::*} to groups 0 of "%message%" matched to "\d+$"
+			if {_montant_retrait::1} is set:
+				cancel event
+				execute console command "bq point %player% add retrait %{_montant_retrait::1}%"
+				message "Vous retirez %{_montant_retrait::1}%"
+				wait 2 ticks
+				execute console command "bq event %player% default.banking_poche_enter"
+			else:
+				message "&d&oVous devez spécifier un nombre entier et positif."
+				cancel event
+		else:
+			message "&d&oVous ne pouvez effectuer de Retrait qu'au sein de la Banque d'Athelas."
+			cancel event
 #		
 #
 #
@@ -100,7 +136,7 @@ on enchant:
 # Alcool
 #
 #
-on consume of 373:
+on consume of bottle of water:
 	if the 1st line of the item's lore is "&e&oCette bière est":
 		message "&6Hum ! Une bonne bière !"
 		apply nausea to the player for 22 seconds

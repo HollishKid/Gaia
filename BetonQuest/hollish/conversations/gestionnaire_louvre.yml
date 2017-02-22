@@ -1,0 +1,67 @@
+quester: 'Gestionnaire'
+first: unknown,welcome
+stop: 'false'
+#Options du NPC
+NPC_options:
+  unknown:
+    text: 'Vous n''êtes pas inscrit sur le &2Registre des Écuyers du Louvre&a&o. \nSouhaitez-vous que je vous inscrive ?'
+    condition: '!registre_ecuyer_louvre'
+    pointer: kesako,inscription
+  kesako_rep:
+    text: 'C''est l''ensemble des personnes qui travaillent pour l''avancement du Château du Louvre et son domaine. \nPlus on construit, plus on formera un rempart contre les invasions des Uruk. \nPlus on tue d''Uruk, moins il y en aura pour nous envahir.'
+  welcome:
+    text: 'Comment avancent les travaux &2%player% &a&o?'
+    condition: registre_ecuyer_louvre
+    pointers: travaux,kesako,qui,autre,rien
+  trav_rep:
+    text: 'Vous voyez bien les panneaux derrière moi ? \nCes panneaux indiquent l''avancement des travaux. Chaque avancement compte pour la semaine en cours (Fin le Dimanche). \nToute personne inscrite sur le &6Registre des Écuyers du Louvre &a&ose verra récompensé.'
+  qui_rep:
+    text: 'Je travaille pour le Prince et Gardien de l''Est &2Númeheru&a&o. \nJe me charge de l''avancement des travaux.'
+#
+  com_rep:
+    text: 'Il vous faut simplement faire un clic droit sur le panneau de la parcelle souhaitée. \nN''hésitez pas de le visiter avant de vous décider !'
+  autre_rep:
+    text: 'Bien entendu, en quoi puis-je vous renseigner ?'
+    pointers: comment,ou,map,dechanter,apres,rien
+  ou_rep:
+    text: 'Vous pouvez accéder à la Carte de Gaïa à l''adresse suivante: \n&9http://www.gaia-minecraft.enjin.com/gallery'
+  map_rep:
+    text: 'Sur &9http://www.gaia-minecraft.enjin.com/gallery \nCliquez en haut à gauche de l''écran sur "Maisons et Terrains", en zoomant sur la ville vous lez verrez apparaître ! \nPour plus d''infos sur cette Carte, consultez &2Sofia&a&o.'
+  dechanter_rep:
+    text: 'Pour arrêter une location, il vous faut vous accroupir, puis faire un clic droit sur le panneau correspondant à votre location.'
+  apres_rep:
+    text: 'Votre parcelle est remise à l''état initial, tel que vous l''avez trouvée. Faites donc attention de ne pas y laisser d''effets personnels !'
+#Options du joueur
+player_options:
+  kesako:
+    text: 'Qu''est-ce que le Registre des Écuyers d''Athelas ?'
+    pointer: kesako_rep
+  inscription:
+    text: 'Avec plaisir !'
+    events: inscription_reg_ecuyer_louvre
+  travaux:
+    text: 'Quels travaux ?'
+    pointer: trav_rep
+  qui:
+    text: 'Qui êtes vous ?'
+    pointers: qui_rep
+  autre:
+    text: 'Pouvez vous me renseigner sur le détail des locations ?'
+    pointers: autre_rep
+  comment:
+    text: 'Comment louer une parcelle ou une maison ?'
+    pointers: com_rep 
+  ou:
+    text: 'Où se trouvent les parcelles et maisons ?'
+    pointers: ou_rep
+  map:
+    text: 'Comment me repérer dans toutes les parcelles ?'
+    pointers: map_rep
+  dechanter:
+    text: 'Je ne veux plus louer ma parcelle !'
+    pointers: dechanter_rep
+  apres:
+    text: 'Que se passe-t-il à la fin d''une location ?'
+    pointers: apres_rep
+  rien:
+    text: 'Pas du tout, merci ! Bonne journée !'

@@ -62,18 +62,18 @@ menu-close:
   POSITION-Y: 1
 
 choose_deposit:
-  COMMAND: 'console: bq event {player} default.banking_compte_enter'
   NAME: '&4Déposer...'
   ID: 386
   LORE:
     - '&oPour déposer un montant' 
-    - '&ode votre choix:'
+    - '&ode votre choix tapez :'
     - ' '
-    - '&l1- Cliquez ici'
-    - '&l2- Tapez ''depot: [montant]'''
+    - '&lDepot: [montant]'
+    - ' '
     - 'dans le tchat.'
   POSITION-X: 4
   POSITION-Y: 1
+  KEEP-OPEN: true
   
 choixe:
   NAME: ' '
@@ -84,18 +84,18 @@ choixe:
   KEEP-OPEN: true
   
 choose_withdraw:
-  COMMAND: 'console: bq event {player} default.banking_poche_enter'
   NAME: '&aRetirer...'
   ID: 340
   LORE:
     - '&oPour retirer un montant' 
-    - '&ode votre choix:'
+    - '&ode votre choix tapez :'
     - ' '
-    - '&l1- Cliquez ici'
-    - '&l2- Tapez ''retrait: [montant]'''
+    - '&lRetrait: [montant]'
+    - ' '
     - 'dans le tchat.'
   POSITION-X: 6
-  POSITION-Y: 1 
+  POSITION-Y: 1
+  KEEP-OPEN: true
  
 depot:
   NAME: '&4Dépôts'
@@ -234,7 +234,7 @@ retrait10000:
   KEEP-OPEN: true
   
 depotall:
-  COMMAND: 'console: bq event {player} default.depotall; open: bank_tempo'
+  COMMAND: 'console: bq event {player} default.depotall'
   NAME: '&4Dépôt Total'
   ID: 152
   LORE:
@@ -245,7 +245,7 @@ depotall:
   POSITION-Y: 3
   
 retraitall:
-  COMMAND: 'console: bq event {player} default.retraitall; open: bank_tempo'
+  COMMAND: 'console: bq event {player} default.retraitall'
   NAME: '&4Retrait Total'
   ID: 168
   LORE:

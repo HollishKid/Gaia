@@ -18,6 +18,42 @@ histoire_mysteria13: 'message &2Lieutenant Hashor &f: &a&oJ''espère que ces ren
 histoire_mysteria_tag: tag add histoire_mysteria_tag
 histoire_mysteria_tag1: tag del histoire_mysteria_tag
 #                 #
+#   PNJ Andrish   #
+#                 #
+andr_qE1: folder andr_qE12,andr_qE13,andr_qE14
+andr_qE12: tag add andr_qE1
+andr_qE13: journal add andr_qE1
+andr_qE14: 'message &d&oVous partez à la rencontre de Kendan le marchand pour récuperer l''argent d''Andrish'
+#
+andr_qE2: folder andr_qE22,andr_qE23,andr_qE24,andr_qE25
+andr_qE22: tag del ken_qrefE1
+andr_qE23: tag del andr_qE1
+andr_qE24: tag add andr_qE2
+andr_qE25: 'message &a&oAprès cette bonne leçon donnée à Kendan, j''ai récuperé l''argent !'
+#                #
+#   PNJ Kendan   #
+#                #
+ken_conv: conversation Kendan
+#
+ken_quest_acc: folder ken_qaccE1,ken_qaccE12,ken_qaccE13
+ken_qaccE1: tag add ken_qaccE1
+ken_qaccE12: 'message &d&oDirection le village désert pour cette fameuse découverte !'
+ken_qaccE13: journal add ken_qE1
+ken_qaccE14: objective start ken_qE1
+#
+ken_quest_ref: folder ken_qrefE1,ken_qrefE12,ken_qrefE13,ken_qrefE14
+ken_qrefE1: 'command mm mobs kill kendan'
+ken_qrefE12: mspawnmob -100;200;300;Gaia bossken:1 1
+ken_qrefE13: objective start ken_qkE1
+ken_qrefE14: tag add ken_qrefE1
+#
+ken_qE2: folder ken_qE22,ken_qE23,ken_qE24,ken_qE25,ken_qE26
+ken_qE22: tag del ken_qaccE1
+ken_qE23: tag add ken_qE2
+ken_qE24: 'message &a&oVous êtez arrivé ! Regardez les alentours pour trouver la cachette !'
+ken_qE25: journal del ken_qE1
+ken_qE26: journal add ken_qE2
+#                 #
 #   PNJ Roi Ubu   #
 #                 #
 demande_royale: tag add rencontrer_roi
@@ -104,7 +140,7 @@ akt_qE26: journal add akt_qE2
 akt_qE27: compass add akt_tool
 #
 akt_objq2: folder akt_objkill2,akt_objq2m,akt_objq2c
-akt_objq2m: 'message &a&oVous êtes arrivés, tuez quelques brigands pour retrouver l''objet d''Aktarion'
+akt_objq2m: 'message &a&oVous êtes arrivés, interrogez le chef des mercenaires pour retrouver l''objet d''Aktarion'
 akt_objq2c: compass del akt_tool
 akt_objkill2: objective start akt_objkill2
 #
@@ -132,6 +168,17 @@ akt_rew3: 'command mm items give %player% imiko_bow 1'
 #   Korg'Han   #
 #              #
 kor_conv: conversation korghan
+#
+kor_acc: folder kor_acc1,kor_acc2,kor_acc3,kor_acc4
+kor_acc1: 'message &a&oVous avez accepté la proposition de Korg''han.'
+kor_acc2: 'message &9&oVous ne pouvez plus vous rendre au village de Mysteria désormais.'
+kor_acc3: tag del akt_qE3
+kor_acc4: tag add kor_acc
+#
+kor_ref: folder kor_ref1,kor_ref2,kor_ref3
+kor_ref1: tag add kor_ref
+kor_ref2: 'command mm mobs kill korghan'
+kor_ref3: mspawnmob -8866;77;4537;Gaia bosskor:1 1
 #                 #
 #   PNJ Loukran   #
 #                 #

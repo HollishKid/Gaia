@@ -1,0 +1,35 @@
+quester: 'Kendan'
+first: welcome
+stop: 'false'
+#   Options   #
+
+#     NPC     #
+NPC_options:
+  welcome:
+    text: 'Qui es-tu ? Et que me veux-tu ?'
+    pointers: bonjour
+  rep:
+    text: 'Pourquoi vient-il encore me demander cela ? ... J''ai une demande à te faire voyageur, pour qu''enfin, je puisse le rembourser'
+    pointers: ken_quest
+  ken_quest_rep:
+    text: 'Non loin d''Ici, il a un village désert, quiy habrite une entrée secréte. Dans cette cachette, un objet de valeur y est enterré. Pourrais-tu aller me le chercher ?'
+    pointers: ken_quest_acc,ken_quest_ref
+  ken_quest_ref_rep:
+    text: 'Jamais tu ne m''auras ! Je ne me laisserais jamais faire'
+    events: ken_quest_ref
+#   Options   #
+
+#    Joueur   #
+player_options:
+  bonjour:
+    text: 'Mon nom n''a pas d''importance, je viens de la part d''Andrish qui souhaiterait récuperer l''argent que vous lui devez !'
+    pointers: rep
+  ken_quest:
+    text: 'Allez-y, je vous écoute !'
+    pointers: ken_quest_rep
+  ken_quest_acc:
+    text: 'Très bien, je vais voir ce dont cette histoire retournes, j''espère que vous ne m''avez pas mentis à ce sujet !'
+    events: ken_quest_acc
+  ken_quest_ref:
+    text: 'Votre histoire me paraît louche.. Je préfère ne pas m''aventurer sur une histoire infondé de source sûre. Veuillez me remettre l''argent de suite, ou je me verrais dans l''obligation d''engager la force contre vous'
+    pointers: ken_quest_ref_rep

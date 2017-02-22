@@ -78,6 +78,26 @@
 #Ne fonctionne qu'avec des items de base, pas de custom recipies
 #on craft:
 #	message "Warm for your feet!"
+#
+#
+#	loop {email.list::*}:
+#		if difference between {last.logout.%loop-value%} and now is smaller than 3 days:
+#			stop
+#		else:
+#			if {last.logout.mailed.%loop-value%} is 1:
+#				stop
+#			else:
+#				add 1 to {last.logout.mailed.%loop-value%}
+#				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus d'un mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
+#		
+#		if difference between {last.logout.%loop-value%} and now is smaller than 5 days:
+#			stop
+#		else:
+#			if {last.logout.mailed.%loop-value%} is 2:
+#				stop
+#			else:
+#				add 1 to {last.logout.mailed.%loop-value%}
+#				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus de trois mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
 command /teamtesting:
 	trigger:
 		set {redteam.%player%} to 1

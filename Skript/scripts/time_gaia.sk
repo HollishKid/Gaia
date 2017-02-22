@@ -13,7 +13,6 @@ on quit:
 	set {last.logout.%player%} to now
 	remove player from {online.players::*}
 on join:
-	set {last.logout.mailed.%player%} to 0
 	add  player to {online.players::*}
 	wait 30 seconds
 	if {event.double.xp} is 1:
@@ -21,23 +20,7 @@ on join:
 		message "&aTous les XP gagnés sont doublés tous les mercredis entre 16H et 20H !"
 	if {event.breach} is 1:
 		send player title "&c&lBrèche" with subtitle "Athelas est assiégé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
-		message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"
-
-command /admininfo:
-	trigger:
-		message "%{online.players::*}%"
-		message "%{random.item.list::1}%"
-		clear {online.players::*}
-		loop {online.players::*}:
-			delete {online.players::%loop-index%}
-			message "%{online.players::%loop-index%}%"
-		delete {online.players::*}
-		loop 350 times:
-			add 1 to {_tempo_var}
-			delete {random.item.list::%{_tempo_var}%}
-		clear {_tempo_var}
-		
-		
+		message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"	
 #
 #
 # On Load
@@ -50,25 +33,31 @@ on load:
 	set {day.index} to {day.index::1}
 	set {event.breach} to 0
 	set {event.double.xp} to 0
-	wait 5 minutes
-	loop {email.list::*}:
-		if difference between {last.logout.%loop-value%} and now is smaller than 3 days:
-			stop
-		else:
-			if {last.logout.mailed.%loop-value%} is 1:
-				stop
-			else:
-				add 1 to {last.logout.mailed.%loop-value%}
-				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus d'un mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
+#
+	set {thief.treasure.security} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {thief.treasure.security} to -6753
+	set y coordinate of {thief.treasure.security} to 54
+	set z coordinate of {thief.treasure.security} to 2975
+#
+	set {louvre_break_sign} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {louvre_break_sign} to -9761
+	set y coordinate of {louvre_break_sign} to 73
+	set z coordinate of {louvre_break_sign} to 2357
+#
+	set {louvre_place_sign} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {louvre_place_sign} to -9761
+	set y coordinate of {louvre_place_sign} to 73
+	set z coordinate of {louvre_place_sign} to 2359
+#
+	set {louvre_total_sign} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {louvre_total_sign} to -9761
+	set y coordinate of {louvre_total_sign} to 73
+	set z coordinate of {louvre_total_sign} to 2358
+#
+	if {day.index} is "5":
+		set {block.breaks.louvre} to 0
+		set {block.placed.louvre} to 0
 		
-		if difference between {last.logout.%loop-value%} and now is smaller than 5 days:
-			stop
-		else:
-			if {last.logout.mailed.%loop-value%} is 2:
-				stop
-			else:
-				add 1 to {last.logout.mailed.%loop-value%}
-				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus de trois mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
 #
 #
 # 3 minute intervaller
@@ -80,13 +69,15 @@ variables:
 every 3 minutes in "Gaia":
 	set {_random.motd} to a random integer between 1 and 9
 	execute console command "tm abc -silent ${motd%{_random.motd}%}"
-	set {_thief.treasure.security} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {_thief.treasure.security} to -6753
-	set y coordinate of {_thief.treasure.security} to 54
-	set z coordinate of {_thief.treasure.security} to 2975
-	set block at {_thief.treasure.security} to redstone torch on
+#
+	set block at {thief.treasure.security} to redstone torch on
 	wait 1 second
 	set block at {_thief.treasure.security} to air
+#
+	set line 3 of block at {louvre_break_sign} to "%{block.breaks.louvre}%"
+	set line 3 of block at {louvre_place_sign} to "%{block.placed.louvre}%"
+	set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
+	set line 3 of block at {louvre_total_sign} to "%{_block.total.louvre}%"
 
 #		
 #

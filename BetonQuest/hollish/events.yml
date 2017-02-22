@@ -585,13 +585,11 @@ tag_terre_orno_done_del: tag del terre_orno_done
 folder_terre_ingor: folder tag_terre_orno_done_del,journal_terre_orno_done_del,tag_terre_ingor,journal_terre_ingor
 tag_terre_ingor: tag add tag_terre_ingor
 tag_terre_ingor_del: tag del tag_terre_ingor
-
 #
 #
 #
 #
 tag_erudit_eau: tag add erudit_eau
-
 tag_erudit_feu: tag add erudit_feu
 #
 #
@@ -1050,6 +1048,16 @@ folder_ingor_mine_done: folder journal_hrota_back_del,tag_hrota_archer_killed_de
 ingor_mine_access: tag add ingor_mine_access
 #
 #
+#
+# Château du Louvre
+#
+#
+#
+###################################################################
+inscription_reg_ecuyer_louvre: folder registre_ecuyer_louvre
+registre_ecuyer_louvre: tag add registre_ecuyer_louvre
+#
+#
 # Mine Athelas
 #
 #
@@ -1132,6 +1140,27 @@ sanctuary_closer: folder porte_sanctuary_exe_close,tag_remove_global_sanctuary
 porte_sanctuary_exe: setblock REDSTONE_TORCH_ON -7113;64;2444;Gaia
 porte_sanctuary_exe_close: setblock AIR -7113;64;2444;Gaia
 tag_remove_global_sanctuary: 'command bq delete tag hollish.global_hollish.sanctuary_door'
+#
+#
+# Porte Louvre
+#
+#
+louvre_doors: folder porte_louvre_exe,louvre_time delay:0
+louvre_time: folder louvre_door_check delay:2
+louvre_door_check: if louvre_door_check louvre_time else louvre_closer
+louvre_closer: folder porte_louvre_exe_close,tag_remove_global_louvre
+porte_louvre_exe: setblock REDSTONE_TORCH_ON -9729;67;2455;Gaia
+porte_louvre_exe_close: setblock AIR -9729;67;2455;Gaia
+tag_remove_global_louvre: 'command bq delete tag hollish.global_hollish.louvre_doors'
+#
+louvre_stairs: folder porte_louvre1_exe,louvre1_time delay:0
+louvre1_time: folder louvre1_stairs_check delay:2
+louvre1_stairs_check: if louvre_stairs_check louvre1_time else louvre1_closer
+louvre1_closer: folder porte_louvre1_exe_close,tag_remove_global_louvre1
+porte_louvre1_exe: setblock REDSTONE_TORCH_ON -9725;58;2384;Gaia
+porte_louvre1_exe_close: setblock AIR -9725;58;2384;Gaia
+tag_remove_global_louvre1: 'command bq delete tag hollish.global_hollish.louvre_stairs'
+#
 #
 #
 #
@@ -1643,14 +1672,9 @@ crosstation4_torch_delay_off: setblock AIR -6510;68;2828;Gaia
 #
 #
 ################################
-################################
-#
-#         PRISON  Events
-#
-################################
-prison_god_testerfer: if !avertissements_5 prison_god1 else temp_ban
-prison_god_testeror: if !avertissements_5 prison_god2 else temp_ban
-prison_god_testerdiamant: if !avertissements_5 prison_god3 else temp_ban
+prison_god_testerfer: if !avertissements_3 prison_god1 else temp_ban
+prison_god_testeror: if !avertissements_3 prison_god2 else temp_ban
+prison_god_testerdiamant: if !avertissements_3 prison_god3 else temp_ban
 #
 prison_god1: folder prison_bq_user1,prison_bq_user12,prison_bq_user13,prison_bq_user14,prison_avertissement,vulgarite_remover,prison_information
 prison_god2: folder prison_bq_user2,prison_bq_user22,prison_bq_user23,prison_bq_user24,prison_avertissement,vulgarite_remover,prison_information,money_500
@@ -1681,13 +1705,13 @@ vulgarite_remover: folder default.vulgarite_reset_exe
 prison_information: folder prison_information1,prison_information2,prison_information3,prison_information4 delay:5
 prison_information1: 'message &cVous avez été envoyé dans la prison publique d''Athelas.'
 prison_information2: 'message &cEn venant ici, vous cumulez des avertissements...'
-prison_information3: 'message &cAu bout de 5 avertissements, vous serez banni pour 48 heures.'
-prison_information4: 'message &cVous avez été averti &2%point.avertissements.amount% &c/&25 &cfois !'
+prison_information3: 'message &cAu bout de 3 avertissements, vous serez banni pour 48 heures.'
+prison_information4: 'message &cVous avez été averti &2%point.avertissements.amount% &c/&23 &cfois !'
 #
 #
 temp_ban: folder temp_ban_exe,temp_ban_reset,temp_ban_message delay:5
 temp_ban_message: folder temp_ban_message_exe,temp_ban_broadcast
-temp_ban_message_exe: 'message &cVous avez été averti &25 &cfois, vous allez être banni pour 48 heures de Gaïa.'
+temp_ban_message_exe: 'message &cVous avez été averti &23 &cfois, vous allez être banni pour 48 heures de Gaïa.'
 temp_ban_broadcast: 'command broadcast &2%player% &ca été banni pendant 48 heures de Gaïa.'
 temp_ban_reset: point avertissements *0
 temp_ban_exe: folder temp_bannissement delay:5
@@ -1695,91 +1719,7 @@ temp_bannissement: 'command tempban %player% 48h 1s Vous avez été averti 5 foi
 #
 #
 prison_free: teleport -6952;64;2970;Gaia
-#########
 #
-#
-#
-#         JARVIS
-#
-#
-#
-################################
-#
-louvre_anti_bypass: 'command pex user %player% add -worldguard.* Gaia'
-louvre_anti_bypass_clear: 'command pex user %player% remove -worldguard.* Gaia'
-louvre_notify_hollish: 'command tell Hollish &2%player% &avient de passer la frontière du Manoir.'
-#
-# Phase 1
-#
-#
-louvre_enter: folder louvre_teleport,louvre_mess,louvre_mess1,louvre_obj,louvre_anti_bypass,louvre_notify_hollish delay:1
-louvre_teleport: teleport -9729;69;2466;Gaia
-louvre_obj: objective start louvre_obj
-louvre_mess1: folder louvre_mess1_exe,louvre_mess2,louvre_timer delay:1
-louvre_mess2: folder louvre_mess2_exe delay:1
-louvre_mess: 'message &2Hollish&f: &aVous entrez sur ma propriété. Parlez, &2ami&a, et entrez.'
-louvre_mess1_exe: 'message &2Hollish&f: &aVous avez &252 secondes &apour trouver le mot de passe qui vous donnera cet accès.'
-louvre_mess2_exe: 'message &2Hollish&f: &aUtilisez "&fmot de passe: &a" suivi du mot de passe.'
-louvre_timer: folder louvre_timer_up,louvre_porte_close delay:55
-louvre_timer_up: objective delete louvre_obj
-#
-louvre_open: folder louvre_porte,found_mess,louvre_member delay:1
-louvre_member: 'command region addmember louvre %player% -w Gaia'
-louvre_porte: setblock REDSTONE_TORCH_ON -9729;67;2455;Gaia
-found_mess: 'message &2Hollish&f: &aVous avez trouvé, vous avez désormais accès au jardin. Parlez au Butler si vous estimez avoir les droits de rentrer dans le Manoir.'
-louvre_porte_close: setblock AIR -9729;67;2455;Gaia
-#
-# Phase 2
-#
-#
-builder_autorized: folder builder_autorized_exe,builder_autorized_mess
-builder_autorized_exe: 'command region addmember buildersguild %player% -w Gaia'
-builder_autorized_mess: 'message &2Hollish&f: &aBienvenue, dans le Manoir.'
-#
-# Leave
-#
-louvre_leave: folder louvre_member_remove,builder_member_remove,louvre_timer_up,louvre_anti_bypass_clear delay:0
-louvre_member_remove: 'command region removemember louvre %player% -w Gaia'
-builder_member_remove: 'command region removemember buildersguild %player% -w Gaia'
-#
-#
-# SCREEN
-#
-#
-button1: conversation jarvis
-#
-# ON
-#
-button_on: folder block_screen,screen_movein1,screenin_timer1 delay:1
-block_screen: setblock STONE -9731;81;2362;Gaia
-screen_movein1: 'command hd align y serverinfo ref2'
-screenin_timer1: folder screen_movein2 delay:1
-screen_movein2: 'command hd align xz serverinfo ref2'
-#
-# OFF
-#
-button_off: folder unblock_screen,screen_moveout1,screenout_timer1 delay:1
-unblock_screen: setblock AIR -9731;81;2362;Gaia
-screen_moveout1: 'command hd align xz serverinfo ref'
-screenout_timer1: folder screen_moveout2 delay:1
-screen_moveout2: 'command hd align y serverinfo ref'
-#
-# Escalier
-#
-stairs_open: setblock REDSTONE_TORCH_ON -9725;58;2384;Gaia
-stairs_close: setblock AIR -9725;58;2384;Gaia
-###################################################################################################
-#
-#
-# Builders
-#
-#
-###################################################################################################
-builder_master: conversation builder
-builder_in: tag add builder_in
-builder_out: tag del builder_in
-gm_1_builder: 'command gm creative %player%'
-gm_0_builder: 'command gm survival %player%'
 ###################################################################################################
 #
 #

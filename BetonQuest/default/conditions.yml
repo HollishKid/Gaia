@@ -126,14 +126,14 @@ skin_premade: and reput_athelas2,votes5
 #
 ######################################
 #
-compte_tempo_defined: 'variable %objective.banking.depot% \d+'
-compte_tempo_wrong: 'variable %objective.banking.depot% \D+'
+#compte_tempo_defined: 'variable %objective.banking.depot% \d+'
+#compte_tempo_wrong: 'variable %objective.banking.depot% \D+'
 #
-poche_tempo_defined: 'variable %objective.banking.retrait% \d+'
-poche_tempo_wrong: 'variable %objective.banking.retrait% \D+'
+#poche_tempo_defined: 'variable %objective.banking.retrait% \d+'
+#poche_tempo_wrong: 'variable %objective.banking.retrait% \D+'
 #
-compte_enough: money %objective.banking.depot%
-poche_enough: point compte %objective.banking.retrait%
+compte_enough: money %point.depot.amount%
+poche_enough: point compte %point.retrait.amount%
 #
 #
 money_1: money 1
@@ -197,20 +197,20 @@ compte_money_10000000: point compte 10000000
 #################################################
 autorisation_bateau: tag autorisation_bateau
 #
-on_bat_athelas_central: location -6602;65;3170;Gaia;33
-on_bat_athelas_east: location -6445;65;3016;Gaia;33
-on_bat_louvre: location -10404;66;2996;Gaia;33
-on_bat_mysteria: location -8994;65;4604;Gaia;33
-on_bat_historia: location -7835;65;3683;Gaia;33
-on_bat_tortuga: location -7655;65;4240;Gaia;33
+on_bat_athelas_central: location -6602;65;3170;Gaia 33
+on_bat_athelas_east: location -6445;65;3016;Gaia 33
+on_bat_louvre: location -10404;66;2996;Gaia 33
+on_bat_mysteria: location -8994;65;4604;Gaia 33
+on_bat_historia: location -7835;65;3683;Gaia 33
+on_bat_tortuga: location -7655;65;4240;Gaia 33
 #
-on_bat_est1: location -298;65;6781;Gaia;33
-on_bat_est2: location -474;65;5635;Gaia;33
-on_bat_est3: location -406;65;4764;Gaia;33
-on_bat_est4: location -1725;65;2838;Gaia;33
-on_bat_est5: location -3048;65;1382;Gaia;33
-on_bat_est6: location -3538;65;-944;Gaia;33
-on_bat_est7: location -756;65;456;Gaia;33
+on_bat_est1: location -298;65;6781;Gaia 33
+on_bat_est2: location -474;65;5635;Gaia 33
+on_bat_est3: location -406;65;4764;Gaia 33
+on_bat_est4: location -1725;65;2838;Gaia 33
+on_bat_est5: location -3048;65;1382;Gaia 33
+on_bat_est6: location -3538;65;-944;Gaia 33
+on_bat_est7: location -756;65;456;Gaia 33
 #
 divine: tag divine
 has_spawn: tag has_spawn
@@ -233,11 +233,11 @@ plume_have: hand Plume_etrange
 amiral: tag amiral
 passeur: tag passeur
 cabine1_pleine: party 4 cabine1_loc count:2
-cabine1_loc: location -7235;80;2660;Gaia;5
+cabine1_loc: location -7235;80;2660;Gaia 5
 cabine2_pleine: party 4 cabine2_loc count:2
-cabine2_loc: location -6938;130;2987;Gaia;5
+cabine2_loc: location -6938;130;2987;Gaia 5
 cabine3_pleine: party 4 cabine3_loc count:2
-cabine3_loc: location -6705;75;3292;Gaia;5
+cabine3_loc: location -6705;75;3292;Gaia 5
 #
 #
 # Intendant
@@ -599,7 +599,7 @@ in_upper_mine: region upper_mine
 in_foret_athelas: region foret_athelas
 tag_foret_athelas: tag foret_athelas
 foret_athelas: tag foret_athelas
-foret_obj_distance_exe: location -7040;65;2855;Gaia;70
+foret_obj_distance_exe: location -7040;65;2855;Gaia 70
 #
 # Ermite
 #
@@ -695,11 +695,11 @@ access_south: tag access_south
 ################################
 arc_occupe: or arc_occupe1,arc_occupe2,arc_occupe3
 arc_occupe1: party 222 arc_occupe1_exe count:1
-arc_occupe1_exe: location -6491;83;3240;Gaia;3
+arc_occupe1_exe: location -6491;83;3240;Gaia 3
 arc_occupe2: party 222 arc_occupe2_exe count:1
-arc_occupe2_exe: location -6501;83;3231;Gaia;3
+arc_occupe2_exe: location -6501;83;3231;Gaia 3
 arc_occupe3: party 222 arc_occupe3_exe count:1
-arc_occupe3_exe: location -6482;83;3216;Gaia;4
+arc_occupe3_exe: location -6482;83;3216;Gaia 4
 arrow_compteur1: point arrow_compteur $arrowscore1$
 arrow_compteur2: point arrow_compteur $arrowscore2$
 arrow_compteur3: point arrow_compteur $arrowscore3$

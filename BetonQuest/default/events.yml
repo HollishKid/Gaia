@@ -2045,62 +2045,33 @@ depret_open: 'command cc open bank %player%'
 # Banking
 #
 #
-banking: objective start banking
-banking_off: objective delete banking
-banking_tempo_wrong: 'message &dLe montant doit être positif et comporter que des chiffres. Recommencez.'
-#
 # DÉPOT
 #
-banking_compte_enter: folder banking,banking_compte_on1,banking_compte_on2,banking_compte_delay,banking_compte_enter_inform
-banking_compte_enter_inform: 'message &d&oTapez "&d&ldepot: [montant]&d&o" dans le tchat.'
-banking_compte_on1: objective start banking_compte_on1
-banking_compte_on2: objective start banking_compte_on2
-banking_compte_delay: objective start banking_compte_delay
-#
-#
-banking_compte_delay_over: folder banking_off,banking_compte_delay_off1,banking_compte_delay_off2,banking_compte_delay_over_exe delay:1
-banking_compte_delay_off1: objective delete banking_compte_on1
-banking_compte_delay_off2: objective delete banking_compte_on2
-banking_compte_delay_over_exe: objective delete banking_compte_delay
-#
-#
-banking_compte_tempo_done: if compte_enough banking_compte_transaction else compte_not_enough
-compte_not_enough: folder compte_not_enough1,compte_not_enough2,banking_compte_delay_over
-compte_not_enough1: 'message &dVous ne pouvez pas déposer &f¤&2%objective.banking.depot%&d,'
+banking_compte_enter: if compte_enough banking_compte_transaction else compte_not_enough
+compte_not_enough: folder compte_not_enough1,compte_not_enough2,banking_compte_4
+compte_not_enough1: 'message &dVous ne pouvez pas déposer &f¤&2%point.depot.amount%&d,'
 compte_not_enough2: 'message &dcar vous n''avez que &f¤&2%ph.vault_eco_balance_fixed% &den poche !'
 #
 banking_compte_transaction: folder banking_compte_1,banking_compte_2,banking_compte_3,banking_compte_meka
-banking_compte_1: 'message &dVous avez déposé &f¤&2%objective.banking.depot% &d!'
-banking_compte_2: point compte %objective.banking.depot%
-banking_compte_3: 'command eco take %player% %objective.banking.depot%'
-banking_compte_meka: folder banking_compte_4,banking_compte_delay_over delay:1
-banking_compte_4: variable banking depot -1
+banking_compte_1: 'message &dVous avez déposé &f¤&2%point.depot.amount% &dsur votre compte !'
+banking_compte_2: point compte %point.depot.amount%
+banking_compte_3: 'command eco take %player% %point.depot.amount%'
+banking_compte_meka: folder banking_compte_4 delay:1
+banking_compte_4: point depot *0
 #
 # RETRAIT
 #
-banking_poche_enter: folder banking,banking_poche_on1,banking_poche_on2,banking_poche_delay,banking_poche_enter_inform
-banking_poche_enter_inform: 'message &d&oTapez "&d&lretrait: [montant]&d&o" dans le tchat.'
-banking_poche_on1: objective start banking_poche_on1
-banking_poche_on2: objective start banking_poche_on2
-banking_poche_delay: objective start banking_poche_delay
-#
-banking_poche_delay_over: folder banking_off,banking_poche_delay_off1,banking_poche_delay_off2,banking_poche_delay_over_exe delay:1
-banking_poche_delay_off1: objective delete banking_poche_on1
-banking_poche_delay_off2: objective delete banking_poche_on2
-banking_poche_delay_over_exe: objective delete banking_poche_delay
-#
-#
-banking_poche_tempo_done: if poche_enough banking_poche_transaction else compte_not_enough32
-compte_not_enough32: folder compte_not_enough12,compte_not_enough22,banking_poche_delay_over
-compte_not_enough12: 'message &dVous ne pouvez pas retirer &f¤&2%objective.banking.retrait%&d,'
+banking_poche_enter: if poche_enough banking_poche_transaction else compte_not_enough32
+compte_not_enough32: folder compte_not_enough12,compte_not_enough22,banking_poche_4
+compte_not_enough12: 'message &dVous ne pouvez pas retirer &f¤&2%point.retrait.amount%&d,'
 compte_not_enough22: 'message &dcar vous n''avez que &f¤&2%point.compte.amount% &dsur votre compte !'
 #
 banking_poche_transaction: folder banking_poche_1,banking_poche_2,banking_poche_3,banking_poche_meka
-banking_poche_1: 'message &dVous avez retiré &f¤&2%objective.banking.retrait% &d!'
-banking_poche_2: 'command bq point %player% add compte -%objective.banking.retrait%'
-banking_poche_3: 'command eco give %player% %objective.banking.retrait%'
-banking_poche_meka: folder banking_poche_4,banking_poche_delay_over delay:1
-banking_poche_4: variable banking retrait -1
+banking_poche_1: 'message &dVous avez retiré &f¤&2%point.retrait.amount% &dde votre compte !'
+banking_poche_2: 'command bq point %player% add compte -%point.retrait.amount%'
+banking_poche_3: 'command eco give %player% %point.retrait.amount%'
+banking_poche_meka: folder banking_poche_4 delay:1
+banking_poche_4: point retrait *0
 #
 #
 #

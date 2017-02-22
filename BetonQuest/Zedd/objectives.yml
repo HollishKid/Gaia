@@ -1,6 +1,6 @@
 # Takeo
 # Takeo
-obj_reach: location -6981;63;3208;Gaia;2 events:close_gate,spawn_takeo,obj_reach2
+obj_reach: location -6981;63;3208;Gaia 2 events:close_gate,spawn_takeo,obj_reach2
 obj_reach2: delay 0 conditions:!region_arena events:takeo_clean,death_mess
 #
 logout_events: logout events:takeo_clean,death_mess
@@ -26,26 +26,26 @@ ynv_objkillM4: mmobkill moinevoleur amount:1 events:ynv_moinevoleurkilled4,Mkill
 ynv_objkillM5: mmobkill moinevoleur amount:1 events:Mkill5,Mkilled,ynv_MBkilled_check
 #
 # Feu d'artifice
-ynv_objfire: action right any conditions:in_thief_treasure,fire_condition2 events:ynv_popfolder loc:-7593;63;3068;Gaia;30
+ynv_objfire: action right any conditions:in_thief_treasure,fire_condition2 events:ynv_popfolder loc:-7593;63;3068;Gaia range:30
 #
 #
 yre_objkill: mmobkill lieutenant amount:2 events:yre_killfolder
 #
 #
-or_obj1: action right chest events:or_chestloot loc:-7619;64;3044;Gaia;1
+or_obj1: action right chest events:or_chestloot loc:-7619;64;3044;Gaia range:1
 #
 # Entrée dans la cache des voleurs
-obj_thiefkey: action right IRON_BLOCK conditions:thiefkey_inhand loc:-7593;63;3068;Gaia;1 events:thiefkey_if,thiefkey_reload_delay
+obj_thiefkey: action right IRON_BLOCK conditions:thiefkey_inhand loc:-7593;63;3068;Gaia range:1 events:thiefkey_if,thiefkey_reload_delay
 #obj_inthieftreasure: region thief_treasure events:obj_outthieftreasure,thief_occupied_check
 #obj_outthieftreasure: delay 0 condition:!in_thief_treasure events:close_thieftreasure
 #
 #
-tv_coffre1: location -7545;91;3077;Gaia;2 events:tv_coffre1
-tv_coffre1click: action right chest events:tv_coffre1loot loc:-7546;90;3080;Gaia;1
-tv_coffre2: location -7596;58;3059;Gaia;2 events:tv_coffre2
-tv_coffre2click: action right chest events:tv_coffre2loot loc:-7597;59;3063;Gaia;1
-tv_coffre3click: action right chest events:tv_coffre3loot loc:-7601;59;3063;Gaia;1
-tv_coffre4click: action right chest events:tv_coffre4loot loc:-7603;58;3058;Gaia;1
+tv_coffre1: location -7545;91;3077;Gaia 2 events:tv_coffre1
+tv_coffre1click: action right chest events:tv_coffre1loot loc:-7546;90;3080;Gaia range:1
+tv_coffre2: location -7596;58;3059;Gaia 2 events:tv_coffre2
+tv_coffre2click: action right chest events:tv_coffre2loot loc:-7597;59;3063;Gaia range:1
+tv_coffre3click: action right chest events:tv_coffre3loot loc:-7601;59;3063;Gaia range:1
+tv_coffre4click: action right chest events:tv_coffre4loot loc:-7603;58;3058;Gaia range:1
 #
 zae_click1: action right any conditions:hypercap_inhand,loc_chatal events:zae_click1
 zae_click2: action right any conditions:hypercap_inhand,loc_biblio events:zae_click2
@@ -53,13 +53,13 @@ zae_click3: action right any conditions:hypercap_inhand,loc_grande events:zae_cl
 zae_click4: action right any conditions:hypercap_inhand events:zae_click4
 zae_clichyperreg: action right any conditions:hyperreg_inhand events:zae_starthyperreg
 zae_shootpotion: action right any conditions:potion_closeportal_inhand,inregion_faille events:zae_q4event
-kal_click: action right GOLD_BLOCK conditions:kal_q1start events:kal_collapse loc:-6836;11;3304;Gaia;2
-ut_coffre: location -6836;13;3254;Gaia;3 events:ut_coffre
-ut_coffre1click: action right chest events:ut_coffre1loot loc:-6843;12;3252;Gaia;2
-ut_coffre2click: action right chest events:ut_coffre2loot loc:-6843;12;3245;Gaia;2
-ut_coffre3click: action right chest events:ut_coffre3loot loc:-6829;12;3245;Gaia;2
-ut_coffre4click: action right chest events:ut_coffre4loot loc:-6836;12;3238;Gaia;2
-ut_coffre5click: action right chest events:ut_coffre5loot loc:-6829;12;3252;Gaia;2
+kal_click: action right GOLD_BLOCK conditions:kal_q1start events:kal_collapse loc:-6836;11;3304;Gaia range:2
+ut_coffre: location -6836;13;3254;Gaia 3 events:ut_coffre
+ut_coffre1click: action right chest events:ut_coffre1loot loc:-6843;12;3252;Gaia range:2
+ut_coffre2click: action right chest events:ut_coffre2loot loc:-6843;12;3245;Gaia range:2
+ut_coffre3click: action right chest events:ut_coffre3loot loc:-6829;12;3245;Gaia range:2
+ut_coffre4click: action right chest events:ut_coffre4loot loc:-6836;12;3238;Gaia range:2
+ut_coffre5click: action right chest events:ut_coffre5loot loc:-6829;12;3252;Gaia range:2
 #
 #
 ### Itsuki
@@ -96,51 +96,51 @@ its_objr1q5: mmobkill ghoule amount:8 events:its_objr1q5_complete
 # RANDOM EVENTS
 #
 #
-loose1: action right WOOL events:loose loc:-6769;5;2975;Gaia;1
-loose2: action right WOOL events:loose loc:-6769;5;2974;Gaia;1
-loose3: action right WOOL events:loose loc:-6769;5;2973;Gaia;1
-loose4: action right WOOL events:loose loc:-6769;5;2972;Gaia;1
-loose5: action right WOOL events:loose loc:-6769;4;2975;Gaia;1
-loose6: action right WOOL events:loose loc:-6769;4;2974;Gaia;1
-loose7: action right WOOL events:loose loc:-6769;4;2973;Gaia;1
-loose8: action right WOOL events:loose loc:-6769;4;2972;Gaia;1
-loose9: action right WOOL events:loose loc:-6769;3;2975;Gaia;1
-loose10: action right WOOL events:loose loc:-6769;3;2974;Gaia;1
-loose11: action right WOOL events:loose loc:-6769;3;2973;Gaia;1
-loose12: action right WOOL events:loose loc:-6769;3;2972;Gaia;1
-loose13: action right WOOL events:loose loc:-6769;2;2975;Gaia;1
-loose14: action right WOOL events:loose loc:-6769;2;2974;Gaia;1
-loose15: action right WOOL events:loose loc:-6769;2;2973;Gaia;1
-loose16: action right WOOL events:loose loc:-6769;2;2972;Gaia;1
-win1: action right GOLD_BLOCK events:win loc:-6769;5;2975;Gaia;1
-win2: action right GOLD_BLOCK events:win loc:-6769;5;2974;Gaia;1
-win3: action right GOLD_BLOCK events:win loc:-6769;5;2973;Gaia;1
-win4: action right GOLD_BLOCK events:win loc:-6769;5;2972;Gaia;1
-win5: action right GOLD_BLOCK events:win loc:-6769;4;2975;Gaia;1
-win6: action right GOLD_BLOCK events:win loc:-6769;4;2974;Gaia;1
-win7: action right GOLD_BLOCK events:win loc:-6769;4;2973;Gaia;1
-win8: action right GOLD_BLOCK events:win loc:-6769;4;2972;Gaia;1
-win9: action right GOLD_BLOCK events:win loc:-6769;3;2975;Gaia;1
-win10: action right GOLD_BLOCK events:win loc:-6769;3;2974;Gaia;1
-win11: action right GOLD_BLOCK events:win loc:-6769;3;2973;Gaia;1
-win12: action right GOLD_BLOCK events:win loc:-6769;3;2972;Gaia;1
-win13: action right GOLD_BLOCK events:win loc:-6769;2;2975;Gaia;1
-win14: action right GOLD_BLOCK events:win loc:-6769;2;2974;Gaia;1
-win15: action right GOLD_BLOCK events:win loc:-6769;2;2973;Gaia;1
-win16: action right GOLD_BLOCK events:win loc:-6769;2;2972;Gaia;1
-bwin1: action right diamond_block events:bwin loc:-6769;5;2975;Gaia;1
-bwin2: action right diamond_block events:bwin loc:-6769;5;2974;Gaia;1
-bwin3: action right diamond_block events:bwin loc:-6769;5;2973;Gaia;1
-bwin4: action right diamond_block events:bwin loc:-6769;5;2972;Gaia;1
-bwin5: action right diamond_block events:bwin loc:-6769;4;2975;Gaia;1
-bwin6: action right diamond_block events:bwin loc:-6769;4;2974;Gaia;1
-bwin7: action right diamond_block events:bwin loc:-6769;4;2973;Gaia;1
-bwin8: action right diamond_block events:bwin loc:-6769;4;2972;Gaia;1
-bwin9: action right diamond_block events:bwin loc:-6769;3;2975;Gaia;1
-bwin10: action right diamond_block events:bwin loc:-6769;3;2974;Gaia;1
-bwin11: action right diamond_block events:bwin loc:-6769;3;2973;Gaia;1
-bwin12: action right diamond_block events:bwin loc:-6769;3;2972;Gaia;1
-bwin13: action right diamond_block events:bwin loc:-6769;2;2975;Gaia;1
-bwin14: action right diamond_block events:bwin loc:-6769;2;2974;Gaia;1
-bwin15: action right diamond_block events:bwin loc:-6769;2;2973;Gaia;1
-bwin16: action right diamond_block events:bwin loc:-6769;2;2972;Gaia;1
+loose1: action right WOOL events:loose loc:-6769;5;2975;Gaia range:1
+loose2: action right WOOL events:loose loc:-6769;5;2974;Gaia range:1
+loose3: action right WOOL events:loose loc:-6769;5;2973;Gaia range:1
+loose4: action right WOOL events:loose loc:-6769;5;2972;Gaia range:1
+loose5: action right WOOL events:loose loc:-6769;4;2975;Gaia range:1
+loose6: action right WOOL events:loose loc:-6769;4;2974;Gaia range:1
+loose7: action right WOOL events:loose loc:-6769;4;2973;Gaia range:1
+loose8: action right WOOL events:loose loc:-6769;4;2972;Gaia range:1
+loose9: action right WOOL events:loose loc:-6769;3;2975;Gaia range:1
+loose10: action right WOOL events:loose loc:-6769;3;2974;Gaia range:1
+loose11: action right WOOL events:loose loc:-6769;3;2973;Gaia range:1
+loose12: action right WOOL events:loose loc:-6769;3;2972;Gaia range:1
+loose13: action right WOOL events:loose loc:-6769;2;2975;Gaia range:1
+loose14: action right WOOL events:loose loc:-6769;2;2974;Gaia range:1
+loose15: action right WOOL events:loose loc:-6769;2;2973;Gaia range:1
+loose16: action right WOOL events:loose loc:-6769;2;2972;Gaia range:1
+win1: action right GOLD_BLOCK events:win loc:-6769;5;2975;Gaia range:1
+win2: action right GOLD_BLOCK events:win loc:-6769;5;2974;Gaia range:1
+win3: action right GOLD_BLOCK events:win loc:-6769;5;2973;Gaia range:1
+win4: action right GOLD_BLOCK events:win loc:-6769;5;2972;Gaia range:1
+win5: action right GOLD_BLOCK events:win loc:-6769;4;2975;Gaia range:1
+win6: action right GOLD_BLOCK events:win loc:-6769;4;2974;Gaia range:1
+win7: action right GOLD_BLOCK events:win loc:-6769;4;2973;Gaia range:1
+win8: action right GOLD_BLOCK events:win loc:-6769;4;2972;Gaia range:1
+win9: action right GOLD_BLOCK events:win loc:-6769;3;2975;Gaia range:1
+win10: action right GOLD_BLOCK events:win loc:-6769;3;2974;Gaia range:1
+win11: action right GOLD_BLOCK events:win loc:-6769;3;2973;Gaia range:1
+win12: action right GOLD_BLOCK events:win loc:-6769;3;2972;Gaia range:1
+win13: action right GOLD_BLOCK events:win loc:-6769;2;2975;Gaia range:1
+win14: action right GOLD_BLOCK events:win loc:-6769;2;2974;Gaia range:1
+win15: action right GOLD_BLOCK events:win loc:-6769;2;2973;Gaia range:1
+win16: action right GOLD_BLOCK events:win loc:-6769;2;2972;Gaia range:1
+bwin1: action right diamond_block events:bwin loc:-6769;5;2975;Gaia range:1
+bwin2: action right diamond_block events:bwin loc:-6769;5;2974;Gaia range:1
+bwin3: action right diamond_block events:bwin loc:-6769;5;2973;Gaia range:1
+bwin4: action right diamond_block events:bwin loc:-6769;5;2972;Gaia range:1
+bwin5: action right diamond_block events:bwin loc:-6769;4;2975;Gaia range:1
+bwin6: action right diamond_block events:bwin loc:-6769;4;2974;Gaia range:1
+bwin7: action right diamond_block events:bwin loc:-6769;4;2973;Gaia range:1
+bwin8: action right diamond_block events:bwin loc:-6769;4;2972;Gaia range:1
+bwin9: action right diamond_block events:bwin loc:-6769;3;2975;Gaia range:1
+bwin10: action right diamond_block events:bwin loc:-6769;3;2974;Gaia range:1
+bwin11: action right diamond_block events:bwin loc:-6769;3;2973;Gaia range:1
+bwin12: action right diamond_block events:bwin loc:-6769;3;2972;Gaia range:1
+bwin13: action right diamond_block events:bwin loc:-6769;2;2975;Gaia range:1
+bwin14: action right diamond_block events:bwin loc:-6769;2;2974;Gaia range:1
+bwin15: action right diamond_block events:bwin loc:-6769;2;2973;Gaia range:1
+bwin16: action right diamond_block events:bwin loc:-6769;2;2972;Gaia range:1

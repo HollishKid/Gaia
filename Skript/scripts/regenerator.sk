@@ -52,6 +52,8 @@ on break:
 			if player's gamemode is survival:
 				add location of event-block to {break.location.foret2::*}
 				add type of event-block to {break.type.foret2::*}
+	else if event-block is in the region "residences":
+		add 1 to {block.breaks.louvre}
 
 on place:
 	if event-block is in the region "east":
@@ -75,6 +77,8 @@ on place:
 	else if event-block is in the region "volcano":
 		if player's gamemode is survival:
 			add location of event-block to {place.location.volcano::*}
+	else if event-block is in the region "residences":
+		add 1 to {block.placed.louvre}
 
 on leaves decay:
 	if event-block is in the region "foret_athelas":

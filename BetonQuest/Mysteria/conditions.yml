@@ -3,6 +3,17 @@
 #
 histoire_mysteria_tag: tag histoire_mysteria_tag
 #
+#   Andrish   #
+#
+andr_qE1: tag andr_qE1
+andr_qE2: tag andr_qE2
+#
+#   Kendan   #
+#
+ken_qaccE1: tag ken_qaccE1
+ken_qrefE1: tag ken_qrefE1
+ken_qE2: tag ken_qE2
+#
 #   Roi Ubu   #
 #
 renconter_roi: tag rencontrer_roi
@@ -27,6 +38,11 @@ akt_qE3: tag akt_qE3
 akt_qdone: tag akt_qdone
 akt_tool: item akt_tool:1
 Bkilled: tag Bkilled
+#
+#   Korg'Han   #
+#
+kor_acc: tag kor_acc
+kor_ref: tag kor_ref
 #
 #   Loukran   #
 #

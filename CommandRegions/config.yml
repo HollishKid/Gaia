@@ -326,6 +326,18 @@ regions:
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
+    'chateau_louvre':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":" ","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Château du Louvre","italic":true,"color":"gray"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
     'athelas_castle':
         enterConsoleCommands:
         - "title %player% times 20 100 20"
@@ -459,17 +471,6 @@ regions:
         sendJoinMessage: false
         joinMessage: ''
         leaveConsoleCommands: ''
-        leavePlayerCommands: ''
-        sendLeaveMessage: false
-        leaveMessage: ''
-    'pre_louvre':
-        enterConsoleCommands:
-        - "bq event %player% hollish.louvre_enter"
-        enterPlayerCommands: ''
-        sendJoinMessage: false
-        joinMessage: ''
-        leaveConsoleCommands: 
-        - "bq event %player% hollish.louvre_leave"
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
