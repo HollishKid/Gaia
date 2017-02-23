@@ -78,3 +78,19 @@ on rightclick on sign:
             if line 3 of the clicked block is "&l&oomentielvo":
                 message "Une Force étrange émane de cet endroit..."
 #				if player meets betonquest condition "":
+
+#
+#
+#
+# Château du Louvre
+#
+#
+#
+command /thisistheurukkilledcommand:
+	executable by: console
+	trigger:
+		add 1 to {louvre_uruk_kills}
+command /thisistheurukakilledcommand:
+	executable by: console
+	trigger:
+		add 1 to {louvre_uruka_kills}

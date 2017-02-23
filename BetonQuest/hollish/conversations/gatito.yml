@@ -11,11 +11,11 @@ NPC_options:
     text: 'Bonjour, &2%player%&a&o. Je suis l''envoyé de &2Númeheru&a&o, le Gardien de l''Ouest et du Château du Louvre.'
     pointers: qui,pourquoi,keske,louvre
   qui_rep:
-    text: 'C''est le Fils du &6Roi Kahn&a&o. \nIl a été envoyé à l''Ouest pour superviser les terres qui bordent la Forêt Noire.'
+    text: 'C''est le Fils du &6Roi Kahn&a&o. \nIl a été envoyé à l''Ouest pour superviser les terres qui bordent la Forêt de Mirk.'
   pourquoi_rep:
     text: 'Je représente le Gardien de l''Ouest à Athelas. \nJe maintiens les relations avec la Ville Royale.'
   keske_rep:
-    text: 'C''est le dernier rempart avant la Forêt Noire. \nLe Gardien attribue des parcelles à tous les écuyers royaux d''Athelas. \nVous devriez aller le voir, prenez un bateau de la Flotte Royale d''Athelas !'
+    text: 'C''est le dernier rempart avant la Forêt de Mirk. \nLe Gardien attribue des parcelles à tous les écuyers royaux d''Athelas. \nVous devriez aller le voir, prenez un bateau de la Flotte Royale d''Athelas !'
   louvre_rep:
     text: 'Pour vous rendre au Château du Louvre, vous pouvez prendre les bateaux de la Flotte Royale d''Athelas.'
 ############

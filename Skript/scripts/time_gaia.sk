@@ -54,9 +54,26 @@ on load:
 	set y coordinate of {louvre_total_sign} to 73
 	set z coordinate of {louvre_total_sign} to 2358
 #
+	set {louvre_uruk_sign} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {louvre_uruk_sign} to -9755
+	set y coordinate of {louvre_uruk_sign} to 73
+	set z coordinate of {louvre_uruk_sign} to 2351
+#
+	set {louvre_uruka_sign} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {louvre_uruka_sign} to -9753
+	set y coordinate of {louvre_uruka_sign} to 73
+	set z coordinate of {louvre_uruka_sign} to 2351
+#
+	set {louvre_uruk_total_sign} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {louvre_uruk_total_sign} to -9754
+	set y coordinate of {louvre_uruk_total_sign} to 73
+	set z coordinate of {louvre_uruk_total_sign} to 2351
+#
 	if {day.index} is "5":
 		set {block.breaks.louvre} to 0
 		set {block.placed.louvre} to 0
+		set {louvre_uruk_kills} to 0
+		set {louvre_uruka_kills} to 0
 		
 #
 #
@@ -78,6 +95,11 @@ every 3 minutes in "Gaia":
 	set line 3 of block at {louvre_place_sign} to "%{block.placed.louvre}%"
 	set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
 	set line 3 of block at {louvre_total_sign} to "%{_block.total.louvre}%"
+#
+	set line 3 of block at {louvre_uruk_sign} to "%{louvre_uruk_kills}%"
+	set line 3 of block at {louvre_uruka_sign} to "%{louvre_uruka_kills}%"
+	set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
+	set line 3 of block at {louvre_uruk_total_sign} to "%{_louvre_uruk_total}%"
 
 #		
 #
@@ -132,13 +154,15 @@ every 5 minutes in "Gaia":
 # Every Hour in Gaïa
 #
 #
-every 55 minutes in "Gaia":	
+every 59 minutes in "Gaia":	
 #
-# At 5 o'clock
+# At 2 o'clock
 #   East Continent reset
+#
+#
 	set {hour.system} to "%hour%"
 	if {day.index} is "7":
-		if {hour.system} is "5":
+		if {hour.system} is "2":
 			loop {place.location.1::*}:
 				set block at loop-value to air
 				delete {place.location.1::%loop-index%}
@@ -149,7 +173,7 @@ every 55 minutes in "Gaia":
 				delete {break.type.1::%loop-index%}
 			
 	else:
-		if {hour.system} is "5":
+		if {hour.system} is "2":
 			set {_day.index.temp} to {day.index} + 1
 			loop {place.location.%{_day.index.temp}%::*}:
 				set block at loop-value to air

@@ -31,7 +31,10 @@ npcs:
   '426': nauco
   '427': norno
   '428': casar
+  '342': numeheru
+  '451': gatito
   '453': gestionnaire_louvre
+  '454': raxe
 effects:
   Helix:
     class: HelixEffect

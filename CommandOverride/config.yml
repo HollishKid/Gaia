@@ -88,7 +88,7 @@ commands:
   - console:/bq purge <arg 0>
   - console:/clear <arg 0>
   - console:/pex user <arg 0> group set debutant
-  - console:/pex user GoupilDC prefix ""
+  - console:/pex user <arg 0> prefix ""
   - console:/eco set <arg 0> 2000
   - console:/skillreset <arg 0> all
   - console:/bq event <arg 0> default.historique_folder
