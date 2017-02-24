@@ -69,12 +69,16 @@ on load:
 	set y coordinate of {louvre_uruk_total_sign} to 73
 	set z coordinate of {louvre_uruk_total_sign} to 2351
 #
-	if {day.index} is "5":
-		set {block.breaks.louvre} to 0
-		set {block.placed.louvre} to 0
-		set {louvre_uruk_kills} to 0
-		set {louvre_uruka_kills} to 0
-		
+	set {louvre_contributors_sign} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {louvre_contributors_sign} to -9760
+	set y coordinate of {louvre_contributors_sign} to 73
+	set z coordinate of {louvre_contributors_sign} to 2354
+#
+	set {louvre_total_amount_sign} to location at 0, 0, 0 of the world "Gaia"
+	set x coordinate of {louvre_total_amount_sign} to -9758
+	set y coordinate of {louvre_total_amount_sign} to 73
+	set z coordinate of {louvre_total_amount_sign} to 2352
+#	
 #
 #
 # 3 minute intervaller
@@ -89,7 +93,7 @@ every 3 minutes in "Gaia":
 #
 	set block at {thief.treasure.security} to redstone torch on
 	wait 1 second
-	set block at {_thief.treasure.security} to air
+	set block at {thief.treasure.security} to air
 #
 	set line 3 of block at {louvre_break_sign} to "%{block.breaks.louvre}%"
 	set line 3 of block at {louvre_place_sign} to "%{block.placed.louvre}%"
@@ -100,6 +104,17 @@ every 3 minutes in "Gaia":
 	set line 3 of block at {louvre_uruka_sign} to "%{louvre_uruka_kills}%"
 	set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
 	set line 3 of block at {louvre_uruk_total_sign} to "%{_louvre_uruk_total}%"
+#
+	loop {louvre_contributors::*}:
+		add 1 to {_louvre_contributors_amount}
+	set line 3 of block at {louvre_contributors_sign} to "%{_louvre_contributors_amount}%"
+#
+	set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
+	set {_block.total.louvre} to {_block.total.louvre} / 100
+	set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
+	set {_louvre_uruk_total} to {_louvre_uruk_total} / 10
+	set {_louvre_weekly_reward} to {_block.total.louvre} + {_louvre_uruk_total}
+	set line 3 of block at {louvre_total_amount_sign} to "¤ %{_louvre_weekly_reward}%"
 
 #		
 #
@@ -145,6 +160,7 @@ every 5 minutes in "Gaia":
 				broadcast "&aLa Brèche en -7050;3200 a été refermée."
 				loop all players:
 					send loop-player title "&aBrèche" with subtitle "&aEnnemi repoussé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+
 #
 #			
 #				
@@ -160,6 +176,7 @@ every 59 minutes in "Gaia":
 #   East Continent reset
 #
 #
+#
 	set {hour.system} to "%hour%"
 	if {day.index} is "7":
 		if {hour.system} is "2":
@@ -171,7 +188,19 @@ every 59 minutes in "Gaia":
 				set block at loop-value to {break.type.1::%loop-index%}
 				delete {break.location.1::%loop-index%}
 				delete {break.type.1::%loop-index%}
-			
+#
+# At 23H - Only on Sunday
+#    Louvre Reset
+#
+		else if {hour.system} is "23":
+			set {block.breaks.louvre} to 0
+			set {block.placed.louvre} to 0
+			set {louvre_uruk_kills} to 0
+			set {louvre_uruka_kills} to 0
+			loop {louvre_contributors::*}:
+				delete {louvre_contributors::%loop-index%}
+			loop {louvre_contribution_received::*}:
+				delete {louvre_contribution_received::%loop-index%}
 	else:
 		if {hour.system} is "2":
 			set {_day.index.temp} to {day.index} + 1

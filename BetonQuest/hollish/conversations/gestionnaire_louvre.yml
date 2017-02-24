@@ -12,9 +12,9 @@ NPC_options:
   welcome:
     text: 'Comment avancent les travaux &2%player% &a&o?'
     condition: registre_ecuyer_louvre
-    pointers: travaux,kesako,qui,autre,rien
+    pointers: travaux,kesako,contribution,qui,autre,rien
   trav_rep:
-    text: 'Vous voyez bien les panneaux derrière moi ? \nCes panneaux indiquent l''avancement des travaux. Chaque avancement compte pour la semaine en cours (Fin le Dimanche). \nToute personne inscrite sur le &6Registre des Écuyers du Louvre &a&ose verra récompensé.'
+    text: 'Vous voyez bien les panneaux derrière moi ? \nCes panneaux indiquent l''avancement des travaux. Chaque avancement compte pour la semaine en cours (Fin le Dimanche à 23H). \nToute personne inscrite sur le &6Registre des Écuyers du Louvre &a&oET ayant contribué à au moins un projet se verra récompensé. \nAttention, vous ne pouvez recevoir qu''un seul paiement par semaine à votre demande auprès de moi-même.'
   qui_rep:
     text: 'Je travaille pour le Prince et Gardien de l''Est &2Númeheru&a&o. \nJe me charge de l''avancement des travaux.'
 #
@@ -42,6 +42,9 @@ player_options:
   travaux:
     text: 'Quels travaux ?'
     pointer: trav_rep
+  contribution:
+    text: 'Je voudrais récupérer l''argent de ma contribution.'
+    events: add_louvre_contribution
   qui:
     text: 'Qui êtes vous ?'
     pointers: qui_rep
@@ -64,4 +67,4 @@ player_options:
     text: 'Que se passe-t-il à la fin d''une location ?'
     pointers: apres_rep
   rien:
-    text: 'Pas du tout, merci ! Bonne journée !'
+    text: 'RAS ! Bonne journée !'
