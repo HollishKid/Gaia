@@ -15,7 +15,7 @@ NPC_options:
     conditions: 'Donner_Lettre'
   recrue:
     text: 'Alors tu à finalement était recuter !'
-    conditions: 'Deuxieme_Escadron1'
+    conditions: 'Recrue'
     pointers: oui,pk,aide
   ahah:
     text: 'Ahah, bien sur, bien sur !'

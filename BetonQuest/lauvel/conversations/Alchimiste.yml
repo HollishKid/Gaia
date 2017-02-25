@@ -20,7 +20,7 @@ NPC_options:
     pointers: alc_q4
   acl_r5:
     text: 'Oh, je m''en occupe'
-    events: Prend_Chair,Analyser
+    events: alc_all
     pointers: acl_q5
 #############
 #           #
@@ -33,10 +33,10 @@ player_options:
     pointers: alc_r2
   alc_q2:
     text: 'Bonjour, le Chef d''escadron ma envoyer vous remmetre ceci pour que vous l''analyser.'
-    conditions: 'Alchimiste'
+    conditions: 'Alchimiste'
     pointers: alc_r3
   alc_q3:
-    text: 'C''est un bout de chair d''un guerrier muté trouver au moulin.'
+    text: 'c''est un bout de chair d''un guerrier muté trouver au moulin.'
     pointers: alc_r4
   alc_q4:
     text: 'Oui, toute à fais.'

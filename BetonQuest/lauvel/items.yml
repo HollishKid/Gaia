@@ -1,5 +1,2 @@
-chair_mute: ROTTEN_FLESH data:0 name:'§fChair_Muté' lore:';§7§oRareté_:_§fRare;§2Objet_de_Quête'
-
-
-
-
+Chair_Mute: ROTTEN_FLESH data:0 name:Chair_Mute lore:Chair_humaine_d'une_personne_muté;§2Objet_de_Quête
+Colis_Mine: CHEST data:0 name:Colis_Mine lore:Colis_pour_le_Chef_mineur_du_Forgeron;§2Objet_de_Quête

@@ -17,5 +17,5 @@ npcs:
   '408': Claire
   '448': Alchimiste
   '449': Jiang_Chen
-
-
+cancel: {}
+enabled: true

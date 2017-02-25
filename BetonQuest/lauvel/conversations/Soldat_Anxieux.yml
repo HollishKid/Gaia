@@ -9,7 +9,7 @@ stop: 'false'
 NPC_options:
   salut:
     text: 'Salut, as-tu vus le soldat ryan ? As-tu est nouveau !'
-    conditions: 'Besoin_Aide,!Soldat_Ryan,!Ryan_trouve,!Ryan_Done,Deuxieme_Escadron1'
+    conditions: 'Besoin_Aide,!Soldat_Ryan,!Ryan_trouve,!Ryan_Done,Recrue'
     pointers: non,nonmais
   biensur:
     text: 'Oui, bien sur, je pense qu''il se trouve encore à la blibliothèque mais elle est si grand ! /nDit-lui que le général le cherche !'

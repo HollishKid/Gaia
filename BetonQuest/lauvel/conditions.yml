@@ -1,43 +1,40 @@
-
-
+# 
+# Divers
 int_hist: tag default.approuved_intendant
 night: time 7-19
-
-#Condition Quêtes Secondaire
 #
+#Quêtes Secondaire
 Sir_tresor: tag Sir_tresor
 Tresor_trouve: tag Tresor_trouve
 Sir_James_done: tag Sir_James_done
-#
 Ryan_trouve: tag Ryan_trouve
 Soldat_Ryan: tag Soldat_Ryan
 Ryan_Done: tag Ryan_Done
-# Recrue
-#
 Donner_Lettre: tag Donner_Lettre
 Hist_Tag: tag Hist_Tag
+#
+#Quêtes Principales
+#Recrue
 Recrutement_Tag: tag Recrutement_Tag
 Besoin_Aide: tag Besoin_Aide
-Deuxieme_Escadron1: tag Deuxieme_Escadron1
-#
-
+Recrue: tag Recrue
 Quetes_Loyer: tag Quetes_Loyer
 Cruel_Tag: tag Cruel_Tag
 Bonter_Tag: tag Bonter_Tag
 Loyer_Payer: tag Loyer_Payer
 money_Loyer: money 1000
 Loyer_Done: tag Loyer_Done
-#
-
 Physicien_Done: tag Physicien_Done
 Physicien_tag: tag Physicien_tag
 physicien_book_tagged: tag physicien_book_tagged
-#
-
-#Conditions Quêtes Principale
-#
 Quetes_promo: tag Quetes_promo
-Aventurier_Ensorceler_kill: tag Aventurier_Ensorceler_kill
+Guerrier_Mute_kill: tag Guerrier_Mute_kill
 Alchimiste: tag Alchimiste
-
-
+Analyser: tag Analyser
+#
+#Soldat
+Soldat: tag Soldat
+Jacky_tag: tag Jacky_tag
+Jacky_res: item coal:30,cobblestone:64
+Jacky_res02: item stone_pickaxe:1,stone_sword:1
+jacky_res_take: take stone_pickaxe,stone_sword
