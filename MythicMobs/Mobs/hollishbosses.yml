@@ -86,6 +86,7 @@ netherien2:
   - summon{type=nether_cloud;amount=1;radius=15} ~onDamaged 0.25
   - skill{s=KarazschArcaneBolt} @target ~onTimer:80
   - summon{type=netherien_laser;amount=1;radius=5;os=true} ~onTimer:200
+  - command{c="netherien2killed"} @trigger ~onDeath
   Equipment:
   - nether_boss_head:4
   DamageModifiers:
@@ -221,6 +222,10 @@ zombie_minion2:
   Display: '&cMinion Zombie'
   Health: 30
   Damage: 3
+  Skills:
+  - particles{p=portal;a=10;hs=0.5;vs=0.7;s=0;y=0.7} @self ~onDamaged
+  - particles{p=portal;a=500;hs=0.7;vs=1.0;s=0;y=1.0} @self ~onDeath
+  - command{c="thisisthezombieminionkilled"} @trigger ~onDeath
   Faction: zombies
   Options:
     AlwaysShowName: true
@@ -244,6 +249,10 @@ skeleton_minion2:
   Type: skeleton
   Display: '&cMinion Squelette'
   Health: 25
+  Skills:
+  - particles{p=portal;a=10;hs=0.5;vs=0.7;s=0;y=0.7} @self ~onDamaged
+  - particles{p=portal;a=500;hs=0.7;vs=1.0;s=0;y=1.0} @self ~onDeath
+  - command{c="thisisthezombieminionkilled"} @trigger ~onDeath
   Faction: zombies
   Options:
     AlwaysShowName: true

@@ -200,6 +200,7 @@ on load:
     new Recipe "hache_maille"
     "hache_maille".Recipe.setIngredient{1, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
     "hache_maille".Recipe.setIngredient{2, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+	"hache_maille".Recipe.setIngredient{4, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
     "hache_maille".Recipe.setIngredient{5, 1 stick};
     "hache_maille".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
     "hache_maille".Recipe.setResult{1 stone axe named "Hache de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !"};
@@ -291,6 +292,7 @@ on load:
     new Recipe "hache_fer"
     "hache_fer".Recipe.setIngredient{1, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
     "hache_fer".Recipe.setIngredient{2, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+	"hache_fer".Recipe.setIngredient{4, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
     "hache_fer".Recipe.setIngredient{5, 1 stick};
     "hache_fer".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
     "hache_fer".Recipe.setResult{1 iron axe named "Hache en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !"};
@@ -383,6 +385,7 @@ on load:
     new Recipe "hache_or"
     "hache_or".Recipe.setIngredient{1, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
     "hache_or".Recipe.setIngredient{2, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+	"hache_or".Recipe.setIngredient{4, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
     "hache_or".Recipe.setIngredient{5, 1 stick};
     "hache_or".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
     "hache_or".Recipe.setResult{1 gold axe named "Hache en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..."};
@@ -474,6 +477,7 @@ on load:
     new Recipe "hache_diamant"
     "hache_diamant".Recipe.setIngredient{1, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
     "hache_diamant".Recipe.setIngredient{2, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+	"hache_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
     "hache_diamant".Recipe.setIngredient{5, 1 stick};
     "hache_diamant".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
     "hache_diamant".Recipe.setResult{1 diamond axe named "Hache en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};
@@ -841,22 +845,22 @@ on inventory close:
     if player's inventory contains leather helmet named "Casque en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather helmet named "Casque en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather helmet named "Casque en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's helmet
-        command "mm items give %player% casque_maille"
+        command "mm items give %player% casque_cuir"
 
     if player's inventory contains leather chestplate named "Plastron en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather chestplate named "Plastron en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather chestplate named "Plastron en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's chestplate
-        command "mm items give %player% plastron_maille"
+        command "mm items give %player% plastron_cuir"
 
     if player's inventory contains leather leggings named "Jambières en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather leggings named "Jambières en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather leggings named "Jambières en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's leggings
-        command "mm items give %player% jambes_maille"
+        command "mm items give %player% jambes_cuir"
 
     if player's inventory contains leather boots named "Bottes en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather boots named "Bottes en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather boots named "Bottes en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's shoes
-        command "mm items give %player% pieds_maille"
+        command "mm items give %player% pieds_cuir"
 #
 #
     if player's inventory contains wooden pickaxe named "Pioche en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":

@@ -319,6 +319,7 @@ tag_tenzin: tag tenzin
 # Journal
 journal_findaang: journal journal_findaang
 #
+air_moine_tempo: tag air_moine_tempo
 air_obj_distance_exe: region air_temple
 air_parcours_occupied: party 9999 air_parcours_occupied_exe count:1
 air_parcours_occupied2: party 9999 air_parcours_occupied_exe count:2

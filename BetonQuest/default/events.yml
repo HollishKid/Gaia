@@ -3319,11 +3319,19 @@ epee_svinkels: give ironaxe:1
 #
 #
 donjon_point1: point donjon 1
+nether_donjon2_portal_point1: point nether_portal_donjon2 1
+#
+nether_entrance_reached: folder nether_entrance_reached_message,nether_entrance_reached_exe
+nether_entrance_reached_message: 'message &d&lVous sentez une force s''emparer de vous...'
+nether_entrance_reached_message2: 'message &d&lVous arrivez dans le Nether !'
+nether_entrance_reached_exe: teleport -613;87;574;Gaia_nether
 #
 #
 #
-
-nether_portal1_entrance: if nether_donjon2_started nether_donjon2_started_message else nether_portal1_entrance2
+nether_portal1_entrance: 'command netherportalouest %player%'
+#
+#
+#nether_portal1_entrance: if nether_donjon2_started nether_donjon2_started_message else nether_portal1_entrance2
 nether_portal1_entrance2: if nether_donjon2_set nether_donjon2_inscription_procedure else nether_donjon2_set_procedure
 #
 nether_donjon2_started_message: 'message &d&oCe donjon est déjà entrain d''être attaqué par d''autres Aventuriers!'
@@ -3404,9 +3412,6 @@ nether_donjon2_netherien_killed_exe: folder nether_donjon2_netherien_killed_exe1
 nether_donjon2_netherien_killed_exe1: 'message &d&lVous venez de tuer le Nethérien ! Passez par le portail du Nether rapidement, avant que d''autres créatures n''arrivent !'
 nether_donjon2_portal_point1: point nether_portal_donjon2 1
 #
-nether_entrance_reached: folder nether_entrance_reached_message,nether_entrance_reached_exe
-nether_entrance_reached_message: 'message &d&lVous sentez une force s''emparer de vous... Vous arrivez dans le Nether !'
-nether_entrance_reached_exe: teleport -613;87;574;Gaia_nether
 #
 # Die
 #

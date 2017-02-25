@@ -30,9 +30,9 @@ regions:
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
-        leaveConsoleCommands: ''
-        leavePlayerCommands:
+        leaveConsoleCommands:
         - 'bq event %player% hollish.air_temple_lose'
+        leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
     'assault':
@@ -40,9 +40,19 @@ regions:
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
-        leaveConsoleCommands: ''
+        leaveConsoleCommands:
         leavePlayerCommands:
         - 'thisistheleaveconsolecommandforassault'
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'skywars':
+        enterConsoleCommands: ''
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        leavePlayerCommands:
+        - 'thisistheleaveconsolecommandforskz'
         sendLeaveMessage: false
         leaveMessage: ''
     'training_grounds':
@@ -584,6 +594,16 @@ regions:
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
+    'nether_portal2':
+        enterConsoleCommands: ''
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'quittingnetherportal2 %player%'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
     'dwarf_castle':
         enterConsoleCommands:
         - 'bq event %player% hollish.dwarf_castle_tester'
@@ -675,6 +695,19 @@ regions:
         enterConsoleCommands:
         - 'pex user %player% add -keepitems.keep'
         - 'title %player% title {"text":"Grand Nord","italic":true,"color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Perte d''Inventaire si vous mourrez !","bold":true,"color":"red"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'pex user %player% remove -keepitems.keep'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'gaia_nether':
+        enterConsoleCommands:
+        - 'pex user %player% add -keepitems.keep'
+        - 'title %player% title {"text":"Nether","italic":true,"color":"dark_purple"}'
         - 'title %player% subtitle {"text":"Perte d''Inventaire si vous mourrez !","bold":true,"color":"red"}'
         enterPlayerCommands: ''
         sendJoinMessage: false

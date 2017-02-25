@@ -59,6 +59,13 @@ on break:
 			else:
 				add player to {louvre_contributors::*}
 				add 1 to {block.breaks.louvre}
+	else if event-block is in the region "skywars":
+		if player's gamemode is survival:
+			if "%{mini.skywars.place::*}%" contains "%location of event-block%":
+				stop
+			else:
+				add location of event-block to {mini.skywars.location::*}
+				add type of event-block to {mini.skywars.type::*}
 
 on place:
 	if event-block is in the region "east":
@@ -89,6 +96,9 @@ on place:
 			else:
 				add player to {louvre_contributors::*}
 				add 1 to {block.placed.louvre}
+	else if event-block is in the region "skywars":
+		if player's gamemode is survival:
+			add location of event-block to {mini.skywars.place::*}
 
 on leaves decay:
 	if event-block is in the region "foret_athelas":

@@ -105,6 +105,16 @@ On death of player:
 			execute console command "title %victim% times 60 100 60"
 			execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
 			execute console command "title %victim% subtitle {""text"":""-%{_death_money_result.%victim%}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
+		else:
+			Wait 7 ticks
+			set {_death_money.%player%} to victim's money
+			set {_01} to 0.1
+			set {_death_money_result.%player%} to {_death_money.%player%} * {_01}
+			execute console command "eco take %victim% %{_death_money_result.%player%}%"
+			send "&cVous perdez &f¤&2%{_death_money_result.%victim%}% &cen mourrant." to victim
+			execute console command "title %victim% times 60 100 60"
+			execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
+			execute console command "title %victim% subtitle {""text"":""-%{_death_money_result.%victim%}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
 
 #
 # Disables rain & thunder in all worlds

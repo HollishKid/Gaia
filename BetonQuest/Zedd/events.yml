@@ -516,7 +516,7 @@ thiefkey_fold_occupied2: folder thieftreasure_removemember,thiefkey_fold_occupie
 thiefkey_fold_occupied_message: 'message &dIl semblerait que quelqu''un soit déjà entrain d''explorer cette cache, &crevenez plus tard&d!'
 thiefkey_fold_occupied_tele: teleport -7593;63;3072;Gaia
 ## ELSE
-thiefkey_fold: folder thieftreasure_member,open_thieftreasure
+thiefkey_fold: folder thieftreasure_member,open_thieftreasure,thieftreasure_tempo_tag
 thieftreasure_member: 'command region addmember thief_treasure -w Gaia %player%'
 thieftreasure_removemember: 'command region removemember thief_treasure -w Gaia %player%'
 open_thieftreasure: folder open_thieftreasure_exe,tt_closedelay delay:2
@@ -524,7 +524,9 @@ open_thieftreasure_exe: setblock REDSTONE_BLOCK -7587;58;3058;Gaia
 tt_closedelay: folder close_thieftreasure delay:7
 close_thieftreasure: setblock AIR -7587;58;3058;Gaia
 ##
-thieftreasure_reset: folder thieftreasure_removemember,yre_depop,orion_depop,orion_gateopen,fold_depop,yre_objkill_delete,yre_clean
+thieftreasure_tempo_tag: tag add thieftreasure_tempo_tag
+thieftreasure_tempo_tag_del: tag del thieftreasure_tempo_tag
+thieftreasure_reset: folder thieftreasure_tempo_tag,thieftreasure_removemember,yre_depop,orion_depop,orion_gateopen,fold_depop,yre_objkill_delete,yre_clean condition:thieftreasure_tempo_tag
 #
 nothing: tag del lachatemissembales
 ###

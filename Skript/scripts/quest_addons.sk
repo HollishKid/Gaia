@@ -1,5 +1,20 @@
 #
 #
+# On death Testers
+#
+#                   AirTemple, ThiefTreasure
+on death of player:
+	wait 50 ticks
+	force respawn victim
+#
+	if victim meets betonquest condition "hollish.air_moine_tempo":
+		fire betonquest event "hollish.air_temple_lose" for victim
+	if victim meets betonquest condition "Zedd.thieftreasure_tempo_tag":
+		fire betonquest event "Zedd.thieftreasure_reset" for victim
+
+
+#
+#
 # Fables - Extras
 #
 #
@@ -111,7 +126,6 @@ command /louvreweeklyreward <player>:
 			execute console command "eco give %arg 1% %{_louvre_weekly_reward}%"
 			add arg 1 to {louvre_contribution_received::*}
 		else:
-			broadcast "nope !"
 			message "&2Gestionnaire &f: &a&oIl semblerait que vous n'ayez contribué à aucun projet !" to arg 1
 			message "&a&oPour pouvoir prétendre à votre paiement, vous devez contribuer à au moins un projet." to arg 1
 			

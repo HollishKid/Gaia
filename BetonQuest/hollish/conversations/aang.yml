@@ -16,7 +16,7 @@ NPC_options:
     pointers: preuve,rentrer,temple,preuve_perdue,magic,fiole,fiole_air,fiole_air_done,aang_baton_done,air_wand_upgrade,rienmerci
   raconter_rep:
     text: 'Je ne sens aucun mensonge en vous... Vous devez dire vrai. Que puis-je pour vous ?'
-    events: tag_aang,journal_findaang_del,tag_moine_air_del
+    events: tag_aang,journal_findaang_del,tag_moine_air_del,air_moine_tempo_del
     pointers: preuve,rentrer,temple,rienmerci
   temple_rep:
     text: 'Cet endroit est vieux comme le monde de Gaïa ... Il flotte grâce à sa Magie, pour le protéger d''eventuels assaillants.'

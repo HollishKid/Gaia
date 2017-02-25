@@ -633,7 +633,8 @@ hol_popB3add: folder hol_popB3add1,hol_popB3add2,hol_popB3addsuite,hol_popaddmes
 hol_popB3add1: 'command mm m spawn erek_renfort 1 Gaia,-7411,51,3258'
 hol_popB3add2: 'command mm m spawn erek_renfort 1 Gaia,-7411,51,3286'
 hol_popaddmess: 'message &6&oErek appelle des renforts !'
-hol_popB3addsuite: folder hol_popB3add1,hol_popB3add2,hol_popB3addreset delay:5
+# removed hol_popB3addreset from hol_popB3addsuite
+hol_popB3addsuite: folder hol_popB3add1,hol_popB3add2 delay:5
 # This leads into an infinite loop.
 hol_popB3addreset: folder hol_popsalleB32 delay:30
 #

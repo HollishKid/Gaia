@@ -412,10 +412,12 @@ teleport_chute: teleport -2909;64;2860;Gaia
 water_access_on: setblock AIR -2906;185;2865;Gaia
 water_access_off: setblock DIRT -2906;185;2865;Gaia
 #
-air_mill_attained: folder ermite3_despawn,ermite_boat2_off,water_access_off delay:0
+air_mill_attained: folder ermite3_despawn,ermite_boat2_off,water_access_off,air_moine_tempo delay:0
 #
 # Parcours
 #
+air_moine_tempo: tag add air_moine_tempo
+air_moine_tempo_del: tag del air_moine_tempo
 tag_moine_air: tag add moine_air
 tag_moine_air_del: tag del moine_air
 air_mill_begin: folder title_airmill1,title_airmill2,title_airmill3,air_temple1_on,obj_air_temple_loc1,obj_air_temple_loc2,obj_air_temple_loc3,obj_air_temple_loc4,obj_air_temple_loc5,journal_findaang,journal_obj_airmill_del,tag_moine_air delay:0 condition:tag_moine_air
@@ -424,7 +426,7 @@ air_meka2: folder air_temple2_off,air_temple3_on delay:2
 air_meka3: folder air_temple3_off,air_temple4_on delay:2
 air_meka4: folder air_temple4_off delay:2
 air_meka5: folder air_temple_attained,title_airmill1,title_airmill2,title_airmill3 delay:1
-air_temple_attained: 'message &aVous arrivez sur l''île la plus grande. Essayez de retrouver Aang.'
+air_temple_attained: 'message &d&oVous arrivez sur l''île la plus grande. Essayez de retrouver &2Aang&d&o.'
 #
 title_airmill1: 'command title %player% times 20 100 20'
 title_airmill2: 'command title %player% subtitle {"text":"Trouver Aang","italic":true,"color":"gold"}'
@@ -437,7 +439,7 @@ obj_air_temple_loc5: objective start obj_air_temple_loc5
 #
 # LOSE
 #
-air_temple_lose: folder tag_moine_air_del,air_temple_lose_teleport,air_temple_lose_message,tag_air_temple_loser,obj_air_temple_loc1_remove,obj_air_temple_loc2_remove,obj_air_temple_loc3_remove,obj_air_temple_loc4_remove,obj_air_temple_loc5_remove,air_temple_closer_test delay:2
+air_temple_lose: folder air_moine_tempo_del,tag_moine_air_del,air_temple_lose_teleport,air_temple_lose_message,tag_air_temple_loser,obj_air_temple_loc1_remove,obj_air_temple_loc2_remove,obj_air_temple_loc3_remove,obj_air_temple_loc4_remove,obj_air_temple_loc5_remove,air_temple_closer_test delay:2 condition:air_moine_tempo
 air_temple_closer_test: folder air_temple_closer_test_executor delay:5
 air_temple_closer_test_executor: if air_parcours_occupied nothing else air_temple_closer_test_exe
 air_temple_closer_test_exe: folder air_temple1_off,air_temple2_off,air_temple3_off,air_temple4_off

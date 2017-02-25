@@ -34,50 +34,23 @@ on load:
 	set {event.breach} to 0
 	set {event.double.xp} to 0
 #
-	set {thief.treasure.security} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {thief.treasure.security} to -6753
-	set y coordinate of {thief.treasure.security} to 54
-	set z coordinate of {thief.treasure.security} to 2975
+	set {thief.treasure.security} to location at -6753, 54, 2975 of the world "Gaia"
 #
-	set {louvre_break_sign} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {louvre_break_sign} to -9761
-	set y coordinate of {louvre_break_sign} to 73
-	set z coordinate of {louvre_break_sign} to 2357
+	set {louvre_break_sign} to location at -9761, 73, 2357 of the world "Gaia"
 #
-	set {louvre_place_sign} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {louvre_place_sign} to -9761
-	set y coordinate of {louvre_place_sign} to 73
-	set z coordinate of {louvre_place_sign} to 2359
+	set {louvre_place_sign} to location at -9761, 73, 2359 of the world "Gaia"
 #
-	set {louvre_total_sign} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {louvre_total_sign} to -9761
-	set y coordinate of {louvre_total_sign} to 73
-	set z coordinate of {louvre_total_sign} to 2358
+	set {louvre_total_sign} to location at -9761, 73, 2358 of the world "Gaia"
 #
-	set {louvre_uruk_sign} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {louvre_uruk_sign} to -9755
-	set y coordinate of {louvre_uruk_sign} to 73
-	set z coordinate of {louvre_uruk_sign} to 2351
+	set {louvre_uruk_sign} to location at -9755, 73, 2351 of the world "Gaia"
 #
-	set {louvre_uruka_sign} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {louvre_uruka_sign} to -9753
-	set y coordinate of {louvre_uruka_sign} to 73
-	set z coordinate of {louvre_uruka_sign} to 2351
+	set {louvre_uruka_sign} to location at -9753, 73, 2351 of the world "Gaia"
 #
-	set {louvre_uruk_total_sign} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {louvre_uruk_total_sign} to -9754
-	set y coordinate of {louvre_uruk_total_sign} to 73
-	set z coordinate of {louvre_uruk_total_sign} to 2351
+	set {louvre_uruk_total_sign} to location at -9754, 73, 2351 of the world "Gaia"
 #
-	set {louvre_contributors_sign} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {louvre_contributors_sign} to -9760
-	set y coordinate of {louvre_contributors_sign} to 73
-	set z coordinate of {louvre_contributors_sign} to 2354
+	set {louvre_contributors_sign} to location at -9760, 73, 2354 of the world "Gaia"
 #
-	set {louvre_total_amount_sign} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {louvre_total_amount_sign} to -9758
-	set y coordinate of {louvre_total_amount_sign} to 73
-	set z coordinate of {louvre_total_amount_sign} to 2352
+	set {louvre_total_amount_sign} to location at -9758, 73, 2352 of the world "Gaia"
 #	
 #
 #
@@ -265,7 +238,6 @@ every 59 minutes in "Gaia":
 #
 # Chester
 #
-	add 32 wood to {_random.item.list::*}
 	add 1 diamond to {_random.item.list::*}
 	add 4 lapis to {_random.item.list::*}
 	add 2 emerald to {_random.item.list::*}
@@ -346,7 +318,7 @@ every 59 minutes in "Gaia":
 	add 1 diamond helmet to {_random.item.list::*}
 	add 1 diamond boots to {_random.item.list::*}
 	add 1 diamond leggings to {_random.item.list::*}
-	add 1 diamond sword to {_random.item.list::*}		
+	add 1 diamond sword to {_random.item.list::*}
 #
 # New & Fun
 #
