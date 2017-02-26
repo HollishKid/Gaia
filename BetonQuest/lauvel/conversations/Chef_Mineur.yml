@@ -1,0 +1,39 @@
+quester: 'Chef_Mineur'
+first: npc_01,npc_05
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  npc_01:
+    text: 'Bonjour, voulez vous un renseignement ?'
+    pointer: play_01,,play_02
+   npc_02:
+     text: 'La mine d''Historia permet de livrer au Forgeron ou au Chef de chantier. Mais il pourras être utiliser par tous le monde, mais faudras payer une taxe d'entré.'
+   npc_03:
+     text: 'Oh, mais c''est ce que j''ai demandais au Forgeron. Merci beaucoup.\nMhh...Est-ce que ca te génerer que je te demande de livrer ces pioches et épées à mes &43 Mineurs ?'
+     pointer: play_03
+   npc_04:
+     text: 'Je te remercie car j''ai beaucoup de travail donc je te récompenserais à ton arrivé.'
+     events: Qo_tag,Cm_jrl_del,Cm_jrl01 
+   npc_05:
+     text: 'Oh vous revoila, vous avez remis les outils 
+  
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  play_01:
+    text: 'A quoi sert cette mine ?'
+    pointer: npc_02
+  play_02:
+    text: 'Je suis ici pour vous livrez ceci.'
+    conditions: 'Colis_Mineur,Cm_tag'
+    pointer: npc_03
+  play_03:
+    text: 'Oui, pas de soucis'
+    pointer: npc_04

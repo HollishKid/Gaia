@@ -25,3 +25,5 @@ alc_new2: 'L''achimiste vous à dis qui faudras du temp pour l''analyser aller p
 Forge_jrl: 'Le chef vous as dis que le Forgeron avait un soucis, allez le voir.'
 Jacky_jrl: 'Jacky à besoin d''un stack de pierre et de 30 charbon allez lui en chercher.'
 Jacky_jrl02: 'Jacky vous demande de construire une épée et une pioche.'
+#
+Cm_jrl: 'Le Forgeron te demande de livré le colis au Chef mineur, au nord du château'

@@ -1,5 +1,5 @@
 quester: 'Jacky'
-first: npc_01
+first: npc_01,npc_02,npc_08
 stop: 'false'
 ###########
 #         #
@@ -54,7 +54,7 @@ NPC_options:
     pointer: play_14
   npc_16:
     text: 'Alors voici ce qui faut donner au chef mineur.'
-    events: Cm_tag,Cm_jrl,Cm_colis,Jacky_tag_del
+    events: Cm_tag,Cm_jrl,Cm_colis,Jacky_tag_del,Jacky_jrl02_del
   npc_17:
     text: 'Il se trouve au nord du château. vous le trouverez facilement.'
     pointer: play_16

@@ -1,0 +1,51 @@
+quester: 'Mineur'
+first: npc_00,npc_000,npc_01,npc_03,npc_05
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  npc_00:
+    text: 'Bonjour, vous avez un bon coup de pioche!'
+    conditions: 'Cm_tag,Acces_Mine,!Qo_tag,!Q1_tag,Q2_tag'
+  npc_000:
+    text: 'Bonjour, bonne journée pour miner, non?'
+    conditions: 'Cm_tag,!Qo_tag,!Q1_tag,Q2_tag'
+  npc_01:
+    text: 'Mais, que fais-tu ici ?'
+    conditions: Qo_tag
+    pointer: play_01
+  npc_02:
+    text: 'Oh je vois, merci!'
+    events: Q1_tag,Qo_tag_del,Q1_mes
+  npc_03:
+    text: 'Oh, serais-tu la pour mes outils ?'
+    conditions: Q1_tag
+    pointer: play_02
+  npc_04:
+    text: 'Ahah, merci beeacoup'
+    events: Q2_tag,Q1_tag_del,Q2_mes
+  npc_05:
+    text: '*soupir...* Comment peut-on travaillé si nous avons pas d'outil ?'
+    conditions: Q2_tag
+    pointer: play_03
+  npc_06:
+    text: 'Ah, enfin je peux retourner travaillé!'
+    events: Q3-tag,Q2_tag,Q3_mess,colis_del
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  play_01:
+    text: 'Le Chef mineur ma demande de vous remetre ceci.'
+    pointer: npc_02
+  play_02:
+    text: 'Oui, exact les voici.'
+    pointer: npc_04
+  play_03:
+    text: 'Ben ca tombe bien les voici.'
+    pointer: npc_06

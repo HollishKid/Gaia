@@ -92,6 +92,7 @@ Recrutement_Tag_Del: tag del Recrutement_Tag
 Chef_tous: folder Del_Chef_Journal,Aide_Journal,Besoin_Aide,Recrutement_Tag_Del delay:4
 Aide_Journal: journal add Aide_Journal
 Besoin_Aide: tag add Besoin_Aide
+#
 Quetes_promo: folder Quetes_promo_tag,Quetes_promo_journal,Quetes_promo_obj delay:2
 Quetes_promo_tag: tag add Quetes_promo
 Quetes_promo_journal: journal add Quetes_promo_journal1
@@ -112,6 +113,7 @@ Quetes_promo_obj_del: folder Promo_obj1_Del,Promo_obj2_Del delay:1
 Promo_obj1_Del: objective delete promo_obj1
 Promo_obj2_Del: objective delete promo_obj2
 mes_chef_q2: message &dAprès un long moment d'explication...
+#
 alchimiste: folder Quetes_promo_obj_del,Del_tag,Add_tag,Rel_Journal,GmK_Del delay:0
 Del_tag: tag del Quetes_promo
 Add_tag: tag add Alchimiste
@@ -145,6 +147,23 @@ Jacky_res_02: give Cobblestone:5,stick:3
 Jacky_jrl_del: journal del Jacky_jrl
 Jacky_jrl02: journal add Jacky_jrl02
 Jacky_tag_del: tag del Jacky_tag
+Jacky_jrl02_del: journal del Jacky_jrl02
+#
 Cm_tag: tag add Cm_tag
 Cm_jrl: journal add Cm_jrl
 Cm_colis: give Colis_Mine
+Qo_tag: tag add Qo_tag
+Cm_jrl_del: journal del Cm_jrl
+Cm_jrl01: journal add Cm_jrl01
+Q1_tag: tag add Q1_tag
+Qo_tag_del: tag del Qo_tag
+Q1_mes: 'message Outils remis - 1/3'
+Q2_tag: tag add Q2_tag
+Q1_tag_del: tag del Q1_tag
+Q2_mes: 'message Outils remis - 2/3'
+Q3_tag: tag add Q3_tag
+Q2_tag_del: tag del Q2_tag
+Q3_mes: folder Q3_mes01,Qdone_mes delay:3
+Q3_mes01: 'message Outils remis - 3/3'
+Qdone_mes: 'message vous pouvez retourner voir le &4Chef mineur.'
+colis_del: take Colis_Mine 

@@ -38,3 +38,10 @@ Jacky_tag: tag Jacky_tag
 Jacky_res: item coal:30,cobblestone:64
 Jacky_res02: item stone_pickaxe:1,stone_sword:1
 jacky_res_take: take stone_pickaxe,stone_sword
+#
+Colis_Mineur: item Colis_Mineur
+Cm_tag: tag Cm_tag
+Qo_tag: tag Qo_tag
+Q1_tag: tag Q1_tag
+Q2_tag: tag Q2_tag
+Q3_tag: tag Q3_tag
