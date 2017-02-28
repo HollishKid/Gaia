@@ -1,5 +1,5 @@
 quester: 'Jacky'
-first: npc_01,npc_02,npc_08
+first: npc_01,npc_02,npc_08,npc_18
 stop: 'false'
 ###########
 #         #
@@ -58,6 +58,16 @@ NPC_options:
   npc_17:
     text: 'Il se trouve au nord du château. vous le trouverez facilement.'
     pointer: play_16
+  npc_18:
+    text: '*Coup**Coup*..., oh, vous êtes enfin de retour et avec ma commande du menuisier qui plus est!\nAhah, je m''en suis douter que c''est malotru t''utiliserais pour faire leur travail!'
+    conditions: 'Me_ja'
+    pointer: play_17
+  npc_19:
+    text: 'Oui, je m'en doute, qu''est-ce qu'il ferons pas pour réduire leur travail!'
+    pointer: play_19
+  bnpc_20:
+    text: '*Surpri*, ahah, je t''aime bien ptit gars.\nBref, tu devrais retourner voir le Chef d''escouade.'
+    events: Me_ja_del,Qs_done,Ja_take,Cc_liv_done_del
 #############
 #           #
 #   Joueur  #
@@ -96,7 +106,7 @@ player_options:
   play_10:
     text: 'Que voulez vous ?!'
     pointer: npc_13
-  play11:
+  play_11:
     text: 'Oh, bien sur, je dois récupérer les ressorce moi-même?'
     pointer: npc_14
   play_12:
@@ -115,3 +125,12 @@ player_options:
   play_16:
     text: 'Ok, je m''en occupe'
     pointer: npc_16
+  play_17:
+    text: 'N'avez vous pas fais la même chose?'
+    pointer: npc_20
+  play_18:
+    text: 'Oui, j''ai un peu le tour de la ville.'
+    pointer: npc_19
+  play_19:
+    text: 'Un peu comme vous quoi!'
+    pointer: npc_20
