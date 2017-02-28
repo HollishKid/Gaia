@@ -19,20 +19,8 @@ NPC_options:
      text: 'Je te remercie car j''ai beaucoup de travail donc je te récompenserais à ton arrivé.'
      events: Qo_tag,Cm_jrl_del,Cm_jrl01 
    npc_05:
-     text: 'Oh vous revoila, vous avez remis les outils aux mineurs?'
-     conditions: 'Q_tag'
-     pointer: play_04,play_05
-   npc_06:
-     text: 'S'il vous plaît, pouvez-vous vous dépéchez? Car mes hommes pourrons pas travaillé.'
-   npc_07:
-     text: 'Merci, mes hommes pourrons enfin travaillé. \nPour ta récompense, je t''offre une entrée gratuite dans la mine.'
-     pointer: play_06,play_07  
-   npc_08:
-      text: 'Pas de soucis, J'ai encore un service à te demander. Peut-tu emmener ce stack de pierre au chef de chantier?
-      events: 'Cm_give,Cm_jrl02,Cm_jrl01_del,Cm_del,Cc_tag
-   npc_09:
-      text: 'Ne soyez pas si modeste, accepte ce présent que je vous offre.'
-      pointer: play_08
+     text: 'Oh vous revoila, vous avez remis les outils 
+  
 #############
 #           #
 #   Joueur  #
@@ -49,20 +37,3 @@ player_options:
   play_03:
     text: 'Oui, pas de soucis'
     pointer: npc_04
-  play_04:
-    text: 'Non, pas encore !'
-    conditions: 'Qo_tag,Q1_tag,Q2_tag'
-    pointer: npc_06
-  play_05:
-    text: 'Oui, je viens de finir.'
-    conditions: 'Q3_tag'
-    pointer: npc_07
-  play_06:
-    text: 'Merci beaucouq.'
-    pointer: npc_08
-  play_07:
-    text: 'Je ne peux pas accepter, j'ai fais ca pour la récompense.'
-    pointer: npc_09
-  play_08:
-    text: 'Bon d''accord, j'accepte avec plaisir. merci.'
-    pointer: npc_08

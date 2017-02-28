@@ -38,7 +38,6 @@ Jacky_tag: tag Jacky_tag
 Jacky_res: item coal:30,cobblestone:64
 Jacky_res02: item stone_pickaxe:1,stone_sword:1
 jacky_res_take: take stone_pickaxe,stone_sword
-
 #
 Colis_Mineur: item Colis_Mineur
 Cm_tag: tag Cm_tag
@@ -46,17 +45,3 @@ Qo_tag: tag Qo_tag
 Q1_tag: tag Q1_tag
 Q2_tag: tag Q2_tag
 Q3_tag: tag Q3_tag
-Q_tag: or Qo_tag,Q1_tag,Q2_tag,Q3_tag
-#
-Cc_tag: tag Cc_tag
-Cc_done: tag Cc_done
-Cc_liv_tag: tag Cc_liv
-Cc_liv_done: tag Cc_liv_done
-#
-Me_tag: tag Me_tag
-Me_bois: item Oak_Wood:16 
-Me_ja: tag Me_ja
-M1: tag M1
-M2: tag M
-#
-Qs_done: tag add Qs_done
