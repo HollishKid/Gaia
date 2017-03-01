@@ -200,7 +200,7 @@ on load:
     new Recipe "hache_maille"
     "hache_maille".Recipe.setIngredient{1, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
     "hache_maille".Recipe.setIngredient{2, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
-	"hache_maille".Recipe.setIngredient{4, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "hache_maille".Recipe.setIngredient{4, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
     "hache_maille".Recipe.setIngredient{5, 1 stick};
     "hache_maille".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
     "hache_maille".Recipe.setResult{1 stone axe named "Hache de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !"};
@@ -292,7 +292,7 @@ on load:
     new Recipe "hache_fer"
     "hache_fer".Recipe.setIngredient{1, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
     "hache_fer".Recipe.setIngredient{2, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
-	"hache_fer".Recipe.setIngredient{4, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "hache_fer".Recipe.setIngredient{4, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
     "hache_fer".Recipe.setIngredient{5, 1 stick};
     "hache_fer".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
     "hache_fer".Recipe.setResult{1 iron axe named "Hache en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !"};

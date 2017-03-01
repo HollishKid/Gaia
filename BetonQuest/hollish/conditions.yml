@@ -357,6 +357,18 @@ terre_find: tag terre_find
 terre_found: tag terre_found
 terre_orno: tag terre_orno
 terre_orno_done: tag terre_orno_done
+tag_terre_ingor: tag tag_terre_ingor
+emerald_volcano: item emerald_volcano
+emerald_enchante_hold: hand emerald_volcano_ench
+emerald_volcano_have: item emerald_volcano:10
+#
+# Earth Passage
+#
+earth_passage: tag earth_passage
+earth_pass_check: party 7777 earth_pass_check_occupied count:1
+earth_pass_check_occupied: region earth_passage
+earth_temple_door_check: party 7777 earth_temple_door_check_occupied count:1
+earth_temple_door_check_occupied: location -7422;24;126;Gaia 12
 #
 # Érudits (autres, tempo)
 #

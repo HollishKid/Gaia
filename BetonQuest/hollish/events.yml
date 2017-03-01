@@ -541,6 +541,8 @@ journal_terre_orno_done: journal add journal_terre_orno_done
 journal_terre_orno_done_del: journal del journal_terre_orno_done
 journal_terre_ingor: journal add journal_terre_ingor
 journal_terre_ingor_del: journal del journal_terre_ingor
+journal_terre_emerald: journal add journal_terre_emerald
+journal_terre_emerald_del: journal del journal_terre_emerald
 #
 tag_erudit_terre: tag add erudit_terre
 #
@@ -587,6 +589,38 @@ tag_terre_orno_done_del: tag del terre_orno_done
 folder_terre_ingor: folder tag_terre_orno_done_del,journal_terre_orno_done_del,tag_terre_ingor,journal_terre_ingor
 tag_terre_ingor: tag add tag_terre_ingor
 tag_terre_ingor_del: tag del tag_terre_ingor
+folder_terre_ingor_done: folder journal_terre_ingor_del,tag_terre_ingor_del,give_enchanted_emerald,tag_earth_passage,journal_terre_emerald delay:7
+tag_earth_passage: tag add earth_passage
+give_enchanted_emerald: give emerald_volcano_ench
+
+#
+# Earth Temple Passage & Door
+#
+earth_passage_checking: if earth_passage nothing else earth_temple_fall
+#
+earth_passage: folder earth_pass_open_exe,earth_time delay:0
+earth_time: folder earth_pass_check delay:17
+earth_pass_check: if earth_pass_check earth_time else earth_pass_close_exe
+earth_pass_open_exe: setblock REDSTONE_TORCH_ON -7377;41;283;Gaia
+earth_pass_close_exe: setblock AIR -7377;41;283;Gaia
+#
+
+earth_temple_door: if emerald_enchante_hold earth_temple_door_exe else earth_t_door_mess
+earth_t_door_mess: 'message &d&oVous sentez l''emeraude s''agiter dans votre poche...'
+earth_temple_door_exe: folder earth_temple_exe,earth_temple_exe2,earth_temple_time delay:0
+earth_temple_time: folder earth_temple_door_check delay:2
+earth_temple_door_check: if earth_temple_door_check earth_temple_time else earth_temple_closer
+earth_temple_closer: folder porte_earth_temple_exe_close,porte_earth_temple_exe_close2,tag_remove_global_etd
+earth_temple_exe: setblock AIR -7422;24;126;Gaia
+earth_temple_exe2: setblock AIR -7422;23;126;Gaia
+porte_earth_temple_exe_close: setblock EMERALD_BLOCK -7422;24;126;Gaia
+porte_earth_temple_exe_close2: setblock EMERALD_BLOCK -7422;23;126;Gaia
+tag_remove_global_etd: 'command bq delete tag hollish.global_hollish.sanctuary_door'
+
+
+earth_temple_door: if emerald_enchante_hold earth_temple_door_o else nothing
+earth_temple_door_o: folder tag_remove_global_etd
+tag_remove_global_etd: 'command bq delete tag hollish.global_hollish.earth_temple_door'
 #
 #
 #

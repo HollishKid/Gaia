@@ -312,7 +312,7 @@ Sound_Notify:
   Enabled: true
   
   # Play a sound to player only when their are afk? Checked from Essentials plugin.
-  Notify_Only_When_Afk: true
+  Notify_Only_When_Afk: false
 
   # Play a sound to player only when someone writes following characters before
   # their name: Set to none to play a sound when the players name is mentioned in the chat.
@@ -361,7 +361,7 @@ Groups:
 Updater:
   Enabled: true
   Notify: true
-  Download: true
+  Download: false
   
   # Disable important announcements after the plugin has been loaded
   Check_Notes: true
@@ -378,10 +378,14 @@ Writer:
   # Commands that will be saved along with chat messages.
   Write_Commands:
   - tell
+  - message
+  - whisper
+  - w
+  - r
 
-Minimum_Players_To_Enable_Checks: 0
+Minimum_Players_To_Enable_Checks: 1
 Op_Has_Permissions: true
-Regex_Timeout_Milis: 100
+Regex_Timeout_Milis: 250
 
 # To customize a locale, make file in localization/messages_LOCALENAME.yml
 # It will be filled with all the values.
@@ -391,7 +395,7 @@ Locale: fr
 # Time of some plugin's operations is measured.
 # Print a message in the console if they take longer than specified millisecond time.
 # Set to 0 to disable.
-Log_Lag_Over_Milis: 100
+Log_Lag_Over_Milis: 250
 
 # If a message was caught by a rule print info to the console.
 # It is possible to hide individual packet rules from appearing

@@ -890,12 +890,15 @@ outer_mine_denied: folder outer_mine_denied_mess,outer_mine_denied_tele
 outer_mine_denied_mess: 'message &d&lL''accès à cette mine est réservée aux Membres de la Guilde des Mineurs qui ont le métier de Mineur.'
 outer_mine_denied_tele: teleport -6602;63;2734;Gaia
 #
-foret_athelas2: if bucheron foret_athelas2_title else nothing
+foret_athelas2: if bucheron foret_athelas2_title else foret_athelas2_teleout
 foret_athelas2_title: folder foret_athelas2_title2,foret_athelas2_title3,foret_athelas2_title4,foret_athelas2_perk
 foret_athelas2_title2: 'command title %player% times 20 100 20'
 foret_athelas2_title3: 'command title %player% title {"text":"Forêt","color":"dark_purple"}'
 foret_athelas2_title4: 'command title %player% subtitle {"text":"Perte d''Inventaire si vous mourrez !","bold":true,"color":"red"}'
 foret_athelas2_perk: 'command pex user %player% add -keepitems.keep'
+foret_athelas2_teleout: folder foret_athelas2_teleout1,foret_athelas2_teleout2
+foret_athelas2_teleout1: teleport -6769;67;2678;Gaia
+foret_athelas2_teleout2: 'message &d&lL''accès à cette forêt est réservée aux Membres de la Guilde des Bûcherons.'
 #
 #
 guerrier_menu: 'command cc open guerrier %player%'

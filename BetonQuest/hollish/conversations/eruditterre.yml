@@ -21,7 +21,7 @@ NPC_options:
     text: 'Je suis un des 4 &3Érudits &a&odu &dSanctuaire&a&o. Je suis &dÉrudit &a&ode la Terre.'
     pointers: comment,autres
   keske_rep:
-    text: 'Cet endroit est consacré à la recherche sur la Terre en tant qu''élément. \nJ''y fais mes recherches, j''y enseigne et j''y vis. \nMon rôle est aussi d''enseigner les &3Minions.'
+    text: 'Cet endroit est consacré à la recherche sur la Terre en tant qu''élément. \nJ''y fais mes recherches, j''y enseigne et j''y vis. \nMon rôle est aussi d''enseigner les &dMinions&a&o.'
     pointers: minions
   comment_rep:
     text: 'Cela veut dire que mes recherches portent sur la Terre en tant qu''élément consituant de notre monde. \nPlus particulièrement la Magie qui y est associée...'
@@ -63,15 +63,18 @@ NPC_options:
   connu:
     text: 'Vous revoilà mon petit caillou !'
     conditions: 'tag_erudit_terre'
-    pointers: pierre_perdu,borne_found,orno_done,qui,keske,aurevoir
+    pointers: emeraudes_have,pierre_perdu,borne_found,orno_done,qui,keske,aurevoir
 #
 #
   borne_found_rep:
-    text: Hm... \nSi la Pierre de Terre l'a indiquée, c'est qu'elle doit avoir du sens. \nVas voir Orno à la Bibliothèque d'Athelas, il pourra sûrement nous aider !
+    text: Hm... \nSi la Pierre de Terre l'a indiquée, c'est qu'elle doit avoir du sens... \nVas voir Orno à la Bibliothèque d'Athelas, il pourra sûrement nous aider !
     events: folder_earth_orno
   orno_done_rep:
-    text: Très bien ! \nCes Emeraude Volcanique sont minables uniquement dans les Mines d'Ingor. \nAllez voir si vous pouvez en obtenir 10 et revenez me voir !
+    text: Très bien ! \nCes Emeraudes Volcaniques sont minables uniquement dans les Mines d'Ingor. \nAllez voir si vous pouvez en obtenir 10 et revenez me voir !
     events: folder_terre_ingor
+  emeraudes_have_rep:
+    text: 'Excellent, passes moi ces emeraudes. \nJe vais les fusionner ensemble et enchanter le produit.'
+    events: folder_terre_ingor_done
 ############
 #          #
 #  JOUEUR  #
@@ -128,17 +131,23 @@ player_options:
     text: 'Je suis ici pour me présenter en tant que votre humble Étudiant.'
     pointers: etudiant,etudiant_refoule
   pierre_perdu:
-    text: J'ai perdu la Pierre de Terre !
+    text: 'J''ai perdu la Pierre de Terre !'
     conditions: '!pierre_terre_have,terre_find'
     events: pierre_perdu_give
   borne_found:
-    text: J'ai trouvé une borne avec une inscription étrange.
+    text: 'J''ai trouvé une borne avec une inscription étrange.'
     condition: terre_found
     pointer: borne_found_rep
   orno_done:
-    text: Orno m'a dit que l'incantation nécessitait une Emeraude Volcanique.
+    text: 'Orno m''a dit que l''incantation nécessitait une Emeraude Volcanique.'
     condition: terre_orno_done
     pointer: orno_done_rep
+  emeraudes_have:
+    text: 'J''ai les 10 Emeraudes Volcaniques !'
+    conditions: emerald_volcano_have,tag_terre_ingor
+    pointer: emeraudes_have_rep
+
+    
 #######################################
 #
 #

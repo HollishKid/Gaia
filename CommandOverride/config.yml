@@ -12,7 +12,7 @@
 # This Plugin utilises an Auto-Updater. If you want to turn that off,
 # simply set options -> auto-update to false
 options:
-  auto-update: true
+  auto-update: false
   use-unknown-command-message: false
   unknown-command-message: '&7Sorry, I do not recognize this Command! Please type
     &b/help &7for Help.'
@@ -116,7 +116,7 @@ commands:
   - command:/pets
   /closethisshit: []
   /enregistrer:
-  - console:/pex user <player> timed add authme.player.register 7 
+  - console:/pex user <player> timed add authme.player.register 7
   - WAIT 1
   - op-command:/register <arg 0> <arg 1>
   - WAIT 2
@@ -140,6 +140,7 @@ commands:
   - WAIT 2
   - op-command:/thisisthechangerecoverycommand <arg 0> <arg 1>
   /envoyermdp:
+  - console:/pex user <player> timed add authme.player.email.recover 7
   - WAIT 1
   - op-command:/email recovery <arg 0>
   /thisisthehelpopcommand:

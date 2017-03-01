@@ -10,6 +10,7 @@ varobj: variable
 sanctuary_door: location -7110;67;2441;Gaia 20 events:sanctuary_door
 castle_door: location -7013;89;2937;Gaia 7 events:castle_door
 biblio_door: location -6723;66;2885;Gaia 14 events:biblio_door
+earth_temple_door: location -7422;23;127;Gaia 10 events:earth_temple_door
 louvre_doors: location -9729;71;2452;Gaia 10 events:louvre_doors
 louvre_stairs: location -9729;72;2387;Gaia 20 events:louvre_stairs
 #

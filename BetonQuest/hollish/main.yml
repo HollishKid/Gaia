@@ -1,4 +1,4 @@
-global_locations: sanctuary_door,biblio_door,castle_door,louvre_doors,louvre_stairs
+global_locations: sanctuary_door,biblio_door,castle_door,earth_temple_door,louvre_doors,louvre_stairs
 npcs:
   '79': hrota
   '120': aiguilleur_village

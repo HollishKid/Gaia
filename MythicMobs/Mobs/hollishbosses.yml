@@ -356,6 +356,7 @@ gardessancossi:
 nainsingor:
   Type: ZOMBIE_VILLAGER
   Equipment:
+  - iron_helmet:4
   - iron_chestplate:3
   - iron_axe:0
   Disguise:

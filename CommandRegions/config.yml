@@ -5,6 +5,16 @@
 #Perform certain commands when a player enters/leaves a specific WorldGuard region
 
 regions:
+    'earth_passage':
+        enterConsoleCommands:
+        - 'bq event %player% hollish.earth_passage'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
     'ingor_forge':
         enterConsoleCommands:
         - 'bq event %player% hollish.ingor_forge_entry'
@@ -489,6 +499,7 @@ regions:
         - "title %player% times 20 100 20"
         - 'title %player% subtitle {"text":"Centre d''Athelas","italic":true,"color":"gray"}'
         - 'title %player% title {"text":"Spawn","color":"dark_purple"}'
+        - 'pex user %player% remove -keepitems.keep'
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''

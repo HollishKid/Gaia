@@ -67,10 +67,7 @@ on sign change:
 #
 #
 on load:
-	set {earth_temple_loc} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {earth_temple_loc} to -7411
-	set y coordinate of {earth_temple_loc} to 64
-	set z coordinate of {earth_temple_loc} to 355
+	set {earth_temple_loc} to location at -7411, 64, 355 of the world "Gaia"
 #
 # Érudit de la Terre
 #
@@ -91,8 +88,12 @@ on rightclick on sign:
     if line 1 of the clicked block is "&l&oElen síla":
         if line 2 of the clicked block is "&l&olúmenn'":
             if line 3 of the clicked block is "&l&oomentielvo":
-                message "Une Force étrange émane de cet endroit..."
-#				if player meets betonquest condition "":
+                message "&d&oUne Force étrange émane de cet endroit..."
+                if player meets betonquest condition "hollish.emerald_enchante_hold":
+                    message "&d&oLa terre tremble sous vos pieds..."
+                    wait 2 seconds
+                    message "&d&o...elle s'est fendue en deux !"
+                    set the block at location at -7377, 41, 283 of the world "Gaia" to redstone block
 
 #
 #
