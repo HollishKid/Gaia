@@ -148,22 +148,59 @@ Jacky_jrl_del: journal del Jacky_jrl
 Jacky_jrl02: journal add Jacky_jrl02
 Jacky_tag_del: tag del Jacky_tag
 Jacky_jrl02_del: journal del Jacky_jrl02
+Ja_take: take Oak_Wood:16
 #
 Cm_tag: tag add Cm_tag
 Cm_jrl: journal add Cm_jrl
-Cm_colis: give Colis_Mine
-Qo_tag: tag add Qo_tag
-Cm_jrl_del: journal del Cm_jrl
-Cm_jrl01: journal add Cm_jrl01
-Q1_tag: tag add Q1_tag
-Qo_tag_del: tag del Qo_tag
-Q1_mes: 'message Outils remis - 1/3'
-Q2_tag: tag add Q2_tag
-Q1_tag_del: tag del Q1_tag
-Q2_mes: 'message Outils remis - 2/3'
-Q3_tag: tag add Q3_tag
-Q2_tag_del: tag del Q2_tag
-Q3_mes: folder Q3_mes01,Qdone_mes delay:3
-Q3_mes01: 'message Outils remis - 3/3'
-Qdone_mes: 'message vous pouvez retourner voir le &4Chef mineur.'
-colis_del: take Colis_Mine 
+ Q2_tag_del: tag del Q2_tag
+ Q3_mes: folder Q3_mes01,Qdone_mes delay:3
+ Q3_mes01: 'message Outils remis - 3/3'
+ Qdone_mes: 'message vous pouvez retourner voir le &4Chef mineur.'
+ colis_del: take Colis_Mine  
+ colis_del: take Colis_Mine 
+ Cm_give: give cobblestone:64
+ Cm_jrl02: journal add Cm_jrl02
+ Cm_jrl01_del: journal del Cm_jrl01
+ Cm_del: folder Qo_tag_del,Q1_tag_del,Q2_tag_del,Q3_tag_del,Cm-tag delay:1
+ Qo_tag_del: tag del Qo_tag
+ Q1_tag_del: tag del Q1_tag
+ Q2_tag_del: tag del Q2_tag
+ Q3_tag_del: tag del Q3_tag
+ Cm_tag: tag del Cm_tag
+ Cm_jrl02_del: journal del Cm_jrl02
+ #
+ Cc_tag: tag add Cc_tag
+ Cc_take: take cobblestone:60
+ Cc_obj: objective start Cc_obj
+ Cc_reset: folder Cc_1,Cc_2,Cc_3,Cc_4 delay:0
+ Cc_done: tag add Cc_done
+ Cc_done_del: tag del Cc_done
+ Cc_jrl: journal add Cc_jrl
+ Cc_jrl_del: journal del Cc_jrl
+ Cc_jrl01: journal add Cc_jrl01
+ Cc_tag_del: tag del Cc_tag
+ Cc_liv_tag: tag add Cc_liv
+ Cc_liv: give Oak_Wood:64,Oak_Wood:64
+ Cc_take2: take Oak_Wood:64,Oak_Wood:64
+ Cc_liv_del: tag del Cc_liv
+ Cc_liv_done: tag add Cc_liv_done
+ Cc_jrl01_del: journal del Cc_jrl01
+ Cc_jrl02: journal add Cc_jrl02
+ Cc_jrl02_del: journal del Cc_jrl02
+ Cc_liv_done_del: tag del Cc_liv_done
+ #
+ Me_tag: tag add Me_tag
+ Me_jrl: journal add Me_jrl
+ Ga_tag: tag add Ga_tag
+ Me_tag_del: tag del Me_tag
+ Me_co: tag add Me_co
+ Me_ja: tag add Me_ja
+ Me_co_del: tag del Me_co
+ Me_jrl_del: journal del Me_jrl
+ Me_jrl01: journal add Me_jrl01
+ Me_ja_del: tag del Me_ja
+ Ga_tag_del: tag del Ga_tag
+ M1: tag add M1
+ M1_del: tag del M1
+ M2: tag add M2
+ M2_del:  tag del M2

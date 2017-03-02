@@ -26,4 +26,15 @@ Forge_jrl: 'Le chef vous as dis que le Forgeron avait un soucis, allez le voir.'
 Jacky_jrl: 'Jacky à besoin d''un stack de pierre et de 30 charbon allez lui en chercher.'
 Jacky_jrl02: 'Jacky vous demande de construire une épée et une pioche.'
 #
-Cm_jrl: 'Le Forgeron te demande de livré le colis au Chef mineur, au nord du château'
+Cm_jrl: 'Le Forgeron te demande de livré le colis au &dChef mineur&0&o, au nord du château'
+Cm_jrl: 'Le Forgeron te demande de livré le colis au &dChef mineur&0&o, au nord du château'
+Cm_jrl01: 'Le Chef mineur vous demande de remettre les pioches et épée aux &dmineurs.'
+Cm_jrl02: 'Le Chef mineur vous demande de livré un stack de pierre aux &dChef de chantier'
+#
+Cc_jrl: 'Le Chef de Chantier vous demande de placer les 4 dernière pierre au emplacement prévue.'
+Cc_jrl01: 'Vous devez trouver le &dMenuisier &0&opour savoir sur la commande du Chef de Chantier.'
+Cc_jrl02: 'La livraison est prête allez livré le bois au Chef de chantier et retourner voir le Menuisier.'
+#
+Me_jrl: 'Vous devez récuperer 16bois de chêne. Passer par le &dGarde Forestier &0&opour entré dans la forêt.'
+Me_jrl01: 'Vous pouvez maintenant livré le bois au &dChef de chantier &0&oet au &dForgeron&0&o.'
+Me_jrl02: 'Vous pouvez maintenant livré le bois au &dForgeron&0&o.' 

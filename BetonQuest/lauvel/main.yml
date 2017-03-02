@@ -17,5 +17,11 @@ npcs:
   '408': Claire
   '448': Alchimiste
   '449': Jiang_Chen
+  '456': Garde_Forestier
+  '457': Chef-Mineur
+  '458': Menuisier
+  '459': Mineur
+  '460': Mineur
+  '461': Mineur
 cancel: {}
 enabled: true

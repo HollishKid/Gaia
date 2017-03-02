@@ -1,0 +1,62 @@
+quester: 'Menuisier'
+first: npc_01,npc_05,npc_06
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  npc_01:
+    text: 'Bonjour, alors que voulez-vous du chêne, ou peut-être du bouleaux?'
+    pointer: play_01
+  npc_02:
+    text: 'Oh, je vois. Elle est prêtes à être livré. \nMais avant ça, j'ai besoin que tu entre dans la forêt et que tu récupere 16 bois de chêne pour le Forgeron.
+    pointer: play_02,play_03
+  npc_03:
+    text: 'Ok, voici la livraison 1stack de bois de chêne et 1stack de bouleaux.'
+    events: 'Cc_liv,Cc_liv_tag,Cc_tag_del,Cc_jrl02,Cc_jrl01_del'
+  npc_04:
+    text: 'Ok, passe par le Garde forestier pour entrée dans la forêt.'
+    evenst: 'Me_jrl,Cc_jrl01_del,Ga_tag,Me_tag_del,Me_co,M1'
+  npc_05: 
+    text: 'Ah vous revoilà, donc pour entrée dans la forêt passer par le garde forestier.'
+    conditions: 'Cc_liv_done,Me_jrl,Cc_jrl02_del,Ga_tag,!Me_ja,M2'
+    events: Me_jrl,Cc_jrl2_del,Ga_tag,Me_tag_del,Me_co,Cc_liv_done_del
+  npc_06:
+    text: 'As-tu récuperer les 16 bois de chêne?'
+    pointer: play_04,play_05
+  npc_07:
+    text: 'Perdé pas trop de temp'
+  npc_08:
+    text: 'Parfait, donc vous pouvez allez livrer ca au Forgeron
+    conditions: 'M2'
+    events: 'Me_jrl02,Me_jrl_del,Me_ja,Me_co_del'
+  npc_09:
+    text: 'Parfait, vous pouvez maintenant livré ça au Chef de Chantier et au Forgeron.
+    conditions: 'M1'
+    events: Me_jrl01,Me_jrl_del,Me_ja,Me_co_del,Cc_liv,Cc_liv_tag'
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  play_01:
+    text: 'Je viens demander pour la commande du Chef de chantier.'
+    conditions: 'Me_tag'
+    pointer: npc_02
+  play_02:
+    text: 'oui pas de soucis. Mais je vais déjà livré celui du Chef de chantier et je reviens.
+    pointer: npc_03
+  play_03:
+    text: 'Oui pas de soucis, je m'en occupe.'
+    pointer: npc_04
+  play_04:
+    text: 'Non pas encore'
+    conditions: 'Me_co'
+    pointer: npc_07
+  play_05:
+    text: 'Oui, c''est fais.'
+    conditions: 'Me_co,Me_bois
+    pointer: npc_08,npc_09 
