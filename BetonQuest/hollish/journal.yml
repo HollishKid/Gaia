@@ -31,11 +31,11 @@ journal_aang_baton: 'Aang m''a instruit de tailler un bâton avec le bois de mon
 journal_apprenti: 'L''Apprenti m''a dit d''aller montrer le Gros Os au Moine François. Il se trouve au Spiritualium d''Athelas (-6632,106,3000)'
 journal_francois: 'Le Moine François m''a informé que je devrais enterrer le Gros Os dans un bloc d''herbe. Pour ce faire je dois faire un clic-droit sur n''importe quel bloc d''herbe avec le Gros Os à la main.'
 journal_francois2: 'J''ai enterré le Gros Os. Je devrais retourner voir le Moine François (-6632,106,3000) pour lui dire que j''ai senti une très forte présence de Spiritualité en l''enterrant.'
-journal_nauco: 'Le Nain Casar m''a dit d''aller parler au Nain Nauco pour réparer le pont qui mène vers le château au nord.'
+journal_nauco: 'Le Nain Casar m''a dit d''aller parler au Nain Nauco pour réparer le pont qui mène vers le château à l'est.'
 journal_nauco_pierre: 'Le Nain Nauco m''a dit qu''il fallait lui apporter 50 Pierres, 10 Pierres Taillées et 5 Escaliers en Pierre pour réparer le pont.'
-journal_nauco_armes: 'Le Nain Nauco a dit qu''il fallait 3 haches en fer et 3 plastrons en fer pour équiper les nains qui vont mener l''assaut avec moi au château ! Je dois les forger moi même !'
+journal_nauco_armes: 'Le Nain Nauco a dit qu''il fallait 3 haches en fer et 3 plastrons en fer pour équiper les nains qui vont mener l''assaut avec moi au château ! Je dois les forger moi même et un par un ; plusieurs crafts simultanés ne comptent pas !'
 journal_nauco_weapons_done: 'J''ai forgé les 3 haches en fer et les 3 plastrons en fer demandé par le Nain Nauco. Je devrais les lui apporter.'
-journal_sancossi: 'Le pont au nord, vers l''ancien Château des Nains à Ingor, a été réparé. Le Château est encore occupé par Sancossi, le chef des Gobelins. Je dois le chasser de ce château !'
+journal_sancossi: 'Le pont à l''est, vers l''ancien Château des Nains à Ingor, a été réparé. Le Château est encore occupé par Sancossi, le chef des Gobelins. Je dois le chasser de ce château !'
 journal_backto_casar: 'J''ai tué le Goblin Sancossi ! Je devrais aller donner cette nouvelle au Chef d''Ingor, Casar. Peut être que je pourrais encore l''aider !'
 journal_norno: 'Je dois retrouver le Nain Norno, il se trouve dans le Hall des Nains à Ingor.'
 journal_norno_trans: 'Je devrais retourner voir le Nain Norno pour aider à la réparation du château.'
@@ -47,7 +47,7 @@ journal_norno5: 'Pour ériger la statue de Casar, je dois apporter 250 Pierres T
 journal_casar_north: 'Le Château des Nains d''Ingor est réparé. Je peux retourner voir Casar pour savoir si je peux l''aider davantage.'
 journal_casar_killingspree: 'Casar m''a dit d''aller tuer 15 Goblins dans leur Bastion. (-6610,65,2477)'
 journal_killed_spree: 'J''ai tué les 15 Goblins. Je devrais retourner voir Casar.'
-journal_north_bridge_repair: 'Je dois apporter 200 Pierres Taillées et 100 Planches de Chêne à Casar pour réparer le pont vers le Nord.'
+journal_north_bridge_repair: 'Je dois apporter 200 Pierres Taillées et 100 Planches de Chêne à Casar pour réparer le pont vers le Grand Nord.'
 journal_hrota: 'Hróta m''a dit que je devais disperser les Gobelins autour de la Mine d''Ingor. Je dois tuer 20 Archers Gobelins et 30 Gobelins dans un rayon de 200 blocs autour de l''entrée de la Mine d''Ingor.'
 journal_hrota_back: 'J''ai tué suffisament de Gobelins dans la zone. Je devrais retourner voir Hróta à l''entrée de la Mine d''Ingor.'
 journal_train_village: 'Le moine Ardère, au village au Nord d''Athelas, m''a demandé de lui ramener 3 lingots de fer pour pouvoir réparer la ligne de train.'
@@ -57,7 +57,15 @@ journal_terre_found: 'J''ai trouvé une inscription étrange sur une borne dans 
 journal_terre_orno: 'L''Érudit de la Terre m''a dit d''aller voir Orno à la Bibliothèque d''Athelas. Il devrait pouvoir me renseigner sur l''incantation mystérieuse sur la borne.'
 journal_terre_orno_done: 'Orno m''a dit que l''incantation était un ancien salut à la Terre et qu''elle nécessite des Emeraudes Polies. Je devrais aller le dire à l''Érudit de la Terre.'
 journal_terre_ingor: 'Je dois aller miner 10 Emeraudes Volcaniques dans les Mines d''Ingor. Je devrais ensuite les ramener à l''Érudit de la Terre.'
-journal_terre_emerald: 'Je devrais retourner au Temple de la Terre et cliquer sur la borne avec l''incantation en tenant l''Emeraude Enchanté en main.'
+journal_terre_emerald: 'Je devrais retourner au Temple de la Terre et cliquer sur la borne avec l''incantation en tenant l''Emeraude Enchanté en main. Je devrais chercher à entrer dans le temple...'
+journal_livre_earth_found: 'J''ai trouvé le temple de la Terre représenté par Toph qui m''a donné un livre de Magie de la Terre. Je devrais retourner voir l''Érudit de la Terre pour lui en faire part !'
+journal_earthtemple_magic_learning: 'L''Érudit de la Terre m''a dit de m''instruire davantage au Temple de la Terre. Je peux me rendre à ce temple avec le moine grâce aux réseaux de racines des arbres. (-6580,75,2900)'
+
+
+
+
+
+
 
 
 

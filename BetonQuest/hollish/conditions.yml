@@ -370,13 +370,18 @@ earth_pass_check_occupied: region earth_passage
 earth_temple_door_check: party 7777 earth_temple_door_check_occupied count:1
 earth_temple_door_check_occupied: location -7422;24;126;Gaia 12
 #
+# Toph
+#
+tag_toph: tag toph
+earthtemple_magic_learning: tag earthtemple_magic_learning
+#
 # Érudits (autres, tempo)
 #
-earthtemple_magic_learning: tag earthtemple_magic_learning
 firetemple_magic_learning: tag firetemple_magic_learning
 watertemple_magic_learning: tag watertemple_magic_learning
-tag_erudit_eau: tag erudit_eau
+
 tag_erudit_terre: tag erudit_terre
+tag_erudit_eau: tag erudit_eau
 tag_erudit_feu: tag erudit_feu
 #
 #

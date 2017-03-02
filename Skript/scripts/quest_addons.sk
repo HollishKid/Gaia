@@ -61,6 +61,16 @@ on sign change:
             if player's gamemode is survival:
                 cancel event
                 message "&dVous ne parvenez pas à créer cette Pancarte."
+    if line 1 is "&l&oElen síla":
+        if line 2 is "&l&olúmenn'":
+            if line 3 is "&l&oomentielvo":
+                cancel event
+                message "&dVous ne parvenez pas à créer cette Pancarte."
+    if line 1 is "~~~~~~":
+        if line 4 is "~~~~~~":
+            cancel event
+            message "&dVous ne parvenez pas à créer cette Pancarte."
+				
 #
 #
 # Terre
@@ -94,7 +104,87 @@ on rightclick on sign:
                     wait 2 seconds
                     message "&d&o...elle s'est fendue en deux !"
                     set the block at location at -7377, 41, 283 of the world "Gaia" to redstone block
+    if line 1 of the clicked block is "~~~~~~":
+        if line 4 of the clicked block is "~~~~~~":
+            message "&d&oVous entendez un léger clic derrière le mur."
+            if line 2 of the clicked block is "1":
+                add 1 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "2":
+                add 2 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "3":
+                add 3 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "4":
+                add 4 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "5":
+                add 5 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "6":
+                add 6 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "7":
+                add 7 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "8":
+                add 8 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "9":
+                add 9 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
 
+command /thisistheearthlockpadchecker <player>:
+	executable by: console
+	trigger:
+		if {earth_lockpad_%arg 1%::1} is 3:
+			if {earth_lockpad_%arg 1%::2} is 1:
+				if {earth_lockpad_%arg 1%::3} is 4:
+					if {earth_lockpad_%arg 1%::4} is 1:
+						loop {earth_lockpad_%arg 1%::*}:
+							delete {earth_lockpad_%arg 1%::%loop-index%}
+						message "&a&oVous trouvez la bonne combinaison." to arg 1
+						message "&a&oVous entendez un bruit de blocs qui se décale !" to arg 1
+						set block at location at -7422, 24, 126 of the world "Gaia" to air
+						set block at location at -7422, 23, 126 of the world "Gaia" to air
+						wait 12 seconds
+						set block at location at -7422, 24, 126 of the world "Gaia" to emerald block
+						set block at location at -7422, 23, 126 of the world "Gaia" to emerald block
+					else:
+						set block at location at -7422, 24, 126 of the world "Gaia" to emerald block
+						set block at location at -7422, 23, 126 of the world "Gaia" to emerald block
+						message "&cVous n'avez pas rentré la bonne combinaison." to arg 1
+						loop {earth_lockpad_%arg 1%::*}:
+							delete {earth_lockpad_%arg 1%::%loop-index%}
+				else:
+					set block at location at -7422, 24, 126 of the world "Gaia" to emerald block
+					set block at location at -7422, 23, 126 of the world "Gaia" to emerald block
+					message "&cVous n'avez pas rentré la bonne combinaison." to arg 1
+					loop {earth_lockpad_%arg 1%::*}:
+						delete {earth_lockpad_%arg 1%::%loop-index%}
+			else:
+				set block at location at -7422, 24, 126 of the world "Gaia" to emerald block
+				set block at location at -7422, 23, 126 of the world "Gaia" to emerald block
+				message "&cVous n'avez pas rentré la bonne combinaison." to arg 1
+				loop {earth_lockpad_%arg 1%::*}:
+					delete {earth_lockpad_%arg 1%::%loop-index%}
+		else:
+			set block at location at -7422, 24, 126 of the world "Gaia" to emerald block
+			set block at location at -7422, 23, 126 of the world "Gaia" to emerald block
+			message "&cVous n'avez pas rentré la bonne combinaison." to arg 1
+			loop {earth_lockpad_%arg 1%::*}:
+				delete {earth_lockpad_%arg 1%::%loop-index%}
+			
 #
 #
 #

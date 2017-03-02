@@ -63,11 +63,11 @@ NPC_options:
   connu:
     text: 'Vous revoilà mon petit caillou !'
     conditions: 'tag_erudit_terre'
-    pointers: emeraudes_have,pierre_perdu,borne_found,orno_done,qui,keske,aurevoir
+    pointers: pierre_perdu,borne_found,orno_done,emeraudes_have,temple_found,qui,keske,aurevoir
 #
 #
   borne_found_rep:
-    text: Hm... \nSi la Pierre de Terre l'a indiquée, c'est qu'elle doit avoir du sens... \nVas voir Orno à la Bibliothèque d'Athelas, il pourra sûrement nous aider !
+    text: Hm... \nSi la Pierre de Terre l'a indiquée, c'est qu'elle doit avoir du sens... \nAllez voir voir Orno à la Bibliothèque d'Athelas, il pourra sûrement nous aider !
     events: folder_earth_orno
   orno_done_rep:
     text: Très bien ! \nCes Emeraudes Volcaniques sont minables uniquement dans les Mines d'Ingor. \nAllez voir si vous pouvez en obtenir 10 et revenez me voir !
@@ -75,6 +75,9 @@ NPC_options:
   emeraudes_have_rep:
     text: 'Excellent, passes moi ces emeraudes. \nJe vais les fusionner ensemble et enchanter le produit.'
     events: folder_terre_ingor_done
+  temple_found_rep:
+    text: 'C''est une incroyable nouvelle ! \nMerci de m''avoir aidé dans cette recherche ! \nJe vous libère de mon Apprentissage. \nRetournez au &dTemple de la Terre &a&opour en apprendre plus sur la Magie !'
+    events: journal_airtemple_magic_learning_del,journal_livre_earth_found_del,earthtemple_magic_learning,journal_earthtemple_magic_learning,quest_point_2,earth_reward,earth_reward_mess
 ############
 #          #
 #  JOUEUR  #
@@ -83,6 +86,7 @@ NPC_options:
 player_options:
   qui:
     text: 'Qui êtes vous ?'
+    conditions: '!earthtemple_magic_learning'
     pointers: qui_rep
   keske:
     text: 'Que faites vous ici ?'
@@ -136,7 +140,7 @@ player_options:
     events: pierre_perdu_give
   borne_found:
     text: 'J''ai trouvé une borne avec une inscription étrange.'
-    condition: terre_found
+    condition: 'terre_found'
     pointer: borne_found_rep
   orno_done:
     text: 'Orno m''a dit que l''incantation nécessitait une Emeraude Volcanique.'
@@ -144,9 +148,12 @@ player_options:
     pointer: orno_done_rep
   emeraudes_have:
     text: 'J''ai les 10 Emeraudes Volcaniques !'
-    conditions: emerald_volcano_have,tag_terre_ingor
+    conditions: 'emerald_volcano_have,tag_terre_ingor'
     pointer: emeraudes_have_rep
-
+  temple_found:
+    text: 'J''ai trouvé le Temple de la Terre !'
+    conditions: 'tag_toph,!earthtemple_magic_learning'
+    pointer: temple_found_rep
     
 #######################################
 #

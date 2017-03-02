@@ -10,7 +10,7 @@
 #                 By Hollish
 #
 #
-################################################################### THIS IS A MESSAGE FOR SPARADRA59
+###################################################################
 nothing: tag del inexistent_tag
 #
 quest_point_1: folder default.quest_point_1
@@ -297,7 +297,7 @@ varkopack_done: folder tag_burried_gros_os_del,journal_francois2_del,Zedd.var_q2
 #
 #
 #
-# Erudits
+# Érudits
 #
 #
 #############################################
@@ -425,7 +425,7 @@ air_meka1: folder air_temple1_off,air_temple2_on delay:1
 air_meka2: folder air_temple2_off,air_temple3_on delay:2
 air_meka3: folder air_temple3_off,air_temple4_on delay:2
 air_meka4: folder air_temple4_off delay:2
-air_meka5: folder air_temple_attained,title_airmill1,title_airmill2,title_airmill3 delay:1
+air_meka5: folder air_temple_attained,title_airmill1,title_airmill2,title_airmill3,air_temple4_off delay:1
 air_temple_attained: 'message &d&oVous arrivez sur l''île la plus grande. Essayez de retrouver &2Aang&d&o.'
 #
 title_airmill1: 'command title %player% times 20 100 20'
@@ -592,9 +592,8 @@ tag_terre_ingor_del: tag del tag_terre_ingor
 folder_terre_ingor_done: folder journal_terre_ingor_del,tag_terre_ingor_del,give_enchanted_emerald,tag_earth_passage,journal_terre_emerald delay:7
 tag_earth_passage: tag add earth_passage
 give_enchanted_emerald: give emerald_volcano_ench
-
 #
-# Earth Temple Passage & Door
+# Earth Temple Passage & Tree
 #
 earth_passage_checking: if earth_passage nothing else earth_temple_fall
 #
@@ -604,23 +603,21 @@ earth_pass_check: if earth_pass_check earth_time else earth_pass_close_exe
 earth_pass_open_exe: setblock REDSTONE_TORCH_ON -7377;41;283;Gaia
 earth_pass_close_exe: setblock AIR -7377;41;283;Gaia
 #
-
-earth_temple_door: if emerald_enchante_hold earth_temple_door_exe else earth_t_door_mess
-earth_t_door_mess: 'message &d&oVous sentez l''emeraude s''agiter dans votre poche...'
-earth_temple_door_exe: folder earth_temple_exe,earth_temple_exe2,earth_temple_time delay:0
-earth_temple_time: folder earth_temple_door_check delay:2
-earth_temple_door_check: if earth_temple_door_check earth_temple_time else earth_temple_closer
-earth_temple_closer: folder porte_earth_temple_exe_close,porte_earth_temple_exe_close2,tag_remove_global_etd
-earth_temple_exe: setblock AIR -7422;24;126;Gaia
-earth_temple_exe2: setblock AIR -7422;23;126;Gaia
-porte_earth_temple_exe_close: setblock EMERALD_BLOCK -7422;24;126;Gaia
-porte_earth_temple_exe_close2: setblock EMERALD_BLOCK -7422;23;126;Gaia
-tag_remove_global_etd: 'command bq delete tag hollish.global_hollish.sanctuary_door'
-
-
-earth_temple_door: if emerald_enchante_hold earth_temple_door_o else nothing
-earth_temple_door_o: folder tag_remove_global_etd
-tag_remove_global_etd: 'command bq delete tag hollish.global_hollish.earth_temple_door'
+#
+# Toph
+#
+#
+journal_livre_earth_found: journal add journal_livre_earth_found
+journal_livre_earth_found_del: journal del journal_livre_earth_found
+journal_earthtemple_magic_learning: journal add journal_earthtemple_magic_learning
+journal_earthtemple_magic_learning_del: journal del journal_earthtemple_magic_learning
+#
+tag_toph: tag add toph
+earthtemple_magic_learning: tag add earthtemple_magic_learning
+livre_earth_give: 'command mgive %player% book:earthbending'
+earth_reward: point default.spirituality 30
+earth_reward_mess: 'message &dVous gagnez &a&l30 &dpoints de Spiritualité !'
+#
 #
 #
 #
@@ -1242,12 +1239,17 @@ sbib_welcome3: 'command title %player% subtitle {"text":"Bienvenue à vous","col
 #
 #
 #
-# APPA TRANSPORTATION
+# TEMPLE TRANSPORTATION
 #
 #
 ################################################################
 appa_temple: teleport -3003;168;2929;Gaia
 appa_athelas: teleport -6587;92;2898;Gaia
+
+tree_temple: folder earth,tree_temple_teleport
+tree_temple_teleport: teleport -7470;23;175;Gaia
+tree_athelas: folder earth,tree_athelas_teleport
+tree_athelas_teleport: teleport -6533;70;2866;Gaia
 #
 #
 #
@@ -1748,12 +1750,11 @@ prison_information4: 'message &cVous avez été averti &2%point.avertissements.a
 #
 #
 temp_ban: folder temp_ban_exe,temp_ban_reset,temp_ban_message delay:5
-temp_ban_message: folder temp_ban_message_exe,temp_ban_broadcast
+temp_ban_message: folder temp_ban_message_exe
 temp_ban_message_exe: 'message &cVous avez été averti &23 &cfois, vous allez être banni pour 48 heures de Gaïa.'
-temp_ban_broadcast: 'command broadcast &2%player% &ca été banni pendant 48 heures de Gaïa.'
 temp_ban_reset: point avertissements *0
 temp_ban_exe: folder temp_bannissement delay:5
-temp_bannissement: 'command tempban %player% 48h 1s Vous avez été averti 5 fois.'
+temp_bannissement: 'command tempban %player% 48h 1s Vous avez été averti 3 fois.'
 #
 #
 prison_free: teleport -6952;64;2970;Gaia

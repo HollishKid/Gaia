@@ -1,4 +1,4 @@
-global_locations: sanctuary_door,biblio_door,castle_door,earth_temple_door,louvre_doors,louvre_stairs
+global_locations: sanctuary_door,biblio_door,castle_door,louvre_doors,louvre_stairs
 npcs:
   '79': hrota
   '120': aiguilleur_village
@@ -17,7 +17,6 @@ npcs:
   '328': aang
   '335': apprenti
   '349': aiguilleur
-  '351': aiguilleur
   '352': aiguilleur
   '353': aiguilleur
   '354': aiguilleur
@@ -35,6 +34,9 @@ npcs:
   '451': gatito
   '453': gestionnaire_louvre
   '454': raxe
+  '462': toph
+  '463': moineearth
+  '464': moineearth
 effects:
   Helix:
     class: HelixEffect

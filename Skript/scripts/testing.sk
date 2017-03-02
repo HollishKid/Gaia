@@ -98,6 +98,18 @@
 #			else:
 #				add 1 to {last.logout.mailed.%loop-value%}
 #				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus de trois mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
+on right click on lever:
+	if lever is placed on note block or redstone lamp: 
+		if frame is placed on note block or redstone lamp:
+			if spawn creeper is placed on frame:
+				command "eco take %player% 100"
+				message "Vous misez ¤ 100"
+				set {_percentchance} to a ramdom integer between 1 and 100
+				if {_percentchance} is between 1 and 50:
+					message "Vous perdez votre mise."
+				if {_percentchance} is between 51 and 100:
+					command "eco give %player% 200"
+
 command /teamtesting:
 	trigger:
 		set {redteam.%player%} to 1

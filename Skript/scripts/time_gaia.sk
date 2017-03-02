@@ -146,12 +146,6 @@ every 59 minutes in "Gaia":
 	set {day.index} to {day.index::1}
 	set {hour.system} to "%hour%"
 	wait 1 second
-	broadcast "&c&oLe Continent de l'Est tremble..."
-	wait 2 seconds
-	broadcast "&c&o...la terre semble se reconstituer..."
-	wait 2 seconds
-	broadcast "&c&o...méfiez vous de ne pas suffoquer dans un bloc !"
-	wait 7 seconds
 #
 #
 # At Midnight
@@ -159,15 +153,23 @@ every 59 minutes in "Gaia":
 #
 	execute console command "mail send Hollish RESTORE CHECK - %{day.index}% %{hour.system}%"
 	if {hour.system} is "0":
+		broadcast "&c&oLe Continent de l'Est tremble..."
+		wait 2 seconds
+		broadcast "&c&o...la terre semble se reconstituer..."
+		wait 2 seconds
+		broadcast "&c&o...méfiez vous de ne pas suffoquer dans un bloc !"
+		wait 7 seconds
 		execute console command "mail send Hollish RESTORE CHECK - %{day.index}% %{hour.system}%"
 		loop {place.location.%{day.index}%::*}:
 			set block at loop-value to air
 			delete {place.location.%{day.index}%::%loop-index%}
+			wait 1 tick
 		wait 22 ticks
 		loop {break.location.%{_day.index.temp}%::*}:
 			set block at loop-value to {break.type.%{day.index}%::%loop-index%}
 			delete {break.location.%{day.index}%::%loop-index%}
 			delete {break.type.%{day.index}%::%loop-index%}
+			wait 1 tick
 #
 #
 # At 23H - Only on Sunday
@@ -214,49 +216,50 @@ every 59 minutes in "Gaia":
 	loop {place.location.mine1::*}:
 		set block at loop-value to air
 		delete {place.location.mine1::%loop-index%}
-	wait 7 ticks
+		wait 1 tick
 	loop {place.location.mine2::*}:
 		set block at loop-value to air
 		delete {place.location.mine2::%loop-index%}
-	wait 7 ticks
+		wait 1 tick
 	loop {place.location.mine3::*}:
 		set block at loop-value to air
 		delete {place.location.mine3::%loop-index%}
-	wait 7 ticks
+		wait 1 tick
 	loop {place.location.volcano::*}:
 		set block at loop-value to air
 		delete {place.location.volcano::%loop-index%}
-	wait 7 ticks
+		wait 1 tick
 #
 	loop {break.location.mine1::*}:
 		set block at loop-value to {break.type.mine1::%loop-index%}
 		delete {break.location.mine1::%loop-index%}
 		delete {break.type.mine1::%loop-index%}
-	wait 7 ticks
+		wait 1 tick
 	loop {break.location.mine2::*}:
 		set block at loop-value to {break.type.mine2::%loop-index%}
 		delete {break.location.mine2::%loop-index%}
 		delete {break.type.mine2::%loop-index%}
-	wait 7 ticks
+		wait 1 tick
 	loop {break.location.mine3::*}:
 		set block at loop-value to {break.type.mine3::%loop-index%}
 		delete {break.location.mine3::%loop-index%}
 		delete {break.type.mine3::%loop-index%}
+		wait 1 tick
 	loop {break.location.volcano::*}:
 		set block at loop-value to {break.type.volcano::%loop-index%}
 		delete {break.location.volcano::%loop-index%}
 		delete {break.type.volcano::%loop-index%}
-	wait 7 ticks
+		wait 1 tick
 	loop {break.location.foret::*}:
 		set block at loop-value to {break.type.foret::%loop-index%}
 		delete {break.location.foret::%loop-index%}
 		delete {break.type.foret::%loop-index%}
-	wait 7 ticks
+		wait 1 tick
 	loop {break.location.foret2::*}:
 		set block at loop-value to {break.type.foret2::%loop-index%}
 		delete {break.location.foret2::%loop-index%}
 		delete {break.type.foret2::%loop-index%}
-	wait 7 seconds
+		wait 1 tick
 #
 # Chester
 #
@@ -365,7 +368,7 @@ every 59 minutes in "Gaia":
 command /rollbackeast <text>:
 	executable by: console
 	trigger:
-		message "&a&lDébut du RollBack pour jour (ID) : &6%arg 1%"
+		broadcast "&a&lDébut du RollBack pour jour (ID) : &6%arg 1%"
 		loop {place.location.%arg 1%::*}:
 			set block at loop-value to air
 			delete {place.location.%arg 1%::%loop-index%}
@@ -376,7 +379,7 @@ command /rollbackeast <text>:
 			delete {break.location.%arg 1%::%loop-index%}
 			delete {break.type.%arg 1%::%loop-index%}
 			wait 1 tick
-		message "&2&lFin du RollBack pour jour (ID) : &6%arg 1%"
+		broadcast "&2&lFin du RollBack pour jour (ID) : &6%arg 1%"
 		
 # Chester
 
