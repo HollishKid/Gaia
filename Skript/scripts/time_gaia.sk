@@ -13,7 +13,6 @@ on quit:
 	set {last.logout.%player%} to now
 	remove player from {online.players::*}
 on join:
-	set {last.logout.mailed.%player%} to 0
 	add  player to {online.players::*}
 	wait 30 seconds
 	if {event.double.xp} is 1:
@@ -21,75 +20,78 @@ on join:
 		message "&aTous les XP gagnés sont doublés tous les mercredis entre 16H et 20H !"
 	if {event.breach} is 1:
 		send player title "&c&lBrèche" with subtitle "Athelas est assiégé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
-		message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"
-
-command /admininfo:
-	trigger:
-		message "%{online.players::*}%"
-		message "%{random.item.list::1}%"
-		clear {online.players::*}
-		loop {online.players::*}:
-			delete {online.players::%loop-index%}
-			message "%{online.players::%loop-index%}%"
-		delete {online.players::*}
-		loop 350 times:
-			add 1 to {_tempo_var}
-			delete {random.item.list::%{_tempo_var}%}
-		clear {_tempo_var}
-		
-		
+		message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"	
 #
 #
 # On Load
 #
 #
 on load:
+	execute console command "xprate reset"
 	execute console command "region removemember foret_athelas -a -w Gaia"
 	set {day.index::*} to contents from url "https://gaia-minecraft.000webhostapp.com/day.php/"
 	set {day.index} to {day.index::1}
 	set {event.breach} to 0
 	set {event.double.xp} to 0
-	wait 5 minutes
-	loop {email.list::*}:
-		if difference between {last.logout.%loop-value%} and now is smaller than 3 days:
-			stop
-		else:
-			if {last.logout.mailed.%loop-value%} is 1:
-				stop
-			else:
-				add 1 to {last.logout.mailed.%loop-value%}
-				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus d'un mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
-		
-		if difference between {last.logout.%loop-value%} and now is smaller than 5 days:
-			stop
-		else:
-			if {last.logout.mailed.%loop-value%} is 2:
-				stop
-			else:
-				add 1 to {last.logout.mailed.%loop-value%}
-				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus de trois mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
+#
+	set {thief.treasure.security} to location at -6753, 54, 2975 of the world "Gaia"
+#
+	set {louvre_break_sign} to location at -9761, 73, 2357 of the world "Gaia"
+#
+	set {louvre_place_sign} to location at -9761, 73, 2359 of the world "Gaia"
+#
+	set {louvre_total_sign} to location at -9761, 73, 2358 of the world "Gaia"
+#
+	set {louvre_uruk_sign} to location at -9755, 73, 2351 of the world "Gaia"
+#
+	set {louvre_uruka_sign} to location at -9753, 73, 2351 of the world "Gaia"
+#
+	set {louvre_uruk_total_sign} to location at -9754, 73, 2351 of the world "Gaia"
+#
+	set {louvre_contributors_sign} to location at -9760, 73, 2354 of the world "Gaia"
+#
+	set {louvre_total_amount_sign} to location at -9758, 73, 2352 of the world "Gaia"
+#	
 #
 #
 # 3 minute intervaller
 #
 #
-variables:
-	minute.index = 1
-	
 every 3 minutes in "Gaia":
 	set {_random.motd} to a random integer between 1 and 9
 	execute console command "tm abc -silent ${motd%{_random.motd}%}"
-	set {_thief.treasure.security} to location at 0, 0, 0 of the world "Gaia"
-	set x coordinate of {_thief.treasure.security} to -6753
-	set y coordinate of {_thief.treasure.security} to 54
-	set z coordinate of {_thief.treasure.security} to 2975
-	set block at {_thief.treasure.security} to redstone torch on
+#
+	set block at {thief.treasure.security} to redstone torch on
 	wait 1 second
-	set block at {_thief.treasure.security} to air
+	set block at {thief.treasure.security} to air
+#
+	set line 3 of block at {louvre_break_sign} to "%{block.breaks.louvre}%"
+	set line 3 of block at {louvre_place_sign} to "%{block.placed.louvre}%"
+	set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
+	set line 3 of block at {louvre_total_sign} to "%{_block.total.louvre}%"
+#
+	set line 3 of block at {louvre_uruk_sign} to "%{louvre_uruk_kills}%"
+	set line 3 of block at {louvre_uruka_sign} to "%{louvre_uruka_kills}%"
+	set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
+	set line 3 of block at {louvre_uruk_total_sign} to "%{_louvre_uruk_total}%"
+#
+	loop {louvre_contributors::*}:
+		add 1 to {_louvre_contributors_amount}
+	set line 3 of block at {louvre_contributors_sign} to "%{_louvre_contributors_amount}%"
+#
+	set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
+	set {_block.total.louvre} to {_block.total.louvre} / 100
+	set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
+	set {_louvre_uruk_total} to {_louvre_uruk_total} / 10
+	set {_louvre_weekly_reward} to {_block.total.louvre} + {_louvre_uruk_total}
+	set line 3 of block at {louvre_total_amount_sign} to "¤ %{_louvre_weekly_reward}%"
 
 #		
 #
+#
 # Static Events
+#
+#
 #
 every 5 minutes in "Gaia":
 	set {hour.system} to "%hour%"
@@ -132,95 +134,135 @@ every 5 minutes in "Gaia":
 				loop all players:
 					send loop-player title "&aBrèche" with subtitle "&aEnnemi repoussé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 #
-#			
-#				
-#			
-
+#
 #
 # Every Hour in Gaïa
 #
 #
-every 55 minutes in "Gaia":	
 #
-# At 5 o'clock
-#   East Continent reset
+
+every 59 minutes in "Gaia":	
+	set {day.index::*} to contents from url "https://gaia-minecraft.000webhostapp.com/day.php/"
+	set {day.index} to {day.index::1}
 	set {hour.system} to "%hour%"
-	if {day.index} is "7":
-		if {hour.system} is "5":
-			loop {place.location.1::*}:
-				set block at loop-value to air
-				delete {place.location.1::%loop-index%}
-			wait 22 ticks
-			loop {break.location.1::*}:
-				set block at loop-value to {break.type.1::%loop-index%}
-				delete {break.location.1::%loop-index%}
-				delete {break.type.1::%loop-index%}
-			
-	else:
-		if {hour.system} is "5":
-			set {_day.index.temp} to {day.index} + 1
-			loop {place.location.%{_day.index.temp}%::*}:
-				set block at loop-value to air
-				delete {place.location.%{_day.index.temp}%::%loop-index%}
-			wait 22 ticks
-			loop {break.location.%{day.index.temp}%::*}:
-				set block at loop-value to {break.type.%{day.index.temp}%::%loop-index%}
-				delete {break.location.%{_day.index.temp}%::%loop-index%}
-				delete {break.type.%{_day.index.temp}%::%loop-index%}
+	wait 1 second
+#
+#
+# At Midnight
+# Eastern Reset
+#
+	execute console command "mail send Hollish RESTORE CHECK - %{day.index}% %{hour.system}%"
+	if {hour.system} is "0":
+		broadcast "&c&oLe Continent de l'Est tremble..."
+		wait 2 seconds
+		broadcast "&c&o...la terre semble se reconstituer..."
+		wait 2 seconds
+		broadcast "&c&o...méfiez vous de ne pas suffoquer dans un bloc !"
+		wait 7 seconds
+		execute console command "mail send Hollish RESTORE CHECK - %{day.index}% %{hour.system}%"
+		loop {place.location.%{day.index}%::*}:
+			set block at loop-value to air
+			delete {place.location.%{day.index}%::%loop-index%}
+			wait 1 tick
+		wait 22 ticks
+		loop {break.location.%{_day.index.temp}%::*}:
+			set block at loop-value to {break.type.%{day.index}%::%loop-index%}
+			delete {break.location.%{day.index}%::%loop-index%}
+			delete {break.type.%{day.index}%::%loop-index%}
+			wait 1 tick
+#
+#
+# At 23H - Only on Sunday
+#    Louvre Reset
+#
+	else if {hour.system} is "23":
+		if {day.index} is "7":
+			set {block.breaks.louvre} to 0
+			set {block.placed.louvre} to 0
+			set {louvre_uruk_kills} to 0
+			set {louvre_uruka_kills} to 0
+			loop {louvre_contributors::*}:
+				delete {louvre_contributors::%loop-index%}
+			loop {louvre_contribution_received::*}:
+				delete {louvre_contribution_received::%loop-index%}
 	wait 22 ticks
 #
+#
 # Mine Manager
+#
+#
+
+#
+# Security
+#
+	loop all players:
+		if loop-player is in the region "mine_athelas_mine":
+			teleport loop-player to location at -6803, 67, 2904 of the world "Gaia"
+			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
+		else if loop-player is in the region "mine_athelas_mine2":
+			teleport loop-player to location at -6803, 67, 2904 of the world "Gaia"
+			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
+		else if loop-player is in the region "dwarf_mine":
+			teleport loop-player to location at -6604, 64, 2736 of the world "Gaia"
+			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
+		else if loop-player is in the region "ingor_volcano":
+			teleport loop-player to location at -6501, 84, 2197 of the world "Gaia"
+			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
+	wait 7 ticks
+
+#
+# Rollbacks
 #
 	loop {place.location.mine1::*}:
 		set block at loop-value to air
 		delete {place.location.mine1::%loop-index%}
-	wait 2 ticks
+		wait 1 tick
 	loop {place.location.mine2::*}:
 		set block at loop-value to air
 		delete {place.location.mine2::%loop-index%}
-	wait 2 ticks
+		wait 1 tick
 	loop {place.location.mine3::*}:
 		set block at loop-value to air
 		delete {place.location.mine3::%loop-index%}
-	wait 2 ticks
+		wait 1 tick
 	loop {place.location.volcano::*}:
 		set block at loop-value to air
 		delete {place.location.volcano::%loop-index%}
-	wait 2 ticks
+		wait 1 tick
+#
 	loop {break.location.mine1::*}:
 		set block at loop-value to {break.type.mine1::%loop-index%}
 		delete {break.location.mine1::%loop-index%}
 		delete {break.type.mine1::%loop-index%}
-
-	wait 2 ticks
+		wait 1 tick
 	loop {break.location.mine2::*}:
 		set block at loop-value to {break.type.mine2::%loop-index%}
 		delete {break.location.mine2::%loop-index%}
 		delete {break.type.mine2::%loop-index%}
-	wait 2 ticks
+		wait 1 tick
 	loop {break.location.mine3::*}:
 		set block at loop-value to {break.type.mine3::%loop-index%}
 		delete {break.location.mine3::%loop-index%}
 		delete {break.type.mine3::%loop-index%}
+		wait 1 tick
 	loop {break.location.volcano::*}:
 		set block at loop-value to {break.type.volcano::%loop-index%}
 		delete {break.location.volcano::%loop-index%}
 		delete {break.type.volcano::%loop-index%}
-	wait 2 ticks
+		wait 1 tick
 	loop {break.location.foret::*}:
 		set block at loop-value to {break.type.foret::%loop-index%}
 		delete {break.location.foret::%loop-index%}
 		delete {break.type.foret::%loop-index%}
-	wait 2 ticks
+		wait 1 tick
 	loop {break.location.foret2::*}:
 		set block at loop-value to {break.type.foret2::%loop-index%}
 		delete {break.location.foret2::%loop-index%}
 		delete {break.type.foret2::%loop-index%}
-	wait 5 seconds
+		wait 1 tick
 #
 # Chester
 #
-	add 32 wood to {_random.item.list::*}
 	add 1 diamond to {_random.item.list::*}
 	add 4 lapis to {_random.item.list::*}
 	add 2 emerald to {_random.item.list::*}
@@ -301,7 +343,9 @@ every 55 minutes in "Gaia":
 	add 1 diamond helmet to {_random.item.list::*}
 	add 1 diamond boots to {_random.item.list::*}
 	add 1 diamond leggings to {_random.item.list::*}
-	add 1 diamond sword to {_random.item.list::*}		
+	add 1 diamond sword to {_random.item.list::*}
+	loop 100 times:
+		add 1 air to {_random.item.list::*}
 #
 # New & Fun
 #
@@ -310,9 +354,71 @@ every 55 minutes in "Gaia":
 	loop {chester::*}:
 		remove all items from inventory of block at {chester::%loop-index%}
 	wait 7 ticks
-	loop 2 times:
+	loop 4 times:
 		loop {chester::*}:
-			set {randomitem} to random element out of {_random.item.list::*}
-			add a random item out of {randomitem} to the inventory of block at {chester::%loop-index%}
-	wait 7 ticks
-	delete {randomitem}
+			add a random item out of {_random.item.list::*} to the inventory of block at {chester::%loop-index%}
+#
+#
+# Commands & Addons
+#
+#
+
+# East Rollback
+
+command /rollbackeast <text>:
+	executable by: console
+	trigger:
+		broadcast "&a&lDébut du RollBack pour jour (ID) : &6%arg 1%"
+		loop {place.location.%arg 1%::*}:
+			set block at loop-value to air
+			delete {place.location.%arg 1%::%loop-index%}
+			wait 1 tick
+		wait 2 ticks
+		loop {break.location.%arg 1%::*}:
+			set block at loop-value to {break.type.%arg 1%::%loop-index%}
+			delete {break.location.%arg 1%::%loop-index%}
+			delete {break.type.%arg 1%::%loop-index%}
+			wait 1 tick
+		broadcast "&2&lFin du RollBack pour jour (ID) : &6%arg 1%"
+		
+# Chester
+
+command /givethechester:
+	trigger:
+		if player's gamemode is creative:
+			give player a redstone torch named "&6Chester"
+			message "&aVoici le &6&oChester &a!"
+		else:
+			message "&cVous ne pouvez pas exécuter cette commande en GameMode 0 !"
+
+on left click:
+	if player is holding a redstone torch named "&6Chester":
+		if targeted block is chest:
+			cancel event
+			if {chester::*} is set:
+				if "%{chester::*}%" contains "%location of targeted block%":
+					message "&c&oCe coffre est déjà sur la liste Chester !"
+				else:
+					message "&a&oVous ajoutez un coffre au Chester."
+					add location of target block to {chester::*}
+			else:
+				message "&a&oVous ajoutez un coffre au Chester."
+				add location of target block to {chester::*}
+		else:
+			cancel event
+			message "&cAucun coffre à cet emplacement."
+
+on break of chest:
+	if "%{chester::*}%" contains "%location of event-block%":
+		remove location of event-block from {chester::*}
+		message "&c&lCe coffre a été supprimé du Chester."
+		message "%{chester::*}%"
+	else:
+		stop
+
+# XP Event Expiration
+
+command /thisisthexpboosttimercommandforonehour:
+	trigger:
+		wait 1 hour
+		execute console command "xprate reset"

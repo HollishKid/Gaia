@@ -59,8 +59,8 @@
 #		spawn 2 SMOKE_NORMAL particles at location of player for player offset by 0.4, 0.7, 0.4
 #	if player meets betonquest condition "creator":
 #		spawn 2 of particle flame at location of player
-#	else if player meets betonquest condition "founder":
-#		spawn 2 of particle flame at location of player
+#	if player meets betonquest condition "founder":
+#		show 2 FLAME particles at location of player for all players witin 50 meters of the player offset by 0.4, 0.7, 0.4
 
 #command /redemarrer:
 #	trigger:
@@ -78,6 +78,38 @@
 #Ne fonctionne qu'avec des items de base, pas de custom recipies
 #on craft:
 #	message "Warm for your feet!"
+#
+#
+#	loop {email.list::*}:
+#		if difference between {last.logout.%loop-value%} and now is smaller than 3 days:
+#			stop
+#		else:
+#			if {last.logout.mailed.%loop-value%} is 1:
+#				stop
+#			else:
+#				add 1 to {last.logout.mailed.%loop-value%}
+#				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus d'un mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
+#		
+#		if difference between {last.logout.%loop-value%} and now is smaller than 5 days:
+#			stop
+#		else:
+#			if {last.logout.mailed.%loop-value%} is 2:
+#				stop
+#			else:
+#				add 1 to {last.logout.mailed.%loop-value%}
+#				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus de trois mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
+on right click on lever:
+	if lever is placed on note block or redstone lamp: 
+		if frame is placed on note block or redstone lamp:
+			if spawn creeper is placed on frame:
+				command "eco take %player% 100"
+				message "Vous misez ¤ 100"
+				set {_percentchance} to a ramdom integer between 1 and 100
+				if {_percentchance} is between 1 and 50:
+					message "Vous perdez votre mise."
+				if {_percentchance} is between 51 and 100:
+					command "eco give %player% 200"
+
 command /teamtesting:
 	trigger:
 		set {redteam.%player%} to 1
@@ -111,157 +143,3 @@ on damage:
 #command /ressourcepacktester:
 #	trigger:
 #		send resourcepack "https://www.dropbox.com/s/drnvydf8xhile1y/MedievalDarkness.zip?dl=1" to player
-#
-#
-#						#
-#						#
-#		SkyWars			#
-#						#
-#						#
-#
-command /minigameskzlobby:
-	trigger:
-		set {mini.skz.lobby} to location of player
-		message "Vous avez défini le Lobby du SkyWars."
-command /minigameskystart:
-	trigger:
-		add player's location to {mini.skz.start::*}
-		message "Vous avez ajouté un Spawn Aléatoire au SkyWars."
-#
-#
-# INITIATION
-#
-#
-command /thisistheskzminigameinitiation:
-	trigger:
-		if {mini.skz.initiated} is 0:
-			if player meets betonquest condition "empty_inventory":
-				clear {mini.skz.players::*}
-				set {mini.skz.initiated} to 1
-				set {mini.skz.%player%} to 1
-				set {mini.skz.started} to 0
-				set {mini.skz.teams} to 0
-	#
-				add player to {mini.skz.players::*}
-				add 1 to {mini.skz.teams}
-				set {mini.skz.teams.%player%} to {mini.skz.teams}
-				teleport player to {mini.skz.lobby}
-				broadcast "&aUn MiniJeux - &cSkyWars"
-				broadcast "&avient d'être lancé par &2%player% &a!"
-				broadcast "&aDébut dans &2&l2 &aminutes &a!"
-				broadcast "&aRejoignez en -6593,2917 !"
-	#
-				wait 1 minute
-				if {mini.skz.started} is 0:
-					broadcast "&aMiniJeux - &cSkyWars"
-					broadcast "&aDébut dans &2&l1 minute &a!"
-					broadcast "&aRejoignez en -6593,2917 !"
-	#
-					wait 1 minute
-					if {mini.skz.started} is 0:
-						if {mini.skz.teams} > 1:
-							set {mini.skz.started} to 1
-							loop all players:
-								if {mini.skz.%loop-player%} is 1:
-									message "&a&oL'Assault va commencer !" to loop-player
-									message "&a&oVoici les participants :" to loop-player
-									message "&2&o%{mini.skz.players::*}%" to loop-player
-									message "&c&oVague &2&l%%" to loop-player
-									message "&c&oTuez en 30 !" to loop-player
-									teleport loop-player to {mini.skz.start}
-						else:
-							message "Il n'y a pas assez de joueurs."
-							message "La partie va être remise !"
-# LOGOUT PROCEDURE
-#
-# Game Specifics 
-#	ADD THESE ASWELL TO INSCRIPTION
-		
-#			
-			else:
-				message "&c&oVous devez avoir un inventaire vide"
-				message "&c&opour pouvoir commencer ce jeu !"
-		else:
-			message "&c&oCe jeu a déjà été lancé !"
-			message "&a&oVous pouvez le rejoindre en parlant au Maître de Jeu !"	
-#
-#
-# INSCRIPTION
-#
-#
-command /thisistheskzminigameinscription:
-	trigger:
-		if {mini.skz.initiated} is 1:
-			if {mini.skz.started} is 0:
-				if player meets betonquest condition "empty_inventory":
-					set {mini.skz.%player%} to 1
-					add player to {mini.skz.players::*}
-					add 1 to {mini.skz.teams}
-					set {mini.skz.teams.%player%} to {mini.skz.teams}
-					teleport player to {mini.skz.lobby}
-					message "&aVous rejoignez la partie."
-					message "&aJoueurs dans la partie :"
-					message "&2%{mini.skz.players::*}%"
-					if {mini.skz.teams} > 9:
-						set {mini.skz.started} to 1
-						loop all players:
-							if {mini.skz.%loop-player%} is 1:
-								LAUNCH GAME
-				
-				
-				else:
-					message "&c&oVous devez avoir un inventaire vide"
-					message "&c&opour pouvoir commencer ce jeu !"
-			else:
-				message "&d&oCe minijeux a déjà commencé."
-				message "&d&oMerci d'attendre."	
-		else:
-			message "&d&oCe MiniJeux n'a pas encore été lancé."
-			message "&d&oVous pouvez le lancer en parlant au Maître de Jeu."
-#
-#
-# LEAVER TESTER
-#
-#
-command /thisistheleaveconsolecommandforskz:
-	trigger:
-		if {mini.skz.%player%} is 1:
-			wait 1 second
-			set {mini.in.ass} to 0
-			set {mini.skz.%player%} to 0
-			wait 1 second
-			loop all players:
-				if {mini.skz.%loop-player%} is 1:
-					add 1 to {mini.in.ass}
-			if {mini.in.ass} > 0:
-				loop all players:
-					if {mini.skz.%loop-player%} is 1:
-						message "&c&oUn des joueurs a quitté la partie." to loop-player
-						set {mini.in.ass} to 0
-			else:
-				clear {mini.skz.players::*}
-				set {mini.in.ass} to 0
-				set {mini.skz.mobs} to 0
-				set  to 0
-				set {mini.skz.started} to 0
-				set {mini.skz.initiated} to 0
-				broadcast "&cL'Assault est terminé ! Plus aucun aventurier dans la zone !"
-#
-# Losers
-#
-on death of a player:
-	if {mini.skz.%player%} is 1:
-		message "&c&oVous êtes mort pendant la partie."
-		message "&c&oVous perdez la partie de SkyWars !"
-		set {mini.in.ass} to 0
-		teleport player to {mini.skz.lobby}
-#					
-#
-# OUT
-#
-#
-on rightclick on sign:
-    if line 1 of the clicked block is "[Sortie]":
-        if line 2 of the clicked block is "Retour vers":
-            if line 3 of the clicked block is "Maître de Jeu":
-                teleport player to {mini.start}

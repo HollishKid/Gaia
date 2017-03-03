@@ -1,5 +1,5 @@
 obj_loc1: location -7154;80;3505;Gaia 3 events:interact_folder
-eko_click: action right TORCH conditions:eko_q1start events:eko_opentrap,eko_click_delay,eko_opentrap_delay loc:-7158;68;3535;Gaia 2
+eko_click: action right TORCH conditions:eko_q1start events:eko_opentrap,eko_click_delay,eko_opentrap_delay loc:-7158;68;3535;Gaia range:2
 #
 ########## Lasswell
 #
@@ -24,4 +24,4 @@ hol_obj6: location -7391;51;3243;Gaia 2 events:hol_pop6
 hol_obj7: location -7422;49;3243;Gaia 2 events:hol_pop7
 #
 hol_objtnt: action right any conditions:hol_residus_inhand events:hol_residuscheck
-hol_objplacetnt: action right any conditions:hol_tnt_inhand events:hol_erekphase2 loc:-7426;49;3272;Gaia;3
+hol_objplacetnt: action right any conditions:hol_tnt_inhand events:hol_erekphase2 loc:-7426;49;3272;Gaia range:3

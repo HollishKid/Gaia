@@ -6,22 +6,22 @@ NPC_options:
     text: 'Bonjour &2%player% &a&o!'
     pointers: qui,temple,athelas
   qui_rep:
-    text: 'Je viens d''un pays lointain...'
+    text: 'Je viens d''une contrée peu connue par ici...'
   temple_rep:
-    text: 'Allons-y Jeune Maître de l''Air !'
-    events: appa_temple
+    text: 'Allons-y Jeune Maître de la Terre !'
+    events: tree_temple
   athelas_rep:
-    text: 'Allons-y Jeune Maître de l''Air !'
-    events: appa_athelas
+    text: 'Allons-y Jeune Maître de la Terre !'
+    events: tree_athelas
 player_options:
   qui:
     text: 'Qui êtes vous ?'
     pointers: qui_rep
   temple:
-    text: 'Je voudrais retourner au Temple de l''Air.'
-    conditions: 'tag_aang'
+    text: 'Je voudrais retourner au Temple de la Terre.'
+    conditions: 'tag_toph'
     pointers: temple_rep
   athelas:
     text: 'Je voudrais retourner à Athelas.'
-    conditions: 'tag_aang'
+    conditions: 'tag_toph'
     pointers: athelas_rep

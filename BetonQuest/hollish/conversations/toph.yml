@@ -8,36 +8,32 @@ stop: 'false'
 #                #
 NPC_options:
   welcome:
-    text: 'Qui êtes vous ?! Personne n''est jamais venu ici sans que j''en sois prévenu !'
-    conditions: '!tag_aang'
+    text: 'Un visiteur... ici ?!'
+    conditions: '!tag_toph'
     pointers: raconter
   welcomebis:
     text: 'Que puis-je pour vous ?'
-    pointers: preuve,rentrer,temple,preuve_perdue,magic,fiole,fiole_air,fiole_air_done,aang_baton_done,air_wand_upgrade,rienmerci
+    conditions: 'tag_toph'
+    pointers: preuve,rentrer,temple,preuve_perdue,magic,earth_wand_upgrade,rienmerci
   raconter_rep:
-    text: 'Je ne sens aucun mensonge en vous... Vous devez dire vrai. Que puis-je pour vous ?'
-    events: tag_aang,journal_findaang_del,tag_moine_air_del,air_moine_tempo_del
+    text: 'Érudit de la Terre tu dis... \nNous ne communiquons pas avec le monde extérieur, donc ça ne me dit rien ! \nQue puis-je faire pour toi ?'
     pointers: preuve,rentrer,temple,rienmerci
   temple_rep:
-    text: 'Cet endroit est vieux comme le monde de Gaïa ... Il flotte grâce à sa Magie, pour le protéger d''eventuels assaillants.'
+    text: 'Cet endroit est vieux comme le monde de Gaïa... \nIl a été incrusté dans la Terre, pour le protéger de regards indiscrets et être au plus proche de l''élément qu''il représente.'
   preuve_rep:
-    text: 'Hm, je pourrais vous donner le livre regroupant tous les sorts qui nous sont connus. Je doute qu''ils les connaissent par chez vous !'
-    pointers: book_give
-  book_give_rep:
-    text: 'Voici alors ce livre !'
-    events: livre_air_give,tag_livre_air,journal_livre_air_found
+    text: 'Je vais vous donner le livre regroupant tous les sorts qui nous sont connus. \nCa devrait impressionner votre Érudit !'
+    events: livre_earth_give,journal_livre_earth_found,tag_toph,journal_terre_emerald_del
   book_give_rep_bis:
-    text: 'Voici alors ce livre !'
-    events: livre_air_give
+    text: 'En voilà un exemplaire. \nNe négligez jamais un objet Magique !'
+    events: livre_earth_give
   rentrer_rep:
-    text: 'Parlez au Moine qui se trouve sur le bizon volant au Nord du Temple. Je lui ai dit que vous pouviez voyager avec lui.'
-    events: tag_aang
+    text: 'Vous devriez utiliser les Arbres, il y en a un dans la crevasse du temple et un dans la ville que vous appelez Athelas. \nGrâce à leur réseau de racines et un peu de magie, ils permettent de voyager rapidement.'
 #
 # Wand & Magic Learning
 #
   magic_rep:
-    text: 'Je serais ravi d''être votre Maître de l''Air. \nIl vous faut d''abord une &dBaguette de l''Air&a&o. Pour en invoquer une, il va falloir de l''Air et un Bâton. \nCommence par fabriquer une fiole et amènes la moi.'
-    events: obj_milo_fiole,journal_milo_fiole,tag_milo_fiole
+    text: 'Je serais ravi d''être votre Maître de la Terre. \nIl vous faut d''abord une &dBaguette de la Terre&a&o. Pour en invoquer une, il va falloir des fioles avec les ingrédients et un Bâton. \nCommence par fabriquer 7 fioles et amènes les moi.'
+#    events: obj_milo_fiole,journal_milo_fiole,tag_milo_fiole
   fiole_rep:
     text: 'Elle fera l''affaire. Il te faut caputrer de l''air particulier, pour avoir assez de puissance, il te faut de l''air du continent de l''Est. \nVas-y et clique droit sur ta fiole pour en capturer !'
     events: journal_milo_fiole_del,journal_milo_air_capture,obj_air_catcher,tag_remove_fiole
@@ -69,7 +65,7 @@ NPC_options:
 #                #
 player_options:
   raconter:
-    text: 'J''ai été envoyé ici par l''Érudit de l''Air, il cherche ce temple depuis bien longtemps !'
+    text: 'J''ai été envoyé ici par l''Érudit de la Terre, à la recherche de ce temple...'
     pointers: raconter_rep
   rienmerci:
     text: 'Rien, merci !'
@@ -78,15 +74,12 @@ player_options:
     pointers: temple_rep
   preuve:
     text: 'Donnez moi quelque chose qui prouve que je sois venu ici pour l''amener à l''Érudit !'
-    conditions: '!livre_air,!airtemple_magic_learning'
+    conditions: '!tag_toph'
     pointers: preuve_rep
   preuve_perdue:
     text: 'J''ai perdu le livre de sorts que vous m''avez donné !'
-    conditions: 'livre_air,!airtemple_magic_learning'
-    pointers: book_give_rep_bis
-  book_give:
-    text: 'Avec plaisir, je suis sûr que l''Érudit sera convaincu !'
-    pointers: book_give_rep
+    conditions: 'tag_toph,!earthtemple_magic_learning'
+    pointer: book_give_rep_bis
   rentrer:
     text: 'Comment rentrer à Athelas ?'
     pointers: rentrer_rep
@@ -95,28 +88,14 @@ player_options:
 #
   magic:
     text: 'Pouvez vous m''en apprendre plus sur la Magie de l''Air ?'
-    conditions: 'airtemple_magic_learning,!milo_fiole,!milo_fiole1,!tag_ardere_aang,!tag_aang_baton,!air_wand'
+    conditions: 'airtemple_magic_learning'
     pointers: magic_rep
-  fiole:
-    text: 'J''ai la fiole que vous m''avez demandé !'
-    conditions: 'milo_fiole,fiole_have'
-    pointers: fiole_rep
-  fiole_air:
-    text: 'J''ai capturé de l''air du Continent Est !'
-    conditions: 'milo_fiole1'
-    pointers: fiole_air_rep
-  fiole_air_done:
-    text: 'J''ai réussi à canaliser l''énergie de la fiole.'
-    conditions: 'tag_ardere_aang'
-    pointers: fiole_air_done_rep
-  aang_baton_done:
-    text: 'J''ai ramené un bâton pour en faire une Baguette de l''Air !'
-    conditions: 'tag_aang_baton'
-    pointers: aang_baton_done_rep,aang_baton_done_rep_not
+
+    
 #
 #
 #
-  air_wand_upgrade:
+  earth_wand_upgrade:
     text: 'Je voudrais améliorer ma Baguette d''Air.'
     conditions: 'air_wand'
     pointers: air_wand_upgrade_fine

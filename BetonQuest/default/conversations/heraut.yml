@@ -1,0 +1,34 @@
+quester: 'Héraut'
+first: unknown,welcome
+stop: 'false'
+#Options du NPC
+NPC_options:
+  unknown:
+    text: 'Vous n''êtes pas enregistré sur le fichiers royaux. \nPassez voir l''&2Intendant &a&od''abord !'
+    conditions: '!intendant_done'
+  welcome:
+    text: 'Bonjour &2%player%&a&o.'
+    conditions: 'intendant_done'
+    pointers: qui,comment,grade,aurevoir
+  qui_rep:
+    text: 'Je travaille pour l''&2Intendant &a&oet je gère les Grades Royaux de la Ville d''&2Athelas&a&o.'
+  com_rep:
+    text: 'Vous pourrez les acquérir avec des &2Points de Quête &a&oet de la &2Réputation&a&o. \nIl suffit de me demander de vous montrer le menu correspondant.'
+    pointer: grade,aurevoir
+  grade_rep:
+    text: 'Bien entendu, le voici.'
+    events: open_grades_royaux
+#Options du joueur
+player_options:
+  qui:
+    text: 'Qui êtes vous ?'
+    pointers: qui_rep
+  comment:
+    text: 'Comment obtenir un grade royal ?'
+    pointers: com_rep
+  grade:
+    text: 'Je voudrais accéder au menu des Grades Royaux.'
+    pointers: grade_rep
+  aurevoir:
+    text: 'Au revoir !'
+

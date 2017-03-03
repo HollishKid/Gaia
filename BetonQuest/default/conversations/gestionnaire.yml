@@ -33,9 +33,9 @@ NPC_options:
   pan_rep:
     text: 'Chaque panneaux indique en temps réel l''état d''une parcelle, Loué ou A Louer et son prix pour le temps de location indiqué. \nFaites un clic gauche sur un panneau pour plus d''infos. \n&4ATTENTION &a&oUn clic droit vous fera louer la parcelle concernée !'
   ou_rep:
-    text: 'Vous pouvez accéder à la Carte de Gaïa à l''adresse suivante: &9http://www.gaia-minecraft.enjin.com/gallery'
+    text: 'Vous pouvez accéder à la Carte de Gaïa à l''adresse suivante: \n&2http://www.gaia-minecraft.enjin.com/gallery'
   map_rep:
-    text: 'Sur &9http://www.gaia-minecraft.enjin.com/gallery &a&oCliquez en haut à gauche de l''écran sur "Maisons et Terrains", en zoomant sur la ville vous lez verrez apparaître ! Pour plus d''infos sur cette Carte, consultez &2Sofia&a&o.'
+    text: 'Sur &2http://www.gaia-minecraft.enjin.com/gallery \n&a&oCliquez en haut à gauche de l''écran sur "Maisons et Terrains", en zoomant sur la ville vous lez verrez apparaître ! \nPour plus d''infos sur cette Carte, consultez &2Sofia&a&o.'
   dechanter_rep:
     text: 'Pour arrêter une location, il vous faut vous accroupir, puis faire un clic droit sur le panneau correspondant à votre location.'
   apres_rep:

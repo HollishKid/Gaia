@@ -1,13 +1,18 @@
 #
+# Kendan #
+#
+ken_qE1: location -100;200;300;Gaia 5 events:ken_qE2
+ken_qkE1: mmobkill bossken amount:1 events:andr_qE2
+#
 # Garderos & Général Kinsot #
 #
-#voir_superieur1: location -9009;64;4626;Gaia;5 conditions:deja_vu events:voir_superieur_done
-tour_du_village: location -8948;83;4655;Gaia;5 conditions:voir_superieur_done events:tour_du_village_done
-voir_superieur: action right SPRUCE_DOOR conditions:deja_vu events:voir_superieur_done loc:-9009;64;4626;Gaia;1
+#voir_superieur1: location -9009;64;4626;Gaia 5 conditions:deja_vu events:voir_superieur_done
+tour_du_village: location -8948;83;4655;Gaia 5 conditions:voir_superieur_done events:tour_du_village_done
+voir_superieur: action right SPRUCE_DOOR conditions:deja_vu events:voir_superieur_done loc:-9009;64;4626;Gaia range:1
 #
 # Aktarion #
 #
-akt_qE1: location -8869;82;4564;Gaia;5 conditions:akt_qE1 events:akt_objq1
+akt_qE1: location -8869;82;4564;Gaia 5 conditions:akt_qE1 events:akt_objq1
 #akt_objkill: mmobkill brigand amount:10 events:Bkilled,akt_questE2 notify
 akt_objkillB1: mmobkill brigand amount:1 events:akt_brigkilled1,Bkill1
 akt_objkillB2: mmobkill brigand amount:1 events:akt_brigkilled2,Bkill2
@@ -20,23 +25,23 @@ akt_objkillB8: mmobkill brigand amount:1 events:akt_brigkilled8,Bkill8
 akt_objkillB9: mmobkill brigand amount:1 events:akt_brigkilled9,Bkill9
 akt_objkillB10: mmobkill brigand amount:1 events:Bkill10,Bkilled,akt_qE2
 #
-akt_qE2: location -8869;82;4564;Gaia;5 conditions:akt_qE2 events:akt_objq2
-akt_objkill2: mmobkill brigand amount:25 events:akt_qE3 notify
+akt_qE2: location -8869;82;4564;Gaia 5 conditions:akt_qE2 events:akt_objq2
+akt_objkill2: mmobkill mercenaire amount:25 events:akt_qE3 notify
 #
 # Loukran #
 #
-louk_qE1: location -8869;82;4564;Gaia;5 conditions:louk_qE1 events:louk_objq1
-louk_qch1: action right CHEST loc:-8851;77;4540;Gaia;3 events:louk_chest_tester1
-louk_qch2: action right CHEST loc:-8881;93;4561;Gaia;3 events:louk_chest_tester2 cancel
-louk_qch3: action right CHEST loc:-8829;84;4500;Gaia;3 events:louk_chest_tester3 cancel
-louk_objchall: location -8869;82;4564;Gaia;5 events:louk_chest_testerall
-louk_qE2: location -8798;80;4682;Gaia;5 events:louk_qE3
-louk_qE3: action right WORKBENCH loc:-8798;79;4684;Gaia;3 events:louk_qE4
+louk_qE1: location -8869;82;4564;Gaia 5 conditions:louk_qE1 events:louk_objq1
+louk_qch1: action right CHEST loc:-8851;77;4540;Gaia range:3 events:louk_chest_tester1
+louk_qch2: action right CHEST loc:-8881;93;4561;Gaia range:3 events:louk_chest_tester2 cancel
+louk_qch3: action right CHEST loc:-8829;84;4500;Gaia range:3 events:louk_chest_tester3 cancel
+louk_objchall: location -8869;82;4564;Gaia 5 events:louk_chest_testerall
+louk_qE2: location -8798;80;4682;Gaia 5 events:louk_qE3
+louk_qE3: action right WORKBENCH loc:-8798;79;4684;Gaia range:3 events:louk_qE4
 #
 # Tatsu #
 #
-tatsu_q1: action right CHEST loc:-8677;74;4410;Gaia;3 conditions:tatsu_q1 events:tatsu_q1_1
+tatsu_q1: action right CHEST loc:-8677;74;4410;Gaia range:3 conditions:tatsu_q1 events:tatsu_q1_1
 #
 # Kitoune #
 #
-repos_kit: location -8901;127;4630;Gaia;6 events:repos_kit_done
+repos_kit: location -8901;127;4630;Gaia 6 events:repos_kit_done

@@ -9,7 +9,7 @@ NPC_options:
     text: 'Je ne vous ai jamais vu. Parlez à l''&2Intendant &a&o!'
     conditions: '!intendant_done'
   normal:
-    text: 'Salutation! Bienvenue dans mon humble auberge !'
+    text: 'Salutation ! Bienvenue dans mon humble auberge !'
     conditions: 'timer_paulette'
     pointers: boire,chambre,bonjour,francis_carrot
   chambre_rep:

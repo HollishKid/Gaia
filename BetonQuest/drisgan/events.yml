@@ -106,7 +106,7 @@ eko_fold1: folder eko_mess2,eko_fold2 delay:7
 eko_mess2: 'message &2Eko &f:&a&o Mais nos membres les plus doués en retirent des richesses que tu n''aurai certainement jamais vu de ta vie !'
 eko_fold2: folder eko_mess3,eko_fold3 delay:8
 eko_mess3: 'message &2Eko &f:&a&o Si ce genre de boulot t''intéresse, alors passe derrière le comptoir et actionne la torche dans la cave...'
-eko_fold3: folder eko_clean1,eko_q1start,eko_click,eko_conversdone,eko_j1 delay:1
+eko_fold3: folder eko_clean1,eko_clean2,eko_clean3,eko_q1start,eko_click,eko_conversdone,eko_j1 delay:1
 eko_clean1: tag del Zedd.kal_q2start
 eko_clean2: tag add Zedd.kal_q2done
 eko_clean3: journal del Zedd.kal_j3_del
@@ -128,8 +128,9 @@ eko_mess4: 'message &2Eko &f:&a&o J''ai entendu quelques rumeurs dernièrement..
 eko_q2startfolder2: folder eko_mess5,eko_q2startfolder3 delay:8
 eko_mess5: 'message &2Eko &f:&a&o Cet endroit est un ramassis de pouilleux et d''ordures en tous genres, seulement, certains d''entre eux sont assez puissants... Je commence à comprendre pourquoi le chef préfère t''envoyer plutôt que l''un d''entre nous...'
 eko_q2startfolder3: folder eko_mess6,eko_q2startfolder4 delay:8
-eko_mess6: 'message &2Eko &f:&a&o Quoiqu''il en soit, tu dois passer par la faille qui se situe à l''Est du Trou Noir pour pouvoir y accèder. Une fois sur place, élimine quelques une de ces ordures et fouille leurs cadavres!'
-eko_q2startfolder4: folder eko_mess7,eko_q2start,eko_q2obj,eko_j2,eko_conversdone,eko_makaupdate,eko_givechain,eko_givechainmess delay:8
+eko_mess6: 'message &2Eko &f:&a&o Quoiqu''il en soit, tu dois passer par la faille qui se situe à l''Est du Trou Noir pour pouvoir y accèder. Une fois sur place, élimine quelques unes de ces ordures et fouille leurs cadavres !'
+#removed eko_makaupdate from eko_q2startfolder4 and added it into tempo_redirect ; journal is taken over by tempo_journals
+eko_q2startfolder4: folder eko_mess7,eko_q2start,eko_q2obj,eko_j2,eko_conversdone,eko_givechain,eko_givechainmess delay:8
 eko_mess7: 'message &2Eko &f: &a&oReviens lorsque tu auras trouvé des informations intéressantes !'
 eko_q2start: tag add eko_q2start
 eko_q2end: tag del eko_q2start
@@ -138,8 +139,8 @@ eko_q2obj: objective start eko_q2obj
 eko_givechain: 'command mm i give %player% chainfeet'
 eko_givechainmess: 'message &6&oVous recevez des &aBottines en fer&6&o.'
 #
-eko_makaupdate: folder Zedd.maka_j3_del,Zedd.maka_j4,Zedd.makarow_access_exe,eko_makamess delay:6
-eko_makamess: 'message &6&oVous avez réunis assez d''informations, il est temps de faire un rapport au maître Makarov.'
+#eko_makaupdate: folder Zedd.maka_j3_del,Zedd.maka_j4,Zedd.makarow_access_exe,eko_makamess delay:6
+#eko_makamess: 'message &6&oVous avez réunis assez d''informations, il est temps de faire un rapport au maître Makarov.'
 #
 eko_q2droplettre: folder eko_mess8,eko_givelettre,eko_j2_del,eko_j3
 eko_mess8: 'message &6&oVous récupérez une lettre cachetée.'
@@ -153,7 +154,7 @@ eko_givechainlegsmess: 'message &6&oVous recevez des &aJambières annelées&6&o.
 eko_takelettre: take lettre_cachetee:1
 #
 #
-tempo_redirect: folder eko_tempo_tag,maka_tempo_redirect_journal,Zedd.makarow_access_exe
+tempo_redirect: folder eko_tempo_tag,maka_tempo_redirect_journal,Zedd.makarow_access_exe,Zedd.maka_j3_del
 eko_tempo_tag: tag add eko_tempo
 maka_tempo_redirect_journal: journal add maka_tempo_redirect_journal
 tempo_remover: folder eko_tempo_tag_del,maka_tempo_redirect_journal_del
@@ -632,7 +633,8 @@ hol_popB3add: folder hol_popB3add1,hol_popB3add2,hol_popB3addsuite,hol_popaddmes
 hol_popB3add1: 'command mm m spawn erek_renfort 1 Gaia,-7411,51,3258'
 hol_popB3add2: 'command mm m spawn erek_renfort 1 Gaia,-7411,51,3286'
 hol_popaddmess: 'message &6&oErek appelle des renforts !'
-hol_popB3addsuite: folder hol_popB3add1,hol_popB3add2,hol_popB3addreset delay:5
+# removed hol_popB3addreset from hol_popB3addsuite
+hol_popB3addsuite: folder hol_popB3add1,hol_popB3add2 delay:5
 # This leads into an infinite loop.
 hol_popB3addreset: folder hol_popsalleB32 delay:30
 #

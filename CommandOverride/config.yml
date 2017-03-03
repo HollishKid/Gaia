@@ -12,7 +12,7 @@
 # This Plugin utilises an Auto-Updater. If you want to turn that off,
 # simply set options -> auto-update to false
 options:
-  auto-update: true
+  auto-update: false
   use-unknown-command-message: false
   unknown-command-message: '&7Sorry, I do not recognize this Command! Please type
     &b/help &7for Help.'
@@ -83,6 +83,16 @@ commands:
   - '&dSite 10 &f:&a http://minecraft-server-list.com/server/344780/vote/'
   - '&dSite 11 &f:&a http://www.planetminecraft.com/server/gaia-3655242/vote/'
   - '   &f---------------------- ~ ¤ ~ ----------------------'
+  /gaiapurge:
+  - console:/tell <arg 0> &cVous avez été totalement Reset par &2<player>&c.
+  - console:/bq purge <arg 0>
+  - console:/clear <arg 0>
+  - console:/pex user <arg 0> group set debutant
+  - console:/pex user <arg 0> prefix ""
+  - console:/eco set <arg 0> 2000
+  - console:/skillreset <arg 0> all
+  - console:/bq event <arg 0> default.historique_folder
+  - '&cVous avez Reset totalement &2<arg 0> &c!'
   /thisisthesaccommand:
   - WAIT 1
   - command:/sac
@@ -106,7 +116,7 @@ commands:
   - command:/pets
   /closethisshit: []
   /enregistrer:
-  - console:/pex user <player> timed add authme.player.register 7 
+  - console:/pex user <player> timed add authme.player.register 7
   - WAIT 1
   - op-command:/register <arg 0> <arg 1>
   - WAIT 2
@@ -130,6 +140,7 @@ commands:
   - WAIT 2
   - op-command:/thisisthechangerecoverycommand <arg 0> <arg 1>
   /envoyermdp:
+  - console:/pex user <player> timed add authme.player.email.recover 7
   - WAIT 1
   - op-command:/email recovery <arg 0>
   /thisisthehelpopcommand:

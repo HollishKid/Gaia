@@ -1,0 +1,32 @@
+quester: 'Korghan'
+first: welcome
+stop: 'false'
+#   Options   #
+
+#     NPC     #
+NPC_options:
+  welcome:
+    text: 'Qui es-tu ? Et que me veux-tu ?'
+    pointers: bonjour
+  provocation:
+    text: 'Tu veux parler de cette pioche ? Elle ne m''est d''aucunes utilitées. Mais je ne te la donnerais jamais'
+    pointers: bataille
+  choix:
+    text: 'Mmmh.... Tu m''as l''air d''être un guerrieur de taille mais toutefois, laisses moi te faire une proposition. J''aimerais que tu fasses partie de mes mercenaires, tu bénéficieras d''armement inédit et tu pourras piller comme bon te semble.'
+    pointers: accepte,refus
+#   Options   #
+
+#   Joueur    #
+player_options:
+  bonjour:
+    text: 'Mon nom importe peu, je viens chercher ce qui ne vous appartient pas'
+    pointers: provocation
+  bataille:
+    text: 'Qu''il en soit ainsi alors, battons nous !'
+    pointers: choix
+  accepte:
+    text: 'Votre offre m''intéresse, j''aimerais que vous m''en disiez plus'
+    events: kor_acc
+  refus:
+    text: 'Désolé de vous décevoir, mais j''ai une mission à remplir et je ne voudrais pas que vos idéaux stupides me fassent devenir ce que vous êtes'
+    events: kor_ref

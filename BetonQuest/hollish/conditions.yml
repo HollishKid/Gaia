@@ -21,6 +21,10 @@ biblio_door_check: party 9999 biblio_door_checker count:1
 biblio_door_checker: location -6723;66;2885;Gaia 14
 sanctuary_door_check: party 9999 sanctuary_door_checker count:1
 sanctuary_door_checker: location -7110;67;2441;Gaia 20
+louvre_door_check: party 9999 louvre_door_checker count:1
+louvre_door_checker: location -9729;71;2452;Gaia 10
+louvre_stairs_check: party 9999 louvre_stairs_checker count:1
+louvre_stairs_checker: location -9729;72;2387;Gaia 20
 #
 #
 # Spirituality
@@ -80,7 +84,6 @@ fables_t3p1_have: item fables_t3p1
 fables_t3p2_have: item fables_t3p2
 fables_t3p3_have: item fables_t3p3
 fables_t3p4_have: item fables_t3p4
-
 #
 #
 # TRAIN
@@ -221,7 +224,7 @@ reput_athelas100: point default.reput_athelas 100
 #
 #
 ###########################
-avertissements_5: point avertissements 5
+avertissements_3: point avertissements 3
 #
 # Mage Entry
 #              & Baguette Magique
@@ -316,6 +319,7 @@ tag_tenzin: tag tenzin
 # Journal
 journal_findaang: journal journal_findaang
 #
+air_moine_tempo: tag air_moine_tempo
 air_obj_distance_exe: region air_temple
 air_parcours_occupied: party 9999 air_parcours_occupied_exe count:1
 air_parcours_occupied2: party 9999 air_parcours_occupied_exe count:2
@@ -353,14 +357,31 @@ terre_find: tag terre_find
 terre_found: tag terre_found
 terre_orno: tag terre_orno
 terre_orno_done: tag terre_orno_done
+tag_terre_ingor: tag tag_terre_ingor
+emerald_volcano: item emerald_volcano
+emerald_enchante_hold: hand emerald_volcano_ench
+emerald_volcano_have: item emerald_volcano:10
+#
+# Earth Passage
+#
+earth_passage: tag earth_passage
+earth_pass_check: party 7777 earth_pass_check_occupied count:1
+earth_pass_check_occupied: region earth_passage
+earth_temple_door_check: party 7777 earth_temple_door_check_occupied count:1
+earth_temple_door_check_occupied: location -7422;24;126;Gaia 12
+#
+# Toph
+#
+tag_toph: tag toph
+earthtemple_magic_learning: tag earthtemple_magic_learning
 #
 # Érudits (autres, tempo)
 #
-earthtemple_magic_learning: tag earthtemple_magic_learning
 firetemple_magic_learning: tag firetemple_magic_learning
 watertemple_magic_learning: tag watertemple_magic_learning
-tag_erudit_eau: tag erudit_eau
+
 tag_erudit_terre: tag erudit_terre
+tag_erudit_eau: tag erudit_eau
 tag_erudit_feu: tag erudit_feu
 #
 #
@@ -453,6 +474,14 @@ hrota_killed_gobs: and hrota_killed_gobs1,hrota_killed_gobs2
 hrota_killed_gobs1: tag hrota_killed_gobs1
 hrota_killed_gobs2: tag hrota_killed_gobs2
 ingor_mine_access: tag ingor_mine_access
+#
+#
+#
+# Louvre
+#
+#
+################################################################
+registre_ecuyer_louvre: tag registre_ecuyer_louvre
 #
 #
 #

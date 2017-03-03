@@ -115,7 +115,6 @@ match Je viens de rejoindre le serveur !
 dont verbose
 then deny
 
-
 # Nice hein?
 match ^That would be nice
 dont verbose
@@ -147,6 +146,11 @@ then deny
 
 # McMMO Credits
 match CommandBlock at
+then deny
+
+# MythicMobs
+match was put in your inventory
+dont verbose
 then deny
 
 #
@@ -186,8 +190,8 @@ match \b(s+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)
 then replace *****
 
 #Pute & Putain
-match \b(p+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)((e+)|(1+)|((a+|)(i+)(n+)))(\s+|\.+|\*+|)(s+|)\b
-then replace *****
+#match \b(p+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)((e+)|(1+)|((a+|)(i+)(n+)))(\s+|\.+|\*+|)(s+|)\b
+#then replace *****
 
 #Fils de Pute
 match \b(f+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)((s+|e+)|)(\s+|\.+|\*+|)(de+|d+|2+|a+|à+|á+|ä+|â+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)((e+)|(1+)|((a+|)(i+)(n+)))(\s+|\.+|\*+|)(s+|)\b
