@@ -360,7 +360,7 @@ Groups:
 
 Updater:
   Enabled: true
-  Notify: true
+  Notify: false
   Download: false
   
   # Disable important announcements after the plugin has been loaded

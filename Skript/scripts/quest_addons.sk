@@ -4,9 +4,7 @@
 #
 #                   AirTemple, ThiefTreasure
 on death of player:
-	wait 50 ticks
-	force respawn victim
-#
+	wait 7 ticks
 	if victim meets betonquest condition "hollish.air_moine_tempo":
 		fire betonquest event "hollish.air_temple_lose" for victim
 	if victim meets betonquest condition "Zedd.thieftreasure_tempo_tag":
