@@ -105,34 +105,6 @@ administration:
   POSITION-X: 1
   POSITION-Y: 3
   KEEP-OPEN: true
-
-citizensreload:
-  COMMAND: 'op: citizens save; op: citizens reload'
-  NAME: '&6Recharger les PNJ'
-  ID: paper
-  LORE:
-    - 'A cliquer lorsque les PNJ'
-    - 'sont mal affichés'
-    - ' '
-    - 'Ne pas utiliser à la légère !'
-  POSITION-X: 8
-  POSITION-Y: 3
-  VIEW-PERMISSION: menu.citizens.reload
-  
-inspector:
-  COMMAND: 'op: co inspect'
-  NAME: '&6Inspecteur de Blocs'
-  ID: paper
-  LORE:
-    - 'A cliquer lorsque vous'
-    - 'voulez inspecter QUI a'
-    - 'placé/cassé un block.'
-    - ''
-    - '&cPensez à cliquer ici'
-    - '&cà nouveau pour éteindre'
-  POSITION-X: 7
-  POSITION-Y: 3
-  VIEW-PERMISSION: menu.coreprotect.inspect
   
 histoire:
   NAME: '&6/histoire [nom du joueur]'
@@ -146,7 +118,6 @@ histoire:
   POSITION-X: 5
   POSITION-Y: 3
   KEEP-OPEN: true
-  VIEW-PERMISSION: menu.admin.histoire
 
 vanish:
   COMMAND: 'vanish'
