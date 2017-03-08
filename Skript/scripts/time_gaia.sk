@@ -99,7 +99,7 @@ every 5 minutes in "Gaia":
 # Mercredi entre 16h et 20h
 #
 	if {day.index} is "3":
-		if {hour.system} is 16:
+		if {hour.system} is "16":
 			if {event.double.xp} is 0:
 				set {event.double.xp} to 1
 				execute console command "xprate 2 true"

@@ -41,6 +41,7 @@ groups:
     - -modifyworld.digestion
     - -modifyworld.blocks.place.14
     - -modifyworld.blocks.place.15
+    - -modifyworld.blocks.place.16
     - -modifyworld.blocks.place.21
     - -modifyworld.items.craft.381
     - -townywands.cmd.townywands
@@ -260,7 +261,6 @@ groups:
     - essentials.tpa
     - essentials.tpahere
     - essentials.tpaccept
-    - modifyworld.digestion
     - authme.vip
     options:
       rank: '700'
@@ -273,7 +273,6 @@ groups:
     - notification.commandes
     - essentials.tpa
     - essentials.tpaccept
-    - modifyworld.digestion
     - authme.vip
     options:
       rank: '600'
@@ -286,7 +285,6 @@ groups:
     - notification.commandes
     - chestcommands.open.admin.yml
     - menu.admin
-    - menu.admin.histoire
     - admin.histoire
     - menu.admin.gm1
     - menu.tetes
@@ -333,7 +331,7 @@ groups:
     - voxelsniper.command.reset
     options:
       rank: '150'
-      prefix: '&6[&aBuilder&6]&f'
+      prefix: '&6[&aArchitecte&6]&f'
   builder_est:
     inheritance:
     - aventurier_est
@@ -342,8 +340,6 @@ groups:
     - notification.commandes
     - chestcommands.open.admin.yml
     - menu.admin
-    - menu.skins.reload
-    - menu.admin.histoire
     - admin.histoire
     - essentials.warp
     - essentials.warp.list
@@ -352,7 +348,7 @@ groups:
     - essentials.teleport.cooldown.bypass
     options:
       rank: '125'
-      prefix: '&6[&aBuilder&6]&f'
+      prefix: '&6[&aArchitecte&6]&f'
   moderator:
     inheritance:
     - builder
@@ -386,8 +382,6 @@ groups:
     - chestcommands.open.MenuBlaBla.yml
     - chestcommands.open.FondMarain.yml
     - menu.admin
-    - menu.skins.reload
-    - menu.admin.histoire
     - admin.histoire
     - menu.admin.gm1
     - menu.tetes
@@ -423,8 +417,6 @@ groups:
     - notification.commandes
     - chestcommands.open.admin.yml
     - menu.admin
-    - menu.skins.reload
-    - menu.admin.histoire
     - admin.histoire
     - menu.tetes
     options:
@@ -482,10 +474,6 @@ groups:
     - modifyworld.blocks.place.15
     - modifyworld.blocks.place.16
     - modifyworld.blocks.place.21
-    - modifyworld.blocks.place.56
-    - modifyworld.blocks.place.73
-    - modifyworld.blocks.place.74
-    - modifyworld.blocks.place.153
     - bukkit.command.plugins
     - bukkit.command.wg
     - bukkit.command.region
@@ -506,6 +494,7 @@ groups:
     - essentials.*
     - essentials.vanish.see
     - essentials.ban.exempt
+    - essentials.invsee.preventmodify
     - worldguard.*
     - areashop.*
     - globalchestshop.admin
@@ -531,67 +520,6 @@ groups:
     options:
       rank: '1'
       prefix: '&6[ &2God &6]&f '
-  creator:
-    permissions:
-    - worldguard.*
-    - areashop.*
-  co_admin:
-    inheritance:
-    - horloger
-    permissions:
-    - -modifyworld.mobtarget.*
-    - modifyworld.blocks.place.14
-    - modifyworld.blocks.place.15
-    - modifyworld.blocks.place.16
-    - modifyworld.blocks.place.21
-    - modifyworld.blocks.place.56
-    - modifyworld.blocks.place.73
-    - modifyworld.blocks.place.74
-    - modifyworld.blocks.place.153
-    - bukkit.command.plugins
-    - bukkit.command.wg
-    - bukkit.command.region
-    - multiverse.core.verion
-    - bukkit.command.version
-    - bukkit.command.tell
-    - modifyworld.*
-    - permissions.*
-    - craftbook.mech.area.save.self
-    - betonquest.admin
-    - worldborder.set
-    - worldborder.help
-    - worldborder.*
-    - worldedit.*
-    - citizens.*
-    - authme.*
-    - dynmap.*
-    - essentials.*
-    - essentials.vanish.see
-    - essentials.ban.exempt
-    - worldguard.*
-    - areashop.*
-    - globalchestshop.admin
-    - wgtreefarmflag.help
-    - wgtreefarmflag.reload
-    - wgtreefarmflag.saplingbreak
-    - wgtreefarmflag.mushroombreak
-    - chestcommands.open.admin.yml
-    - menu.admin
-    - commandregions.commands.reload
-    - preciousstones.admin.*
-    - preciousstones.alert.*
-    - skinsrestorer.cmds
-    - skinsrestorer.playercmds
-    - discordmc.admin
-    - mcmmo.all
-    - townywands.cmd.townywands
-    - townywands.cmd.reload
-    - townywands.cmd.debug
-    - townywands.cmd.help
-    - pvpmanager.admin
-    options:
-      rank: '3'
-      prefix: '&6[&aAST.Fondateur&6]&f'
 schema-version: 1
 users:
   74492440-3b68-30c2-9947-2a6eb31444cc:
@@ -13358,7 +13286,7 @@ users:
       name: stevi
   b58fd15d-0f8f-352e-9e8c-845b72723db4:
     group:
-    - co_admin
+    - horloger
     options:
       name: koisiire
       group: co_admin
@@ -16495,6 +16423,7 @@ users:
     - ecuyer
     options:
       name: dermaneruq
+    permissions: []
   1a598d83-fe9d-3dbe-b3b1-2ea2e197342a:
     group: []
     options:
@@ -16726,8 +16655,7 @@ users:
     options:
       name: julienhx
       prefix: '&6[&2Pêcheur&6]&7'
-    permissions:
-    - mcmmo.perks.xp.10percentboost.fishing
+    permissions: []
   f1d73dc0-ac63-343e-be8c-f8e9d1ddfd77:
     group: []
     options:
@@ -17034,7 +16962,78 @@ users:
     permissions: []
   f7a83d8c-1ff5-3824-afdb-260ca432d0bf:
     group:
-    - debuttempobis
+    - aventurier
     options:
       name: Nathaniel786
+      prefix: '&6[&2Apprivoiseur&6]&7'
+    permissions: []
+  93332563-0c2d-3928-babc-d739a6e674c2:
+    group:
+    - aventurier
+    options:
+      name: bettoli
+      prefix: ''
+    permissions: []
+  83571203-f3eb-39b9-b46a-db379bbe5602:
+    group: []
+    options:
+      name: Whiterun_Sword
+    permissions: []
+  bea8747b-385f-302e-a8de-01a9ac687fe1:
+    group:
+    - builder
+    options:
+      name: mastodonte92
+  9f42237b-9611-3506-8c86-2d17477c5fba:
+    group: []
+    options:
+      name: heitorkaito
+    permissions: []
+  5cce75d0-f383-3c02-a2bb-663cd196447c:
+    group: []
+    options:
+      name: Frachlitzz
+    permissions:
+    - -keepitems.keep
+  ef31607c-80eb-3ec5-85e6-eb26883e8977:
+    group: []
+    options:
+      name: lolitaro
+    permissions: []
+  koissire:
+    group: []
+  a98e1f7b-0732-30fe-9865-3d1e995a7212:
+    group: []
+    options:
+      name: Sakai_
+    permissions: []
+  551be34a-da25-36c2-8955-32d2208b36b1:
+    group:
+    - debuttempo
+    options:
+      name: Sledge_
+    permissions:
+    - -keepitems.keep
+  c6a644af-82d8-3afc-acf5-16095b17e7d1:
+    group:
+    - debuttempo
+    options:
+      name: Hikawii_
+    permissions:
+    - -keepitems.keep
+  2e823737-9032-3f63-8de3-ed223e890705:
+    group: []
+    options:
+      name: WillDePalme
+  dce073fb-4961-3515-8258-cd746c7f07f1:
+    group:
+    - debuttempobis
+    options:
+      name: AngelDarkoz
+    permissions: []
+  966b54d1-d194-3c0d-9d0d-c96be43b29ea:
+    group:
+    - debuttempobis
+    options:
+      name: ankotheneko21
     permissions: []

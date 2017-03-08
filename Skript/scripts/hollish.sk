@@ -143,6 +143,45 @@ on enchant:
 			delete {enchantment_spell_list::%loop-index%}
 #
 #
+# MythicMobs Items Fixer
+#
+#				allows to give MM Items to full inventories.
+#
+#
+# Use only "mm items give" in any automated console command.
+#   i.e. do not use "mm i give" => this is used to avoid a loop in this section
+#
+# Peut être amélioré en passant _t dans u::* et n'utiliser que des _u::x 
+#
+#
+on server command:
+	if "%event-string%" contains "inventorycheck":
+		stop
+	if "%event-string%" contains "mm items give":
+		cancel event
+		set {_t} to "%event-string%"
+		set {_s} to "%subtext of {_t} from characters 14 to (the length of {_t})%"
+		set {_u::*} to {_s} split at " "
+		execute console command "sudo %{_u::2}% inventorycheck %event-string%"
+#
+command /inventorycheck <text> <text> <text> <text> <text>:
+	trigger:
+		loop 36 times:
+			if slot {_slot} of player's inventory is empty:
+				wait 1 tick
+			else:
+				add 1 to {_slot}
+				wait 1 tick
+		if {_slot} is 36:
+			message "&d&oVous n'avez pas assez de place dans votre inventaire."
+			message "&d&oVidez une place dans votre inventaire pour recevoir l'objet."
+			wait 20 seconds
+			execute console command "sudo %arg 4% inventorycheck %arg 1% %arg 2% %arg 3% %arg 4% %arg 5%"
+		else:
+			execute console command "%arg 1% i %arg 3% %arg 4% %arg 5%"
+#
+#
+#
 # Alcool
 #
 #

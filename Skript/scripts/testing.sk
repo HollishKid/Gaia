@@ -98,6 +98,38 @@
 #			else:
 #				add 1 to {last.logout.mailed.%loop-value%}
 #				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus de trois mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
+
+#
+#
+#%string% parsed as date[ formatted as %-string%]
+#parses a string date as a date
+
+#(year|month|month name|day of year|day of month|day of week|day name|hours|minutes|seconds) from date %date%
+#date %date%'s (year|month|month name|day of year|day of month|day of week|day name|hours|minutes|seconds)
+#gets information from a date
+
+
+#
+# This functions. Consider Updating time_gaia.
+#
+command /totallyuselesstimecommandthatWORKS:
+	trigger:
+		set {_tmpO} to now
+		if "%day name from date {_tmpO}%" is "WEDNESDAY":
+			broadcast "WEDNESDAY"
+		else:
+			broadcast "Date: %{_tmpO}%"
+			broadcast "Year: %year from date {_tmpO}%"
+			broadcast "Month: %month from date {_tmpO}%"
+			broadcast "Month Name: %month name from date {_tmpO}%"
+			broadcast "Day of Year: %day of year from date {_tmpO}%"
+			broadcast "Day of Month: %day of month from date {_tmpO}%"
+			broadcast "Day of Week: %day of week from date {_tmpO}%"
+			broadcast "Day Name: %day name from date {_tmpO}%"
+			broadcast "Hour: %hours from date {_tmpO}%"
+			broadcast "Minute: %minutes from date {_tmpO}%"
+			broadcast "Second: %seconds from date {_tmpO}%"
+
 on right click on lever:
 	if lever is placed on note block or redstone lamp: 
 		if frame is placed on note block or redstone lamp:

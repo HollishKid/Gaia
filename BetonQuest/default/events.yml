@@ -211,7 +211,7 @@ east_beta_perms_on: 'command pex user %player% group set beta_est'
 east_builder_perms_on: 'command pex user %player% group set builder_est'
 east_moderator_perms_on: 'command pex user %player% group set moderator_est'
 east_perms_checker_in_creator_on: 'command pex user %player% group set horloger_est'
-east_founder_perms_on: 'message &6Bienvenue, Fondateur &a%player%&6. Votre groupe de permission n''a pas changé en entrant sur ce continent.'
+east_founder_perms_on: 'message &6Bienvenue, Grand Horloger &a%player%&6. Votre groupe de permission n''a pas changé en entrant sur ce continent.'
 #
 #
 east_perms_checker_out: if !staff east_player_perms_off else east_perms_checker_out_staff_alpha
