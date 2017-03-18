@@ -39,6 +39,7 @@ NPC_options:
     pointer: play_10
   npc_09:
     text: 'Ok, préviens moi quand tu as du nouveau !'
+    events: 'Da_She,Mi_jrl1,Mi_jrl_del'
 #############
 #           #
 #   Joueur  #

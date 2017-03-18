@@ -42,6 +42,7 @@ NPC_options:
     pointer: play_10
   npc_11:
     text: 'Je ne sais pas non plus. Mais, tu devrais trouver des informations quelque part.'
+    events: 'Da_ville,Mi_jrl1_del,Mi_jrl'
     pointer: play_11    
 #############
 #           #
