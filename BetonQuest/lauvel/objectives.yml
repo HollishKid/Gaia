@@ -5,7 +5,3 @@ promo_obj1: location -7814;68;3545;Gaia 15 conditions:Quetes_promo,night events:
 promo_obj2: mmobkill Aventurier_Ensorceler amount:1 events:Quetes_promo_Done
 promo_obj2: mmobkill Aventurier_Ensorceler amount:1 events:Quetes_promo_Done
 Cc_obj: block Cobblestone 4 events:Cc_done notify
-Cc_1: setblock AIR ???;???;???;Gaia
-Cc_2: setblock AIR ???;???;???;Gaia
-Cc_3: setblock AIR ???;???;???;Gaia
-Cc_4: setblock AIR ???;???;???;Gaia  

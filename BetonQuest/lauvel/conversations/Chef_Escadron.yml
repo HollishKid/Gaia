@@ -1,5 +1,5 @@
 quester: 'Chef d''escadron'
-first: qui,promotion,chef_r1,aprouv,mais
+first: qui,promotion,chef_r1,aprouv,npc_01,mais
 stop: 'false'
 ###########
 #         #
@@ -57,7 +57,13 @@ NPC_options:
   chef_r6:
     text: 'Bien'
     events: Forge_all
-#############
+  npc_01:
+    text: 'Te revoilà, tu as fini ta petite balade ?'
+    conditions: Qs_done
+    pointer: play_01
+  npc_02:
+    text: 'Je suis au courant. Jacky ma prévenue que tu risqué de revenir plus tard. Le Chef supérieur vous demande.\nJe connais pas la relation entre vous deux mais il a l''air de t''aprécier.'
+    events: Qs_done_del,Cs_Av,Quetes_promo_journal2_Del,Cs_jrl
 #           #
 #   Joueur  #
 #           #
@@ -103,3 +109,6 @@ player_options:
   chef_q7:
     text: 'Oui, j''y vais de suite, chef!'
     pointer: chef_r6
+  play_01:
+    text: 'Euh...'
+    pointer: npc_02

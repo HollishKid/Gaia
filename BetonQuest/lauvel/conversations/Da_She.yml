@@ -1,0 +1,81 @@
+quester: 'Da_She'
+first:   npc_00,npc_01
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  npc_00:
+    text: 'Quelle bonne journée aujourd'hui.'
+  npc_01:
+    text: 'Bonjour, vous êtes nouveaux ? j'ai pas l'air de vous connaître.'
+    conditions: 'Da_She,!Da_ville'
+    pointer: play_01
+  npc_02: 
+    text: 'Je vois, vous avez l''air d''une personne de confiance.'
+    pointer: play_02
+  npc_03:
+    text: 'Vos yeux!'
+    pointer: play_03
+  npc_04:
+    text: 'Oui, les yeux ne peuvent pas mentire. Je peux voir d''un simple regard que malgrès votre partie sombre en vous. Vous avez de la compassion et de la générosité.'
+    pointer: play_04
+  npc_05:
+    text: 'Ahah, j''ai tellement vue de personne différent avec des personnalités et puis grâce à mes parent, j''ai pus dévelloper cet habilité.'
+    pointer: play_05
+  npc_06:
+    text: 'Bref, vous êtiez venue me voir pour un but bien, précis?'
+    pointer: play_06,play_07  
+  npc_07:
+    text: 'Pas besoin de le caché, je peux voir si que vous êtes pas là pour rien.'
+    pointer: play_06
+  npc_08:
+    text: 'Je vois. Pourquoi, vous voulez savoir sur ce coffre?'
+    pointer: play_08
+  npc_09:
+    text: 'Avec la Reine? Pourquoi j''aurais un coffre provenant de la Reine?'
+    pointer: play_09
+  npc_10:
+    text: 'Je les eux de mes parents avant leurs morts. Ils mon dient qu''il y a un secret à l''intérieure sur ma naissance.\n Mais que si je voulez savoir que je devrais aller cherché la clé à ...'
+    pointer: play_10
+  npc_11:
+    text: 'Je ne sais pas non plus. Mais, tu devrais trouver des informations quelque part.'
+    pointer: play_11    
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  play_01:
+    text: 'Oui, j'étais recruter il y a quelque jours.'
+    pointer: npc_02
+  play_02:
+    text: 'Qu''est-ce qui vous fais pensez ça ?
+    pointer: npc_03
+  play_03:
+    text: 'Mes yeux ?'
+    pointer: npc_04
+  play_04:
+    text: 'Mais comment?'
+    pointer: npc_05
+  play_05:
+    text: 'Je vois.'
+    pointer: npc_06
+  play_06:
+    text: 'Alors, je vais être direct. Je suis venue en rapport avec une boîte mystérieuse que vous possèder!'
+    pointer: npc_08
+  play_07:
+    text: 'Non, j''ai rien de spécial à vous dire.'
+    pointer: npc_07
+  play_08:
+    text: 'Il aurais un rapport avec la Reine.'
+    pointer: npc_09
+  play_09:
+    text: 'C''est ce que je voudrais savoir. Comment l''avez vous eu?'
+    pointer: npc_10
+  play_10:
+    text: '...?'
+    pointer: npc_11

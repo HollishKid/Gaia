@@ -1,5 +1,5 @@
 quester: 'Jacky'
-first: npc_01,npc_02,npc_08
+first: npc_01,npc_02,npc_08,npc_18
 stop: 'false'
 ###########
 #         #
@@ -67,7 +67,7 @@ NPC_options:
     pointer: play_19
   bnpc_20:
     text: '*Surpri*, ahah, je t''aime bien ptit gars.\nBref, tu devrais retourner voir le Chef d''escouade.'
-    events: Me_ja_del,Qs_done,Ja_take,Cc_liv_done_del
+    events: Me_ja2
 #############
 #           #
 #   Joueur  #
