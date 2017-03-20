@@ -1679,263 +1679,263 @@ mb_clean_xpboost: 'command pex user %player% remove mcmmo.perks.xp.10percentboos
 #
 #
 metier_epees1: if metier_epees metier_epees1_exe else metier_not_yours
-metier_epees1_exe: 'command pex user %player% prefix "&6[&2Épéiste&6]&7"'
+metier_epees1_exe: 'command pex user %player% prefix "§6[§2Épéiste§6]§7"'
 #
 metier_epees2: if metier_epees metier_epees2_exe else metier_not_yours
 metier_epees2_exe: if epees_25 metier_epees2_exe2 else no_level_grade
-metier_epees2_exe2: 'command pex user %player% prefix "&6[&2Bretteur&6]&7"'
+metier_epees2_exe2: 'command pex user %player% prefix "§6[§2Bretteur§6]§7"'
 #
 metier_epees3: if metier_epees metier_epees3_exe else metier_not_yours
 metier_epees3_exe: if epees_50 metier_epees3_exe2 else no_level_grade
-metier_epees3_exe2: 'command pex user %player% prefix "&6[&2Fantassin&6]&7"'
+metier_epees3_exe2: 'command pex user %player% prefix "§6[§2Fantassin§6]§7"'
 #
 metier_epees4: if metier_epees metier_epees4_exe else metier_not_yours
 metier_epees4_exe: if epees_75 metier_epees4_exe2 else no_level_grade
-metier_epees4_exe2: 'command pex user %player% prefix "&6[&2Sabreur&6]&7"'
+metier_epees4_exe2: 'command pex user %player% prefix "§6[§2Sabreur§6]§7"'
 #
 metier_epees5: if metier_epees metier_epees5_exe else metier_not_yours
 metier_epees5_exe: if epees_100 metier_epees5_exe2 else no_level_grade
-metier_epees5_exe2: 'command pex user %player% prefix "&6[&2Paladin&6]&7"'
+metier_epees5_exe2: 'command pex user %player% prefix "§6[§2Paladin§6]§7"'
 #
 #
 metier_poings1: if metier_poings metier_poings1_exe else metier_not_yours
-metier_poings1_exe: 'command pex user %player% prefix "&6[&2Pugiliste&6]&7"'
+metier_poings1_exe: 'command pex user %player% prefix "§6[§2Pugiliste§6]§7"'
 #
 metier_poings2: if metier_poings metier_poings2_exe else metier_not_yours
 metier_poings2_exe: if poings_25 metier_poings2_exe2 else no_level_grade
-metier_poings2_exe2: 'command pex user %player% prefix "&6[&2Hatiliarius&6]&7"'
+metier_poings2_exe2: 'command pex user %player% prefix "§6[§2Hatiliarius§6]§7"'
 #
 metier_poings3: if metier_poings metier_poings3_exe else metier_not_yours
 metier_poings3_exe: if poings_50 metier_poings3_exe2 else no_level_grade
-metier_poings3_exe2: 'command pex user %player% prefix "&6[&2Centurion&6]&7"'
+metier_poings3_exe2: 'command pex user %player% prefix "§6[§2Centurion§6]§7"'
 #
 metier_poings4: if metier_poings metier_poings4_exe else metier_not_yours
 metier_poings4_exe: if poings_75 metier_poings4_exe2 else no_level_grade
-metier_poings4_exe2: 'command pex user %player% prefix "&6[&2Venator&6]&7"'
+metier_poings4_exe2: 'command pex user %player% prefix "§6[§2Venator§6]§7"'
 #
 metier_poings5: if metier_poings metier_poings5_exe else metier_not_yours
 metier_poings5_exe: if poings_100 metier_poings5_exe2 else no_level_grade
-metier_poings5_exe2: 'command pex user %player% prefix "&6[&2Champion&6]&7"'
+metier_poings5_exe2: 'command pex user %player% prefix "§6[§2Champion§6]§7"'
 #
 #
 metier_haches1: if metier_haches metier_haches1_exe else metier_not_yours
-metier_haches1_exe: 'command pex user %player% prefix "&6[&2Milicien&6]&7"'
+metier_haches1_exe: 'command pex user %player% prefix "§6[§2Milicien§6]§7"'
 #
 metier_haches2: if metier_haches metier_haches2_exe else metier_not_yours
 metier_haches2_exe: if haches_25 metier_haches2_exe2 else no_level_grade
-metier_haches2_exe2: 'command pex user %player% prefix "&6[&2Franc&6]&7"'
+metier_haches2_exe2: 'command pex user %player% prefix "§6[§2Franc§6]§7"'
 #
 metier_haches3: if metier_haches metier_haches3_exe else metier_not_yours
 metier_haches3_exe: if haches_50 metier_haches3_exe2 else no_level_grade
-metier_haches3_exe2: 'command pex user %player% prefix "&6[&2Gladiateur&6]&7"'
+metier_haches3_exe2: 'command pex user %player% prefix "§6[§2Gladiateur§6]§7"'
 #
 metier_haches4: if metier_haches metier_haches4_exe else metier_not_yours
 metier_haches4_exe: if haches_75 metier_haches4_exe2 else no_level_grade
-metier_haches4_exe2: 'command pex user %player% prefix "&6[&2Pourfendeur&6]&7"'
+metier_haches4_exe2: 'command pex user %player% prefix "§6[§2Pourfendeur§6]§7"'
 #
 metier_haches5: if metier_haches metier_haches5_exe else metier_not_yours
 metier_haches5_exe: if haches_100 metier_haches5_exe2 else no_level_grade
-metier_haches5_exe2: 'command pex user %player% prefix "&6[&2Berserk&6]&7"'
+metier_haches5_exe2: 'command pex user %player% prefix "§6[§2Berserk§6]§7"'
 #
 #
 metier_arc1: if metier_arc metier_arc1_exe else metier_not_yours
-metier_arc1_exe: 'command pex user %player% prefix "&6[&2Archerot&6]&7"'
+metier_arc1_exe: 'command pex user %player% prefix "§6[§2Archerot§6]§7"'
 #
 metier_arc2: if metier_arc metier_arc2_exe else metier_not_yours
 metier_arc2_exe: if arc_25 metier_arc2_exe2 else no_level_grade
-metier_arc2_exe2: 'command pex user %player% prefix "&6[&2Archer&6]&7"'
+metier_arc2_exe2: 'command pex user %player% prefix "§6[§2Archer§6]§7"'
 #
 metier_arc3: if metier_arc metier_arc3_exe else metier_not_yours
 metier_arc3_exe: if arc_50 metier_arc3_exe2 else no_level_grade
-metier_arc3_exe2: 'command pex user %player% prefix "&6[&2Franc-Archer&6]&7"'
+metier_arc3_exe2: 'command pex user %player% prefix "§6[§2Franc-Archer§6]§7"'
 #
 metier_arc4: if metier_arc metier_arc4_exe else metier_not_yours
 metier_arc4_exe: if arc_75 metier_arc4_exe2 else no_level_grade
-metier_arc4_exe2: 'command pex user %player% prefix "&6[&2Arbalétrier&6]&7"'
+metier_arc4_exe2: 'command pex user %player% prefix "§6[§2Arbalétrier§6]§7"'
 #
 metier_arc5: if metier_arc metier_arc5_exe else metier_not_yours
 metier_arc5_exe: if arc_100 metier_arc5_exe2 else no_level_grade
-metier_arc5_exe2: 'command pex user %player% prefix "&6[&2Hood&6]&7"'
+metier_arc5_exe2: 'command pex user %player% prefix "§6[§2Hood§6]§7"'
 #
 #
 metier_alchimiste1: if metier_alchimiste metier_alchimiste1_exe else metier_not_yours
-metier_alchimiste1_exe: 'command pex user %player% prefix "&6[&2Adepte&6]&7"'
+metier_alchimiste1_exe: 'command pex user %player% prefix "§6[§2Adepte§6]§7"'
 #
 metier_alchimiste2: if metier_alchimiste metier_alchimiste2_exe else metier_not_yours
 metier_alchimiste2_exe: if alchimiste_25 metier_alchimiste2_exe2 else no_level_grade
-metier_alchimiste2_exe2: 'command pex user %player% prefix "&6[&2Hermétiste&6]&7"'
+metier_alchimiste2_exe2: 'command pex user %player% prefix "§6[§2Hermétiste§6]§7"'
 #
 metier_alchimiste3: if metier_alchimiste metier_alchimiste3_exe else metier_not_yours
 metier_alchimiste3_exe: if alchimiste_50 metier_alchimiste3_exe2 else no_level_grade
-metier_alchimiste3_exe2: 'command pex user %player% prefix "&6[&2Occultiste&6]&7"'
+metier_alchimiste3_exe2: 'command pex user %player% prefix "§6[§2Occultiste§6]§7"'
 #
 metier_alchimiste4: if metier_alchimiste metier_alchimiste4_exe else metier_not_yours
 metier_alchimiste4_exe: if alchimiste_75 metier_alchimiste4_exe2 else no_level_grade
-metier_alchimiste4_exe2: 'command pex user %player% prefix "&6[&2Alchimiste&6]&7"'
+metier_alchimiste4_exe2: 'command pex user %player% prefix "§6[§2Alchimiste§6]§7"'
 #
 metier_alchimiste5: if metier_alchimiste metier_alchimiste5_exe else metier_not_yours
 metier_alchimiste5_exe: if alchimiste_100 metier_alchimiste5_exe2 else no_level_grade
-metier_alchimiste5_exe2: 'command pex user %player% prefix "&6[&2Rose-Croix&6]&7"'
+metier_alchimiste5_exe2: 'command pex user %player% prefix "§6[§2Rose-Croix§6]§7"'
 #
 #
 metier_acrobate1: if metier_acrobate metier_acrobate1_exe else metier_not_yours
-metier_acrobate1_exe: 'command pex user %player% prefix "&6[&2Acrobate&6]&7"'
+metier_acrobate1_exe: 'command pex user %player% prefix "§6[§2Acrobate§6]§7"'
 #
 metier_acrobate2: if metier_acrobate metier_acrobate2_exe else metier_not_yours
 metier_acrobate2_exe: if acrobate_25 metier_acrobate2_exe2 else no_level_grade
-metier_acrobate2_exe2: 'command pex user %player% prefix "&6[&2Bateleur&6]&7"'
+metier_acrobate2_exe2: 'command pex user %player% prefix "§6[§2Bateleur§6]§7"'
 #
 metier_acrobate3: if metier_acrobate metier_acrobate3_exe else metier_not_yours
 metier_acrobate3_exe: if acrobate_50 metier_acrobate3_exe2 else no_level_grade
-metier_acrobate3_exe2: 'command pex user %player% prefix "&6[&2Matassin&6]&7"'
+metier_acrobate3_exe2: 'command pex user %player% prefix "§6[§2Matassin§6]§7"'
 #
 metier_acrobate4: if metier_acrobate metier_acrobate4_exe else metier_not_yours
 metier_acrobate4_exe: if acrobate_75 metier_acrobate4_exe2 else no_level_grade
-metier_acrobate4_exe2: 'command pex user %player% prefix "&6[&2Funambule&6]&7"'
+metier_acrobate4_exe2: 'command pex user %player% prefix "§6[§2Funambule§6]§7"'
 #
 metier_acrobate5: if metier_acrobate metier_acrobate5_exe else metier_not_yours
 metier_acrobate5_exe: if acrobate_100 metier_acrobate5_exe2 else no_level_grade
-metier_acrobate5_exe2: 'command pex user %player% prefix "&6[&2Baladin&6]&7"'
+metier_acrobate5_exe2: 'command pex user %player% prefix "§6[§2Baladin§6]§7"'
 #
 #
 metier_peche1: if metier_peche metier_pecheur1_exe else metier_not_yours
-metier_pecheur1_exe: 'command pex user %player% prefix "&6[&2Pêcheur&6]&7"'
+metier_pecheur1_exe: 'command pex user %player% prefix "§6[§2Pêcheur§6]§7"'
 #
 metier_peche2: if metier_peche metier_pecheur2_exe else metier_not_yours
 metier_pecheur2_exe: if peche_25 metier_pecheur2_exe2 else no_level_grade
-metier_pecheur2_exe2: 'command pex user %player% prefix "&6[&2Sardinier&6]&7"'
+metier_pecheur2_exe2: 'command pex user %player% prefix "§6[§2Sardinier§6]§7"'
 #
 metier_peche3: if metier_peche metier_pecheur3_exe else metier_not_yours
 metier_pecheur3_exe: if peche_50 metier_pecheur3_exe2 else no_level_grade
-metier_pecheur3_exe2: 'command pex user %player% prefix "&6[&2Morutier&6]&7"'
+metier_pecheur3_exe2: 'command pex user %player% prefix "§6[§2Morutier§6]§7"'
 #
 metier_peche4: if metier_peche metier_pecheur4_exe else metier_not_yours
 metier_pecheur4_exe: if peche_75 metier_pecheur4_exe2 else no_level_grade
-metier_pecheur4_exe2: 'command pex user %player% prefix "&6[&2Chalutier&6]&7"'
+metier_pecheur4_exe2: 'command pex user %player% prefix "§6[§2Chalutier§6]§7"'
 #
 metier_peche5: if metier_peche metier_pecheur5_exe else metier_not_yours
 metier_pecheur5_exe: if peche_100 metier_pecheur5_exe2 else no_level_grade
-metier_pecheur5_exe2: 'command pex user %player% prefix "&6[&2Marin&6]&7"'
+metier_pecheur5_exe2: 'command pex user %player% prefix "§6[§2Marin§6]§7"'
 #
 #
 metier_apprivoiseur1: if metier_apprivoiseur metier_apprivoiseur1_exe else metier_not_yours
-metier_apprivoiseur1_exe: 'command pex user %player% prefix "&6[&2Apprivoiseur&6]&7"'
+metier_apprivoiseur1_exe: 'command pex user %player% prefix "§6[§2Apprivoiseur§6]§7"'
 #
 metier_apprivoiseur2: if metier_apprivoiseur metier_apprivoiseur2_exe else metier_not_yours
 metier_apprivoiseur2_exe: if apprivoiseur_25 metier_apprivoiseur2_exe2 else no_level_grade
-metier_apprivoiseur2_exe2: 'command pex user %player% prefix "&6[&2Débourreur&6]&7"'
+metier_apprivoiseur2_exe2: 'command pex user %player% prefix "§6[§2Débourreur§6]§7"'
 #
 metier_apprivoiseur3: if metier_apprivoiseur metier_apprivoiseur3_exe else metier_not_yours
 metier_apprivoiseur3_exe: if apprivoiseur_50 metier_apprivoiseur3_exe2 else no_level_grade
-metier_apprivoiseur3_exe2: 'command pex user %player% prefix "&6[&2Dresseur&6]&7"'
+metier_apprivoiseur3_exe2: 'command pex user %player% prefix "§6[§2Dresseur§6]§7"'
 #
 metier_apprivoiseur4: if metier_apprivoiseur metier_apprivoiseur4_exe else metier_not_yours
 metier_apprivoiseur4_exe: if apprivoiseur_75 metier_apprivoiseur4_exe2 else no_level_grade
-metier_apprivoiseur4_exe2: 'command pex user %player% prefix "&6[&2Corrupteur&6]&7"'
+metier_apprivoiseur4_exe2: 'command pex user %player% prefix "§6[§2Corrupteur§6]§7"'
 #
 metier_apprivoiseur5: if metier_apprivoiseur metier_apprivoiseur5_exe else metier_not_yours
 metier_apprivoiseur5_exe: if apprivoiseur_100 metier_apprivoiseur5_exe2 else no_level_grade
-metier_apprivoiseur5_exe2: 'command pex user %player% prefix "&6[&2Dompteur&6]&7"'
+metier_apprivoiseur5_exe2: 'command pex user %player% prefix "§6[§2Dompteur§6]§7"'
 #
 #
 metier_herboriste1: if metier_herboriste metier_herboriste1_exe else metier_not_yours
-metier_herboriste1_exe: 'command pex user %player% prefix "&6[&2Paysan&6]&7"'
+metier_herboriste1_exe: 'command pex user %player% prefix "§6[§2Paysan§6]§7"'
 #
 metier_herboriste2: if metier_herboriste metier_herboriste2_exe else metier_not_yours
 metier_herboriste2_exe: if herboriste_25 metier_herboriste2_exe2 else no_level_grade
-metier_herboriste2_exe2: 'command pex user %player% prefix "&6[&2Laboureur&6]&7"'
+metier_herboriste2_exe2: 'command pex user %player% prefix "§6[§2Laboureur§6]§7"'
 #
 metier_herboriste3: if metier_herboriste metier_herboriste3_exe else metier_not_yours
 metier_herboriste3_exe: if herboriste_50 metier_herboriste3_exe2 else no_level_grade
-metier_herboriste3_exe2: 'command pex user %player% prefix "&6[&2Cultivateur&6]&7"'
+metier_herboriste3_exe2: 'command pex user %player% prefix "§6[§2Cultivateur§6]§7"'
 #
 metier_herboriste4: if metier_herboriste metier_herboriste4_exe else metier_not_yours
 metier_herboriste4_exe: if herboriste_75 metier_herboriste4_exe2 else no_level_grade
-metier_herboriste4_exe2: 'command pex user %player% prefix "&6[&2Herboriste&6]&7"'
+metier_herboriste4_exe2: 'command pex user %player% prefix "§6[§2Herboriste§6]§7"'
 #
 metier_herboriste5: if metier_herboriste metier_herboriste5_exe else metier_not_yours
 metier_herboriste5_exe: if herboriste_100 metier_herboriste5_exe2 else no_level_grade
-metier_herboriste5_exe2: 'command pex user %player% prefix "&6[&2Naturopathe&6]&7"'
+metier_herboriste5_exe2: 'command pex user %player% prefix "§6[§2Naturopathe§6]§7"'
 #
 #
 metier_mineur1: if metier_mineur metier_mineur1_exe else metier_not_yours
-metier_mineur1_exe: 'command pex user %player% prefix "&6[&2Mineur&6]&7"'
+metier_mineur1_exe: 'command pex user %player% prefix "§6[§2Mineur§6]§7"'
 #
 metier_mineur2: if metier_mineur metier_mineur2_exe else metier_not_yours
 metier_mineur2_exe: if mineur_25 metier_mineur2_exe2 else no_level_grade
-metier_mineur2_exe2: 'command pex user %player% prefix "&6[&2Charbonnier&6]&7"'
+metier_mineur2_exe2: 'command pex user %player% prefix "§6[§2Charbonnier§6]§7"'
 #
 metier_mineur3: if metier_mineur metier_mineur3_exe else metier_not_yours
 metier_mineur3_exe: if mineur_50 metier_mineur3_exe2 else no_level_grade
-metier_mineur3_exe2: 'command pex user %player% prefix "&6[&2Houilleur&6]&7"'
+metier_mineur3_exe2: 'command pex user %player% prefix "§6[§2Houilleur§6]§7"'
 #
 metier_mineur4: if metier_mineur metier_mineur4_exe else metier_not_yours
 metier_mineur4_exe: if mineur_75 metier_mineur4_exe2 else no_level_grade
-metier_mineur4_exe2: 'command pex user %player% prefix "&6[&2Hercheur&6]&7"'
+metier_mineur4_exe2: 'command pex user %player% prefix "§6[§2Hercheur§6]§7"'
 #
 metier_mineur5: if metier_mineur metier_mineur5_exe else metier_not_yours
 metier_mineur5_exe: if mineur_100 metier_mineur5_exe2 else no_level_grade
-metier_mineur5_exe2: 'command pex user %player% prefix "&6[&2Porion&6]&7"'
+metier_mineur5_exe2: 'command pex user %player% prefix "§6[§2Porion§6]§7"'
 #
 #
 metier_reparation1: if metier_reparation metier_reparation1_exe else metier_not_yours
-metier_reparation1_exe: 'command pex user %player% prefix "&6[&2Raccommodeur&6]&7"'
+metier_reparation1_exe: 'command pex user %player% prefix "§6[§2Raccommodeur§6]§7"'
 #
 metier_reparation2: if metier_reparation metier_reparation2_exe else metier_not_yours
 metier_reparation2_exe: if reparation_25 metier_reparation2_exe2 else no_level_grade
-metier_reparation2_exe2: 'command pex user %player% prefix "&6[&2Ouvrier&6]&7"'
+metier_reparation2_exe2: 'command pex user %player% prefix "§6[§2Ouvrier§6]§7"'
 #
 metier_reparation3: if metier_reparation metier_reparation3_exe else metier_not_yours
 metier_reparation3_exe: if reparation_50 metier_reparation3_exe2 else no_level_grade
-metier_reparation3_exe2: 'command pex user %player% prefix "&6[&2Artisan&6]&7"'
+metier_reparation3_exe2: 'command pex user %player% prefix "§6[§2Artisan§6]§7"'
 #
 metier_reparation4: if metier_reparation metier_reparation4_exe else metier_not_yours
 metier_reparation4_exe: if reparation_75 metier_reparation4_exe2 else no_level_grade
-metier_reparation4_exe2: 'command pex user %player% prefix "&6[&2Contremaître&6]&7"'
+metier_reparation4_exe2: 'command pex user %player% prefix "§6[§2Contremaître§6]§7"'
 #
 metier_reparation5: if metier_reparation metier_reparation5_exe else metier_not_yours
 metier_reparation5_exe: if reparation_100 metier_reparation5_exe2 else no_level_grade
-metier_reparation5_exe2: 'command pex user %player% prefix "&6[&2Maître&6]&7"'
+metier_reparation5_exe2: 'command pex user %player% prefix "§6[§2Maître§6]§7"'
 #
 #
 metier_excavation1: if metier_excavation metier_excavation1_exe else metier_not_yours
-metier_excavation1_exe: 'command pex user %player% prefix "&6[&2Galibot&6]&7"'
+metier_excavation1_exe: 'command pex user %player% prefix "§6[§2Galibot§6]§7"'
 #
 metier_excavation2: if metier_excavation metier_excavation2_exe else metier_not_yours
 metier_excavation2_exe: if excavation_25 metier_excavation2_exe2 else no_level_grade
-metier_excavation2_exe2: 'command pex user %player% prefix "&6[&2Carrier&6]&7"'
+metier_excavation2_exe2: 'command pex user %player% prefix "§6[§2Carrier§6]§7"'
 #
 metier_excavation3: if metier_excavation metier_excavation3_exe else metier_not_yours
 metier_excavation3_exe: if excavation_50 metier_excavation3_exe2 else no_level_grade
-metier_excavation3_exe2: 'command pex user %player% prefix "&6[&2Foreur&6]&7"'
+metier_excavation3_exe2: 'command pex user %player% prefix "§6[§2Foreur§6]§7"'
 #
 metier_excavation4: if metier_excavation metier_excavation4_exe else metier_not_yours
 metier_excavation4_exe: if excavation_75 metier_excavation4_exe2 else no_level_grade
-metier_excavation4_exe2: 'command pex user %player% prefix "&6[&2Sapeur&6]&7"'
+metier_excavation4_exe2: 'command pex user %player% prefix "§6[§2Sapeur§6]§7"'
 #
 metier_excavation5: if metier_excavation metier_excavation5_exe else metier_not_yours
 metier_excavation5_exe: if excavation_100 metier_excavation5_exe2 else no_level_grade
-metier_excavation5_exe2: 'command pex user %player% prefix "&6[&2Pionnier&6]&7"'
+metier_excavation5_exe2: 'command pex user %player% prefix "§6[§2Pionnier§6]§7"'
 #
 #
 metier_bucheron1: if metier_bucheron metier_bucheron1_exe else metier_not_yours
-metier_bucheron1_exe: 'command pex user %player% prefix "&6[&2Échardier&6]&7"'
+metier_bucheron1_exe: 'command pex user %player% prefix "§6[§2Échardier§6]§7"'
 #
 metier_bucheron2: if metier_bucheron metier_bucheron2_exe else metier_not_yours
 metier_bucheron2_exe: if bucheron_25 metier_bucheron2_exe2 else no_level_grade
-metier_bucheron2_exe2: 'command pex user %player% prefix "&6[&2Bûcheron&6]&7"'
+metier_bucheron2_exe2: 'command pex user %player% prefix "§6[§2Bûcheron§6]§7"'
 #
 metier_bucheron3: if metier_bucheron metier_bucheron3_exe else metier_not_yours
 metier_bucheron3_exe: if bucheron_50 metier_bucheron3_exe2 else no_level_grade
-metier_bucheron3_exe2: 'command pex user %player% prefix "&6[&2Tronçonneur&6]&7"'
+metier_bucheron3_exe2: 'command pex user %player% prefix "§6[§2Tronçonneur§6]§7"'
 #
 metier_bucheron4: if metier_bucheron metier_bucheron4_exe else metier_not_yours
 metier_bucheron4_exe: if bucheron_75 metier_bucheron4_exe2 else no_level_grade
-metier_bucheron4_exe2: 'command pex user %player% prefix "&6[&2Abbateur&6]&7"'
+metier_bucheron4_exe2: 'command pex user %player% prefix "§6[§2Abbateur§6]§7"'
 #
 metier_bucheron5: if metier_bucheron metier_bucheron5_exe else metier_not_yours
 metier_bucheron5_exe: if bucheron_100 metier_bucheron5_exe2 else no_level_grade
-metier_bucheron5_exe2: 'command pex user %player% prefix "&6[&2Écorceur&6]&7"'
+metier_bucheron5_exe2: 'command pex user %player% prefix "§6[§2Écorceur§6]§7"'
 #
 #
 # Stuff Guilde

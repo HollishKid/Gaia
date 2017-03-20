@@ -73,6 +73,60 @@ on chat:
 		else:
 			message "&d&oVous ne pouvez effectuer de Retrait qu'au sein de la Banque d'Athelas."
 			cancel event
+#
+# Salons de Discussion
+#
+#    Global, Silencieux, Local, Commerce.
+#
+#		This requires Vixio addon for full integration of Salon Silencieux.
+#
+#
+#discord login to user with token "MjA3Nzc0MTkzNjQ1OTEyMDY3.C69pRQ.ZgW1pWXtwwWoncjNSAkfH50zH1o" with name "Gaïa - Bot"
+#[discord ]send message %string% to channel [with id] %string% as [bot] %string%
+#send discord message of %string% to %string% with %string%
+#[discord] set game of bot %string% to %string%
+#
+#
+#
+#
+	else:
+		set message to "%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&7%player% &f: &7%message%"
+#		if {s.channel.%player%} is set:
+#			cancel event
+#			message "&cVous êtes dans le Salon Silencieux. Vous ne pouvez pas parler ici."
+#			message "&a&oPour changer de canal, utilisez votre &f/menu&a&o."
+#		if {g.channel.%player%} is set:
+#			set message to "%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&7%player% &f: &7%message%"
+#		else if {l.channel.%player%}
+#		set {_chat} to "%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&7%player% &f: &7%message%"
+#		loop all players:
+#			send "Combien de fois est-ce que vous voyez ce message ?" to loop-player
+#			send "%{_chat}%" to loop-player
+
+#on load:
+#	discord login to user with token "MjkyODI4MDc5ODEyNzcxODQx.C69tDQ.0eb-o2euVhQRzgzUMKNZ1XWAC48" with name "Gaia"
+#	broadcast "Loggé sur Discord !"
+#	discord send message "Hello Discord !" to channel with id "gaia" as bot "Gaia"
+
+#on guild message:
+#	loop all players:
+#		execute console command "tellraw %loop-player% [{""text"":""[DiSKord-Link] "",""color"":""blue"",""clickEvent"":{""action"":""open_url"",""value"":""https://skript-mc.fr/forum/resources/659/""}},{""text"":""%{_name}%"",""color"":""aqua""},{""text"":"" » "",""color"":""dark_gray""},{""text"":""%event-string%"",""color"":""white""}]"
+
+
+command /discordlogin:
+	trigger:
+		broadcast "Loggé sur Discord !"
+		discord send message "Hello Discord !" to channel with id "186938785026539523" as bot "Gaia"
+		discord set game of bot "Gaia" to "Minecraft"
+			
+command /schannel:
+	trigger:
+		set {s.channel.%player%} to 1
+		delete {g.channel.%player%}
+		delete {l.channel.%player%}
+#
+# On Discord Msg => use only names (no prefix)
+#
 #		
 #
 #

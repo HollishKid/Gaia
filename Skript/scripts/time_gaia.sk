@@ -29,8 +29,9 @@ on join:
 on load:
 	execute console command "xprate reset"
 	execute console command "region removemember foret_athelas -a -w Gaia"
-	set {day.index::*} to contents from url "https://gaia-minecraft.000webhostapp.com/day.php/"
-	set {day.index} to {day.index::1}
+#
+	set {_tmpO} to now
+	set {day.index} to day of week from date {_tmpO}
 	set {event.breach} to 0
 	set {event.double.xp} to 0
 #
@@ -142,8 +143,8 @@ every 5 minutes in "Gaia":
 #
 
 every 59 minutes in "Gaia":	
-	set {day.index::*} to contents from url "https://gaia-minecraft.000webhostapp.com/day.php/"
-	set {day.index} to {day.index::1}
+	set {_tmpO} to now
+	set {day.index} to day of week from date {_tmpO}
 	set {hour.system} to "%hour%"
 	wait 1 second
 #
@@ -151,7 +152,6 @@ every 59 minutes in "Gaia":
 # At Midnight
 # Eastern Reset
 #
-	execute console command "mail send Hollish RESTORE CHECK - %{day.index}% %{hour.system}%"
 	if {hour.system} is "0":
 		broadcast "&c&oLe Continent de l'Est tremble..."
 		wait 2 seconds
@@ -159,13 +159,12 @@ every 59 minutes in "Gaia":
 		wait 2 seconds
 		broadcast "&c&o...méfiez vous de ne pas suffoquer dans un bloc !"
 		wait 7 seconds
-		execute console command "mail send Hollish RESTORE CHECK - %{day.index}% %{hour.system}%"
 		loop {place.location.%{day.index}%::*}:
 			set block at loop-value to air
 			delete {place.location.%{day.index}%::%loop-index%}
 			wait 1 tick
 		wait 22 ticks
-		loop {break.location.%{_day.index.temp}%::*}:
+		loop {break.location.%{day.index}%::*}:
 			set block at loop-value to {break.type.%{day.index}%::%loop-index%}
 			delete {break.location.%{day.index}%::%loop-index%}
 			delete {break.type.%{day.index}%::%loop-index%}
