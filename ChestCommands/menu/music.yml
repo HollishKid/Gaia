@@ -42,23 +42,32 @@ jukebox:
   COMMAND: 'jukebox'
   NAME: '&aLancer la Musique'
   LORE:
-    - '&fAffiche le lien pour lancer la Musique'
-    - '&cLance une fênetre dans votre navigateur'
-    - '&cpour jouer la Musique de Gaïa'
-    - '&aCette musique évolue en fonction de'
-    - '&al''endroit où vous vous trouvez'
+    - 'Affiche le lien pour lancer la Musique.'
+    - 'Lance une fênetre dans votre navigateur'
+    - 'pour jouer la Musique de Gaïa.'
     - ' '
-    - '&cIMPERATIF POUR LANCER LA MUSIQUE!'
+    - '&aCette musique évolue en fonction de'
+    - '&al''endroit où vous vous trouvez.'
+    - ' '
+    - '&cImpératif pour lancer la musique !'
   ID: wool:13
   POSITION-X: 5
   POSITION-Y: 1
 
 retour:
   COMMAND: 'open: Menu.yml'
-  NAME: '&6Retour'
+  NAME: '&aRetour'
   ID: stick
   LORE:
-    - 'Retour au Menu Principal'
+    - 'Retour au Menu Principal.'
+  POSITION-X: 8
+  POSITION-Y: 1
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
   POSITION-X: 9
   POSITION-Y: 1
   
@@ -69,7 +78,7 @@ spawn:
     - '&fMusique du Spawn'
   ID: paper
   POSITION-X: 1
-  POSITION-Y: 2 
+  POSITION-Y: 3 
   
 athelas:
   COMMAND: 'console: jukebox music {player} https://clyp.it/qtxzvpih.mp3'
@@ -79,7 +88,7 @@ athelas:
     - '&fd''Athelas'
   ID: paper
   POSITION-X: 2
-  POSITION-Y: 2 
+  POSITION-Y: 3 
   
 gaia:
   COMMAND: 'console: jukebox music {player} https://clyp.it/4ysxehyg.mp3'
@@ -89,7 +98,7 @@ gaia:
     - '&fdes Villes.'
   ID: paper
   POSITION-X: 3
-  POSITION-Y: 2
+  POSITION-Y: 3
   
 eastcontinent:
   COMMAND: 'console: jukebox music {player} https://clyp.it/g11xkxm1.mp3'
@@ -98,7 +107,7 @@ eastcontinent:
     - '&fMusique du Continent Est'
   ID: paper
   POSITION-X: 4
-  POSITION-Y: 2
+  POSITION-Y: 3
 
 music1:
   COMMAND: 'console: jukebox music {player} https://clyp.it/o4jmgotw.mp3'
@@ -137,3 +146,65 @@ music4:
   POSITION-Y: 5
 
 
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true

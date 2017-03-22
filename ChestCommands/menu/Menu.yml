@@ -41,9 +41,9 @@ spawn:
   COMMAND: 'spawn'
   NAME: '&eSpawn'
   LORE:
-    - 'Vous amène au Spawn'
+    - 'Vous amène au Spawn.'
     - ' '
-    - 'Utilisation: /spawn'
+    - 'Utilisation: &l/spawn'
   ID: torch
   POSITION-X: 4
   POSITION-Y: 1  
@@ -54,7 +54,7 @@ sethome:
   LORE:
     - 'Définit un emplacement auquel'
     - 'vous pourrez vous téléporter'
-    - 'en cliquant sur l''icône, "Maison"'
+    - 'en cliquant sur l''icône "Maison".'
   ID: redstone_torch
   POSITION-X: 6
   POSITION-Y: 1
@@ -64,7 +64,7 @@ home:
   NAME: '&eMaison'
   LORE:
     - 'Vous amène à l''endroit où'
-    - 'vous avez défini votre maison'
+    - 'vous avez défini votre maison.'
   ID: bed
   POSITION-X: 5
   POSITION-Y: 1
@@ -103,12 +103,12 @@ sac:
   LORE:
     - 'Ouvre votre Sac à Dos'
     - 'Ce Sac contient vos Objets'
-    - 'de Quête si vous mourrez'
+    - 'de Quête si vous mourrez.'
     - ' '
     - 'Vous pouvez placer vous même'
     - 'vos Objets de Quête dedans'
     - 'pour libérer de la place'
-    - 'dans votre inventaire'
+    - 'dans votre inventaire.'
     - ' '
     - 'Utilisation: &l/sac'
   POSITION-X: 4
@@ -141,7 +141,7 @@ dyn:
   ID: map
   LORE:
     - 'Affiche un lien direct vers'
-    - 'la Carte Dynamique dans le tchat'
+    - 'la Carte Dynamique dans le tchat.'
   POSITION-X: 1
   POSITION-Y: 2
 
@@ -151,16 +151,26 @@ site:
   ID: map
   LORE:
     - 'Affiche un lien direct vers'
-    - 'le Guide dans le tchat'
+    - 'le Guide dans le tchat.'
   POSITION-X: 1
   POSITION-Y: 3
 
-votegui:
+chanels:
+  COMMAND: 'open: chanels.yml'
+  NAME: '&aChanels de Discussion'
+  LORE:
+    - 'Cliquez ici pour accéder'
+    - 'au Menu des Chanels de Discussion.'
+  ID: book
+  POSITION-X: 3
+  POSITION-Y: 6
+  
+network:
   COMMAND: 'open: network.yml'
   NAME: '&aRéseaux de Gaïa'
   LORE:
     - 'Cliquez ici pour accéder'
-    - 'au Menu des réseaux de Gaïa'
+    - 'au Menu des réseaux de Gaïa.'
     - ' '
     - '&lSite Officiel'
     - '&lDiscord'
@@ -192,7 +202,7 @@ craft_custom:
   - '&oRecettes de Crafts'
   - '&ouniques sur Gaïa.'
   - ' '
-  - '&oUtilisation :&l/crafts'
+  - 'Utilisation : &l/crafts'
   ID: 58
   POSITION-X: 3
   POSITION-Y: 4
@@ -200,17 +210,18 @@ craft_custom:
 
 help:
   COMMAND: 'open: help.yml'
-  NAME: '&cCOMPTE & AIDE'
+  NAME: '&cCompte & Aide'
   ID: map
   LORE:
-    - 'Modifiez vos options de Compte'
-    - 'Ou si vous avez besoin d''aide'
+    - 'Permet de modifiez vos'
+    - 'options de Compte et'
+    - 'de trouver une aide avancée.'
   POSITION-X: 1
   POSITION-Y: 6
   
 admin:
   COMMAND: 'tell: &aBienvenue dans le menu administrateur; open: admin.yml'
-  NAME: '&8Administrateurs - Développeurs'
+  NAME: '&6Administrateurs - Développeurs'
   LORE:
     - 'Panel de Commandes et de Téléports'
   ID: iron bar
@@ -245,8 +256,8 @@ party:
   COMMAND: 'thisisthepartycommand'
   NAME: '&aGroupe'
   LORE:
-    - 'Affiche le Menu Groupe'
-    - '&opermet de constituer un Groupe'
+    - 'Affiche le Menu Groupe.'
+    - '&oPermet de constituer un Groupe'
     - '&oavec d''autres aventuriers.'
     - '&o(partage d''XP, d''objets, ...)'
   ID: paper
@@ -258,9 +269,9 @@ location:
   COMMAND: 'thisisthelocationcommand'
   NAME: '&aLocations'
   LORE:
-    - 'Affiche le Menu Locations'
-    - '&opermet de gérer votre location'
-    - '&odans la ville d''Athelas'
+    - 'Affiche le Menu Locations.'
+    - '&oPermet de gérer votre location'
+    - '&odans la ville d''Athelas.'
   ID: paper
   POSITION-X: 5
   POSITION-Y: 4
@@ -269,8 +280,8 @@ villes:
   COMMAND: 'open: villes.yml'
   NAME: '&aVilles'
   LORE:
-    - 'Affiche le Menu Villes'
-    - '&opermet de créer / gérer'
+    - 'Affiche le Menu Villes.'
+    - '&oPermet de créer / gérer'
     - '&oune ville.'
     - ' '
     - '&oUtilisable uniquement sur'

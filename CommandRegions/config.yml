@@ -515,7 +515,8 @@ regions:
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
-        leaveConsoleCommands: ''
+        leaveConsoleCommands:
+        - 'bq event %player% athelas_out_checker'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''

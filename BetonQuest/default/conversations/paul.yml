@@ -9,7 +9,7 @@ NPC_options:
     text: 'Bonjour! Vous êtes à la recherche d''un bon pain ? Il vous coûtera seulement &f¤&2100 &a&o!'
     conditions: 'timer_paul'
     pointers: pain,bonjour
-  pain_rep:
+  pain_buy_rep:
     text: 'Tenez, profitez en bien !'
     conditions: 'money_100'
     events: give_pain_paul,money_p100
@@ -67,7 +67,7 @@ player_options:
     text: 'Bonjour à vous! Et ... non merci !'
   pain:
     text: 'Absolument!'
-    pointers: pain_rep,pain_rep_funds
+    pointers: pain_buy_rep,pain_rep_funds
 #
 #
   aide1:

@@ -671,7 +671,7 @@ bartend_q0: and pain_bar,has_pain
 bartend_q1: and !bar_questinprogress,!livraison_done
 bartend_start2: and !bar_questinprogress,livraison_done,!bartend_quete2
 bartend_quete2: tag bartend_q2
-bartend_q2: and bartend_rawpork,bartend_rawsteack
+bartend_q2: and bartend_rawpork,bartend_rawsteack,!bartend_quete2
 bartend_rawpork: item rawsteack:5
 bartend_rawsteack: item rawpork:5
 livraison_done: tag livraison_done

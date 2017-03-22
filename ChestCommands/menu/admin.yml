@@ -59,22 +59,21 @@ players:
   POSITION-Y: 1
   KEEP-OPEN: true
 
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&aRetour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal.'
+  POSITION-X: 8
+  POSITION-Y: 1
+
 menu-close:
-  NAME: '&cFermer'
+  NAME: '&4Fermer'
   ID: barrier
   LORE:
     - 'Ferme cette fenêtre.'
   POSITION-X: 9
-  POSITION-Y: 1
-  
-  
-retour:
-  COMMAND: 'open: Menu.yml'
-  NAME: '&6Retour'
-  ID: stick
-  LORE:
-    - 'Retour au Menu Principal'
-  POSITION-X: 8
   POSITION-Y: 1
   
 gm1:

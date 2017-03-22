@@ -12,8 +12,12 @@
 on quit:
 	set {last.logout.%player%} to now
 	remove player from {online.players::*}
+	discord send message "%player% est parti de Gaïa." to channel with id "186938785026539523" as bot "Gaia"
 on join:
-	add  player to {online.players::*}
+	add player to {online.players::*}
+	discord send message "%player% est arrivé sur Gaïa." to channel with id "186938785026539523" as bot "Gaia"
+	set {g.channel.%player%} to 1
+#
 	wait 30 seconds
 	if {event.double.xp} is 1:
 		send player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out

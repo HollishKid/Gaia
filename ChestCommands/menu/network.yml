@@ -36,21 +36,21 @@ menu-settings:
 #+                  +#
 ######################
   
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&aRetour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal.'
+  POSITION-X: 8
+  POSITION-Y: 1
+
 menu-close:
   NAME: '&4Fermer'
   ID: barrier
   LORE:
     - 'Ferme cette fenêtre.'
   POSITION-X: 9
-  POSITION-Y: 1
-  
-retour:
-  COMMAND: 'open: Menu.yml'
-  NAME: '&6Retour'
-  ID: stick
-  LORE:
-    - 'Retour au Menu Principal'
-  POSITION-X: 8
   POSITION-Y: 1
   
 advids:
@@ -67,7 +67,7 @@ advids:
   ID: book
   ENCHANTMENT: 'fire aspect, 1'
   POSITION-X: 5
-  POSITION-Y: 2
+  POSITION-Y: 4
 
 site:
   COMMAND: 'tell: &awww.gaia-minecraft.enjin.com'
@@ -122,4 +122,67 @@ twitter:
   - 'le Twitter dans le tchat.'
   POSITION-X: 9
   POSITION-Y: 3
+  
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
  

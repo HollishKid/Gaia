@@ -110,13 +110,16 @@ plume_etrange22: setblock LOG -6682;68;2922;Gaia
 teleport_quai: 'run ^teleport -6577;64;3168;Gaia ^message &dJe ne devrais pas traîner autour de ce bateau...'
 #
 #
-#
 # Athelas Tester
 #
-# NOT YET ADDED IN COMMANDREGIONS => TO BE DONE AT RESET, NOT EVERYBODY HAS "PLAYER" TAG.
-athelas_out_checker: if player athelas_out_checker2 else nothing
-athelas_out_checker2: if intendant_done nothing else athelas_out_negative
-athelas_out_negative: folder athelas_out_n1,athelas_out_n2
+athelas_out_checker: if intendant_done nothing else athelas_out_negative
+athelas_out_negative: folder athelas_out_timer,athelas_out_warn,athelas_out_warn2
+athelas_out_timer: objective start athelas_out_timer
+athelas_out_warn: 'message &d&lJe ne devrais pas encore quitter la Ville d''Athelas.'
+athelas_out_warn2: 'message &c&lRentrez dans la ville dans les 60 secondes, ou vous serez téléporté au Château.'
+#
+athelas_out_checkerbis: if in_athelas nothing else athelas_out_checker_exe
+athelas_out_checker_exe: folder athelas_out_n1,athelas_out_n2
 athelas_out_n1: 'message &d&lJe devrais d''abord aller voir l''&dIntendant &d&let / ou finir ce qu''il m''a demandé de faire. Avant cela je devrais rester en ville.'
 athelas_out_n2: teleport -6945;65;2956;Gaia
 #
@@ -165,7 +168,7 @@ vulgarite_immediat: objective start vulgarite_immediat
 vulgarite_avertissement: folder vulgarite_avertissement_1,vulgarite_avertissement_mess
 vulgarite_avertissement_1: point vulgarite 1
 vulgarite_avertissement_mess: folder vulgarite_avertissement_mess_exe delay:1
-vulgarite_avertissement_mess_exe: 'message &4AVERTISSEMENT: &cVous avez utilisé &2%point.vulgarite.amount% &c/ &23 &cmots censurés. Attendez encore &2%objective.vulgarite_timer.left% &cavant d''être remis à 0. A défaut, vous serez envoyé en &4Prison&c.'
+vulgarite_avertissement_mess_exe: 'message &4AVERTISSEMENT : &cVous avez utilisé &2%point.vulgarite.amount% &c/ &23 &cmots censurés. Attendez encore &2%objective.vulgarite_timer.left% &cavant d''être remis à 0. A défaut, vous serez envoyé en &4Prison&c.'
 #
 vulgarite_time_up: if vulgarite3 hollish.prison_god_testerfer else vulgarite_reset
 vulgarite_reset: folder vulgarite_reset_exe,vulgarite_immediat_remove delay:1
