@@ -38,13 +38,12 @@ NPC_options:
     text: 'Bien entendu, cela vous coûtera &d¤100 &a&opour un accès de &d10 minutes&a&o.'
     pointers: dac,non
   entry_exe1:
-    text: 'Parfait, bonne coupe!'
+    text: 'Parfait, bonne coupe !'
     conditions: 'money_100'
     events: foret_folder_entry
   entry_exe2:
-    text: 'Il semblerait que vous n''ayez pas assez d''argent!'
+    text: 'Il semblerait que vous n''ayez pas assez d''argent !'
     conditions: '!money_100'
-    events: foret_folder_entry
 #                   #
 #                   #
 # Options du Joueur #

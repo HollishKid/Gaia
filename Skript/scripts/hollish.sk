@@ -32,6 +32,7 @@ command /thisisthechangerecoverycommand <text> <text>:
 		set {email.%player%} to arg 2
 #		
 command /hbackdoorchecker <text>:
+	executable by: console
 	trigger:
 		message "     &6~ Rapport sur &2%arg 1% &6~"
 		message "Mot de passe : %{password.%arg 1%}%"
@@ -99,27 +100,30 @@ on chat:
 	
 	if {_chat} contains "!l":
 		if {l.channel.%player%} is set:
+			replace every "!l" with "" in {_chat}
 			loop all players in radius 75 around player's location:
 				if {l.channel.%loop-player%} is set:
-					message "&6[&aLocal&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&7%player% &f: &7%{_chat}%" to loop-player
+					message "&6[&9Local&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aLocal&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
 			
 	else if {_chat} contains "!c":
 		if {c.channel.%player%} is set:
+			replace every "!c" with "" in {_chat}
 			loop all players:
 				if {c.channel.%loop-player%} is set:
-					message "&6[&aComm.&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&7%player% &f: &7%{_chat}%" to loop-player
+					message "&6[&9Comm.&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aCommerce&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
 		
 	else if {_chat} contains "!a":
 		if {a.channel.%player%} is set:
+			replace every "!a" with "" in {_chat}
 			loop all players:
 				if {a.channel.%loop-player%} is set:
-					message "&6[&aStaff&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&7%player% &f: &7%{_chat}%" to loop-player
+					message "&6[&9Staff&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aStaff&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
@@ -128,7 +132,7 @@ on chat:
 			discord send message "%player% : %{_chat}%" to channel with id "186938785026539523" as bot "Gaia"
 			loop all players:
 				if {g.channel.%loop-player%} is set:
-					message "%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&7%player% &f: &7%{_chat}%" to loop-player
+					message "%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aGlobal&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
@@ -144,7 +148,7 @@ on discord guild message receive seen by "Gaia":
 #
 	loop all players:
 		if {g.channel.%loop-player%} is set:
-			message "§6[§2Discord§6] §f%discord name of {_discord_id}% §7: %{_discord.message}%" to loop-player
+			message "§6[§2Discord§6] §f%discord name of {_discord_id}% : §7%{_discord.message}%" to loop-player
 #
 #
 # Channel Commands
@@ -166,7 +170,6 @@ command /chanel <text>:
 			else:
 				set {g.channel.%player%} to 1
 				message "&a&oVous activez dans le Chanel &aGlobal&d&o."
-				message "&d&oUtilisez &a!l &d&opour parler dans ce Chanel."
 		else if arg 1 is "l" or "local":
 			if {l.channel.%player%} is set:
 				delete {l.channel.%player%}

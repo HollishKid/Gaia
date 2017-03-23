@@ -17,6 +17,8 @@ on join:
 	add player to {online.players::*}
 	discord send message "%player% est arrivé sur Gaïa." to channel with id "186938785026539523" as bot "Gaia"
 	set {g.channel.%player%} to 1
+	set {l.channel.%player%} to 1
+	set {c.channel.%player%} to 1
 #
 	wait 30 seconds
 	if {event.double.xp} is 1:

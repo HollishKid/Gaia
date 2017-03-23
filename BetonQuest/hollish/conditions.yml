@@ -44,6 +44,7 @@ spirituality200: point default.spirituality 200
 spirituality250: point default.spirituality 250
 spirituality300: point default.spirituality 300
 spirituality500: point default.spirituality 500
+spirituality750: point default.spirituality 750
 spirituality1000: point default.spirituality 1000
 #
 #

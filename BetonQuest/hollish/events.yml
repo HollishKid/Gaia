@@ -730,11 +730,11 @@ regenup_air_exe5: point default.spirituality -100
 #
 air_airblast: if air_airblast spell_have else air_airblast1
 air_airblast1: if wand_air air_airblast2 else no_wand_hand_air
-air_airblast2: if spirituality200 air_airblast_exe else no_spirit
+air_airblast2: if spirituality150 air_airblast_exe else no_spirit
 air_airblast_exe: folder air_airblast_exe1,air_airblast_exe2,air_airblast_exe3
 air_airblast_exe1: 'command wandp %player% add airblast'
 air_airblast_exe2: tag add air_airblast
-air_airblast_exe3: point default.spirituality -200
+air_airblast_exe3: point default.spirituality -150
 #
 air_airbomb: if air_bomb spell_have else air_bomb1
 air_bomb1: if wand_air air_bomb2 else no_wand_hand_air
@@ -754,35 +754,35 @@ suction_exe3: point default.spirituality -150
 #
 air_tornade: if air_tornado spell_have else air_tornado1
 air_tornado1: if wand_air air_tornado2 else no_wand_hand_air
-air_tornado2: if spirituality1000 air_tornado_exe else no_spirit
+air_tornado2: if spirituality750 air_tornado_exe else no_spirit
 air_tornado_exe: folder air_tornado_exe1,air_tornado_exe2,air_tornado_exe3
 air_tornado_exe1: 'command wandp %player% add tornade'
 air_tornado_exe2: tag add air_tornado
-air_tornado_exe3: point default.spirituality -1000
+air_tornado_exe3: point default.spirituality -750
 #
 air_poussee: if air_poussee spell_have else air_poussee1
 air_poussee1: if wand_air air_poussee2 else no_wand_hand_air
-air_poussee2: if spirituality200 air_poussee_exe else no_spirit
+air_poussee2: if spirituality150 air_poussee_exe else no_spirit
 air_poussee_exe: folder air_poussee_exe1,air_poussee_exe2,air_poussee_exe3
 air_poussee_exe1: 'command wandp %player% add poussee'
 air_poussee_exe2: tag add air_poussee
-air_poussee_exe3: point default.spirituality -200
+air_poussee_exe3: point default.spirituality -150
 #
 air_airshield: if air_shield spell_have else air_shield1
 air_shield1: if wand_air air_shield2 else no_wand_hand_air
-air_shield2: if spirituality300 air_shield_exe else no_spirit
+air_shield2: if spirituality250 air_shield_exe else no_spirit
 air_shield_exe: folder air_shield_exe1,air_shield_exe2,air_shield_exe3
 air_shield_exe1: 'command wandp %player% add airshield'
 air_shield_exe2: tag add air_shield
-air_shield_exe3: point default.spirituality -300
+air_shield_exe3: point default.spirituality -250
 #
 air_enhancedspeed: if air_enhancedspeed spell_have else air_enhancedspeed1
 air_enhancedspeed1: if wand_air air_enhancedspeed2 else no_wand_hand_air
-air_enhancedspeed2: if spirituality500 air_enhancedspeed_exe else no_spirit
+air_enhancedspeed2: if spirituality300 air_enhancedspeed_exe else no_spirit
 air_enhancedspeed_exe: folder air_enhancedspeed_exe1,air_enhancedspeed_exe2,air_enhancedspeed_exe3
 air_enhancedspeed_exe1: 'command wandp %player% add enhancedspeed'
 air_enhancedspeed_exe2: tag add air_enhancedspeed
-air_enhancedspeed_exe3: point default.spirituality -500
+air_enhancedspeed_exe3: point default.spirituality -300
 #
 air_airscooter: if air_scooter spell_have else air_scooter1
 air_scooter1: if wand_air air_scooter2 else no_wand_hand_air

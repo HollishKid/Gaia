@@ -3,7 +3,7 @@ groups:
     options:
       default: true
       rank: '1000'
-      prefix: '§6[§2Vagabond§6]§7'
+      prefix: §6[§2Vagabond§6]§7
     permissions:
     - -areashop.info
     - -areashop.help
@@ -106,6 +106,7 @@ groups:
     - globalchestshop.player.sell_to_adminshop.1
     - chestcommands.open.Menu.yml
     - chestcommands.open.competences.yml
+    - chestcommands.open.chanels.yml
     - chestcommands.open.help.yml
     - chestcommands.open.pnj.yml
     - chestcommands.open.music.yml
@@ -174,7 +175,7 @@ groups:
     - -areashop.rent
     options:
       rank: '995'
-      prefix: '§6[§2Vagabond§6]§7'
+      prefix: §6[§2Vagabond§6]§7
   debuttempobis:
     inheritance:
     - debutant
@@ -193,7 +194,7 @@ groups:
     - -essentials.sethome.bed
     options:
       rank: '994'
-      prefix: '§6[§2Vagabond§6]§7'
+      prefix: §6[§2Vagabond§6]§7
   aventurier:
     inheritance:
     - debutant
@@ -213,7 +214,7 @@ groups:
     - modifyworld.digestion
     options:
       rank: '900'
-      prefix: '§6[§2Citoyen§6]§7'
+      prefix: §6[§2Citoyen§6]§7
   aventurier_est:
     inheritance:
     - debutant
@@ -233,7 +234,7 @@ groups:
     - modifyworld.digestion
     options:
       rank: '800'
-      prefix: '§6[§2Citoyen§6]§7'
+      prefix: §6[§2Citoyen§6]§7
   ecuyer:
     inheritance:
     - aventurier
@@ -242,7 +243,7 @@ groups:
     - areashop.limits.ecuyer
     options:
       rank: '799'
-      prefix: '§6[§2Écuyer§6]§7'
+      prefix: §6[§2Écuyer§6]§7
   ecuyer_est:
     inheritance:
     - aventurier_est
@@ -251,7 +252,7 @@ groups:
     - areashop.limits.ecuyer
     options:
       rank: '798'
-      prefix: '§6[§2Écuyer§6]§7'
+      prefix: §6[§2Écuyer§6]§7
   beta:
     inheritance:
     - aventurier
@@ -264,7 +265,7 @@ groups:
     - authme.vip
     options:
       rank: '700'
-      prefix: '§6[§aBêta§6]§7'
+      prefix: §6[§aBêta§6]§7
   beta_est:
     inheritance:
     - aventurier_est
@@ -276,7 +277,7 @@ groups:
     - authme.vip
     options:
       rank: '600'
-      prefix: '§6[§aBêta§6]§7'
+      prefix: §6[§aBêta§6]§7
   builder:
     inheritance:
     - aventurier
@@ -332,7 +333,7 @@ groups:
     - voxelsniper.command.reset
     options:
       rank: '150'
-      prefix: '§6[§aArchitecte§6]§f'
+      prefix: §6[§aArchitecte§6]§f
   builder_est:
     inheritance:
     - aventurier_est
@@ -349,11 +350,15 @@ groups:
     - essentials.teleport.cooldown.bypass
     options:
       rank: '125'
-      prefix: '§6[§aArchitecte§6]§f'
+      prefix: §6[§aArchitecte§6]§f
   moderator:
     inheritance:
     - builder
     permissions:
+    - essentials.chat.magic
+    - essentials.chat.format
+    - essentials.chat.color
+    - essentials.msg.color
     - globalchestshop.admin
     - authme.admin.register
     - admin.prison
@@ -388,7 +393,7 @@ groups:
     - menu.tetes
     options:
       rank: '110'
-      prefix: '§6[§aModérateur§6]§f'
+      prefix: §6[§aModérateur§6]§f
   moderator_est:
     inheritance:
     - builder_est
@@ -422,7 +427,7 @@ groups:
     - menu.tetes
     options:
       rank: '100'
-      prefix: '§6[§aModérateur§6]§f'
+      prefix: §6[§aModérateur§6]§f
   horloger:
     inheritance:
     - moderator
@@ -446,7 +451,7 @@ groups:
     - chestcommands.command.reload
     options:
       rank: '50'
-      prefix: '§6[§aHorloger§6]§f'
+      prefix: §6[§aHorloger§6]§f
   horloger_est:
     inheritance:
     - moderator_est
@@ -465,7 +470,7 @@ groups:
     - chestcommands.command.reload
     options:
       rank: '49'
-      prefix: '§6[§aHorloger§6]§f'
+      prefix: §6[§aHorloger§6]§f
   admin:
     inheritance:
     - horloger
@@ -1806,7 +1811,7 @@ users:
     - aventurier
     options:
       name: herofire11
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     worlds:
       Gaia:
         permissions: []
@@ -4095,7 +4100,7 @@ users:
     - aventurier
     options:
       name: Damien
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   c52a8014-dfd3-37b8-b217-3e27c91dd58b:
@@ -4259,7 +4264,7 @@ users:
     options:
       name: Lyrtix
       group: builder
-      prefix: '§6[§aBuilder§6]§f'
+      prefix: §6[§aBuilder§6]§f
     permissions:
     - mcmmo.perks.xp.10percentboost.repair
     - -modifyworld.digestion
@@ -4268,7 +4273,7 @@ users:
     - -towny.command.town.claim.*
     - uhc.time
     worlds:
-      '§6[§aBuilder§6]§f':
+      §6[§aBuilder§6]§f:
         options:
           prefix: set
       Gaia:
@@ -4790,7 +4795,7 @@ users:
     - aventurier
     options:
       name: mario
-      prefix: '§6[§2Mineur§6]§f'
+      prefix: §6[§2Mineur§6]§f
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   17d60464-e454-307b-9876-e24e03d68202:
@@ -5179,7 +5184,7 @@ users:
     - aventurier
     options:
       name: Azator
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   f56ef01f-30f8-3307-9e4b-70fb0c98a8a2:
@@ -5386,7 +5391,7 @@ users:
     - beta
     options:
       name: revan1016
-      prefix: '§6[§2Pourfendeur§6]§7'
+      prefix: §6[§2Pourfendeur§6]§7
     permissions:
     - customdeathdrops.gear4
     - townywands.gui.nation
@@ -6367,7 +6372,7 @@ users:
     - aventurier
     options:
       name: Link70
-      prefix: '§6[§2Apprivoiseur§6]§f'
+      prefix: §6[§2Apprivoiseur§6]§f
     permissions: []
   fa450992-7c48-39c5-b9d1-976495b5be1c:
     group:
@@ -7282,9 +7287,9 @@ users:
     - aventurier
     options:
       name: MrSlime602
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
-    - mcmmo.perks.xp.10percentboost.swords
+    - mcmmo.perks.xp.10percentboost.taming
   5929a2da-3b75-3ae4-961d-29c5d52da3c5:
     group:
     - aventurier
@@ -9127,7 +9132,7 @@ users:
     - aventurier
     options:
       name: TheoD31
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   610a855c-6f01-324a-99ce-bcdb7801ff07:
@@ -9210,7 +9215,7 @@ users:
     - aventurier
     options:
       name: H3artex
-      prefix: '§6[§2Mineur§6]§f'
+      prefix: §6[§2Mineur§6]§f
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   eb30249c-4eff-3705-a283-7f5f605e69df:
@@ -9606,6 +9611,9 @@ users:
     - aventurier
     options:
       name: antoine821
+      prefix: §6[§2Mineur§6]§7
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
   0a37dce3-cd1b-355b-8fa9-be1ea7059e42:
     group: []
     options:
@@ -9697,7 +9705,7 @@ users:
     - aventurier
     options:
       name: Aimanai
-      prefix: '§6[§2Apprivoiseur§6]§f'
+      prefix: §6[§2Apprivoiseur§6]§f
     permissions: []
   c6a07373-8211-353a-8db6-44e8d193e3b6:
     group: []
@@ -9749,7 +9757,9 @@ users:
     - aventurier
     options:
       name: TheLasteur
-    permissions: []
+      prefix: §6[§2Mineur§6]§7
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
   a5aa81c2-c313-3584-ae77-89d09bceaedd:
     group:
     - aventurier
@@ -9850,7 +9860,7 @@ users:
     - aventurier
     options:
       name: Sonic76
-      prefix: '§6[§2Mineur§6]§f'
+      prefix: §6[§2Mineur§6]§f
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   fd184c63-f243-3b6b-8fcc-f6d1806e6506:
@@ -9875,9 +9885,9 @@ users:
     - aventurier
     options:
       name: Cagnot
-      prefix: '§6[§2Franc§6]§7'
+      prefix: §6[§2Charbonnier§6]§7
     permissions:
-    - mcmmo.perks.xp.10percentboost.axes
+    - mcmmo.perks.xp.10percentboost.mining
     - customdeathdrops.gear
     - inventory.gear2
     - inventory.gear
@@ -9891,7 +9901,7 @@ users:
     - aventurier
     options:
       name: Chat100
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions: []
   c5f71459-d0ed-3085-b925-11666ee26cde:
     group:
@@ -9958,7 +9968,7 @@ users:
     - aventurier
     options:
       name: Andy59
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   5cb07569-ad1d-3abe-81ed-e1e44de17a69:
@@ -9995,7 +10005,7 @@ users:
     - aventurier
     options:
       name: loup_alfa
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   c0c0ad18-30e2-38c2-a217-ebea137c04d1:
@@ -10003,7 +10013,7 @@ users:
     - aventurier
     options:
       name: Tigrianna
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   bf17037a-013e-30d3-80be-c85340511938:
@@ -10055,7 +10065,7 @@ users:
     - aventurier
     options:
       name: Andy59660
-      prefix: '§6[§2Échardier§6]§f'
+      prefix: §6[§2Échardier§6]§f
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   e8960f98-a634-3bc5-a7d7-b89f3dbd1502:
@@ -10134,7 +10144,7 @@ users:
     - aventurier
     options:
       name: test
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   6224aadd-7ea0-3e86-83f6-da17d89fda4a:
@@ -10252,7 +10262,7 @@ users:
     - aventurier
     options:
       name: Kooda026
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   8f14989d-3407-303b-a08d-f2cb8d841270:
@@ -10297,7 +10307,7 @@ users:
     - aventurier
     options:
       name: pixel1493
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   ce223079-7d64-3791-8b3b-4ac171881629:
@@ -10314,7 +10324,7 @@ users:
     - aventurier
     options:
       name: come
-      prefix: '§6[§2Charbonnier§6]§7'
+      prefix: §6[§2Charbonnier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   e3eae66d-6237-389e-aa29-167ec71bd01c:
@@ -10327,7 +10337,7 @@ users:
     - aventurier
     options:
       name: PsykAssassin
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   d4064c68-dfb5-36dc-ab84-386a9cc8d029:
@@ -10355,7 +10365,7 @@ users:
     - aventurier
     options:
       name: MrSlime602_YTB
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   b8c2f75e-c479-3be6-a2e6-f63f5272fb06:
@@ -10426,7 +10436,8 @@ users:
     options:
       name: AmyAssassi
   205f56a4-209e-382e-afe3-73e3f7c47ad2:
-    group: []
+    group:
+    - debuttempo
     options:
       name: malbof
   ee32cff2-f5d6-3bea-8b7d-bbcc5c21d17d:
@@ -10434,7 +10445,7 @@ users:
     - aventurier
     options:
       name: omegazell
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions: []
   213d9147-e46a-36bf-a1ba-296d65f6c99a:
     group: []
@@ -10467,7 +10478,7 @@ users:
     - aventurier
     options:
       name: maickb
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   c0ee20a2-ae61-364a-9014-baa544ea8d04:
@@ -10494,7 +10505,7 @@ users:
     - aventurier
     options:
       name: quentoune
-      prefix: '§6[§2Charbonnier§6]§7'
+      prefix: §6[§2Charbonnier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   61511d6e-ee46-3229-b067-9a047a74cdc1:
@@ -10547,7 +10558,7 @@ users:
     - debuttempo
     options:
       name: Cocolharicot
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions: []
   096f68bf-0cb1-313d-9b5d-9e35dc097bee:
     group: []
@@ -10600,7 +10611,7 @@ users:
     - aventurier
     options:
       name: keki42
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   41dafd17-103b-35f5-a6ec-22a9dc810eaa:
@@ -10724,7 +10735,7 @@ users:
     - aventurier
     options:
       name: Warlock666
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   1795d0c2-4aa7-32ae-91e9-ca30dc387167:
@@ -10797,7 +10808,7 @@ users:
     - aventurier
     options:
       name: xolo4
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   0f0a20c7-c366-32f9-b829-3c394fcddc8a:
@@ -10805,7 +10816,7 @@ users:
     - aventurier
     options:
       name: robindu57
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   888d1409-bfb3-30be-b8a0-a9edb8e9bf1e:
@@ -10813,7 +10824,7 @@ users:
     - aventurier
     options:
       name: BlackSigma76
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   c47dceb3-4aaf-3b8c-a3f8-2f302c501dee:
@@ -10897,7 +10908,7 @@ users:
     - aventurier
     options:
       name: Erisium_Chat100
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   0cd80885-0f36-38ea-bf94-8da8c2e076c7:
@@ -10913,7 +10924,7 @@ users:
     - aventurier
     options:
       name: DiamondsColors
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   909ec3cf-28da-323a-9b03-f9105d145fdd:
@@ -10930,7 +10941,7 @@ users:
     - aventurier
     options:
       name: tro2fak
-      prefix: '§6[§2Raccommodeur§6]§7'
+      prefix: §6[§2Raccommodeur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.repair
   15c5a9e0-0b19-30f0-9309-630322b4f74b:
@@ -10952,7 +10963,7 @@ users:
     - aventurier
     options:
       name: Erisium_Xillof5
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   f73ec162-5026-3376-8c80-129abf894be6:
@@ -10960,7 +10971,7 @@ users:
     - aventurier
     options:
       name: FireDark09
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   4c114d9d-0f45-3dce-9992-8ef1a16d286e:
@@ -10983,7 +10994,7 @@ users:
     - debuttempobis
     options:
       name: BaLiTaX
-      prefix: '§6[§2Raccommodeur§6]§7'
+      prefix: §6[§2Raccommodeur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.repair
   23d3c535-a3ec-3c20-a55e-9154ea25950d:
@@ -11066,7 +11077,7 @@ users:
     - aventurier
     options:
       name: Graalguerier
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   9cfacdeb-0938-3d0e-a240-a0c9cb64c259:
@@ -11137,7 +11148,7 @@ users:
     - aventurier
     options:
       name: warior250
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   912b2bb8-c0e0-344a-b1f6-920b8626eb1d:
@@ -11247,7 +11258,7 @@ users:
     - aventurier
     options:
       name: Noa81
-      prefix: '§6[§2Acrobate§6]§7'
+      prefix: §6[§2Acrobate§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.acrobatics
   1e94c798-e1db-33f2-9780-65ec3124bc6e:
@@ -11255,7 +11266,7 @@ users:
     - aventurier
     options:
       name: melody81
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   759eb0de-554e-3ac7-9c3a-d5ce1c583e95:
@@ -11272,7 +11283,7 @@ users:
     - aventurier
     options:
       name: AgentAlex
-      prefix: '§6[§2Paysan§6]§7'
+      prefix: §6[§2Paysan§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.herbalism
   4218ac76-1f9e-3daa-882e-965c7432fbd7:
@@ -11297,7 +11308,7 @@ users:
     - aventurier
     options:
       name: Turi
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   63fe5273-ea17-3a67-aee4-2a74e9eb9477:
@@ -11305,7 +11316,7 @@ users:
     - aventurier
     options:
       name: Coca_Colaa
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   9ac7a569-8020-3637-94f4-5f8e77d791a6:
@@ -11328,7 +11339,7 @@ users:
     - aventurier
     options:
       name: NidoWhite
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   94def8fd-f000-3350-9150-1f44f03625e9:
@@ -11359,7 +11370,7 @@ users:
     - aventurier
     options:
       name: Matteic
-      prefix: '§6[§2Acrobate§6]§7'
+      prefix: §6[§2Acrobate§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.acrobatics
   42cb8d7a-fc1b-3ca3-80e8-523d816e50dd:
@@ -11372,7 +11383,7 @@ users:
     - aventurier
     options:
       name: Konosuba_
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   dfb6149c-ac5c-314f-988a-97e0bc76897a:
@@ -11409,7 +11420,7 @@ users:
     - aventurier
     options:
       name: Le_Faucheur666
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   9309e987-22d6-365e-b954-db809f6430fa:
@@ -11421,7 +11432,7 @@ users:
     - aventurier
     options:
       name: bapt62
-      prefix: '§6[§2Paysan§6]§7'
+      prefix: §6[§2Paysan§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.herbalism
   fcf2980b-3319-37b9-9d06-080ddfd5ab89:
@@ -11434,7 +11445,7 @@ users:
     - aventurier
     options:
       name: undertix
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   6a2eba10-a7a1-3cf6-b5de-edd1a5b315af:
@@ -11471,7 +11482,7 @@ users:
     - aventurier
     options:
       name: dodey
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions: []
   e90d7541-99e3-3dea-a0e1-0bb32ef4d1f1:
     group:
@@ -11483,7 +11494,7 @@ users:
     - aventurier
     options:
       name: Revexplosif
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   76dbdf56-d57a-3880-8138-e46dcbdbd930:
@@ -11491,7 +11502,7 @@ users:
     - aventurier
     options:
       name: MrPyroWolf
-      prefix: '§6[§2Acrobate§6]§7'
+      prefix: §6[§2Acrobate§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.acrobatics
   ba6af2c8-045e-3050-97fd-0ba7af3d85c0:
@@ -11499,7 +11510,7 @@ users:
     - aventurier
     options:
       name: PyroNard
-      prefix: '§6[§2Acrobate§6]§7'
+      prefix: §6[§2Acrobate§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.acrobatics
   7961891a-a2a8-3977-be51-df3736b7215e:
@@ -11531,7 +11542,7 @@ users:
     - aventurier
     options:
       name: YekosHD
-      prefix: '§6[§2Charbonnier§6]§7'
+      prefix: §6[§2Charbonnier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   f070fd85-a1fa-30dc-a1c1-c5e6edacfb64:
@@ -11558,7 +11569,7 @@ users:
     - aventurier
     options:
       name: pizax
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   9a179591-5610-36c2-89a5-8eb654b0295f:
@@ -11626,7 +11637,7 @@ users:
     - aventurier
     options:
       name: xcms0801
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   5eaeb43f-4141-3bf5-b3d5-797be691e805:
@@ -11639,7 +11650,7 @@ users:
     - aventurier
     options:
       name: topcoco80700
-      prefix: '§6[§2Adepte§6]§7'
+      prefix: §6[§2Adepte§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.alchemy
   df39cdc6-478e-33dd-940f-492b13f6d5a5:
@@ -11673,7 +11684,7 @@ users:
     - aventurier
     options:
       name: Koyganji
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   15c8b3c6-ae4f-37ee-bf4e-8835c75da4e9:
@@ -11690,7 +11701,7 @@ users:
     - aventurier
     options:
       name: TheNikos2500
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   0fd23586-b109-31a7-85f7-834e9e525aee:
@@ -11698,7 +11709,7 @@ users:
     - aventurier
     options:
       name: TheMsCreeper
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions: []
   9dc342c6-8ebe-3fac-9524-ff828d9c06c5:
     group:
@@ -11718,7 +11729,7 @@ users:
     - aventurier
     options:
       name: niouk1005
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   74dc6440-9900-3dde-8d3e-ae78ba0cfa9d:
@@ -11881,7 +11892,7 @@ users:
     - aventurier
     options:
       name: Mamie_Murky
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   fb72a1dd-8349-3555-9f7d-75bcddc82dbc:
@@ -11980,7 +11991,7 @@ users:
     - aventurier
     options:
       name: _yuzuki_chan_
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   a9439f37-6f37-365a-a75c-b3726f5a1686:
@@ -12073,7 +12084,7 @@ users:
     - aventurier
     options:
       name: MoustikShy
-      prefix: '§6[§2Paysan§6]§7'
+      prefix: §6[§2Paysan§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.herbalism
   baa3bd7d-84a3-39b4-b0b5-6a9aac989b64:
@@ -12086,7 +12097,7 @@ users:
     - aventurier
     options:
       name: VoxiShy
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   d1096956-ae37-3bd8-b7d8-5655cda8951a:
@@ -12099,14 +12110,14 @@ users:
     - aventurier
     options:
       name: KiritoSAO2020
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions: []
   f57195a3-a365-3492-a4dc-53cac2bb866e:
     group:
     - aventurier
     options:
       name: ahSenpai_
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   04a5d9cc-685b-3043-acc4-80b479148cb5:
@@ -12149,7 +12160,7 @@ users:
     - aventurier
     options:
       name: Xayup
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   4eb429b5-3c96-3651-a617-ce73c1870394:
@@ -12263,7 +12274,7 @@ users:
     - aventurier
     options:
       name: lukamod
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   e97c828b-19fa-3983-9aa7-9653d1818180:
@@ -12271,7 +12282,7 @@ users:
     - aventurier
     options:
       name: ZelerD59
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   c722bdc1-bb01-34e6-8e8a-c13a88065892:
@@ -12323,7 +12334,7 @@ users:
     - aventurier
     options:
       name: Androhax
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   3834959e-ffa3-3b82-b462-0abb9e7ac5d4:
@@ -12340,7 +12351,7 @@ users:
     - aventurier
     options:
       name: loulousgamer52
-      prefix: '§6[§2Pêcheur§6]§7'
+      prefix: §6[§2Pêcheur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.fishing
   bac23e49-e929-3c79-9300-ce9e9449db14:
@@ -12363,7 +12374,7 @@ users:
     - aventurier
     options:
       name: Lugia91
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   77405285-e2a9-3ee0-a557-eec180287964:
@@ -12375,7 +12386,7 @@ users:
     - aventurier
     options:
       name: Hegtmen
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   8fccd026-512c-3395-8cba-6316dffb8580:
@@ -12517,7 +12528,7 @@ users:
     - aventurier
     options:
       name: Elouan72
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   572ac122-2676-309d-a76f-cdb17e3105cb:
@@ -12638,7 +12649,7 @@ users:
     - aventurier
     options:
       name: Kooppy
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   0a3f2a91-ec92-3a12-991c-69e6e8c02f52:
@@ -12655,7 +12666,7 @@ users:
     - aventurier
     options:
       name: Ezekiell
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   ca96efbe-bd9d-3c19-9507-bb92313f7b24:
@@ -12734,7 +12745,7 @@ users:
       name: MiightyBeast
   efc736fc-1270-3cc6-8f75-4bcc9344cefc:
     group:
-    - horloger
+    - admin
     options:
       name: Sparadra59
       prefix: ''
@@ -12793,7 +12804,7 @@ users:
     - aventurier
     options:
       name: CrassusSancti
-      prefix: '§6[§2Milicien§6]§7'
+      prefix: §6[§2Milicien§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.axes
   dc843438-54f9-3a43-9b6c-28d85e619b5a:
@@ -12801,7 +12812,7 @@ users:
     - aventurier
     options:
       name: Lyon_ADRIANO
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   118f5bd8-27db-3973-a2ea-7f0a0a8954ac:
@@ -13059,7 +13070,7 @@ users:
     - aventurier
     options:
       name: Creepy_65
-      prefix: '§6[§2Acrobate§6]§7'
+      prefix: §6[§2Acrobate§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.acrobatics
   c93f32c2-f5e4-3acb-9e4e-329eedfe2573:
@@ -13072,7 +13083,7 @@ users:
     - aventurier
     options:
       name: lolzgamer
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   e35a2a72-103b-3e04-bc0b-f75dc26c4316:
@@ -13220,14 +13231,14 @@ users:
     - aventurier
     options:
       name: Alanpeper
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions: []
   bea5ff93-fd4c-3ed0-aee2-c02d6f8ce1c3:
     group:
     - aventurier
     options:
       name: minicluster
-      prefix: '§6[§2Pugiliste§6]§7'
+      prefix: §6[§2Pugiliste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.unarmed
   816ee842-f411-38e1-b5eb-8bd9b0a72eee:
@@ -13235,15 +13246,16 @@ users:
     - aventurier
     options:
       name: Connor
-      prefix: '§6[§2Centurion§6]§7'
+      prefix: §6[§2Centurion§6]§7
     permissions:
+    - -keepitems.keep
     - mcmmo.perks.xp.10percentboost.unarmed
   686a3b9c-40b5-3217-92a1-2a63c20fca8a:
     group:
     - aventurier
     options:
       name: Heycube
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions: []
   5e5517ba-367e-34d1-8670-c9d9a02dfd0f:
     group: []
@@ -13316,7 +13328,7 @@ users:
     - aventurier
     options:
       name: craftkill
-      prefix: '§6[§2Paysan§6]§7'
+      prefix: §6[§2Paysan§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.herbalism
   f650898a-6d69-3724-9f6a-3d18de8fdb8a:
@@ -13339,16 +13351,17 @@ users:
       name: SiLeverIce
   1f027439-f925-3a23-895e-7a16f66462d8:
     group:
-    - aventurier
+    - debutant
     options:
       name: MrReira59
+      prefix: ''
     permissions: []
   5aedd637-d9c1-39f3-9ecb-853494e3c788:
     group:
     - aventurier
     options:
       name: Nicolas_0007
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   89c266d2-bf2b-349b-98c9-52042fddedd0:
@@ -13361,7 +13374,7 @@ users:
     - aventurier
     options:
       name: Sayander
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   3cf8ef92-93cc-37c5-b3f4-6b72b20746d3:
@@ -13377,7 +13390,7 @@ users:
     - builder
     options:
       name: MrRobot
-      prefix: '§6[§2Archer§6]§7'
+      prefix: §6[§2Archer§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.archery
   903f11e8-6f94-39cc-9d2d-aa7170a17b39:
@@ -13390,7 +13403,7 @@ users:
     - aventurier
     options:
       name: Mugiwara
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   13d76bb2-cc91-3824-8738-e94591a83922:
@@ -13398,7 +13411,7 @@ users:
     - aventurier
     options:
       name: sickeur
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   6c7e712f-4b11-3f60-87ed-387603142cee:
@@ -13419,7 +13432,7 @@ users:
     - aventurier
     options:
       name: redbull80
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   5d9d34b2-367f-3415-a996-c513a3c91fd9:
@@ -13432,7 +13445,7 @@ users:
     - aventurier
     options:
       name: Grimdredd
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   55c166cd-588f-389a-887f-80364e0c7f5c:
@@ -13449,7 +13462,7 @@ users:
     - aventurier
     options:
       name: bender
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   cbc9852d-f650-31a5-a459-249298ebfc4b:
@@ -13457,7 +13470,7 @@ users:
     - aventurier
     options:
       name: Vishkar
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   fa721879-ef4d-3ffe-87c2-07d14140a888:
@@ -13514,7 +13527,7 @@ users:
     - aventurier
     options:
       name: Dezyred
-      prefix: '§6[§2Adepte§6]§7'
+      prefix: §6[§2Adepte§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.alchemy
   3de4d7dc-f369-39e3-88f1-ff259c7af5f0:
@@ -13557,6 +13570,7 @@ users:
       name: MathieuxZ88
       prefix: ''
     permissions:
+    - -keepitems.keep
     - mcmmo.perks.xp.10percentboost.mining
     worlds:
       Gaia:
@@ -13618,7 +13632,7 @@ users:
     - aventurier
     options:
       name: TheDestroyer303
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   864392c3-a36f-3b03-a798-f2cf70ca2966:
@@ -13626,14 +13640,14 @@ users:
     - aventurier
     options:
       name: azertyuiopq17
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions: []
   e28c805d-b4a5-3a3a-9589-0688a949ca79:
     group:
     - aventurier
     options:
       name: mikacsrb
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   8fbed6ae-6ef8-3c13-9b35-b0f2662daad2:
@@ -13687,7 +13701,7 @@ users:
     - aventurier
     options:
       name: Yakako
-      prefix: '§6[§2Acrobate§6]§7'
+      prefix: §6[§2Acrobate§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.acrobatics
   ce7b021d-b9da-3c5f-982f-90bf9475a7ec:
@@ -13707,7 +13721,7 @@ users:
     - aventurier
     options:
       name: Kyriosu
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   1825a832-cbf4-3c6b-aff9-0b3c5d96593c:
@@ -13715,7 +13729,7 @@ users:
     - aventurier
     options:
       name: MewZik
-      prefix: '§6[§2Pugiliste§6]§7'
+      prefix: §6[§2Pugiliste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.unarmed
   f61befc4-95ed-316b-9daa-b4820d72a8d0:
@@ -13804,7 +13818,7 @@ users:
     - aventurier
     options:
       name: EnaarLeBarbare
-      prefix: '§6[§2Franc§6]§7'
+      prefix: §6[§2Franc§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.axes
   a2135597-dfce-3722-ac7d-c8968825132e:
@@ -13859,7 +13873,7 @@ users:
     - ecuyer
     options:
       name: NyanCassy
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   c0218c17-5785-304d-801c-a01d6ebb64c1:
@@ -13921,7 +13935,7 @@ users:
     - aventurier
     options:
       name: Odialie
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   5c5a95da-8f83-3218-979e-92fd60b4ec80:
@@ -14252,7 +14266,7 @@ users:
     - aventurier
     options:
       name: Xelorass
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   780e4848-4c02-31ba-bad6-1bccfbe8fcfa:
@@ -14260,7 +14274,7 @@ users:
     - aventurier
     options:
       name: Lykoss
-      prefix: '§6[§2Pêcheur§6]§7'
+      prefix: §6[§2Pêcheur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.fishing
   db86ebdc-0478-34dd-9278-eb3f8ed5e447:
@@ -14354,14 +14368,14 @@ users:
     - aventurier
     options:
       name: takmaster
-      prefix: '§6[§2Galibot§6]§7'
+      prefix: §6[§2Galibot§6]§7
     permissions: []
   6192acb2-a153-3d0f-93fb-073918bda302:
     group:
     - aventurier
     options:
       name: alfatom
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   c71b0bf2-cf56-3e1f-b7bd-5ccf9c6b8491:
@@ -14799,7 +14813,7 @@ users:
     - aventurier
     options:
       name: LockBlock
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - craftbook.variables.use.variable
     - craftbook.variables.commands
@@ -14837,7 +14851,7 @@ users:
     - aventurier
     options:
       name: GeekSpirit
-      prefix: '§6[§2Raccommodeur§6]§7'
+      prefix: §6[§2Raccommodeur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.repair
   1331ae90-8e76-3e2a-ad16-46376d920671:
@@ -14845,7 +14859,7 @@ users:
     - aventurier
     options:
       name: Funyfana
-      prefix: '§6[§2Pêcheur§6]§7'
+      prefix: §6[§2Pêcheur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.fishing
   e2aebaff-71bb-3e9a-8f22-08b732a0ed33:
@@ -14878,7 +14892,7 @@ users:
     - aventurier
     options:
       name: enzothefrais
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions: []
   7d3c27f7-e74a-348d-9527-be3f16f5158f:
     group: []
@@ -14895,9 +14909,10 @@ users:
     - aventurier
     options:
       name: MemouuCat
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
       group: builder
-    permissions: []
+    permissions:
+    - -keepitems.keep
   38da5cd4-99ae-3ca4-81e0-67af561dff7d:
     group:
     - debuttempobis
@@ -14908,7 +14923,7 @@ users:
     - aventurier
     options:
       name: nathanm55
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   a39e44da-08d9-3e77-b53b-04337cae859b:
@@ -14940,7 +14955,7 @@ users:
     - aventurier
     options:
       name: lazyburst
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   f8bd86f3-4755-34c2-84c2-09a3cfdc062d:
@@ -14957,9 +14972,9 @@ users:
     - aventurier
     options:
       name: Nathis_Tv
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     worlds:
-      '§6[§aStreameur§6]§f':
+      §6[§aStreameur§6]§f:
         options:
           prefix: set
     permissions:
@@ -15022,7 +15037,7 @@ users:
     - aventurier
     options:
       name: DaSycate
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   9cdba8f8-9596-31be-9058-ae4c6987b915:
@@ -15105,7 +15120,7 @@ users:
     - aventurier
     options:
       name: Achilili
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   83265bb9-7b9b-3b6f-8b03-5de12d90cdc3:
@@ -15131,7 +15146,7 @@ users:
     - aventurier
     options:
       name: matpro007
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   47becf30-d0b2-3670-a3b7-b4545d9ba887:
@@ -15143,7 +15158,7 @@ users:
     - aventurier
     options:
       name: flynan80
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   7d046078-d3bb-3444-9ed3-7204145553e3:
@@ -15270,7 +15285,7 @@ users:
     - aventurier
     options:
       name: PetitChoux56
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   f5a1a04e-5443-3dce-81b1-3e3980807664:
@@ -15308,7 +15323,7 @@ users:
     - aventurier
     options:
       name: Nazskull
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   6fd1633b-ef92-3df9-a863-8db0c66028e4:
@@ -15335,10 +15350,10 @@ users:
       name: dark_pgm
   c9593601-87a9-3aa3-9750-93bf1f701809:
     group:
-    - horloger
+    - admin
     options:
       name: crashozz
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: ''
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   953f94ec-e781-3094-9e00-5f91f6d627fc:
@@ -15373,7 +15388,7 @@ users:
     - aventurier
     options:
       name: 4PHONE
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   aeee6d2d-02c5-395c-a149-2170fbb715d7:
@@ -15396,7 +15411,7 @@ users:
     - aventurier
     options:
       name: Ertez78
-      prefix: '§6[§2Paysan§6]§7'
+      prefix: §6[§2Paysan§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.herbalism
   ace0edc9-9df5-3855-ba4c-f72934db352b:
@@ -15457,7 +15472,7 @@ users:
     - aventurier
     options:
       name: Milkamini
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.woodcutting
   393b2dd4-8848-3c51-bbea-9724199927da:
@@ -15510,7 +15525,7 @@ users:
     - aventurier
     options:
       name: Sepiatroce
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions: []
   c9dba396-3fac-3913-b870-c477053b793e:
     group:
@@ -15591,7 +15606,7 @@ users:
     - aventurier
     options:
       name: Ryouque
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   11057df4-3e38-3b75-bd2e-f787d677db54:
@@ -15731,7 +15746,7 @@ users:
     - ecuyer
     options:
       name: disney3001
-      prefix: '§6[§2Charbonnier§6]§7'
+      prefix: §6[§2Charbonnier§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   21474503-30b8-30d9-9808-3f44acc5fdd0:
@@ -15756,7 +15771,7 @@ users:
     - aventurier
     options:
       name: skarex03
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   c7515538-6442-3ead-8b80-f72841202097:
@@ -15868,7 +15883,7 @@ users:
     - aventurier
     options:
       name: diogene10
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions: []
   8e0e81b4-a712-3361-96a5-3ca15e8e05fc:
     group:
@@ -15880,7 +15895,7 @@ users:
     - aventurier
     options:
       name: Pole_Nord
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   233ba506-1014-36e0-a382-91484a1aef24:
@@ -16100,7 +16115,7 @@ users:
     - aventurier
     options:
       name: Xefender_Lucifer
-      prefix: '§6[§2Acrobate§6]§7'
+      prefix: §6[§2Acrobate§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.acrobatics
   773e1d12-d62f-3ae9-b4c3-0cd2b88d86ee:
@@ -16136,9 +16151,12 @@ users:
       name: hau26
   4ed63027-56d1-3b45-ba2a-4b04c8cd0707:
     group:
-    - debuttempobis
+    - aventurier
     options:
       name: Glowz
+      prefix: §6[§2Mineur§6]§7
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
   3ce934b8-c67a-31da-8c54-5cac8320c72d:
     group:
     - debuttempo
@@ -16153,7 +16171,7 @@ users:
     - aventurier
     options:
       name: klemi123
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   1b620340-661a-3969-994d-50b93b085f9c:
@@ -16183,7 +16201,7 @@ users:
     - aventurier
     options:
       name: Mew666
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   099a101b-6b80-3970-8ce2-6e62463aac7b:
@@ -16216,7 +16234,7 @@ users:
     - aventurier
     options:
       name: MastrBate
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   d00b877c-1bf8-34b7-8cb4-3464f7899b5c:
@@ -16238,7 +16256,7 @@ users:
     - aventurier
     options:
       name: AXEL2015
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   ef846100-dd29-3633-b946-e51bcb7059b2:
@@ -16296,7 +16314,7 @@ users:
     - aventurier
     options:
       name: Kraeven
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions: []
   28356f85-3d10-3476-b731-dadaf85b7c3c:
     group:
@@ -16344,7 +16362,7 @@ users:
     - aventurier
     options:
       name: tetraplum
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   aa667e79-5334-3721-a1cb-83e1b38a7dfd:
@@ -16352,7 +16370,7 @@ users:
     - aventurier
     options:
       name: jacktil
-      prefix: '§6[§2Échardier§6]§7'
+      prefix: §6[§2Échardier§6]§7
     permissions: []
   1d88bc69-587b-3fba-8319-4c33ea1a70c7:
     group:
@@ -16399,7 +16417,7 @@ users:
     - ecuyer
     options:
       name: remiB110905
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions: []
   ecfbb0e4-88f0-38ea-aa2a-f00375b48834:
     group:
@@ -16423,7 +16441,7 @@ users:
     - aventurier
     options:
       name: derma
-      prefix: '§6[§2Acrobate§6]§7'
+      prefix: §6[§2Acrobate§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.acrobatics
   489979f3-641f-3f6b-a15c-2b85d6499da4:
@@ -16541,7 +16559,7 @@ users:
     - aventurier
     options:
       name: Bruss2000
-      prefix: '§6[§2Raccommodeur§6]§7'
+      prefix: §6[§2Raccommodeur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.repair
   341eb454-a438-3c8b-bf8a-49cb509d3c80:
@@ -16556,7 +16574,7 @@ users:
     - aventurier
     options:
       name: RemGreen
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   31e868ce-e65f-354e-b871-b15d946f00e7:
@@ -16564,11 +16582,12 @@ users:
     - aventurier
     options:
       name: ltsquellette
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   54835995-c7a8-3e0d-b43a-369b58e9112f:
-    group: []
+    group:
+    - aventurier
     options:
       name: Major_Mayhem
     permissions: []
@@ -16609,7 +16628,7 @@ users:
     - ecuyer
     options:
       name: Piveau
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   f9f4836d-73d5-310e-b69e-470cc03e9419:
@@ -16642,7 +16661,7 @@ users:
     - aventurier
     options:
       name: SyRox1
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   926be7fb-2e5e-31ae-a833-f9700ce6a091:
@@ -16782,7 +16801,7 @@ users:
     - aventurier
     options:
       name: T5R4E3
-      prefix: '§6[§2Acrobate§6]§7'
+      prefix: §6[§2Acrobate§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.acrobatics
   91fb5185-57c7-3371-9146-d25a4652ae55:
@@ -16825,10 +16844,10 @@ users:
     - -keepitems.keep
   3d21977e-c5e5-312a-8402-74458ecf2290:
     group:
-    - aventurier_est
+    - aventurier
     options:
       name: itasuka
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
     - Pet.rabbit
@@ -16839,10 +16858,10 @@ users:
       name: PixiosMan45
   d9365c3f-468d-3c72-ad66-1a50ac7194f0:
     group:
-    - aventurier_est
+    - aventurier
     options:
       name: roman_majidro49
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions: []
   5d9bcf48-971f-39cf-b68d-061d5b5ca80d:
     group:
@@ -16854,7 +16873,7 @@ users:
     - aventurier
     options:
       name: KiwiiToxique
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   b4913383-8a34-3601-aa4a-8123d9a5547f:
@@ -16964,7 +16983,7 @@ users:
     group: []
     options:
       name: SilverPO
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   47be82e6-2029-357d-8173-6ea2257831a1:
@@ -16983,14 +17002,14 @@ users:
     - aventurier
     options:
       name: Nathaniel786
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions: []
   93332563-0c2d-3928-babc-d739a6e674c2:
     group:
     - ecuyer
     options:
       name: bettoli
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   83571203-f3eb-39b9-b46a-db379bbe5602:
@@ -17050,7 +17069,7 @@ users:
     - aventurier
     options:
       name: AngelDarkoz
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   966b54d1-d194-3c0d-9d0d-c96be43b29ea:
@@ -17116,7 +17135,7 @@ users:
     - aventurier
     options:
       name: Hakuryu42
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   3bf3941d-f8a1-36df-8b40-0b33a22110e9:
@@ -17124,7 +17143,7 @@ users:
     - aventurier
     options:
       name: pixocraft
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   920d69ca-5157-3a40-ad6e-82ca8f9ca1ce:
@@ -17175,7 +17194,7 @@ users:
     - aventurier
     options:
       name: SoulFullOfSins
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   2724af4a-ffdd-37c6-8501-de2aa0bbd992:
@@ -17196,7 +17215,7 @@ users:
     - aventurier
     options:
       name: alekill
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   a651c49d-5386-38c5-bac1-89e338fc32c8:
@@ -17383,7 +17402,7 @@ users:
     - aventurier
     options:
       name: Thekylian007
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions: []
   21932c6c-5bda-3024-b791-0f6bc91b3439:
     group:
@@ -17418,7 +17437,7 @@ users:
     group: []
     options:
       name: Jammyblack
-      prefix: '§6[§2Paysan§6]§7'
+      prefix: §6[§2Paysan§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.herbalism
   7e9a679b-0f9c-3961-b723-6513822155f7:
@@ -17523,7 +17542,7 @@ users:
     - ecuyer
     options:
       name: Silonix
-      prefix: '§6[§2Pugiliste§6]§7'
+      prefix: §6[§2Pugiliste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.unarmed
   77f25244-aa01-3336-a7ea-66a0eb64a333:
@@ -17595,7 +17614,7 @@ users:
     - aventurier
     options:
       name: FrituSama
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.mining
   842db9ec-0c7c-3db0-a7d0-753d481aff95:
@@ -17613,7 +17632,7 @@ users:
     - aventurier
     options:
       name: fireice
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   89f521ee-ea39-30da-8443-a085377eb3ae:
@@ -17762,12 +17781,11 @@ users:
     permissions: []
   44f3a156-e5da-3d2a-89f1-cc1b4fce4ce6:
     group:
-    - aventurier
+    - ecuyer
     options:
       name: ethan2901
-      prefix: '§6[§2Bretteur§6]§7'
-    permissions:
-    - mcmmo.perks.xp.10percentboost.swords
+      prefix: §6[§2Mineur§6]§7
+    permissions: []
   f7d23a40-f055-3f12-a607-dc1c121e6e0f:
     group: []
     options:
@@ -17780,11 +17798,10 @@ users:
     - -keepitems.keep
   fa12e1ce-caaf-3cda-a7ec-cc7fef7772bc:
     group:
-    - debuttempo
+    - aventurier
     options:
       name: darcksoul34
-    permissions:
-    - -keepitems.keep
+    permissions: []
   c15b9566-4b28-3442-a9ac-dedc033b1366:
     group:
     - debuttempobis
@@ -17794,11 +17811,10 @@ users:
     - -keepitems.keep
   f06ff5de-ba93-3b16-8b26-c33dcd93b695:
     group:
-    - debuttempobis
+    - aventurier
     options:
       name: sangotain
-    permissions:
-    - -keepitems.keep
+    permissions: []
   88f2659e-7302-3e36-8a0e-2a9f0b9e7867:
     group: []
     options:
@@ -17822,7 +17838,7 @@ users:
     - aventurier
     options:
       name: mysteroman
-      prefix: '§6[§2Mineur§6]§7'
+      prefix: §6[§2Mineur§6]§7
     permissions: []
   927c4e5b-fbb1-3181-b6b6-1c1aac0353b5:
     group: []
@@ -17850,7 +17866,7 @@ users:
     - aventurier
     options:
       name: Ryogames2606
-      prefix: '§6[§2Épéiste§6]§7'
+      prefix: §6[§2Épéiste§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.swords
   1b335e65-025e-3e75-b475-7166d88ad8e9:
@@ -17864,7 +17880,7 @@ users:
     - aventurier
     options:
       name: Dracoco
-      prefix: '§6[§2Apprivoiseur§6]§7'
+      prefix: §6[§2Apprivoiseur§6]§7
     permissions:
     - mcmmo.perks.xp.10percentboost.taming
   32e048b6-a86e-3dc1-bc26-90a5317023c4:
@@ -17988,11 +18004,10 @@ users:
     permissions: []
   83469229-8747-3df4-b7ce-7e985775da77:
     group:
-    - debuttempo
+    - debuttempobis
     options:
       name: Anthony79
-    permissions:
-    - -keepitems.keep
+    permissions: []
   0dbbdfff-fb27-3d98-9e8d-f8445cfe6436:
     group: []
   0cfb65b4-2146-371c-aae0-2a1cc92f4e50:
@@ -18025,8 +18040,9 @@ users:
     - aventurier
     options:
       name: RooKMooT68
-      prefix: '§6[§2Acrobate§6]§7'
-    permissions: []
+      prefix: §6[§2Mineur§6]§7
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
   8fdc6de9-94dd-36b3-94ad-a9afe36c3427:
     group: []
     options:
@@ -18040,17 +18056,18 @@ users:
     permissions: []
   c408c61a-a8ba-3316-a794-fbc7afdaa7dd:
     group:
-    - debuttempobis
+    - aventurier
     options:
       name: Akiaz_
     permissions: []
   a9f735c5-44e3-3e4a-8726-9b0b294d559b:
     group:
-    - debuttempo
+    - aventurier
     options:
       name: LCTristan
+      prefix: §6[§2Échardier§6]§7
     permissions:
-    - -keepitems.keep
+    - mcmmo.perks.xp.10percentboost.woodcutting
   7c0c485a-7d80-3a3e-aa28-acf416243333:
     group:
     - aventurier
@@ -18111,3 +18128,420 @@ users:
       name: Nisoo_
     permissions:
     - -keepitems.keep
+  4184d8c0-0dbe-3ce2-b76d-3acc5b30e0ba:
+    group: []
+    options:
+      name: sp3
+    permissions:
+    - -keepitems.keep
+  0aba4315-de2e-3d4f-82fe-12f967236107:
+    group: []
+    options:
+      name: Necroster27
+    permissions: []
+  ddcd9f78-1db2-39dc-9bac-e6a7ba578fd2:
+    group: []
+    options:
+      name: GommeHD
+    permissions: []
+  19662637-8da3-3fff-9639-9af12edd2b2c:
+    group: []
+    options:
+      name: aymen
+    permissions: []
+  f5433ff7-74de-36f2-9937-5fb892092f0a:
+    group:
+    - aventurier
+    options:
+      name: TheArion28
+    permissions: []
+  b0867c96-e7ed-3e46-908d-725af0e03360:
+    group: []
+    options:
+      name: MertAli
+    permissions: []
+  c492aad7-3be2-3f7c-aefe-f70874adf2d5:
+    group:
+    - debuttempo
+    options:
+      name: Altimal
+    permissions:
+    - -keepitems.keep
+  08268b0f-ea7a-3092-a599-6f3609afa027:
+    group: []
+    options:
+      name: Hayate2555
+    permissions: []
+  232e250c-39c3-31c6-a38a-773ee36940b0:
+    group:
+    - aventurier
+    options:
+      name: R3ZiaK
+      prefix: §6[§2Apprivoiseur§6]§7
+    permissions: []
+  9290cdeb-d4cf-3da9-9f68-788e8583b1cf:
+    group:
+    - aventurier
+    options:
+      name: diablo94
+      prefix: §6[§2Mineur§6]§7
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
+  1dedfaaa-36e9-3bdf-be9d-7aebbc06641d:
+    group:
+    - aventurier
+    options:
+      name: Scezaquer
+    permissions: []
+  9b8fbc2b-d7bb-3495-9c27-3ed3aa9fee3e:
+    group:
+    - aventurier
+    options:
+      name: Aurdona
+    permissions: []
+  1d9d7944-e3d2-3a19-8dcc-fbc210d5e181:
+    group: []
+    options:
+      name: Bozuu
+    permissions: []
+  760d9c3c-9adc-3174-bfb5-c761f1818715:
+    group:
+    - debuttempo
+    options:
+      name: Jijiyou
+    permissions:
+    - -keepitems.keep
+  70a2b429-c3c3-37f5-93c5-5be0b7fa4475:
+    group:
+    - debuttempo
+    options:
+      name: Dwitch
+    permissions:
+    - -keepitems.keep
+  21c3ce14-0012-3394-aa86-e48ca75abf6b:
+    group: []
+    options:
+      name: AmirNamiri
+    permissions:
+    - -keepitems.keep
+  6529a635-7324-36f8-9649-21b9c0ee9d33:
+    group: []
+    options:
+      name: PotoRico
+    permissions: []
+  858bd3be-a7c4-344a-b650-ae35ec56fbbc:
+    group: []
+  5742c6a4-f4d7-379d-8497-0e844c19ddc5:
+    group: []
+    options:
+      name: amirnamiri
+    permissions: []
+  31a8eedc-09e4-3273-a8e4-e3965a272abf:
+    group:
+    - debuttempobis
+    options:
+      name: MisterCapitaine
+    permissions:
+    - -keepitems.keep
+  ac7f1c6c-b0c5-3a42-a036-cf209f9b89ff:
+    group:
+    - aventurier
+    options:
+      name: jere344
+    permissions: []
+  06eadb89-1050-3351-a4d2-668d2e18371b:
+    group: []
+    options:
+      name: Un_Emeu
+    permissions:
+    - -keepitems.keep
+  6072d7b9-310b-383c-8d79-98992b443203:
+    group:
+    - debuttempobis
+    options:
+      name: HugoBil
+    permissions:
+    - -keepitems.keep
+  8aa7f654-e8f5-339d-bffc-027d0a134f24:
+    group: []
+  2c6489d1-5375-355c-a656-5f180cf47188:
+    group: []
+    options:
+      name: godartm
+    permissions:
+    - -keepitems.keep
+  00ff56ea-0c1c-3f3e-95cb-afc1bc71496f:
+    group: []
+    options:
+      name: omegazelle
+    permissions: []
+  cc768fb3-529e-3259-a1a3-b8155d97a81a:
+    group:
+    - debuttempo
+    options:
+      name: booba
+    permissions: []
+  b419fe09-4456-3c7a-8c6f-27214bfbc3b5:
+    group: []
+    options:
+      name: OnMaToz
+    permissions: []
+  bd97c020-3f2b-37ae-8687-e603b35e5b43:
+    group:
+    - aventurier
+    options:
+      name: gaspar2
+      prefix: §6[§2Épéiste§6]§7
+    permissions: []
+  50e2e36c-499d-3ffb-aae0-12f39d014576:
+    group: []
+    options:
+      name: con12
+    permissions: []
+  2ffc0ed7-d159-3abd-aad5-674a543cff13:
+    group:
+    - debuttempo
+    options:
+      name: PepperBassist
+    permissions: []
+  2f1f753a-9f50-334f-b05b-bdfa1a4c16ba:
+    group: []
+    options:
+      name: thang
+    permissions: []
+  ad4a60d6-f21e-34ec-82aa-a525b7e5b542:
+    group:
+    - debuttempo
+    options:
+      name: ShowKoa
+    permissions:
+    - -keepitems.keep
+  3f76af50-de77-3efc-8d8f-f21541a9e02d:
+    group:
+    - debuttempobis
+    options:
+      name: Necrobex
+    permissions: []
+  8b28b12a-c53f-326d-84a6-57f0b4bd675a:
+    group: []
+    options:
+      name: Cortos
+  75909107-0dee-327f-9701-72196ce72fb9:
+    group:
+    - debuttempobis
+    options:
+      name: _HackClientVape_
+    permissions: []
+  7d4479ff-d433-3271-9a58-414781674847:
+    group: []
+    options:
+      name: TitaneofTitans
+    permissions: []
+  c313c08a-7677-3287-a0e8-97773dc0ff83:
+    group:
+    - debuttempo
+    options:
+      name: FoxyGirl2004
+    permissions: []
+  928f5740-316d-3a13-9360-80e04058ba67:
+    group: []
+    options:
+      name: IceMeltt
+    permissions: []
+  a47cf49e-cefd-3344-964e-ce497f70ff6a:
+    group: []
+    options:
+      name: IwArZoZo
+    permissions:
+    - -keepitems.keep
+  fc4695f1-52f3-3aaf-97d7-527b943a6f7d:
+    group: []
+    options:
+      name: Pulsion_n
+    permissions:
+    - -keepitems.keep
+  6f3ebfa6-d757-36a7-83dc-ed3fa4a7d89e:
+    group:
+    - aventurier
+    options:
+      name: ALB5000
+    permissions: []
+  402ffd1c-94ab-3e35-8c41-facd9fa9f1ad:
+    group: []
+    options:
+      name: Luce
+    permissions: []
+  60837f96-6a4f-332d-bad7-b6f970b797aa:
+    group:
+    - debuttempo
+    options:
+      name: keegeek
+    permissions:
+    - -keepitems.keep
+  8399fe7c-192d-3b64-8607-55d37068fe7d:
+    group: []
+    options:
+      name: Xenot93
+  0c178f4c-6a13-3978-bfdf-50c531b5471c:
+    group: []
+    options:
+      name: hjklbnm
+    permissions: []
+  6211028e-5961-37ae-95a2-08b0c8b0b7cf:
+    group:
+    - debuttempo
+    options:
+      name: DiamantRuisseau
+    permissions:
+    - -keepitems.keep
+  33dd00a5-ada7-3472-a733-7bab3804345a:
+    group: []
+    options:
+      name: Basty94
+    permissions: []
+  ce633db5-8330-380a-b350-ff43237f9d83:
+    group: []
+    options:
+      name: maustafa
+    permissions:
+    - -keepitems.keep
+  cbb877d7-12a9-3070-a968-2b9edd593593:
+    group: []
+  789589af-5d4c-350e-8dd7-c650ec96f766:
+    group: []
+    options:
+      name: steelorse123
+    permissions: []
+  f9dde3be-7526-321d-a2c8-664e3b0bad72:
+    group: []
+    options:
+      name: axe76PvP
+    permissions: []
+  01efed76-2490-3b70-b6f8-ed45bb42f4df:
+    group: []
+    options:
+      name: MERLIN
+    permissions: []
+  d8337c26-30a6-390a-a6d2-ec68cbf9c43d:
+    group: []
+    options:
+      name: UnTasDeSucre
+    permissions: []
+  496c7b3c-b96a-384e-a0b1-359ec135c875:
+    group:
+    - aventurier
+    options:
+      name: ori123
+      prefix: §6[§2Mineur§6]§7
+    permissions:
+    - mcmmo.perks.xp.10percentboost.mining
+  078fcb1e-8698-37ea-8797-c45dab716e71:
+    group: []
+  e7c91a56-86bc-367a-992b-1f4d8696889b:
+    group: []
+    options:
+      name: thomas1720
+    permissions: []
+  624b40c4-71ad-3de2-81e8-7424bf173e4f:
+    group: []
+    options:
+      name: paulcf
+    permissions:
+    - -keepitems.keep
+  133eb047-328b-3c81-9988-bc61077bdc5f:
+    group: []
+    options:
+      name: mosoxe
+    permissions:
+    - -keepitems.keep
+  d323e8d3-27ca-3a27-ad96-2fa8994855d7:
+    group:
+    - debuttempobis
+    options:
+      name: Xouda_280
+    permissions: []
+  5db36ed8-06b9-3b4c-925d-c8d501620fa4:
+    group:
+    - debuttempobis
+    options:
+      name: Mattis40
+    permissions: []
+  e6eefc7c-bba9-36a9-a15f-aa0bb0315a85:
+    group:
+    - debuttempo
+    options:
+      name: Goryks
+    permissions:
+    - -keepitems.keep
+  f71acc61-93ec-3216-81c1-6de94dd56de4:
+    group:
+    - debuttempobis
+    options:
+      name: Xathyou
+  ef68237c-d880-3f44-94d3-26f843443d70:
+    group: []
+    options:
+      name: picardnat
+  2dcaf1c2-a9ce-33e8-a039-794604a5dde2:
+    group:
+    - aventurier
+    options:
+      name: Cronosdu05
+    permissions: []
+  cba19f58-4d38-3c0d-9b8c-cfc9ce022113:
+    group:
+    - debuttempobis
+    options:
+      name: yoannlgm
+    permissions: []
+  bd30aaf2-4134-3a7c-8478-10c97eb90911:
+    group:
+    - debuttempobis
+    options:
+      name: FloKiller
+    permissions: []
+  c4aa5892-b051-3b75-9b09-f4c409f1f94b:
+    group:
+    - debuttempobis
+    options:
+      name: Skeept_
+    permissions:
+    - -keepitems.keep
+  6bd6fd86-64e0-3ce6-b297-0689b6a6826d:
+    group:
+    - debuttempobis
+    options:
+      name: BrIIsKo
+    permissions:
+    - -keepitems.keep
+  25209317-d084-30f8-bd3f-a05a1edf92ab:
+    group: []
+    options:
+      name: SteveLamor
+    permissions:
+    - -keepitems.keep
+  d4228b0e-ea16-316f-87f5-09ab5f3ca1f7:
+    group:
+    - aventurier
+    options:
+      name: caltos
+    permissions: []
+  dbaf741d-022e-3bc2-8851-bfcbb3624c06:
+    group: []
+    options:
+      name: TheDarkTor
+    permissions: []
+  0de138a4-b5c0-3508-9fe5-9ba46ac96375:
+    group: []
+  bc0eab81-cb9c-3992-8806-701097713a41:
+    group:
+    - debuttempobis
+    options:
+      name: SmnPotatoZz
+    permissions: []
+  8b387272-df4b-3325-a125-9529d582a876:
+    group:
+    - debuttempobis
+    options:
+      name: ThiDawkTrol
+    permissions: []
