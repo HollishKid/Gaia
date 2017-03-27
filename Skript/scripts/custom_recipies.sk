@@ -385,7 +385,7 @@ on load:
     new Recipe "hache_or"
     "hache_or".Recipe.setIngredient{1, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
     "hache_or".Recipe.setIngredient{2, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
-	"hache_or".Recipe.setIngredient{4, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "hache_or".Recipe.setIngredient{4, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
     "hache_or".Recipe.setIngredient{5, 1 stick};
     "hache_or".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
     "hache_or".Recipe.setResult{1 gold axe named "Hache en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..."};
@@ -477,7 +477,7 @@ on load:
     new Recipe "hache_diamant"
     "hache_diamant".Recipe.setIngredient{1, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
     "hache_diamant".Recipe.setIngredient{2, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
-	"hache_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "hache_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
     "hache_diamant".Recipe.setIngredient{5, 1 stick};
     "hache_diamant".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
     "hache_diamant".Recipe.setResult{1 diamond axe named "Hache en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};

@@ -34,12 +34,12 @@ korghan:
   Health: 68
   Damage: 3
   Equipment:
-  - korutsu_sword:5
-  - ardenko_axe:1
+  - korutsu_sword:0
+  - ardenko_axe:5
   Disguise:
     Type: player
     Player: '&aKorg''han'
-    Skin: xX_Milky
+    Skin: MR_12
   Drops:
   - brigandDrops
   AIGoalSelectors:
@@ -50,7 +50,7 @@ korghan:
   - 0 clear
   - 1 hurtbytarget
   Skills:
-  - command{c="bq event <target.name> Mysteria.kor_conv"} @trigger ~onInteract
+  - command{c="bq event <trigger.name> Mysteria.kor_conv"} @trigger ~onInteract
   - summon{type=mercenaire;amount=2;radius=4} ~onDamaged 0.25
   - message{m="&a<mob.name>:&c Hahaha! Ralliez vous à moi mercenaires!"} @trigger ~onDamaged 0.25
   Options:
@@ -67,12 +67,12 @@ bosskor:
   Health: 68
   Damage: 3
   Equipment:
-  - korutsu_sword:5
-  - ardenko_axe:1
+  - korutsu_sword:0
+  - ardenko_axe:5
   Disguise:
     Type: player
     Player: '&cKorg''han'
-    Skin: xX_Milky
+    Skin: MR_12
   Drops:
   - brigandDrops
   AIGoalSelectors:
@@ -102,7 +102,70 @@ mercenaire:
   Disguise:
     Type: player
     Player: '&6Mercenaire'
-    Skin: xX_Milky
+    Skin: healerz
+  Drops:
+  - brigandDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 RandomStroll
+  - 3 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget
+  - 2 players
+  Options:
+    FollowRange: 30
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    ShowHealth: true
+    Despawn: true
+kendan:
+  Mobtype: baby_zombie
+  Display: '&aKendan'
+  Health: 68
+  Damage: 3
+  Disguise:
+    Type: player
+    Player: '&aKendan'
+    Skin: FilthyFajita
+  Drops:
+  - brigandDrops
+  AIGoalSelectors:
+  - 0 clear
+  - 1 float
+  - 2 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget
+  Skills:
+  - command{c="bq event <trigger.name> Mysteria.ken_conv"} @trigger ~onInteract
+  Options:
+    FollowRange: 30
+    AlwaysShowName: false
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    ShowHealth: true
+    Despawn: true
+bossken:
+  Mobtype: baby_zombie
+  Display: '&cKendan'
+  Health: 68
+  Damage: 3
+  Equipment:
+  - golden_sword:0
+  - shield:5
+  - golden_helmet:4
+  - golden_chestplate:3
+  - golden_leggings:2
+  - golden_boots:1
+  Disguise:
+    Type: player
+    Player: '&cKendan'
+    Skin: FilthyFajita
   Drops:
   - brigandDrops
   AIGoalSelectors:

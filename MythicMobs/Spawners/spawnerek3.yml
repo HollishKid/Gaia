@@ -1,0 +1,24 @@
+spawnerek3:
+  MobName: Tesla
+  World: Gaia
+  X: -7420
+  Y: 48
+  Z: 3268
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 0
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

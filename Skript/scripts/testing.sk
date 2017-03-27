@@ -1,3 +1,9 @@
+#
+#LATEST SKELLETT VERSION HINDERS ENTIRE SKRIPT TO LOAD.
+#on breed:
+#	message "Breed" to breeder
+
+
 #SKQuery with errors in console
 #on shoot:
 #    trail projectile with particle drip lava
