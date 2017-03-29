@@ -1,9 +1,11 @@
 #
+# -------------------------------
 #
-# Message for ZEDD
-#
-#   J'ai modifié toutes tes "command addxp %player% [remplacé par nouveau nom français]"
-#
+quest_point_1: folder default.quest_point_1
+quest_point_2: folder default.quest_point_2
+quest_point_3: folder default.quest_point_3
+quest_point_4: folder default.quest_point_4
+quest_point_5: folder default.quest_point_5
 #
 #
 event_test: if zae_lavatear testok else testpasok
@@ -78,8 +80,6 @@ maka_j5: journal add maka_j5
 maka_j5_del: journal del maka_j5
 maka_j6: journal add maka_j6
 maka_j6_del: journal del maka_j6
-maka_j7: journal add maka_j7
-maka_j7_del: journal del maka_j7
 #
 makarov_access: folder makarow_access_exe,makarov_access_journal
 makarow_access_exe: tag add makarov_access
@@ -100,7 +100,7 @@ maka_q1reward: folder maka_mess5,maka_mess6,maka_mess7,maka_fold0 delay:2
 maka_mess5: 'message &6'
 maka_mess6: 'message &6&oVous racontez ce qu''il s''est dit lors de la réunion.'
 maka_mess7: 'message &6'
-maka_fold0: folder maka_mess0,maka_mess02,maka_item1,maka_mess00,maka_eco1,maka_fold1 delay:3
+maka_fold0: folder maka_mess0,maka_mess02,maka_item1,maka_mess00,maka_eco1,quest_point_1,maka_fold1 delay:3
 maka_mess0: 'message &2Makarov:&a&o Prend ça, tu l''as bien mérité, et cela pourrait se révéler utile pour la suite!'
 maka_mess02: 'message &6&oRéunion suspecte (terminé)'
 maka_item1: 'command mm items give %player% leatherlegs_common'
@@ -142,7 +142,7 @@ maka_title23: 'command title %player% title {"text":"A la conquête de Drisgan",
 #
 maka_etape3: folder maka_mess10,maka_fold4 delay:5
 maka_mess10: 'message &2Makarov : &a&oUn traître aux contrebandiers tu dis ? Qui aurait volé un &6Objet &a&odangereux ? Évidemment, il serait pratique que cet &6Objet&a&o soit encore en sa possession..'
-maka_fold4: folder maka_mess11,maka_j4_del,maka_j5,maka_givechain,maka_givechainmess,maka_q2end,maka_q2done,maka_q3start,makarov_denyaccess,maka_outconvers delay:8
+maka_fold4: folder maka_mess11,quest_point_1,maka_j4_del,maka_j5,maka_givechain,maka_givechainmess,maka_q2end,maka_q2done,maka_q3start,makarov_denyaccess,maka_outconvers delay:8
 maka_mess11: 'message &2Makarov : &a&oEssaye de retrouver sa trace, comme te le demandes &2Lasswell&a&o, après tout, il n''est pas bon pour &dAthelas&a&o que les contrebandiers soient trop agités. Prend ceci, et bon courage !'
 maka_givechain: 'command mm i give %player% chainchest'
 maka_givechainmess: 'message &6&oVous recevez une &aCotte de mailles&6&o.'
@@ -151,12 +151,32 @@ maka_q3end: tag del maka_q3start
 maka_q2end: tag del maka_q2start
 maka_q2done: tag add maka_q2done
 maka_q3done: tag add maka_q3done
+maka_lootcoffre: give coffre_mysterieux:1
+maka_takecoffre: take coffre_mysterieux:1
+#
+### Maka finish. Yeah.
+#
+maka_end1: folder maka_end1_money,maka_takecoffre,maka_goodchoice,maka_endfolder delay:1
+maka_end1_money: 'command eco give %player% 4500'
+maka_goodchoice: tag add maka_goodchoice
+maka_end2: folder maka_end2_money,maka_badchoice,maka_endfolder delay:1
+maka_end2_money: 'command eco give %player% 1500'
+maka_badchoice: tag add maka_badchoice
+#
+maka_endfolder: folder maka_mess12,maka_endfolder2 delay:3
+maka_mess12: 'message &2Makarov : &a&oTu as démontré ta valeur, aux yeux de la guilde et aux miens. Je parlerai en ta faveur à l''Intendant, cela t''ouvriras des portes!'
+maka_endfolder2: folder maka_mess13,maka_allclean,maka_end,quest_point_3,maka_j6_del,maka_tempo_journal_intendant,makarov_denyaccess
+maka_mess13: 'message &2Makarov : &a&oPuisse Gaïa guider tes pas et ton bras.
+maka_end: tag add maka_end
+maka_allclean: folder maka_remove_q1done,maka_remove_q2done,maka_remove_q3done,maka_remove_etape1,maka_remove_etape2
+maka_remove_q1done: tag del maka_q1done
+maka_remove_q2done: tag del maka_q2done
+maka_remove_q3done: tag del maka_q3done
+maka_remove_etape1: tag del maka_etape1
+maka_remove_etape2: tag del maka_etape2
 #
 #
-# Tempo redirect
 #
-#
-maka_tempo_done: folder maka_tempo_journal_intendant,makarov_denyaccess,drisgan.tempo_remover
 maka_tempo_journal_intendant: journal add maka_tempo_journal_intendant
 maka_tempo_journal_intendant_del: journal del maka_tempo_journal_intendant
 #
@@ -216,7 +236,7 @@ jim_title1: folder jim_title11,jim_title12,jim_title13 delay:4
 jim_title11: 'command title %player% times 40 60 80'
 jim_title12: 'command title %player% subtitle {"text":"Le test de recrutement","color":"gold"}'
 jim_title13: 'command title %player% title {"text":"Guilde des Aventuriers","color":"green"}'
-jim_firstend: folder progress_done,jim_removestart1,makarov_access,jim_reward1,jim_q1done
+jim_firstend: folder progress_done,quest_point_1,jim_removestart1,makarov_access,jim_reward1,jim_q1done
 jim_reward1: folder jim_reward1_item,jim_reward1_mess,jim_reward1_mess1,jim_reward1_money delay:1
 jim_reward1_item: 'command mm items give %player% stonesword_common'
 jim_reward1_mess: 'message &6&oLe test de recrutement (terminé)'
@@ -230,7 +250,7 @@ jim_q2start: tag add jim_q2start
 jim_q2end: tag del jim_q2start
 jim_inconvers: tag add jim_inconvers
 jimconvers_done: tag del jim_inconvers
-jim_q2ending: folder jim_q2done,jim_convers,progress_done,jim_q2_journal_del,jim_q23_journal delay:4
+jim_q2ending: folder jim_q2done,quest_point_1,jim_convers,progress_done,jim_q2_journal_del,jim_q23_journal delay:4
 jim_q2done: tag add jim_q2done
 jim_convers: conversation jim_convers
 #
@@ -319,7 +339,7 @@ Mkilled: tag add Mkilled
 ynv_MBkilled_check: if ynv_MBkilled ynv_MBkilled_folder else nothing
 ynv_MBkilled_folder: folder ynv_q12_journal,ynv_q13_journal
 #
-ynv_q1reward: folder ynv_reward1mess,ynv_xpreward1,ynv_money1,ynv_q1rewarditem,ynv_q1rewardmess,ynv_q1done,ynv_endq1,ynv_clean1,ynv_clean2,ynv_q1_journal_del delay:2
+ynv_q1reward: folder quest_point_1,ynv_reward1mess,ynv_xpreward1,ynv_money1,ynv_q1rewarditem,ynv_q1rewardmess,ynv_q1done,ynv_endq1,ynv_clean1,ynv_clean2,ynv_q1_journal_del delay:2
 ynv_reward1mess: 'message &6&oLeçon de diplomatie, de force (terminé)'
 ynv_xpreward1: 'command addxp %player% épées 3000'
 ynv_money1: 'command eco give %player% 500'
@@ -329,7 +349,7 @@ ynv_q1done: tag add ynv_q1done
 ynv_endq1: tag del ynv_q1start
 ynv_clean1: tag del Mkilled
 ynv_clean2: tag del Bkilled
-ynv_q2reward: folder ynv_reward2mess,ynv_xpreward2,ynv_money2,ynv_q2rewarditem,ynv_q2rewardmess,ynv_q2done,ynv_endq2,ynv_q2_journal_del delay:2
+ynv_q2reward: folder quest_point_1,ynv_reward2mess,ynv_xpreward2,ynv_money2,ynv_q2rewarditem,ynv_q2rewardmess,ynv_q2done,ynv_endq2,ynv_q2_journal_del delay:2
 ynv_reward2mess: 'message &6&oLeçon de diplomatie, de gré (terminé)'
 ynv_xpreward2: 'command addxp %player% acrobatie 1500'
 ynv_money2: 'command eco give %player% 500'
@@ -353,7 +373,7 @@ ynv_q3messretry: 'message &6En cas d''échec, vous pouvez recommencer cette quê
 #
 # Récompense de Yvngard & la Cache des Voleurs
 ynv_q3done: tag add ynv_q3done
-ynv_q3reward: folder ynv_q3mess1,ynv_q3item,ynv_q3mess2,ynv_q3eco,yre_eventdoneremove,ynv_endprogress,ynv_q3end,ynv_q3_journal_del delay:2
+ynv_q3reward: folder quest_point_1,ynv_q3mess1,ynv_q3item,ynv_q3mess2,ynv_q3eco,yre_eventdoneremove,ynv_endprogress,ynv_q3end,ynv_q3_journal_del delay:2
 ynv_q3mess1: 'message &6&oHold-up chez les voleurs! (terminé)'
 ynv_q3item: 'command mm i give %player% bow_common'
 ynv_q3mess2: 'message &6&oVous recevez un &aArc simple&6&o.'
@@ -536,7 +556,7 @@ var_q1start: tag add var_q1start
 var_q1start_fold: folder var_q1start,var_convers_done,var_pitch_remove
 var_convers_done: tag del var_inconvers
 var_pitch_remove: tag del var_pitch
-var_q1reward: folder var_money1,var_xpreward1,var_q1startremove,var_q1done,var_takeitem1,var_takeitem2,var_q1_journal_del delay:1
+var_q1reward: folder quest_point_1,var_money1,var_xpreward1,var_q1startremove,var_q1done,var_takeitem1,var_takeitem2,var_q1_journal_del delay:1
 var_money1: 'command eco give %player% 1250'
 var_xpreward1: 'command addxp %player% alchimie 2500'
 var_q1startremove: tag del var_q1start
@@ -571,7 +591,7 @@ zae_noloc_mess: 'message &6&oVous n''êtes pas à portée d''une zone à relever
 zae_noloc_check1: if zae_chatal_done zae_relevedonef else zae_noloc_check2
 zae_noloc_check2: if zae_biblio_done zae_relevedonef else zae_noloc_check3
 zae_noloc_check3: if zae_grande_done zae_relevedonef else zae_relevedonef
-#zae_q12_journal
+#
 zae_relevedonef: folder zae_noloc_reset,zae_relevedone delay:1
 zae_noloc_reset: objective start zae_click4
 zae_click4_remove: objective delete zae_click4
@@ -590,7 +610,7 @@ zae_loc3mess: 'message &6&oVous êtes à portée de: &dGrand Marché&6.'
 zae_q1if: if zae_checkq1 zae_q1if_folder else nothing
 zae_q1if_folder: folder zae_q13_journal,zae_q12_journal
 #
-zae_q1reward: folder zae_mess00,zae_takehyper,zae_eco,zae_xpreward,zae_clean,zae_click4_remove
+zae_q1reward: folder quest_point_1,zae_mess00,zae_takehyper,zae_eco,zae_xpreward,zae_clean,zae_click4_remove
 zae_mess00: 'message &6&oFaire les relevés (terminé)'
 zae_takehyper: take hypercap:1
 zae_eco: 'command eco give %player% 500'
@@ -627,7 +647,7 @@ zae_faillefold: folder zae_faillemess1,zae_obj4_delete,zae_q2_journal_del,zae_q2
 zae_q21_journal: journal add zae_q22_journal
 zae_q12_journal_del: journal del zae_q22_journal
 zae_faillemess1: 'message &2Hypercapaciteur:&6&o Enregistrement terminé.'
-zae_q2reward: folder zae_mess7,zae_eco2,zae_mess8,zae_givesandales,zae_takehyperreg,zae_clean1,zae_clean2,zae_q2done,zae_q12_journal_del delay:1
+zae_q2reward: folder quest_point_1,zae_mess7,zae_eco2,zae_mess8,zae_givesandales,zae_takehyperreg,zae_clean1,zae_clean2,zae_q2done,zae_q12_journal_del delay:1
 zae_mess7: 'message &6&oLocaliser la faille (terminé)'
 zae_eco2: 'command eco give %player% 1250'
 zae_mess8: 'message &6&oVous recevez des &aChausses en cuir gravé&6&o.'
@@ -649,7 +669,7 @@ zae_title3: folder zae_title31,zae_title32,zae_title33 delay:1
 zae_title31: 'command title %player% times 40 60 80'
 zae_title32: 'command title %player% subtitle {"text":"Préparer le contre-sort","color":"gold"}'
 zae_title33: 'command title %player% title {"text":"Troubles arcaniques","color":"green"}'
-zae_q3reward: folder zae_takenether,zae_mess12,zae_eco3,zae_xpreward2,zae_q3end,zae_q3done,zae_q3_journal_del delay:1
+zae_q3reward: folder quest_point_1,zae_takenether,zae_mess12,zae_eco3,zae_xpreward2,zae_q3end,zae_q3done,zae_q3_journal_del delay:1
 zae_takenether: take lava_tear:3
 zae_mess12: 'message &6&oPréparer le contre-sort (terminé)'
 zae_eco3: 'command eco give %player% 1250'
@@ -688,7 +708,7 @@ zae_q4_foldjournal: folder zae_q4_journal_del,zae_q41_journal delay:5
 zae_q41_journal: journal add zae_q42_journal
 zae_q41_journal_del: journal del zae_q42_journal
 #
-zae_q4reward: folder zae_mess15,zae_q4reward2,zae_q2rewardfold,zae_q41_journal_del,zae_takeitem delay:5
+zae_q4reward: folder quest_point_1,zae_mess15,zae_q4reward2,zae_q2rewardfold,zae_q41_journal_del,zae_takeitem delay:5
 zae_mess15: 'message &2Zael:&a&o Je vais enquêter un peu sur l''hypothèse que ce village est impliqué dans les récents évènements. Mais tu as rendu un fier service à ta guilde %player%!'
 zae_q2rewardfold: folder zae_mess16,zae_eco4,zae_xpreward3,zae_q4clean1,zae_q4clean2,zae_q4done delay:3
 zae_mess16: 'message &6&oFermer le portail (terminé)'
@@ -731,7 +751,7 @@ kal_title12: 'command title %player% subtitle {"text":"A la recherche de l''ombr
 kal_title13: 'command title %player% title {"text":"Opération infiltration","color":"green"}'
 kal_rep3: folder kal_mess3,kal_conversdone delay:5
 kal_mess3: 'message &2Kali Jones:&a&o Je n''ai pas trouvé plus d''informations vu que les habitants d''&dAthelas&a&o ne sont pas très amicaux envers ceux de &dDrisgan&a&o. Peut-être auras-tu plus de chance en demandant autour de toi...'
-kal_q1reward: folder kal_mess5,kal_takeombre,kal_eco1,kal_q1done,kal_clean1,kal_j2_del,kal_convers delay:1
+kal_q1reward: folder quest_point_2,kal_mess5,kal_takeombre,kal_eco1,kal_q1done,kal_clean1,kal_j2_del,kal_convers delay:1
 kal_mess5: 'message &6&oA la recherche de l''ombre jaune (terminé)'
 kal_takeombre: take ombre_jaune:1
 kal_eco1: 'command eco give %player% 3000'
