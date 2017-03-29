@@ -1,0 +1,244 @@
+#
+#
+# On death Testers
+#
+#                   AirTemple, ThiefTreasure
+on death of player:
+	wait 7 ticks
+	if victim meets betonquest condition "hollish.air_moine_tempo":
+		fire betonquest event "hollish.air_temple_lose" for victim
+	if victim meets betonquest condition "Zedd.thieftreasure_tempo_tag":
+		fire betonquest event "Zedd.thieftreasure_reset" for victim
+
+
+#
+#
+# Fables - Extras
+#
+#
+on rightclick on sign:
+    if line 1 of the clicked block is "Fables":
+        if line 2 of the clicked block is "~":
+            if line 3 of the clicked block is "Tome 1":
+                if line 4 of the clicked block is "Partie 1":
+                    fire betonquest event "hollish.fables_t1p1" for player
+                if line 4 of the clicked block is "Partie 2":
+                    fire betonquest event "hollish.fables_t1p2" for player
+                if line 4 of the clicked block is "Partie 3":
+                    fire betonquest event "hollish.fables_t1p3" for player
+                if line 4 of the clicked block is "Partie 4":
+                    fire betonquest event "hollish.fables_t1p4" for player
+                if line 4 of the clicked block is "Partie 5":
+                    fire betonquest event "hollish.fables_t1p5" for player
+            if line 3 of the clicked block is "Tome 2":
+                if line 4 of the clicked block is "Partie 1":
+                    fire betonquest event "hollish.fables_t2p1" for player
+                if line 4 of the clicked block is "Partie 2":
+                    fire betonquest event "hollish.fables_t2p2" for player
+                if line 4 of the clicked block is "Partie 3":
+                    fire betonquest event "hollish.fables_t2p3" for player
+                if line 4 of the clicked block is "Partie 4":
+                    fire betonquest event "hollish.fables_t2p4" for player
+            if line 3 of the clicked block is "Tome 3":
+                if line 4 of the clicked block is "Partie 1":
+                    fire betonquest event "hollish.fables_t3p1" for player
+                if line 4 of the clicked block is "Partie 2":
+                    fire betonquest event "hollish.fables_t3p2" for player
+                if line 4 of the clicked block is "Partie 3":
+                    fire betonquest event "hollish.fables_t3p3" for player
+                if line 4 of the clicked block is "Partie 4":
+                    fire betonquest event "hollish.fables_t3p4" for player
+#
+#
+# Protection
+#
+#
+on sign change:
+    if line 1 is "Fables":
+        if line 2 is "~":
+            if player's gamemode is survival:
+                cancel event
+                message "&dVous ne parvenez pas à créer cette Pancarte."
+    if line 1 is "&l&oElen síla":
+        if line 2 is "&l&olúmenn'":
+            if line 3 is "&l&oomentielvo":
+                cancel event
+                message "&dVous ne parvenez pas à créer cette Pancarte."
+    if line 1 is "~~~~~~":
+        if line 4 is "~~~~~~":
+            cancel event
+            message "&dVous ne parvenez pas à créer cette Pancarte."
+				
+#
+#
+# Terre
+#
+#
+on load:
+	set {earth_temple_loc} to location at -7411, 64, 355 of the world "Gaia"
+#
+# Érudit de la Terre
+#
+command /thisisatopsecreteruditterrelocationcommand:
+	trigger:
+		if player is in the region "north":
+			if distance between player and {earth_temple_loc} is smaller than 10:
+				message "Cette borne porte une inscription mystérieuse..."
+				if player meets betonquest condition "terre_find":
+					fire betonquest event "folder_borne_found" for player
+			else:
+				message "&d&oVous êtes à &2%distance between player's location and {earth_temple_loc}% &d&oblocs de la source de la Magie de la Terre."
+		else:
+			message "&cVous devez être dans le Grand Nord avant d'utiliser la &2Pierre de Terre&c."
+			message "&cSi vous n'y avez pas encore accès, renseignez-vous à la Ville d'Ingor."
+
+on rightclick on sign:
+    if line 1 of the clicked block is "&l&oElen síla":
+        if line 2 of the clicked block is "&l&olúmenn'":
+            if line 3 of the clicked block is "&l&oomentielvo":
+                message "&d&oUne Force étrange émane de cet endroit..."
+                if player meets betonquest condition "hollish.emerald_enchante_hold":
+                    message "&d&oLa terre tremble sous vos pieds..."
+                    wait 2 seconds
+                    message "&d&o...elle s'est fendue en deux !"
+                    set the block at location at -7377, 41, 283 of the world "Gaia" to redstone block
+    if line 1 of the clicked block is "~~~~~~":
+        if line 4 of the clicked block is "~~~~~~":
+            message "&d&oVous entendez un léger clic derrière le mur."
+            if line 2 of the clicked block is "1":
+                add 1 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "2":
+                add 2 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "3":
+                add 3 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "4":
+                add 4 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "5":
+                add 5 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "6":
+                add 6 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "7":
+                add 7 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "8":
+                add 8 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+            else if line 2 of the clicked block is "9":
+                add 9 to {earth_lockpad_%player%::*}
+                if size of {earth_lockpad_%player%::*} is 4:	
+                    execute console command "thisistheearthlockpadchecker %player%"
+
+command /thisistheearthlockpadchecker <player>:
+	executable by: console
+	trigger:
+		if {earth_lockpad_%arg 1%::1} is 3:
+			if {earth_lockpad_%arg 1%::2} is 1:
+				if {earth_lockpad_%arg 1%::3} is 4:
+					if {earth_lockpad_%arg 1%::4} is 1:
+						loop {earth_lockpad_%arg 1%::*}:
+							delete {earth_lockpad_%arg 1%::%loop-index%}
+						message "&a&oVous trouvez la bonne combinaison." to arg 1
+						message "&a&oVous entendez un bruit de blocs qui se décale !" to arg 1
+						set block at location at -7422, 24, 126 of the world "Gaia" to air
+						set block at location at -7422, 23, 126 of the world "Gaia" to air
+						wait 12 seconds
+						set block at location at -7422, 24, 126 of the world "Gaia" to emerald block
+						set block at location at -7422, 23, 126 of the world "Gaia" to emerald block
+					else:
+						set block at location at -7422, 24, 126 of the world "Gaia" to emerald block
+						set block at location at -7422, 23, 126 of the world "Gaia" to emerald block
+						message "&cVous n'avez pas rentré la bonne combinaison." to arg 1
+						loop {earth_lockpad_%arg 1%::*}:
+							delete {earth_lockpad_%arg 1%::%loop-index%}
+				else:
+					set block at location at -7422, 24, 126 of the world "Gaia" to emerald block
+					set block at location at -7422, 23, 126 of the world "Gaia" to emerald block
+					message "&cVous n'avez pas rentré la bonne combinaison." to arg 1
+					loop {earth_lockpad_%arg 1%::*}:
+						delete {earth_lockpad_%arg 1%::%loop-index%}
+			else:
+				set block at location at -7422, 24, 126 of the world "Gaia" to emerald block
+				set block at location at -7422, 23, 126 of the world "Gaia" to emerald block
+				message "&cVous n'avez pas rentré la bonne combinaison." to arg 1
+				loop {earth_lockpad_%arg 1%::*}:
+					delete {earth_lockpad_%arg 1%::%loop-index%}
+		else:
+			set block at location at -7422, 24, 126 of the world "Gaia" to emerald block
+			set block at location at -7422, 23, 126 of the world "Gaia" to emerald block
+			message "&cVous n'avez pas rentré la bonne combinaison." to arg 1
+			loop {earth_lockpad_%arg 1%::*}:
+				delete {earth_lockpad_%arg 1%::%loop-index%}
+			
+#
+#
+#
+# Château du Louvre
+#
+#
+#
+command /addlouvreregister <player>:
+	executable by: console
+	trigger:
+		add arg 1 to {louvre_registre::*}
+		message "&2Gestionnaire &f: &a&oVous avez été correction inscit sur le" to arg 1
+		message "&2Registre des Écuyers du Louvre !" to arg 1
+		message "&a&oBienvenue à vous !" to arg 1
+#
+command /louvreweeklyreward <player>:
+	executable by: console
+	trigger:
+		if "%{louvre_contribution_received::*}%" contains "%arg 1%":
+			message "&2Gestionnaire &f: &a&oVous avez déjà reçu votre paiement cette semaine !" to arg 1
+			message "&a&oLa nouvelle semaine commence Dimanche à 23 heures." to arg 1
+		else if "%{louvre_contributors::*}%" contains "%arg 1%":
+			set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
+			set {_block.total.louvre} to {_block.total.louvre} / 100
+			set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
+			set {_louvre_uruk_total} to {_louvre_uruk_total} / 10
+			set {_louvre_weekly_reward} to {_block.total.louvre} + {_louvre_uruk_total}
+			message "&2Gestionnaire &f: &a&oLe montant s'élève actuellement à &f¤ &2%{_louvre_weekly_reward}%&a&o." to arg 1
+			message "&2Gestionnaire &f: &a&oVoici votre paiement de la semaine." to arg 1
+			execute console command "eco give %arg 1% %{_louvre_weekly_reward}%"
+			add arg 1 to {louvre_contribution_received::*}
+		else:
+			message "&2Gestionnaire &f: &a&oIl semblerait que vous n'ayez contribué à aucun projet !" to arg 1
+			message "&a&oPour pouvoir prétendre à votre paiement, vous devez contribuer à au moins un projet." to arg 1
+			
+#	
+command /thisistheurukkilledcommand:
+	executable by: console
+	trigger:
+		if "%{louvre_registre::*}%" contains "%player%":
+			if "%{louvre_contributors}%" contains "%player%":
+				add 1 to {louvre_uruk_kills}
+			else:
+				add player to {louvre_contributors::*}
+				add 1 to {louvre_uruk_kills}
+		else:
+			stop
+#
+command /thisistheurukakilledcommand:
+	executable by: console
+	trigger:
+		if "%{louvre_registre::*}%" contains "%player%":
+			if "%{louvre_contributors}%" contains "%player%":
+				add 1 to {louvre_uruka_kills}
+			else:
+				add player to {louvre_contributors::*}
+				add 1 to {louvre_uruka_kills}
+		else:
+			stop

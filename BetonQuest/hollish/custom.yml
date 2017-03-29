@@ -1,0 +1,89 @@
+effects:
+  Helix:
+    class: HelixEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 3
+  BigBang:
+    class: BigBangEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 30
+  Arc:
+    class: ArcEffect
+    iterations: 100
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 30
+  Atom:
+    class: AtomEffect
+    iterations: 7
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 2
+  Cone:
+    class: ConeEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5
+  Earth:
+    class: EarthEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5
+  Dna:
+    class: DnaEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5
+  Fountain:
+    class: FountainEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 10
+  Star:
+    class: StarEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5
+  Text:
+    class: TextEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5
+  Wave:
+    class: WaveEffect
+    iterations: 5
+    particle: smoke
+    helixes: 5
+    circles: 20
+    grow: 3
+    radius: 5

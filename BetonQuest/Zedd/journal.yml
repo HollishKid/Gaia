@@ -1,43 +1,44 @@
-#Choses à savoir pour un livre, attention, le BQ prend la première pour marquer la date de l'entry
-#50 pages long, with up to 256 characters per page, with line breaks counting as two characters.
-#No page may be longer than 14 lines and each line can have an average of 19 characters, determined by the width of the used characters.
-#Ne pas oublier d'enlever l'entry une fois terminée
-#Il faut encore trouver un moyen de créer une page de garde mise à jour avec les quêtes faites
+#
+#
+# Zedd
+#
+#
 max_journal: 'Vous avez réussi l''épreuve imposée par le chef Jimbo. Retournez le voir à la Guilde des Aventuriers.'
 jim_q1_journal: 'Le Chef Jimbo m''a envoyé parler à Maximus, à l''arène. Il y a fort à parier que le test n''est en fait qu''un combat...'
 jim_q2_journal: 'Le Chef Jimbo m''a demandé de me mettre au service du sergent Ynvgard. Il devrait être dans les batiments militaires au Sud-Est de la ville. (-6570;3214)'
 jim_q22_journal: 'Le sergent Ynvgard n''a plus besoin de mes services pour le moment. Il est temps de retourner voir le Chef Jimbo à la Guilde des Aventuriers.'
 jim_q23_journal: 'Le chef Jimbo m''a conseillé d''offrir mon aide à d''autres membres de la Guilde des Aventuriers.'
-ynv_q1_journal: 'Le sergent Ynvgard m''a demandé de me rendre au village des voleurs dans la forêt à l''ouest d''Athelas pour éliminer 10 Bandits et 5 Moines voleurs. (-7588;3078)'
+ynv_q1_journal: 'Le sergent Ynvgard m''a demandé de me rendre au village des voleurs dans la forêt à l''Ouest d''Athelas pour éliminer 10 Bandits et 5 Moines voleurs. (-7588;3078)'
 ynv_q11_journal: 'Les moines et les bandits sont éliminés, je peux faire mon rapport au sergent Ynvgard à Athelas. (-6570;3214)'
 ynv_q2_journal: 'Le sergent Ynvgard m''a demandé de me rendre au village des voleurs pour y trouver des informations sur leur cache secrète. Mieux vaut fouiller les alentours du village !'
 ynv_q22_journal: 'La reconnaissance est effectuée, je peux faire part de mes découvertes au sergent Ynvgard à Athelas. (-6570;3214)'
 ynv_q3_journal: 'Le sergent Ynvgard m''a demandé de lui lancer un signal à l''aide de fusées une fois que je me serai rendu DANS la cache des voleurs. Si j''échoue, je devrais retourner le voir pour recommencer.'
 ynv_q32_journal: 'La mission s''est bien déroulée, mais le sergent Ynvgard n''a pas trouvé ce qu''il cherchait. Je devrais retourner le voir à Athelas. (-6570;3214)'
 or_q1_journal: 'Le vieux Bandit à l''écart du village des voleurs m''a demandé de lui ramener 5 poissons grillés. Je me demande s''il est digne de confiance...'
-makarov_access_journal: 'Je devrais aller voir Stacy, la secrétaire du maitre pour pouvoir aller le voir.'
+makarov_access_journal: 'Je devrais aller voir Stacy, la secrétaire du maître pour pouvoir aller le voir.'
 var_q1_journal: 'Je dois récupérer 5 Gouttes d''eau et 5 Gouttes de lave sur les élémentaires qui peuplent High Garden (-6900;3290) pour Varko à la guilde.'
 var_q2_journal: 'Varko m''a demandé d''apporter le paquet qu''il m''a donné au Sanctuaire. Je dois le donner à l''Apprenti.'
 zae_q1_journal: 'Je dois effectuer un relevé à l''aide de l''hypercapaciteur bidulotron au Château, à la Bibliothèque et au Grand Marché pour le compte de Zael à la Guilde.'
 zae_q12_journal: 'Les relevés sont effectués, je peux retourner voir Zael à la Guilde des Aventuriers.'
 zae_q2_journal: 'Zael m''a demandé de localiser la faille présente au Château à l''aide de l''hypercapaciteur bidulotron.'
 zae_q22_journal: 'J''ai localisé la faille, je peux retourner voir Zael à la Guilde des Aventuriers.'
-zae_q3_journal: 'Je dois apporter 3 Gouttes de lave à Zael à la Guilde pour préparer le contre-sort. Je peux en récupérer sur les élémentaires de lave qui vivent dans High Garden'
+zae_q3_journal: 'Je dois apporter 3 Gouttes de lave à Zael à la Guilde pour préparer le contre-sort. Je peux en récupérer sur les élémentaires de lave qui vivent dans High Garden.'
 zae_q4_journal: 'Je dois fermer le portail qui est au Château à l''aide du Brouilleur arcanique.'
 zae_q42_journal: 'La faille vous a téléporté dans un endroit étrange, il vaut mieux retourner à la Guilde des Aventuriers pour en faire part à Zael.'
 maka_q1_journal: 'Je dois prendre contact avec la source du maître Makarov qui est un garde à Drisgan (-7150;3520). Je dois grimper au mur Est de la ville puis attendre son passage pour d''autres instructions.'
-maka_j2: 'La mission est une réussite ! Je devrais rapporter ces informations au maitre Makarov, à la Guilde des Aventuriers.'
+maka_j2: 'La mission est une réussite ! Je devrais rapporter ces informations au maître Makarov, à la Guilde des Aventuriers.'
 maka_j3: 'Le maître m''a demandé de trouver un moyen d''approcher ces contrebandiers... Je trouverai sûrement un de leurs membres au bar Chez Paulette.'
-maka_j4: 'Je devrais faire un rapport au maitre Makarov, à la Guilde des Aventuriers.'
+maka_j4: 'Je devrais faire un rapport au maître Makarov, à la Guilde des Aventuriers.'
 maka_j5: 'Toujours sur la trace de l''Objet, vous avez fait votre rapport au maître Makarov, qui vous demande de poursuivre l''investigation sur l''hypothèse qu''Erek serait encore en possession de son butin.'
 #
 # Tempo
 #
 maka_tempo_journal_intendant: 'Makarov m''a recommandé auprès de l''Intendant. Si j''ai aussi la recommandation du Sanctuaire, je suis sûr que je pourrais avoir une hausse de salaire auprès de l''Intendant !'
 #
+
 maka_j6: 'Vous avez éliminé Erek et récupéré un coffret mystérieux. L''heure est venue pour un retour triomphal à la Guilde!'
 #
-kal_j1: 'Kali Jones (au bar Chez Paulette) m''envoi à la recherche de l''Ombre Jaune. Je devrais commencer à chercher ce temple englouti aux alentours de High Garden. (clic droit sur l''Ombre Jaune pour la ramasser...)'
+kal_j1: 'Kali Jones (au bar Chez Paulette) m''envoie à la recherche de l''Ombre Jaune. Je devrais commencer à chercher ce temple englouti aux alentours de High Garden. (clic droit sur l''Ombre Jaune pour la ramasser...)'
 kal_j2: 'J''ai l''Ombre Jaune !! Je devrais la rapporter à Kali Jones...'
 kal_j3: 'Kali Jones m''a envoyé rencontrer son supérieur, à Drisgan. Après m''être présenté aux guardes de la porte nord, je dois chercher un certain Eko.'
 #
@@ -47,11 +48,11 @@ kal_j3: 'Kali Jones m''a envoyé rencontrer son supérieur, à Drisgan. Après m
 #
 #
 its_jr1done: 'Vous avez accompli votre contrat de guilde de rang 1. Retournez voir Itsuki à la Guilde pour toucher votre récompense.'
-its_jr1q1: '[Contrat de guilde]: Elimination des voleurs. Abattez 8 bandits au village des voleurs. (-7588;3078)'
-its_jr1q2: '[Contrat de guilde]: Elimination d''élémentaires. Abattez 6 Goutte de lave à High Garden. (-6900;3290)'
-its_jr1q3: '[Contrat de guilde]: Elimination d''ordures. Abattez 10 Type louche au Trou noir. (-7327;3263)'
-its_jr1q4: '[Contrat de guilde]: Elimination d''élémentaires d''eau. Abattez 6 Goutte d''eau à High Garden. (-6900;3290)'
-its_jr1q5: '[Contrat de guilde]: Elimination de mort-vivants. Abattez 8 Ghoule à High Garden, par temps de pluie. (-6900;3290)'
+its_jr1q1: '[Contrat de guilde]: Élimination des voleurs. Abattez 8 bandits au village des voleurs. (-7588;3078)'
+its_jr1q2: '[Contrat de guilde]: Élimination d''élémentaires. Abattez 6 Goutte de lave à High Garden. (-6900;3290)'
+its_jr1q3: '[Contrat de guilde]: Élimination d''ordures. Abattez 10 Type louche au Trou noir. (-7327;3263)'
+its_jr1q4: '[Contrat de guilde]: Élimination d''élémentaires d''eau. Abattez 6 Goutte d''eau à High Garden. (-6900;3290)'
+its_jr1q5: '[Contrat de guilde]: Élimination de mort-vivants. Abattez 8 Ghoules à High Garden, par temps de pluie. (-6900;3290)'
 #
 #
 #

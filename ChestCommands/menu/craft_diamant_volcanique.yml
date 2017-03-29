@@ -1,0 +1,485 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dCraft de Diamant Volcanique'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 6
+
+  # command - OPTIONAL (you can remove this diamant set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Suppdiamantts all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with diamantange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+diamant1:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+diamant2:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 2
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+diamant3:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 3
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+diamant4:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+diamant5:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+redstone1:
+  NAME: 'Redstone Volcanique'
+  LORE:
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+diamant_casque:
+  NAME: '&9Casque en Diamant Volcanique'
+  LORE:
+  - '&e&oCe diamant provient'
+  - '&e&od''un volcan actif'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 310
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+diamant12:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 6
+  POSITION-Y: 1
+  KEEP-OPEN: true
+
+diamant22:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 8
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+diamant32:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+diamant42:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+diamant52:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+diamant62:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 6
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+diamant72:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 7
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+diamant82:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 8
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+redstone12:
+  NAME: 'Redstone Volcanique'
+  LORE:
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
+  POSITION-X: 7
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+diamant_plastron:
+  NAME: '&9Plastron en Diamant Volcanique'
+  LORE:
+  - '&e&oCe diamant provient'
+  - '&e&od''un volcan actif'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 311
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+diamant13:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 1
+  POSITION-Y: 4
+  KEEP-OPEN: true
+
+diamant23:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 2
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+diamant33:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 3
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+diamant43:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 1
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+diamant53:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 3
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+diamant63:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 1
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+diamant73:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 3
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+redstone13:
+  NAME: 'Redstone Volcanique'
+  LORE:
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+diamant_jambes:
+  NAME: '&9Jambières en Diamant Volcanique'
+  LORE:
+  - '&e&oCe diamant provient'
+  - '&e&od''un volcan actif'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 312
+  POSITION-X: 4
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+diamant14:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+diamant24:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 8
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+diamant34:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 6
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+diamant44:
+  NAME: 'Diamant Volcanique'
+  LORE:
+  - '&d&oCe diamant provient'
+  - '&d&od''un volcan actif...'
+  ID: 264
+  POSITION-X: 8
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+redstone14:
+  NAME: 'Redstone Volcanique'
+  LORE:
+  - '&d&oCette Redstone provient'
+  - '&d&od''un volcan actif.'
+  ID: 331
+  POSITION-X: 7
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+diamant_pieds:
+  NAME: '&9Bottes en Diamant Volcanique'
+  LORE:
+  - '&e&oCe diamant provient'
+  - '&e&od''un volcan actif'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  ID: 313
+  POSITION-X: 9
+  POSITION-Y: 5
+  KEEP-OPEN: true
+
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+blocker12:
+  COMMAND: 'open: craft_custom.yml'
+  NAME: '&aRetour aux Crafts'
+  ID: '58'
+  POSITION-X: 5
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 3
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 7
+  KEEP-OPEN: true
+ 
+blocker72:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 9
+  KEEP-OPEN: true

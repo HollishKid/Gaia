@@ -22,4 +22,4 @@ endzomb2:
   Breakable: false
   Conditions:
   - playerwithin 20
-  ActiveMobs: 4
+  ActiveMobs: 0

@@ -42,6 +42,7 @@ revenant2:
   Damage: 4
   DamageModifiers:
   - FIRE 1.3
+  - PROJECTILE 0.33
   - DROWNING 0
   Faction: revenant
   AIGoalSelectors:
@@ -61,7 +62,7 @@ revenant2:
   Skills:
   - setstance{stance=notMounted} @Self ~onSpawn >0
   - skill{s=vampirebid} @PlayersInRadius{r=1} ~onTimer:10 >0 0.20
-  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#d9ff8a} @self ~onDamaged
+  - particles{p=portal;a=50;hs=0.8;vs=1.2;s=0;y=1.0} @self ~onDamaged
   - command{c="bq event <target.name> default.assault_killed1"} @trigger ~onDeath
   Options:
     FollowRange: 20
@@ -74,6 +75,10 @@ revarcher:
   Mobtype: SKELETON
   Display: "&cArcher"
   Health: 40
+  DamageModifiers:
+  - FIRE 1.3
+  - PROJECTILE 0.33
+  - DROWNING 0
   Disguise:
    Type: player
    Player: "&cArcher"
@@ -92,7 +97,7 @@ revarcher:
   Drops:
   - money 2-6 0.1  
   Skills:
-  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#d9ff8a} @self ~onDamaged
+  - particles{p=portal;a=50;hs=0.8;vs=1.2;s=0;y=1.0} @self ~onDamaged
   - command{c="bq event <target.name> default.assault_killed1"} @trigger ~onDeath
   Equipment:
   - casqueassault:4

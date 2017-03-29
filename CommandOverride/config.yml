@@ -12,7 +12,7 @@
 # This Plugin utilises an Auto-Updater. If you want to turn that off,
 # simply set options -> auto-update to false
 options:
-  auto-update: true
+  auto-update: false
   use-unknown-command-message: false
   unknown-command-message: '&7Sorry, I do not recognize this Command! Please type
     &b/help &7for Help.'
@@ -44,7 +44,7 @@ commands:
   - console:/bq event <arg 1> hollish.prison_god_tester<arg 0>
   - '&2<arg 1> &d&oa été sanctionné niveau : &2<arg 0>'
   - ' '
-  - '&d&oUtilisez &aliberer [nom du joueur] &d&opour la/le libérer prématurément,'
+  - '&d&oUtilisez &aliberer [nom du joueur] &d&opour la/le libérer,'
   - '&d&oou lorsque la personne est bloquée en prison.'
   /liberer:
   - console:/bq event <arg 0> hollish.prison_free
@@ -83,6 +83,16 @@ commands:
   - '&dSite 10 &f:&a http://minecraft-server-list.com/server/344780/vote/'
   - '&dSite 11 &f:&a http://www.planetminecraft.com/server/gaia-3655242/vote/'
   - '   &f---------------------- ~ ¤ ~ ----------------------'
+  /gaiapurge:
+  - console:/tell <arg 0> &cVous avez été totalement Reset par &2<player>&c.
+  - console:/bq purge <arg 0>
+  - console:/clear <arg 0>
+  - console:/pex user <arg 0> group set debutant
+  - console:/pex user <arg 0> prefix ""
+  - console:/eco set <arg 0> 2000
+  - console:/skillreset <arg 0> all
+  - console:/bq event <arg 0> default.historique_folder
+  - '&cVous avez Reset totalement &2<arg 0> &c!'
   /thisisthesaccommand:
   - WAIT 1
   - command:/sac
@@ -106,7 +116,7 @@ commands:
   - command:/pets
   /closethisshit: []
   /enregistrer:
-  - console:/pex user <player> timed add authme.player.register 7 
+  - console:/pex user <player> timed add authme.player.register 7
   - WAIT 1
   - op-command:/register <arg 0> <arg 1>
   - WAIT 2
@@ -130,48 +140,40 @@ commands:
   - WAIT 2
   - op-command:/thisisthechangerecoverycommand <arg 0> <arg 1>
   /envoyermdp:
+  - console:/pex user <player> timed add authme.player.email.recover 7
   - WAIT 1
   - op-command:/email recovery <arg 0>
   /thisisthehelpopcommand:
   - WAIT 1
   - console:/vsign <player> helpop {data}
-  /destconfig:
-  - command:/npc speed 0.7
-  - command:/trait npcdestinations
+  /louer:
+  - op-command:/region define <arg 0>
   - WAIT 1
-  - command:/waypoint provider npcdestinations
-  /desthelper1:
-  - command:/npcdest addlocation 13000
+  - op-command:/region setpriority <arg 0> 50
   - WAIT 1
-  - command:/npcdest locwand 0 5 7 12 --blocks
-  /desthelper2:
-  - command:/npcdest addlocation 21000
+  - op-command:/as add rent <arg 0>
   - WAIT 1
-  - command:/npcdest locwand 1 5 7 15 --blocks
+  - op-command:/as setprice 7500 <arg 0>
   - WAIT 1
-  - command:/npcdest locweather 1 clear
-  /desthelper3:
-  - command:/npcdest addlocation 11000
+  - op-command:/as setduration 2 mois <arg 0>
   - WAIT 1
-  - command:/npcdest locwand 2 5 7 15 --blocks
+  - op-command:/as groupadd louvre <arg 0>
   - WAIT 1
-  - command:/npcdest locweather 2 clear
-  /desthelper4:
-  - command:/npcdest addlocation 23000
+  - op-command:/as addsign <arg 0>
+  /louer2:
+  - op-command:/region define <arg 0>
   - WAIT 1
-  - command:/npcdest locwand 3 5 7 15 --blocks
+  - op-command:/region setpriority <arg 0> 50
   - WAIT 1
-  - command:/npcdest locweather 3 clear
-  /renthelp:
-  - command:/region define <arg 0>
+  - op-command:/as add rent <arg 0>
   - WAIT 1
-  - command:/region setpriority <arg 0> 50
+  - op-command:/as setprice <arg 1> <arg 0>
   - WAIT 1
-  - command:/as add rent <arg 0>
+  - op-command:/as duration 3 jours <arg 0>
   - WAIT 1
-  - command:/as setprice <arg 1> <arg 0>
-  - WAIT 1
-  - command:/as addsign <arg 0>
+  - op-command:/as addsign <arg 0>
+  /louerajout:
+  - op-command:/as addsign <arg 0>
   /builderregionhelp:
   - command:/region setpriority <arg 0> 50
   - WAIT 1

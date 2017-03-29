@@ -7,146 +7,6 @@
 #                               Conditions: - mobtype
 #
 ###########################################################
-remover:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion athelas_mobspawning
-remover2:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_entree
-remover002:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_aileG1
-remover02:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_aileG2
-remover3:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_aileG3
-remover4:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_aileG4
-remover5:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_aileG5
-remover6:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_ailed1
-remover7:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_ailed2
-remover8:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_ailed3
-remover9:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_ailed4
-remover10:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_ailed5
-remover11:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 100
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_erek_ailed6
-remover12:
-  Mobname: Remove
-  Worlds: Gaia
-  Level: 1
-  SpawnMethod: replace
-  Chance: 1
-  Priority: 200
-  UseWorldScaling: false
-  Conditions:
-  - inregion hol_salleb3
 #
 # Zombies
 #
@@ -597,6 +457,174 @@ goba7:
   - mobtype SKELETON
   - inregion north
 #
+#
+#
+# Uruk Ouest
+#
+#
+#
+#
+#
+# Zombies
+#
+urukz1:
+  Mobname: uruklevelzombie
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 8
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion mirkwood
+urukz2:
+  Mobname: uruklevelzombie
+  Worlds: Gaia
+  Level: 2
+  SpawnMethod: replace
+  Chance: 0.6
+  Priority: 9
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion mirkwood
+urukz3:
+  Mobname: uruklevelzombie
+  Worlds: Gaia
+  Level: 3
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 10
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion mirkwood
+urukz4:
+  Mobname: uruklevelzombie
+  Worlds: Gaia
+  Level: 4
+  SpawnMethod: replace
+  Chance: 0.2
+  Priority: 11
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion mirkwood
+urukz5:
+  Mobname: uruklevelzombie
+  Worlds: Gaia
+  Level: 5
+  SpawnMethod: replace
+  Chance: 0.2
+  Priority: 12
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion mirkwood
+urukz6:
+  Mobname: uruklevelzombie
+  Worlds: Gaia
+  Level: 6
+  SpawnMethod: replace
+  Chance: 0.05
+  Priority: 13
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion mirkwood
+urukz7:
+  Mobname: uruklevelzombie
+  Worlds: Gaia
+  Level: 7
+  SpawnMethod: replace
+  Chance: 0.05
+  Priority: 14
+  UseWorldScaling: false
+  Conditions:
+  - mobtype ZOMBIE
+  - inregion mirkwood
+#
+# Skeletons
+#
+uruka1:
+  Mobname: uruklvlskeleton
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 8
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion mirkwood
+uruka2:
+  Mobname: uruklvlskeleton
+  Worlds: Gaia
+  Level: 2
+  SpawnMethod: replace
+  Chance: 0.6
+  Priority: 9
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion mirkwood
+uruka3:
+  Mobname: uruklvlskeleton
+  Worlds: Gaia
+  Level: 3
+  SpawnMethod: replace
+  Chance: 0.4
+  Priority: 10
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion mirkwood
+uruka4:
+  Mobname: uruklvlskeleton
+  Worlds: Gaia
+  Level: 4
+  SpawnMethod: replace
+  Chance: 0.2
+  Priority: 11
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion mirkwood
+uruka5:
+  Mobname: uruklvlskeleton
+  Worlds: Gaia
+  Level: 5
+  SpawnMethod: replace
+  Chance: 0.2
+  Priority: 12
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion mirkwood
+uruka6:
+  Mobname: uruklvlskeleton
+  Worlds: Gaia
+  Level: 6
+  SpawnMethod: replace
+  Chance: 0.05
+  Priority: 13
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion mirkwood
+uruka7:
+  Mobname: uruklvlskeleton
+  Worlds: Gaia
+  Level: 7
+  SpawnMethod: replace
+  Chance: 0.05
+  Priority: 14
+  UseWorldScaling: false
+  Conditions:
+  - mobtype SKELETON
+  - inregion mirkwood
+#
 #HORSE
 #
 horse:
@@ -626,3 +654,146 @@ horse:
 #
 # Villager done w/ individual Spawners
 #
+#
+# Quest Addons
+#    Zedd
+remover:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion athelas_mobspawning
+remover2:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_entree
+remover002:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_aileG1
+remover02:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_aileG2
+remover3:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_aileG3
+remover4:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_aileG4
+remover5:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_aileG5
+remover6:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed1
+remover7:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed2
+remover8:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed3
+remover9:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed4
+remover10:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed5
+remover11:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 100
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_erek_ailed6
+remover12:
+  Mobname: Remove
+  Worlds: Gaia
+  Level: 1
+  SpawnMethod: replace
+  Chance: 1
+  Priority: 200
+  UseWorldScaling: false
+  Conditions:
+  - inregion hol_salleb3

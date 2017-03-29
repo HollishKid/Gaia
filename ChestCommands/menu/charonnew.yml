@@ -241,14 +241,15 @@ skin_perso:
   LORE:
     - 'Choisir un Skin à partir des skins'
     - 'avec le lien "Navigateur de Skins"'
-    - '&o(le bouquin sur la gauche)'
+    - '&o(la feuille sur la gauche)'
     - ' '
     - 'Cliquez ici puis tapez le'
     - 'NOM EXACT du skin sur la '
     - 'pancarte qui apparaît.'
     - ' '
-    - '&aPrix : &c10 Points de réputation'
-    - '        &c20 Points de Vote'
+    - '&cPrix : &a10 &cPoints de réputation'
+    - '        &a20 &cPoints de Vote'
+    - ' '
     - '&4ATTENTION &f: '
     - 'Certains skins ne fonctionnent pas'
     - 'Aucun remboursement possible !'
@@ -263,9 +264,9 @@ xp_event2:
     - '&fLancez un événement de'
     - '&fBoost d''Expérience fois &22 &f!'
     - '&fAffecte tous les joueurs.'
-    - '&fDurée: &215 &fminutes'
+    - '&fDurée: &21 &fheure'
     - ' '
-    - '&cPrix : &a100 &cPoints de Vote'
+    - '&cPrix : &a50 &cPoints de Vote'
   POSITION-X: 7
   POSITION-Y: 3
   
@@ -277,10 +278,10 @@ xp_event3:
     - '&fLancez un événement de'
     - '&fBoost d''Expérience fois &23 &f!'
     - '&fAffecte tous les joueurs.'
-    - '&fDurée: &215 &fminutes'
+    - '&fDurée: &21 &fheure'
     - ' '
     - '&cPrix : &a10 &cPoints de réputation'
-    - '        &a150 &cPoints de Vote'
+    - '        &a75 &cPoints de Vote'
   POSITION-X: 8
   POSITION-Y: 3
   
@@ -292,10 +293,10 @@ xp_event4:
     - '&fLancez un événement de'
     - '&fBoost d''Expérience fois &24 &f!'
     - '&fAffecte tous les joueurs.'
-    - '&fDurée: &215 &fminutes'
+    - '&fDurée: &21 &fheure'
     - ' '
     - '&cPrix : &a20 &cPoints de réputation'
-    - '        &a200 &cPoints de Vote'
+    - '        &a100 &cPoints de Vote'
   POSITION-X: 9
   POSITION-Y: 3
   

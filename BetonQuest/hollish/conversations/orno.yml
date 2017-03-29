@@ -9,56 +9,68 @@ NPC_options:
     conditions: '!tag_orno_end,!tag_orno,!orno_book,!tag_orno_beta'
     pointers: bonjour,dac,que
   retour:
-    text: 'Vous revoilà &2%player% &a&o! J''espère que votre formation se passe bien auprès des Érudits ! N''oubliez pas: &6Calpa &a&opour Eau, &6Kemen &a&opour Terre, &6Ruinë &a&opour Feu et &6Vista &a&opour Air! Vous devrez répondre &6Ilcë &a&oau Mage à l''entrée pour faire apparaître votre &dBaguette Magique !'
+    text: 'Vous revoilà &2%player% &a&o! \nJ''espère que votre formation se passe bien auprès des Érudits ! \nN''oubliez pas : &6Calpa &a&opour Eau, &6Kemen &a&opour Terre, &6Ruinë &a&opour Feu et &6Vista &a&opour Air !'
     conditions: 'tag_orno_end,!tag_orno,!orno_book,!tag_orno_beta'
+    pointer: terre_orno
   que_rep:
-    text: 'J''assiste les Érudits dans leur travail de recherche documentaire. De par l''âge de cet endroit, beaucoup de documents sont conservés ici. Certains pensent même que des salles inconnues se trouvent encore en profondeur sous le bâtiment.'
+    text: 'J''assiste les Érudits dans leur travail de recherche documentaire. \nDe par l''âge de cet endroit, beaucoup de documents sont conservés ici. \nCertains pensent même que des salles inconnues se trouvent encore en profondeur sous le bâtiment.'
   connu:
-    text: 'Bien à vous &2%player% &a&o! Le &2Mage &a&om''a prévenu de votre visite. Vous souhaiteriez donc vous soumettre à l''enseignement des Érudits, allez me chercher le livre intitulé &6"Histoire de l''Enseignement de la Magie"&a&o.'
+    text: 'Bien à vous &2%player% &a&o! Le &2Mage &a&om''a prévenu de votre visite. \nVous souhaiteriez donc vous soumettre à l''enseignement des Érudits, allez me chercher le livre intitulé &6"Histoire de l''Enseignement de la Magie"&a&o.'
     conditions: 'tag_orno,!orno_book,!orno_book_tagged,!tag_orno_beta'
     pointers: dako,pourquoi,ou
   pourquoi_rep:
-    text: 'Il nous permettra de commencer votre enseignement et de vous faire accepter en tant qu''élève auprès des Érudits ! Vous y allez alors ?'
+    text: 'Il nous permettra de commencer votre enseignement et de vous faire accepter en tant qu''élève auprès des Érudits ! \nVous y allez alors ?'
     pointers: dako,non
   ou_rep:
     text: 'Dans la section Histoire de la &dPetite Salle &a&o!'
   livre_sans:
-    text: 'Vous n''avez pas encore trouvé le livre que je vous ai demandé ? Il s''appelle &6"Histoire de l''Enseignement de la Magie" &a&o.'
+    text: 'Vous n''avez pas encore trouvé le livre que je vous ai demandé ? \nIl s''appelle &6"Histoire de l''Enseignement de la Magie"&a&o.'
     conditions: 'tag_orno,orno_book,!orno_book_tagged,!tag_orno_beta'
     pointers: ou,non
   livre:
-    text: 'Je vois que vous avez le livre qu''il nous faut. Avez vous pris le temps de le parcourir ?'
+    text: 'Je vois que vous avez le livre qu''il nous faut. \nAvez vous pris le temps de le parcourir ?'
     conditions: 'tag_orno,orno_book,orno_book_tagged,!tag_orno_beta'
     pointers: si,pas
   si_rep:
-    text: 'Très bien ! Comme je suis responsable des personnes que je recommande auprès des Érudits, je me dois de vous interroger d''abord. Êtes-vous prêt ?'
+    text: 'Très bien ! Comme je suis responsable des personnes que je recommande auprès des Érudits, je me dois de vous interroger d''abord. \nÊtes-vous prêt ?'
     pointers: absolument,pasdutout
   pas_rep:
     text: 'Non, mais il vous faut tout de même y trouver les informations qui vous permettront de vous adresser correctement aux Érudits !'
   faux:
-    text: 'Je crois que vous vous trompez. Recommencez votre lecture !'
+    text: 'Je crois que vous vous trompez. \nRecommencez votre lecture !'
   questions:
-    text: 'Bien! Commençons par le commencement. L''Eau. Comment vous adressez-vous à l''Erudit de l''Eau ?'
+    text: 'Bien ! Commençons par le commencement. L''Eau. \nComment vous adressez-vous à l''Érudit de l''Eau ?'
     pointers: eau1,eau2,eau3,eau4,eau5
   bien1:
-    text: 'Bien! Ensuite. La Terre. Comment vous adressez-vous à l''Erudit de la Terre ?'
+    text: 'Bien ! Ensuite. La Terre. \nComment vous adressez-vous à l''Érudit de la Terre ?'
     pointers: terre1,terre2,terre3,terre4,terre5
   bien2:
-    text: 'Bien! Continuons. Le Feu. Comment vous adressez-vous à L''Erudit du Feu ?'
+    text: 'Bien ! Continuons. Le Feu. \nComment vous adressez-vous à L''Érudit du Feu ?'
     pointers: feu1,feu2,feu3,feu4,feu5
   bien3:
-    text: 'Excellent! Finalement. L''Air. Comment vous adressez-vous à l''Erudit de l''Air ?'
+    text: 'Excellent ! Finalement. L''Air. \nComment vous adressez-vous à l''Érudit de l''Air ?'
     pointers: air1,air2,air3,air4,air5
   bien4:
-    text: 'Un sans faute. Voilà ce qu''il vous faut pour vous présenter humblement ! Passons à la deuxième étape de votre initiation, il vous faut aller chercher un livre qui s''intitule &6"Histoire de la Magie".'
+    text: 'Un sans faute. Voilà ce qu''il vous faut pour vous présenter humblement ! \nPassons à la deuxième étape de votre initiation, il vous faut aller chercher un livre qui s''intitule &6"Histoire de la Magie".'
     events: orno_beta,tag_remove_ornobook
   connu_beta_sans:
-    text: 'Vous n''avez toujours pas trouvé ce livre que je vous ai demandé ? Il s''intitule &6"Histoire de la Magie".'
+    text: 'Vous n''avez toujours pas trouvé ce livre que je vous ai demandé ? \nIl s''intitule &6"Histoire de la Magie".'
     conditions: 'tag_orno,tag_orno_beta,!orno_book_tagged2'
   connu_beta:
-    text: 'Très bien! Vous avez trouvé le livre qu''il faut ! J''espère que vous l''avez bouquiné, vous en aurez besoin si vous voulez faire apparaître une &dBaguette Magique &a&o. C''est le mot &6Ilcë &a&o!'
+    text: 'Très bien ! Vous avez trouvé le livre qu''il faut ! \nJ''espère que vous l''avez bouquiné, vous en aurez besoin si vous voulez faire apparaître une &dBaguette Magique &a&o. \nC''est le mot &6Ilcë &a&o!'
     conditions: 'tag_orno,tag_orno_beta,orno_book_tagged2'
     events: orno_end
+#
+# Terre Orno
+#
+  terre_orno_rep:
+    text: Hum, Érudit Kemen... \nSi on veut l'aider il me faut savoir la formule exacte !
+    pointer: terre_inc1,terre_inc2,terre_inc3,terre_inc4,terre_inc5
+  terre_inc_no:
+    text: Hmmm... \nJe ne connais aucune incantation en lien avec la Terre qui dit ça... \nÊtes-vous sûr ?
+  terre_inc_ok:
+    text: Ah ! Cela me dit quelque chose... \nLes Mages de la Terre s'en servaient pour saluer leur élément. \nIls utilisaient des &2Emeraudes Polies &a&opour concentrer une grande Force Terrienne ! \nL'Érudit Kemen saura quoi faire de ces informations !
+    events: folder_terre_orno_done
 player_options:
   bonjour:
     text: 'Bien à vous !'
@@ -90,63 +102,84 @@ player_options:
   pasdutout:
     text: 'Je crois que je vais relire d''abord un peu le manuel...'
   eau1:
-    text: 'Erudit Calta'
+    text: 'Érudit Calta'
     pointers: faux
   eau2:
-    text: 'Erudit Calpa'
+    text: 'Érudit Calpa'
     pointers: bien1
   eau3:
-    text: 'Erudit Calya'
+    text: 'Érudit Calya'
     pointers: faux
   eau4:
-    text: 'Erudit Calwa'
+    text: 'Érudit Calwa'
     pointers: faux
   eau5:
-    text: 'Erudit Camba'
+    text: 'Érudit Camba'
     pointers: faux
   terre1:
-    text: 'Erudit Kemen'
+    text: 'Érudit Kemen'
     pointers: bien2
   terre2:
-    text: 'Erudit Kelva'
+    text: 'Érudit Kelva'
     pointers: faux
   terre3:
-    text: 'Erudit Invis'
+    text: 'Érudit Invis'
     pointers: faux
   terre4:
-    text: 'Erudit Ilva'
+    text: 'Érudit Ilva'
     pointers: faux
   terre5:
-    text: 'Erudit Itila'
+    text: 'Érudit Itila'
     pointers: faux
   feu1:
-    text: 'Erudit Ruina'
+    text: 'Érudit Ruina'
     pointers: faux
   feu2:
-    text: 'Erudit Ruivë'
+    text: 'Érudit Ruivë'
     pointers: faux
   feu3:
-    text: 'Erudit Ruinë'
+    text: 'Érudit Ruinë'
     pointers: bien3
   feu4:
-    text: 'Erudit Ruimen'
+    text: 'Érudit Ruimen'
     pointers: faux
   feu5:
-    text: 'Erudit Ruhta'
+    text: 'Érudit Ruhta'
     pointers: faux
   air1:
-    text: 'Erudit Wilya'
+    text: 'Érudit Wilya'
     pointers: faux
   air2:
-    text: 'Erudit Wilma'
+    text: 'Érudit Wilma'
     pointers: faux
   air3:
-    text: 'Erudit Vilya'
+    text: 'Érudit Vilya'
     pointers: faux
   air4:
-    text: 'Erudit Vilin'
+    text: 'Érudit Vilin'
     pointers: faux
   air5:
-    text: 'Erudit Vista'
+    text: 'Érudit Vista'
     pointers: bien4
-
+#
+# Terre Orno
+#
+  terre_orno:
+    text: L'Érudit de la Terre m'envoie. \nIl voudrait votre conseil sur une vieille inscription.
+    condition: terre_orno
+    pointer: terre_orno_rep
+  terre_inc1:
+    text: '"Elan síla lúmenn'' omentielvo"'
+    pointer: terre_inc_no
+  terre_inc2:
+    text: '"Elen síla lúmenn'' omentielva"'
+    pointer: terre_inc_no
+  terre_inc3:
+    text: '"Elen síla lúmenn'' omentielvo"'
+    pointer: terre_inc_ok
+  terre_inc4:
+    text: '"Elen síla lúmann'' omentielvo"'
+    pointer: terre_inc_no
+  terre_inc5:
+    text: '"Elen síle lúmenn'' omentielvo"'
+    pointer: terre_inc_no

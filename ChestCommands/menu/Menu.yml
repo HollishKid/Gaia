@@ -122,16 +122,18 @@ menu-close:
   POSITION-X: 9
   POSITION-Y: 1
 
-argent:
-  COMMAND: 'balance'
-  NAME: '&6Argent'
-  ID: gold_ingot
+enpoche:
+  COMMAND: 'console: bq event {player} default.account'
+  NAME: '&6Argent en poche'
   LORE:
-    - 'Affiche votre argent'
-    - 'en poche dans le tchat'
+    - '&a{money}'
+    - ' '
+    - '&ocliquez pour afficher'
+    - '&ovotre solde de compte.'
+  ID: gold ingot
   POSITION-X: 1
   POSITION-Y: 1
-
+  KEEP-OPEN: true
 
 dyn:
   COMMAND: 'tell: &awww.gaia-minecraft.enjin.com/gallery'
@@ -170,18 +172,25 @@ votegui:
   POSITION-X: 5
   POSITION-Y: 6
 
+events:
+  COMMAND: 'open: events.yml'
+  NAME: '&aÉvénements'
+  LORE:
+    - 'Cliquez ici pour voir'
+    - 'les Événements sur Gaïa !'
+    - ' '
+    - '&lDouble XP'
+    - '&lBrèche'
+  ID: book
+  POSITION-X: 7
+  POSITION-Y: 6
+  
 craft_custom:
   COMMAND: 'open: craft_custom.yml'
   NAME: '&6&oCrafts Spéciaux'
   LORE:
   - '&oRecettes de Crafts'
-  - ' '
-  - '&cAttention :'
-  - '&oVous ne devez &lpas'
-  - '&odéjà avoir l''objet que'
-  - '&ovous craftez dans votre'
-  - '&oinventaire; &lmême'
-  - '&osous une autre forme !'
+  - '&ouniques sur Gaïa.'
   - ' '
   - '&oUtilisation :&l/crafts'
   ID: 58

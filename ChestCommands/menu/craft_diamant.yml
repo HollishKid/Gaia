@@ -102,7 +102,7 @@ diamant_casque:
   - '&e&oCe diamant est'
   - '&e&od''une qualité rare !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 310
   POSITION-X: 4
   POSITION-Y: 2
@@ -204,7 +204,7 @@ diamant_plastron:
   - '&e&oCe diamant est'
   - '&e&od''une qualité rare !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 311
   POSITION-X: 9
   POSITION-Y: 2
@@ -296,7 +296,7 @@ diamant_jambes:
   - '&e&oCe diamant est'
   - '&e&od''une qualité rare !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 312
   POSITION-X: 4
   POSITION-Y: 5
@@ -358,7 +358,7 @@ diamant_pieds:
   - '&e&oCe diamant est'
   - '&e&od''une qualité rare !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 313
   POSITION-X: 9
   POSITION-Y: 5
@@ -428,7 +428,8 @@ blocker9:
   KEEP-OPEN: true
   
 blocker12:
-  NAME: ' '
+  COMMAND: 'open: craft_custom.yml'
+  NAME: '&aRetour aux Crafts'
   ID: '58'
   POSITION-X: 5
   POSITION-Y: 1

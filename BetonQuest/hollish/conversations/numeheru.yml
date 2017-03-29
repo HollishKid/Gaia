@@ -1,0 +1,40 @@
+quester: 'Númeheru'
+first: welcome
+stop: 'false'
+############
+#          #
+#    NPC   #
+#          #
+############
+NPC_options:
+  welcome:
+    text: 'Bonjour, &2%player%&a&o. \nJ''ai entendu parler de votre nomination nouvelle ! \nSoyez le bienvenu au Louvre !'
+    pointers: qui,pourquoi,keske,louvre
+  qui_rep:
+    text: 'Je m''appelle &2Númeheru &a&oet je suis le Fils du &6Roi Kahn&a&o. \nC''est habituellement un Prince qui détient le Château du Louvre.'
+  pourquoi_rep:
+    text: 'Je représente le Gardien de l''Est à Athelas. \nJe maintiens les relations avec la Ville Royale.'
+  keske_rep:
+    text: 'Ce Château est le dernier rempart avant la Forêt de Mirk. \nIl est important de garder les créatures de la Forêt de Mirk au plus loin de nos villes !'
+  louvre_rep:
+    text: 'Le Louvre recrute tout gradé Écuyer ou plus. \nNous cherchons à établir une solide avant-garde d''Athelas ! \nPour contribuer à l''effort, parlez au Gestionnaire qui se situe au rez de chaussée.'
+############
+#          #
+#  JOUEUR  #
+#          #
+############
+player_options:
+  qui:
+    text: 'Qui êtes vous ?'
+    pointers: qui_rep
+  pourquoi:
+    text: 'Pourquoi êtes vous ici ?'
+    pointer: pourquoi_rep
+  keske:
+    text: 'Pourquoi s''éloigner autant d''Athelas ?'
+    pointer: keske_rep
+  louvre:
+    text: 'Pourquoi toutes ces parcelles devant le Château ?'
+    pointer: louvre_rep
+
+

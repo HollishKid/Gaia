@@ -16,7 +16,7 @@ NPC_options:
     pointers: preuve,rentrer,temple,preuve_perdue,magic,fiole,fiole_air,fiole_air_done,aang_baton_done,air_wand_upgrade,rienmerci
   raconter_rep:
     text: 'Je ne sens aucun mensonge en vous... Vous devez dire vrai. Que puis-je pour vous ?'
-    events: tag_aang,journal_findaang_del,tag_moine_air_del
+    events: tag_aang,journal_findaang_del,tag_moine_air_del,air_moine_tempo_del
     pointers: preuve,rentrer,temple,rienmerci
   temple_rep:
     text: 'Cet endroit est vieux comme le monde de Gaïa ... Il flotte grâce à sa Magie, pour le protéger d''eventuels assaillants.'
@@ -69,7 +69,7 @@ NPC_options:
 #                #
 player_options:
   raconter:
-    text: 'J''ai été envoyé ici par l''Erudit de l''Air, il cherche ce temple depuis bien longtemps !'
+    text: 'J''ai été envoyé ici par l''Érudit de l''Air, il cherche ce temple depuis bien longtemps !'
     pointers: raconter_rep
   rienmerci:
     text: 'Rien, merci !'
@@ -77,7 +77,7 @@ player_options:
     text: 'C''est quoi cet endroit ?'
     pointers: temple_rep
   preuve:
-    text: 'Donnez moi quelque chose qui prouve que je sois venu ici pour l''amener à l''Erudit !'
+    text: 'Donnez moi quelque chose qui prouve que je sois venu ici pour l''amener à l''Érudit !'
     conditions: '!livre_air,!airtemple_magic_learning'
     pointers: preuve_rep
   preuve_perdue:
@@ -85,7 +85,7 @@ player_options:
     conditions: 'livre_air,!airtemple_magic_learning'
     pointers: book_give_rep_bis
   book_give:
-    text: 'Avec plaisir, je suis sûr que l''Erudit sera convaincu !'
+    text: 'Avec plaisir, je suis sûr que l''Érudit sera convaincu !'
     pointers: book_give_rep
   rentrer:
     text: 'Comment rentrer à Athelas ?'
@@ -121,7 +121,7 @@ player_options:
     conditions: 'air_wand'
     pointers: air_wand_upgrade_fine
 ##
-# Réponses pour faire apparaître/Configurer la Baguette Magique INFORMATIONAL ONLY, NO USAGE !
+# Réponses pour faire apparaître la Baguette Magique
 ##
   p1:
     text: 'Ilse !'

@@ -12,7 +12,7 @@ casque_cuir:
   - '&e&oCe cuir renforcé'
   - '&e&oest bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Head:
@@ -30,11 +30,11 @@ plastron_cuir:
   - '&e&oCe cuir renforcé'
   - '&e&oest bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Chest:
-      Armor: 4
+      Armor: 3
       Health: 1
   Options:
     Repairable: false
@@ -43,12 +43,12 @@ plastron_cuir:
 jambes_cuir:
   Id: 300
   Data: 0
-  Display: '&aBottes Cuir Tanné'
+  Display: '&aJambières Cuir Tanné'
   Lore:
   - '&e&oCe cuir renforcé'
   - '&e&oest bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Legs:
@@ -66,12 +66,89 @@ pieds_cuir:
   - '&e&oCe cuir renforcé'
   - '&e&oest bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Feet:
       Armor: 2
       Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+epee_cuir:
+  Id: 268
+  Data: 0
+  Display: '&aÉpée Cuir Tanné'
+  Lore:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 6
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:1
+hache_cuir:
+  Id: 271
+  Data: 0
+  Display: '&aHache Cuir Tanné'
+  Lore:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 9
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:1
+  - DIG_SPEED:1
+pioche_cuir:
+  Id: 270
+  Data: 0
+  Display: '&aPioche Cuir Tanné'
+  Lore:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:1
+pelle_cuir:
+  Id: 269
+  Data: 0
+  Display: '&aPelle Cuir Tanné'
+  Lore:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:1
+houe_cuir:
+  Id: 290
+  Data: 0
+  Display: '&aHoue Cuir Tanné'
+  Lore:
+  - '&e&oCe cuir renforcé'
+  - '&e&oest bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
   Options:
     Repairable: false
   Enchantments:
@@ -90,7 +167,7 @@ casque_maille:
   - '&e&oCes mailles renforcées'
   - '&e&osont bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Head:
@@ -108,11 +185,11 @@ plastron_maille:
   - '&e&oCes mailles renforcées'
   - '&e&osont bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Chest:
-      Armor: 6
+      Armor: 4
       Health: 1
   Options:
     Repairable: false
@@ -126,11 +203,11 @@ jambes_maille:
   - '&e&oCes mailles renforcées'
   - '&e&osont bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Legs:
-      Armor: 5
+      Armor: 4
       Health: 1
   Options:
     Repairable: false
@@ -144,12 +221,89 @@ pieds_maille:
   - '&e&oCes mailles renforcées'
   - '&e&osont bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Feet:
       Armor: 2
       Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+epee_maille:
+  Id: 272
+  Data: 0
+  Display: '&aEpée en Mailles'
+  Lore:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'  
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 7
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:1
+hache_maille:
+  Id: 275
+  Data: 0
+  Display: '&aHache en Mailles'
+  Lore:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'  
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 11
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:1
+  - DIG_SPEED:1
+pioche_maille:
+  Id: 274
+  Data: 0
+  Display: '&aPioche en Mailles'
+  Lore:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'  
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:1
+pelle_maille:
+  Id: 273
+  Data: 0
+  Display: '&aPelle en Mailles'
+  Lore:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'  
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:1
+houe_maille:
+  Id: 291
+  Data: 0
+  Display: '&aHoue en Mailles'
+  Lore:
+  - '&e&oCes mailles renforcées'
+  - '&e&osont bien plus robuste !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'  
+  Amount: 1
   Options:
     Repairable: false
   Enchantments:
@@ -168,7 +322,7 @@ casque_fer:
   - '&e&oCe fer forgé'
   - '&e&oest très dense !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Head:
@@ -186,11 +340,11 @@ plastron_fer:
   - '&e&oCe fer forgé'
   - '&e&oest très dense !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Chest:
-      Armor: 7
+      Armor: 5
       Health: 1
   Options:
     Repairable: false
@@ -204,11 +358,11 @@ jambes_fer:
   - '&e&oCe fer forgé'
   - '&e&oest très dense !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   Amount: 1
   Attributes:
     Legs:
-      Armor: 6
+      Armor: 5
       Health: 1
   Options:
     Repairable: false
@@ -222,12 +376,89 @@ pieds_fer:
   - '&e&oCe fer forgé'
   - '&e&oest très dense !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Feet:
       Armor: 3
       Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+epee_fer:
+  Id: 267
+  Data: 0
+  Display: '&aÉpée Fer Forgé'
+  Lore:
+  - '&e&oCe fer forgé'
+  - '&e&oest très dense !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 8
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:1
+hache_fer:
+  Id: 258
+  Data: 0
+  Display: '&aHache Fer Forgé'
+  Lore:
+  - '&e&oCe fer forgé'
+  - '&e&oest très dense !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 11
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:1
+  - DIG_SPEED:1
+pioche_fer:
+  Id: 257
+  Data: 0
+  Display: '&aPioche Fer Forgé'
+  Lore:
+  - '&e&oCe fer forgé'
+  - '&e&oest très dense !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun' 
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:1
+pelle_fer:
+  Id: 256
+  Data: 0
+  Display: '&aPelle Fer Forgé'
+  Lore:
+  - '&e&oCe fer forgé'
+  - '&e&oest très dense !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun' 
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:1
+houe_fer:
+  Id: 292
+  Data: 0
+  Display: '&aHoue Fer Forgé'
+  Lore:
+  - '&e&oCe fer forgé'
+  - '&e&oest très dense !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun' 
+  Amount: 1
   Options:
     Repairable: false
   Enchantments:
@@ -246,7 +477,7 @@ casque_or:
   - '&e&oCet or est'
   - '&e&ojoliment travaillé !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Head:
@@ -264,7 +495,7 @@ plastron_or:
   - '&e&oCet or est'
   - '&e&ojoliment travaillé !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Chest:
@@ -282,7 +513,7 @@ jambes_or:
   - '&e&oCet or est'
   - '&e&ojoliment travaillé !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Legs:
@@ -300,12 +531,89 @@ pieds_or:
   - '&e&oCet or est'
   - '&e&ojoliment travaillé !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Feet:
       Armor: 2
       Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+epee_or:
+  Id: 283
+  Data: 0
+  Display: '&aÉpée Or Décoré'
+  Lore:
+  - '&e&oCet or est'
+  - '&e&ojoliment travaillé !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 6
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:1
+hache_or:
+  Id: 286
+  Data: 0
+  Display: '&aHache Or Décoré'
+  Lore:
+  - '&e&oCet or est'
+  - '&e&ojoliment travaillé !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 9
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:1
+  - DIG_SPEED:1
+pioche_or:
+  Id: 285
+  Data: 0
+  Display: '&aPioche Or Décoré'
+  Lore:
+  - '&e&oCet or est'
+  - '&e&ojoliment travaillé !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:1
+pelle_or:
+  Id: 284
+  Data: 0
+  Display: '&aPelle Or Décoré'
+  Lore:
+  - '&e&oCet or est'
+  - '&e&ojoliment travaillé !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:1
+houe_or:
+  Id: 294
+  Data: 0
+  Display: '&aHoue Or Décoré'
+  Lore:
+  - '&e&oCet or est'
+  - '&e&ojoliment travaillé !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
   Options:
     Repairable: false
   Enchantments:
@@ -324,7 +632,7 @@ casque_diamant:
   - '&e&oCe diamant est'
   - '&e&od''une qualité rare !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Head:
@@ -342,11 +650,11 @@ plastron_diamant:
   - '&e&oCe diamant est'
   - '&e&od''une qualité rare !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Chest:
-      Armor: 9
+      Armor: 7
       Health: 1
   Options:
     Repairable: false
@@ -360,11 +668,11 @@ jambes_diamant:
   - '&e&oCe diamant est'
   - '&e&od''une qualité rare !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Legs:
-      Armor: 7
+      Armor: 6
       Health: 1
   Options:
     Repairable: false
@@ -378,7 +686,7 @@ pieds_diamant:
   - '&e&oCe diamant est'
   - '&e&od''une qualité rare !'
   - ' '
-  - '&7&oRareté : &aCommun'  
+  - '&7&oRareté : &aNon-Commun'  
   Amount: 1
   Attributes:
     Feet:
@@ -388,3 +696,570 @@ pieds_diamant:
     Repairable: false
   Enchantments:
   - DURABILITY:1
+epee_diamant:
+  Id: 276
+  Data: 0
+  Display: '&aÉpée Diamant Noble'
+  Lore:
+  - '&e&oCe diamant est'
+  - '&e&od''une qualité rare !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 9
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:1
+hache_diamant:
+  Id: 279
+  Data: 0
+  Display: '&aHache Diamant Noble'
+  Lore:
+  - '&e&oCe diamant est'
+  - '&e&od''une qualité rare !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 11
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:1
+pioche_diamant:
+  Id: 278
+  Data: 0
+  Display: '&aPioche Diamant Noble'
+  Lore:
+  - '&e&oCe diamant est'
+  - '&e&od''une qualité rare !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:1
+pelle_diamant:
+  Id: 277
+  Data: 0
+  Display: '&aPelle Diamant Noble'
+  Lore:
+  - '&e&oCe diamant est'
+  - '&e&od''une qualité rare !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:1
+houe_diamant:
+  Id: 293
+  Data: 0
+  Display: '&aHoue Diamant Noble'
+  Lore:
+  - '&e&oCe diamant est'
+  - '&e&od''une qualité rare !'
+  - ' '
+  - '&7&oRareté : &aNon-Commun'
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:1
+#
+#
+#
+#  FER VOLCANIQUE
+#
+#
+casque_fer_volcanique:
+  Id: 306
+  Data: 0
+  Display: '&9Casque Fer Volcanique'
+  Lore:
+  - '&e&oCe Fer provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 5
+      Health: 2
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:2
+  - PROTECTION_FIRE:2
+plastron_fer_volcanique:
+  Id: 307
+  Data: 0
+  Display: '&9Plastron Fer Volcanique'
+  Lore:
+  - '&e&oCe Fer provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 7
+      Health: 3
+  Options:
+    Repairable: false
+  Enchantments:
+   - DURABILITY:2
+   - PROTECTION_FIRE:2
+jambes_fer_volcanique:
+  Id: 308
+  Data: 0
+  Display: '&9Jambières Fer Volcanique'
+  Lore:
+  - '&e&oCe Fer provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 6
+      Health: 3
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:2
+  - PROTECTION_FIRE:2
+pieds_fer_volcanique:
+  Id: 309
+  Data: 0
+  Display: '&9Bottes Fer Volcanique'
+  Lore:
+  - '&e&oCe Fer provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 4
+      Health: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:2
+  - PROTECTION_FIRE:2
+epee_fer_volcanique:
+  Id: 267
+  Data: 0
+  Display: '&9Epée Fer Volcanique'
+  Lore:
+  - '&e&oCe Fer provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 14
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:2
+  - FIRE_ASPECT:1
+hache_fer_volcanique:
+  Id: 258
+  Data: 0
+  Display: '&9Hache Fer Volcanique'
+  Lore:
+  - '&e&oCe Fer provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 17
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:2
+  - FIRE_ASPECT:1
+  - DIG_SPEED:1
+pioche_fer_volcanique:
+  Id: 257
+  Data: 0
+  Display: '&9Pioche Fer Volcanique'
+  Lore:
+  - '&e&oCe Fer provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:3
+pelle_fer_volcanique:
+  Id: 256
+  Data: 0
+  Display: '&9Pelle Fer Volcanique'
+  Lore:
+  - '&e&oCe Fer provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:3
+houe_fer_volcanique:
+  Id: 292
+  Data: 0
+  Display: '&9Houe Fer Volcanique'
+  Lore:
+  - '&e&oCe Fer provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:3
+#
+#
+#
+#  OR VOLCANIQUE
+#
+#
+casque_or_volcanique:
+  Id: 314
+  Data: 0
+  Display: '&9Casque Or Volcanique'
+  Lore:
+  - '&e&oCet Or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 4
+      Health: 3
+  Options:
+    Repairable: false
+    KnockbackResistance: 1%
+  Enchantments:
+  - DURABILITY:2
+  - PROTECTION_FIRE:2
+plastron_or_volcanique:
+  Id: 315
+  Data: 0
+  Display: '&9Plastron Or Volcanique'
+  Lore:
+  - '&e&oCet Or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 6
+      Health: 3
+  Options:
+    Repairable: false
+    KnockbackResistance: 1%
+  Enchantments:
+   - DURABILITY:2
+   - PROTECTION_FIRE:2
+jambes_or_volcanique:
+  Id: 316
+  Data: 0
+  Display: '&9Jambières Or Volcanique'
+  Lore:
+  - '&e&oCet Or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 4
+      Health: 3
+  Options:
+    Repairable: false
+    KnockbackResistance: 1%
+  Enchantments:
+  - DURABILITY:2
+  - PROTECTION_FIRE:2
+pieds_or_volcanique:
+  Id: 317
+  Data: 0
+  Display: '&9Bottes Or Volcanique'
+  Lore:
+  - '&e&oCet Or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 3
+      Health: 2
+  Options:
+    Repairable: false
+    KnockbackResistance: 1%
+  Enchantments:
+  - DURABILITY:2
+  - PROTECTION_FIRE:2
+epee_or_volcanique:
+  Id: 283
+  Data: 0
+  Display: '&9Epée Or Volcanique'
+  Lore:
+  - '&e&oCet Or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 12
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:2
+  - FIRE_ASPECT:1
+hache_or_volcanique:
+  Id: 286
+  Data: 0
+  Display: '&9Hache Or Volcanique'
+  Lore:
+  - '&e&oCet Or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 15
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:2
+  - FIRE_ASPECT:1
+  - DIG_SPEED:1
+pioche_or_volcanique:
+  Id: 285
+  Data: 0
+  Display: '&9Pioche Or Volcanique'
+  Lore:
+  - '&e&oCet Or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:3
+pelle_or_volcanique:
+  Id: 284
+  Data: 0
+  Display: '&9Pelle Or Volcanique'
+  Lore:
+  - '&e&oCet Or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:3
+houe_or_volcanique:
+  Id: 294
+  Data: 0
+  Display: '&9Houe Or Volcanique'
+  Lore:
+  - '&e&oCet Or provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:3
+#
+#
+#
+#  DIAMANT VOLCANIQUE
+#
+#
+casque_diamant_volcanique:
+  Id: 310
+  Data: 0
+  Display: '&9Casque Diamant Volcanique'
+  Lore:
+  - '&e&oCe Diamant provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 5
+      Health: 3
+  Options:
+    Repairable: false
+    KnockbackResistance: 2%
+  Enchantments:
+  - DURABILITY:2
+  - PROTECTION_FIRE:2
+plastron_diamant_volcanique:
+  Id: 311
+  Data: 0
+  Display: '&9Plastron Diamant Volcanique'
+  Lore:
+  - '&e&oCe Diamant provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 9
+      Health: 4
+  Options:
+    Repairable: false
+    KnockbackResistance: 2%
+  Enchantments:
+   - DURABILITY:2
+   - PROTECTION_FIRE:2
+jambes_diamant_volcanique:
+  Id: 312
+  Data: 0
+  Display: '&9Jambières Diamant Volcanique'
+  Lore:
+  - '&e&oCe Diamant provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 7
+      Health: 3
+  Options:
+    Repairable: false
+    KnockbackResistance: 2%
+  Enchantments:
+  - DURABILITY:2
+  - PROTECTION_FIRE:2
+pieds_diamant_volcanique:
+  Id: 313
+  Data: 0
+  Display: '&9Bottes Diamant Volcanique'
+  Lore:
+  - '&e&oCe Diamant provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 5
+      Health: 3
+  Options:
+    Repairable: false
+    KnockbackResistance: 2%
+  Enchantments:
+  - DURABILITY:2
+  - PROTECTION_FIRE:2
+epee_diamant_volcanique:
+  Id: 276
+  Data: 0
+  Display: '&9Epée Diamant Volcanique'
+  Lore:
+  - '&e&oCe Diamant provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 15
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:2
+  - FIRE_ASPECT:1
+hache_diamant_volcanique:
+  Id: 279
+  Data: 0
+  Display: '&9Hache Diamant Volcanique'
+  Lore:
+  - '&e&oCe Diamant provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 17
+  Options:
+    Repairable: false
+  Enchantments:
+  - DAMAGE_ALL:2
+  - FIRE_ASPECT:1
+  - DIG_SPEED:1
+pioche_diamant_volcanique:
+  Id: 278
+  Data: 0
+  Display: '&9Pioche Diamant Volcanique'
+  Lore:
+  - '&e&oCe Diamant provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare' 
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:3
+pelle_diamant_volcanique:
+  Id: 277
+  Data: 0
+  Display: '&9Pelle Diamant Volcanique'
+  Lore:
+  - '&e&oCe Diamant provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare' 
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DIG_SPEED:3
+houe_diamant_volcanique:
+  Id: 293
+  Data: 0
+  Display: '&9Houe Diamant Volcanique'
+  Lore:
+  - '&e&oCe Diamant provient'
+  - '&e&od''un volcan actif.'
+  - ' '
+  - '&7&oRareté : &9Rare' 
+  Amount: 1
+  Options:
+    Repairable: false
+  Enchantments:
+  - DURABILITY:3

@@ -21,7 +21,7 @@ NPC_options:
     text: 'Je suis un des 4 &3Érudits &a&odu &dSanctuaire &a&o. Je suis &dÉrudit &a&ode l''Eau.'
     pointers: comment,autres
   keske_rep:
-    text: 'Cet endroit est consacré à la recherche sur l''Eau en tant qu''élément. J''y fais mes recherches, j''y enseigne et j''y vis. Mon rôle est aussi d''enseigner les &3Minions.'
+    text: 'Cet endroit est consacré à la recherche sur l''Eau en tant qu''élément. J''y fais mes recherches, j''y enseigne et j''y vis. Mon rôle est aussi d''enseigner les &dMinions&a&o.'
     pointers: minions
   comment_rep:
     text: 'Cela veut dire que mes recherches portent sur l''Eau en tant qu''élément consituant de notre monde. Plus particulièrement la Magie qui y est associée...'

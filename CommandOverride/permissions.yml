@@ -13,3 +13,9 @@
 /plugins:
   permission: permission.plugins
   message: '&4You do not have permission for this Command'
+/louer:
+  permission: worldguard.*
+  message: '&4Réservé aux Admins'
+/gaiapurge:
+  permission: essentials.vanish
+  message: '&4Réservé aux Admins'

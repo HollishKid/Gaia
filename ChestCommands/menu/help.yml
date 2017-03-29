@@ -127,12 +127,11 @@ changepassword:
   NAME: '&2&lChanger de Mot de Passe'
   LORE:
     - 'Modifiez votre mot de passe.'
-    - 'sur la pancarte qui apparaît:'
     - ' '
     - '&aCommande pour changer votre'
     - '&avotre mot de passe :'
     - ' '
-    - '&2/changermdp [ancienmdp] [nouveaumdp]'
+    - '&2/modifiermdp [ancienmdp] [nouveaumdp]'
   ID: map
   POSITION-X: 1
   POSITION-Y: 2 

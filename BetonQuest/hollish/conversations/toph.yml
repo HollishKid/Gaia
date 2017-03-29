@@ -1,0 +1,119 @@
+quester: 'Aang'
+first: welcome,welcomebis
+stop: 'false'
+#                #
+
+#  Options NPC   #
+
+#                #
+NPC_options:
+  welcome:
+    text: 'Un visiteur... ici ?!'
+    conditions: '!tag_toph'
+    pointers: raconter
+  welcomebis:
+    text: 'Que puis-je pour vous ?'
+    conditions: 'tag_toph'
+    pointers: preuve,rentrer,temple,preuve_perdue,magic,earth_wand_upgrade,rienmerci
+  raconter_rep:
+    text: 'Érudit de la Terre tu dis... \nNous ne communiquons pas avec le monde extérieur, donc ça ne me dit rien ! \nQue puis-je faire pour toi ?'
+    pointers: preuve,rentrer,temple,rienmerci
+  temple_rep:
+    text: 'Cet endroit est vieux comme le monde de Gaïa... \nIl a été incrusté dans la Terre, pour le protéger de regards indiscrets et être au plus proche de l''élément qu''il représente.'
+  preuve_rep:
+    text: 'Je vais vous donner le livre regroupant tous les sorts qui nous sont connus. \nCa devrait impressionner votre Érudit !'
+    events: livre_earth_give,journal_livre_earth_found,tag_toph,journal_terre_emerald_del
+  book_give_rep_bis:
+    text: 'En voilà un exemplaire. \nNe négligez jamais un objet Magique !'
+    events: livre_earth_give
+  rentrer_rep:
+    text: 'Vous devriez utiliser les Arbres, il y en a un dans la crevasse du temple et un dans la ville que vous appelez Athelas. \nGrâce à leur réseau de racines et un peu de magie, ils permettent de voyager rapidement.'
+#
+# Wand & Magic Learning
+#
+  magic_rep:
+    text: 'Je serais ravi d''être votre Maître de la Terre. \nIl vous faut d''abord une &dBaguette de la Terre&a&o. Pour en invoquer une, il va falloir des fioles avec les ingrédients et un Bâton. \nCommence par fabriquer 7 fioles et amènes les moi.'
+#    events: obj_milo_fiole,journal_milo_fiole,tag_milo_fiole
+  fiole_rep:
+    text: 'Elle fera l''affaire. Il te faut caputrer de l''air particulier, pour avoir assez de puissance, il te faut de l''air du continent de l''Est. \nVas-y et clique droit sur ta fiole pour en capturer !'
+    events: journal_milo_fiole_del,journal_milo_air_capture,obj_air_catcher,tag_remove_fiole
+  fiole_air_rep:
+    text: 'Je vois ça, agitée cette fiole n''est-ce pas ? Maintenant que tu as ça, il suffit d''apprendre à canaliser son énergie. \nRends toi au &dSpiritualium &a&odu &2Moine Ardere&a&o, au Nord de la ville que vous appellez &dAthelas&a&o.'
+    events: journal_milo_air_capture_del,journal_milo_ardere,tag_milo_ardere,milo_fiole1_remove
+  fiole_air_done_rep:
+    text: 'Très bien ! Il faut maintenant un contenant pour recevoir cette énergie ! \nTailles un un bâton d''un arbre de ton choix et je t''aiderais pour faire la fusion de l''énergie pour en faire une Baguette de l''Air !'
+    events: tag_ardere_aang_del,aang_baton_obj,journal_aang_baton,journal_fiole_for_wand_del
+  aang_baton_done_rep:
+    text: 'Excellent ! J''espère que tu te souviens du mot pour faire apparaître une Baguette ?'
+    conditions: 'ingredients_air_wand'
+    pointers: p1,p2,p3,p4,p5
+  aang_baton_done_rep_not:
+    text: 'Pour faire apparaître la Baguette Magique tu dois avoir la Fiole d''Air calmée, un Bâton ET un espace de libre dans ton inventaire.'
+    conditions: '!ingredients_air_wand'
+  faux:
+    text: 'Il semblerait que vous vous soyez trompé dans le mot d''apparition...'
+  air_wand:
+    text: 'Parfait ! Voici votre Baguette de l''Air ! \nPour pouvoir l''améliorer, n''hésitez pas à me demander !'
+    events: air_wand_give,journal_aang_baton_del
+  air_wand_upgrade_fine:
+    text: 'Aucun souci, regardez ce que vous pouvez en faire !'
+    events: air_wand_menu
+#                #
+
+# Options Joueur #
+
+#                #
+player_options:
+  raconter:
+    text: 'J''ai été envoyé ici par l''Érudit de la Terre, à la recherche de ce temple...'
+    pointers: raconter_rep
+  rienmerci:
+    text: 'Rien, merci !'
+  temple:
+    text: 'C''est quoi cet endroit ?'
+    pointers: temple_rep
+  preuve:
+    text: 'Donnez moi quelque chose qui prouve que je sois venu ici pour l''amener à l''Érudit !'
+    conditions: '!tag_toph'
+    pointers: preuve_rep
+  preuve_perdue:
+    text: 'J''ai perdu le livre de sorts que vous m''avez donné !'
+    conditions: 'tag_toph,!earthtemple_magic_learning'
+    pointer: book_give_rep_bis
+  rentrer:
+    text: 'Comment rentrer à Athelas ?'
+    pointers: rentrer_rep
+#
+# Wand & Magic Learning
+#
+  magic:
+    text: 'Pouvez vous m''en apprendre plus sur la Magie de l''Air ?'
+    conditions: 'airtemple_magic_learning'
+    pointers: magic_rep
+
+    
+#
+#
+#
+  earth_wand_upgrade:
+    text: 'Je voudrais améliorer ma Baguette d''Air.'
+    conditions: 'air_wand'
+    pointers: air_wand_upgrade_fine
+##
+# Réponses pour faire apparaître la Baguette Magique
+##
+  p1:
+    text: 'Ilse !'
+    pointers: faux
+  p2:
+    text: 'Ilcë !'
+    pointers: air_wand
+  p3:
+    text: 'Elz !'
+    pointers: faux
+  p4:
+    text: 'Elce !'
+    pointers: faux
+  p5:
+    text: 'Oz !'
+    pointers: faux

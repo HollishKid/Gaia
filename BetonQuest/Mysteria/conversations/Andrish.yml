@@ -1,0 +1,32 @@
+quester: 'Andrish'
+first: welcome,welcomebis
+stop: 'false'
+#   Options   #
+
+#     NPC     #
+NPC_options:
+  welcome:
+    text: 'Bonjour à toi Citoyen ! Comment se passe ta journée ?'
+  welcomebis:
+    text: 'Bien le bonjour Citoy... Oh ! Désolé, je n''avais pas vu que vous étiez un Ecuyer !'
+    conditions: 'default.grade_ecuyer'
+    pointers: bonjour
+  rep_andr:
+    text: 'Hum... Je vois donc ce qui vous amène ici ! J''ai justement quelques problèmes ces temps-ci, pourriez-vous vous en occuper ?'
+    pointers: quest_andr
+  quest_andr_rep:
+    text: 'Il y a un marchand du nom de Kendan qui me doit de l''argent depuis longtemps, pourriez-vous aller lui demander "gentillement" le remboursement qu''il me doit ?'
+    pointers: quest_andr_acc
+#   Options   #
+
+#    Joueur   #
+player_options:
+  bonjour:
+    text: 'Ce n''est pas grave, mais merci de votre accueil ! Le Lieutenant Hashor m''envoie vous voir !'
+    pointers: rep_andr
+  quest_andr:
+    text: 'Ce ne serait pas un soucis pour moi de vous aider, avez vous de plus amples informations ?'
+    pointers: quest_andr_rep
+  quest_andr_acc:
+    text: 'Aucun problème je m''en charge !'
+    events: andr_qE1

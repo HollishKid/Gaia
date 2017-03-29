@@ -10,7 +10,7 @@
 #                 By Hollish
 #
 #
-################################################################### THIS IS A MESSAGE FOR SPARADRA59
+###################################################################
 nothing: tag del inexistent_tag
 #
 quest_point_1: folder default.quest_point_1
@@ -297,19 +297,21 @@ varkopack_done: folder tag_burried_gros_os_del,journal_francois2_del,Zedd.var_q2
 #
 #
 #
-# Erudits
+# Érudits
 #
 #
 #############################################
 journal_erudits: journal add journal_erudits
 journal_erudits_del: journal del journal_erudits
+#
+#
+# Érudit de l'Air
+#
+#
 tag_erudit_book: tag add erudit_book
 book_erudit: objective start book_erudit
 book_erudit_journal: journal add book_erudit
 book_erudit_journal_remove: journal del book_erudit
-#
-# Erudit de l'Air
-#
 journal_erudit_airtemple: journal add journal_erudit_airtemple
 journal_erudit_airtemple_del: journal del journal_erudit_airtemple
 journal_ermite_tarte: journal add journal_ermite_tarte
@@ -410,19 +412,21 @@ teleport_chute: teleport -2909;64;2860;Gaia
 water_access_on: setblock AIR -2906;185;2865;Gaia
 water_access_off: setblock DIRT -2906;185;2865;Gaia
 #
-air_mill_attained: folder ermite3_despawn,ermite_boat2_off,water_access_off,obj_distance_air_temple delay:0
+air_mill_attained: folder ermite3_despawn,ermite_boat2_off,water_access_off,air_moine_tempo delay:0
 #
 # Parcours
 #
+air_moine_tempo: tag add air_moine_tempo
+air_moine_tempo_del: tag del air_moine_tempo
 tag_moine_air: tag add moine_air
 tag_moine_air_del: tag del moine_air
-air_mill_begin: folder title_airmill1,title_airmill2,title_airmill3,air_temple1_on,obj_air_temple_loc1,obj_air_temple_loc2,obj_air_temple_loc3,obj_air_temple_loc4,obj_air_temple_loc5,obj_distance_air_temple,journal_findaang,journal_obj_airmill_del,tag_moine_air delay:0
+air_mill_begin: folder title_airmill1,title_airmill2,title_airmill3,air_temple1_on,obj_air_temple_loc1,obj_air_temple_loc2,obj_air_temple_loc3,obj_air_temple_loc4,obj_air_temple_loc5,journal_findaang,journal_obj_airmill_del,tag_moine_air delay:0 condition:tag_moine_air
 air_meka1: folder air_temple1_off,air_temple2_on delay:1
 air_meka2: folder air_temple2_off,air_temple3_on delay:2
 air_meka3: folder air_temple3_off,air_temple4_on delay:2
 air_meka4: folder air_temple4_off delay:2
-air_meka5: folder air_temple_attained,title_airmill1,title_airmill2,title_airmill3 delay:1
-air_temple_attained: 'message &aVous arrivez sur l''île la plus grande. Essayez de retrouver Aang.'
+air_meka5: folder air_temple_attained,title_airmill1,title_airmill2,title_airmill3,air_temple4_off delay:1
+air_temple_attained: 'message &d&oVous arrivez sur l''île la plus grande. Essayez de retrouver &2Aang&d&o.'
 #
 title_airmill1: 'command title %player% times 20 100 20'
 title_airmill2: 'command title %player% subtitle {"text":"Trouver Aang","italic":true,"color":"gold"}'
@@ -432,16 +436,14 @@ obj_air_temple_loc2: objective start obj_air_temple_loc2
 obj_air_temple_loc3: objective start obj_air_temple_loc3
 obj_air_temple_loc4: objective start obj_air_temple_loc4
 obj_air_temple_loc5: objective start obj_air_temple_loc5
-obj_distance_air_temple: objective start obj_distance_air_temple
 #
 # LOSE
 #
-air_temple_lose: folder tag_moine_air_del,air_temple_lose_teleport,air_temple_lose_message,tag_air_temple_loser,obj_distance_air_temple_remove,obj_air_temple_loc1_remove,obj_air_temple_loc2_remove,obj_air_temple_loc3_remove,obj_air_temple_loc4_remove,obj_air_temple_loc5_remove,air_temple_closer_test delay:2
-air_temple_closer_test: folder air_temple_closer_test_executor,obj_distance_air_temple_remove delay:5
+air_temple_lose: folder air_moine_tempo_del,tag_moine_air_del,air_temple_lose_teleport,air_temple_lose_message,tag_air_temple_loser,obj_air_temple_loc1_remove,obj_air_temple_loc2_remove,obj_air_temple_loc3_remove,obj_air_temple_loc4_remove,obj_air_temple_loc5_remove,air_temple_closer_test delay:2 condition:air_moine_tempo
+air_temple_closer_test: folder air_temple_closer_test_executor delay:5
 air_temple_closer_test_executor: if air_parcours_occupied nothing else air_temple_closer_test_exe
 air_temple_closer_test_exe: folder air_temple1_off,air_temple2_off,air_temple3_off,air_temple4_off
 tag_air_temple_loser: tag add air_temple_loser
-obj_distance_air_temple_remove: objective delete obj_distance_air_temple
 obj_air_temple_loc1_remove: objective delete obj_air_temple_loc1
 obj_air_temple_loc2_remove: objective delete obj_air_temple_loc2
 obj_air_temple_loc3_remove: objective delete obj_air_temple_loc3
@@ -526,10 +528,101 @@ tag_air_wand: tag add air_wand
 give_air_wand: 'command wandp %player% airbender'
 #
 #
+# Érudit de la Terre
+#
+#
+journal_terre_find: journal add journal_terre_find
+journal_terre_find_del: journal del journal_terre_find
+journal_terre_found: journal add journal_terre_found
+journal_terre_found_del: journal del journal_terre_found
+journal_terre_orno: journal add journal_terre_orno
+journal_terre_orno_del: journal del journal_terre_orno_del
+journal_terre_orno_done: journal add journal_terre_orno_done
+journal_terre_orno_done_del: journal del journal_terre_orno_done
+journal_terre_ingor: journal add journal_terre_ingor
+journal_terre_ingor_del: journal del journal_terre_ingor
+journal_terre_emerald: journal add journal_terre_emerald
+journal_terre_emerald_del: journal del journal_terre_emerald
+#
+tag_erudit_terre: tag add erudit_terre
+#
+erudit_terre_instruction_nord: folder terre_instruc1,terre_instruc_meka1
+terre_instruc_meka1: folder terre_instruc_meka2,terre_instruc2 delay:7
+terre_instruc_meka2: folder terre_instruc_meka3,terre_instruc3 delay:7
+terre_instruc_meka3: folder terre_instruc_meka4,terre_instruc4 delay:5
+terre_instruc_meka4: folder terre_instruc_meka5,terre_instruc5 delay:5
+terre_instruc_meka5: folder terre_instruc6,journal_terre_find,tag_terre_find,obj_terre_find,pierre_terre delay:5
+terre_instruc1: 'message &a&oLa localisation du Temple de la Terre est encore incertaine de nos jours.'
+terre_instruc2: 'message &a&oD''après mes recherches, ce temple se situe dans le Grand Nord.'
+terre_instruc3: 'message &a&oMalheureusement, cette vaste contrée est occupée par des hordes de Goblins.'
+terre_instruc4: 'message &a&oLes Nains d''Ingor ont donc bloqué l''accès par précaution.'
+terre_instruc5: 'message &a&oSi ce n''est pas déjà le cas, vous devriez voir si vous pouvez trouver un moyen de passer au Nord par Ingor.'
+terre_instruc6: 'message &a&oUne fois au Nord utilisez cette Pierre de Terre, elle permet de détecter la distance à une forme de Magie de la Terre.'
+#
+tag_terre_find: tag add terre_find
+tag_terre_find_del: tag del terre_find
+obj_terre_find: objective start terre_find
+pierre_terre: give pierre_terre
+pierre_terre_take: take pierre_terre
+#
+terre_find_exe: folder obj_terre_find_delayed,obj_terre_sudo
+obj_terre_find_delayed: folder obj_terre_find delay:3
+obj_terre_sudo: sudo thisisatopsecreteruditterrelocationcommand
+earth_temple_fall: folder earth_temple_fall1,earth_temple_fall2
+earth_temple_fall1: teleport -7411;64;360;Gaia
+earth_temple_fall2: 'message &d&oUne Force s''empare de vous...'
+#
+pierre_perdu_give: folder pierre_perdu_give1,pierre_terre
+pierre_perdu_give1: 'message &2Érudit &f: &a&oPrenez en soin cette fois !'
+#
+folder_borne_found: folder tag_terre_find_del,tag_terre_found,mess_terre_found,journal_terre_find_del,journal_terre_found,pierre_terre_take
+tag_terre_found: tag add terre_found
+tag_terre_found_del: tag del terre_found
+mess_terre_found: 'message Je devrais aller la dire à l''Érudit de la Terre.'
+#
+folder_earth_orno: folder tag_terre_found_del,journal_terre_found_del,tag_terre_orno,journal_terre_orno
+tag_terre_orno: tag add terre_orno
+tag_terre_orno_del: tag del terre_orno
+folder_terre_orno_done: folder tag_terre_orno_del,journal_terre_orno_del,tag_terre_orno_done,journal_terre_orno_done
+tag_terre_orno_done: tag add terre_orno_done
+tag_terre_orno_done_del: tag del terre_orno_done
+folder_terre_ingor: folder tag_terre_orno_done_del,journal_terre_orno_done_del,tag_terre_ingor,journal_terre_ingor
+tag_terre_ingor: tag add tag_terre_ingor
+tag_terre_ingor_del: tag del tag_terre_ingor
+folder_terre_ingor_done: folder journal_terre_ingor_del,tag_terre_ingor_del,give_enchanted_emerald,tag_earth_passage,journal_terre_emerald delay:7
+tag_earth_passage: tag add earth_passage
+give_enchanted_emerald: give emerald_volcano_ench
+#
+# Earth Temple Passage & Tree
+#
+earth_passage_checking: if earth_passage nothing else earth_temple_fall
+#
+earth_passage: folder earth_pass_open_exe,earth_time delay:0
+earth_time: folder earth_pass_check delay:17
+earth_pass_check: if earth_pass_check earth_time else earth_pass_close_exe
+earth_pass_open_exe: setblock REDSTONE_TORCH_ON -7377;41;283;Gaia
+earth_pass_close_exe: setblock AIR -7377;41;283;Gaia
+#
+#
+# Toph
+#
+#
+journal_livre_earth_found: journal add journal_livre_earth_found
+journal_livre_earth_found_del: journal del journal_livre_earth_found
+journal_earthtemple_magic_learning: journal add journal_earthtemple_magic_learning
+journal_earthtemple_magic_learning_del: journal del journal_earthtemple_magic_learning
+#
+tag_toph: tag add toph
+earthtemple_magic_learning: tag add earthtemple_magic_learning
+livre_earth_give: 'command mgive %player% book:earthbending'
+earth_reward: point default.spirituality 30
+earth_reward_mess: 'message &dVous gagnez &a&l30 &dpoints de Spiritualité !'
+#
+#
+#
 #
 #
 tag_erudit_eau: tag add erudit_eau
-tag_erudit_terre: tag add erudit_terre
 tag_erudit_feu: tag add erudit_feu
 #
 #
@@ -623,7 +716,7 @@ manaup_air_exe3: 'command wandp %player% configure xp_max %point.air_mana.amount
 manaup_air_exe4: folder manaup_air_exe5 delay:1
 manaup_air_exe5: point default.spirituality -100
 #
-manaregenup_air: if spirituality250 regenup_air1 else no_spirit
+manaregenup_air: if spirituality100 regenup_air1 else no_spirit
 regenup_air1: if wand_air regenup_air2 else no_wand_hand_air
 regenup_air2: if !air_mana_regen_20 regenup_air_exe else too_much_mana
 regenup_air_exe: folder regenup_air_exe1,regenup_air_exe2
@@ -631,81 +724,81 @@ regenup_air_exe1: point air_mana_regen 1
 regenup_air_exe2: folder regenup_air_exe3,regenup_air_exe4 delay:1
 regenup_air_exe3: 'command wandp %player% configure xp_regeneration %point.air_mana_regen.amount%'
 regenup_air_exe4: folder regenup_air_exe5 delay:1
-regenup_air_exe5: point default.spirituality -250
+regenup_air_exe5: point default.spirituality -100
 #
 # Air Wand
 #
 air_airblast: if air_airblast spell_have else air_airblast1
 air_airblast1: if wand_air air_airblast2 else no_wand_hand_air
-air_airblast2: if spirituality2000 air_airblast_exe else no_spirit
+air_airblast2: if spirituality200 air_airblast_exe else no_spirit
 air_airblast_exe: folder air_airblast_exe1,air_airblast_exe2,air_airblast_exe3
 air_airblast_exe1: 'command wandp %player% add airblast'
 air_airblast_exe2: tag add air_airblast
-air_airblast_exe3: point default.spirituality -2000
+air_airblast_exe3: point default.spirituality -200
 #
 air_airbomb: if air_bomb spell_have else air_bomb1
 air_bomb1: if wand_air air_bomb2 else no_wand_hand_air
-air_bomb2: if spirituality2000 air_bomb_exe else no_spirit
+air_bomb2: if spirituality200 air_bomb_exe else no_spirit
 air_bomb_exe: folder air_bomb_exe1,air_bomb_exe2,air_bomb_exe3
 air_bomb_exe1: 'command wandp %player% add airbomb'
 air_bomb_exe2: tag add air_bomb
-air_bomb_exe3: point default.spirituality -2000
+air_bomb_exe3: point default.spirituality -200
 #
 air_suction: if air_suction spell_have else suction1
 suction1: if wand_air suction2 else no_wand_hand_air
-suction2: if spirituality1500 suction_exe else no_spirit
+suction2: if spirituality150 suction_exe else no_spirit
 suction_exe: folder suction_exe1,suction_exe2,suction_exe3
 suction_exe1: 'command wandp %player% add suction'
 suction_exe2: tag add air_suction
-suction_exe3: point default.spirituality -1500
+suction_exe3: point default.spirituality -150
 #
 air_tornade: if air_tornado spell_have else air_tornado1
 air_tornado1: if wand_air air_tornado2 else no_wand_hand_air
-air_tornado2: if spirituality10000 air_tornado_exe else no_spirit
+air_tornado2: if spirituality1000 air_tornado_exe else no_spirit
 air_tornado_exe: folder air_tornado_exe1,air_tornado_exe2,air_tornado_exe3
 air_tornado_exe1: 'command wandp %player% add tornade'
 air_tornado_exe2: tag add air_tornado
-air_tornado_exe3: point default.spirituality -10000
+air_tornado_exe3: point default.spirituality -1000
 #
 air_poussee: if air_poussee spell_have else air_poussee1
 air_poussee1: if wand_air air_poussee2 else no_wand_hand_air
-air_poussee2: if spirituality2000 air_poussee_exe else no_spirit
+air_poussee2: if spirituality200 air_poussee_exe else no_spirit
 air_poussee_exe: folder air_poussee_exe1,air_poussee_exe2,air_poussee_exe3
 air_poussee_exe1: 'command wandp %player% add poussee'
 air_poussee_exe2: tag add air_poussee
-air_poussee_exe3: point default.spirituality -2000
+air_poussee_exe3: point default.spirituality -200
 #
 air_airshield: if air_shield spell_have else air_shield1
 air_shield1: if wand_air air_shield2 else no_wand_hand_air
-air_shield2: if spirituality3000 air_shield_exe else no_spirit
+air_shield2: if spirituality300 air_shield_exe else no_spirit
 air_shield_exe: folder air_shield_exe1,air_shield_exe2,air_shield_exe3
 air_shield_exe1: 'command wandp %player% add airshield'
 air_shield_exe2: tag add air_shield
-air_shield_exe3: point default.spirituality -3000
+air_shield_exe3: point default.spirituality -300
 #
 air_enhancedspeed: if air_enhancedspeed spell_have else air_enhancedspeed1
 air_enhancedspeed1: if wand_air air_enhancedspeed2 else no_wand_hand_air
-air_enhancedspeed2: if spirituality5000 air_enhancedspeed_exe else no_spirit
+air_enhancedspeed2: if spirituality500 air_enhancedspeed_exe else no_spirit
 air_enhancedspeed_exe: folder air_enhancedspeed_exe1,air_enhancedspeed_exe2,air_enhancedspeed_exe3
 air_enhancedspeed_exe1: 'command wandp %player% add enhancedspeed'
 air_enhancedspeed_exe2: tag add air_enhancedspeed
-air_enhancedspeed_exe3: point default.spirituality -5000
+air_enhancedspeed_exe3: point default.spirituality -500
 #
 air_airscooter: if air_scooter spell_have else air_scooter1
 air_scooter1: if wand_air air_scooter2 else no_wand_hand_air
-air_scooter2: if spirituality5000 air_scooter_exe else no_spirit
+air_scooter2: if spirituality500 air_scooter_exe else no_spirit
 air_scooter_exe: folder air_scooter_exe1,air_scooter_exe2,air_scooter_exe3
 air_scooter_exe1: 'command wandp %player% add airscooter'
 air_scooter_exe2: tag add air_scooter
-air_scooter_exe3: point default.spirituality -5000
+air_scooter_exe3: point default.spirituality -500
 #
 air_breathofwind: if air_breathofwind spell_have else air_breathofwind1
 air_breathofwind1: if wand_air air_breathofwind2 else no_wand_hand_air
-air_breathofwind2: if spirituality5000 air_breathofwind_exe else no_spirit
+air_breathofwind2: if spirituality500 air_breathofwind_exe else no_spirit
 air_breathofwind_exe: folder air_breathofwind_exe1,air_breathofwind_exe2,air_breathofwind_exe3
 air_breathofwind_exe1: 'command wandp %player% add airshield'
 air_breathofwind_exe2: tag add air_breathofwind
-air_breathofwind_exe3: point default.spirituality -5000
+air_breathofwind_exe3: point default.spirituality -500
 #
 no_wand_hand_air: 'message &dVous ne tenez pas votre Baguette de l''Air dans votre main, tenez la pour pouvoir la modifier !'
 #
@@ -957,6 +1050,49 @@ dwarf_bridge2_tag: tag add dwarf_bridge2
 entry_north_allow: 'command region addmember north %player% -w Gaia'
 #
 #
+# Ingor Volcano
+#
+#
+ingor_forge_entry: if ingor_mine_access nothing else ingor_mine_out
+ingor_mine_out: folder ingor_mine_out1,ingor_mine_out2
+ingor_mine_out1: message &d&oCe Volcan semble trop dangereux, je devrais parler à Hrota d'abord !
+ingor_mine_out2: teleport -6501;85;2194;Gaia
+#
+journal_hrota: journal add journal_hrota
+journal_hrota_del: journal del journal_hrota
+journal_hrota_back: journal add journal_hrota_back
+journal_hrota_back_del: journal del journal_hrota_back
+#
+folder_ingor_mine_start: folder hrota_start,hrota_obj,hrota_obj2,journal_hrota
+hrota_start: tag add hrota_start
+hrota_obj: objective start hrota_obj
+hrota_obj2: objective start hrota_obj2
+hrota_tank_killed: folder tag_hrota_tank_killed,hrota_killer_tester
+tag_hrota_tank_killed: tag add hrota_killed_gobs1
+tag_hrota_tank_killed_del: tag del hrota_killed_gobs1
+hrota_archer_killed: folder tag_hrota_archer_killed,hrota_killer_tester
+tag_hrota_archer_killed: tag add hrota_killed_gobs2
+tag_hrota_archer_killed_del: tag del hrota_killed_gobs2
+hrota_killer_tester: folder hrota_killer_tester_exe delay:2
+hrota_killer_tester_exe: if hrota_killed_gobs hrota_killed_gobs_done else nothing
+hrota_killed_gobs_done: folder journal_hrota_del,journal_hrota_back,hrota_killed_done
+hrota_killed_done: message &d&oVous venez de tuer suffisament de Gobelins. Retournez voir Hróta !
+folder_ingor_mine_done: folder journal_hrota_back_del,tag_hrota_archer_killed_del,tag_hrota_tank_killed_del,ingor_mine_access
+ingor_mine_access: tag add ingor_mine_access
+#
+#
+#
+# Château du Louvre
+#
+#
+#
+###################################################################
+inscription_reg_ecuyer_louvre: folder registre_ecuyer_louvre,add_louvre_register
+registre_ecuyer_louvre: tag add registre_ecuyer_louvre
+add_louvre_register: 'command addlouvreregister %player%'
+add_louvre_contribution: 'command louvreweeklyreward %player%'
+#
+#
 # Mine Athelas
 #
 #
@@ -1041,6 +1177,27 @@ porte_sanctuary_exe_close: setblock AIR -7113;64;2444;Gaia
 tag_remove_global_sanctuary: 'command bq delete tag hollish.global_hollish.sanctuary_door'
 #
 #
+# Porte Louvre
+#
+#
+louvre_doors: folder porte_louvre_exe,louvre_time delay:0
+louvre_time: folder louvre_door_check delay:2
+louvre_door_check: if louvre_door_check louvre_time else louvre_closer
+louvre_closer: folder porte_louvre_exe_close,tag_remove_global_louvre
+porte_louvre_exe: setblock REDSTONE_TORCH_ON -9729;67;2455;Gaia
+porte_louvre_exe_close: setblock AIR -9729;67;2455;Gaia
+tag_remove_global_louvre: 'command bq delete tag hollish.global_hollish.louvre_doors'
+#
+louvre_stairs: folder porte_louvre1_exe,louvre1_time delay:0
+louvre1_time: folder louvre1_stairs_check delay:2
+louvre1_stairs_check: if louvre_stairs_check louvre1_time else louvre1_closer
+louvre1_closer: folder porte_louvre1_exe_close,tag_remove_global_louvre1
+porte_louvre1_exe: setblock REDSTONE_TORCH_ON -9725;58;2384;Gaia
+porte_louvre1_exe_close: setblock AIR -9725;58;2384;Gaia
+tag_remove_global_louvre1: 'command bq delete tag hollish.global_hollish.louvre_stairs'
+#
+#
+#
 #
 # Salons
 #
@@ -1082,12 +1239,17 @@ sbib_welcome3: 'command title %player% subtitle {"text":"Bienvenue à vous","col
 #
 #
 #
-# APPA TRANSPORTATION
+# TEMPLE TRANSPORTATION
 #
 #
 ################################################################
 appa_temple: teleport -3003;168;2929;Gaia
 appa_athelas: teleport -6587;92;2898;Gaia
+
+tree_temple: folder earth,tree_temple_teleport
+tree_temple_teleport: teleport -7470;23;175;Gaia
+tree_athelas: folder earth,tree_athelas_teleport
+tree_athelas_teleport: teleport -6533;70;2866;Gaia
 #
 #
 #
@@ -1518,7 +1680,7 @@ crosstation_torch_delay: folder crosstation_torch_delay_off delay:3
 crosstation_torch_delay_off: setblock AIR -6522;68;3152;Gaia
 #
 crosstation2: if train_nains crosstation2_exe else nothing
-crosstation2_exe: folder crosstation2_torch,crosstation2_torch_delay,crosstation2_exe,in_train_tester_del,crosstation2_out
+crosstation2_exe: folder crosstation2_torch,crosstation2_torch_delay,in_train_tester_del,crosstation2_out
 crosstation2_torch: setblock REDSTONE_TORCH_ON -7010;62;2490;Gaia
 crosstation2_torch_delay: folder crosstation2_torch_delay_off delay:3
 crosstation2_torch_delay_off: setblock AIR -7010;62;2490;Gaia
@@ -1527,7 +1689,7 @@ crosstation2_out_exe: teleport -6487;98;2767;Gaia
 crosstation2_mess: 'message &dVous arrivez à Ingor, la Ville des Nains.'
 #
 crosstation3: if train_nains crosstation3_exe else nothing
-crosstation3_exe: folder crosstation3_torch,crosstation3_torch_delay,crosstation3_exe,in_train_tester_del,crosstation3_out
+crosstation3_exe: folder crosstation3_torch,crosstation3_torch_delay,in_train_tester_del,crosstation3_out
 crosstation3_torch: setblock REDSTONE_TORCH_ON -6505;70;2824;Gaia
 crosstation3_torch_delay: folder crosstation3_torch_delay_off delay:3
 crosstation3_torch_delay_off: setblock AIR -6505;70;2824;Gaia
@@ -1550,125 +1712,53 @@ crosstation4_torch_delay_off: setblock AIR -6510;68;2828;Gaia
 #
 #
 ################################
-prison_god_testerfer: if !avertissements_5 prison_god1 else temp_ban
-prison_god_testeror: if !avertissements_5 prison_god2 else temp_ban
-prison_god_testerdiamant: if !avertissements_5 prison_god3 else temp_ban
+prison_god_testerfer: if !avertissements_3 prison_god1 else temp_ban
+prison_god_testeror: if !avertissements_3 prison_god2 else temp_ban
+prison_god_testerdiamant: if !avertissements_3 prison_god3 else temp_ban
 #
-prison_god1: folder prison_essentials_user1,prison_essentials_user12,prison_essentials_user13,prison_avertissement,vulgarite_remover,prison_information
-prison_god2: folder prison_essentials_user2,prison_essentials_user22,prison_essentials_user23,prison_avertissement,vulgarite_remover,prison_information,money_500
-prison_god3: folder prison_essentials_user3,prison_essentials_user32,prison_essentials_user33,prison_avertissement,vulgarite_remover,prison_information,money_1000
+prison_god1: folder prison_bq_user1,prison_bq_user12,prison_bq_user13,prison_bq_user14,prison_avertissement,vulgarite_remover,prison_information
+prison_god2: folder prison_bq_user2,prison_bq_user22,prison_bq_user23,prison_bq_user24,prison_avertissement,vulgarite_remover,prison_information,money_500
+prison_god3: folder prison_bq_user3,prison_bq_user32,prison_bq_user33,prison_bq_user34,prison_avertissement,vulgarite_remover,prison_information,money_1000
 #
-prison_essentials_user1: 'command jail %player% jail_athelas 15m'
-prison_essentials_user12: 'command mute %player% 15m'
-prison_essentials_user13: 'command pex user %player% timed add -discordmc.chat 900'
-prison_essentials_user2: 'command jail %player% jail_athelas 30m'
-prison_essentials_user22: 'command mute %player% 30m'
-prison_essentials_user23: 'command pex user %player% timed add -discordmc.chat 1800'
-prison_essentials_user3: 'command jail %player% jail_athelas 1h'
-prison_essentials_user32: 'command mute %player% 1h'
-prison_essentials_user33: 'command pex user %player% timed add -discordmc.chat 3600'
+prison_bq_user1: teleport -6952;64;2977;Gaia
+prison_bq_user12: 'command mute %player% 15m'
+prison_bq_user13: 'command pex user %player% timed add -discordmc.chat 900'
+prison_bq_user14: objective start prison_bq_user1
+prison_bq_user2: teleport -6952;64;2977;Gaia
+prison_bq_user22: 'command mute %player% 30m'
+prison_bq_user23: 'command pex user %player% timed add -discordmc.chat 1800'
+prison_bq_user24: objective start prison_bq_user2
+prison_bq_user3: teleport -6952;64;2977;Gaia
+prison_bq_user32: 'command mute %player% 1h'
+prison_bq_user33: 'command pex user %player% timed add -discordmc.chat 3600'
+prison_bq_user34: objective start prison_bq_user3
+#
+prison_bq_user4: folder prison_free,prison_bq_user43
+prison_bq_user43: 'message &aVous avez été libéré(e), faites attention à vous !'
+prison_bq_user5: folder prison_free,prison_bq_user53
+prison_bq_user53: 'message &aVous avez été libéré(e) et nous espèrons que cette sanction n''était pas en vain !'
+prison_bq_user6: folder prison_free,prison_bq_user63
+prison_bq_user63: 'message &aVous avez été libéré(e), mais votre présence dans cette prison est toujours agréable !'
 #
 prison_avertissement: point avertissements 1
 vulgarite_remover: folder default.vulgarite_reset_exe
 prison_information: folder prison_information1,prison_information2,prison_information3,prison_information4 delay:5
 prison_information1: 'message &cVous avez été envoyé dans la prison publique d''Athelas.'
 prison_information2: 'message &cEn venant ici, vous cumulez des avertissements...'
-prison_information3: 'message &cAu bout de 5 avertissements, vous serez banni pour 48 heures.'
-prison_information4: 'message &cVous avez été averti &2%point.avertissements.amount% &c/&25 &cfois !'
+prison_information3: 'message &cAu bout de 3 avertissements, vous serez banni pour 48 heures.'
+prison_information4: 'message &cVous avez été averti &2%point.avertissements.amount% &c/&23 &cfois !'
 #
 #
 temp_ban: folder temp_ban_exe,temp_ban_reset,temp_ban_message delay:5
-temp_ban_message: folder temp_ban_message_exe,temp_ban_broadcast
-temp_ban_message_exe: 'message &cVous avez été averti &25 &cfois, vous allez être banni pour 12 heures de Gaïa.'
-temp_ban_broadcast: 'command broadcast &2%player% &ca été banni pendant 48 heures de Gaïa.'
+temp_ban_message: folder temp_ban_message_exe
+temp_ban_message_exe: 'message &cVous avez été averti &23 &cfois, vous allez être banni pour 48 heures de Gaïa.'
 temp_ban_reset: point avertissements *0
 temp_ban_exe: folder temp_bannissement delay:5
-temp_bannissement: 'command tempban %player% 48h 1s Vous avez été averti 5 fois.'
-#########
+temp_bannissement: 'command tempban %player% 48h 1s Vous avez été averti 3 fois.'
 #
 #
+prison_free: teleport -6952;64;2970;Gaia
 #
-#         JARVIS
-#
-#
-#
-################################
-#
-louvre_anti_bypass: 'command pex user %player% add -worldguard.* Gaia'
-louvre_anti_bypass_clear: 'command pex user %player% remove -worldguard.* Gaia'
-louvre_notify_hollish: 'command tell Hollish &2%player% &avient de passer la frontière du Manoir.'
-#
-# Phase 1
-#
-#
-louvre_enter: folder louvre_teleport,louvre_mess,louvre_mess1,louvre_obj,louvre_anti_bypass,louvre_notify_hollish delay:1
-louvre_teleport: teleport -9729;69;2466;Gaia
-louvre_obj: objective start louvre_obj
-louvre_mess1: folder louvre_mess1_exe,louvre_mess2,louvre_timer delay:1
-louvre_mess2: folder louvre_mess2_exe delay:1
-louvre_mess: 'message &2Hollish&f: &aVous entrez sur ma propriété. Parlez, &2ami&a, et entrez.'
-louvre_mess1_exe: 'message &2Hollish&f: &aVous avez &252 secondes &apour trouver le mot de passe qui vous donnera cet accès.'
-louvre_mess2_exe: 'message &2Hollish&f: &aUtilisez "&fmot de passe: &a" suivi du mot de passe.'
-louvre_timer: folder louvre_timer_up,louvre_porte_close delay:55
-louvre_timer_up: objective delete louvre_obj
-#
-louvre_open: folder louvre_porte,found_mess,louvre_member delay:1
-louvre_member: 'command region addmember louvre %player% -w Gaia'
-louvre_porte: setblock REDSTONE_TORCH_ON -9729;67;2455;Gaia
-found_mess: 'message &2Hollish&f: &aVous avez trouvé, vous avez désormais accès au jardin. Parlez au Butler si vous estimez avoir les droits de rentrer dans le Manoir.'
-louvre_porte_close: setblock AIR -9729;67;2455;Gaia
-#
-# Phase 2
-#
-#
-builder_autorized: folder builder_autorized_exe,builder_autorized_mess
-builder_autorized_exe: 'command region addmember buildersguild %player% -w Gaia'
-builder_autorized_mess: 'message &2Hollish&f: &aBienvenue, dans le Manoir.'
-#
-# Leave
-#
-louvre_leave: folder louvre_member_remove,builder_member_remove,louvre_timer_up,louvre_anti_bypass_clear delay:0
-louvre_member_remove: 'command region removemember louvre %player% -w Gaia'
-builder_member_remove: 'command region removemember buildersguild %player% -w Gaia'
-#
-#
-# SCREEN
-#
-#
-button1: conversation jarvis
-#
-# ON
-#
-button_on: folder block_screen,screen_movein1,screenin_timer1 delay:1
-block_screen: setblock STONE -9731;81;2362;Gaia
-screen_movein1: 'command hd align y serverinfo ref2'
-screenin_timer1: folder screen_movein2 delay:1
-screen_movein2: 'command hd align xz serverinfo ref2'
-#
-# OFF
-#
-button_off: folder unblock_screen,screen_moveout1,screenout_timer1 delay:1
-unblock_screen: setblock AIR -9731;81;2362;Gaia
-screen_moveout1: 'command hd align xz serverinfo ref'
-screenout_timer1: folder screen_moveout2 delay:1
-screen_moveout2: 'command hd align y serverinfo ref'
-#
-# Escalier
-#
-stairs_open: setblock REDSTONE_TORCH_ON -9725;58;2384;Gaia
-stairs_close: setblock AIR -9725;58;2384;Gaia
-###################################################################################################
-#
-#
-# Builders
-#
-#
-###################################################################################################
-builder_master: conversation builder
-builder_in: tag add builder_in
-builder_out: tag del builder_in
-gm_1_builder: 'command gm creative %player%'
-gm_0_builder: 'command gm survival %player%'
 ###################################################################################################
 #
 #
@@ -2178,9 +2268,8 @@ uhc_rules14: 'message &aBon courage!'
 #
 # Objectives avec sortie fin de Game
 #
-uhc_obj: folder uhc_remove_diepermanent,uhc_obj_kill,uhc_obj_kill_teams,uhc_obj_die
+uhc_obj: folder uhc_obj_kill,uhc_obj_kill_teams,uhc_obj_die
 
-uhc_remove_diepermanent: objective delete default.die_permanent
 uhc_obj_die: objective start uhc_die
 uhc_obj_kill: folder uhc_obj_kill_solo conditions:games_uhc_1
 uhc_obj_kill_solo: objective start uhc_obj_kill_solo
@@ -2590,7 +2679,6 @@ uhc_torch_start_off: setblock AIR -6587;66;2913;Gaia
 # SKINS RESTORER
 # INVENTORY RESTORER
 uhc_dynmap_unhide_exe: 'command dynmap show %player%'
-uhc_readd_diepermanent: objective start default.die_permanent
 ###################################################################################################
 #
 #

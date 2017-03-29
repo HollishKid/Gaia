@@ -10,14 +10,6 @@ NPC_options:
   entrer:
     text: 'Bonjour &2%player%&a&o.'
     pointers: good,bye
-  indeed:
-    text: 'Je vois que vous êtes accompagné de lui même, bienvenue dans le Manoir &2%player% &a&o!'
-    conditions: 'hollish_here'
-    events: builder_autorized
-  liar:
-    text: 'Il semblerait que Hollish ne soit pas avec vous. Vous avez menti. Pour cela, je vous envoie en &cPrison &a&o! &4Mentir est Mal !'
-    conditions: '!hollish_here'
-    events: prison_god_testerfer
 #############
 #           #
 #   Joueur  #
@@ -26,6 +18,5 @@ NPC_options:
 player_options:
   good:
     text: 'Je suis l''invité de Hollish, faites moi entrer dans le Manoir !'
-    pointers: indeed,liar
   bye:
     text: 'Je ne fais que visiter les jardins ...'

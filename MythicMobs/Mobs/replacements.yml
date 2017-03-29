@@ -177,12 +177,12 @@ zombielvlnorth:
   Type: zombie
   Disguise:
     Type: player
-    Player: '&cGoblin'
+    Player: '&cGobelin'
     Skin: MattShaw
     ShowName: false
     ModifyBoundingBox: false
-  Display: '&cGoblin &dNiv.<mob.level>'
-  Health: 15
+  Display: '&cGobelin &dNiv.<mob.level>'
+  Health: 25
   Damage: 5
   Faction: goblins
   Options:
@@ -219,12 +219,12 @@ skeletonlvlnorth:
   Type: skeleton
   Disguise:
     Type: player
-    Player: '&cGoblin Archer'
+    Player: '&cGobelin Archer'
     Skin: tharandur
     ShowName: false
     ModifyBoundingBox: false
-  Display: '&cGoblin Archer &dNiv.<mob.level>'
-  Health: 15
+  Display: '&cGobelin Archer &dNiv.<mob.level>'
+  Health: 20
   Faction: goblins
   Options:
     AlwaysShowName: false
@@ -248,6 +248,107 @@ skeletonlvlnorth:
   - skeleton1drops
   - skeleton2drops
   - skeleton3drops
+  LevelModifiers:
+    Health: 3
+    KnockbackResistance: 0.03
+    MovementSpeed: 0.02
+#
+#
+#
+# WEST URUKS
+#
+#
+#
+#
+# Zombies
+#
+uruklevelzombie:
+  Type: zombie
+  Disguise:
+    Type: player
+    Player: '&cUruk'
+    Skin: patblock
+    ShowName: false
+    ModifyBoundingBox: false
+  Display: '&cUruk &dNiv.<mob.level>'
+  Health: 60
+  Damage: 7
+  DamageModifiers:
+  - PROJECTILE 0.5
+  Faction: goblins
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.19
+    PreventOtherDrops: true
+    KnockbackResistance: 0.27
+    Despawn: true    
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  - 3 fleesun
+  - 4 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget 
+  - 2 players
+  Drops:  
+  - zombie1drops
+  - zombie2drops
+  - zombie3drops
+  Skills:
+  - particles{p=portal;a=10;hs=0.5;vs=0.7;s=0;y=0.7} @self ~onDamaged
+  - particles{p=portal;a=500;hs=0.7;vs=1.0;s=0;y=1.0} @self ~onDeath
+  - command{c="thisistheurukkilledcommand"} @trigger ~onDeath
+  LevelModifiers:
+    Health: 5
+    Damage: 1
+    KnockbackResistance: 0.03
+    MovementSpeed: 0.02
+#
+# Skeletons
+#
+uruklvlskeleton:
+  Type: skeleton
+  Disguise:
+    Type: player
+    Player: '&cUruk Archer'
+    Skin: Latinovich
+    ShowName: false
+    ModifyBoundingBox: false
+  Display: '&cUruk Archer &dNiv.<mob.level>'
+  Health: 50
+  Faction: goblins
+  DamageModifiers:
+  - PROJECTILE 0.33
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 0.20
+    Despawn: true    
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 arrowattack
+  - 2 randomstroll
+  - 3 fleesun
+  - 4 float
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget 
+  - 2 players
+  Drops:  
+  - skeleton1drops
+  - skeleton2drops
+  - skeleton3drops
+  Skills:
+  - particles{p=portal;a=10;hs=0.5;vs=0.7;s=0;y=0.7} @self ~onDamaged
+  - particles{p=portal;a=500;hs=0.7;vs=1.0;s=0;y=1.0} @self ~onDeath
+  - command{c="thisistheurukakilledcommand"} @trigger ~onDeath
   LevelModifiers:
     Health: 3
     KnockbackResistance: 0.03

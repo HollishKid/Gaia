@@ -102,7 +102,7 @@ cuir_casque:
   - '&e&oCe cuir renforcé'
   - '&e&oest bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 298
   POSITION-X: 4
   POSITION-Y: 2
@@ -204,7 +204,7 @@ cuir_plastron:
   - '&e&oCe cuir renforcé'
   - '&e&oest bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 299
   POSITION-X: 9
   POSITION-Y: 2
@@ -296,7 +296,7 @@ cuir_jambes:
   - '&e&oCe cuir renforcé'
   - '&e&oest bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 300
   POSITION-X: 4
   POSITION-Y: 5
@@ -358,7 +358,7 @@ cuir_pieds:
   - '&e&oCe cuir renforcé'
   - '&e&oest bien plus robuste !'
   - ' '
-  - '&7&oRareté : &aCommun'
+  - '&7&oRareté : &aNon-Commun'
   ID: 301
   POSITION-X: 9
   POSITION-Y: 5
@@ -428,7 +428,8 @@ blocker9:
   KEEP-OPEN: true
   
 blocker12:
-  NAME: ' '
+  COMMAND: 'open: craft_custom.yml'
+  NAME: '&aRetour aux Crafts'
   ID: '58'
   POSITION-X: 5
   POSITION-Y: 1

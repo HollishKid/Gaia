@@ -4,7 +4,7 @@ mysteria1:
   X: -8866
   Y: 77
   Z: 4537
-  Radius: 2
+  Radius: 20
   UseTimer: true
   MaxMobs: 20
   MobLevel: 1
@@ -21,4 +21,4 @@ mysteria1:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 20
+  ActiveMobs: 0

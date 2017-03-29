@@ -7,10 +7,10 @@
 menu-settings:
 
   # name - appears as the title - REQUIRED
-  name: '&6Banque'
+  name: '&6Grades Royaux'
 
   # rows - the number of rows of the chest - REQUIRED
-  rows: 3
+  rows: 6
 
   # command - OPTIONAL (you can remove this or set it to '')
   # Bind multiple commands using ; (command: 'menu; m; me')
@@ -19,18 +19,15 @@ menu-settings:
   # auto-refresh - OPTIONAL
   # How frequently the menu will be refreshed, in seconds.
   # Useful if you have variables in items' descriptions.
-  auto-refresh: 5
+  auto-refresh: 10
 
   # This command command will be execute when the menu is opened.
   # Supports all the icon command types.
-  open-action: 'sound: block note harp'
+  open-action: 'sound: block note pling'
 
   # open-with-item - OPTIONAL
   # The menu will open only right-clicking with orange wool [35:1]
   open-with-item: ''
-#    id: wool:1
-#    left-click: false
-#    right-click: true
 
 
 ######################
@@ -39,43 +36,74 @@ menu-settings:
 #+                  +#
 ######################
 
-enpoche:
-  COMMAND: 'console: bq event {player} default.account'
-  NAME: 'Argent en poche'
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
   LORE:
-    - '&a{money}'
-    - ' '
-    - '&ocliquez pour afficher'
-    - '&ovotre solde de compte.'
-  ID: gold ingot
-  POSITION-X: 1
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
   POSITION-Y: 1
-  KEEP-OPEN: true
 
-go:
-  COMMAND: 'open: bank'
-  NAME: '&2Continuer'
-  ID: 41
-  LORE:
-    - 'Retire tout votre capital de votre compte.'
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
   POSITION-X: 4
   POSITION-Y: 2
+  KEEP-OPEN: true
   
-choixe:
-  NAME: '&6Options'
-  ID: 280
-  LORE:
-    - '&lSouhaitez-vous'
-    - '&lcontinuer ou quitter ?'
+blocker5:
+  NAME: ' '
+  ID: '160:7'
   POSITION-X: 5
   POSITION-Y: 2
   KEEP-OPEN: true
   
-nogo:
-  NAME: '&6Quitter'
-  ID: barrier
-  LORE:
-    - '&oCliquez pour sortir'
-    - '&odu menu de la Banque.'
+blocker6:
+  NAME: ' '
+  ID: '160:7'
   POSITION-X: 6
   POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  

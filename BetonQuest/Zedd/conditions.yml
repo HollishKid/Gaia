@@ -79,6 +79,7 @@ or_fish: item cookedfish:5
 or_etape2: tag or_etape2
 or_etape3: tag or_etape3
 thiefkey_inhand: hand thief_key
+thieftreasure_tempo_tag: tag thieftreasure_tempo_tag
 #
 var_pitch: tag var_pitch
 var_inconvers: tag var_inconvers
@@ -153,4 +154,26 @@ its_r1timer: tag its_r1timer
 #
 #
 #
+# RANDOM EVENTS
 #
+#
+loto_start: tag loto_start
+diamond: tag diamond
+gold: tag gold
+random_6: random 6-100
+random_12: random 12-100
+random_18: random 18-100
+random_24: random 24-100
+random_30: random 30-100
+random_36: random 36-100
+random_42: random 42-100
+random_48: random 48-100
+random_50: random 50-100
+random_54: random 54-100
+random_60: random 60-100
+random_66: random 66-100
+random_72: random 72-100
+random_78: random 78-100
+random_84: random 84-100
+random_90: random 90-100
+random_100: random 1-1

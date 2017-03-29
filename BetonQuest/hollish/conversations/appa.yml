@@ -6,7 +6,7 @@ NPC_options:
     text: 'Bonjour &2%player% &a&o!'
     pointers: qui,temple,athelas
   qui_rep:
-    text: 'Je viens d''un pays lointain ...'
+    text: 'Je viens d''un pays lointain...'
   temple_rep:
     text: 'Allons-y Jeune Maître de l''Air !'
     events: appa_temple
@@ -18,10 +18,10 @@ player_options:
     text: 'Qui êtes vous ?'
     pointers: qui_rep
   temple:
-    text: 'Je voudrais retourner au Temple de l''Air !'
+    text: 'Je voudrais retourner au Temple de l''Air.'
     conditions: 'tag_aang'
     pointers: temple_rep
   athelas:
-    text: 'Je voudrais retourner à Athelas !'
+    text: 'Je voudrais retourner à Athelas.'
     conditions: 'tag_aang'
     pointers: athelas_rep

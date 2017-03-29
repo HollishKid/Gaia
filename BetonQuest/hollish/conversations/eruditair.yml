@@ -21,7 +21,7 @@ NPC_options:
     text: 'Je suis un des 4 &3Érudits &a&odu &dSanctuaire&a&o. Je suis &dÉrudit &a&ode l''Air.'
     pointers: comment,autres
   keske_rep:
-    text: 'Cet endroit est consacré à la recherche sur l''Air en tant qu''élément. J''y fais mes recherches, j''y enseigne et j''y vis. Mon rôle est aussi d''enseigner les &3Minions.'
+    text: 'Cet endroit est consacré à la recherche sur l''Air en tant qu''élément. J''y fais mes recherches, j''y enseigne et j''y vis. Mon rôle est aussi d''enseigner les &dMinions&a&o.'
     pointers: minions
   comment_rep:
     text: 'Cela veut dire que mes recherches portent sur l''Air en tant qu''élément consituant de notre monde. Plus particulièrement la Magie qui y est associée...'
@@ -40,13 +40,13 @@ NPC_options:
     conditions: 'mageentry_approved,!tag_erudit_air'
     pointers: air1,air2,air3,air4,air5
   faux:
-    text: 'Je crains que malgré cela, vous n''ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité ... Celle du Respect !'
+    text: 'Je crains que malgré cela, vous n''ayez pas compris une règle fondamentale pour accéder à une grande Spiritualité ... \nCelle du Respect !'
   acceptation:
     text: 'Je suis ravi d''entendre que vous me présentez ce Respect. Puis-je savoir ce qui vous amène ?'
     pointers: passer,apprentissage
 #A partir d'ici commence chaque spécialité de l'Erudit (delete me)
   etudiant:
-    text: 'Ah ! Je vois... Il s''avère que je pourrais vous enseigner, votre esprit me convient, mais je ne vois pas en vous le moindre savoir pour entamer ces études. Avant de vous lancer, fabriquez vous un &dlivre avec une plume&a&o, pour prendre vos notes éventuelles !'
+    text: 'Ah ! Je vois... Il s''avère que je pourrais vous enseigner, votre esprit me convient. \nJe ne vois pas en vous le moindre savoir pour entamer ces études. \nAvant de vous lancer, fabriquez vous un &dlivre avec une plume&a&o, pour prendre vos notes éventuelles !'
     conditions: '!tag_erudit_book'
     events: tag_erudit_air
     pointers: book_ok,book_non

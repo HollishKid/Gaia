@@ -151,7 +151,7 @@ then replace &cpuis&7
 ##############################
 
 #Merde
-match (m+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(((d+)(\s+|\.+|\*+|)(e+|2|))|2)
+match (m+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(r+)(\.+|\*+|)(((d+)(\s+|\.+|\*+|)(e+|2|))|2)
 handle as vulgarite
 
 #Connard Et Connasse
@@ -306,10 +306,6 @@ then warn &d&oPour vous enregistrer, tapez &a/enregistrer &d&osuivi de DEUX fois
 match (^1\b|^2\b|^3\b|^4\b|^5\b|^6\b|^&\b)
 then warn &d&oVous pouvez &dcliquer &d&osur les réponses proposées.
 
-# Can't see
-match (me vois pas|ne vois pas|me voit pas|ne voit pas|me vois|me voit|me voi|ne vois|ne voit|ne voi|te vois pas|te voit pas|te voi pas|te vois|te voit|te voi)
-then warn &d&oSi un joueur ne voit pas un autre joueur, essayez de vous déconnecter puis de vous reconnecter.
-
 # Carte Dynamique
 match (dynmap|minimap|carte|dyn|map)
 then warn &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
@@ -317,17 +313,17 @@ then warn &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
 #Intendant Helper
 match (intendante|intendant|intendente|intendent|intendan\b|intendan\b)
 then replace &aintendant&7
-then warn &d&oSi vous êtes à la recherche de l'&2Intendant&d&o, il se trouve en (-7035,93,2936).        &d&oPensez à utiliser votre &dJournal de Progression &d&opour savoir où vous en êtes. &d&oMap Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+then warn &d&oSi vous êtes à la recherche de l'&2Intendant&d&o, il se trouve en (-7035,93,2936). &d&oPensez à utiliser votre &dJournal de Progression &d&opour savoir où vous en êtes. &d&oCarte Dynamique :&a http://gaia-minecraft.enjin.com/gallery
 
 #Château Helper
 match (château|chateau|châto\b|châte\b|chate\b|chato\b)
 then replace &achâteau&7
-then warn &d&oSi vous êtes à la recherche du &aChâteau&d&o, il se trouve en (-6990,80,2955).         &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+then warn &d&oSi vous êtes à la recherche du &aChâteau&d&o, il se trouve en (-6990,80,2955). &d&oCarte Dynamique :&a http://gaia-minecraft.enjin.com/gallery
 
 #Guilde Helper
 match (guilde|guild\b)
 then replace &aguilde&7
-then warn &d&oSi vous êtes à la recherche de la &aGuilde&d&o, elle se trouve en (-6915,75,3165).        &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+then warn &d&oSi vous êtes à la recherche d'une &aGuilde&d&o, utilisez la Carte Dynamique :&a http://gaia-minecraft.enjin.com/gallery
 
 #House Helper
 match (louer|loué|acheter|acheté|avoir) maison
@@ -340,23 +336,22 @@ then warn &d&oSi vous voulez louer une maison, demandez le l'aide au &2Gestionna
 #Sanctuaire Helper
 match (sanctuaire|sanctuere|sanctuer\b|sanctuair\b|senctuaire\b|senctuere\b|senctuair\b|senctuer\b|santuaire|santuere|santuer\b|santuair\b|sentuer\b|senktu\b|sanktu\b)
 then replace &asanctuaire&7
-then warn &d&oSi vous êtes à la recherche du &aSanctuaire&d&o, il se trouve en (-7111,70,2444).           &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+then warn &d&oSi vous êtes à la recherche du &aSanctuaire&d&o, il se trouve en (-7111,70,2444). &d&oCarte Dynamique :&a http://gaia-minecraft.enjin.com/gallery
 
 #Gare Helper
 match \bgare\b
 then replace &agare&7
-then warn &d&oSi vous êtes à la recherche de la &aGare&d&o, elle se trouve en (-6540,70,3160).                &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+then warn &d&oSi vous êtes à la recherche de la &aGare&d&o, elle se trouve en (-6540,70,3160). &d&oCarte Dynamique :&a http://gaia-minecraft.enjin.com/gallery
 
 #Grand Marché Helper
 match (grand marché|grand marche|grand marcher|grand exchange|grand échange|grand echange)
 then replace &aGrand Marché&7
-then warn &d&oSi vous êtes à la recherche du &aGrand Marché&d&o, il se trouve en (-6650,70,2940).          &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+then warn &d&oSi vous êtes à la recherche du &aGrand Marché&d&o, il se trouve en (-6650,70,2940). &d&oCarte Dynamique :&a http://gaia-minecraft.enjin.com/gallery
 
 #Bibliothèque Helper
 match (\bbibliotheque\b|\bbibliothèque\b|\blibrairie\b)
 then replace &aBibliothèque&7
-then warn &d&oSi vous êtes à la recherche de la &aBibliothèque&d&o, elle se trouve en (-6730,70,2885).          &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
-
+then warn &d&oSi vous êtes à la recherche de la &aBibliothèque&d&o, elle se trouve en (-6730,70,2885). &d&oCarte Dynamique :&a http://gaia-minecraft.enjin.com/gallery
 
 #Trade Helper
 match (acheter|acheté|vendre|échange|échanger|échangé)
@@ -365,11 +360,11 @@ then warn &d&oSi vous cherchez à vendre ou acheter des affaires, rendez vous au
 #Banque Helper
 match (banque|bank|banqu\b|banq\b)
 then replace &abanque&7
-then warn &d&oSi vous êtes à la recherche de la &aBanque&d&o, elle se trouve en (-6565,70,3111).           &d&oCarte Dynamique:&a http://gaia-minecraft.enjin.com/gallery
+then warn &d&oSi vous êtes à la recherche de la &aBanque&d&o, elle se trouve en (-6565,70,3111). &d&oCarte Dynamique :&a http://gaia-minecraft.enjin.com/gallery
 
 #PNJ Helper
 match (pnj|npc)
-then warn &d&oSi vous avez des problèmes de &aPNJ&d&o, pensez à &aconsulter l'aide&a&o.                     &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.
+then warn &d&oSi vous avez des problèmes de &aPNJ&d&o, pensez à &aconsulter l'aide&a&o. &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.
 
 #Ilcë
 match (i+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(c+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)
@@ -384,27 +379,42 @@ handle as ilce
 
 match (\blag\b|\blage\b|\blague\b)
 then replace &alag&7
-then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o.         &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.           &d&oGuide Optifine:&a http://gaia-minecraft.enjin.com/guide 
+then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o. &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements. &d&oGuide Optifine :&a http://gaia-minecraft.enjin.com/guide 
 
 match (\bbug|\bbeug)
 then replace &abug&7
-then warn &d&oSi vous avez reperé un bug, signalez le à un administrateur depuis votre interface d'aide dans le &f/menu&d&o. Si vous avez un problème de lag, tapez &alag &d&odans le tchat.
+then warn &d&oSi vous avez reperé un bug, signalez le à au Staff depuis votre interface d'aide dans le &f/menu&d&o. Si vous avez un problème de lag, tapez &alag &d&odans le tchat.
 
 match fps
 then replace &afps&7
-then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o.         &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.           &d&oGuide Optifine:&a http://gaia-minecraft.enjin.com/guide 
+then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o. &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements. &d&oGuide Optifine :&a http://gaia-minecraft.enjin.com/guide 
 
 match (crash|crach)
 then replace &acrash&7
-then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o.         &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.           &d&oGuide Optifine:&a http://gaia-minecraft.enjin.com/guide 
+then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o. &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements. &d&oGuide Optifine :&a http://gaia-minecraft.enjin.com/guide 
 
 match freez
 then replace &afreeze&7
-then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o.         &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.           &d&oGuide Optifine:&a http://gaia-minecraft.enjin.com/guide 
+then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o. &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements. &d&oGuide Optifine :&a http://gaia-minecraft.enjin.com/guide 
 
 match (rollback|rolback|rollbak|rollbac|rolbak|rolbac)
 then replace &arollback&7
-then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o.         &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.           &d&oGuide Optifine:&a http://gaia-minecraft.enjin.com/guide 
+then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à installer &aOptifine&a&o. &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements. &d&oGuide Optifine :&a http://gaia-minecraft.enjin.com/guide 
+
+#
+#
+# Better Helper
+#
+#               Base this on questionslog.txt
+#
+match pa(c|)(k|) (de|d|2|) te(x|s|)tur(e|)
+then replace &apack de texture&70
+then warn &d&oSi vous cherchez le pack de texture du serveur, il se trouve sur le site de Gaïa, section "Guide". Rendez vous sur le site depuis votre &a/menu&d&o.
+
+match te(x|s|)tur(e|) pa(c|)(k|)
+then replace &apack de texture&70
+then warn &d&oSi vous cherchez le pack de texture du serveur, il se trouve sur le site de Gaïa, section "Guide". Rendez vous sur le site depuis votre &a/menu&d&o.
+
 
 #######################
 #
@@ -414,37 +424,54 @@ then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à inst
 #
 #######################
 
-# Hollish
-match (hollish|holish)
-then replace &aHollish&7
+# Questions
+match \?
+handle as questionlogger
+
+# Gaïa
+match (gaia|gaïa|gaya)
+then replace &6Gaïa &f
 
 # Hollish
-match (^hollish$|^holish$|^hollish \?$|^hollish\?$|^holish \?$|^holish\?$)
-then warn &aHollish&f: &cNe m'interpellez pas&f, posez votre question si elle est pertinente.
+match \b(h+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(s+)(\s+|\.+|\*+|)(h+|)
+then replace &6Hollish &7
+
+# Hollish Helper
+match \b(h+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(s+)(\s+|\.+|\*+|)(h+|)(\s+|\.+|\*+|)(\?)
+then replace &6Hollish ? &7
+then warn &aHollish&f: &cNe m'interpellez pas&f, posez directement votre question.
 
 # Zedd
 match (zedd|zed)
-then replace &aZedd&7
-
-# Lyrtix
-match (lyrtix\b|lirtyx\b|lyrti\b|\blirtix\b|lirty\b|\blytrix\b|\blytix\b)
-then replace &aLyrtix&7
-
-# guigui
-match guigui
-then replace &aguigui&7
-
-# Cubto_Mania
-match (c+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(b+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(o+|)(\s+|\.+|\*+|)(_+|)(\s+|\.+|\*+|)(m+|)(\s+|\.+|\*+|)(a+|)(\s+|\.+|\*+|)(n+|)(\s+|\.+|\*+|)(i+|)(\s+|\.+|\*+|)(a+|)
-then replace &aCubto_Mania&7
+then replace &aZedd &7
 
 # Sparadra59
 match \b(s+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(d+|)(\s+|\.+|\*+|)(r+|a+|)(\s+|\.+|\*+|)(a+|r+|)(\s+|\.+|\*+|)(9+|5+|)(\s+|\.+|\*+|)(9+|5+|)
-then replace &aSparadra59&7
+then replace &aSparadra59 &7
 
-# Gaïa
-#match (gaia|gaïa)
-#then warn
+# crashozz
+match \b(c+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(s+|z+)(\s+|\.+|\*+|)(h+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(z+|s+|)\b
+then replace &acrashozz &7
+
+# MathieuxZ88
+match \b(m+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(h+|)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(u+|)(\s+|\.+|\*+|)(x+|)(\s+|\.+|\*+|)(z+|)(\s+|\.+|\*+|)(8+|)
+then replace &aMathieuxZ88 &7
+
+# GoupilDC16
+match \b(g+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(d+|c+|)(\s+|\.+|\*+|)(d+|c+|)(\s+|\.+|\*+|)(1+|6+|)(\s+|\.+|\*+|)(1+|6+|)\b
+then replace &aGoupilDC16  &7
+
+# Lyrtix
+match (lyrtix\b|lirtyx\b|lyrti\b|\blirtix\b|lirty\b|\blytrix\b|\blytix\b)
+then replace &aLyrtix &7
+
+# guigui
+match guigui
+then replace &aguigui &7
+
+#Vodax
+match \b(v+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(d+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(x+)
+then replace &aVodaX &7
 
 #
 #

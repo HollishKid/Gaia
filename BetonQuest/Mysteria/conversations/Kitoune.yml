@@ -1,0 +1,28 @@
+quester: 'Kitoune'
+first: welcome
+stop: 'false'
+#                 #
+#   NPC Options   #
+#                 #
+NPC_options:
+  welcome:
+    text: 'Bienvenue étranger dans ce spiritualium. Que puis-je faire pour toi ?'
+    conditions: '!repos_kit'
+    pointers: bonjour
+  bien:
+    text: 'Très bien, mais avant que nous commencons, reposes toi en ce lieu divinatoire de la déesse Gaïa'
+    events: repos_kit
+    pointers: question
+  selection:
+    text: 'Que souhaites-tu savoir sur moi et cet endroit ?'
+#                    #
+#   Options Joueur   #
+#                    #
+player_options:
+  bonjour:
+    text: 'Je souhaiterais en savoir un peu plus sur cet endroit et sur vos origines'
+    pointers: bien
+  question:
+    text: 'Pouvons-nous commencer maintenant ?'
+    conditions: '!repos_kit'
+    pointers: selection
