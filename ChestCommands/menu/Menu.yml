@@ -136,7 +136,7 @@ enpoche:
   KEEP-OPEN: true
 
 dyn:
-  COMMAND: 'tell: &awww.gaia-minecraft.enjin.com/gallery'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers la Carte.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/dynmap.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&6Carte Dynamique'
   ID: map
   LORE:
@@ -146,7 +146,7 @@ dyn:
   POSITION-Y: 2
 
 site:
-  COMMAND: 'tell: &awww.gaia-minecraft.enjin.com/guide'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le site.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&6Guide Complet'
   ID: map
   LORE:

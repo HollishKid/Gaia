@@ -156,13 +156,13 @@ lag:
     - 'dans votre tchat.'
     - ' '
     - 'Une aide complète est disponible:'
-    - 'http://gaia-minecraft.enjin.com/guide'
+    - 'https://www.gaia-craft.fr/'
   ID: map
   POSITION-X: 3
   POSITION-Y: 4
 
 dyn:
-  COMMAND: 'tell: &dCarte Dynamique: &awww.gaia-minecraft.enjin.com/gallery'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers la carte.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/dynmap.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&a&lCarte Dynamique'
   ID: map
   LORE:
@@ -172,7 +172,7 @@ dyn:
   POSITION-Y: 2
 
 site:
-  COMMAND: 'tell: &dGuide Complet: &awww.gaia-minecraft.enjin.com/guide'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le guide.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/guide.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&a&lGuide Complet'
   ID: map
   LORE:
@@ -192,7 +192,7 @@ jeu:
   KEEP-OPEN: true
   
 survie:
-  COMMAND: 'tell: &dPour une aide complète avec la Survie, rendez vous sur: &a http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Continent_Est'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le guide.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/guide.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&c&lSurvie'
   ID: map
   LORE:
@@ -203,7 +203,7 @@ survie:
   POSITION-Y: 2
 
 maison:
-  COMMAND: 'tell: &dPour une aide complète avec la location de maisons, rendez vous sur: http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Economie_et_Locations'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le guide.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/guide.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&c&lMaisons'
   ID: map
   LORE:
@@ -213,7 +213,7 @@ maison:
   POSITION-Y: 3
 
 quetes:
-  COMMAND: 'tell: &dPour une aide complète sur les Quêtes, rendez vous sur: http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Quetes'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le guide.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/guide.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&c&lQuêtes'
   ID: map
   LORE:
@@ -261,7 +261,7 @@ direct:
   POSITION-Y: 3
 
 forum:
-  COMMAND: 'tell: &dPour poster un ticket cliquez sur le lien suivant:&a http://gaia-minecraft.enjin.com/forum/m/37263426/viewforum/6946642'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le forum.","color":"green","clickEvent":{"action":"open_url","value":"https://forum.gaia-craft.fr/"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&4&lForum'
   ID: map
   LORE:

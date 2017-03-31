@@ -15,14 +15,6 @@
 #
 ###################################################
 #
-tweet_new_guy: folder tweet_new_guy1,tweet_new_guy2
-tweet_new_guy1: 'command sudo %player% tweet Je viens de rejoindre le serveur !'
-tweet_new_guy2: folder tweet_new_guy3 delay:2
-tweet_new_guy3: 'command sudo %player% tweet send'
-#
-#
-#Deprecated so far
-#taxes_permanent: objective start taxes_permanent
 #
 nothing: tag del inexistent_tag
 #
@@ -42,17 +34,14 @@ vote_enjin_all: 'message &d&o&lMerci d''avoir soutenu Gaïa ! Prenez cet argent 
 #
 #
 #
-#
-register_mail: folder historique_folder,register_mail1,register_mail2,register_mail3,register_mail4 delay:1
-register_mail1: 'sudo email set subject Information - Nouveau joueur sur Gaïa'
-register_mail2: 'sudo email set to gaia.minecraft.assistance@gmail.com'
-register_mail3: 'sudo email set body Un nouveau joueur du nom de %player% vient de s''enregistrer sur Gaïa. Merci de bien vouloir l''acceuillir.'
-register_mail4: 'sudo email send zeddandhollish'
-#
 journal_update: journal update
 sgv_message: 'message &d&oIl vous faut voter encore &a%point.votes.left:50% &d&ofois pour accéder à ce Salon !'
 sb_message: 'message &d&oIl vous faut voter encore &a%point.votes.left:100% &d&ofois pour accéder à ce Salon !'
 sbib_message: 'message &d&oIl vous faut voter encore &a%point.votes.left:200% &d&ofois et obtenir encore &a%point.reput_athelas.left:100% &d&opoints de réputation à Athelas pour accéder à ce Salon !'
+#
+redirect_site: 'command tellraw %player% {"text":"Cliquez ici pour aller vers le site.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
+redirect_guide: 'command tellraw %player% {"text":"Cliquez ici pour aller vers le guide.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/guide.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
+redirect_map: 'command tellraw %player% {"text":"Cliquez ici pour aller vers la carte.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/dynmap.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
 #
 #
 #
