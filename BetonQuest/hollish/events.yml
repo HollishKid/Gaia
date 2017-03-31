@@ -611,12 +611,17 @@ journal_livre_earth_found: journal add journal_livre_earth_found
 journal_livre_earth_found_del: journal del journal_livre_earth_found
 journal_earthtemple_magic_learning: journal add journal_earthtemple_magic_learning
 journal_earthtemple_magic_learning_del: journal del journal_earthtemple_magic_learning
+journal_earth_fiole: journal add journal_earth_fiole
+journal_earth_fiole_del: journal del journal_earth_fiole
 #
 tag_toph: tag add toph
 earthtemple_magic_learning: tag add earthtemple_magic_learning
 livre_earth_give: 'command mgive %player% book:earthbending'
 earth_reward: point default.spirituality 30
 earth_reward_mess: 'message &dVous gagnez &a&l30 &dpoints de Spiritualité !'
+#
+tag_earth_fiole: tag add earth_fiole
+earth_fiole_mess: 'message &d&oVous venez de 
 #
 #
 #

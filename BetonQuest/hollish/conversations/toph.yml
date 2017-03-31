@@ -12,7 +12,7 @@ NPC_options:
     conditions: '!tag_toph'
     pointers: raconter
   welcomebis:
-    text: 'Que puis-je pour vous ?'
+    text: 'Que puis-je pour toi ?'
     conditions: 'tag_toph'
     pointers: preuve,rentrer,temple,preuve_perdue,magic,earth_wand_upgrade,rienmerci
   raconter_rep:
@@ -21,7 +21,7 @@ NPC_options:
   temple_rep:
     text: 'Cet endroit est vieux comme le monde de Gaïa... \nIl a été incrusté dans la Terre, pour le protéger de regards indiscrets et être au plus proche de l''élément qu''il représente.'
   preuve_rep:
-    text: 'Je vais vous donner le livre regroupant tous les sorts qui nous sont connus. \nCa devrait impressionner votre Érudit !'
+    text: 'Je vais te donner le livre regroupant tous les sorts qui nous sont connus. \nCa devrait impressionner ton "Érudit" !'
     events: livre_earth_give,journal_livre_earth_found,tag_toph,journal_terre_emerald_del
   book_give_rep_bis:
     text: 'En voilà un exemplaire. \nNe négligez jamais un objet Magique !'
@@ -32,8 +32,8 @@ NPC_options:
 # Wand & Magic Learning
 #
   magic_rep:
-    text: 'Je serais ravi d''être votre Maître de la Terre. \nIl vous faut d''abord une &dBaguette de la Terre&a&o. Pour en invoquer une, il va falloir des fioles avec les ingrédients et un Bâton. \nCommence par fabriquer 7 fioles et amènes les moi.'
-#    events: obj_milo_fiole,journal_milo_fiole,tag_milo_fiole
+    text: 'Je pourrais être votre Maître de la Terre. \nIl vous faut d''abord une &dBaguette de la Terre&a&o. Pour en invoquer une, il va falloir des fioles avec les ingrédients et un Bâton. \nCommence par fabriquer 7 fioles et amènes les moi.'
+    events: obj_earth_fiole,journal_earth_fiole,tag_earth_fiole
   fiole_rep:
     text: 'Elle fera l''affaire. Il te faut caputrer de l''air particulier, pour avoir assez de puissance, il te faut de l''air du continent de l''Est. \nVas-y et clique droit sur ta fiole pour en capturer !'
     events: journal_milo_fiole_del,journal_milo_air_capture,obj_air_catcher,tag_remove_fiole
@@ -88,7 +88,7 @@ player_options:
 #
   magic:
     text: 'Pouvez vous m''en apprendre plus sur la Magie de l''Air ?'
-    conditions: 'airtemple_magic_learning'
+    conditions: 'earthtemple_magic_learning'
     pointers: magic_rep
 
     

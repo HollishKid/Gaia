@@ -104,6 +104,34 @@ on chat:
 			loop all players in radius 75 around player's location:
 				if {l.channel.%loop-player%} is set:
 					message "&6[&9Local&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
+					
+			set {_l} to length of {_chat}
+			if {_l} > 80:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
+				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+
+			else if {_l} > 50:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+				
+			else if {_l} > 20:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+			else:
+				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+					
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aLocal&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
@@ -114,6 +142,34 @@ on chat:
 			loop all players:
 				if {c.channel.%loop-player%} is set:
 					message "&6[&9Comm.&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
+					
+			set {_l} to length of {_chat}
+			if {_l} > 80:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
+				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+
+			else if {_l} > 50:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+				
+			else if {_l} > 20:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+			else:
+				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+					
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aCommerce&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
@@ -124,6 +180,34 @@ on chat:
 			loop all players:
 				if {a.channel.%loop-player%} is set:
 					message "&6[&9Staff&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
+					
+			set {_l} to length of {_chat}
+			if {_l} > 80:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
+				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+
+			else if {_l} > 50:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+				
+			else if {_l} > 20:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+			else:
+				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+					
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aStaff&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
@@ -133,9 +217,39 @@ on chat:
 			loop all players:
 				if {g.channel.%loop-player%} is set:
 					message "%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
+					
+			set {_l} to length of {_chat}
+			if {_l} > 80:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
+				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+
+			else if {_l} > 50:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+				
+			else if {_l} > 20:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+			else:
+				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+					
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aGlobal&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
+			
+			
 on discord guild message receive seen by "Gaia":
 	set {_discord_id} to event-user
 	set {_discord.message} to message
