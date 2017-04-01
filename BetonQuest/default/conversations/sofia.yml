@@ -42,6 +42,7 @@ NPC_options:
     text: 'D''accord, en quoi puis-je vous aider ?'
     pointers: survie,plot,dynmap,mcmmo,trade,magie,site,out
   ou_rep:
+    text: 'La voici !'
     event: redirect_map
     pointers: iso,markers,zoom,autre
   iso_rep:

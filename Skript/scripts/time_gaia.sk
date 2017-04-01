@@ -36,6 +36,9 @@ on load:
 	execute console command "xprate reset"
 	execute console command "region removemember foret_athelas -a -w Gaia"
 #
+	loop {online.players::*}:
+		delete {online.players::%loop-index%}
+#
 	set {_tmpO} to now
 	set {day.index} to day of week from date {_tmpO}
 	set {event.breach} to 0

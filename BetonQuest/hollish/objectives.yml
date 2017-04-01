@@ -84,7 +84,6 @@ aang_baton_obj: craft baton 1 events:aang_baton_obj_done
 #
 #
 obj_earth_fiole: craft fiole 7 events:earth_fiole_mess,tag_earth_fiole
-
 #
 obj_gros_os: action right GRASS conditions:os3_hand events:burried_gros_os loc:-5000;60;5000;Gaia range:7000
 #
@@ -108,14 +107,4 @@ terre_find: action right any conditions:pierre_terre_hand events:terre_find_exe
 #
 #louvre_obj: password 'mellon' ignoreCase events:louvre_open
 #
-# MiniGames
-#
-uhc_obj_kill_solo: kill 1 required:tag_uhc events:uhc_obj_kill_solo_done
-uhc_obj_kill_team1: kill 1 required:uhc_not_team1 events:uhc_obj_kill_team1_done
-uhc_obj_kill_team2: kill 1 required:uhc_not_team2 events:uhc_obj_kill_team2_done
-uhc_obj_kill_team3: kill 1 required:uhc_not_team3 events:uhc_obj_kill_team3_done
-uhc_obj_kill_team4: kill 1 required:uhc_not_team4 events:uhc_obj_kill_team4_done
-#
-uhc_die: die cancel respawn:-10414;25;4912;Gaia events:uhc_death
-
 

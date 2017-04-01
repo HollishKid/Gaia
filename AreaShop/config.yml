@@ -33,10 +33,10 @@ signTags:
 blacklist:
   - '__global__'
 ## Enable sending stats to http://mcstats.org/ (Metrics plugin)
-sendStats: true
+sendStats: false
 ## If enabled it will check for updates when loading the plugin, it will never download files, it will only notify about it
 ## A message will be printed in the console when an update is available and OPs will be notified when joining the server
-checkForUpdates: true
+checkForUpdates: false
 ## Use colors when sending messages to console and log files
 useColorsInConsole: true
 ## Post error messages in the console when a command run from the config fails (from the 'runCommands' section for example)
@@ -45,7 +45,7 @@ postCommandErrors: true
 ## This ensures that changes to the config are directly visible after restarting the server
 updateRegionsOnStartup: true
 ## Enables / disables debug messages in the console, could be useful to figure out where errors come from
-debug: true
+debug: false
 ## Version of the config, do not change!
 version: 2.1.5
 

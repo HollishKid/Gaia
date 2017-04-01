@@ -7,6 +7,40 @@
 #
 #
 #
+
+#
+# New Staff
+#
+#
+command /promotion <player> <text>:
+	usage: "/promotion [joueur] [beta/builder/moderator/horloger/admin]"
+	executable by: console
+	trigger:
+		if {online.players::*} contains "%arg 1%":
+			if arg 2 is "beta" or "builder" or "moderator" or "horloger" or "admin":
+				execute console command "bq tag %arg 1% remove beta"
+				execute console command "bq tag %arg 1% remove builder"
+				execute console command "bq tag %arg 1% remove moderator"
+				execute console command "bq tag %arg 1% remove horloger"
+				execute console command "bq tag %arg 1% remove admin"
+				wait 2 ticks
+				execute console command "pex user %arg 1% group remove beta"
+				execute console command "pex user %arg 1% group remove builder"
+				execute console command "pex user %arg 1% group remove moderator"
+				execute console command "pex user %arg 1% group remove horloger"
+				execute console command "pex user %arg 1% group remove admin"
+				wait 2 ticks
+				execute console command "bq tag %arg 1% add staff"
+				execute console command "bq tag %arg 1% add %arg 2%"
+				execute console command "pex user %arg 1% group add %arg 2%"
+				wait 2 ticks
+				message "&a&oVous avez été promu &2%arg 2%" to arg 1
+			else:
+				message "&cL'argument spécifié n'est pas correct, utilisez seulement &a<beta/builder/moderator/horloger/admin>"
+		else:
+			message "&cLe joueur doit être en ligne pour recevoir sa promotion !"
+
+#
 # Authme
 #
 #

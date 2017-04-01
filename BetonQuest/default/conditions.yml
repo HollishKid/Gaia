@@ -7,10 +7,9 @@
 #
 #
 ########################################################
-tested: tag tested
 staff: tag staff
-founder: tag founder
-creator: tag creator
+admin: tag admin
+horloger: tag horloger
 builder: tag builder
 moderator: tag moderator
 beta: tag beta

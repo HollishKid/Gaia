@@ -25,7 +25,7 @@ NPC_options:
     pointers: comment,ou,map,dechanter,apres,rien
   map_rep:
     text: 'Cliquez en haut à gauche de l''écran sur "Maisons et Terrains", en zoomant sur la ville vous lez verrez apparaître ! \nPour plus d''infos sur cette Carte, consultez &2Sofia&a&o.'
-    events: redirect_map
+    events: default.redirect_map
   dechanter_rep:
     text: 'Pour arrêter une location, il vous faut vous accroupir, puis faire un clic droit sur le panneau correspondant à votre location.'
   apres_rep:

@@ -171,13 +171,6 @@ vulgarite_immediat_remove: objective delete vulgarite_immediat
 #
 ####################################
 #
-# Requirement tags:
-#
-#  ALL = staff
-#
-#  Z & H = founder
-#  guigui & BlaBlaGumm = builder
-#  Lyrtix & GoupilDC16 = moderator
 #
 east_perms_checker_in: folder east_perms_checker_in_exe,east_perms_gm0
 #
@@ -192,17 +185,30 @@ east_perms_checker_in_exe2: if !staff east_player_perms_on else east_perms_check
 east_perms_checker_in_staff_alpha: if beta east_beta_perms_on else east_perms_checker_in_staff
 east_perms_checker_in_staff: if builder east_builder_perms_on else east_perms_checker_in_modo
 east_perms_checker_in_modo: if moderator east_moderator_perms_on else east_perms_checker_in_creator
-east_perms_checker_in_creator: if creator east_perms_checker_in_creator_on else east_perms_checker_in_founder
-east_perms_checker_in_founder: if founder east_founder_perms_on else perms_error_message
+east_perms_checker_in_creator: if horloger east_perms_checker_in_creator_on else east_perms_checker_in_founder
+east_perms_checker_in_founder: if admin east_founder_perms_on else perms_error_message
 perms_error_message: 'message &cL''erreur 404-95D est survenue. Veuillez rapporter ce message à un membre du Staff. &6Merci&c.'
 #
 east_player_perms_on: if grade_ecuyer east_ecuyer_on else east_aventurier_on
-east_ecuyer_on: 'command pex user %player% group set ecuyer_est'
-east_aventurier_on: 'command pex user %player% group set aventurier_est'
-east_beta_perms_on: 'command pex user %player% group set beta_est'
-east_builder_perms_on: 'command pex user %player% group set builder_est'
-east_moderator_perms_on: 'command pex user %player% group set moderator_est'
-east_perms_checker_in_creator_on: 'command pex user %player% group set horloger_est'
+east_ecuyer_on: folder east_ecuyer_on1,east_ecuyer_on2
+east_ecuyer_on1: 'command pex user %player% group add ecuyer_est'
+east_ecuyer_on2: 'command pex user %player% group remove ecuyer'
+east_aventurier_on: folder east_aventurier_on1,east_aventurier_on2
+east_aventurier_on1: 'command pex user %player% group add aventurier_est'
+east_aventurier_on2: 'command pex user %player% group remove aventurier'
+#
+east_beta_perms_on: folder east_beta_perms_on1,east_beta_perms_on2
+east_beta_perms_on1: 'command pex user %player% group add beta_est'
+east_beta_perms_on2: 'command pex user %player% group remove beta'
+east_builder_perms_on: folder east_builder_perms_on1,east_builder_perms_on2
+east_builder_perms_on1: 'command pex user %player% group add builder_est'
+east_builder_perms_on2: 'command pex user %player% group remove builder'
+east_moderator_perms_on: folder east_moderator_perms_on1,east_moderator_perms_on2
+east_moderator_perms_on1: 'command pex user %player% group add moderator_est'
+east_moderator_perms_on2: 'command pex user %player% group remove moderator'
+east_perms_checker_in_creator_on: folder east_perms_checker_in_creator_on1,east_perms_checker_in_creator_on2
+east_perms_checker_in_creator_on1: 'command pex user %player% group add horloger_est'
+east_perms_checker_in_creator_on2: 'command pex user %player% group remove horloger'
 east_founder_perms_on: 'message &6Bienvenue, Grand Horloger &a%player%&6. Votre groupe de permission n''a pas changé en entrant sur ce continent.'
 #
 #
@@ -210,17 +216,29 @@ east_perms_checker_out: if !staff east_player_perms_off else east_perms_checker_
 east_perms_checker_out_staff_alpha: if beta east_beta_perms_off else east_perms_checker_out_staff
 east_perms_checker_out_staff: if builder east_builder_perms_off else east_perms_checker_out_modo
 east_perms_checker_out_modo: if moderator east_moderator_perms_off else east_perms_checker_out_creator
-east_perms_checker_out_creator: if creator east_creator_perms_off else east_perms_checker_out_founder
-east_perms_checker_out_founder: if founder east_founder_perms_off else perms_error_message
+east_perms_checker_out_creator: if horloger east_creator_perms_off else east_perms_checker_out_founder
+east_perms_checker_out_founder: if admin east_founder_perms_off else perms_error_message
 #
 east_player_perms_off: if grade_ecuyer east_ecuyer_off else east_aventurier_off
-east_ecuyer_off: 'command pex user %player% group set ecuyer'
-east_aventurier_off: 'command pex user %player% group set aventurier'
-east_beta_perms_off: 'command pex user %player% group set beta'
-east_builder_perms_off: 'command pex user %player% group set builder'
-east_moderator_perms_off: 'command pex user %player% group set moderator'
-east_creator_perms_off: 'command pex user %player% group set horloger'
-east_founder_perms_off: 'message &6Bienvenue, Fondateur &a%player%&6. Votre groupe de permission n''a pas changé en quittant ce continent.'
+east_ecuyer_off: folder east_ecuyer_off1,east_ecuyer_off2
+east_ecuyer_off1: 'command pex user %player% group remove ecuyer_est'
+east_ecuyer_off2: 'command pex user %player% group add ecuyer'
+east_aventurier_off: folder east_aventurier_off1,east_aventurier_off2
+east_aventurier_off1: 'command pex user %player% group remove aventurier_est'
+east_aventurier_off2: 'command pex user %player% group add aventurier'
+east_beta_perms_off: folder east_beta_perms_off1,east_beta_perms_off2
+east_beta_perms_off1: 'command pex user %player% group remove beta_est'
+east_beta_perms_off2: 'command pex user %player% group add beta'
+east_builder_perms_off: folder east_builder_perms_off1,east_builder_perms_off2
+east_builder_perms_off1: 'command pex user %player% group remove builder_est'
+east_builder_perms_off2: 'command pex user %player% group add builder'
+east_moderator_perms_off: folder east_moderator_perms_off1,east_moderator_perms_off2
+east_moderator_perms_off1: 'command pex user %player% group remove moderator_est'
+east_moderator_perms_off2: 'command pex user %player% group add moderator'
+east_creator_perms_off: folder east_creator_perms_off1,east_creator_perms_off2
+east_creator_perms_off1: 'command pex user %player% group remove horloger_est'
+east_creator_perms_off2: 'command pex user %player% group add horloger'
+east_founder_perms_off: 'message &6Bienvenue, Grand Horloger &a%player%&6. Votre groupe de permission n''a pas changé en quittant ce continent.'
 #
 #####################################
 #
@@ -794,13 +812,19 @@ found_guild8_mess: 'message &d&oVous venez de trouver la Guilde des Bûcherons !
 #
 #
 # Intendant
-#Region flag athelas_castle_second entry-deny-message &dEtage réservé aux Ecuyers et grades supérieurs
 #
 #              Second Approuval
 #               End of Beta
-welcome_ecuyer: folder welcome_ecuyer_meka1,welcome_ecuyer_mess1,grade_ecuyer,pex_ecuyer,intendant_beta_clean
+#
+welcome_ecuyer: folder welcome_ecuyer_meka1,welcome_ecuyer_mess1,grade_ecuyer,pex_ecuyer,pex_av_del,intendant_beta_clean
 grade_ecuyer: tag add grade_ecuyer
-pex_ecuyer: 'command pex user %player% group set ecuyer'
+pex_ecuyer: 'command pex user %player% group add ecuyer'
+pex_av_del: 'command pex user %player% group remove aventurier'
+#
+# IS THIS STILL VALID @ZEDD ??
+#
+#  #Zedd.maka_tempo_journal_intendant_del
+#
 intendant_beta_clean: folder Zedd.maka_tempo_journal_intendant_del,hollish.mage_entry_branching_out_del
 #
 welcome_ecuyer_meka1: folder welcome_ecuyer_mess2,welcome_ecuyer_meka2 delay:7

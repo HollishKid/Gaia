@@ -70,6 +70,7 @@ NPC_options:
   salaire_rep:
     text: 'Ce calcul se fait ainsi: &f¤&a&o100 (&fBase&a&o) &f+ &a&oPoints de réputation (&fPart Variable&a&o) \nVotre Salaire est aussi influencé par votre niveau de Compétence dans votre Guilde et de votre Grade Royal.'
   villes_rep:
+    text: 'Consultez le Guide à ce propos.'
     events: redirect_guide
 ############
 #          #

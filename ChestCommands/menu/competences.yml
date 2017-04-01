@@ -68,7 +68,7 @@ haches:
   POSITION-Y: 3
 
 archerie:
-  COMMAND: 'archerie'
+  COMMAND: 'arc'
   NAME: '&cTir à l''arc'
   LORE:
     - 'Affiche la compétence Tir à l''Arc'

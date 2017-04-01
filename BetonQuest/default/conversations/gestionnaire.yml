@@ -59,7 +59,7 @@ player_options:
     pointers: autre_rep
   ou:
     text: 'Où se trouvent les parcelles et maisons ?'
-    pointers: ou_rep
+    event: default.redirect_map
   map:
     text: 'Comment me repérer dans toutes les parcelles ?'
     event: default.redirect_map
