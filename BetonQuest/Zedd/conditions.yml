@@ -41,6 +41,8 @@ maka_q2done: tag maka_q2done
 maka_q3start: tag maka_q3start
 maka_q3done: tag maka_q3done
 maka_rapport: or drisgan.eko_q2start,drisgan.eko_q2done
+maka_hascoffre: item coffre_mysterieux:1
+maka_end: tag maka_end
 #
 #
 ynv_inconvers: tag ynv_inconvers
