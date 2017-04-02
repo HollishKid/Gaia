@@ -478,7 +478,7 @@ erek:
     Range: 20
     Color: RED
     Style: SOLID
-  Health: 1000
+  Health: 750
   Damage: 4
   Disguise:
     Type: player
@@ -492,16 +492,18 @@ erek:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  Equipment:
+  - 298:4
   DamageModifiers:
   - ENTITY_EXPLOSION 250
   Skills:
   - skill{s=MobHealth} ~onDamaged >0 1
   - skill{s=HealthPack} ~onDamaged >8 0.08
-  - skill{s=RandomPot} ~onTimer:600
-  - skill{s=landmine} ~onTimer:400
+  - skill{s=RandomPot} ~onTimer:650
+  - skill{s=castGuardian} ~onTimer:550
   - command{c="setblock -7411 46 3272 redstone_block"} ~onDeath 1
   Options:
-    MovementSpeed: 0.2
+    MovementSpeed: 0.01
     FollowRange: 40
     Collidable: true
     PreventOtherDrops: true
@@ -523,7 +525,7 @@ HealthPackMob:
   Options:
     Size: 1
     PreventSlimeSplit: true
-    MovementSpeed: 0.005
+    MovementSpeed: 0.001
     PreventOtherDrops: true
     PreventRandomEquipment: true
     Collidable: false
@@ -552,3 +554,27 @@ hol_add:
     PreventRandomEquipment: true
   Modules:
     ThreatTable: true
+Tesla:
+  Mobtype: ZOMBIE
+  Display: '&4Cristal Guardien'
+  Health: 30
+  Damage: 3
+  Disguise:
+    Type: ENDER_CRYSTAL
+  DamageModifiers:
+  - FALL 0
+  Skills:
+  - skill {s=Firebolt} @target ~onTimer:180
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Equipment:
+  - 298:4
+  Options:
+    AlwaysShowName: true
+    KnockbackResistance: 10
+    MovementSpeed: 0.002
+    MaxCombatDistance: 30
+    PreventOtherDrops: true
