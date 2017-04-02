@@ -387,3 +387,13 @@ castGuardian3:
 castGuardian4:
   Skills:
   - summon{mob=Tesla;amount=1;noise=5} @Spawner{s=spawnerek4}
+call_hol_add:
+  Skills:
+  - randomskill {skills=call_hol_add1,call_hol_add2}
+  - message{msg="&6&oErek invoque des renforts!"} @PlayersInRadius{r=35} >0 1
+call_hol_add1:
+  Skills:
+  - summon{mob=erek_renfort;amount=2;noise=5} @Spawner{s=hol_add1}
+call_hol_add2:
+  Skills:
+  - summon{mob=erek_renfort;amount=2;noise=5} @Spawner{s=hol_add2}

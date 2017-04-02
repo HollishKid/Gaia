@@ -43,3 +43,76 @@ lettre_cachetee:
   - ''
   - '&6Une paire de dagues'
   - '&6en ornent le cachet.'
+#
+#
+#  FER DONJON I
+#
+#
+casque_fer_dj1:
+  Id: 306
+  Data: 0
+  Display: '&9Heaume vaillant'
+  Lore:
+  - '&e&oLa tête haute.'
+  - '&e&oLe regard droit.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 4
+      Health: 3
+  Options:
+    Unbreakable: true
+plastron_fer_dj1:
+  Id: 307
+  Data: 0
+  Display: '&9Plastron vaillant'
+  Lore:
+  - '&e&oInsuffle du courage'
+  - '&e&oà son porteur.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 7
+      Health: 3
+  Options:
+    Unbreakable: true
+  Enchantments:
+jambes_fer_dj1:
+  Id: 308
+  Data: 0
+  Display: '&9Jambières vaillantes'
+  Lore:
+  - '&e&oElles sont plus légère'
+  - '&e&oqu''il n''y parait.'
+  - ' '
+  - '&7&oRareté : &9Rare'
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 6
+      Health: 2
+  Options:
+    Unbreakable: true
+  Enchantments:
+pieds_fer_dj1:
+  Id: 309
+  Data: 0
+  Display: '&9Bottes vaillantes'
+  Lore:
+  - '&e&oOn pourrait marcher toute'
+  - '&e&ola journée sans se fatiguer'
+  - '&e&oavec ces bottes aux pieds!'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 4
+      Health: 2
+  Options:
+    Unbreakable: true
+  Enchantments:
