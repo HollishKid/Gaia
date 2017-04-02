@@ -337,6 +337,7 @@ erek_p1:
   Skills:
   - potion{type=SLOW;d=999999;l=10} @self ~onSpawn
   - skill{s=MissileLauncher} ~onTimer:240
+  - skill{s=call_hol_add} ~onTimer:350
   AIGoalSelectors:
   - 0 clear
   - 1 lookatplayers
