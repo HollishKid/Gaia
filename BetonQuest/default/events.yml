@@ -19,19 +19,6 @@
 nothing: tag del inexistent_tag
 #
 #
-# Voting Rewards
-#
-#     Enjin
-#      (currently 7 operationnal)
-#
-vote_enjin_1: folder vote_enjin_1_mess,vote_enjin_1_mess2,vote_enjin_1_mess3,vote_enjin_1_point
-vote_enjin_1_mess: 'message &d&o&lMerci d''avoir soutenu Gaïa ! Vous gagnez &21 &d&opoint de Vote !'
-vote_enjin_1_mess2: 'message &d&oVous pouvez gagner plus de points de votes en votant davantage,'
-vote_enjin_1_mess3: 'message &d&oou en donnant de votre temps. Consultez le &a/menu &d&osection &aRéseaux de Gaïa'
-vote_enjin_1_point: point votes 1
-#
-vote_enjin_all: 'message &d&o&lMerci d''avoir soutenu Gaïa ! Prenez cet argent et ce titre! '
-#
 #
 #
 journal_update: journal update
@@ -102,7 +89,8 @@ teleport_quai: 'run ^teleport -6577;64;3168;Gaia ^message &dJe ne devrais pas tr
 # Athelas Tester
 #
 athelas_out_checker: if intendant_done nothing else athelas_out_negative
-athelas_out_negative: folder athelas_out_timer,athelas_out_warn,athelas_out_warn2
+athelas_out_negative: if tempo_historique nothing else athelas_out_negative_exe
+athelas_out_negative_exe: folder athelas_out_timer,athelas_out_warn,athelas_out_warn2
 athelas_out_timer: objective start athelas_out_timer
 athelas_out_warn: 'message &d&lJe ne devrais pas encore quitter la Ville d''Athelas.'
 athelas_out_warn2: 'message &c&lRentrez dans la ville dans les 60 secondes, ou vous serez téléporté au Château.'
@@ -473,193 +461,43 @@ charon_store: 'command cc open charonnew.yml %player%'
 #
 # XP Boosters
 #
-xpboost2: if votes50 xp_boost_event2 else noxpboostvotes
-xpboost3: if votes75 xpboost3a else noxpboostvotes
-xpboost3a: if reput_athelas10 xp_boost_event3 else noxpboostreput
-xpboost4: if votes100 xpboost4a else noxpboostvotes
-xpboost4a: if reput_athelas20 xp_boost_event4 else noxpboostreput
+xpboost2: if reput_athelas50 xp_boost_event2 else noxpboostreput
+xpboost3: if reput_athelas100 xp_boost_event3 else noxpboostreput
+xpboost4: if reput_athelas200 xp_boost_event4 else noxpboostreput
 xpboost_timer: 'command thisisthexpboosttimercommandforonehour'
 #
 #
-xpboosttake50: point votes -50
-xpboosttake75: point votes -75
-xpboosttake100: point votes -100
-xpboosttake10reput: point reput_athelas -10
-xpboosttake20reput: point reput_athelas -20
+xpboosttake50reput: point reput_athelas -50
+xpboosttake100reput: point reput_athelas -100
+xpboosttake200reput: point reput_athelas -200
 #
-noxpboostvotes: folder noxpboostvotes1,noxpboostvotes2
-noxpboostvotes1: 'message &dVous n''avez pas assez de points de Vote.'
-noxpboostvotes2: 'message &dVous avez &2%point.votes.amount% &dPoint(s) de Vote.'
 noxpboostreput: folder noxpboostreput1,noxpboostreput2
 noxpboostreput1: 'message &dVous n''avez pas assez de points de Réputation.'
 noxpboostreput2: 'message &dVous avez &2%point.reput_athelas.amount% &dPoint(s) de Réputation.'
 #
-xp_boost_event2: folder xp_boost_event2a,xp_boost_event2c,xpboosttake50,xpboost_timer
+xp_boost_event2: folder xp_boost_event2a,xp_boost_event2c,xpboosttake50reput,xpboost_timer
 xp_boost_event2a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l2 &dpendant &21 &dHeure !'
 xp_boost_event2c: 'command xprate 2 true'
 #
-xp_boost_event3: folder xp_boost_event3a,xp_boost_event3c,xpboosttake75,xpboosttake10reput,xpboost_timer
+xp_boost_event3: folder xp_boost_event3a,xp_boost_event3c,xpboosttake100reput,xpboost_timer
 xp_boost_event3a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l3 &dpendant &21 &dHeure !'
 xp_boost_event3c: 'command xprate 3 true'
 #
-xp_boost_event4: folder xp_boost_event4a,xp_boost_event4c,xpboosttake100,xpboosttake20reput,xpboost_timer
+xp_boost_event4: folder xp_boost_event4a,xp_boost_event4c,xpboosttake200reput,xpboost_timer
 xp_boost_event4a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l4 &dpendant &21 &dHeure !'
 xp_boost_event4c: 'command xprate 4 true'
 #
 # Skins
 #
-skin_choisir: if skin_custom_cost skin_valider_exe else skin_no_fund
+skin_choisir: if reput_athelas10 skin_valider_exe else skin_no_fund
 skin_no_fund: folder skin_no_fund1,skin_no_fund2,skin_no_fund3
 skin_no_fund1: 'message &dVous n''avez pas assez de &2Points de Réputation'
-skin_no_fund2: 'message &det/ou de &2Points de Vote &dpour acheter un skin.'
-skin_no_fund3: 'message &dRéputation: &2%point.reput_athelas.amount% &d/ 10 et Votes: &2%point.votes.amount% &d/ 20.'
+skin_no_fund2: 'message &dpour acheter un skin.'
+skin_no_fund3: 'message &dRéputation : &2%point.reput_athelas.amount% &d/ 10.'
 #
-skin_valider_exe: folder skin_pay_reput,skin_pay_vote,skin_executor
+skin_valider_exe: folder skin_pay_reput,skin_executor
 skin_pay_reput: point reput_athelas -10
-skin_pay_vote: point votes -20
 skin_executor: 'command vsign %player% skinsrestorer set %player% {data}'
-#
-# Pets
-#
-pets_mount: if votes100 pets_mount_exe else noxpboostvotes
-pets_mount_exe: folder pets_mount_exe1,pets_mount_exe2,point_votes_m100
-pets_mount_exe1: 'message &dVous pouvez désormais monter sur vos Compagnons !'
-pets_mount_exe2: 'command pex user %player% add Pet.PetToMount'
-#
-pets_chicken: if votes25 pets_chicken_exe else noxpboostvotes
-pets_chicken_exe: folder pets_chicken_exe1,pets_chicken_exe2,point_votes_m25
-pets_chicken_exe1: 'message &dVous avez maintenant un Poulet ! (Accessible depuis le /menu)'
-pets_chicken_exe2: 'command pex user %player% add Pet.chicken'
-#
-pets_cow: if votes30 pets_cow_exe else noxpboostvotes
-pets_cow_exe: folder pets_cow_exe1,pets_cow_exe2,point_votes_m30
-pets_cow_exe1: 'message &dVous avez maintenant une Vache ! (Accessible depuis le /menu)'
-pets_cow_exe2: 'command pex user %player% add Pet.cow'
-#
-pets_sheep: if votes35 pets_sheep_exe else noxpboostvotes
-pets_sheep_exe: folder pets_sheep_exe1,pets_sheep_exe2,point_votes_m35
-pets_sheep_exe1: 'message &dVous avez maintenant un Mouton ! (Accessible depuis le /menu)'
-pets_sheep_exe2: 'command pex user %player% add Pet.sheep'
-#
-pets_pig: if votes40 pets_pig_exe else noxpboostvotes
-pets_pig_exe: folder pets_pig_exe1,pets_pig_exe2,point_votes_m40
-pets_pig_exe1: 'message &dVous avez maintenant un Cochon ! (Accessible depuis le /menu)'
-pets_pig_exe2: 'command pex user %player% add Pet.pig'
-#
-pets_rabbit: if votes50 pets_rabbit_exe else noxpboostvotes
-pets_rabbit_exe: folder pets_rabbit_exe1,pets_rabbit_exe2,point_votes_m50
-pets_rabbit_exe1: 'message &dVous avez maintenant un Lapin ! (Accessible depuis le /menu)'
-pets_rabbit_exe2: 'command pex user %player% add Pet.rabbit'
-#
-pets_villager: if votes200 pets_villager_exe else noxpboostvotes
-pets_villager_exe: folder pets_villager_exe1,pets_villager_exe2,point_votes_m200
-pets_villager_exe1: 'message &dVous avez maintenant un Villageois ! (Accessible depuis le /menu)'
-pets_villager_exe2: 'command pex user %player% add Pet.villager'
-#
-pets_gollem: if votes250 pets_gollem_exe else noxpboostvotes
-pets_gollem_exe: folder pets_gollem_exe1,pets_gollem_exe2,point_votes_m250
-pets_gollem_exe1: 'message &dVous avez maintenant un Gollem de Fer ! (Accessible depuis le /menu)'
-pets_gollem_exe2: 'command pex user %player% add Pet.irongolem'
-#
-pets_snowman: if votes250 pets_snowman_exe else noxpboostvotes
-pets_snowman_exe: folder pets_snowman_exe1,pets_snowman_exe2,point_votes_m250
-pets_snowman_exe1: 'message &dVous avez maintenant un Bonhomme de Neige ! (Accessible depuis le /menu)'
-pets_snowman_exe2: 'command pex user %player% add Pet.snowman'
-#
-pets_witch: if votes250 pets_witch_exe else noxpboostvotes
-pets_witch_exe: folder pets_witch_exe1,pets_witch_exe2,point_votes_m250
-pets_witch_exe1: 'message &dVous avez maintenant une Sorcière ! (Accessible depuis le /menu)'
-pets_witch_exe2: 'command pex user %player% add Pet.witch'
-#
-#
-point_votes_m25: point votes -25
-point_votes_m30: point votes -30
-point_votes_m35: point votes -35
-point_votes_m40: point votes -40
-point_votes_m50: point votes -50
-point_votes_m100: point votes -100
-point_votes_m200: point votes -200
-point_votes_m250: point votes -250
-#
-#
-# Vente de Skins faits
-#
-############################ DEPRECATED until further notice (several skins not functionning)
-skin_pay_reput1: point reput_athelas -2
-skin_pay_vote1: point votes -5
-#
-#
-skin_dreamwish: if skin_premade skin_dreamwish_exe else skin_no_fund
-skin_dreamwish_exe: folder skin_pay_reput1,skin_pay_vote1,skin_dreamwish_exe1
-skin_dreamwish_exe1: 'command skinsrestorer set %player% DreamWish'
-
-skin_Olyvia_: if skin_premade skin_Olyvia__exe else skin_no_fund
-skin_Olyvia__exe: folder skin_pay_reput1,skin_pay_vote1,skin_Olyvia__exe1
-skin_Olyvia__exe1: 'command skinsrestorer set %player% Olyvia_'
-
-skin_kathythecat101: if skin_premade skin_kathythecat101_exe else skin_no_fund
-skin_kathythecat101_exe: folder skin_pay_reput1,skin_pay_vote1,skin_kathythecat101_exe1
-skin_kathythecat101_exe1: 'command skinsrestorer set %player% kathythecat101'
-
-skin_barrowsx: if skin_premade skin_barrowsx_exe else skin_no_fund
-skin_barrowsx_exe: folder skin_pay_reput1,skin_pay_vote1,skin_barrowsx_exe1
-skin_barrowsx_exe1: 'command skinsrestorer set %player% barrowsx'
-
-skin_typical_savage: if skin_premade skin_typical_savage_exe else skin_no_fund
-skin_typical_savage_exe: folder skin_pay_reput1,skin_pay_vote1,skin_typical_savage_exe1
-skin_typical_savage_exe1: 'command skinsrestorer set %player% typical_savage'
-
-skin_Destati: if skin_premade skin_Destati_exe else skin_no_fund
-skin_Destati_exe: folder skin_pay_reput1,skin_pay_vote1,skin_Destati_exe1
-skin_Destati_exe1: 'command skinsrestorer set %player% Destati'
-
-skin_whoisyourmommy: if skin_premade skin_whoisyourmommy_exe else skin_no_fund
-skin_whoisyourmommy_exe: folder skin_pay_reput1,skin_pay_vote1,skin_whoisyourmommy_exe1
-skin_whoisyourmommy_exe1: 'command skinsrestorer set %player% whoisyourmommy'
-
-skin_MandiHikari: if skin_premade skin_MandiHikari_exe else skin_no_fund
-skin_MandiHikari_exe: folder skin_pay_reput1,skin_pay_vote1,skin_MandiHikari_exe1
-skin_MandiHikari_exe1: 'command skinsrestorer set %player% MandiHikari'
-
-skin_AncientRelyk: if skin_premade skin_AncientRelyk_exe else skin_no_fund
-skin_AncientRelyk_exe: folder skin_pay_reput1,skin_pay_vote1,skin_AncientRelyk_exe1
-skin_AncientRelyk_exe1: 'command skinsrestorer set %player% AncientRelyk'
-#
-skin_Watanuki: if skin_premade skin_Watanuki_exe else skin_no_fund
-skin_Watanuki_exe: folder skin_pay_reput1,skin_pay_vote1,skin_Watanuki_exe1
-skin_Watanuki_exe1: 'command skinsrestorer set %player% Watanuki'
-
-skin_definitivDanny: if skin_premade skin_definitivDanny_exe else skin_no_fund
-skin_definitivDanny_exe: folder skin_pay_reput1,skin_pay_vote1,skin_definitivDanny_exe1
-skin_definitivDanny_exe1: 'command skinsrestorer set %player% definitivDanny'
-
-skin_Oguzhan_TR: if skin_premade skin_Oguzhan_TR_exe else skin_no_fund
-skin_Oguzhan_TR_exe: folder skin_pay_reput1,skin_pay_vote1,skin_Oguzhan_TR_exe1
-skin_Oguzhan_TR_exe1: 'command skinsrestorer set %player% Oguzhan_TR'
-
-skin_Gravn: if skin_premade skin_Gravn_exe else skin_no_fund
-skin_Gravn_exe: folder skin_pay_reput1,skin_pay_vote1,skin_Gravn_exe1
-skin_Gravn_exe1: 'command skinsrestorer set %player% Gravn'
-
-skin__K_O_T_: if skin_premade skin__K_O_T__exe else skin_no_fund
-skin__K_O_T__exe: folder skin_pay_reput1,skin_pay_vote1,skin__K_O_T__exe1
-skin__K_O_T__exe1: 'command skinsrestorer set %player% _K_O_T_'
-
-skin_jeb_: if skin_premade skin_jeb__exe else skin_no_fund
-skin_jeb__exe: folder skin_pay_reput1,skin_pay_vote1,skin_jeb__exe1
-skin_jeb__exe1: 'command skinsrestorer set %player% jeb_'
-
-skin_SirFilesOG: if skin_premade skin_SirFilesOG_exe else skin_no_fund
-skin_SirFilesOG_exe: folder skin_pay_reput1,skin_pay_vote1,skin_SirFilesOG_exe1
-skin_SirFilesOG_exe1: 'command skinsrestorer set %player% SirFilesOG'
-
-skin_HellCatcher: if skin_premade skin_HellCatcher_exe else skin_no_fund
-skin_HellCatcher_exe: folder skin_pay_reput1,skin_pay_vote1,skin_HellCatcher_exe1
-skin_HellCatcher_exe1: 'command skinsrestorer set %player% HellCatcher'
-
-skin__A7md: if skin_premade skin__A7md_exe else skin_no_fund
-skin__A7md_exe: folder skin_pay_reput1,skin_pay_vote1,skin__A7md_exe1
-skin__A7md_exe1: 'command skinsrestorer set %player% _A7md'
 #
 #
 #
@@ -3638,7 +3476,7 @@ hollishrole: 'command jukebox sound %player% http://files.enjin.com/1186825/voic
 #
 #                                        ~H
 ###############################################################################
-historique_folder: folder meka,teleport_tableau1 delay:0
+historique_folder: folder tempo_historique_tag,meka,teleport_tableau1 delay:0
 meka: folder meka1,title_begin1 delay:0
 meka1: folder meka2,message1 delay:3
 meka2: folder meka3,title_begin2 delay:3
@@ -3665,7 +3503,7 @@ meka22: folder meka23,teleport_tableau5 delay:10
 meka23: folder meka24,message18 delay:3
 meka24: folder meka25,message19 delay:7
 meka25: folder meka26,message20 delay:7
-meka26: folder teleport_retour delay:7
+meka26: folder teleport_retour,tempo_historique_tag_del delay:7
 teleport_tableau1: folder teleport_tableau1_exe delay:1
 teleport_tableau1_exe: teleport -7235;80;2660;Gaia
 teleport_tableau2: folder teleport_tableau2_exe delay:0
@@ -3717,15 +3555,5 @@ message17: 'message &2&oLa situation étant stablisée au premier Portail Magiqu
 message18: 'message &2&oLe mot est alors passé à tous les Aventuriers courageux de venir prêter main forte à la Ville d''Athelas.'
 message19: 'message &2&oBeaucoup répondent à l''appel et des navires entiers débarquent à Athelas pour rejoindre le combat.'
 message20: 'message &2&oVous embarquez vous aussi à bord d''un grand navire pour la ville Royale d''Athelas.'
-#
-# Deprecated - Utilisation des Barrières Invisibles (Barrier:166)
-#
-cabine1_on: setblock REDSTONE_TORCH_ON -6743;65;3260;Gaia
-cabine2_on: setblock REDSTONE_TORCH_ON -6747;65;3260;Gaia
-cabine3_on: setblock REDSTONE_TORCH_ON -6745;65;3260;Gaia
-cabine1_off_partytest: party 4 !cabine1_pleine cabine1_off_exe
-cabine1_off_exe: setblock AIR -6743;65;3260;Gaia
-cabine2_off_partytest: party 4 !cabine2_pleine cabine2_off_exe
-cabine2_off_exe: setblock AIR -6747;65;3260;Gaia
-cabine3_off_partytest: party 4 !cabine3_pleine cabine3_off_exe
-cabine3_off_exe: setblock AIR -6745;65;3260;Gaia
+tempo_historique_tag: tag add tempo_historique
+tempo_historique_tag_del: tag del tempo_historique

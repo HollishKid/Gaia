@@ -420,7 +420,6 @@ on break of chest:
 	if "%{chester::*}%" contains "%location of event-block%":
 		remove location of event-block from {chester::*}
 		message "&c&lCe coffre a été supprimé du Chester."
-		message "%{chester::*}%"
 	else:
 		stop
 

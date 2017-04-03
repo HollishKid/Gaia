@@ -208,6 +208,7 @@ groups:
     - essentials.sethome
     - essentials.sethome.bed
     - modifyworld.digestion
+    - Pet.PetToMount
     options:
       rank: '900'
       prefix: §6[§2Citoyen§6]§7
@@ -265,9 +266,11 @@ groups:
     - essentials.tpa
     - essentials.tpahere
     - essentials.tpaccept
+    - essentials.helpop.receive
     - authme.vip
     - Pet.PetToMount
     - Pet.rabbit
+    - Pet.blaze
     options:
       rank: '700'
       prefix: §6[§aBêta§6]§7
@@ -279,6 +282,7 @@ groups:
     - notification.commandes
     - essentials.tpa
     - essentials.tpaccept
+    - essentials.helpop.receive
     - authme.vip
     options:
       rank: '600'
@@ -287,7 +291,7 @@ groups:
     inheritance:
     - aventurier
     permissions:
-    - worldedit.clipboard.cut
+    - authme.vip
     - notification.vulgarite
     - notification.commandes
     - chestcommands.open.admin.yml
@@ -306,6 +310,7 @@ groups:
     - essentials.tppos
     - essentials.teleport.cooldown.bypass
     - essentials.helpop.receive
+    - worldedit.clipboard.cut
     - worldedit.region.replace
     - worldedit.region.set
     - worldedit.clipboard.copy
@@ -343,6 +348,7 @@ groups:
     inheritance:
     - aventurier_est
     permissions:
+    - authme.vip
     - notification.vulgarite
     - notification.commandes
     - chestcommands.open.admin.yml
@@ -360,10 +366,7 @@ groups:
     inheritance:
     - builder
     permissions:
-    - essentials.chat.magic
-    - essentials.chat.format
-    - essentials.chat.color
-    - essentials.msg.color
+    - authme.vip
     - globalchestshop.admin
     - authme.admin.register
     - admin.prison
@@ -379,7 +382,6 @@ groups:
     - essentials.ban.offline
     - essentials.tempban.offline
     - essentials.teleport.cooldown.bypass
-    - essentials.invsee.modify
     - essentials.invsee
     - essentials.mute
     - essentials.seen
@@ -390,8 +392,6 @@ groups:
     - notification.commandes
     - chestcommands.open.admin.yml
     - chestcommands.open.tetes.yml
-    - chestcommands.open.MenuBlaBla.yml
-    - chestcommands.open.FondMarain.yml
     - menu.admin
     - admin.histoire
     - menu.admin.gm1
@@ -403,6 +403,7 @@ groups:
     inheritance:
     - builder_est
     permissions:
+    - authme.vip
     - authme.admin.register
     - admin.prison
     - essentials.vanish
@@ -417,7 +418,6 @@ groups:
     - essentials.ban.offline
     - essentials.tempban.offline
     - essentials.teleport.cooldown.bypass
-    - essentials.invsee.modify
     - essentials.invsee
     - essentials.mute
     - essentials.seen
@@ -436,43 +436,23 @@ groups:
   horloger:
     inheritance:
     - moderator
+    - builder
     permissions:
-    - worldedit.*
-    - worldguard.*
-    - areashop.*
-    - mythicmobs.admin
+    - authme.vip
     - menu.npc.info
     - globalchestshop.admin
-    - citizens.*
-    - essentials.time
-    - essentials.time.set
     - essentials.fly
-    - essentials.fly.others
-    - menu.betonquest.reload
-    - betonquest.admin
-    - worldguard.region.addmember.*
-    - worldguard.region.removemember.*
-    - worldguard.region.info.*
-    - chestcommands.command.reload
     options:
       rank: '50'
       prefix: §6[§aHorloger§6]§f
   horloger_est:
     inheritance:
     - moderator_est
+    - builder_est
     permissions:
+    - authme.vip
     - menu.npc.info
     - globalchestshop.admin
-    - essentials.time
-    - essentials.time.set
-    - essentials.fly
-    - essentials.fly.others
-    - menu.betonquest.reload
-    - betonquest.admin
-    - worldguard.region.addmember.*
-    - worldguard.region.removemember.*
-    - worldguard.region.info.*
-    - chestcommands.command.reload
     options:
       rank: '49'
       prefix: §6[§aHorloger§6]§f
@@ -480,6 +460,20 @@ groups:
     inheritance:
     - horloger
     permissions:
+    - authme.vip
+    - essentials.vanish.see
+    - essentials.ban.exempt
+    - essentials.invsee.preventmodify
+    options:
+      rank: '2'
+      prefix: §6[§aGrand Horloger§6]§f
+  god:
+    inheritance:
+    - admin
+    permissions:
+    - authme.vip
+    - essentials.sudo.exempt
+    - authme.vip
     - multiverse.*
     - -modifyworld.mobtarget.*
     - modifyworld.blocks.place.14
@@ -521,16 +515,8 @@ groups:
     - townywands.cmd.debug
     - townywands.cmd.help
     options:
-      rank: '2'
-      prefix: §6[§aGrand Horloger§6]§f
-  god:
-    inheritance:
-    - admin
-    permissions:
-    - essentials.sudo.exempt
-    options:
       rank: '1'
-      prefix: '§6[ §2God §6]§f '
+      prefix: §6[§aGrand Horloger§6]§f
 schema-version: 1
 users:
   f3563ee5-4c13-2cfd-b545-6ab5d117f9be:

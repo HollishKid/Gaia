@@ -19,6 +19,7 @@ day: time 7-19
 chest_loot_time: testforblock -6753;67;2967;Gaia GLOWSTONE
 sneaking: sneak
 sun: weather sun
+tempo_historique: tag tempo_historique
 #
 #
 # Events
@@ -86,6 +87,9 @@ reput_athelas10: point reput_athelas 10
 reput_athelas15: point reput_athelas 15
 reput_athelas20: point reput_athelas 20
 reput_athelas30: point reput_athelas 30
+reput_athelas50: point reput_athelas 50
+reput_athelas100: point reput_athelas 100
+reput_athelas200: point reput_athelas 500
 #
 votes1: point votes 1
 votes3: point votes 3
@@ -110,11 +114,6 @@ votes250: point votes 250
 vulgarite1: point vulgarite 1
 vulgarite3: point vulgarite 3
 vulgarite5: point vulgarite 5
-#
-# Charon
-#
-skin_custom_cost: and reput_athelas10,votes20
-skin_premade: and reput_athelas2,votes5
 ######################################
 #
 #

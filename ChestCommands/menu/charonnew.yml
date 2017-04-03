@@ -247,8 +247,7 @@ skin_perso:
     - 'NOM EXACT du skin sur la '
     - 'pancarte qui apparaît.'
     - ' '
-    - '&cPrix : &a10 &cPoints de réputation'
-    - '        &a20 &cPoints de Vote'
+    - '&cPrix : &a10 &cPoints de Réputation'
     - ' '
     - '&4ATTENTION &f: '
     - 'Certains skins ne fonctionnent pas'
@@ -266,7 +265,7 @@ xp_event2:
     - '&fAffecte tous les joueurs.'
     - '&fDurée: &21 &fheure'
     - ' '
-    - '&cPrix : &a50 &cPoints de Vote'
+    - '&cPrix : &a50 &cPoints de Réputation'
   POSITION-X: 7
   POSITION-Y: 3
   
@@ -280,8 +279,7 @@ xp_event3:
     - '&fAffecte tous les joueurs.'
     - '&fDurée: &21 &fheure'
     - ' '
-    - '&cPrix : &a10 &cPoints de réputation'
-    - '        &a75 &cPoints de Vote'
+    - '&cPrix : &a100 &cPoints de Réputation'
   POSITION-X: 8
   POSITION-Y: 3
   
@@ -295,148 +293,123 @@ xp_event4:
     - '&fAffecte tous les joueurs.'
     - '&fDurée: &21 &fheure'
     - ' '
-    - '&cPrix : &a20 &cPoints de réputation'
-    - '        &a100 &cPoints de Vote'
+    - '&cPrix : &a200 &cPoints de Réputation'
   POSITION-X: 9
   POSITION-Y: 3
   
-mount:
-  COMMAND: 'console: bq event {player} default.pets_mount'
-  NAME: '&aDressez vos Compagnons'
-  ID: '420'
-  LORE:
-    - '&fVous permet de monter'
-    - '&fsur vos compagnon.'
-    - ' '
-    - '&fVous vous déplacerez'
-    - '&fà sa vélocité spécifique.'
-    - ' '
-    - '&cPrix : &a100 &cPoints de Vote'
-  POSITION-X: 1
-  POSITION-Y: 5
-  
 chicken:
-  COMMAND: 'console: bq event {player} default.pets_chicken'
   NAME: '&aCompagnon Poule'
   ID: '366'
   LORE:
-    - '&fAchetez un Compagnon'
-    - '&aPoule &f!'
     - ' '
     - '&fVélocité: &20.15'
     - ' '
-    - '&cPrix : &a25 &cPoints de Vote'
+    - '&fCe Compagnon est débloqué'
+    - '&fau 10ème vote !'
   POSITION-X: 3
   POSITION-Y: 5
+  KEEP-OPEN: true
   
 cow:
-  COMMAND: 'console: bq event {player} default.pets_cow'
   NAME: '&aCompagnon Vâche'
   ID: '363'
   LORE:
-    - '&fAchetez un Compagnon'
-    - '&aVâche &f!'
     - ' '
     - '&fVélocité: &20.20'
     - ' '
-    - '&cPrix : &a30 &cPoints de Vote'
+    - '&fCe Compagnon est débloqué'
+    - '&fau 20ème vote !'
   POSITION-X: 4
   POSITION-Y: 5
+  KEEP-OPEN: true
   
 mutton:
-  COMMAND: 'console: bq event {player} default.pets_sheep'
   NAME: '&aCompagnon Mouton'
   ID: '424'
   LORE:
-    - '&fAchetez un Compagnon'
-    - '&aMouton &f!'
     - ' '
     - '&fVélocité: &20.25'
     - ' '
-    - '&cPrix : &a35 &cPoints de Vote'
+    - '&fCe Compagnon est débloqué'
+    - '&fau 30ème vote !'
   POSITION-X: 5
   POSITION-Y: 5
+  KEEP-OPEN: true
   
 pig:
-  COMMAND: 'console: bq event {player} default.pets_pig'
   NAME: '&aCompagnon Cochon'
   ID: '319'
   LORE:
-    - '&fAchetez un Compagnon'
-    - '&aCochon &f!'
     - ' '
     - '&fVélocité: &20.30'
     - ' '
-    - '&cPrix : &a40 &cPoints de Vote'
+    - '&fCe Compagnon est débloqué'
+    - '&fau 40ème vote !'
   POSITION-X: 6
   POSITION-Y: 5
+  KEEP-OPEN: true
   
 rabbit:
-  COMMAND: 'console: bq event {player} default.pets_rabbit'
   NAME: '&aCompagnon Lapin'
   ID: '411'
   LORE:
-    - '&fAchetez un Compagnon'
-    - '&aLapin &f!'
     - ' '
     - '&fVélocité: &20.35'
     - ' '
-    - '&cPrix : &a50 &cPoints de Vote'
+    - '&fCe Compagnon est débloqué'
+    - '&fau 50ème vote !'
   POSITION-X: 7
   POSITION-Y: 5
+  KEEP-OPEN: true
   
 villager:
-  COMMAND: 'console: bq event {player} default.pets_villager'
   NAME: '&aCompagnon Villageois'
   ID: '397:3'
   LORE:
-    - '&fAchetez un Compagnon'
-    - '&aVillageois &f!'
     - ' '
     - '&fVélocité: &20.30'
     - ' '
-    - '&cPrix : &a200 &cPoints de Vote'
+    - '&fCe Compagnon est débloqué'
+    - '&fau 75ème vote !'
   POSITION-X: 3
   POSITION-Y: 6
+  KEEP-OPEN: true
   
 gollem:
-  COMMAND: 'console: bq event {player} default.pets_gollem'
   NAME: '&aCompagnon Gollem'
   ID: '265'
   LORE:
-    - '&fAchetez un Compagnon'
-    - '&aGollem de Fer &f!'
     - ' '
     - '&fVélocité: &20.35'
     - ' '
-    - '&cPrix : &a250 &cPoints de Vote'
-  POSITION-X: 4
+    - '&fCe Compagnon est débloqué'
+    - '&fau 200ème vote !'
+  POSITION-X: 6
   POSITION-Y: 6
+  KEEP-OPEN: true
   
 snowman:
-  COMMAND: 'console: bq event {player} default.pets_snowman'
   NAME: '&aCompagnon Bonhomme de Neige'
   ID: '332'
   LORE:
-    - '&fAchetez un Compagnon'
-    - '&aBonhomme de Neige &f!'
     - ' '
     - '&fVélocité: &20.30'
     - ' '
-    - '&cPrix : &a250 &cPoints de Vote'
+    - '&fCe Compagnon est débloqué'
+    - '&fau 150ème vote !'
   POSITION-X: 5
   POSITION-Y: 6
+  KEEP-OPEN: true
   
 witch:
-  COMMAND: 'console: bq event {player} default.pets_witch'
   NAME: '&aCompagnon Sorcière'
   ID: '438'
   LORE:
-    - '&fAchetez un Compagnon'
-    - '&aSorcière &f!'
     - ' '
     - '&fVélocité: &20.30'
     - ' '
-    - '&cPrix : &a250 &cPoints de Vote'
-  POSITION-X: 6
+    - '&fCe Compagnon est débloqué'
+    - '&fau 100ème vote !'
+  POSITION-X: 4
   POSITION-Y: 6
+  KEEP-OPEN: true

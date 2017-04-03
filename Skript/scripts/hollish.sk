@@ -391,11 +391,64 @@ command /chanel <text>:
 # Voting
 #
 on vote:
-	message "&d&o&lMerci d'avoir soutenu Gaïa !"
-	message "&d&oVous avez voté sur : &2%event-string%"
-	message "&d&oVous gagnez &f¤ &2100 &d&oet &21 Point de Vote &d&o!"
+	add 1 to {votes.%player%}
 	command "eco give %player% 100"
 	command "bq point %player% add votes 1"
+#
+	if {votes.%player%} is 1:
+		message "&d&o&lMerci pour votre premier vote !"
+		message "&d&oVous avez voté sur : &2%event-string%"
+		message "&d&oVous gagnez &f¤ &2100 &d&oet &21 Point de Vote &d&o!"
+	else if {votes.%player%} is 10:
+		message "&d&o&lMerci pour votre 10ème vote."
+		message "&d&oVous débloquez le Compagnon Poule !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.chicken"
+	else if {votes.%player%} is 20:
+		message "&d&o&lMerci pour votre 20ème vote."
+		message "&d&oVous débloquez le Compagnon Vache !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.cow"
+	else if {votes.%player%} is 30:
+		message "&d&o&lMerci pour votre 30ème vote."
+		message "&d&oVous débloquez le Compagnon Mouton !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.sheep"
+	else if {votes.%player%} is 40:
+		message "&d&o&lMerci pour votre 40ème vote."
+		message "&d&oVous débloquez le Compagnon Cochon !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.pig"
+	else if {votes.%player%} is 50:
+		message "&d&o&lMerci pour votre 50ème vote."
+		message "&d&oVous débloquez le Compagnon Lapin !"
+		message "&d&o&lVous débloquez le Salon Grand Voyageur à la Gare Centrale d'Athelas !"
+		command "pex user %player% add Pet.rabbit"
+	else if {votes.%player%} is 75:
+		message "&d&o&lMerci pour votre 75ème vote."
+		message "&d&oVous débloquez le Compagnon Villageois !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.villager"
+	else if {votes.%player%} is 100:
+		message "&d&o&lMerci pour votre 100ème vote."
+		message "&d&oVous débloquez le Compagnon Sorcière !"
+		message "&d&o&lVous débloquez le Salon Banquiers à la Banque d'Athelas !"
+		command "pex user %player% add Pet.witch"
+	else if {votes.%player%} is 150:
+		message "&d&o&lMerci pour votre 150ème vote."
+		message "&d&oVous débloquez le Compagnon Bonhomme de Neige !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.snowman"
+	else if {votes.%player%} is 200:
+		message "&d&o&lMerci pour votre 200ème vote."
+		message "&d&oVous débloquez le Compagnon Gollem !"
+		message "&d&o&lVous débloquez le Salon d'Honneur à la Bibliothèque d'Athelas !"
+		command "pex user %player% add Pet.irongolem"
+	else:
+		message "&d&o&lMerci d'avoir soutenu Gaïa !"
+		message "&d&oVous avez voté sur : &2%event-string%"
+		message "&d&oVous gagnez &f¤ &2100 &d&oet &21 Point de Vote &d&o!"
+		message "&d&oTotal de Points de Vote : &2%{votes.%player%}%"
 #
 #
 #  PVP Manager
@@ -549,6 +602,9 @@ on rightclick on sign:
                 message "&a&oLa porte du &2Lobby Administrateur &a&os'ouvre." to player
                 open block at location at -6710, 65, 2985 of the world "Gaia"
                 open block at location at -6710, 65, 2984 of the world "Gaia"
+                wait 7 seconds
+                close block at location at -6710, 65, 2985 of the world "Gaia"
+                close block at location at -6710, 65, 2984 of the world "Gaia"
 
 command /thisisthelobbylockpadchecker <player>:
 	executable by: console

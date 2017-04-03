@@ -105,9 +105,12 @@ command /netherien2killed:
 			message "&4&lLe portail au fond de la salle s'ouvre !" to loop-value
 		wait 60 seconds
 		loop {donjon_ouest_participants::*}:
-			message "&4&lNe restez pas traîner là !" to loop-value
-			message "&4&lD'autres viles créatures pourraient venir !" to loop-value
-			teleport loop-value to location at -7647, 65, 2902 of the world "Gaia"
+			if loop-value is in the region "gaia_nether":
+				message "&d&oPour revenir dans la monde de Gaïa, utilisez la pancarte accrochée au Portail auquel vous êtes arrivé." to loop-value
+			else:
+				message "&4&lNe restez pas traîner là !" to loop-value
+				message "&4&lD'autres viles créatures pourraient venir !" to loop-value
+				teleport loop-value to location at -7647, 65, 2902 of the world "Gaia"
 		execute console command "resettingnetherportal2"
 		
 		
