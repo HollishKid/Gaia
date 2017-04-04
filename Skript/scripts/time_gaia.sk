@@ -23,10 +23,16 @@ on join:
 	wait 30 seconds
 	if {event.double.xp} is 1:
 		send player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
-		message "&aTous les XP gagnés sont doublés tous les mercredis entre 16H et 20H !"
-	if {event.breach} is 1:
+		message "&aTous les XP gagnés sont doublés tous les samedis entre 18H et 20H !"
+	else if {event.triple.xp} is 1:
+		send player title "&aEvent Triple XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+		message "&aTous les XP gagnés sont triplés tous les mercredis entre 16H et 20H !"
+	else if {event.breach} is 1:
 		send player title "&c&lBrèche" with subtitle "Athelas est assiégé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 		message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"	
+	else if {event.worldboss} is 1:
+		send player title "&c&lKalphite - WorldBoss" with subtitle "Village des Premiers Hommes" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+		message "&cRendez-vous au Village des Premiers Hommes en -7235;2658 pour affronter le Kalphite !"	
 #
 #
 # On Load
@@ -42,7 +48,9 @@ on load:
 	set {_tmpO} to now
 	set {day.index} to day of week from date {_tmpO}
 	set {event.breach} to 0
+	set {event.worldboss} to 0
 	set {event.double.xp} to 0
+	set {event.triple.xp} to 0
 #
 	set {thief.treasure.security} to location at -6753, 54, 2975 of the world "Gaia"
 #
@@ -104,28 +112,32 @@ every 3 minutes in "Gaia":
 #
 #
 every 5 minutes in "Gaia":
+	set {_tmpO} to now
+	set {day.index} to day of week from date {_tmpO}
 	set {hour.system} to "%hour%"
 #
 # Mercredi entre 16h et 20h
 #
 	if {day.index} is "3":
 		if {hour.system} is "16":
-			if {event.double.xp} is 0:
-				set {event.double.xp} to 1
-				execute console command "xprate 2 true"
+			if {event.triple.xp} is 0:
+				set {event.triple.xp} to 1
+				execute console command "xprate 3 true"
+				broadcast "&aTous les XP gagnés sont triplés tous les mercredis entre 16H et 20H !"
 				loop all players:
-					send loop-player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+					send loop-player title "&aEvent Triple XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 			
-		if {hour.system} is "20":
-			if {event.double.xp} is 1:
+		else if {hour.system} is "20":
+			if {event.triple.xp} is 1:
 				execute console command "xprate reset"
-				set {event.double.xp} to 0
+				set {event.triple.xp} to 0
+				broadcast "&aEvent Triple XP &f- &cTerminé"
 				loop all players:
-					send loop-player title "&aEvent Double XP" with subtitle "&cTerminé" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+					send loop-player title "&aEvent Triple XP" with subtitle "&cTerminé" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 #
 # Vendredi entre 19h et 22h
 #
-	if {day.index} is "5":
+	else if {day.index} is "5":
 		if {hour.system} is "19":
 			if {event.breach} is 0:
 				set {event.breach} to 1
@@ -134,8 +146,9 @@ every 5 minutes in "Gaia":
 				broadcast "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"
 				loop all players:
 					send loop-player title "&c&lBrèche" with subtitle "Athelas est assiégé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+					message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !" to loop-player
 			
-		if {hour.system} is "22":
+		else if {hour.system} is "22":
 			if {event.breach} is 1:
 				set {event.breach} to 0
 				execute console command "setblock -6751 50 2971 air 0 replace"
@@ -143,14 +156,52 @@ every 5 minutes in "Gaia":
 				broadcast "&aLa Brèche en -7050;3200 a été refermée."
 				loop all players:
 					send loop-player title "&aBrèche" with subtitle "&aEnnemi repoussé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+					
 #
+# Samedi entre 18h et 20h
+#
+	else if {day.index} is "6":
+		if {hour.system} is "18":
+			if {event.double.xp} is 0:
+				set {event.double.xp} to 1
+				execute console command "xprate 2 true"
+				broadcast "&aTous les XP gagnés sont doublés tous les samedis entre 18H et 20H !"
+				loop all players:
+					send loop-player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+			
+		else if {hour.system} is "20":
+			if {event.double.xp} is 1:
+				execute console command "xprate reset"
+				set {event.double.xp} to 0
+				broadcast "&aEvent Double XP &f- &cTerminé"
+				loop all players:
+					send loop-player title "&aEvent Double XP" with subtitle "&cTerminé" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+					
+#
+# Dimanche entre 16h et 20h
+#
+	else if {day.index} is "7":
+		if {hour.system} is "16":
+			if {event.worldboss} is 0:
+				set {event.worldboss} to 1
+				execute console command "region flag first_men -w Gaia mob-spawning allow"
+				loop all players:
+					send loop-player title "&c&lKalphite - WorldBoss" with subtitle "Village des Premiers Hommes" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+					message "&cRendez-vous au Village des Premiers Hommes en -7235;2658 pour affronter le Kalphite !" to loop-player
+			
+		else if {hour.system} is "20":
+			if {event.worldboss} is 1:
+				execute console command "region flag first_men -w Gaia mob-spawning deny"
+				set {event.worldboss} to 0
+				loop all players:
+					send loop-player title "&aEvent Double XP" with subtitle "&cTerminé" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+					
 #
 #
 # Every Hour in Gaïa
 #
 #
 #
-
 every 59 minutes in "Gaia":	
 	set {_tmpO} to now
 	set {day.index} to day of week from date {_tmpO}

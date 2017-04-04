@@ -802,7 +802,7 @@ air_breathofwind: if air_breathofwind spell_have else air_breathofwind1
 air_breathofwind1: if wand_air air_breathofwind2 else no_wand_hand_air
 air_breathofwind2: if spirituality500 air_breathofwind_exe else no_spirit
 air_breathofwind_exe: folder air_breathofwind_exe1,air_breathofwind_exe2,air_breathofwind_exe3
-air_breathofwind_exe1: 'command wandp %player% add airshield'
+air_breathofwind_exe1: 'command wandp %player% add breathofwind'
 air_breathofwind_exe2: tag add air_breathofwind
 air_breathofwind_exe3: point default.spirituality -500
 #
