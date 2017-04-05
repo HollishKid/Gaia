@@ -18,7 +18,7 @@ NPC_options:
     text: 'Ok ! Je ne vous accepterais pas en tant que membre de ma guilde tant que tu ne seras pas officiellement reconnu par l''&2Intendant &a&o!'
     events: found_guild3,guild_tester
   member_ok:
-    text: 'Très bien, bienvenue parmi nous ! Notre Guilde renferme 4 spécialités différentes! \nLe combat aux Poings, à l''Epée et à la Hache. Sans oublier le Tir à l''Arc ! \nLe Menu de la Guilde te permet de choisir un métier parmis d''autres avantages !'
+    text: 'Très bien, bienvenue parmi nous ! Notre Guilde renferme 4 spécialités différentes! \nLe combat aux Poings, à l''Épée et à la Hache. Sans oublier le Tir à l''Arc ! \nLe Menu de la Guilde te permet de choisir un métier parmis d''autres avantages !'
     events: guerrier
     pointers: menu,merci
 #
@@ -27,12 +27,14 @@ NPC_options:
   member:
     text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
     conditions: 'guerrier'
-    pointers: menu,crafts,merci
+    pointers: menu,cagnotte,crafts,merci
   guerrier_menu:
     text: 'Le voilà !'
     events: guerrier_menu
+  cagnotte_rep:
+    text: 'La Cagnotte d''un métier est la somme de toutes les contributions des personnes exerçant ce métier. \nVous gagnez 1xp pour la cagnotte dès que vous gagnez de l''expérience dans la compétence de votre métier. \nLa Cagnotte est divisée par le nombre de contributeurs, puis distribué à chacun d''eux sous forme de bonus d''expérience, tous les Dimanche soir.'
   crafts_rep:
-    text: 'Vous pouvez créer des armures spéciales grâce à des matériaux nouveaux. \nPour créer un nouveau matériaux, mettez le dans un Four. \nVous pouvez y mettre: &dCuir&a&o, &dFicelle&a&o, &dFer&a&o, &dOr &a&oet &dDiamant&a&o. \nPour en fabriquer une armure, utilisez les recettes classiques.'
+    text: 'Vous pouvez créer des armures et des outils spéciaux grâce à des matériaux nouveaux. \nPour voir les recettes spécifiques, utilisez votre /menu.'
 #                   #
 #                   #
 # Options du Joueur #
@@ -50,6 +52,9 @@ player_options:
   menu:
     text: 'Je voudrais accéder au Menu de la Guilde.'
     pointers: guerrier_menu
+  cagnotte:
+    text: 'Comment fonctionne la Cagnotte des Métiers ?'
+    pointers: cagnotte_rep
   crafts:
     text: 'Comment fonctionnent les Crafts Spéciaux ?'
     pointers: crafts_rep

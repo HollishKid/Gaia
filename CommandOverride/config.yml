@@ -170,6 +170,8 @@ commands:
   - WAIT 1
   - op-command:/as duration 3 jours <arg 0>
   - WAIT 1
+  - op-command:/as groupadd athelas <arg 0>
+  - WAIT 1
   - op-command:/as addsign <arg 0>
   /louerajout:
   - op-command:/as addsign <arg 0>

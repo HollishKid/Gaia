@@ -52,23 +52,31 @@ on load:
 	set {event.double.xp} to 0
 	set {event.triple.xp} to 0
 #
+	set {cagnotte_miliciens} to location at -6532, 70, 3222 of the world "Gaia"
+	set {cagnotte_epeistes} to location at -6519, 70, 3223 of the world "Gaia"
+	set {cagnotte_archers} to location at -6519, 70, 3227 of the world "Gaia"
+	set {cagnotte_pugilistes} to location at -6532, 70, 3228 of the world "Gaia"
+	
+	set {cagnotte_acrobates} to location at -6626, 78, 3204 of the world "Gaia"
+	set {cagnotte_apprivoiseurs} to location at -6725, 64, 3071 of the world "Gaia"
+	set {cagnotte_alchimistes} to location at -6906, 115, 3436 of the world "Gaia"
+	set {cagnotte_bucherons} to location at -7045, 71, 2800 of the world "Gaia"
+	set {cagnotte_mineurs} to location at -6816, 66, 2873 of the world "Gaia"
+	set {cagnotte_reparateurs} to location at -6804, 66, 2878 of the world "Gaia"
+	set {cagnotte_excavateurs} to location at -6804, 66, 2880 of the world "Gaia"
+	set {cagnotte_herboristes} to location at -6791, 65, 2851 of the world "Gaia"
+	set {cagnotte_pecheurs} to location at -6456, 74, 3040 of the world "Gaia"
+#
 	set {thief.treasure.security} to location at -6753, 54, 2975 of the world "Gaia"
-#
 	set {louvre_break_sign} to location at -9761, 73, 2357 of the world "Gaia"
-#
 	set {louvre_place_sign} to location at -9761, 73, 2359 of the world "Gaia"
-#
 	set {louvre_total_sign} to location at -9761, 73, 2358 of the world "Gaia"
-#
 	set {louvre_uruk_sign} to location at -9755, 73, 2351 of the world "Gaia"
-#
 	set {louvre_uruka_sign} to location at -9753, 73, 2351 of the world "Gaia"
-#
 	set {louvre_uruk_total_sign} to location at -9754, 73, 2351 of the world "Gaia"
-#
 	set {louvre_contributors_sign} to location at -9760, 73, 2354 of the world "Gaia"
-#
 	set {louvre_total_amount_sign} to location at -9758, 73, 2352 of the world "Gaia"
+
 #	
 #
 #
@@ -83,6 +91,36 @@ every 3 minutes in "Gaia":
 	wait 1 second
 	set block at {thief.treasure.security} to air
 #
+	set line 2 of block at {cagnotte_miliciens} to "%{haches_total}%"
+	set line 4 of block at {cagnotte_miliciens} to "%size of {haches_contributors::*}%"
+	set line 2 of block at {cagnotte_epeistes} to "%{épées_total}%"
+	set line 4 of block at {cagnotte_epeistes} to "%size of {épées_contributors::*}%"
+	set line 2 of block at {cagnotte_archers} to "%{arc_total}%"
+	set line 4 of block at {cagnotte_archers} to "%size of {arc_contributors::*}%"
+	set line 2 of block at {cagnotte_pugilistes} to "%{poings_total}%"
+	set line 4 of block at {cagnotte_pugilistes} to "%size of {poings_contributors::*}%"
+	
+	set line 2 of block at {cagnotte_acrobates} to "%{acrobatie_total}%"
+	set line 4 of block at {cagnotte_acrobates} to "%size of {acrobatie_contributors::*}%"
+	set line 2 of block at {cagnotte_apprivoiseurs} to "%{apprivoisement_total}%"
+	set line 4 of block at {cagnotte_apprivoiseurs} to "%size of {apprivoisement_contributors::*}%"
+	set line 2 of block at {cagnotte_alchimistes} to "%{alchimie_total}%"
+	set line 4 of block at {cagnotte_alchimistes} to "%size of {alchimie_contributors::*}%"
+	
+	set line 2 of block at {cagnotte_bucherons} to "%{bûcheronnage_total}%"
+	set line 4 of block at {cagnotte_bucherons} to "%size of {bûcheronnage_contributors::*}%"
+	set line 2 of block at {cagnotte_mineurs} to "%{minage_total}%"
+	set line 4 of block at {cagnotte_mineurs} to "%size of {minage_contributors::*}%"
+	set line 2 of block at {cagnotte_reparateurs} to "%{réparation_total}%"
+	set line 4 of block at {cagnotte_reparateurs} to "%size of {réparation_contributors::*}%"
+	
+	set line 2 of block at {cagnotte_excavateurs} to "%{excavation_total}%"
+	set line 4 of block at {cagnotte_excavateurs} to "%size of {excavation_contributors::*}%"
+	set line 2 of block at {cagnotte_herboristes} to "%{herboristerie_total}%"
+	set line 4 of block at {cagnotte_herboristes} to "%size of {herboristerie_contributors::*}%"
+	set line 2 of block at {cagnotte_pecheurs} to "%{pêche_total}%"
+	set line 4 of block at {cagnotte_pecheurs} to "%size of {pêche_contributors::*}%"
+#
 	set line 3 of block at {louvre_break_sign} to "%{block.breaks.louvre}%"
 	set line 3 of block at {louvre_place_sign} to "%{block.placed.louvre}%"
 	set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
@@ -93,9 +131,7 @@ every 3 minutes in "Gaia":
 	set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
 	set line 3 of block at {louvre_uruk_total_sign} to "%{_louvre_uruk_total}%"
 #
-	loop {louvre_contributors::*}:
-		add 1 to {_louvre_contributors_amount}
-	set line 3 of block at {louvre_contributors_sign} to "%{_louvre_contributors_amount}%"
+	set line 3 of block at {louvre_contributors_sign} to "%size of {louvre_contributors::*}%"
 #
 	set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
 	set {_block.total.louvre} to {_block.total.louvre} / 100
@@ -198,8 +234,8 @@ every 5 minutes in "Gaia":
 					
 #
 #
-# Every Hour in Gaïa
-#
+# Hour Checker in Gaïa
+#		(only executed once per hour)
 #
 #
 every 59 minutes in "Gaia":	
@@ -229,6 +265,102 @@ every 59 minutes in "Gaia":
 			delete {break.location.%{day.index}%::%loop-index%}
 			delete {break.type.%{day.index}%::%loop-index%}
 			wait 1 tick
+		broadcast "&c&oLes tremblements à l'Est semblent se calmer."
+#
+#
+# At 22H - Only on Sunday
+#    Guild XP Distribution
+#
+	else if {hour.system} is "22":
+		if {day.index} is "7":
+			broadcast "&dLes Cagnottes d'expérience des Guildes ont été distribuées !"
+			wait 2 ticks
+			broadcast "&d&oPour recevoir votre part, reconnectez vous sur Gaïa."
+			wait 2 ticks
+
+			set {minage_total} to {minage_total} / size of {minage_contributors::*}
+			loop {minage_contributors::*}:
+				add {minage_total} to {minage_%loop-value%}
+				delete {minage_contributors::%loop-index%}
+			set {minage_total} to 0
+			
+			set {excavation_total} to {excavation_total} / size of {excavation_contributors::*}
+			loop {excavation_contributors::*}:
+				add {excavation_total} to {excavation_%loop-value%}
+				delete {excavation_contributors::%loop-index%}
+			set {excavation_total} to 0	
+			
+			set {bûcheronnage_total} to {bûcheronnage_total} / size of {bûcheronnage_contributors::*}
+			loop {bûcheronnage_contributors::*}:
+				add {bûcheronnage_total} to {bûcheronnage_%loop-value%}
+				delete {bûcheronnage_contributors::%loop-index%}
+			set {bûcheronnage_total} to 0
+			
+			set {herboristerie_total} to {herboristerie_total} / size of {herboristerie_contributors::*}
+			loop {herboristerie_contributors::*}:
+				add {herboristerie_total} to {herboristerie_%loop-value%}
+				delete {herboristerie_contributors::%loop-index%}
+			set {herboristerie_total} to 0
+			
+			set {poings_total} to {poings_total} / size of {poings_contributors::*}
+			loop {poings_contributors::*}:
+				add {poings_total} to {poings_%loop-value%}
+				delete {poings_contributors::%loop-index%}
+			set {poings_total} to 0
+
+			set {arc_total} to {arc_total} / size of {arc_contributors::*}
+			loop {arc_contributors::*}:
+				add {arc_total} to {arc_%loop-value%}
+				delete {arc_contributors::%loop-index%}
+			set {arc_total} to 0
+			
+			set {épées_total} to {épées_total} / size of {épées_contributors::*}
+			loop {épées_contributors::*}:
+				add {épées_total} to {épées_%loop-value%}
+				delete {épées_contributors::%loop-index%}
+			set {épées_total} to 0
+			
+			set {haches_total} to {haches_total} / size of {haches_contributors::*}
+			loop {haches_contributors::*}:
+				add {haches_total} to {haches_%loop-value%}
+				delete {haches_contributors::%loop-index%}
+			set {haches_total} to 0
+			
+			set {acrobatie_total} to {acrobatie_total} / size of {acrobatie_contributors::*}
+			loop {acrobatie_contributors::*}:
+				add {acrobatie_total} to {acrobatie_%loop-value%}
+				delete {acrobatie_contributors::%loop-index%}
+			set {acrobatie_total} to 0
+			
+			set {pêche_total} to {pêche_total} / size of {pêche_contributors::*}
+			loop {pêche_contributors::*}:
+				add {pêche_total} to {pêche_%loop-value%}
+				delete {pêche_contributors::%loop-index%}
+			set {pêche_total} to 0
+			
+			set {apprivoisement_total} to {apprivoisement_total} / size of {apprivoisement_contributors::*}
+			loop {apprivoisement_contributors::*}:
+				add {apprivoisement_total} to {apprivoisement_%loop-value%}
+				delete {apprivoisement_contributors::%loop-index%}
+			set {apprivoisement_total} to 0
+			
+			set {réparation_total} to {réparation_total} / size of {réparation_contributors::*}
+			loop {réparation_contributors::*}:
+				add {réparation_total} to {réparation_%loop-value%}
+				delete {réparation_contributors::%loop-index%}
+			set {réparation_total} to 0
+			
+			set {alchimie_total} to {alchimie_total} / size of {alchimie_contributors::*}
+			loop {alchimie_contributors::*}:
+				add {alchimie_total} to {alchimie_%loop-value%}
+				delete {alchimie_contributors::%loop-index%}
+			set {alchimie_total} to 0
+			wait 2 ticks
+			broadcast "&dLes Cagnottes d'expérience des Guildes ont été distribuées !"
+			wait 2 ticks
+			broadcast "&d&oPour recevoir votre part, reconnectez vous sur Gaïa."
+			
+		wait 22 ticks
 #
 #
 # At 23H - Only on Sunday
@@ -322,9 +454,6 @@ every 59 minutes in "Gaia":
 #
 # Chester
 #
-	add 1 diamond to {_random.item.list::*}
-	add 4 lapis to {_random.item.list::*}
-	add 2 emerald to {_random.item.list::*}
 	loop 20 times:
 		add 32 wood to {_random.item.list::*}
 	loop 10 times:
@@ -335,6 +464,9 @@ every 59 minutes in "Gaia":
 		add 5 gold ingot to {_random.item.list::*}
 	loop 10 times:
 		add 12 iron ingot to {_random.item.list::*}
+	add 1 diamond to {_random.item.list::*}
+	add 4 lapis to {_random.item.list::*}
+	add 2 emerald to {_random.item.list::*}
 # Food & Seeds
 	loop 10 times:
 		add 1 beef to {_random.item.list::*}
@@ -369,6 +501,11 @@ every 59 minutes in "Gaia":
 		add 1 iron pickaxe to {_random.item.list::*}
 		add 1 gold pickaxe to {_random.item.list::*}
 		add 1 diamond pickaxe to {_random.item.list::*}
+#
+# New & Fun
+#
+	add 3 experience bottle to {_random.item.list::*}
+	add 1 chest named "&2Objet Inconnu" with lore "&8&oJe devrais consulter||&8&oun expert pour identifier||&8&ocet objet.|| ||&8&oIl y a un marché||&8&odevant chez Paulette||&8&opeut être que quelqu'un||&8&opourrait me renseigner !" to {_random.item.list::*}
 # Armor
 	loop 5 times:
 		add 1 bow to {_random.item.list::*}
@@ -403,13 +540,14 @@ every 59 minutes in "Gaia":
 	add 1 diamond boots to {_random.item.list::*}
 	add 1 diamond leggings to {_random.item.list::*}
 	add 1 diamond sword to {_random.item.list::*}
-	loop 100 times:
+	loop 250 times:
 		add 1 air to {_random.item.list::*}
 #
-# New & Fun
 #
-	add 3 experience bottle to {_random.item.list::*}
-	add 1 chest named "&2Objet Inconnu" with lore "&8&oJe devrais consulter||&8&oun expert pour identifier||&8&ocet objet.|| ||&8&oIl y a un marché||&8&odevant chez Paulette||&8&opeut être que quelqu'un||&8&opourrait me renseigner !" to {_random.item.list::*}
+# Chester Operation
+#
+#
+	wait 7 ticks
 	loop {chester::*}:
 		remove all items from inventory of block at {chester::%loop-index%}
 	wait 7 ticks

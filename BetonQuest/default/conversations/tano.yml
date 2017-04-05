@@ -27,10 +27,12 @@ NPC_options:
   member:
     text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
     conditions: 'bucheron'
-    pointers: menu,foret,merci
+    pointers: menu,foret,cagnotte,merci
   bucheron_menu:
     text: 'Le voilà !'
     events: bucheron_menu
+  cagnotte_rep:
+    text: 'La Cagnotte d''un métier est la somme de toutes les contributions des personnes exerçant ce métier. \nVous gagnez 1xp pour la cagnotte dès que vous gagnez de l''expérience dans la compétence de votre métier. \nLa Cagnotte est divisée par le nombre de contributeurs, puis distribué à chacun d''eux sous forme de bonus d''expérience, tous les Dimanche soir.'
 #
 # Forest Acces Handler
 #
@@ -61,6 +63,9 @@ player_options:
   menu:
     text: 'Je voudrais accéder au Menu de la Guilde.'
     pointers: bucheron_menu
+  cagnotte:
+    text: 'Comment fonctionne la Cagnotte des Métiers ?'
+    pointers: cagnotte_rep
   rien:
     text: 'Rien du tout...'
   merci:
