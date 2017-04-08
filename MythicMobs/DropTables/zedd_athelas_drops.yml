@@ -1,3 +1,17 @@
 missiledrops:
   Drops:
   - residus_de_poudre 1 1
+testmobdrops:
+  Drops:
+  - casque_fer_dj1 1 1
+shrek_drops:
+  Drops:
+  - exp 75
+  - pieds_fer_dj1 1 1
+kara_drops:
+  - exp 75
+  - jambes_fer_dj1 1 1
+erek_drops:
+  - exp 150
+  - plastron_fer_dj1 1 1
+  - casque_fer_dj1 1 0.2
