@@ -144,7 +144,7 @@ maka_etape3: folder maka_mess10,maka_fold4 delay:5
 maka_mess10: 'message &2Makarov : &a&oUn traître aux contrebandiers tu dis ? Qui aurait volé un &6Objet &a&odangereux ? Évidemment, il serait pratique que cet &6Objet&a&o soit encore en sa possession..'
 maka_fold4: folder maka_mess11,quest_point_1,maka_j4_del,maka_j5,maka_givechain,maka_givechainmess,maka_q2end,maka_q2done,maka_q3start,makarov_denyaccess,maka_outconvers delay:8
 maka_mess11: 'message &2Makarov : &a&oEssaye de retrouver sa trace, comme te le demandes &2Lasswell&a&o, après tout, il n''est pas bon pour &dAthelas&a&o que les contrebandiers soient trop agités. Prend ceci, et bon courage !'
-maka_givechain: 'command mm i give %player% chainchest'
+maka_givechain: 'command mm items give %player% chainchest'
 maka_givechainmess: 'message &6&oVous recevez une &aCotte de mailles&6&o.'
 maka_q3start: tag add maka_q3start
 maka_q3end: tag del maka_q3start
@@ -375,7 +375,7 @@ ynv_q3messretry: 'message &6En cas d''échec, vous pouvez recommencer cette quê
 ynv_q3done: tag add ynv_q3done
 ynv_q3reward: folder quest_point_1,ynv_q3mess1,ynv_q3item,ynv_q3mess2,ynv_q3eco,yre_eventdoneremove,ynv_endprogress,ynv_q3end,ynv_q3_journal_del delay:2
 ynv_q3mess1: 'message &6&oHold-up chez les voleurs! (terminé)'
-ynv_q3item: 'command mm i give %player% bow_common'
+ynv_q3item: 'command mm items give %player% bow_common'
 ynv_q3mess2: 'message &6&oVous recevez un &aArc simple&6&o.'
 ynv_q3eco: 'command eco give %player% 2500'
 yre_eventdoneremove: tag del yre_eventdone

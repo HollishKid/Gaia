@@ -38,7 +38,8 @@ NPC_options:
     text: 'Très bien ! J''ai donc le plaisir de vous acceuillir comme citoyen de la Ville d''&dAthelas &a&o! \nVous pourrez désormais vous rendre utile auprès des différents citoyens de la ville.'
     events: intendant_done,j_entry_intendant
   guildsnotfound_rep:
-    text: 'Vous devez rencontrer TOUS les Maîtres de Guilde de le Ville. Il y en a 8 en tout. \nVotre Journal de Progression indique leurs positions. \nUtilisez la Carte s''il vous la faut : &b http://gaia-minecraft.enjin.com/gallery'
+    text: 'Vous devez rencontrer TOUS les Maîtres de Guilde de le Ville. Il y en a 8 en tout. \nVotre Journal de Progression indique leurs positions. \nUtilisez la Carte s''il vous la faut !'
+    events: redirect_map
 #
   autre_rep:
     text: 'Que voulez vous savoir?'
@@ -64,11 +65,13 @@ NPC_options:
   nom_rep:
     text: 'Ah... L''information est mon métier, jeune aventurier.. \nJ''ai des petits oiseaux sur tous les continents de Gaïa.'
   dynmap_rep:
-    text: '&dSofia &a&opourra vous renseigner. \nUtilisez &bhttp://www.gaia-minecraft.enjin.com/ &a&opour toutes les informations.'
+    text: '&dSofia &a&opourra vous renseigner.'
+    events: redirect_site
   salaire_rep:
     text: 'Ce calcul se fait ainsi: &f¤&a&o100 (&fBase&a&o) &f+ &a&oPoints de réputation (&fPart Variable&a&o) \nVotre Salaire est aussi influencé par votre niveau de Compétence dans votre Guilde et de votre Grade Royal.'
   villes_rep:
-    text: 'Renseignez vous en cliquant ici :\n&b http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Continent_Est'
+    text: 'Consultez le Guide à ce propos.'
+    events: redirect_guide
 ############
 #          #
 #  JOUEUR  #

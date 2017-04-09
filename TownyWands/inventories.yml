@@ -1,0 +1,1487 @@
+refresh-Translations: false
+inventories: 
+  resident: 
+    name: "&dMenu Résident"
+    command: resident
+    permission: townywands.gui.resident
+    slots: 45
+    items:
+      partyreturn: 
+        name_en_US: "&aRetour"
+        lore_en_US: 
+          - "Retour au Menu Principal."
+        console_commands: 
+          - cc open Menu.yml {playername}
+        itemID: 280
+        metaID: 0
+        slot: 9
+        quantity: 1
+        enchanted: false
+    
+      ResStatus: 
+        name_en_US: "&a&lStatut du Résident"
+        lore_en_US:
+          - "Affiche vos Informations de Résident."
+        commands: 
+          - resident
+        itemID: 340
+        metaID: 0
+        slot: 1
+        quantity: 1
+        enchanted: false
+        
+      TownStatus: 
+        name_en_US: "&aStatut de la Ville"
+        lore_en_US:
+          - "Affiche les Informations sur votre Ville."
+        commands: 
+          - town
+        itemID: 340
+        metaID: 0
+        slot: 2
+        quantity: 1
+        enchanted: false
+
+      TownJoin: 
+        name_en_US: "&2Rejoindre une Ville"
+        lore_en_US: 
+          - "Cliquer pour rejoindre une Ville"
+          - "Tapez le nom sur la pancarte qui s'affiche."
+        console_commands: 
+          - vsign {playername} t join {data}
+        itemID: 35
+        metaID: 5
+        slot: 41
+        quantity: 1
+        enchanted: false
+                
+      OnlineList: 
+        name_en_US: "&2&lRésidents En Ligne"
+        lore_en_US: 
+          - "&6Affiche une liste de tous les Résidents en Ligne."
+        commands: 
+          - town online
+        itemID: 339
+        metaID: 0
+        slot: 10
+        quantity: 1
+        enchanted: false
+        
+      DepositMoney: 
+        name_en_US: "&2Déposer de l'argent"
+        lore_en_US: 
+          - "Cliquer pour déposer de l'argent dans la Banque."
+          - "Tapez le montant sur la pancarte qui s'affiche."
+        console_commands: 
+          - vsign {playername} t deposit {data}
+        itemID: 130
+        metaID: 0
+        slot: 17
+        quantity: 1
+        enchanted: false
+        
+      WithdrawMoney: 
+        name_en_US: "&4Retirer de l'argent"
+        lore_en_US: 
+          - "Cliquer pour retirer de l'argent dans la Banque."
+          - "Tapez le montant sur la pancarte qui s'affiche."
+        console_commands: 
+          - vsign {playername} t withdraw {data}
+        itemID: 130
+        metaID: 0
+        slot: 18
+        quantity: 1
+        enchanted: false 
+        
+      LeaveTown: 
+        name_en_US: "&4&lQuitter la Ville !"
+        lore_en_US: []
+        commands: 
+          - town leave
+        itemID: 166
+        metaID: 0
+        slot: 45
+        quantity: 1
+        enchanted: false
+
+      AddFriend: 
+        name_en_US: "&aAjouter un Ami"
+        lore_en_US: []
+        console_commands: 
+          - "vsign {playername} resident friend add {data}"
+        itemID: 386
+        metaID: 0
+        slot: 19
+        quantity: 1
+        enchanted: false
+        
+      RemoveFriend:
+        name_en_US: "&cSupprimer un Ami"
+        lore_en_US: []
+        console_commands: 
+          - "vsign {playername} resident friend remove {data}"
+        itemID: 386
+        metaID: 0
+        slot: 20
+        quantity: 1
+        enchanted: false
+        
+      TogglePlotPVP: 
+        name_en_US: "&2PvP - &cActivé &6/ &aDésactivé"
+        lore_en_US: 
+          - "Active ou Désactive le PvP"
+          - "sur la parcelle sur laquelle"
+          - "vous vous trouvez."
+        commands: 
+          - plot toggle pvp
+        itemID: 276
+        metaID: 0
+        slot: 13
+        quantity: 1
+        enchanted: true
+        
+      TogglePlotFire: 
+        name_en_US: "&2Feu - &cActivé &6/ &aDésactivé"
+        lore_en_US: 
+          - "Active / Désactive la propagation du Feu"
+          - "sur la parcelle sur laquelle"
+          - "vous vous trouvez."
+        commands: 
+          - plot toggle fire
+        itemID: 327
+        metaID: 0
+        slot: 14
+        quantity: 1
+        enchanted: false
+        
+      TogglePlotMobs: 
+        name_en_US: "&2Monstres - &cActivé&6/&aDésactivé"
+        lore_en_US: 
+          - "Active / Désactive le Spawn de Monstres"
+          - "sur la parcelle sur laquelle"
+          - "vous vous trouvez."
+        commands: 
+          - plot toggle mobs
+        itemID: 397
+        metaID: 0
+        slot: 15
+        quantity: 1
+        enchanted: true
+        
+      TogglePlotExplosions: 
+        name_en_US: "&2Explosions - &cActivé&6/&aDésactivé"
+        lore_en_US: 
+          - "Active ou Désactive les Explosions"
+          - "sur la parcelle sur laquelle"
+          - "vous vous trouvez."
+        commands: 
+          - plot toggle explosion
+        itemID: 377
+        metaID: 0
+        slot: 24
+        quantity: 1
+        enchanted: false
+        
+      TogglePlotBorder: 
+        name_en_US: "&2Affichage des Bornes"
+        lore_en_US: 
+          - "Affiche les limites des parcelles"
+          - "lorsque vous passez de l'une à l'autre."
+        commands: 
+          - resident toggle plotborder
+        itemID: 50
+        metaID: 0
+        slot: 22
+        quantity: 1
+        enchanted: true
+        
+      TownyTime: 
+        name_en_US: "&6Temps Restant de la Journée"
+        lore_en_US: 
+          - "Temps Restant avant la Récolte"
+          - "des Taxes et Loyers."
+        commands: 
+          - towny time
+        itemID: 340
+        metaID: 0
+        slot: 26
+        quantity: 1
+        enchanted: true
+        
+      TownyPrices: 
+        name_en_US: "&6Prix de Ville"
+        lore_en_US: 
+          - "Prix de création et d'Entretien d'une Ville."
+        commands: 
+          - towny prices
+        itemID: 340
+        metaID: 0
+        slot: 27
+        quantity: 1
+        enchanted: true
+        
+      TownySpawn: 
+        name_en_US: "&aTéléportation au Centre Ville"
+        lore_en_US: 
+          - "Vous Téléporte au Centre de votre Ville."
+        commands: 
+          - town spawn
+        itemID: 340
+        metaID: 0
+        slot: 36
+        quantity: 1
+        enchanted: true
+        
+      PlotClaim: 
+        name_en_US: "&2Revendiquer la Parcelle"
+        lore_en_US: 
+          - "Permet de Revendiquer/Acheter la Parcelle"
+          - "sur laquelle vous vous trouvez."
+          - "Vous devez être Résident de la Ville !"
+        commands: 
+          - plot claim
+        itemID: 2
+        metaID: 0
+        slot: 40
+        quantity: 1
+        enchanted: true
+        
+      PlotUnClaim: 
+        name_en_US: "&cAbandonner la Parcelle"
+        lore_en_US: 
+          - "Permet d'abandonner votre Parcelle"
+          - "sur laquelle vous vous trouvez."
+          - "Elle sera remise au Maire de la Ville !"
+        commands: 
+          - plot unclaim
+        itemID: 1
+        metaID: 0
+        slot: 42
+        quantity: 1
+        enchanted: true
+        
+      PlotFSRes: 
+        name_en_US: "&aVendre cette Parcelle"
+        lore_en_US: 
+          - "Mettez en vente la Parcelle sur laquelle"
+          - "vous vous trouvez. Indiquez le prix sur la pancarte."
+          - "La Parcelle concernée doit vous appartenir."
+        console_commands: 
+          - vsign {playername} plot forsale {data}
+        itemID: 323
+        metaID: 0
+        slot: 43
+        quantity: 1
+        enchanted: false
+
+      PlotNFSRes:
+        name_en_US: "&cNe plus Vendre cette Parcelle"
+        lore_en_US: 
+          - "Enlevez de la vente la Parcelle sur laquelle"
+          - "vous vous trouvez."
+          - "La Parcelle concernée doit vous appartenir."
+        console_commands: 
+          - vsign {playername} plot notforsale {data}
+        itemID: 323
+        metaID: 0
+        slot: 44
+        quantity: 1
+        enchanted: false
+
+        
+      PlotOutSiderPerm: 
+        name_en_US: "&aNon-Résident"
+        lore_en_US: 
+          - "Modifiez les permissions des Non-Résidents"
+          - "Sur la Pancarte vous devez taper SOIT :"
+          - "&f'&abuild&f' pour le placement des blocs"
+          - "&f'&adestroy&f' pour le cassage des blocs"
+          - "&f'&aitemuse&f' pour l'utilisation des objets"
+          - "&f'&aswitch&f' pour l'utilisation des leviers"
+          - "&cSUIVI de '&aon&c' (pour autoriser) ou '&aoff&c' (pour interdire)"
+        console_commands: 
+          - vsign {playername} resident set perm outsider {data}
+        itemID: 340
+        metaID: 0
+        slot: 28
+        quantity: 1
+        enchanted: false
+        
+      PlotAllyPerm: 
+        name_en_US: "&aAllié"
+        lore_en_US: 
+          - "Modifiez les permissions des Alliés"
+          - "Sur la Pancarte vous devez taper SOIT :"
+          - "&f'&abuild&f' pour le placement des blocs"
+          - "&f'&adestroy&f' pour le cassage des blocs"
+          - "&f'&aitemuse&f' pour l'utilisation des objets"
+          - "&f'&aswitch&f' pour l'utilisation des leviers"
+          - "&cSUIVI de '&aon&c' (pour autoriser) ou '&aoff&c' (pour interdire)"
+        console_commands: 
+          - vsign {playername} resident set perm ally {data}
+        itemID: 340
+        metaID: 0
+        slot: 37
+        quantity: 1
+        enchanted: false
+        
+      PlotFriendPerm: 
+        name_en_US: "&aAmis"
+        lore_en_US: 
+          - "Modifiez les permissions de vos Amis"
+          - "Sur la Pancarte vous devez taper SOIT :"
+          - "&f'&abuild&f' pour le placement des blocs"
+          - "&f'&adestroy&f' pour le cassage des blocs"
+          - "&f'&aitemuse&f' pour l'utilisation des objets"
+          - "&f'&aswitch&f' pour l'utilisation des leviers"
+          - "&cSUIVI de '&aon&c' (pour autoriser) ou '&aoff&c' (pour interdire)"
+        console_commands: 
+          - vsign {playername} resident set perm friend {data}
+        itemID: 340
+        metaID: 0
+        slot: 29
+        quantity: 1
+        enchanted: false
+        
+      PlotAllPerm: 
+        name_en_US: "&aTout le Monde"
+        lore_en_US: 
+          - "Modifiez les permissions de Tout le Monde"
+          - "Sur la Pancarte vous devez taper SOIT :"
+          - "&f'&abuild&f' pour le placement des blocs"
+          - "&f'&adestroy&f' pour le cassage des blocs"
+          - "&f'&aitemuse&f' pour l'utilisation des objets"
+          - "&f'&aswitch&f' pour l'utilisation des leviers"
+          - "&cSUIVI de '&aon&c' (pour autoriser) ou '&aoff&c' (pour interdire)"
+        console_commands: 
+          - vsign {playername} resident set perm {data}
+        itemID: 340
+        metaID: 0
+        slot: 38
+        quantity: 1
+        enchanted: false
+       
+        
+        
+  mayor: 
+    name: "&dMenu Maire"
+    command: maire
+    permission: townywands.gui.mayor
+    slots: 54
+    items: 
+      partyreturn: 
+        name_en_US: "&aRetour"
+        lore_en_US: 
+          - "&aRetour au Menu Principal"
+        console_commands: 
+          - cc open Menu.yml {playername}
+        itemID: 280
+        metaID: 0
+        slot: 9
+        quantity: 1
+        enchanted: false    
+    
+      ResStatusTown: 
+        name_en_US: "&aStatut du Résident"
+        lore_en_US:
+          - "Affiche vos Informations de Résident."
+        commands: 
+          - resident
+        itemID: 340
+        metaID: 0
+        slot: 2
+        quantity: 1
+        enchanted: false
+        
+      TownStatusTown: 
+        name_en_US: "&aStatut de la Ville"
+        lore_en_US:
+          - "Affiche les Informations sur votre Ville."
+        commands: 
+          - town
+        itemID: 340
+        metaID: 0
+        slot: 1
+        quantity: 1
+        enchanted: false
+        
+      OnlineListTown: 
+        name_en_US: "&2Résidents En Ligne"
+        lore_en_US: 
+          - "Affiche une liste de tous les Résidents en Ligne."
+        commands: 
+          - town online
+        itemID: 339
+        metaID: 0
+        slot: 3
+        quantity: 1
+        enchanted: false
+        
+      KickGuy: 
+        name_en_US: "&cBannir un Résident"
+        lore_en_US: 
+          - "Bannir un Résident de votre ville"
+          - "en tapant son nom sur la pancarte qui s'affiche."
+        console_commands: 
+          - vsign {playername} town kick {data}
+        itemID: 386
+        metaID: 0
+        slot: 11
+        quantity: 1
+        enchanted: false
+        
+      InviteGuy: 
+        name_en_US: "&2Inviter un Résident"
+        lore_en_US: 
+          - "Inviter un Résident dans votre Ville"
+          - "en tapant son nom sur la pancarte qui s'affiche."
+        console_commands: 
+          - vsign {playername} town add {data}
+        itemID: 386
+        metaID: 0
+        slot: 10
+        quantity: 1
+        enchanted: false
+        
+      DeleteTown: 
+        name_en_US: "&4Supprimer la Ville !"
+        lore_en_US: 
+          - "&cSupprime votre Ville qui commencera"
+          - "&cà tomber en ruine progressivement."
+        console_commands: 
+          - cc open towndestroy {playername}
+        itemID: 166
+        metaID: 0
+        slot: 54
+        quantity: 1
+        enchanted: false
+        
+      ToggleTownPVP: 
+        name_en_US: "&2PvP - &cActivé &6/ &aDésactivé"
+        lore_en_US: 
+          - "Modifie les paramètres Globaux"
+          - "de votre Ville."
+        commands: 
+          - town toggle pvp
+        itemID: 276
+        metaID: 0
+        slot: 4
+        quantity: 1
+        enchanted: true
+        
+      ToggleTownFire: 
+        name_en_US: "&2Feu - &cActivé &6/ &aDésactivé"
+        lore_en_US: 
+          - "Modifie les paramètres Globaux"
+          - "de votre Ville."
+        commands: 
+          - town toggle fire
+        itemID: 327
+        metaID: 0
+        slot: 5
+        quantity: 1
+        enchanted: false
+        
+      ToggleTownMobs: 
+        name_en_US: "&2Monstres - &cActivé &6/ &aDésactivé"
+        lore_en_US: 
+          - "Modifie les paramètres Globaux"
+          - "de votre Ville."
+        commands: 
+          - town toggle mobs
+        itemID: 397
+        metaID: 0
+        slot: 6
+        quantity: 1
+        enchanted: true
+        
+      ToggleTownExplosions: 
+        name_en_US: "&2Explosions - &cActivé &6/ &aDésactivé"
+        lore_en_US: 
+          - "Modifie les paramètres Globaux"
+          - "de votre Ville."
+        commands: 
+          - town toggle explosion
+        itemID: 377
+        metaID: 0
+        slot: 7
+        quantity: 1
+        enchanted: false
+        
+      ToggleTownOpen: 
+        name_en_US: "&cOuvrir &6/ &aFermer &2Ville"
+        lore_en_US: 
+          - "Ouvre ou Ferme la Ville"
+          - "Permet d'autoriser les Aventuriers de"
+          - "rejoindre la Ville sans autorisation."
+        commands: 
+          - town toggle open
+        itemID: 101
+        metaID: 0
+        slot: 13
+        quantity: 1
+        enchanted: false
+        
+      SetBoard: 
+        name_en_US: "&aMessage de la Ville"
+        lore_en_US: 
+          - "Modifiez le Message de la Ville"
+          - "en le tapant sur la pancarte qui apparaît."
+          - "Ce message apparaît aux Résidents de la Ville,"
+          - "au moment de se connecter et dans"
+          - "la description de votre ville."
+        console_commands: 
+          - vsign {playername} town set board {data}
+        itemID: 339
+        metaID: 0
+        slot: 14
+        quantity: 1
+        enchanted: false
+
+      SetSpawnTown: 
+        name_en_US: "&aSpawn de la Ville"
+        lore_en_US: 
+          - "Modifiez le Spawn de la Ville"
+          - "à l'endroit où vous vous trouvez."
+          - "Vous devez être dans le Centre Ville."
+        commands: 
+          - town set spawn
+        itemID: 355
+        metaID: 0
+        slot: 15
+        quantity: 1
+        enchanted: false
+
+      SetTaxes: 
+        name_en_US: "&aTaxe Résidentielle"
+        lore_en_US: 
+          - "Modifiez la Taxe de la Ville"
+          - "en le tapant sur la pancarte qui apparaît."
+          - "Ceci affectera TOUS les Résidents dans la Ville."
+        console_commands: 
+          - vsign {playername} town set taxes {data}
+        itemID: 266
+        metaID: 0
+        slot: 23
+        quantity: 1
+        enchanted: false
+
+      SetPlotTaxes: 
+        name_en_US: "&aTaxe de Parcelle"
+        lore_en_US: 
+          - "Modifiez la Taxe par Parcelle"
+          - "en le tapant sur la pancarte qui apparaît."
+          - "Ceci affectera les Résidents possédant une Parcelle."
+        console_commands: 
+          - vsign {playername} town set plottax {data}
+        itemID: 265
+        metaID: 0
+        slot: 22
+        quantity: 1
+        enchanted: false
+
+      PlotFS: 
+        name_en_US: "&aVendre cette Parcelle"
+        lore_en_US: 
+          - "Mettez en vente la Parcelle sur laquelle"
+          - "vous vous trouvez. Indiquez le prix sur la pancarte."
+          - "La Parcelle concernée doit vous appartenir."
+        console_commands: 
+          - vsign {playername} plot forsale {data}
+        itemID: 323
+        metaID: 0
+        slot: 26
+        quantity: 1
+        enchanted: false
+
+      PlotNFS:
+        name_en_US: "&cNe plus Vendre cette Parcelle"
+        lore_en_US: 
+          - "Enlevez de la vente la Parcelle sur laquelle"
+          - "vous vous trouvez."
+          - "La Parcelle concernée doit vous appartenir."
+        console_commands: 
+          - vsign {playername} plot notforsale {data}
+        itemID: 323
+        metaID: 0
+        slot: 27
+        quantity: 1
+        enchanted: false
+        
+      AddAssistant: 
+        name_en_US: "&2Promouvoir un Résident à Assistant."
+        lore_en_US: 
+          - "Donner le Grade d'&aAssistant &fà un Résident"
+          - "Permet à l'Assistant de"
+          - "- Construire dans les parcelles qui n'ont pas"
+          - "été revendiquées par un Résident"
+          - "- Ajouter des Résidents à la Ville."
+          - "- Excempté des Taxes."
+        console_commands: 
+          - vsign {playername} town rank add {data} assistant
+        itemID: 386
+        metaID: 0
+        slot: 19
+        quantity: 1
+        enchanted: false
+        
+      RemoveAssistant: 
+        name_en_US: "&cRétrograder un Assistant."
+        lore_en_US: 
+          - "Supprimer le Grade d'Assistant"
+        console_commands: 
+          - vsign {playername} town rank remove {data} assistant
+        itemID: 386
+        metaID: 0
+        slot: 20
+        quantity: 1
+        enchanted: false
+        
+      AddAuxiliaire:
+        name_en_US: "&2Promouvoir un Résident à Auxiliaire."
+        lore_en_US: 
+          - "Donner le Grade d'&aAuxiliaire &fà un Résident"
+          - "Permet à l'Auxiliaire de"
+          - "- Construire dans TOUTES les parcelles."
+          - "- Modifier les Options de la Ville."
+          - "- Ajouter des Parcelles."
+          - "- Ajouter des Résidents."
+          - "- Modifier les options des Parcelles."
+          - "- Définir le Status Ouvert ou Fermé de la Ville."
+          - "- Excempté des Taxes."
+        console_commands: 
+          - vsign {playername} town rank add {data} helper
+        itemID: 386
+        metaID: 0
+        slot: 19
+        quantity: 1
+        enchanted: false
+        
+      RemoveAuxiliaire: 
+        name_en_US: "&cRétrograder un Auxiliaire."
+        lore_en_US: 
+          - "Supprimer le Grade d'Auxiliaire"
+        console_commands: 
+          - vsign {playername} town rank remove {data} helper
+        itemID: 386
+        metaID: 0
+        slot: 20
+        quantity: 1
+        enchanted: false
+        
+      DepositMoneyTown: 
+        name_en_US: "&2Déposer de l'argent"
+        lore_en_US: 
+          - "Cliquer pour déposer de l'argent dans la Banque."
+          - "Tapez le montant sur la pancarte qui s'affiche."
+        console_commands: 
+          - vsign {playername} t deposit {data}
+        itemID: 130
+        metaID: 0
+        slot: 17
+        quantity: 1
+        enchanted: false
+        
+      WithdrawMoneyTown: 
+        name_en_US: "&cRetirer de l'argent"
+        lore_en_US: 
+          - "Cliquer pour retirer de l'argent dans la Banque."
+          - "Tapez le montant sur la pancarte qui s'affiche."
+        console_commands: 
+          - vsign {playername} t withdraw {data}
+        itemID: 130
+        metaID: 0
+        slot: 18
+        quantity: 1
+        enchanted: false         
+        
+      TownyTimeTown: 
+        name_en_US: "&6Temps Restant de la Journée"
+        lore_en_US: 
+          - "Temps Restant avant la Récolte"
+          - "des Taxes et Loyers."
+        commands: 
+          - towny time
+        itemID: 340
+        metaID: 0
+        slot: 35
+        quantity: 1
+        enchanted: true
+        
+      TownyPricesTown: 
+        name_en_US: "&6Prix de Ville"
+        lore_en_US: 
+          - "Prix de création et d'Entretien d'une Ville."
+        commands: 
+          - towny prices
+        itemID: 340
+        metaID: 0
+        slot: 36
+        quantity: 1
+        enchanted: true
+        
+      SetNameTown: 
+        name_en_US: "&6Changer Nom de la Ville"
+        lore_en_US: 
+          - "Renommez votre Ville à votre guise"
+          - "en tapant un nouveau nom sur la pancarte."
+        console_commands: 
+          - vsign {playername} town set name {data}
+        itemID: 386
+        metaID: 0
+        slot: 49
+        quantity: 1
+        enchanted: false 
+        
+      TownOutSiderPerm: 
+        name_en_US: "&aNon-Résident"
+        lore_en_US: 
+          - "Modifiez les permissions des Non-Résidents"
+          - "Sur la Pancarte vous devez taper SOIT :"
+          - "&f'&abuild&f' pour le placement des blocs"
+          - "&f'&adestroy&f' pour le cassage des blocs"
+          - "&f'&aitemuse&f' pour l'utilisation des objets"
+          - "&f'&aswitch&f' pour l'utilisation des leviers"
+          - "&cSUIVI de '&aon&c' (pour autoriser) ou '&aoff&c' (pour interdire)"
+        console_commands: 
+          - vsign {playername} town set perm outsider {data}
+        itemID: 340
+        metaID: 0
+        slot: 37
+        quantity: 1
+        enchanted: false
+        
+      TownAllyPerm: 
+        name_en_US: "&aAllié"
+        lore_en_US: 
+          - "Modifiez les permissions des Alliés"
+          - "Sur la Pancarte vous devez taper SOIT :"
+          - "&f'&abuild&f' pour le placement des blocs"
+          - "&f'&adestroy&f' pour le cassage des blocs"
+          - "&f'&aitemuse&f' pour l'utilisation des objets"
+          - "&f'&aswitch&f' pour l'utilisation des leviers"
+          - "&cSUIVI de '&aon&c' (pour autoriser) ou '&aoff&c' (pour interdire)"
+        console_commands: 
+          - vsign {playername} town set perm ally {data}
+        itemID: 340
+        metaID: 0
+        slot: 46
+        quantity: 1
+        enchanted: false
+        
+      TownResidentPerm: 
+        name_en_US: "&aRésidents"
+        lore_en_US: 
+          - "Modifiez les permissions des Résidents"
+          - "Sur la Pancarte vous devez taper SOIT :"
+          - "&f'&abuild&f' pour le placement des blocs"
+          - "&f'&adestroy&f' pour le cassage des blocs"
+          - "&f'&aitemuse&f' pour l'utilisation des objets"
+          - "&f'&aswitch&f' pour l'utilisation des leviers"
+          - "&cSUIVI de '&aon&c' (pour autoriser) ou '&aoff&c' (pour interdire)"
+        console_commands: 
+          - vsign {playername} town set perm resident {data}
+        itemID: 340
+        metaID: 0
+        slot: 38
+        quantity: 1
+        enchanted: false
+        
+      TownAllPerm: 
+        name_en_US: "&aTout le Monde"
+        lore_en_US: 
+          - "Modifiez les permissions de Tout le Monde"
+          - "Sur la Pancarte vous devez taper SOIT :"
+          - "&f'&abuild&f' pour le placement des blocs"
+          - "&f'&adestroy&f' pour le cassage des blocs"
+          - "&f'&aitemuse&f' pour l'utilisation des objets"
+          - "&f'&aswitch&f' pour l'utilisation des leviers"
+          - "&cSUIVI de '&aon&c' (pour autoriser) ou '&aoff&c' (pour interdire)"
+        console_commands: 
+          - vsign {playername} town set perm {data}
+        itemID: 340
+        metaID: 0
+        slot: 47
+        quantity: 1
+        enchanted: false
+       
+      NewTown: 
+        name_en_US: "&2Créer une nouvelle Ville"
+        lore_en_US: 
+          - "Commencez votre Ville"
+          - "en tapant son nom sur la pancarte."
+          - "La Ville sera créée à votre emplacement!"
+        console_commands: 
+          - vsign {playername} town new {data}
+        itemID: 35
+        metaID: 5
+        slot: 50
+        quantity: 1
+        enchanted: false 
+        
+      NewPlot: 
+        name_en_US: "&2Revendiquer une nouvelle Parcelle"
+        lore_en_US: 
+          - "Prenez possession d'une Parcelle"
+          - "pour votre Ville."
+          - "La Parcelle concernée est" 
+          - "celle dans laquelle vous êtes !"
+        commands: 
+          - town claim
+        itemID: 2
+        metaID: 0
+        slot: 51
+        quantity: 1
+        enchanted: false
+        
+      TownUnclaimPlot: 
+        name_en_US: "&4Abandonner une Parcelle"
+        lore_en_US: 
+          - "Abandonnez la Parcelle"
+          - "de votre Ville."
+          - "La Parcelle concernée est" 
+          - "celle dans laquelle vous êtes !"
+        commands: 
+          - town unclaim
+        itemID: 35
+        metaID: 14
+        slot: 52
+        quantity: 1
+        enchanted: false
+        
+        
+        
+  nation: 
+    name: "&dMenu Nation"
+    command: nation
+    permission: townywands.gui.nation
+    slots: 36
+    items:
+      partyreturn: 
+        name_en_US: "&2&lRetour"
+        lore_en_US: 
+          - "&aRetour au Menu Principal"
+        console_commands: 
+          - cc open Menu.yml {playername}
+        itemID: 280
+        metaID: 0
+        slot: 9
+        quantity: 1
+        enchanted: false
+    
+      ResStatusNation: 
+        name_en_US: "&b&lStatut de la Nation"
+        lore_en_US:
+          - "&6Affiche vos Informations de Nation."
+        commands: 
+          - nation
+        itemID: 340
+        metaID: 0
+        slot: 1
+        quantity: 1
+        enchanted: false
+        
+      OnlineListNation: 
+        name_en_US: "&2&lRésidents En Ligne"
+        lore_en_US: 
+          - "&6Affiche une liste de tous les Résidents"
+          - "&6de la Nation en Ligne"
+        commands: 
+          - nation online
+        itemID: 339
+        metaID: 0
+        slot: 2
+        quantity: 1
+        enchanted: false
+        
+      KickNation: 
+        name_en_US: "&c&lBannir une Ville"
+        lore_en_US: 
+          - "&fBannir une Ville de votre Nation"
+          - "&fen tapant son nom sur la pancarte qui s'affiche."
+        console_commands: 
+          - vsign {playername} nation kick {data}
+        itemID: 386
+        metaID: 0
+        slot: 11
+        quantity: 1
+        enchanted: false
+        
+      InviteNation: 
+        name_en_US: "&2&lInviter une Ville"
+        lore_en_US: 
+          - "&fInviter une Ville dans votre Nation"
+          - "&fen tapant son nom sur la pancarte qui s'affiche."
+        console_commands: 
+          - vsign {playername} nation add {data}
+        itemID: 386
+        metaID: 0
+        slot: 10
+        quantity: 1
+        enchanted: false
+        
+      DeleteNation: 
+        name_en_US: "&c&lSupprimer la Nation!"
+        lore_en_US: 
+          - "&cSupprime votre Nation"
+        console_commands: 
+          - vsign {playername} nation delete {data}
+        itemID: 166
+        metaID: 0
+        slot: 28
+        quantity: 1
+        enchanted: false
+        
+      ToggleNationNeutrality: 
+        name_en_US: "&6&lNeutralité - &cActivée&6/&aDésactivée"
+        lore_en_US: 
+          - "&6Modifie la Neutralité de votre Nation"
+          - "&6pendant les périodes de Guerre des Nations."
+        commands: 
+          - nation toggle neutral
+        itemID: 276
+        metaID: 0
+        slot: 5
+        quantity: 1
+        enchanted: true
+        
+      SetKing: 
+        name_en_US: "&b&lChanger Roi de la Nation"
+        lore_en_US: 
+          - "&3Modifiez le Roi de la Nation"
+          - "&3en le tapant sur la pancarte qui apparaît."
+        console_commands: 
+          - vsign {playername} nation set king {data}
+        itemID: 339
+        metaID: 0
+        slot: 13
+        quantity: 1
+        enchanted: false
+
+      SetNationCapitol: 
+        name_en_US: "&b&lChanger la Capitale de la Nation"
+        lore_en_US: 
+          - "&3Modifiez la Capitale de la Nation"
+          - "&3en le tapant sur la pancarte qui apparaît."
+          - "&cCeci modifiera AUSSI le Roi de la Nation."
+        console_commands: 
+          - vsign {playername} nation set capital {data}
+        itemID: 355
+        metaID: 0
+        slot: 14
+        quantity: 1
+        enchanted: false
+
+      SetTaxesNation: 
+        name_en_US: "&b&lTaxe Nation"
+        lore_en_US: 
+          - "&3Modifiez la Taxe de la Nation"
+          - "&3en le tapant sur la pancarte qui apparaît."
+          - "&cCeci affectera TOUTES les Villes dans la Nation."
+        console_commands: 
+          - vsign {playername} nation set taxes {data}
+        itemID: 266
+        metaID: 0
+        slot: 15
+        quantity: 1
+        enchanted: false
+
+      NationAllyAdd: 
+        name_en_US: "&a&lAjouter un Allié"
+        lore_en_US: 
+          - "&3Ajoute un Allié à votre Nation"
+          - "&3en le tapant sur la pancarte qui apparaît."
+        console_commands: 
+          - vsign {playername} nation ally add {data}
+        itemID: 323
+        metaID: 0
+        slot: 26
+        quantity: 1
+        enchanted: false
+
+      NationAllyRemove: 
+        name_en_US: "&a&lSupprimer un Allié"
+        lore_en_US: 
+          - "&3Supprime un Allié de votre Nation"
+          - "&3en le tapant sur la pancarte qui apparaît."
+        console_commands: 
+          - vsign {playername} nation ally remove {data}
+        itemID: 323
+        metaID: 0
+        slot: 27
+        quantity: 1
+        enchanted: false
+        
+      NationEnemyAdd: 
+        name_en_US: "&a&lAjouter un Ennemi"
+        lore_en_US: 
+          - "&3Ajoute un Ennemi à votre Nation"
+          - "&3en le tapant sur la pancarte qui apparaît."
+        console_commands: 
+          - vsign {playername} nation enemy add {data}
+        itemID: 323
+        metaID: 0
+        slot: 35
+        quantity: 1
+        enchanted: false
+
+      NationEnemyRemove: 
+        name_en_US: "&a&lSupprimer un Ennemi"
+        lore_en_US: 
+          - "&3Supprime un Ennemi de votre Nation"
+          - "&3en le tapant sur la pancarte qui apparaît."
+        console_commands: 
+          - vsign {playername} nation enemy remove {data}
+        itemID: 323
+        metaID: 0
+        slot: 36
+        quantity: 1
+        enchanted: false
+        
+      AddAssistantNation: 
+        name_en_US: "&2&lPromouvoir un Résident à Assistant."
+        lore_en_US: 
+          - "&fDonner le Grade d'&aAssistant &fà un Résident"
+          - "&f      Permet à l'Assistant de"
+          - "&f- Ajouter/Supprimer des Villes à la Nation"
+          - "&f- Ajouter/Supprimer des Alliés à la Nation"
+          - "&f- Ajouter/Supprimer des Ennemis à la Nation"
+        console_commands: 
+          - vsign {playername} nation rank add {data} assistant
+        itemID: 386
+        metaID: 0
+        slot: 28
+        quantity: 1
+        enchanted: false
+        
+      RemoveAssistantNation: 
+        name_en_US: "&c&lRétrograder un Assistant."
+        lore_en_US: 
+          - "&fSupprimer le Grade d'Assistant"
+        console_commands: 
+          - vsign {playername} nation rank remove {data} assistant
+        itemID: 386
+        metaID: 0
+        slot: 29
+        quantity: 1
+        enchanted: false
+        
+      DepositMoneyNation: 
+        name_en_US: "&2&lDéposer de l'argent"
+        lore_en_US: 
+          - "&3Cliquer pour déposer de l'argent dans la Banque."
+          - "&6Tapez le montant sur la pancarte qui s'affiche."
+        console_commands: 
+          - vsign {playername} nation deposit {data}
+        itemID: 130
+        metaID: 0
+        slot: 17
+        quantity: 1
+        enchanted: false
+        
+      WithdrawMoneyNation: 
+        name_en_US: "&c&lRetirer de l'argent"
+        lore_en_US: 
+          - "&3Cliquer pour retirer de l'argent dans la Banque."
+          - "&6Tapez le montant sur la pancarte qui s'affiche."
+        console_commands: 
+          - vsign {playername} nation withdraw {data}
+        itemID: 130
+        metaID: 0
+        slot: 18
+        quantity: 1
+        enchanted: false
+        
+      SetNameNation: 
+        name_en_US: "&2&lChanger Nom de la Nation"
+        lore_en_US: 
+          - "&aRenommez votre Nation à votre guise"
+          - "&aen tapant un nouveau nom sur la pancarte."
+        console_commands: 
+          - vsign {playername} nation set name {data}
+        itemID: 386
+        metaID: 0
+        slot: 31
+        quantity: 1
+        enchanted: false
+       
+      NewNation: 
+        name_en_US: "&2&lCréer une nouvelle Nation"
+        lore_en_US: 
+          - "&aCommencez votre Nation"
+          - "&aen tapant son nom sur la pancarte."
+        console_commands: 
+          - vsign {playername} nation new {data}
+        itemID: 35
+        metaID: 5
+        slot: 32
+        quantity: 1
+        enchanted: false
+        
+      LeaveNation: 
+        name_en_US: "&4&lQuitter votre Nation"
+        lore_en_US: 
+          - "&aQuitte la Nation dans laquelle"
+          - "&ase trouve votre Ville"
+        commands: 
+          - nation leave
+        itemID: 35
+        metaID: 14
+        slot: 33
+        quantity: 1
+        enchanted: false
+        
+        
+  admin: 
+    name: "&cAdmin Menu"
+    command: admgui
+    permission: townywands.gui.admin
+    slots: 9
+    items: 
+      AdminPanel: 
+        name_de_DE: "&c&lAdminpanel"
+        name_en_US: "&c&lAdminpanel"
+        lore_de_DE: 
+          - "&6Towny Admin Panel"
+        lore_en_US: 
+          - "&6Towny Admin Panel"
+        commands: 
+          - townyadmin
+        itemID: 323
+        metaID: 0
+        slot: 1
+        quantity: 1
+        enchanted: true
+        
+      ToggleModeDebug: 
+        name_de_DE: "&6&lDebug - &cAn&6/&aAus"
+        name_en_US: "&6&lDebug - &cOn&6/&aOff"
+        lore_en_US: []
+        commands: 
+          - townyadmin toggle debug
+        itemID: 340
+        metaID: 0
+        slot: 9
+        quantity: 1
+        enchanted: true
+        
+      ToggleModeDevMode: 
+        name_de_DE: "&6&lDevMode - &cAn&6/&aAus"
+        name_en_US: "&6&lDevMode - &cOn&6/&aOff"
+        lore_en_US: []
+        commands: 
+          - townyadmin toggle devmode
+        itemID: 340
+        metaID: 0
+        slot: 8
+        quantity: 1
+        enchanted: true
+        
+      ToggleModeWar: 
+        name_de_DE: "&6&lKrieg - &cAn&6/&aAus"
+        name_en_US: "&6&lWar - &cOn&6/&aOff"
+        lore_en_US: []
+        commands: 
+          - townyadmin toggle war
+        itemID: 340
+        metaID: 0
+        slot: 6
+        quantity: 1
+        enchanted: true
+        
+      ToggleModeNeutral: 
+        name_de_DE: "&6&lNeutral - &aAn&6/&cAus"
+        name_en_US: "&6&lNeutral - &aOn&6/&cOff"
+        lore_en_US: []
+        commands: 
+          - townyadmin toggle neutral
+        itemID: 340
+        metaID: 0
+        slot: 5
+        quantity: 1
+        enchanted: true
+        
+  maisons: 
+    name: "&dMenu Location"
+    command: location
+    permission: townywands.gui.maisons
+    slots: 27
+    items:
+      asreturn:
+        name_en_US: "&2&lRetour"
+        lore_en_US: 
+          - "&aRetour au Menu Principal"
+        console_commands: 
+          - cc open Menu.yml {playername}
+        itemID: 280
+        metaID: 0
+        slot: 9
+        quantity: 1
+        enchanted: false    
+
+      asme:
+        name_en_US: "&c&lMes Locations"
+        lore_en_US: 
+          - "&6Affiche toutes les informations"
+          - "&6concernant vos Locations."
+        commands: 
+          - as me
+        itemID: 50
+        metaID: 0
+        slot: 5
+        quantity: 1
+        enchanted: false
+        
+      addfriend: 
+        name_en_US: "&aAjouter un Ami"
+        lore_en_US: 
+          - "&6Ajoute un Ami à votre Maison"
+          - "&6Il aura les mêmes droits que vous"
+          - "&cVous devez être dans la maison concernée."
+        console_commands: 
+          - vsign {playername} as addfriend {data}
+        itemID: 35
+        metaID: 5
+        slot: 10
+        quantity: 1
+        enchanted: false
+        
+      remvoefriend: 
+        name_en_US: "&cSupprimer un Ami"
+        lore_en_US: 
+          - "&6Supprime un Ami à votre Maison"
+          - "&6Il n'aura plus les mêmes droits que vous"
+          - "&cVous devez être dans la maison concernée."
+        console_commands: 
+          - vsign {playername} as delfriend {data}
+        itemID: 35
+        metaID: 14
+        slot: 11
+        quantity: 1
+        enchanted: false
+
+      asunrent: 
+        name_en_US: "&c&lNe plus Louer"
+        lore_en_US: 
+          - "&6Supprime votre location"
+          - "&4ATTENTION! La maison sera"
+          - "&4remise dans son état initial!"
+        commands: 
+          - as unrent
+        itemID: 166
+        metaID: 0
+        slot: 23
+        quantity: 1
+        enchanted: false
+
+  party: 
+    name: "&dMenu Groupes"
+    command: groupe
+    permission: townywands.gui.groupe
+    slots: 27
+    items:
+      partyreturn: 
+        name_en_US: "&2&lRetour"
+        lore_en_US: 
+          - "&aRetour au Menu Principal"
+        console_commands: 
+          - cc open Menu.yml {playername}
+        itemID: 280
+        metaID: 0
+        slot: 9
+        quantity: 1
+        enchanted: false
+
+      partyinfo: 
+        name_en_US: "&d&lInfos de Groupe"
+        lore_en_US: 
+          - "&dAffiche les Informations"
+          - "&dcomplètes sur votre Groupe"
+        commands: 
+          - party
+        itemID: 50
+        metaID: 0
+        slot: 1
+        quantity: 1
+        enchanted: false
+        
+      partycreate: 
+        name_en_US: "&2&lCréer un Groupe"
+        lore_en_US: 
+          - "&aCrée un Groupe qui permet"
+          - "&ade partager des XP gagnées"
+          - "&aainsi que les objets ramassés."
+          - "&dTapez le &aNom &ddu Groupe"
+          - "&dsur la pancarte qui apparaît."
+        console_commands: 
+          - vsign {playername} party create {data}
+        itemID: 35
+        metaID: 5
+        slot: 5
+        quantity: 1
+        enchanted: false
+        
+      partypassword: 
+        name_en_US: "&2&lDéfinir Mot de Passe"
+        lore_en_US: 
+          - "&aPermet de définir le"
+          - "&2Mot de Passe &aque doivent"
+          - "&adonner les Aventuriers avant de"
+          - "&apouvoir rejoindre le Groupe."
+          - "&dTapez le mot de passe souhaité"         
+          - "&dsur la pancarte qui apparaît."
+        console_commands: 
+          - vsign {playername} party password {data}
+        itemID: 323
+        metaID: 0
+        slot: 6
+        quantity: 1
+        enchanted: false
+        
+      partyleader: 
+        name_en_US: "&2&lModifier le Leader"
+        lore_en_US: 
+          - "&aPermet de modifier le"
+          - "&2Leader &adu Groupe"
+          - "&dTapez le nom du Leader souhaité"         
+          - "&dsur la pancarte qui apparaît."
+        console_commands: 
+          - vsign {playername} party leader {data}
+        itemID: 323
+        metaID: 0
+        slot: 4
+        quantity: 1
+        enchanted: false
+        
+      inviteplayerparty: 
+        name_en_US: "&2Inviter un Aventurier"
+        lore_en_US: 
+          - "&aInviter un Aventurier au Groupe"
+          - "&dTapez le nom de la personne à inviter"         
+          - "&dsur la pancarte qui apparaît."
+        console_commands: 
+          - vsign {playername} party invite {data}
+        itemID: 386
+        metaID: 0
+        slot: 10
+        quantity: 1
+        enchanted: false
+        
+      kickplayerparty: 
+        name_en_US: "&4Bannir un Aventurier"
+        lore_en_US: 
+          - "&cBannir un Aventurier du Groupe"
+          - "&dTapez le nom de la personne à bannir"         
+          - "&dsur la pancarte qui apparaît."
+        console_commands: 
+          - vsign {playername} party kick {data}
+        itemID: 386
+        metaID: 0
+        slot: 11
+        quantity: 1
+        enchanted: false
+        
+      partageobjets: 
+        name_en_US: "&2Partager les Objets"
+        lore_en_US: 
+          - "&aPermet de partager les &aObjets"
+          - "&arammasés au sol avec les membres"
+          - "&ade votre Groupe qui sont à proximité."
+        commands: 
+          - party itemshare
+        itemID: 265
+        metaID: 0
+        slot: 17
+        quantity: 1
+        enchanted: false
+        
+      partagexp: 
+        name_en_US: "&2Partager l'Expérience"
+        lore_en_US: 
+          - "&aPermet de partager l'&aExpérience"
+          - "&aacquise avec les membres de votre"
+          - "&aGroupe qui sont à proximité."
+        commands: 
+          - party xpshare
+        itemID: 266
+        metaID: 0
+        slot: 18
+        quantity: 1
+        enchanted: false
+
+      partydisband: 
+        name_en_US: "&4&lSupprimer le Groupe"
+        lore_en_US: 
+          - "&cSupprime votre Groupe actuel"
+        commands: 
+          - party disband
+        itemID: 166
+        metaID: 0
+        slot: 19
+        quantity: 1
+        enchanted: false
+        
+      partyleave: 
+        name_en_US: "&4&lQuitter le Groupe"
+        lore_en_US: 
+          - "&cQuitter votre Groupe actuel"
+        commands: 
+          - party quit
+        itemID: 35
+        metaID: 14
+        slot: 24
+        quantity: 1
+        enchanted: false
+
+      partychat: 
+        name_en_US: "&2&lTchat du Groupe"
+        lore_en_US: 
+          - "&dEn tapant &a/pc [message]"
+          - "&dvous enverrez un message"
+          - "&daux membres de votre Groupe"
+        commands: 
+          - party chat
+        itemID: 339
+        metaID: 0
+        slot: 22
+        quantity: 1
+        enchanted: false
+        
+      partyjoin: 
+        name_en_US: "&2&lRejoindre un Groupe"
+        lore_en_US: 
+          - "&aRejoindre un Groupe"
+          - "&dTapez le &aNom &ddu Groupe"
+          - "&det le &amot de passe"
+          - "&dsur la pancarte qui apparaît."
+        console_commands: 
+          - vsign {playername} party join {data}
+        itemID: 35
+        metaID: 5
+        slot: 23
+        quantity: 1
+        enchanted: false
+        
+      unlockparty: 
+        name_en_US: "&2Ouvrir le Groupe"
+        lore_en_US: 
+          - "&aOuvre le Groupe aux autres Aventuriers"
+        commands: 
+          - party unlock
+        itemID: 35
+        metaID: 5
+        slot: 26
+        quantity: 1
+        enchanted: false
+        
+      lockparty: 
+        name_en_US: "&4Fermer le Groupe"
+        lore_en_US: 
+          - "&cFerme le Groupe aux autres Aventuriers"
+        commands: 
+          - party lock
+        itemID: 35
+        metaID: 14
+        slot: 27
+        quantity: 1
+        enchanted: false

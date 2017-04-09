@@ -39,21 +39,21 @@ menu-settings:
 #+                  +#
 ######################
 
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&aRetour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal.'
+  POSITION-X: 8
+  POSITION-Y: 1
+
 menu-close:
-  NAME: '&cFermer'
+  NAME: '&4Fermer'
   ID: barrier
   LORE:
     - 'Ferme cette fenêtre.'
   POSITION-X: 9
-  POSITION-Y: 1
-  
-retour:
-  COMMAND: 'open: Menu.yml'
-  NAME: '&6Retour'
-  ID: stick
-  LORE:
-    - 'Retour au Menu Principal'
-  POSITION-X: 8
   POSITION-Y: 1
 
 day1:
@@ -75,7 +75,7 @@ day3:
   ID: '35:3'
   LORE:
     - 'De 16h à 20h :'
-    - '&oDouble Expérience'
+    - '&cTriple Expérience'
     - '&otoutes compétences !'
   POSITION-X: 4
   POSITION-Y: 3
@@ -103,6 +103,10 @@ day5:
 day6:
   NAME: '&aSamedi'
   ID: '35:11'
+  LORE:
+    - 'De 18h à 20h :'
+    - '&cDouble Expérience'
+    - '&otoutes compétences !'
   POSITION-X: 7
   POSITION-Y: 3
   KEEP-OPEN: true
@@ -110,6 +114,13 @@ day6:
 day7:
   NAME: '&aDimanche'
   ID: '35:12'
+  LORE:
+    - 'De 16h à 20h :'
+    - '&cUn Kalphite - WorldBoss'
+    - '&cspawn au Village'
+    - '&cdes Premiers Hommes !'
+    - ' '
+    - '&oUn spawn / 20 minutes.'
   POSITION-X: 8
   POSITION-Y: 3
   KEEP-OPEN: true

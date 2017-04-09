@@ -26,7 +26,7 @@ commands:
   /commands:
   - '   &f---------------------- ~ ¤ ~ ----------------------'
   - '&dPour une aide détaillée, visitez le site de Gaïa'
-  - '       &awww.gaia-minecraft.enjin.com'
+  - '            &awww.gaia-craft.fr'
   - ' '
   - '             &dCommande Unique:'
   - '                     &a&l/menu'
@@ -34,9 +34,9 @@ commands:
   - '&dCe Menu répertorie toutes les commandes'
   - '       &dque vous avez à disposition.'
   - ' '
-  - '&dCarte Dynamique: &awww.gaia-minecraft.enjin.com/gallery'
-  - '&dGuide Complet: &awww.gaia-minecraft.enjin.com/guide'
-  - '&dContact: &agaia.minecraft.assistance@gmail.com'
+  - '&dCarte Dynamique: &awww.gaia-craft.fr/dynmap.html'
+  - '&dGuide Complet: &awww.gaia-craft.fr/guide.html'
+  - '&dContact: &acontact@gaia-craft.fr'
   - '   &f---------------------- ~ ¤ ~ ----------------------'
   /pack:
   - command:/backpack
@@ -58,11 +58,10 @@ commands:
     Pack de Ressources. Installation avec les étapes suivantes:'
   - '&d1- Télécharger Optifine:&a http://optifine.net/downloads'
   - '&d2- Votre Minecraft doit avoir été lancé au moins une fois dans la version correcte.'
-  - '&d3- Coupez complètement Minecraft. Même le laucher doit être fermé!'
+  - '&d3- Coupez complètement Minecraft. Même le launcher doit être fermé!'
   - '&d4- Lancez le fichier .jar de l''installation d''Optifine.'
   - '&d5- Relancez Minecraft. Sélectionnez la VERSION du jeu qui se nomme &f1.9.X-Optifine'
   - '&d6- Une fois sélectionné vous pouvez lancer le jeu. Vous avez Optifine!'
-  - '&d&oPour la configuration complète:&a http://gaia-minecraft.enjin.com/guide/'
   - '   &f---------------------- ~ ¤ ~ ----------------------'
   /histoire:
   - console:/bq event <arg 0> default.historique_folder
@@ -170,6 +169,8 @@ commands:
   - op-command:/as setprice <arg 1> <arg 0>
   - WAIT 1
   - op-command:/as duration 3 jours <arg 0>
+  - WAIT 1
+  - op-command:/as groupadd athelas <arg 0>
   - WAIT 1
   - op-command:/as addsign <arg 0>
   /louerajout:

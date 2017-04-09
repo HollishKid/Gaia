@@ -26,9 +26,11 @@ NPC_options:
   magie_rep:
     text: 'Parlez au &2Mage &a&oà l''entrée du &dSanctuaire &a&oou à l''&2Apprenti &a&o!'
   site_rep:
-    text: 'Pour plus d''informations: &b http://www.gaia-minecraft.enjin.com &a&oou envoyez un mail à &bgaia.minecraft.assistance@gmail.com'
+    text: 'Pour plus d''informations consultez notre site.'
+    events: redirect_site
   dynmap_rep:
-    text: 'Pour ça &6Gaïa &a&oa créée une Carte Interactive sur: &b http://gaia-minecraft.enjin.com/gallery &a&o, souhaitez vous en savoir plus ?'
+    text: 'Pour ça &6Gaïa &a&oa créée une Carte Interactive, souhaitez vous en savoir plus ?'
+    events: redirect_map
     pointers: oui,non,out
   magie_rep:
     text: 'Demande plus de conseil à l''&2Apprenti&a&o. Il se trouve au &dSanctuaire&a&o, au Nord d''Athelas.'
@@ -42,7 +44,8 @@ NPC_options:
     text: 'D''accord, en quoi puis-je vous aider ?'
     pointers: survie,plot,dynmap,mcmmo,trade,magie,site,out
   ou_rep:
-    text: 'Visitez l''adresse &b http://gaia-minecraft.enjin.com/gallery '
+    text: 'La voici !'
+    events: redirect_map
     pointers: iso,markers,zoom,autre
   iso_rep:
     text: 'Sur la droite de l''écran (glissez la souris entièrement à droite) vous pouvez sélectionner la vision de la carte.'

@@ -1,0 +1,211 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dChanels'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 4
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+#    id: wool:1
+#    left-click: false
+#    right-click: true
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+aide:
+  COMMAND: 'chanel aide'
+  NAME: '&aAide'
+  LORE:
+    - 'Affiche l''aide des'
+    - 'chanels de discussion.'
+  ID: map
+  POSITION-X: 4
+  POSITION-Y: 1
+
+info:
+  COMMAND: 'chanel info'
+  NAME: '&aInfo'
+  LORE:
+    - 'Affiche l''état de vos'
+    - 'chanels de discussion.'
+  ID: map
+  POSITION-X: 6
+  POSITION-Y: 1
+  
+silence:
+  COMMAND: 'chanel silence'
+  NAME: '&aSilence'
+  LORE:
+    - '&cDésactive &7tous vos'
+    - '&7chanels de discussion.'
+  ID: torch
+  POSITION-X: 5
+  POSITION-Y: 3
+
+silence:
+  COMMAND: 'chanel silence'
+  NAME: '&aSilence'
+  LORE:
+    - '&cDésactive &ftous vos'
+    - '&fchanels de discussion.'
+  ID: torch
+  POSITION-X: 5
+  POSITION-Y: 3
+
+
+global:
+  COMMAND: 'chanel global'
+  NAME: '&aGlobal'
+  LORE:
+    - '&2Active &f/ &cDésactive'
+    - 'le Chanel Global.'
+    - ' '
+    - 'Discussion par défaut,'
+    - 'incluant le Discord.'
+  ID: book
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+local:
+  COMMAND: 'chanel local'
+  NAME: '&aLocal'
+  LORE:
+    - '&2Active &f/ &cDésactive'
+    - 'le Chanel Local.'
+    - ' '
+    - 'Discussion par proximité'
+    - 'avec toutes les personnes'
+    - 'dans un rayon de 75 blocs.'
+  ID: book
+  POSITION-X: 4
+  POSITION-Y: 3
+
+commerce:
+  COMMAND: 'chanel commerce'
+  NAME: '&aCommerce'
+  LORE:
+    - '&2Active &f/ &cDésactive'
+    - 'le Chanel Commerce.'
+    - ' '
+    - 'Discussion pour marchander.'
+  ID: book
+  POSITION-X: 6
+  POSITION-Y: 3
+  
+staff:
+  COMMAND: 'chanel staff'
+  NAME: '&2Staff'
+  LORE:
+    - '&2Active &f/ &cDésactive'
+    - 'le Chanel Staff.'
+  ID: book
+  POSITION-X: 7
+  POSITION-Y: 3
+
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&aRetour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal.'
+  POSITION-X: 8
+  POSITION-Y: 1
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+
+
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true

@@ -15,44 +15,20 @@
 #
 ###################################################
 #
-tweet_new_guy: folder tweet_new_guy1,tweet_new_guy2
-tweet_new_guy1: 'command sudo %player% tweet Je viens de rejoindre le serveur !'
-tweet_new_guy2: folder tweet_new_guy3 delay:2
-tweet_new_guy3: 'command sudo %player% tweet send'
-#
-#
-#Deprecated so far
-#taxes_permanent: objective start taxes_permanent
 #
 nothing: tag del inexistent_tag
 #
 #
-# Voting Rewards
 #
-#     Enjin
-#      (currently 7 operationnal)
-#
-vote_enjin_1: folder vote_enjin_1_mess,vote_enjin_1_mess2,vote_enjin_1_mess3,vote_enjin_1_point
-vote_enjin_1_mess: 'message &d&o&lMerci d''avoir soutenu Gaïa ! Vous gagnez &21 &d&opoint de Vote !'
-vote_enjin_1_mess2: 'message &d&oVous pouvez gagner plus de points de votes en votant davantage,'
-vote_enjin_1_mess3: 'message &d&oou en donnant de votre temps. Consultez le &a/menu &d&osection &aRéseaux de Gaïa'
-vote_enjin_1_point: point votes 1
-#
-vote_enjin_all: 'message &d&o&lMerci d''avoir soutenu Gaïa ! Prenez cet argent et ce titre! '
-#
-#
-#
-#
-register_mail: folder historique_folder,register_mail1,register_mail2,register_mail3,register_mail4 delay:1
-register_mail1: 'sudo email set subject Information - Nouveau joueur sur Gaïa'
-register_mail2: 'sudo email set to gaia.minecraft.assistance@gmail.com'
-register_mail3: 'sudo email set body Un nouveau joueur du nom de %player% vient de s''enregistrer sur Gaïa. Merci de bien vouloir l''acceuillir.'
-register_mail4: 'sudo email send zeddandhollish'
 #
 journal_update: journal update
 sgv_message: 'message &d&oIl vous faut voter encore &a%point.votes.left:50% &d&ofois pour accéder à ce Salon !'
 sb_message: 'message &d&oIl vous faut voter encore &a%point.votes.left:100% &d&ofois pour accéder à ce Salon !'
 sbib_message: 'message &d&oIl vous faut voter encore &a%point.votes.left:200% &d&ofois et obtenir encore &a%point.reput_athelas.left:100% &d&opoints de réputation à Athelas pour accéder à ce Salon !'
+#
+redirect_site: 'command tellraw %player% {"text":"Cliquez ici pour aller vers le site.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
+redirect_guide: 'command tellraw %player% {"text":"Cliquez ici pour aller vers le guide.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/guide.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
+redirect_map: 'command tellraw %player% {"text":"Cliquez ici pour aller vers la carte.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/dynmap.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
 #
 #
 #
@@ -110,13 +86,17 @@ plume_etrange22: setblock LOG -6682;68;2922;Gaia
 teleport_quai: 'run ^teleport -6577;64;3168;Gaia ^message &dJe ne devrais pas traîner autour de ce bateau...'
 #
 #
-#
 # Athelas Tester
 #
-# NOT YET ADDED IN COMMANDREGIONS => TO BE DONE AT RESET, NOT EVERYBODY HAS "PLAYER" TAG.
-athelas_out_checker: if player athelas_out_checker2 else nothing
-athelas_out_checker2: if intendant_done nothing else athelas_out_negative
-athelas_out_negative: folder athelas_out_n1,athelas_out_n2
+athelas_out_checker: if intendant_done nothing else athelas_out_negative
+athelas_out_negative: if tempo_historique nothing else athelas_out_negative_exe
+athelas_out_negative_exe: folder athelas_out_timer,athelas_out_warn,athelas_out_warn2
+athelas_out_timer: objective start athelas_out_timer
+athelas_out_warn: 'message &d&lJe ne devrais pas encore quitter la Ville d''Athelas.'
+athelas_out_warn2: 'message &c&lRentrez dans la ville dans les 60 secondes, ou vous serez téléporté au Château.'
+#
+athelas_out_checkerbis: if in_athelas nothing else athelas_out_checker_exe
+athelas_out_checker_exe: folder athelas_out_n1,athelas_out_n2
 athelas_out_n1: 'message &d&lJe devrais d''abord aller voir l''&dIntendant &d&let / ou finir ce qu''il m''a demandé de faire. Avant cela je devrais rester en ville.'
 athelas_out_n2: teleport -6945;65;2956;Gaia
 #
@@ -165,7 +145,7 @@ vulgarite_immediat: objective start vulgarite_immediat
 vulgarite_avertissement: folder vulgarite_avertissement_1,vulgarite_avertissement_mess
 vulgarite_avertissement_1: point vulgarite 1
 vulgarite_avertissement_mess: folder vulgarite_avertissement_mess_exe delay:1
-vulgarite_avertissement_mess_exe: 'message &4AVERTISSEMENT: &cVous avez utilisé &2%point.vulgarite.amount% &c/ &23 &cmots censurés. Attendez encore &2%objective.vulgarite_timer.left% &cavant d''être remis à 0. A défaut, vous serez envoyé en &4Prison&c.'
+vulgarite_avertissement_mess_exe: 'message &4AVERTISSEMENT : &cVous avez utilisé &2%point.vulgarite.amount% &c/ &23 &cmots censurés. Attendez encore &2%objective.vulgarite_timer.left% &cavant d''être remis à 0. A défaut, vous serez envoyé en &4Prison&c.'
 #
 vulgarite_time_up: if vulgarite3 hollish.prison_god_testerfer else vulgarite_reset
 vulgarite_reset: folder vulgarite_reset_exe,vulgarite_immediat_remove delay:1
@@ -179,13 +159,6 @@ vulgarite_immediat_remove: objective delete vulgarite_immediat
 #
 ####################################
 #
-# Requirement tags:
-#
-#  ALL = staff
-#
-#  Z & H = founder
-#  guigui & BlaBlaGumm = builder
-#  Lyrtix & GoupilDC16 = moderator
 #
 east_perms_checker_in: folder east_perms_checker_in_exe,east_perms_gm0
 #
@@ -200,35 +173,60 @@ east_perms_checker_in_exe2: if !staff east_player_perms_on else east_perms_check
 east_perms_checker_in_staff_alpha: if beta east_beta_perms_on else east_perms_checker_in_staff
 east_perms_checker_in_staff: if builder east_builder_perms_on else east_perms_checker_in_modo
 east_perms_checker_in_modo: if moderator east_moderator_perms_on else east_perms_checker_in_creator
-east_perms_checker_in_creator: if creator east_perms_checker_in_creator_on else east_perms_checker_in_founder
-east_perms_checker_in_founder: if founder east_founder_perms_on else perms_error_message
+east_perms_checker_in_creator: if horloger east_perms_checker_in_creator_on else east_perms_checker_in_founder
+east_perms_checker_in_founder: if admin east_founder_perms_on else perms_error_message
 perms_error_message: 'message &cL''erreur 404-95D est survenue. Veuillez rapporter ce message à un membre du Staff. &6Merci&c.'
 #
 east_player_perms_on: if grade_ecuyer east_ecuyer_on else east_aventurier_on
-east_ecuyer_on: 'command pex user %player% group set ecuyer_est'
-east_aventurier_on: 'command pex user %player% group set aventurier_est'
-east_beta_perms_on: 'command pex user %player% group set beta_est'
-east_builder_perms_on: 'command pex user %player% group set builder_est'
-east_moderator_perms_on: 'command pex user %player% group set moderator_est'
-east_perms_checker_in_creator_on: 'command pex user %player% group set horloger_est'
-east_founder_perms_on: 'message &6Bienvenue, Fondateur &a%player%&6. Votre groupe de permission n''a pas changé en entrant sur ce continent.'
+east_ecuyer_on: folder east_ecuyer_on1,east_ecuyer_on2
+east_ecuyer_on1: 'command pex user %player% group add ecuyer_est'
+east_ecuyer_on2: 'command pex user %player% group remove ecuyer'
+east_aventurier_on: folder east_aventurier_on1,east_aventurier_on2
+east_aventurier_on1: 'command pex user %player% group add aventurier_est'
+east_aventurier_on2: 'command pex user %player% group remove aventurier'
+#
+east_beta_perms_on: folder east_beta_perms_on1,east_beta_perms_on2
+east_beta_perms_on1: 'command pex user %player% group add beta_est'
+east_beta_perms_on2: 'command pex user %player% group remove beta'
+east_builder_perms_on: folder east_builder_perms_on1,east_builder_perms_on2
+east_builder_perms_on1: 'command pex user %player% group add builder_est'
+east_builder_perms_on2: 'command pex user %player% group remove builder'
+east_moderator_perms_on: folder east_moderator_perms_on1,east_moderator_perms_on2
+east_moderator_perms_on1: 'command pex user %player% group add moderator_est'
+east_moderator_perms_on2: 'command pex user %player% group remove moderator'
+east_perms_checker_in_creator_on: folder east_perms_checker_in_creator_on1,east_perms_checker_in_creator_on2
+east_perms_checker_in_creator_on1: 'command pex user %player% group add horloger_est'
+east_perms_checker_in_creator_on2: 'command pex user %player% group remove horloger'
+east_founder_perms_on: 'message &6Bienvenue, Grand Horloger &a%player%&6. Votre groupe de permission n''a pas changé en entrant sur ce continent.'
 #
 #
 east_perms_checker_out: if !staff east_player_perms_off else east_perms_checker_out_staff_alpha
 east_perms_checker_out_staff_alpha: if beta east_beta_perms_off else east_perms_checker_out_staff
 east_perms_checker_out_staff: if builder east_builder_perms_off else east_perms_checker_out_modo
 east_perms_checker_out_modo: if moderator east_moderator_perms_off else east_perms_checker_out_creator
-east_perms_checker_out_creator: if creator east_creator_perms_off else east_perms_checker_out_founder
-east_perms_checker_out_founder: if founder east_founder_perms_off else perms_error_message
+east_perms_checker_out_creator: if horloger east_creator_perms_off else east_perms_checker_out_founder
+east_perms_checker_out_founder: if admin east_founder_perms_off else perms_error_message
 #
 east_player_perms_off: if grade_ecuyer east_ecuyer_off else east_aventurier_off
-east_ecuyer_off: 'command pex user %player% group set ecuyer'
-east_aventurier_off: 'command pex user %player% group set aventurier'
-east_beta_perms_off: 'command pex user %player% group set beta'
-east_builder_perms_off: 'command pex user %player% group set builder'
-east_moderator_perms_off: 'command pex user %player% group set moderator'
-east_creator_perms_off: 'command pex user %player% group set horloger'
-east_founder_perms_off: 'message &6Bienvenue, Fondateur &a%player%&6. Votre groupe de permission n''a pas changé en quittant ce continent.'
+east_ecuyer_off: folder east_ecuyer_off1,east_ecuyer_off2
+east_ecuyer_off1: 'command pex user %player% group remove ecuyer_est'
+east_ecuyer_off2: 'command pex user %player% group add ecuyer'
+east_aventurier_off: folder east_aventurier_off1,east_aventurier_off2
+east_aventurier_off1: 'command pex user %player% group remove aventurier_est'
+east_aventurier_off2: 'command pex user %player% group add aventurier'
+east_beta_perms_off: folder east_beta_perms_off1,east_beta_perms_off2
+east_beta_perms_off1: 'command pex user %player% group remove beta_est'
+east_beta_perms_off2: 'command pex user %player% group add beta'
+east_builder_perms_off: folder east_builder_perms_off1,east_builder_perms_off2
+east_builder_perms_off1: 'command pex user %player% group remove builder_est'
+east_builder_perms_off2: 'command pex user %player% group add builder'
+east_moderator_perms_off: folder east_moderator_perms_off1,east_moderator_perms_off2
+east_moderator_perms_off1: 'command pex user %player% group remove moderator_est'
+east_moderator_perms_off2: 'command pex user %player% group add moderator'
+east_creator_perms_off: folder east_creator_perms_off1,east_creator_perms_off2
+east_creator_perms_off1: 'command pex user %player% group remove horloger_est'
+east_creator_perms_off2: 'command pex user %player% group add horloger'
+east_founder_perms_off: 'message &6Bienvenue, Grand Horloger &a%player%&6. Votre groupe de permission n''a pas changé en quittant ce continent.'
 #
 #####################################
 #
@@ -463,193 +461,43 @@ charon_store: 'command cc open charonnew.yml %player%'
 #
 # XP Boosters
 #
-xpboost2: if votes50 xp_boost_event2 else noxpboostvotes
-xpboost3: if votes75 xpboost3a else noxpboostvotes
-xpboost3a: if reput_athelas10 xp_boost_event3 else noxpboostreput
-xpboost4: if votes100 xpboost4a else noxpboostvotes
-xpboost4a: if reput_athelas20 xp_boost_event4 else noxpboostreput
+xpboost2: if reput_athelas50 xp_boost_event2 else noxpboostreput
+xpboost3: if reput_athelas100 xp_boost_event3 else noxpboostreput
+xpboost4: if reput_athelas200 xp_boost_event4 else noxpboostreput
 xpboost_timer: 'command thisisthexpboosttimercommandforonehour'
 #
 #
-xpboosttake50: point votes -50
-xpboosttake75: point votes -75
-xpboosttake100: point votes -100
-xpboosttake10reput: point reput_athelas -10
-xpboosttake20reput: point reput_athelas -20
+xpboosttake50reput: point reput_athelas -50
+xpboosttake100reput: point reput_athelas -100
+xpboosttake200reput: point reput_athelas -200
 #
-noxpboostvotes: folder noxpboostvotes1,noxpboostvotes2
-noxpboostvotes1: 'message &dVous n''avez pas assez de points de Vote.'
-noxpboostvotes2: 'message &dVous avez &2%point.votes.amount% &dPoint(s) de Vote.'
 noxpboostreput: folder noxpboostreput1,noxpboostreput2
 noxpboostreput1: 'message &dVous n''avez pas assez de points de Réputation.'
 noxpboostreput2: 'message &dVous avez &2%point.reput_athelas.amount% &dPoint(s) de Réputation.'
 #
-xp_boost_event2: folder xp_boost_event2a,xp_boost_event2c,xpboosttake50,xpboost_timer
+xp_boost_event2: folder xp_boost_event2a,xp_boost_event2c,xpboosttake50reput,xpboost_timer
 xp_boost_event2a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l2 &dpendant &21 &dHeure !'
 xp_boost_event2c: 'command xprate 2 true'
 #
-xp_boost_event3: folder xp_boost_event3a,xp_boost_event3c,xpboosttake75,xpboosttake10reput,xpboost_timer
+xp_boost_event3: folder xp_boost_event3a,xp_boost_event3c,xpboosttake100reput,xpboost_timer
 xp_boost_event3a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l3 &dpendant &21 &dHeure !'
 xp_boost_event3c: 'command xprate 3 true'
 #
-xp_boost_event4: folder xp_boost_event4a,xp_boost_event4c,xpboosttake100,xpboosttake20reput,xpboost_timer
+xp_boost_event4: folder xp_boost_event4a,xp_boost_event4c,xpboosttake200reput,xpboost_timer
 xp_boost_event4a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l4 &dpendant &21 &dHeure !'
 xp_boost_event4c: 'command xprate 4 true'
 #
 # Skins
 #
-skin_choisir: if skin_custom_cost skin_valider_exe else skin_no_fund
+skin_choisir: if reput_athelas10 skin_valider_exe else skin_no_fund
 skin_no_fund: folder skin_no_fund1,skin_no_fund2,skin_no_fund3
 skin_no_fund1: 'message &dVous n''avez pas assez de &2Points de Réputation'
-skin_no_fund2: 'message &det/ou de &2Points de Vote &dpour acheter un skin.'
-skin_no_fund3: 'message &dRéputation: &2%point.reput_athelas.amount% &d/ 10 et Votes: &2%point.votes.amount% &d/ 20.'
+skin_no_fund2: 'message &dpour acheter un skin.'
+skin_no_fund3: 'message &dRéputation : &2%point.reput_athelas.amount% &d/ 10.'
 #
-skin_valider_exe: folder skin_pay_reput,skin_pay_vote,skin_executor
+skin_valider_exe: folder skin_pay_reput,skin_executor
 skin_pay_reput: point reput_athelas -10
-skin_pay_vote: point votes -20
 skin_executor: 'command vsign %player% skinsrestorer set %player% {data}'
-#
-# Pets
-#
-pets_mount: if votes100 pets_mount_exe else noxpboostvotes
-pets_mount_exe: folder pets_mount_exe1,pets_mount_exe2,point_votes_m100
-pets_mount_exe1: 'message &dVous pouvez désormais monter sur vos Compagnons !'
-pets_mount_exe2: 'command pex user %player% add Pet.PetToMount'
-#
-pets_chicken: if votes25 pets_chicken_exe else noxpboostvotes
-pets_chicken_exe: folder pets_chicken_exe1,pets_chicken_exe2,point_votes_m25
-pets_chicken_exe1: 'message &dVous avez maintenant un Poulet ! (Accessible depuis le /menu)'
-pets_chicken_exe2: 'command pex user %player% add Pet.chicken'
-#
-pets_cow: if votes30 pets_cow_exe else noxpboostvotes
-pets_cow_exe: folder pets_cow_exe1,pets_cow_exe2,point_votes_m30
-pets_cow_exe1: 'message &dVous avez maintenant une Vache ! (Accessible depuis le /menu)'
-pets_cow_exe2: 'command pex user %player% add Pet.cow'
-#
-pets_sheep: if votes35 pets_sheep_exe else noxpboostvotes
-pets_sheep_exe: folder pets_sheep_exe1,pets_sheep_exe2,point_votes_m35
-pets_sheep_exe1: 'message &dVous avez maintenant un Mouton ! (Accessible depuis le /menu)'
-pets_sheep_exe2: 'command pex user %player% add Pet.sheep'
-#
-pets_pig: if votes40 pets_pig_exe else noxpboostvotes
-pets_pig_exe: folder pets_pig_exe1,pets_pig_exe2,point_votes_m40
-pets_pig_exe1: 'message &dVous avez maintenant un Cochon ! (Accessible depuis le /menu)'
-pets_pig_exe2: 'command pex user %player% add Pet.pig'
-#
-pets_rabbit: if votes50 pets_rabbit_exe else noxpboostvotes
-pets_rabbit_exe: folder pets_rabbit_exe1,pets_rabbit_exe2,point_votes_m50
-pets_rabbit_exe1: 'message &dVous avez maintenant un Lapin ! (Accessible depuis le /menu)'
-pets_rabbit_exe2: 'command pex user %player% add Pet.rabbit'
-#
-pets_villager: if votes200 pets_villager_exe else noxpboostvotes
-pets_villager_exe: folder pets_villager_exe1,pets_villager_exe2,point_votes_m200
-pets_villager_exe1: 'message &dVous avez maintenant un Villageois ! (Accessible depuis le /menu)'
-pets_villager_exe2: 'command pex user %player% add Pet.villager'
-#
-pets_gollem: if votes250 pets_gollem_exe else noxpboostvotes
-pets_gollem_exe: folder pets_gollem_exe1,pets_gollem_exe2,point_votes_m250
-pets_gollem_exe1: 'message &dVous avez maintenant un Gollem de Fer ! (Accessible depuis le /menu)'
-pets_gollem_exe2: 'command pex user %player% add Pet.irongolem'
-#
-pets_snowman: if votes250 pets_snowman_exe else noxpboostvotes
-pets_snowman_exe: folder pets_snowman_exe1,pets_snowman_exe2,point_votes_m250
-pets_snowman_exe1: 'message &dVous avez maintenant un Bonhomme de Neige ! (Accessible depuis le /menu)'
-pets_snowman_exe2: 'command pex user %player% add Pet.snowman'
-#
-pets_witch: if votes250 pets_witch_exe else noxpboostvotes
-pets_witch_exe: folder pets_witch_exe1,pets_witch_exe2,point_votes_m250
-pets_witch_exe1: 'message &dVous avez maintenant une Sorcière ! (Accessible depuis le /menu)'
-pets_witch_exe2: 'command pex user %player% add Pet.witch'
-#
-#
-point_votes_m25: point votes -25
-point_votes_m30: point votes -30
-point_votes_m35: point votes -35
-point_votes_m40: point votes -40
-point_votes_m50: point votes -50
-point_votes_m100: point votes -100
-point_votes_m200: point votes -200
-point_votes_m250: point votes -250
-#
-#
-# Vente de Skins faits
-#
-############################ DEPRECATED until further notice (several skins not functionning)
-skin_pay_reput1: point reput_athelas -2
-skin_pay_vote1: point votes -5
-#
-#
-skin_dreamwish: if skin_premade skin_dreamwish_exe else skin_no_fund
-skin_dreamwish_exe: folder skin_pay_reput1,skin_pay_vote1,skin_dreamwish_exe1
-skin_dreamwish_exe1: 'command skinsrestorer set %player% DreamWish'
-
-skin_Olyvia_: if skin_premade skin_Olyvia__exe else skin_no_fund
-skin_Olyvia__exe: folder skin_pay_reput1,skin_pay_vote1,skin_Olyvia__exe1
-skin_Olyvia__exe1: 'command skinsrestorer set %player% Olyvia_'
-
-skin_kathythecat101: if skin_premade skin_kathythecat101_exe else skin_no_fund
-skin_kathythecat101_exe: folder skin_pay_reput1,skin_pay_vote1,skin_kathythecat101_exe1
-skin_kathythecat101_exe1: 'command skinsrestorer set %player% kathythecat101'
-
-skin_barrowsx: if skin_premade skin_barrowsx_exe else skin_no_fund
-skin_barrowsx_exe: folder skin_pay_reput1,skin_pay_vote1,skin_barrowsx_exe1
-skin_barrowsx_exe1: 'command skinsrestorer set %player% barrowsx'
-
-skin_typical_savage: if skin_premade skin_typical_savage_exe else skin_no_fund
-skin_typical_savage_exe: folder skin_pay_reput1,skin_pay_vote1,skin_typical_savage_exe1
-skin_typical_savage_exe1: 'command skinsrestorer set %player% typical_savage'
-
-skin_Destati: if skin_premade skin_Destati_exe else skin_no_fund
-skin_Destati_exe: folder skin_pay_reput1,skin_pay_vote1,skin_Destati_exe1
-skin_Destati_exe1: 'command skinsrestorer set %player% Destati'
-
-skin_whoisyourmommy: if skin_premade skin_whoisyourmommy_exe else skin_no_fund
-skin_whoisyourmommy_exe: folder skin_pay_reput1,skin_pay_vote1,skin_whoisyourmommy_exe1
-skin_whoisyourmommy_exe1: 'command skinsrestorer set %player% whoisyourmommy'
-
-skin_MandiHikari: if skin_premade skin_MandiHikari_exe else skin_no_fund
-skin_MandiHikari_exe: folder skin_pay_reput1,skin_pay_vote1,skin_MandiHikari_exe1
-skin_MandiHikari_exe1: 'command skinsrestorer set %player% MandiHikari'
-
-skin_AncientRelyk: if skin_premade skin_AncientRelyk_exe else skin_no_fund
-skin_AncientRelyk_exe: folder skin_pay_reput1,skin_pay_vote1,skin_AncientRelyk_exe1
-skin_AncientRelyk_exe1: 'command skinsrestorer set %player% AncientRelyk'
-#
-skin_Watanuki: if skin_premade skin_Watanuki_exe else skin_no_fund
-skin_Watanuki_exe: folder skin_pay_reput1,skin_pay_vote1,skin_Watanuki_exe1
-skin_Watanuki_exe1: 'command skinsrestorer set %player% Watanuki'
-
-skin_definitivDanny: if skin_premade skin_definitivDanny_exe else skin_no_fund
-skin_definitivDanny_exe: folder skin_pay_reput1,skin_pay_vote1,skin_definitivDanny_exe1
-skin_definitivDanny_exe1: 'command skinsrestorer set %player% definitivDanny'
-
-skin_Oguzhan_TR: if skin_premade skin_Oguzhan_TR_exe else skin_no_fund
-skin_Oguzhan_TR_exe: folder skin_pay_reput1,skin_pay_vote1,skin_Oguzhan_TR_exe1
-skin_Oguzhan_TR_exe1: 'command skinsrestorer set %player% Oguzhan_TR'
-
-skin_Gravn: if skin_premade skin_Gravn_exe else skin_no_fund
-skin_Gravn_exe: folder skin_pay_reput1,skin_pay_vote1,skin_Gravn_exe1
-skin_Gravn_exe1: 'command skinsrestorer set %player% Gravn'
-
-skin__K_O_T_: if skin_premade skin__K_O_T__exe else skin_no_fund
-skin__K_O_T__exe: folder skin_pay_reput1,skin_pay_vote1,skin__K_O_T__exe1
-skin__K_O_T__exe1: 'command skinsrestorer set %player% _K_O_T_'
-
-skin_jeb_: if skin_premade skin_jeb__exe else skin_no_fund
-skin_jeb__exe: folder skin_pay_reput1,skin_pay_vote1,skin_jeb__exe1
-skin_jeb__exe1: 'command skinsrestorer set %player% jeb_'
-
-skin_SirFilesOG: if skin_premade skin_SirFilesOG_exe else skin_no_fund
-skin_SirFilesOG_exe: folder skin_pay_reput1,skin_pay_vote1,skin_SirFilesOG_exe1
-skin_SirFilesOG_exe1: 'command skinsrestorer set %player% SirFilesOG'
-
-skin_HellCatcher: if skin_premade skin_HellCatcher_exe else skin_no_fund
-skin_HellCatcher_exe: folder skin_pay_reput1,skin_pay_vote1,skin_HellCatcher_exe1
-skin_HellCatcher_exe1: 'command skinsrestorer set %player% HellCatcher'
-
-skin__A7md: if skin_premade skin__A7md_exe else skin_no_fund
-skin__A7md_exe: folder skin_pay_reput1,skin_pay_vote1,skin__A7md_exe1
-skin__A7md_exe1: 'command skinsrestorer set %player% _A7md'
 #
 #
 #
@@ -802,13 +650,19 @@ found_guild8_mess: 'message &d&oVous venez de trouver la Guilde des Bûcherons !
 #
 #
 # Intendant
-#Region flag athelas_castle_second entry-deny-message &dEtage réservé aux Ecuyers et grades supérieurs
 #
 #              Second Approuval
 #               End of Beta
-welcome_ecuyer: folder welcome_ecuyer_meka1,welcome_ecuyer_mess1,grade_ecuyer,pex_ecuyer,intendant_beta_clean
+#
+welcome_ecuyer: folder welcome_ecuyer_meka1,welcome_ecuyer_mess1,grade_ecuyer,pex_ecuyer,pex_av_del,intendant_beta_clean
 grade_ecuyer: tag add grade_ecuyer
-pex_ecuyer: 'command pex user %player% group set ecuyer'
+pex_ecuyer: 'command pex user %player% group add ecuyer'
+pex_av_del: 'command pex user %player% group remove aventurier'
+#
+# IS THIS STILL VALID @ZEDD ??
+#
+#  #Zedd.maka_tempo_journal_intendant_del
+#
 intendant_beta_clean: folder Zedd.maka_tempo_journal_intendant_del,hollish.mage_entry_branching_out_del
 #
 welcome_ecuyer_meka1: folder welcome_ecuyer_mess2,welcome_ecuyer_meka2 delay:7
@@ -1679,263 +1533,263 @@ mb_clean_xpboost: 'command pex user %player% remove mcmmo.perks.xp.10percentboos
 #
 #
 metier_epees1: if metier_epees metier_epees1_exe else metier_not_yours
-metier_epees1_exe: 'command pex user %player% prefix "&6[&2Épéiste&6]&7"'
+metier_epees1_exe: 'command pex user %player% prefix "§6[§2Épéiste§6]§7"'
 #
 metier_epees2: if metier_epees metier_epees2_exe else metier_not_yours
 metier_epees2_exe: if epees_25 metier_epees2_exe2 else no_level_grade
-metier_epees2_exe2: 'command pex user %player% prefix "&6[&2Bretteur&6]&7"'
+metier_epees2_exe2: 'command pex user %player% prefix "§6[§2Bretteur§6]§7"'
 #
 metier_epees3: if metier_epees metier_epees3_exe else metier_not_yours
 metier_epees3_exe: if epees_50 metier_epees3_exe2 else no_level_grade
-metier_epees3_exe2: 'command pex user %player% prefix "&6[&2Fantassin&6]&7"'
+metier_epees3_exe2: 'command pex user %player% prefix "§6[§2Fantassin§6]§7"'
 #
 metier_epees4: if metier_epees metier_epees4_exe else metier_not_yours
 metier_epees4_exe: if epees_75 metier_epees4_exe2 else no_level_grade
-metier_epees4_exe2: 'command pex user %player% prefix "&6[&2Sabreur&6]&7"'
+metier_epees4_exe2: 'command pex user %player% prefix "§6[§2Sabreur§6]§7"'
 #
 metier_epees5: if metier_epees metier_epees5_exe else metier_not_yours
 metier_epees5_exe: if epees_100 metier_epees5_exe2 else no_level_grade
-metier_epees5_exe2: 'command pex user %player% prefix "&6[&2Paladin&6]&7"'
+metier_epees5_exe2: 'command pex user %player% prefix "§6[§2Paladin§6]§7"'
 #
 #
 metier_poings1: if metier_poings metier_poings1_exe else metier_not_yours
-metier_poings1_exe: 'command pex user %player% prefix "&6[&2Pugiliste&6]&7"'
+metier_poings1_exe: 'command pex user %player% prefix "§6[§2Pugiliste§6]§7"'
 #
 metier_poings2: if metier_poings metier_poings2_exe else metier_not_yours
 metier_poings2_exe: if poings_25 metier_poings2_exe2 else no_level_grade
-metier_poings2_exe2: 'command pex user %player% prefix "&6[&2Hatiliarius&6]&7"'
+metier_poings2_exe2: 'command pex user %player% prefix "§6[§2Hatiliarius§6]§7"'
 #
 metier_poings3: if metier_poings metier_poings3_exe else metier_not_yours
 metier_poings3_exe: if poings_50 metier_poings3_exe2 else no_level_grade
-metier_poings3_exe2: 'command pex user %player% prefix "&6[&2Centurion&6]&7"'
+metier_poings3_exe2: 'command pex user %player% prefix "§6[§2Centurion§6]§7"'
 #
 metier_poings4: if metier_poings metier_poings4_exe else metier_not_yours
 metier_poings4_exe: if poings_75 metier_poings4_exe2 else no_level_grade
-metier_poings4_exe2: 'command pex user %player% prefix "&6[&2Venator&6]&7"'
+metier_poings4_exe2: 'command pex user %player% prefix "§6[§2Venator§6]§7"'
 #
 metier_poings5: if metier_poings metier_poings5_exe else metier_not_yours
 metier_poings5_exe: if poings_100 metier_poings5_exe2 else no_level_grade
-metier_poings5_exe2: 'command pex user %player% prefix "&6[&2Champion&6]&7"'
+metier_poings5_exe2: 'command pex user %player% prefix "§6[§2Champion§6]§7"'
 #
 #
 metier_haches1: if metier_haches metier_haches1_exe else metier_not_yours
-metier_haches1_exe: 'command pex user %player% prefix "&6[&2Milicien&6]&7"'
+metier_haches1_exe: 'command pex user %player% prefix "§6[§2Milicien§6]§7"'
 #
 metier_haches2: if metier_haches metier_haches2_exe else metier_not_yours
 metier_haches2_exe: if haches_25 metier_haches2_exe2 else no_level_grade
-metier_haches2_exe2: 'command pex user %player% prefix "&6[&2Franc&6]&7"'
+metier_haches2_exe2: 'command pex user %player% prefix "§6[§2Franc§6]§7"'
 #
 metier_haches3: if metier_haches metier_haches3_exe else metier_not_yours
 metier_haches3_exe: if haches_50 metier_haches3_exe2 else no_level_grade
-metier_haches3_exe2: 'command pex user %player% prefix "&6[&2Gladiateur&6]&7"'
+metier_haches3_exe2: 'command pex user %player% prefix "§6[§2Gladiateur§6]§7"'
 #
 metier_haches4: if metier_haches metier_haches4_exe else metier_not_yours
 metier_haches4_exe: if haches_75 metier_haches4_exe2 else no_level_grade
-metier_haches4_exe2: 'command pex user %player% prefix "&6[&2Pourfendeur&6]&7"'
+metier_haches4_exe2: 'command pex user %player% prefix "§6[§2Pourfendeur§6]§7"'
 #
 metier_haches5: if metier_haches metier_haches5_exe else metier_not_yours
 metier_haches5_exe: if haches_100 metier_haches5_exe2 else no_level_grade
-metier_haches5_exe2: 'command pex user %player% prefix "&6[&2Berserk&6]&7"'
+metier_haches5_exe2: 'command pex user %player% prefix "§6[§2Berserk§6]§7"'
 #
 #
 metier_arc1: if metier_arc metier_arc1_exe else metier_not_yours
-metier_arc1_exe: 'command pex user %player% prefix "&6[&2Archerot&6]&7"'
+metier_arc1_exe: 'command pex user %player% prefix "§6[§2Archerot§6]§7"'
 #
 metier_arc2: if metier_arc metier_arc2_exe else metier_not_yours
 metier_arc2_exe: if arc_25 metier_arc2_exe2 else no_level_grade
-metier_arc2_exe2: 'command pex user %player% prefix "&6[&2Archer&6]&7"'
+metier_arc2_exe2: 'command pex user %player% prefix "§6[§2Archer§6]§7"'
 #
 metier_arc3: if metier_arc metier_arc3_exe else metier_not_yours
 metier_arc3_exe: if arc_50 metier_arc3_exe2 else no_level_grade
-metier_arc3_exe2: 'command pex user %player% prefix "&6[&2Franc-Archer&6]&7"'
+metier_arc3_exe2: 'command pex user %player% prefix "§6[§2Franc-Archer§6]§7"'
 #
 metier_arc4: if metier_arc metier_arc4_exe else metier_not_yours
 metier_arc4_exe: if arc_75 metier_arc4_exe2 else no_level_grade
-metier_arc4_exe2: 'command pex user %player% prefix "&6[&2Arbalétrier&6]&7"'
+metier_arc4_exe2: 'command pex user %player% prefix "§6[§2Arbalétrier§6]§7"'
 #
 metier_arc5: if metier_arc metier_arc5_exe else metier_not_yours
 metier_arc5_exe: if arc_100 metier_arc5_exe2 else no_level_grade
-metier_arc5_exe2: 'command pex user %player% prefix "&6[&2Hood&6]&7"'
+metier_arc5_exe2: 'command pex user %player% prefix "§6[§2Hood§6]§7"'
 #
 #
 metier_alchimiste1: if metier_alchimiste metier_alchimiste1_exe else metier_not_yours
-metier_alchimiste1_exe: 'command pex user %player% prefix "&6[&2Adepte&6]&7"'
+metier_alchimiste1_exe: 'command pex user %player% prefix "§6[§2Adepte§6]§7"'
 #
 metier_alchimiste2: if metier_alchimiste metier_alchimiste2_exe else metier_not_yours
 metier_alchimiste2_exe: if alchimiste_25 metier_alchimiste2_exe2 else no_level_grade
-metier_alchimiste2_exe2: 'command pex user %player% prefix "&6[&2Hermétiste&6]&7"'
+metier_alchimiste2_exe2: 'command pex user %player% prefix "§6[§2Hermétiste§6]§7"'
 #
 metier_alchimiste3: if metier_alchimiste metier_alchimiste3_exe else metier_not_yours
 metier_alchimiste3_exe: if alchimiste_50 metier_alchimiste3_exe2 else no_level_grade
-metier_alchimiste3_exe2: 'command pex user %player% prefix "&6[&2Occultiste&6]&7"'
+metier_alchimiste3_exe2: 'command pex user %player% prefix "§6[§2Occultiste§6]§7"'
 #
 metier_alchimiste4: if metier_alchimiste metier_alchimiste4_exe else metier_not_yours
 metier_alchimiste4_exe: if alchimiste_75 metier_alchimiste4_exe2 else no_level_grade
-metier_alchimiste4_exe2: 'command pex user %player% prefix "&6[&2Alchimiste&6]&7"'
+metier_alchimiste4_exe2: 'command pex user %player% prefix "§6[§2Alchimiste§6]§7"'
 #
 metier_alchimiste5: if metier_alchimiste metier_alchimiste5_exe else metier_not_yours
 metier_alchimiste5_exe: if alchimiste_100 metier_alchimiste5_exe2 else no_level_grade
-metier_alchimiste5_exe2: 'command pex user %player% prefix "&6[&2Rose-Croix&6]&7"'
+metier_alchimiste5_exe2: 'command pex user %player% prefix "§6[§2Rose-Croix§6]§7"'
 #
 #
 metier_acrobate1: if metier_acrobate metier_acrobate1_exe else metier_not_yours
-metier_acrobate1_exe: 'command pex user %player% prefix "&6[&2Acrobate&6]&7"'
+metier_acrobate1_exe: 'command pex user %player% prefix "§6[§2Acrobate§6]§7"'
 #
 metier_acrobate2: if metier_acrobate metier_acrobate2_exe else metier_not_yours
 metier_acrobate2_exe: if acrobate_25 metier_acrobate2_exe2 else no_level_grade
-metier_acrobate2_exe2: 'command pex user %player% prefix "&6[&2Bateleur&6]&7"'
+metier_acrobate2_exe2: 'command pex user %player% prefix "§6[§2Bateleur§6]§7"'
 #
 metier_acrobate3: if metier_acrobate metier_acrobate3_exe else metier_not_yours
 metier_acrobate3_exe: if acrobate_50 metier_acrobate3_exe2 else no_level_grade
-metier_acrobate3_exe2: 'command pex user %player% prefix "&6[&2Matassin&6]&7"'
+metier_acrobate3_exe2: 'command pex user %player% prefix "§6[§2Matassin§6]§7"'
 #
 metier_acrobate4: if metier_acrobate metier_acrobate4_exe else metier_not_yours
 metier_acrobate4_exe: if acrobate_75 metier_acrobate4_exe2 else no_level_grade
-metier_acrobate4_exe2: 'command pex user %player% prefix "&6[&2Funambule&6]&7"'
+metier_acrobate4_exe2: 'command pex user %player% prefix "§6[§2Funambule§6]§7"'
 #
 metier_acrobate5: if metier_acrobate metier_acrobate5_exe else metier_not_yours
 metier_acrobate5_exe: if acrobate_100 metier_acrobate5_exe2 else no_level_grade
-metier_acrobate5_exe2: 'command pex user %player% prefix "&6[&2Baladin&6]&7"'
+metier_acrobate5_exe2: 'command pex user %player% prefix "§6[§2Baladin§6]§7"'
 #
 #
 metier_peche1: if metier_peche metier_pecheur1_exe else metier_not_yours
-metier_pecheur1_exe: 'command pex user %player% prefix "&6[&2Pêcheur&6]&7"'
+metier_pecheur1_exe: 'command pex user %player% prefix "§6[§2Pêcheur§6]§7"'
 #
 metier_peche2: if metier_peche metier_pecheur2_exe else metier_not_yours
 metier_pecheur2_exe: if peche_25 metier_pecheur2_exe2 else no_level_grade
-metier_pecheur2_exe2: 'command pex user %player% prefix "&6[&2Sardinier&6]&7"'
+metier_pecheur2_exe2: 'command pex user %player% prefix "§6[§2Sardinier§6]§7"'
 #
 metier_peche3: if metier_peche metier_pecheur3_exe else metier_not_yours
 metier_pecheur3_exe: if peche_50 metier_pecheur3_exe2 else no_level_grade
-metier_pecheur3_exe2: 'command pex user %player% prefix "&6[&2Morutier&6]&7"'
+metier_pecheur3_exe2: 'command pex user %player% prefix "§6[§2Morutier§6]§7"'
 #
 metier_peche4: if metier_peche metier_pecheur4_exe else metier_not_yours
 metier_pecheur4_exe: if peche_75 metier_pecheur4_exe2 else no_level_grade
-metier_pecheur4_exe2: 'command pex user %player% prefix "&6[&2Chalutier&6]&7"'
+metier_pecheur4_exe2: 'command pex user %player% prefix "§6[§2Chalutier§6]§7"'
 #
 metier_peche5: if metier_peche metier_pecheur5_exe else metier_not_yours
 metier_pecheur5_exe: if peche_100 metier_pecheur5_exe2 else no_level_grade
-metier_pecheur5_exe2: 'command pex user %player% prefix "&6[&2Marin&6]&7"'
+metier_pecheur5_exe2: 'command pex user %player% prefix "§6[§2Marin§6]§7"'
 #
 #
 metier_apprivoiseur1: if metier_apprivoiseur metier_apprivoiseur1_exe else metier_not_yours
-metier_apprivoiseur1_exe: 'command pex user %player% prefix "&6[&2Apprivoiseur&6]&7"'
+metier_apprivoiseur1_exe: 'command pex user %player% prefix "§6[§2Apprivoiseur§6]§7"'
 #
 metier_apprivoiseur2: if metier_apprivoiseur metier_apprivoiseur2_exe else metier_not_yours
 metier_apprivoiseur2_exe: if apprivoiseur_25 metier_apprivoiseur2_exe2 else no_level_grade
-metier_apprivoiseur2_exe2: 'command pex user %player% prefix "&6[&2Débourreur&6]&7"'
+metier_apprivoiseur2_exe2: 'command pex user %player% prefix "§6[§2Débourreur§6]§7"'
 #
 metier_apprivoiseur3: if metier_apprivoiseur metier_apprivoiseur3_exe else metier_not_yours
 metier_apprivoiseur3_exe: if apprivoiseur_50 metier_apprivoiseur3_exe2 else no_level_grade
-metier_apprivoiseur3_exe2: 'command pex user %player% prefix "&6[&2Dresseur&6]&7"'
+metier_apprivoiseur3_exe2: 'command pex user %player% prefix "§6[§2Dresseur§6]§7"'
 #
 metier_apprivoiseur4: if metier_apprivoiseur metier_apprivoiseur4_exe else metier_not_yours
 metier_apprivoiseur4_exe: if apprivoiseur_75 metier_apprivoiseur4_exe2 else no_level_grade
-metier_apprivoiseur4_exe2: 'command pex user %player% prefix "&6[&2Corrupteur&6]&7"'
+metier_apprivoiseur4_exe2: 'command pex user %player% prefix "§6[§2Corrupteur§6]§7"'
 #
 metier_apprivoiseur5: if metier_apprivoiseur metier_apprivoiseur5_exe else metier_not_yours
 metier_apprivoiseur5_exe: if apprivoiseur_100 metier_apprivoiseur5_exe2 else no_level_grade
-metier_apprivoiseur5_exe2: 'command pex user %player% prefix "&6[&2Dompteur&6]&7"'
+metier_apprivoiseur5_exe2: 'command pex user %player% prefix "§6[§2Dompteur§6]§7"'
 #
 #
 metier_herboriste1: if metier_herboriste metier_herboriste1_exe else metier_not_yours
-metier_herboriste1_exe: 'command pex user %player% prefix "&6[&2Paysan&6]&7"'
+metier_herboriste1_exe: 'command pex user %player% prefix "§6[§2Paysan§6]§7"'
 #
 metier_herboriste2: if metier_herboriste metier_herboriste2_exe else metier_not_yours
 metier_herboriste2_exe: if herboriste_25 metier_herboriste2_exe2 else no_level_grade
-metier_herboriste2_exe2: 'command pex user %player% prefix "&6[&2Laboureur&6]&7"'
+metier_herboriste2_exe2: 'command pex user %player% prefix "§6[§2Laboureur§6]§7"'
 #
 metier_herboriste3: if metier_herboriste metier_herboriste3_exe else metier_not_yours
 metier_herboriste3_exe: if herboriste_50 metier_herboriste3_exe2 else no_level_grade
-metier_herboriste3_exe2: 'command pex user %player% prefix "&6[&2Cultivateur&6]&7"'
+metier_herboriste3_exe2: 'command pex user %player% prefix "§6[§2Cultivateur§6]§7"'
 #
 metier_herboriste4: if metier_herboriste metier_herboriste4_exe else metier_not_yours
 metier_herboriste4_exe: if herboriste_75 metier_herboriste4_exe2 else no_level_grade
-metier_herboriste4_exe2: 'command pex user %player% prefix "&6[&2Herboriste&6]&7"'
+metier_herboriste4_exe2: 'command pex user %player% prefix "§6[§2Herboriste§6]§7"'
 #
 metier_herboriste5: if metier_herboriste metier_herboriste5_exe else metier_not_yours
 metier_herboriste5_exe: if herboriste_100 metier_herboriste5_exe2 else no_level_grade
-metier_herboriste5_exe2: 'command pex user %player% prefix "&6[&2Naturopathe&6]&7"'
+metier_herboriste5_exe2: 'command pex user %player% prefix "§6[§2Naturopathe§6]§7"'
 #
 #
 metier_mineur1: if metier_mineur metier_mineur1_exe else metier_not_yours
-metier_mineur1_exe: 'command pex user %player% prefix "&6[&2Mineur&6]&7"'
+metier_mineur1_exe: 'command pex user %player% prefix "§6[§2Mineur§6]§7"'
 #
 metier_mineur2: if metier_mineur metier_mineur2_exe else metier_not_yours
 metier_mineur2_exe: if mineur_25 metier_mineur2_exe2 else no_level_grade
-metier_mineur2_exe2: 'command pex user %player% prefix "&6[&2Charbonnier&6]&7"'
+metier_mineur2_exe2: 'command pex user %player% prefix "§6[§2Charbonnier§6]§7"'
 #
 metier_mineur3: if metier_mineur metier_mineur3_exe else metier_not_yours
 metier_mineur3_exe: if mineur_50 metier_mineur3_exe2 else no_level_grade
-metier_mineur3_exe2: 'command pex user %player% prefix "&6[&2Houilleur&6]&7"'
+metier_mineur3_exe2: 'command pex user %player% prefix "§6[§2Houilleur§6]§7"'
 #
 metier_mineur4: if metier_mineur metier_mineur4_exe else metier_not_yours
 metier_mineur4_exe: if mineur_75 metier_mineur4_exe2 else no_level_grade
-metier_mineur4_exe2: 'command pex user %player% prefix "&6[&2Hercheur&6]&7"'
+metier_mineur4_exe2: 'command pex user %player% prefix "§6[§2Hercheur§6]§7"'
 #
 metier_mineur5: if metier_mineur metier_mineur5_exe else metier_not_yours
 metier_mineur5_exe: if mineur_100 metier_mineur5_exe2 else no_level_grade
-metier_mineur5_exe2: 'command pex user %player% prefix "&6[&2Porion&6]&7"'
+metier_mineur5_exe2: 'command pex user %player% prefix "§6[§2Porion§6]§7"'
 #
 #
 metier_reparation1: if metier_reparation metier_reparation1_exe else metier_not_yours
-metier_reparation1_exe: 'command pex user %player% prefix "&6[&2Raccommodeur&6]&7"'
+metier_reparation1_exe: 'command pex user %player% prefix "§6[§2Raccommodeur§6]§7"'
 #
 metier_reparation2: if metier_reparation metier_reparation2_exe else metier_not_yours
 metier_reparation2_exe: if reparation_25 metier_reparation2_exe2 else no_level_grade
-metier_reparation2_exe2: 'command pex user %player% prefix "&6[&2Ouvrier&6]&7"'
+metier_reparation2_exe2: 'command pex user %player% prefix "§6[§2Ouvrier§6]§7"'
 #
 metier_reparation3: if metier_reparation metier_reparation3_exe else metier_not_yours
 metier_reparation3_exe: if reparation_50 metier_reparation3_exe2 else no_level_grade
-metier_reparation3_exe2: 'command pex user %player% prefix "&6[&2Artisan&6]&7"'
+metier_reparation3_exe2: 'command pex user %player% prefix "§6[§2Artisan§6]§7"'
 #
 metier_reparation4: if metier_reparation metier_reparation4_exe else metier_not_yours
 metier_reparation4_exe: if reparation_75 metier_reparation4_exe2 else no_level_grade
-metier_reparation4_exe2: 'command pex user %player% prefix "&6[&2Contremaître&6]&7"'
+metier_reparation4_exe2: 'command pex user %player% prefix "§6[§2Contremaître§6]§7"'
 #
 metier_reparation5: if metier_reparation metier_reparation5_exe else metier_not_yours
 metier_reparation5_exe: if reparation_100 metier_reparation5_exe2 else no_level_grade
-metier_reparation5_exe2: 'command pex user %player% prefix "&6[&2Maître&6]&7"'
+metier_reparation5_exe2: 'command pex user %player% prefix "§6[§2Maître§6]§7"'
 #
 #
 metier_excavation1: if metier_excavation metier_excavation1_exe else metier_not_yours
-metier_excavation1_exe: 'command pex user %player% prefix "&6[&2Galibot&6]&7"'
+metier_excavation1_exe: 'command pex user %player% prefix "§6[§2Galibot§6]§7"'
 #
 metier_excavation2: if metier_excavation metier_excavation2_exe else metier_not_yours
 metier_excavation2_exe: if excavation_25 metier_excavation2_exe2 else no_level_grade
-metier_excavation2_exe2: 'command pex user %player% prefix "&6[&2Carrier&6]&7"'
+metier_excavation2_exe2: 'command pex user %player% prefix "§6[§2Carrier§6]§7"'
 #
 metier_excavation3: if metier_excavation metier_excavation3_exe else metier_not_yours
 metier_excavation3_exe: if excavation_50 metier_excavation3_exe2 else no_level_grade
-metier_excavation3_exe2: 'command pex user %player% prefix "&6[&2Foreur&6]&7"'
+metier_excavation3_exe2: 'command pex user %player% prefix "§6[§2Foreur§6]§7"'
 #
 metier_excavation4: if metier_excavation metier_excavation4_exe else metier_not_yours
 metier_excavation4_exe: if excavation_75 metier_excavation4_exe2 else no_level_grade
-metier_excavation4_exe2: 'command pex user %player% prefix "&6[&2Sapeur&6]&7"'
+metier_excavation4_exe2: 'command pex user %player% prefix "§6[§2Sapeur§6]§7"'
 #
 metier_excavation5: if metier_excavation metier_excavation5_exe else metier_not_yours
 metier_excavation5_exe: if excavation_100 metier_excavation5_exe2 else no_level_grade
-metier_excavation5_exe2: 'command pex user %player% prefix "&6[&2Pionnier&6]&7"'
+metier_excavation5_exe2: 'command pex user %player% prefix "§6[§2Pionnier§6]§7"'
 #
 #
 metier_bucheron1: if metier_bucheron metier_bucheron1_exe else metier_not_yours
-metier_bucheron1_exe: 'command pex user %player% prefix "&6[&2Échardier&6]&7"'
+metier_bucheron1_exe: 'command pex user %player% prefix "§6[§2Échardier§6]§7"'
 #
 metier_bucheron2: if metier_bucheron metier_bucheron2_exe else metier_not_yours
 metier_bucheron2_exe: if bucheron_25 metier_bucheron2_exe2 else no_level_grade
-metier_bucheron2_exe2: 'command pex user %player% prefix "&6[&2Bûcheron&6]&7"'
+metier_bucheron2_exe2: 'command pex user %player% prefix "§6[§2Bûcheron§6]§7"'
 #
 metier_bucheron3: if metier_bucheron metier_bucheron3_exe else metier_not_yours
 metier_bucheron3_exe: if bucheron_50 metier_bucheron3_exe2 else no_level_grade
-metier_bucheron3_exe2: 'command pex user %player% prefix "&6[&2Tronçonneur&6]&7"'
+metier_bucheron3_exe2: 'command pex user %player% prefix "§6[§2Tronçonneur§6]§7"'
 #
 metier_bucheron4: if metier_bucheron metier_bucheron4_exe else metier_not_yours
 metier_bucheron4_exe: if bucheron_75 metier_bucheron4_exe2 else no_level_grade
-metier_bucheron4_exe2: 'command pex user %player% prefix "&6[&2Abbateur&6]&7"'
+metier_bucheron4_exe2: 'command pex user %player% prefix "§6[§2Abbateur§6]§7"'
 #
 metier_bucheron5: if metier_bucheron metier_bucheron5_exe else metier_not_yours
 metier_bucheron5_exe: if bucheron_100 metier_bucheron5_exe2 else no_level_grade
-metier_bucheron5_exe2: 'command pex user %player% prefix "&6[&2Écorceur&6]&7"'
+metier_bucheron5_exe2: 'command pex user %player% prefix "§6[§2Écorceur§6]§7"'
 #
 #
 # Stuff Guilde
@@ -3622,7 +3476,7 @@ hollishrole: 'command jukebox sound %player% http://files.enjin.com/1186825/voic
 #
 #                                        ~H
 ###############################################################################
-historique_folder: folder meka,teleport_tableau1 delay:0
+historique_folder: folder tempo_historique_tag,meka,teleport_tableau1 delay:0
 meka: folder meka1,title_begin1 delay:0
 meka1: folder meka2,message1 delay:3
 meka2: folder meka3,title_begin2 delay:3
@@ -3649,7 +3503,7 @@ meka22: folder meka23,teleport_tableau5 delay:10
 meka23: folder meka24,message18 delay:3
 meka24: folder meka25,message19 delay:7
 meka25: folder meka26,message20 delay:7
-meka26: folder teleport_retour delay:7
+meka26: folder teleport_retour,tempo_historique_tag_del delay:7
 teleport_tableau1: folder teleport_tableau1_exe delay:1
 teleport_tableau1_exe: teleport -7235;80;2660;Gaia
 teleport_tableau2: folder teleport_tableau2_exe delay:0
@@ -3701,15 +3555,5 @@ message17: 'message &2&oLa situation étant stablisée au premier Portail Magiqu
 message18: 'message &2&oLe mot est alors passé à tous les Aventuriers courageux de venir prêter main forte à la Ville d''Athelas.'
 message19: 'message &2&oBeaucoup répondent à l''appel et des navires entiers débarquent à Athelas pour rejoindre le combat.'
 message20: 'message &2&oVous embarquez vous aussi à bord d''un grand navire pour la ville Royale d''Athelas.'
-#
-# Deprecated - Utilisation des Barrières Invisibles (Barrier:166)
-#
-cabine1_on: setblock REDSTONE_TORCH_ON -6743;65;3260;Gaia
-cabine2_on: setblock REDSTONE_TORCH_ON -6747;65;3260;Gaia
-cabine3_on: setblock REDSTONE_TORCH_ON -6745;65;3260;Gaia
-cabine1_off_partytest: party 4 !cabine1_pleine cabine1_off_exe
-cabine1_off_exe: setblock AIR -6743;65;3260;Gaia
-cabine2_off_partytest: party 4 !cabine2_pleine cabine2_off_exe
-cabine2_off_exe: setblock AIR -6747;65;3260;Gaia
-cabine3_off_partytest: party 4 !cabine3_pleine cabine3_off_exe
-cabine3_off_exe: setblock AIR -6745;65;3260;Gaia
+tempo_historique_tag: tag add tempo_historique
+tempo_historique_tag_del: tag del tempo_historique

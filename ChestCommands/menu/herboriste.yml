@@ -196,7 +196,7 @@ alchijob:
   
   
 fullguide:
-  COMMAND: 'tell: &a&o http://www.gaia-minecraft.enjin.com/guide/m/37321907/page/Competences'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le guide.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/guide.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&6Guide Complet'
   ID: book
   ENCHANTMENT: 'infinity, 1'

@@ -36,21 +36,21 @@ menu-settings:
 #+                  +#
 ######################
 
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&aRetour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal.'
+  POSITION-X: 8
+  POSITION-Y: 1
+
 menu-close:
   NAME: '&4Fermer'
   ID: barrier
   LORE:
-    - '&cFerme cette fenêtre.'
+    - 'Ferme cette fenêtre.'
   POSITION-X: 9
-  POSITION-Y: 1
-
-retour:
-  COMMAND: 'open: Menu.yml'
-  NAME: '&cRetour'
-  ID: stick
-  LORE:
-    - 'Retour au Menu Principal'
-  POSITION-X: 8
   POSITION-Y: 1
 
 furnace:

@@ -23,10 +23,9 @@ NPC_options:
   autre_rep:
     text: 'Bien entendu, en quoi puis-je vous renseigner ?'
     pointers: comment,ou,map,dechanter,apres,rien
-  ou_rep:
-    text: 'Vous pouvez accéder à la Carte de Gaïa à l''adresse suivante: \n&9http://www.gaia-minecraft.enjin.com/gallery'
   map_rep:
-    text: 'Sur &9http://www.gaia-minecraft.enjin.com/gallery \nCliquez en haut à gauche de l''écran sur "Maisons et Terrains", en zoomant sur la ville vous lez verrez apparaître ! \nPour plus d''infos sur cette Carte, consultez &2Sofia&a&o.'
+    text: 'Cliquez en haut à gauche de l''écran sur "Maisons et Terrains", en zoomant sur la ville vous lez verrez apparaître ! \nPour plus d''infos sur cette Carte, consultez &2Sofia&a&o.'
+    events: default.redirect_map
   dechanter_rep:
     text: 'Pour arrêter une location, il vous faut vous accroupir, puis faire un clic droit sur le panneau correspondant à votre location.'
   apres_rep:
@@ -56,7 +55,7 @@ player_options:
     pointers: com_rep 
   ou:
     text: 'Où se trouvent les parcelles et maisons ?'
-    pointers: ou_rep
+    event: default.redirect_map
   map:
     text: 'Comment me repérer dans toutes les parcelles ?'
     pointers: map_rep

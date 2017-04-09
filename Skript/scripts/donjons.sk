@@ -1,3 +1,6 @@
+on load:
+	execute console command "resettingnetherportal2"
+
 command /netherportalouest <player>:
 	executable by: console
 	trigger:
@@ -102,9 +105,12 @@ command /netherien2killed:
 			message "&4&lLe portail au fond de la salle s'ouvre !" to loop-value
 		wait 60 seconds
 		loop {donjon_ouest_participants::*}:
-			message "&4&lNe restez pas traîner là !" to loop-value
-			message "&4&lD'autres viles créatures pourraient venir !" to loop-value
-			teleport loop-value to location at -7647, 65, 2902 of the world "Gaia"
+			if loop-value is in the region "gaia_nether":
+				message "&d&oPour revenir dans la monde de Gaïa, utilisez la pancarte accrochée au Portail auquel vous êtes arrivé." to loop-value
+			else:
+				message "&4&lNe restez pas traîner là !" to loop-value
+				message "&4&lD'autres viles créatures pourraient venir !" to loop-value
+				teleport loop-value to location at -7647, 65, 2902 of the world "Gaia"
 		execute console command "resettingnetherportal2"
 		
 		
@@ -130,8 +136,6 @@ command /resettingnetherportal2:
 		execute console command "mm mobs kill netherien2"
 		
 on death of player:
-# Delay Required du to quest_addons
-	wait 52 ticks
 	if {donjon_ouest_started} is set:
 		if "%{donjon_ouest_participants::*}%" contains "%player%": 
 			remove player from {donjon_ouest_participants::*}
@@ -152,23 +156,23 @@ on rightclick on sign:
         if line 2 of the clicked block is "portail de":
             if line 3 of the clicked block is "l'Ouest.":
                 message "&d&lVous sentez une force s'emparer de vous..."
-				message "&d&lVous arrivez au portail de l'Ouest !"
-				teleport player to location at -7647, 65, 2902 of the world "Gaia"
-			if line 3 of the clicked block is "l'Est.":
-				message "&d&lVous sentez une force s'emparer de vous..."
-				message "&d&lVous arrivez au portail de l'Est !"
-				teleport player to location at 727, 74, 1180 of the world "Gaia"
+                message "&d&lVous arrivez au portail de l'Ouest !"
+                teleport player to location at -7647, 65, 2902 of the world "Gaia"
+            if line 3 of the clicked block is "l'Est.":
+                message "&d&lVous sentez une force s'emparer de vous..."
+                message "&d&lVous arrivez au portail de l'Est !"
+                teleport player to location at 727, 74, 1180 of the world "Gaia"
 				
 on sign change:
     if line 1 is "Retour vers":
         if line 2 is "portail de":
-			if line 3 is "l'Ouest."
-				if player's gamemode is survival:
-					cancel event
-					message "&dVous ne parvenez pas à créer cette Pancarte."
-			if line 3 is "l'Est."
-				if player's gamemode is survival:
-					cancel event
-					message "&dVous ne parvenez pas à créer cette Pancarte."
+            if line 3 is "l'Ouest.":
+                if player's gamemode is survival:
+                    cancel event
+                    message "&dVous ne parvenez pas à créer cette Pancarte."
+            if line 3 is "l'Est.":
+                if player's gamemode is survival:
+                    cancel event
+                    message "&dVous ne parvenez pas à créer cette Pancarte."
 		
 		

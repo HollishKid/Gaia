@@ -3,6 +3,10 @@
 #
 obj_salaire_timer: delay 60 events:salaire interval:1200
 #
+# Athelas Out
+#
+athelas_out_timer: delay 1 events:athelas_out_checkerbis interval:700
+#
 # Banking
 #
 #Deprecated so far

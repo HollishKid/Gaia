@@ -1,5 +1,5 @@
 quester: 'Jimbo'
-first: n1,n2,n3,n4,in_progress,n5,n6
+first: n0,n1,n2,n3,n4,in_progress,n5,n6
 stop: 'false'
 ##########################
 #                        #
@@ -10,6 +10,9 @@ NPC_options:
 #
 ## quête en cours
 #
+  n0:
+    text: 'Vous n''avez pas encore le statut de Citoyen ! \nAllez voir l''&2Intendant &a&od''abord !'
+    conditions: '!default.intendant_done'
   in_progress:
     text: 'Je suis occupé avec les affaires de la guilde. \nReviens quand tu auras accompli ta tâche.'
     conditions: 'in_progress'
@@ -23,7 +26,7 @@ NPC_options:
 #
   n1:
     text: 'Salutations &2%player%&a&o. Que puis-je faire pour t''aider ?'
-    conditions: '!jim_q1start,!jim_q1done,!event1_win'
+    conditions: '!jim_q1start,!jim_q1done,!event1_win,default.intendant_done'
     pointers: p1,p2,p3
   rep1:
     text: 'Je suis le responsable du recrutement pour la &6Guilde des Aventuriers&a&o. \nSi quelqu''un veut en faire partie, c''est à moi qu''il faut s''adresser !'

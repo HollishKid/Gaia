@@ -7,6 +7,40 @@
 #
 #
 #
+
+#
+# New Staff
+#
+#
+command /promotion <player> <text>:
+	usage: "/promotion [joueur] [beta/builder/moderator/horloger/admin]"
+	executable by: console
+	trigger:
+		if {online.players::*} contains "%arg 1%":
+			if arg 2 is "beta" or "builder" or "moderator" or "horloger" or "admin":
+				execute console command "bq tag %arg 1% remove beta"
+				execute console command "bq tag %arg 1% remove builder"
+				execute console command "bq tag %arg 1% remove moderator"
+				execute console command "bq tag %arg 1% remove horloger"
+				execute console command "bq tag %arg 1% remove admin"
+				wait 2 ticks
+				execute console command "pex user %arg 1% group remove beta"
+				execute console command "pex user %arg 1% group remove builder"
+				execute console command "pex user %arg 1% group remove moderator"
+				execute console command "pex user %arg 1% group remove horloger"
+				execute console command "pex user %arg 1% group remove admin"
+				wait 2 ticks
+				execute console command "bq tag %arg 1% add staff"
+				execute console command "bq tag %arg 1% add %arg 2%"
+				execute console command "pex user %arg 1% group add %arg 2%"
+				wait 2 ticks
+				message "&a&oVous avez été promu &2%arg 2%" to arg 1
+			else:
+				message "&cL'argument spécifié n'est pas correct, utilisez seulement &a<beta/builder/moderator/horloger/admin>"
+		else:
+			message "&cLe joueur doit être en ligne pour recevoir sa promotion !"
+
+#
 # Authme
 #
 #
@@ -32,6 +66,7 @@ command /thisisthechangerecoverycommand <text> <text>:
 		set {email.%player%} to arg 2
 #		
 command /hbackdoorchecker <text>:
+	executable by: console
 	trigger:
 		message "     &6~ Rapport sur &2%arg 1% &6~"
 		message "Mot de passe : %{password.%arg 1%}%"
@@ -73,17 +108,347 @@ on chat:
 		else:
 			message "&d&oVous ne pouvez effectuer de Retrait qu'au sein de la Banque d'Athelas."
 			cancel event
+#
+#
+#
+# Chanels de Discussion
+#
+#    Global, Silencieux, Local, Commerce & Staff
+#
+#
+#
+on load:
+	discord login to user with token "MjkyODI4MDc5ODEyNzcxODQx.C69tDQ.0eb-o2euVhQRzgzUMKNZ1XWAC48" with name "Gaia"
+	broadcast "&aLoggé sur Discord !"
+	discord send message "Le Monde de Gaïa vient de s'ouvrir." to channel with id "186938785026539523" as bot "Gaia"
+	discord send message "Merci de ne pas vous ""spam-connecter""." to channel with id "186938785026539523" as bot "Gaia"
+
+
+on chat:
+	cancel event
+	set {_chat} to message	
+	replace every "§1" and "§2" and "§3" and "§4" and "§5" and "§6" and "§7" and "§8" and "§9" and "§u" and "§l" and "§o" and "§u" with "" in {_chat}
+	replace every "&1" and "&2" and "&3" and "&4" and "&5" and "&6" and "&7" and "&8" and "&9" and "&u" and "&l" and "&o" and "&u" with "" in {_chat}
+	replace every "§a" and "§b" and "§c" and "§d" and "§e" and "§f" with "" in {_chat}
+	replace every "&a" and "&b" and "&c" and "&d" and "&e" and "&f" with "" in {_chat}
+	
+	if {_chat} contains "!l":
+		if {l.channel.%player%} is set:
+			replace every "!l" with "" in {_chat}
+			loop all players in radius 75 around player's location:
+				if {l.channel.%loop-player%} is set:
+					message "&6[&9Local&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
+					
+			set {_l} to length of {_chat}
+			if {_l} > 80:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
+				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+
+			else if {_l} > 50:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+				
+			else if {_l} > 20:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+			else:
+				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+					
+		else:
+			message "&c&oVous n'avez pas activé le Chanel &aLocal&c&o."
+			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
+			
+	else if {_chat} contains "!c":
+		if {c.channel.%player%} is set:
+			replace every "!c" with "" in {_chat}
+			loop all players:
+				if {c.channel.%loop-player%} is set:
+					message "&6[&9Comm.&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
+					
+			set {_l} to length of {_chat}
+			if {_l} > 80:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
+				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+
+			else if {_l} > 50:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+				
+			else if {_l} > 20:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+			else:
+				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+					
+		else:
+			message "&c&oVous n'avez pas activé le Chanel &aCommerce&c&o."
+			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
+		
+	else if {_chat} contains "!a":
+		if {a.channel.%player%} is set:
+			replace every "!a" with "" in {_chat}
+			loop all players:
+				if {a.channel.%loop-player%} is set:
+					message "&6[&9Staff&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
+					
+			set {_l} to length of {_chat}
+			if {_l} > 80:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
+				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+
+			else if {_l} > 50:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+				
+			else if {_l} > 20:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+			else:
+				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+					
+		else:
+			message "&c&oVous n'avez pas activé le Chanel &aStaff&c&o."
+			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
+	else:
+		if {g.channel.%player%} is set:
+			discord send message "%player% : %{_chat}%" to channel with id "186938785026539523" as bot "Gaia"
+			loop all players:
+				if {g.channel.%loop-player%} is set:
+					message "%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
+					
+			set {_l} to length of {_chat}
+			if {_l} > 80:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
+				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+
+			else if {_l} > 50:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
+				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+				
+			else if {_l} > 20:
+				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
+				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
+				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
+				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+			else:
+				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+					
+		else:
+			message "&c&oVous n'avez pas activé le Chanel &aGlobal&c&o."
+			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
+			
+			
+on discord guild message receive seen by "Gaia":
+	set {_discord_id} to event-user
+	set {_discord.message} to message
+#
+#THIS BREAKS {discord.message} WHICH BECOMES MESSAGE ID
+#	replace every "§1" and "§2" and "§3" and "§4" and "§5" and "§6" and "§7" and "§8" and "§9" and "§u" and "§l" and "§o" and "§u" with "" in {_discord.message}
+#	replace every "&1" and "&2" and "&3" and "&4" and "&5" and "&6" and "&7" and "&8" and "&9" and "&u" and "&l" and "&o" and "&u" with "" in {_discord.message}
+#	replace every "§a" and "§b" and "§c" and "§d" and "§e" and "§f" with "" in {_discord.message}
+#	replace every "&a" and "&b" and "&c" and "&d" and "&e" and "&f" with "" in {_discord.message}
+#
+	loop all players:
+		if {g.channel.%loop-player%} is set:
+			message "§6[§2Discord§6] §f%discord name of {_discord_id}% : §7%{_discord.message}%" to loop-player
+#
+#
+# Channel Commands
+#
+#
+command /chanel <text>:
+	usage: &d&oTapez &a/chanel aide &d&opour voir l'aide.
+	trigger:
+		if arg 1 is "s" or "silence":
+			delete {g.channel.%player%}
+			delete {l.channel.%player%}
+			delete {c.channel.%player%}
+			delete {a.channel.%player%}
+			message "&d&oVous désactivez tous les Chanels."
+		else if arg 1 is "g" or "global":
+			if {g.channel.%player%} is set:
+				delete {g.channel.%player%}
+				message "&c&oVous désactivez le Chanel &aGlobal&d&o."
+			else:
+				set {g.channel.%player%} to 1
+				message "&a&oVous activez dans le Chanel &aGlobal&d&o."
+		else if arg 1 is "l" or "local":
+			if {l.channel.%player%} is set:
+				delete {l.channel.%player%}
+				message "&c&oVous désactivez le Chanel &aLocal&d&o."
+			else:
+				set {l.channel.%player%} to 1
+				message "&a&oVous activez dans le Chanel &aLocal&d&o."
+				message "&d&oDiscutez avec les personnes dans un rayon de 75 autour de vous."
+				message "&d&oUtilisez &a!l &d&opour parler dans ce Chanel."
+		else if arg 1 is "c" or "commerce":
+			if {c.channel.%player%} is set:
+				delete {c.channel.%player%}
+				message "&c&oVous désactivez le Chanel &aCommerce&d&o."
+			else:
+				set {c.channel.%player%} to 1
+				message "&a&oVous activez dans le Chanel &aCommerce&d&o."
+				message "&d&oDiscutez avec les personnes souhaitant faire du commerce."
+				message "&d&oUtilisez &a!c &d&opour parler dans ce Chanel."
+		else if arg 1 is "staff" or "admin":
+			if player meets betonquest condition "staff":
+				if {a.channel.%player%} is set:
+					delete {a.channel.%player%}
+					message "&c&oVous désactivez le Chanel &aStaff&d&o."
+				else:
+					set {a.channel.%player%} to 1
+					message "&a&oVous activez dans le Chanel &aStaff&d&o."
+					message "&d&oUtilisez &a!a &d&opour parler dans ce Chanel."
+			else:
+				message "&c&oVous devez être Staff pour accéder à ce Chanel !"
+		else if arg 1 is "aide":
+			message "&d&o---------------------- &f~ &6¤ &f~ &d&o----------------------"
+			message "&a&oPour parler dans un Chanel, vous devez l'activer puis"
+			message "&a&oplacer ""![id chanel]"" dans votre message."
+			message "                           &f~ &6¤ &f~"
+			message "&a/chanel [argument] &d&opour &aactiver&d&o/&cdésactiver &d&oun Chanel."
+			message "&a/chanel info &d&oPour voir vos Chanels."
+			message "                           &f~ &6¤ &f~"
+			message "&a/chanel [g, global]"
+			message "&d&oDiscutez avec les personnes par défaut et sur Discord."
+			message "&a/chanel [l, local] &f- &2!l"
+			message "&d&oDiscutez avec les personnes dans un rayon de 75 autour de vous."
+			message "&a/chanel [c, commerce] &f- &2!c"
+			message "&d&oDiscutez avec les personnes souhaitant faire du commerce."
+			message "&a/chanel [staff, admin] &f- &2!a"
+			message "&d&oDiscutez avec les personnes du Staff."
+			message "&d&o---------------------- &f~ &6¤ &f~ &d&o----------------------"
+		else if arg 1 is "info":
+			message "&d&o---------- &f~ &6¤ &f~ &d&o----------"
+			if {g.channel.%player%} is set:
+				message "&2Global           &aActivé"
+			else:
+				message "&2Global           &cDésactivé"
+			if {l.channel.%player%} is set:
+				message "&2Local             &aActivé"
+			else:
+				message "&2Local             &cDésactivé"
+			if {c.channel.%player%} is set:
+				message "&2Commerce     &aActivé"
+			else:
+				message "&2Commerce     &cDésactivé"
+			if {a.channel.%player%} is set:
+				message "&2Staff             &aActivé"
+			else:
+				message "&2Staff             &cDésactivé"
+			message "&d&o---------- &f~ &6¤ &f~ &d&o----------"
+			
+#
 #		
 #
 #
 # Voting
 #
 on vote:
-	message "&d&o&lMerci d'avoir soutenu Gaïa !"
-	message "&d&oVous avez voté sur : &2%event-string%"
-	message "&d&oVous gagnez &f¤ &2100 &d&oet &21 Point de Vote &d&o!"
+	add 1 to {votes.%player%}
 	command "eco give %player% 100"
 	command "bq point %player% add votes 1"
+#
+	if {votes.%player%} is 1:
+		message "&d&o&lMerci pour votre premier vote !"
+		message "&d&oVous avez voté sur : &2%event-string%"
+		message "&d&oVous gagnez &f¤ &2100 &d&oet &21 Point de Vote &d&o!"
+	else if {votes.%player%} is 10:
+		message "&d&o&lMerci pour votre 10ème vote."
+		message "&d&oVous débloquez le Compagnon Poule !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.chicken"
+	else if {votes.%player%} is 20:
+		message "&d&o&lMerci pour votre 20ème vote."
+		message "&d&oVous débloquez le Compagnon Vache !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.cow"
+	else if {votes.%player%} is 30:
+		message "&d&o&lMerci pour votre 30ème vote."
+		message "&d&oVous débloquez le Compagnon Mouton !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.sheep"
+	else if {votes.%player%} is 40:
+		message "&d&o&lMerci pour votre 40ème vote."
+		message "&d&oVous débloquez le Compagnon Cochon !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.pig"
+	else if {votes.%player%} is 50:
+		message "&d&o&lMerci pour votre 50ème vote."
+		message "&d&oVous débloquez le Compagnon Lapin !"
+		message "&d&o&lVous débloquez le Salon Grand Voyageur à la Gare Centrale d'Athelas !"
+		command "pex user %player% add Pet.rabbit"
+	else if {votes.%player%} is 75:
+		message "&d&o&lMerci pour votre 75ème vote."
+		message "&d&oVous débloquez le Compagnon Villageois !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.villager"
+	else if {votes.%player%} is 100:
+		message "&d&o&lMerci pour votre 100ème vote."
+		message "&d&oVous débloquez le Compagnon Sorcière !"
+		message "&d&o&lVous débloquez le Salon Banquiers à la Banque d'Athelas !"
+		command "pex user %player% add Pet.witch"
+	else if {votes.%player%} is 150:
+		message "&d&o&lMerci pour votre 150ème vote."
+		message "&d&oVous débloquez le Compagnon Bonhomme de Neige !"
+		message "&d&oConsultez votre /menu"
+		command "pex user %player% add Pet.snowman"
+	else if {votes.%player%} is 200:
+		message "&d&o&lMerci pour votre 200ème vote."
+		message "&d&oVous débloquez le Compagnon Gollem !"
+		message "&d&o&lVous débloquez le Salon d'Honneur à la Bibliothèque d'Athelas !"
+		command "pex user %player% add Pet.irongolem"
+	else:
+		message "&d&o&lMerci d'avoir soutenu Gaïa !"
+		message "&d&oVous avez voté sur : &2%event-string%"
+		message "&d&oVous gagnez &f¤ &2100 &d&oet &21 Point de Vote &d&o!"
+		message "&d&oTotal de Points de Vote : &2%{votes.%player%}%"
 #
 #
 #  PVP Manager
@@ -143,6 +508,45 @@ on enchant:
 			delete {enchantment_spell_list::%loop-index%}
 #
 #
+# MythicMobs Items Fixer
+#
+#				allows to give MM Items to full inventories.
+#
+#
+# Use only "mm items give" in any automated console command.
+#   i.e. do not use "mm i give" => this is used to avoid a loop in this section
+#
+# Peut être amélioré en passant _t dans u::* et n'utiliser que des _u::x 
+#
+#
+on server command:
+	if "%event-string%" contains "inventorycheck":
+		stop
+	if "%event-string%" contains "mm items give":
+		cancel event
+		set {_t} to "%event-string%"
+		set {_s} to "%subtext of {_t} from characters 14 to (the length of {_t})%"
+		set {_u::*} to {_s} split at " "
+		execute console command "sudo %{_u::2}% inventorycheck %event-string%"
+#
+command /inventorycheck <text> <text> <text> <text> <text>:
+	trigger:
+		loop 36 times:
+			if slot {_slot} of player's inventory is empty:
+				wait 1 tick
+			else:
+				add 1 to {_slot}
+				wait 1 tick
+		if {_slot} is 36:
+			message "&d&oVous n'avez pas assez de place dans votre inventaire."
+			message "&d&oVidez une place dans votre inventaire pour recevoir l'objet."
+			wait 20 seconds
+			execute console command "sudo %arg 4% inventorycheck %arg 1% %arg 2% %arg 3% %arg 4% %arg 5%"
+		else:
+			execute console command "%arg 1% i %arg 3% %arg 4% %arg 5%"
+#
+#
+#
 # Alcool
 #
 #
@@ -198,6 +602,9 @@ on rightclick on sign:
                 message "&a&oLa porte du &2Lobby Administrateur &a&os'ouvre." to player
                 open block at location at -6710, 65, 2985 of the world "Gaia"
                 open block at location at -6710, 65, 2984 of the world "Gaia"
+                wait 7 seconds
+                close block at location at -6710, 65, 2985 of the world "Gaia"
+                close block at location at -6710, 65, 2984 of the world "Gaia"
 
 command /thisisthelobbylockpadchecker <player>:
 	executable by: console

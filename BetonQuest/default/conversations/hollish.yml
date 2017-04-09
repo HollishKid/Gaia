@@ -14,7 +14,7 @@ NPC_options:
     text: 'La Nature est un livre écrit en langage Mathématique.'
     events: hollish.atom,hollishcitation
   sens_rep:
-    text: 'http://files.enjin.com/1186825/Le_Penseur.jpg'
+    text: 'https://gaia-craft.fr/Ressources/Le_Penseur.jpg'
     events: hollish.helix
 #Options du joueur
 player_options:

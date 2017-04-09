@@ -36,21 +36,21 @@ menu-settings:
 #+                  +#
 ######################
   
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&aRetour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal.'
+  POSITION-X: 8
+  POSITION-Y: 1
+
 menu-close:
   NAME: '&4Fermer'
   ID: barrier
   LORE:
     - 'Ferme cette fenêtre.'
   POSITION-X: 9
-  POSITION-Y: 1
-  
-retour:
-  COMMAND: 'open: Menu.yml'
-  NAME: '&6Retour'
-  ID: stick
-  LORE:
-    - 'Retour au Menu Principal'
-  POSITION-X: 8
   POSITION-Y: 1
   
 advids:
@@ -67,10 +67,10 @@ advids:
   ID: book
   ENCHANTMENT: 'fire aspect, 1'
   POSITION-X: 5
-  POSITION-Y: 2
+  POSITION-Y: 4
 
 site:
-  COMMAND: 'tell: &awww.gaia-minecraft.enjin.com'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le site.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&6Site Officiel'
   ID: map
   LORE:
@@ -80,7 +80,7 @@ site:
   POSITION-Y: 3
 
 discord:
-  COMMAND: 'tell: &a https://discord.gg/012juEmGJcE3dXOzv'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le Discord.","color":"green","clickEvent":{"action":"open_url","value":"https://discord.gg/012juEmGJcE3dXOzv"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&aDiscord Officiel'
   LORE:
     - 'Affiche un lien direct vers'
@@ -104,7 +104,7 @@ votegui:
   POSITION-Y: 3
   
 facebook:
-  COMMAND: 'tell: &2FaceBook &f-&a https://www.facebook.com/Ga%C3%8Fa-Serveur-Minecraft-Mmorpg-1183732731697812/'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le FaceBook.","color":"green","clickEvent":{"action":"open_url","value":"https://www.facebook.com/Ga%C3%8Fa-Serveur-Minecraft-Mmorpg-1183732731697812/"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&9Page FaceBook'
   ID: '35:11'
   LORE:
@@ -114,7 +114,7 @@ facebook:
   POSITION-Y: 3
 
 twitter:
-  COMMAND: 'tell: &2Twitter &f-&a https://twitter.com/Gaia_MMORPG'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le Twitter.","color":"green","clickEvent":{"action":"open_url","value":"https://twitter.com/Gaia_MMORPG"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&bTwitter'
   ID: '35:3'
   LORE:
@@ -122,4 +122,67 @@ twitter:
   - 'le Twitter dans le tchat.'
   POSITION-X: 9
   POSITION-Y: 3
+  
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
  

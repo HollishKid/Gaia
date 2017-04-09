@@ -1,3 +1,27 @@
+#THIS IS APPLIED TO all USERS
+#
+#command /side:
+#	trigger:
+#		set name of sidebar of player to "   &1❄Ice Pearl❄   "
+#		set score "                      " in sidebar of player to 7
+#		set score "&7Grade: " in sidebar of player to 6
+#		set score "&7SuperCoins: " in sidebar of player to 5
+#		set score "&7MégaCoins: " in sidebar of player to 4
+#		set score "                 " in sidebar of player to 3
+#		set score "&7Connectés: " in sidebar of player to 2
+#		set score "            " in sidebar of player to 1
+
+#command /wipe:
+#	trigger:
+#		wipe player's sidebar
+
+
+#
+#LATEST SKELLETT VERSION HINDERS ENTIRE SKRIPT TO LOAD.
+#on breed:
+#	message "Breed" to breeder
+
+
 #SKQuery with errors in console
 #on shoot:
 #    trail projectile with particle drip lava
@@ -98,33 +122,56 @@
 #			else:
 #				add 1 to {last.logout.mailed.%loop-value%}
 #				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus de trois mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
-on right click on lever:
-	if lever is placed on note block or redstone lamp: 
-		if frame is placed on note block or redstone lamp:
-			if spawn creeper is placed on frame:
-				command "eco take %player% 100"
-				message "Vous misez ¤ 100"
-				set {_percentchance} to a ramdom integer between 1 and 100
-				if {_percentchance} is between 1 and 50:
-					message "Vous perdez votre mise."
-				if {_percentchance} is between 51 and 100:
-					command "eco give %player% 200"
 
-command /teamtesting:
-	trigger:
-		set {redteam.%player%} to 1
-		message "Vous avez rejoint l'équipe &cRouge"
-command /teamtestingoff:
-	trigger:
-		set {redteam.%player%} to 0
-		message "Vous avez quitté l'équipe &cRouge"
+#
+#
+#%string% parsed as date[ formatted as %-string%]
+#parses a string date as a date
+
+#(year|month|month name|day of year|day of month|day of week|day name|hours|minutes|seconds) from date %date%
+#date %date%'s (year|month|month name|day of year|day of month|day of week|day name|hours|minutes|seconds)
+#gets information from a date
+
+
+#
+# This functions.
+#
+#command /totallyuselesstimecommandthatWORKS:
+#	trigger:
+#		set {_tmpO} to now
+#		if "%day name from date {_tmpO}%" is "WEDNESDAY":
+#			broadcast "WEDNESDAY"
+#		else:
+#			broadcast "Date: %{_tmpO}%"
+#			broadcast "Year: %year from date {_tmpO}%"
+#			broadcast "Month: %month from date {_tmpO}%"
+#			broadcast "Month Name: %month name from date {_tmpO}%"
+#			broadcast "Day of Year: %day of year from date {_tmpO}%"
+#			broadcast "Day of Month: %day of month from date {_tmpO}%"
+#			broadcast "Day of Week: %day of week from date {_tmpO}%"
+#			broadcast "Day Name: %day name from date {_tmpO}%"
+#			broadcast "Hour: %hours from date {_tmpO}%"
+#			broadcast "Minute: %minutes from date {_tmpO}%"
+#			broadcast "Second: %seconds from date {_tmpO}%"
+#			set {_tmpO} to now
+#		set {day.index} to day of week from date {_tmpO}
+#		message "%{day.index}%"
+
+#command /teamtesting:
+#	trigger:
+#		set {redteam.%player%} to 1
+#		message "Vous avez rejoint l'équipe &cRouge"
+#command /teamtestingoff:
+#	trigger:
+#		set {redteam.%player%} to 0
+#		message "Vous avez quitté l'équipe &cRouge"
 
 	
-on damage:
-    {redteam.%victim%} is 1:
-        {redteam.%attacker%} is 1:
-            cancel event
-            send "&cCe joueur est dans ton équipe" to attacker
+#on damage:
+#   {redteam.%victim%} is 1:
+#        {redteam.%attacker%} is 1:
+#            cancel event
+#            send "&cCe joueur est dans ton équipe" to attacker
 			
 #shoot an arrow
 #make the player shoot a creeper at speed 10

@@ -231,6 +231,18 @@ mineur:
   - DIG_SPEED:10
   - DURABILITY:10
   - LOOT_BONUS_BLOCKS:10
+mineur2:
+  Id: 278
+  Data: 0
+  Amount: 1
+  Display: '&cPioche ultime'
+  Lore:
+  - '&8La rapidité est un'
+  - '&8atout pour le minage'
+  Enchantments:
+  - DIG_SPEED:10
+  - DURABILITY:10
+  - SILK_TOUCH:10
 bucheron:
   Id: 279
   Data: 0

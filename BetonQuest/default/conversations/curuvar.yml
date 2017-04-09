@@ -15,7 +15,7 @@ NPC_options:
     conditions: 'gestionnaire,!alchimiste'
     pointers: presentation,become_member,rien
   pres_ok:
-    text: 'Parfaitement, je serais ... \ncurieux ... \nde recroiser ton chemin en ce monde.... !'
+    text: 'Parfaitement, je serais... \n...curieux... \nde recroiser ton chemin en ce monde...'
     events: found_guild1,guild_tester
   member_ok:
     text: 'Parfaitement parfait !! Cette Guilde se concentre sur l''Art de l''Alchimie!  \nLe Menu de la Guilde te permet de choisir ce métier parmis d''autres avantages !'
@@ -27,10 +27,12 @@ NPC_options:
   member:
     text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
     conditions: 'alchimiste'
-    pointers: menu,merci
+    pointers: menu,cagnotte,merci
   alchimiste_menu:
     text: 'Le voilà !'
     events: alchimiste_menu
+  cagnotte_rep:
+    text: 'La Cagnotte d''un métier est la somme de toutes les contributions des personnes exerçant ce métier. \nVous gagnez 1xp pour la cagnotte dès que vous gagnez de l''expérience dans la compétence de votre métier. \nLa Cagnotte est divisée par le nombre de contributeurs, puis distribué à chacun d''eux sous forme de bonus d''expérience, tous les Dimanche soir.'
 #                   #
 #                   #
 # Options du Joueur #
@@ -48,6 +50,9 @@ player_options:
   menu:
     text: 'Je voudrais accéder au Menu de la Guilde.'
     pointers: alchimiste_menu
+  cagnotte:
+    text: 'Comment fonctionne la Cagnotte des Métiers ?'
+    pointers: cagnotte_rep
   rien:
     text: 'Je ne saurais dire...'
   merci:
