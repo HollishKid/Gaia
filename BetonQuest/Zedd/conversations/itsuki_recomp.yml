@@ -1,0 +1,53 @@
+quester: 'Itsuki'
+first: n0,n1,n2,n3,n4,n5,n6,n7,n8,n9
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  n0:
+    text: 'Vous avez déjà récupérer votre récompense ou bien pas encore validé de quête.'
+  n1:
+    text: 'Voici, votre récompense pour votre quête de Rang 1 validé.'
+    conditions: rang1_done
+    events: re_r1
+  n2:
+    text: 'Voici, votre récompense pour votre quête de Rang 2 validé.'
+    conditions: rang2_done
+    events: re_r2
+  n3:
+    text: 'Voici, votre récompense pour votre quête de Rang 3 validé.'
+    conditions: rang3_done
+    events: re_r3
+  n4:
+    text: 'Voici, votre récompense pour votre quête de Rang 4 validé.'
+    conditions: rang4_done
+    events: re_r4
+  n5:
+    text: 'Voici, votre récompense pour votre quête de Rang 5 validé.'
+    conditions: rang5_done
+    events: re_r5
+  n6:
+    text: 'Voici, votre récompense pour votre quête de Rang 6 validé.'
+    conditions: rang6_done
+    events: re_r6
+  n7:
+    text: 'Voici, votre récompense pour votre quête de Rang 7 validé.'
+    conditions: rang7_done
+    events: re_r7
+  n8:
+    text: 'Voici, votre récompense pour votre quête de Rang 8 validé.'
+    conditions: rang8_done
+    events: re_r8
+  n9:
+    text: 'Voici, votre récompense pour votre quête de Rang 9 validé.'
+    conditions: rang9_done
+    events: re_r9
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
