@@ -1500,7 +1500,10 @@ metier_bucheron_xpboost: 'command pex user %player% add mcmmo.perks.xp.10percent
 #
 # Cleaner
 #
-metier_cleaner: folder mp_clean_tag,mp_clean_xpboost,me_clean_tag,me_clean_xpboost,mh_clean_tag,mh_clean_xpboost,ma_clean_tag,ma_clean_xpboost,mal_clean_tag,mal_clean_xpboost,mf_clean_tag,mf_clean_xpboost,mac_clean_tag,mac_clean_xpboost,mt_clean_tag,mt_clean_xpboost,mher_clean_tag,mher_clean_xpboost,mm_clean_tag,mm_clean_xpboost,mr_clean_tag,mr_clean_xpboost,mex_clean_tag,mex_clean_xpboost,mb_clean_tag,mb_clean_xpboost
+metier_cleaner: folder mp_clean_tag,mp_clean_xpboost,me_clean_tag,me_clean_xpboost,mh_clean_tag,mh_clean_xpboost,ma_clean_tag,ma_clean_xpboost,mal_clean_tag,mal_clean_xpboost,mf_clean_tag,mf_clean_xpboost,mac_clean_tag,mac_clean_xpboost,mt_clean_tag,mt_clean_xpboost,mher_clean_tag,mher_clean_xpboost,mm_clean_tag,mm_clean_xpboost,mr_clean_tag,mr_clean_xpboost,mex_clean_tag,mex_clean_xpboost,mb_clean_tag,mb_clean_xpboost,cagnotte_removal
+#
+cagnotte_removal: 'command thisisthecagnotteremoval %player%'
+#
 mp_clean_tag: tag del metier_poings
 mp_clean_xpboost: 'command pex user %player% remove mcmmo.perks.xp.10percentboost.unarmed'
 me_clean_tag: tag del metier_epees

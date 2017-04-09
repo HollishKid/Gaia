@@ -19,6 +19,7 @@ on join:
 	set {g.channel.%player%} to 1
 	set {l.channel.%player%} to 1
 	set {c.channel.%player%} to 1
+
 #
 	wait 30 seconds
 	if {event.double.xp} is 1:
@@ -32,7 +33,18 @@ on join:
 		message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"	
 	else if {event.worldboss} is 1:
 		send player title "&c&lKalphite - WorldBoss" with subtitle "Village des Premiers Hommes" for 10 seconds with 2 seconds fade in and 2 seconds fade out
-		message "&cRendez-vous au Village des Premiers Hommes en -7235;2658 pour affronter le Kalphite !"	
+		message "&cRendez-vous au Village des Premiers Hommes en -7235;2658 pour affronter le Kalphite !"		
+#
+#
+# Inspector
+#
+#
+command /playerinspector:
+	executable by: console
+	trigger:
+		message "Joueurs connectés : %size of {online.players::*}%"
+		message "Liste complète :"
+		message "%{online.players::*}%"
 #
 #
 # On Load
@@ -577,6 +589,24 @@ command /rollbackeast <text>:
 			delete {break.type.%arg 1%::%loop-index%}
 			wait 1 tick
 		broadcast "&2&lFin du RollBack pour jour (ID) : &6%arg 1%"
+		
+# East Rollback - Cancel
+
+command /rollbackeastcancel <text>:
+	executable by: console
+	trigger:
+		message "&a&lAnnulation du RollBack pour jour (ID) : &6%arg 1% ..."
+		loop {place.location.%arg 1%::*}:
+			delete {place.location.%arg 1%::%loop-index%}
+			wait 1 tick
+		wait 2 ticks
+		loop {break.location.%arg 1%::*}:
+			delete {break.location.%arg 1%::%loop-index%}
+			wait 1 tick
+		loop {break.type.%arg 1%::*}:
+			delete {break.type.%arg 1%::%loop-index%}
+			wait 1 tick
+		message "&2&lFin de l'annulation du RollBack pour jour (ID) : &6%arg 1%"
 		
 # Chester
 

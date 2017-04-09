@@ -328,7 +328,7 @@ regions:
         leaveMessage: ''
     'drisgan_balcony':
         enterConsoleCommands:
-        - 'bq event %player% Drisgan.check_cine'
+        - 'bq event %player% drisgan.check_cine'
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
