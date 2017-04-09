@@ -1,10 +1,8 @@
-Chair_Mute:
+chair_mute:
   Id: ROTTEN_FLESH
   Data: 0
-  Display: 'Chair_Muté'
+  Display: 'Chair Mutée'
   Amount: 1
-  Options:
-    Unbreakable: true
   Lore:
-  - 'Chair muté d''un mob de faction muté'
+  - 'Chair humaine d''une personne muté'
   - '§2Objet_de_Quête'
