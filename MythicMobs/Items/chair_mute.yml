@@ -1,7 +1,7 @@
 chair_mute:
   Id: ROTTEN_FLESH
   Data: 0
-  Display: 'Chair_Mute'
+  Display: 'Chair Mutée'
   Amount: 1
   Lore:
   - 'Chair humaine d''une personne muté'
