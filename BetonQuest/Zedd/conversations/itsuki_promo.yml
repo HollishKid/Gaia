@@ -1,0 +1,50 @@
+quester: 'Itsuki'
+first: n0,n2,n3,n4,n5,n6,n7,n8,n9
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  n0:
+    text: 'Je suis déolé, mais vous avez pas encore assez de point de réputation pour être promu.'
+  n2:
+    text: 'Félécitation, vous êtes maintenant Rang2.'
+    conditions: rang1,pr_10
+    events: promo_r2
+  n3:
+    text: 'Félécitation, vous êtes maintenant Rang3.'
+    conditions: rang2,pr_20
+    events: promo_r3
+  n4:
+    text: 'Félécitation, vous êtes maintenant Rang4.'
+    conditions: rang3,pr_30
+    events: promo_r4
+  n5:
+    text: 'Félécitation, vous êtes maintenant Rang5.'
+    conditions: rang4,pr_40
+    events: promo_r5
+  n6:
+    text: 'Félécitation, vous êtes maintenant Rang6.'
+    conditions: rang5,pr_50
+    events: promo_r6
+  n7:
+    text: 'Félécitation, vous êtes maintenant Rang7.'
+    conditions: rang6,pr_60
+    events: promo_r7
+  n8:
+    text: 'Félécitation, vous êtes maintenant Rang8.'
+    conditions: rang7,pr_70
+    events: promo_r8
+  n9:
+    text: 'Félécitation, vous êtes maintenant Rang9.'
+    conditions: rang8,pr_80
+    events: promo_r9
+    
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:

@@ -1,0 +1,25 @@
+quester: 'Garde_Forestier'
+first: npc_01
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  npc_01:
+    text: 'Vous devez être celui qui s''occupe de la commande du Forgeron, c''est bien ça?'
+    conditions: 'Ga_tag'
+    pointer: play_01
+ npc_02:
+    text: 'Je vous pris, vous pouvez rentrer.'
+    events: Acces_Foret,Ga_tag_del
+ #############
+ #           #
+ #   Joueur  #
+ #           #
+ #############
+ player_options:
+  play_01:
+    text: 'Oui, c''est bien ça'
+    pointer: npc_02 

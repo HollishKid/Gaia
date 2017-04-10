@@ -31,7 +31,16 @@ NPC_options:
     conditions: 'Hist_Tag'
   bonjour:
     text: 'Bonjour &2%player% &a&o, on s''ennuie ?'
-    events: defaut_tous,Tresor_Journal1,Tag_del1
+  npc_01:
+    text: 'Salut &2%player% &a&o, je vous ai appellé car nous avons une source pour trouvé des infos.'
+    conditions: Cs_Av
+    pointer: play_01
+  npc_02:
+    text: 'Mike, ...,ah vous avez l''air de le connaître vu votre expression.'
+    pointer: play_02
+  npc_03:
+    text: 'Je vois, alors allé lui parler, il a des infos.'
+    events: Cs_Av_del,Mi_Av,Mi_jrl,Cs_jrl_del
 #############
 #           #
 #   Joueur  #
@@ -55,3 +64,12 @@ player_options:
     pointers: recrue
   accord:
     text: 'Je comprend, je ferais ce qu''il faut, à bientôt !'
+  play_01:
+    text: 'Je vois, comment s'appelle t-il?
+    pointer: npc_02
+  play_02:
+    text: 'Oui, je les croisais à mon arrivée ici !'
+    pointer: npc_03
+
+
+

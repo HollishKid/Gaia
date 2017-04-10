@@ -1,0 +1,136 @@
+quester: 'Jacky'
+first: npc_01,npc_02,npc_08,npc_18
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+  npc_01:
+    text: 'Bonjour jeune homme, mais désolé j''ai beaucoup de travail en ce moment!'
+  npc_02:
+    text: 'Bonjour jeunee homme, que voulais-vous ?
+    conditions: 'Soldat'
+    pointer: play_01
+  npc_03:
+    text: 'Oh, alors vous êtes la pour m''aider ?'
+    pointer: play_02
+  npc_04:
+    text: 'Bien, alors j''ai un problème de stock de pierre et de charbon.'
+    pointer: play_03
+  npc_05:
+    text: 'Exact, il me faus un stack de pierre et 30 de charbon cela devrais suffir avant l''ouverture.'
+    pointer: play_04,play_05
+  npc_06:
+    text: 'Oui, l''ouverture d''une mine au nord du château.'
+    pointer: play_05
+  npc_07:
+    text: 'Bien, merci.'
+    events: 'Recup_Jacky,Forge_jrl_del'
+  npc_08:
+    text: 'Oh, vous revoilà! Avez vous ce que je vous ai demandez?'
+    conditions: 'Jacky_tag'
+    pointer: play_06,play_07
+  npc_09:
+    text: 'Ah, mais s''il vous plaît dépéchez vous!'
+  npc_10:
+    text: 'Ah merci beaucoup'
+    pointer: play_08,play_09
+  npc_11:
+    text: 'Non attender, j''ai autre chose à vous demandez!'
+    pointer: play_10
+  npc_12:
+    text: 'Vu que vous en parlez, j''ai besoin d'un coup de main pour faire une épée et une pioche en pierre.'
+    pointer: play_11
+  npc_13:
+    text: 'j''ai besoin d'un coup de main pour faire une épée et une pioche en pierre.'
+    pointer: play_11,play_12
+  npc_14: 
+    text: 'Ohoh, bien sur que non, puisque vous venez de me les ramener. Voici ce qui faut pour faire l'épée et la pioche.'
+    events: Jacky_res_02,Jacky_jrl_del,Jacky_jrl02
+  npc_15:
+    text: 'Oh, je vois que vos talents de forge sont pas mal. \nMerci bien, maintenant pourrais-tu envoyer sa au Chef Mineur ?' 
+    pointer: play_14
+  npc_16:
+    text: 'Alors voici ce qui faut donner au chef mineur.'
+    events: Cm_tag,Cm_jrl,Cm_colis,Jacky_tag_del,Jacky_jrl02_del
+  npc_17:
+    text: 'Il se trouve au nord du château. vous le trouverez facilement.'
+    pointer: play_16
+  npc_18:
+    text: '*Coup**Coup*..., oh, vous êtes enfin de retour et avec ma commande du menuisier qui plus est!\nAhah, je m''en suis douter que c''est malotru t''utiliserais pour faire leur travail!'
+    conditions: 'Me_ja'
+    pointer: play_17
+  npc_19:
+    text: 'Oui, je m'en doute, qu''est-ce qu'il ferons pas pour réduire leur travail!'
+    pointer: play_19
+  bnpc_20:
+    text: '*Surpri*, ahah, je t''aime bien ptit gars.\nBref, tu devrais retourner voir le Chef d''escouade.'
+    events: Me_ja2
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  play_01:
+    text: 'Je suis ici par la demande du chef de la seconde escadron.'
+    pointer: npc_03
+  play_02:
+    text: 'Oui, toute à fais.'
+    pointer: npc_04
+  play_03:
+    text: 'Donc vous voulez que je récupére de la pierre et du charbon?'
+    pointer: npc_05
+  play_04:
+    text: 'Ouverture ?'
+    pointer: npc_06
+  play_05:
+    text: 'D'accord, je m''en occupe.'
+    pointer: npc_07
+  play_06:
+    text: 'Non pas encore, désoler!'
+    pointer: npc_09
+  play_07:
+    text: 'Oui les voilà!'
+    conditions: 'Jacky_res'
+    events: jacky_res_take
+    pointer: npc_10
+  play_08:
+    text: 'Ben voilà, maintenant je vous laisse.'
+    pointer: npc_11
+  play_09:
+    text: 'Avez-vous d''autre que vous avez besoin?'
+    pointer: npc_12
+  play_10:
+    text: 'Que voulez vous ?!'
+    pointer: npc_13
+  play_11:
+    text: 'Oh, bien sur, je dois récupérer les ressources moi-même?'
+    pointer: npc_14
+  play_12:
+    text: 'Quoi, je dois encore récupérer des ressources pour l''épée et la pioche ?'
+    pointer: npc_14
+  play_13:
+    text: 'Voilà la pioche et l''épée que vous avez demander.'
+    conditions: Jacky_res02
+    pointer: npc_15
+  play_14:
+    text: 'Oui bien sur'
+    pointer: npc_16
+  play_15:
+    text: 'Ou ce trouve-t-il ?'
+    pointer: npc_17
+  play_16:
+    text: 'Ok, je m''en occupe'
+    pointer: npc_16
+  play_17:
+    text: 'N'avez vous pas fais la même chose?'
+    pointer: npc_20
+  play_18:
+    text: 'Oui, j''ai un peu le tour de la ville.'
+    pointer: npc_19
+  play_19:
+    text: 'Un peu comme vous quoi!'
+    pointer: npc_20 

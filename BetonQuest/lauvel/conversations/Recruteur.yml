@@ -36,3 +36,6 @@ player_options:
   accord:
     text: 'Oui, monsieur'
     events: Recrutement_Tag
+
+
+
