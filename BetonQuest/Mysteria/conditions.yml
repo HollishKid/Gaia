@@ -5,14 +5,21 @@ histoire_mysteria_tag: tag histoire_mysteria_tag
 #
 #   Andrish   #
 #
-andr_qE1: tag andr_qE1
-andr_qE2: tag andr_qE2
+andr_q1E1: tag andr_q1E1
+andr_q1E2: tag andr_q1E2
+andr_q1done: tag andr_q1done
+andr_q2E2: tag andr_q2E2
 #
 #   Kendan   #
 #
 ken_qaccE1: tag ken_qaccE1
 ken_qrefE1: tag ken_qrefE1
-ken_qE2: tag ken_qE2
+ken_q1E2: tag ken_q1E2
+#
+#   Komyl   #
+#
+kom_q1E1: tag kom_q1E1
+kom_q1E2: tag kom_q1E2
 #
 #   Roi Ubu   #
 #

@@ -1,0 +1,34 @@
+quester: 'Ronke'
+first: welcome
+stop: 'false'
+#   Options   #
+
+#     NPC     #
+NPC_options:
+  welcome:
+    text: 'Bien le bonjour ! En quoi puis-je t''aider ?'
+    conditions: 'kom_q1E1'
+    pointers: bonjour
+  par1:
+    text: 'Merci de m''avoir rapporter cette lettre ! Mmmhh.. C''est intéressant, je comprends tout alors..'
+    pointers: par1_rep
+  par12:
+    text: 'Cette lettre me donne les informations que je recherchais ainsi qu''un mot de Komyl. Je vais enfin pouvoir avancer !'
+    pointers: par12_rep
+  par13:
+    text: 'Ce n''est pas important pour le moment, prends cette lettre et rapportez la à Komyl, nous en discuterons plus tard.'
+    events: kom_q1E2
+#   Options   #
+
+#   Joueur    #
+player_options:
+  bonjour:
+    text: 'Bonjour à vous ! Je viens vous remettre cette lettre de la part de Komyl'
+    events: komyl_letter
+    pointers: par1
+  par1_rep:
+    text: 'Puis-je savoir de quoi vous parlez ?'
+    pointers: par12
+  par12_rep:
+    text: 'Je ne comprends pas vraiment ce que vous venez de dire'
+    pointers: par13

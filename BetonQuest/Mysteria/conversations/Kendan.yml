@@ -7,12 +7,13 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Qui es-tu ? Et que me veux-tu ?'
+    conditions: 'andr_q1E1'
     pointers: bonjour
   rep:
     text: 'Pourquoi vient-il encore me demander cela ? ... J''ai une demande à te faire voyageur, pour qu''enfin, je puisse le rembourser'
     pointers: ken_quest
   ken_quest_rep:
-    text: 'Non loin d''Ici, il a un village désert, quiy habrite une entrée secréte. Dans cette cachette, un objet de valeur y est enterré. Pourrais-tu aller me le chercher ?'
+    text: 'Non loin d''Ici, il a un village désert, qui y habrite une entrée secréte. Dans cette cachette, un objet de valeur y est enterré. Pourrais-tu aller me le chercher ?'
     pointers: ken_quest_acc,ken_quest_ref
   ken_quest_ref_rep:
     text: 'Jamais tu ne m''auras ! Je ne me laisserais jamais faire'

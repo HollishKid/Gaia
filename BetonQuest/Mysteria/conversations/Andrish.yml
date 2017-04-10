@@ -7,6 +7,7 @@ stop: 'false'
 NPC_options:
   welcome:
     text: 'Bonjour à toi Citoyen ! Comment se passe ta journée ?'
+    pointers: bonjour
   welcomebis:
     text: 'Bien le bonjour Citoy... Oh ! Désolé, je n''avais pas vu que vous étiez un Ecuyer !'
     conditions: 'default.grade_ecuyer'
@@ -22,6 +23,9 @@ NPC_options:
 #    Joueur   #
 player_options:
   bonjour:
+    text: 'Ma journée se passe très bien, merci à vous !'
+    pointers: rep_andr
+  bonjourbis:
     text: 'Ce n''est pas grave, mais merci de votre accueil ! Le Lieutenant Hashor m''envoie vous voir !'
     pointers: rep_andr
   quest_andr:
@@ -29,4 +33,4 @@ player_options:
     pointers: quest_andr_rep
   quest_andr_acc:
     text: 'Aucun problème je m''en charge !'
-    events: andr_qE1
+    events: andr_q1E1
