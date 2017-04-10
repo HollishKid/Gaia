@@ -166,7 +166,7 @@ maka_badchoice: tag add maka_badchoice
 maka_endfolder: folder maka_mess12,maka_endfolder2 delay:3
 maka_mess12: 'message &2Makarov : &a&oTu as démontré ta valeur, aux yeux de la guilde et aux miens. Je parlerai en ta faveur à l''Intendant, cela t''ouvriras des portes!'
 maka_endfolder2: folder maka_mess13,maka_allclean,maka_end,quest_point_3,maka_j6_del,maka_tempo_journal_intendant,makarov_denyaccess
-maka_mess13: 'message &2Makarov : &a&oPuisse Gaïa guider tes pas et ton bras.
+maka_mess13: 'message &2Makarov : &a&oPuisse Gaïa guider tes pas et ton bras.'
 maka_end: tag add maka_end
 maka_allclean: folder maka_remove_q1done,maka_remove_q2done,maka_remove_q3done,maka_remove_etape1,maka_remove_etape2
 maka_remove_q1done: tag del maka_q1done
