@@ -1,0 +1,103 @@
+quester: 'Mizuki'
+first: 
+stop: 'false'
+###########
+#         #
+#   NPC   #
+#         #
+###########
+NPC_options:
+n0:
+    text: 'Bonjour %Player%, vous êtes la pour de nouvelle quêtes?'
+    conditions: '!miz_inconvers,miz_convers'
+    pointers: bronze,info
+  n00:
+    text: 'Bonjour %Player%, comment ce passe avec votre quêtes?'
+    conditions: '!miz_inconvers,miz_convers,miz_inprogress'
+    pointers: rang1,info,non_merci
+  n1:
+    text: 'Bien le bonjour, jeune membre de notre Guilde des Aventuriers ! Serais-tu intéressé par les contrats de guilde ?'
+    conditions: '!miz_inconvers,!miz_convers'
+    pointers: oui,non
+  rep1:
+    text: 'Les contrats de guilde sont des tâches courantes, qui nous sont transmises par les grandes villes, villages jusqu''à même le service royal afin que des aventuriers les accomplissent.'
+    events: miz_beginnerfold,miz_inconvers
+  n2:
+    text: 'Alors, était-tu intérresser?'
+    conditions: '!miz_inconvers,miz_convers0'
+    pointers: accep,refus
+  menu_bronze:
+    text: 'Rang 1~9'
+    pointers: Menu,rang1_claim,promo,au_revoir$
+  info_1:
+    text: 'Bien sur,Que voulez vous savoir?'
+    pointers: rang,pr,quetes,recomp,classe
+  rang2:
+    text: 'Alors voilà. Tous les rangs sont divisés de 1 à 9, rang 1 étant le plus bas, et rang 9 le plus haut. \nLe rang d’une quête est décidé en fonction du monstre à vaincre ou de la dangerosité du donjon. \nTout aventurier commence au rang 1, et une fois ses accomplissements et exploits reconnus, son rang augmente.'
+    pointers: r1
+  classe2:
+    text: 'Alors voilà. Tous les classes sont divisé en "Inconnue" "Bronze", "Fer", "Argent" et "Or", dont "Inconnue" étant le plus bas, et "Or" le plus haut. \nTout aventurier commence à la Classe "Inconnue", et une fois atteins le Rang 10, le joueur passe à "Bronze". Et à chaque dizaine la classe augmentent.'
+    pointers: r1
+  pr2:
+    text: 'Alors voilà. Les Points de Réputation (RP) permet la promotion au Rang. Tout aventurier commence au Rang 1, puis après avoir atteins un certains nombre de points nous pouvons demander à être promu au suivant rang \nPar exemple pour passer de Rang1 à Rang2, il faus 10RP, puis de rang2 à rang3, il faudras 20RP, ainsi de suite.'  
+    pointers:  r1
+  quetes:
+    text: ''
+    pointer: r1
+  recomp:
+    text: 'Alors voilà, chaque aventurier reçois une récompense après la validation de sa quêtes. \nLe montant change par rapport aux rang de la quête choisie et pour chaque rang fait monter la récompense de 50¤, toute en commancant par 100¤ au Rang1.\nL''aventueir reçois aussi des RP correspendant à 30% des point demander pour monter au rang. Par exemple, le l''aventurier au rang1 va obtenir 3RP puis 6Rp au Rang2.\nAttention pour chaque promotion de classe, le poucentage dessans de 5%.'
+    pointers: r1
+  
+#############
+#           #
+#   Joueur  #
+#           #
+#############
+player_options:
+  oui:
+    text: 'Dites m''en plus.'
+    pointers: rep1
+  non:
+    text: 'Pas le moins du monde.'
+  non_merci:
+    text: 'Non merci.'
+  accep:
+    text: Oui,bien sur.
+    events: its_convers0_del,its_conversdone,
+    pointers:
+  refus:
+    text: 'Non, merci.'
+  au_revoir:
+    text: 'Au revoir'
+  bronze:
+    text: 'Rang 1~9'
+    pointers: menu_sansclasse
+  promo:
+    text: 'Je voudrais monter mon rang, s''il vous plaît.''
+    events: Mizuki_promo
+  menu:
+    text: 'Commencer un contrat &l(aucun contrat disponible pour le moment.)'
+    event: ????
+  rang1_claim:
+    text: 'Récupérer une récompense'
+    events: Mizuki_recomp
+  info:
+    text: 'Je voudrais plus d''information.'
+    pointer: info_1
+  rang:
+    text: 'Je voudrais plus savoir sur les "Rangs".'
+    pointers: rang2
+  classe:
+    text: 'Je voudrais plus savoir sur les "Classes".'
+    pointers: classe2
+  pr:
+    text: 'Je voudrais plus savoir sur les "PR".'
+    pointers: pr2
+  quetes:
+    text: 'Je voudrais plus savoir sur les "Quêtes"'
+    pointers: quetes2
+  recomp:
+    text: 'Je voudrais plus savoir sur les "Récompenses".'
+    pointers: recomp2
+  r1:
+    text: 'Je vois merci.'
