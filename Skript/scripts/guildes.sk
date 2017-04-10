@@ -4,98 +4,101 @@
 #
 #
 on mcmmo player experience gain:
-	if event-skilltype is mining:
-		if event-player meets betonquest condition "metier_mineur":
-			if {minage_contributors::*} contains "%event-player%":
-				add 1 to {minage_total}
-			else:
-				invoke "cagnotte_initializer" from player, "Pugiliste" and "poings"
-
-	else if event-skilltype is excavation:
-		if event-player meets betonquest condition "metier_excavation":
-			if {excavation_contributors::*} contains "%event-player%":
-				add 1 to {excavation_total}
-			else:
-				invoke "cagnotte_initializer" from player, "Excavateur" and "excavation"
-
-	else if event-skilltype is woodcutting:
-		if event-player meets betonquest condition "metier_bucheron":
-			if {bûcheronnage_contributors::*} contains "%event-player%":
-				add 1 to {bûcheronnage_total}
-			else:
-				invoke "cagnotte_initializer" from player, "Bûcheron" and "bûcheronnage"
-
-	else if event-skilltype is herbalism:
-		if event-player meets betonquest condition "metier_herboriste":
-			if {herboristerie_contributors::*} contains "%event-player%":
-				add 1 to {herboristerie_total}
-			else:
-				invoke "cagnotte_initializer" from player, "Herboriste" and "herboristerie"
-			
-	else if event-skilltype is unarmed:
-		if event-player meets betonquest condition "metier_poings":
-			if {poings_contributors::*} contains "%event-player%":
-				add 1 to {poings_total}
-			else:
-				invoke "cagnotte_initializer" from player, "Pugiliste" and "poings"
-
-	else if event-skilltype is archery:
-		if event-player meets betonquest condition "metier_arc":
-			if {arc_contributors::*} contains "%event-player%":
-				add 1 to {arc_total}
-			else:
-				invoke "cagnotte_initializer" from player, "Archer" and "arc"
-
-	else if event-skilltype is acrobatics:
-		if event-player meets betonquest condition "metier_acrobate":
-			if {acrobatie_contributors::*} contains "%event-player%":
-				add 1 to {acrobatie_total}
-			else:
-				invoke "cagnotte_initializer" from player, "Acrobate" and "acrobatie"
-
-	else if event-skilltype is fishing:
-		if event-player meets betonquest condition "metier_peche":
-			if {pêche_contributors::*} contains "%event-player%":
-				add 1 to {pêche_total}
-			else:
-				invoke "cagnotte_initializer" from player, "Pêche" and "pêcheur"
-				
-	else if event-skilltype is taming:
-		if event-player meets betonquest condition "metier_apprivoiseur":
-			if {apprivoisement_contributors::*} contains "%event-player%":
-				add 1 to {apprivoisement_total}
-			else:
-				invoke "cagnotte_initializer" from player, "Apprivoiseur" and "apprivoisement"
-
-	else if event-skilltype is repair:
-		if event-player meets betonquest condition "metier_reparation":
-			if {réparation_contributors::*} contains "%event-player%":
-				add 1 to {réparation_total}
-			else:
-				invoke "cagnotte_initializer" from player, "Réparateur" and "réparation"
-				
-	else if event-skilltype is alchemy:
-		if event-player meets betonquest condition "metier_alchimiste":
-			if {alchimie_contributors::*} contains "%event-player%":
-				add 1 to {alchimie_total}
-			else:
-				invoke "cagnotte_initializer" from player, "Alchimiste" and "alchimie"
-				
+	if {tempo_xp_block_%event-player%} is set:
+		stop
 	else:
-		set {_skill} to "%event-skilltype%"
-		if {_skill} is "épées":
-			if event-player meets betonquest condition "metier_epees":
-				if {épées_contributors::*} contains "%event-player%":
-					add 1 to {épées_total}
+		if event-skilltype is mining:
+			if event-player meets betonquest condition "metier_mineur":
+				if {minage_contributors::*} contains "%event-player%":
+					add 1 to {minage_total}
 				else:
-					invoke "cagnotte_initializer" from player, "Épéiste" and "épées"
+					invoke "cagnotte_initializer" from player, "Mineur" and "minage"
 
-		else if {_skill} is "haches":
-			if event-player meets betonquest condition "metier_haches":
-				if {haches_contributors::*} contains "%event-player%":
-					add 1 to {haches_total}
+		else if event-skilltype is excavation:
+			if event-player meets betonquest condition "metier_excavation":
+				if {excavation_contributors::*} contains "%event-player%":
+					add 1 to {excavation_total}
 				else:
-					invoke "cagnotte_initializer" from player, "Milicien" and "haches"
+					invoke "cagnotte_initializer" from player, "Excavateur" and "excavation"
+
+		else if event-skilltype is woodcutting:
+			if event-player meets betonquest condition "metier_bucheron":
+				if {bûcheronnage_contributors::*} contains "%event-player%":
+					add 1 to {bûcheronnage_total}
+				else:
+					invoke "cagnotte_initializer" from player, "Bûcheron" and "bûcheronnage"
+
+		else if event-skilltype is herbalism:
+			if event-player meets betonquest condition "metier_herboriste":
+				if {herboristerie_contributors::*} contains "%event-player%":
+					add 1 to {herboristerie_total}
+				else:
+					invoke "cagnotte_initializer" from player, "Herboriste" and "herboristerie"
+				
+		else if event-skilltype is unarmed:
+			if event-player meets betonquest condition "metier_poings":
+				if {poings_contributors::*} contains "%event-player%":
+					add 1 to {poings_total}
+				else:
+					invoke "cagnotte_initializer" from player, "Pugiliste" and "poings"
+
+		else if event-skilltype is archery:
+			if event-player meets betonquest condition "metier_arc":
+				if {arc_contributors::*} contains "%event-player%":
+					add 1 to {arc_total}
+				else:
+					invoke "cagnotte_initializer" from player, "Archer" and "arc"
+
+		else if event-skilltype is acrobatics:
+			if event-player meets betonquest condition "metier_acrobate":
+				if {acrobatie_contributors::*} contains "%event-player%":
+					add 1 to {acrobatie_total}
+				else:
+					invoke "cagnotte_initializer" from player, "Acrobate" and "acrobatie"
+
+		else if event-skilltype is fishing:
+			if event-player meets betonquest condition "metier_peche":
+				if {pêche_contributors::*} contains "%event-player%":
+					add 1 to {pêche_total}
+				else:
+					invoke "cagnotte_initializer" from player, "Pêche" and "pêcheur"
+					
+		else if event-skilltype is taming:
+			if event-player meets betonquest condition "metier_apprivoiseur":
+				if {apprivoisement_contributors::*} contains "%event-player%":
+					add 1 to {apprivoisement_total}
+				else:
+					invoke "cagnotte_initializer" from player, "Apprivoiseur" and "apprivoisement"
+
+		else if event-skilltype is repair:
+			if event-player meets betonquest condition "metier_reparation":
+				if {réparation_contributors::*} contains "%event-player%":
+					add 1 to {réparation_total}
+				else:
+					invoke "cagnotte_initializer" from player, "Réparateur" and "réparation"
+					
+		else if event-skilltype is alchemy:
+			if event-player meets betonquest condition "metier_alchimiste":
+				if {alchimie_contributors::*} contains "%event-player%":
+					add 1 to {alchimie_total}
+				else:
+					invoke "cagnotte_initializer" from player, "Alchimiste" and "alchimie"
+					
+		else:
+			set {_skill} to "%event-skilltype%"
+			if {_skill} is "épées":
+				if event-player meets betonquest condition "metier_epees":
+					if {épées_contributors::*} contains "%event-player%":
+						add 1 to {épées_total}
+					else:
+						invoke "cagnotte_initializer" from player, "Épéiste" and "épées"
+
+			else if {_skill} is "haches":
+				if event-player meets betonquest condition "metier_haches":
+					if {haches_contributors::*} contains "%event-player%":
+						add 1 to {haches_total}
+					else:
+						invoke "cagnotte_initializer" from player, "Milicien" and "haches"
 					
 sub "cagnotte_initializer":
 	message "&dVous commencez votre contribution à la Cagnotte du métier %parameter 2% !" to parameter 1
@@ -256,7 +259,12 @@ on join:
 		
 sub "cagnotte_distribution":
 	message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier %parameter 2% !"  to parameter 1
+	set {tempo_xp_block_%parameter 1%} to 1
+	wait 2 ticks
 	execute console command "addxp %parameter 1% %parameter 3% %{%parameter 3%_%parameter 1%}%"
+	wait 1 second
+	remove parameter 1 from {%parameter 1%_contributors::*}
+	delete {tempo_xp_block_%parameter 1%}
 	delete {%parameter 3%_%parameter 1%}
 		
 command /thisisthecagnotteremoval <player>:
@@ -275,3 +283,8 @@ command /thisisthecagnotteremoval <player>:
 		remove player from {alchimie_contributors::*}
 		remove player from {épées_contributors::*}
 		remove player from {haches_contributors::*}
+		
+command /xptester:
+	trigger:
+		set {acrobatie_%player%} to 25
+		message "%{acrobatie_%player%}%"

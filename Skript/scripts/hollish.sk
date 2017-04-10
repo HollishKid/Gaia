@@ -70,6 +70,25 @@ command /hbackdoorchecker <text>:
 		message "Email : %{email.%arg 1%}%"
 		message "Total Mails %{email.count}%"
 #
+command /sanction <text> <player>:
+	executable by: players and console
+	permission: admin.prison
+	permission message: &cVous devez être modérateur pour exécuter cette commande.
+	trigger:
+		execute console command "bq event %arg 2% hollish.prison_god_tester%arg 1%"
+		message "&2%arg 2% &d&oa été sanctionné niveau : &2%arg 1%"
+		message "&d&oUtilisez &aliberer [nom du joueur] &d&opour la/le libérer,"
+		message "&d&oou lorsque la personne est bloquée en prison."
+#
+command /liberer <player>:
+	executable by: players and console
+	permission: admin.prison
+	permission message: &cVous devez être modérateur pour exécuter cette commande.
+	trigger:
+		execute console command "bq event %arg 1% hollish.prison_free"
+		message "&2%arg 1% &d&oa été libéré de prison."
+#
+#
 #
 # Banking System
 #
