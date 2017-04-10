@@ -12,7 +12,7 @@ NPC_options:
   pain_buy_rep:
     text: 'Tenez, profitez en bien !'
     conditions: 'money_100'
-    events: give_pain_paul,money_p100
+    events: give_pain_paul,money_100
   pain_rep_funds:
     text: 'Vous n''avez pas assez d''argent ...'
     conditions: '!money_100'

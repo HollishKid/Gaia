@@ -65,7 +65,7 @@ NPC_options:
   connu:
     text: 'Ravi de vous revoir, &2%player%&a&o, en quoi puis-je vous aider ?'
     conditions: 'tag_erudit_air'
-    pointers: book_erudit,book,apprentissage,erudit_air_student,aang,merciaurevoir
+    pointers: book_erudit,book,erudit_air_student,aang,merciaurevoir
 #
 # Aang
 #

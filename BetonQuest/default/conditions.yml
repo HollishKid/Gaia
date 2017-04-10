@@ -210,6 +210,9 @@ on_bat_est5: location -3048;65;1382;Gaia 33
 on_bat_est6: location -3538;65;-944;Gaia 33
 on_bat_est7: location -756;65;456;Gaia 33
 #
+tempo_mysteria_access: tag tempo_mysteria_access
+#
+#
 divine: tag divine
 has_spawn: tag has_spawn
 athelas: tag athelas
@@ -735,9 +738,9 @@ random33: random 10-100
 # Paulette
 #
 timer_paulette: tag timer_paulette
-paulette1: testforblock -6709;73;3071;Gaia BREWING_STAND
-paulette2: testforblock -6709;73;3069;Gaia BREWING_STAND
-paulette3: testforblock -6709;73;3067;Gaia BREWING_STAND
+paulette1: testforblock -6750;55;2987;Gaia REDSTONE_TORCH_ON
+paulette2: testforblock -6751;55;2987;Gaia REDSTONE_TORCH_ON
+paulette3: testforblock -6752;55;2987;Gaia REDSTONE_TORCH_ON
 tag_fils_paulette: tag fils_paulette
 gateau_paulette: item gateau_paulette
 paulette_oeuf: tag paulette_oeuf
@@ -749,9 +752,9 @@ madame_betteraves_have: item soupe_betteraves
 # Paul
 #
 timer_paul: tag timer_paul
-paul1: testforblock -6753;71;3042;Gaia FLOWER_POT
-paul2: testforblock -6753;71;3041;Gaia FLOWER_POT
-paul3: testforblock -6753;71;3040;Gaia FLOWER_POT
+paul1: testforblock -6750;53;2987;Gaia REDSTONE_TORCH_ON
+paul2: testforblock -6751;53;2987;Gaia REDSTONE_TORCH_ON
+paul3: testforblock -6752;53;2987;Gaia REDSTONE_TORCH_ON
 #
 tag_pain_paul: tag pain_paul
 pain_paul: item pain_paul:10
@@ -766,9 +769,9 @@ pain_urgent_have: item bread:3
 # Francis
 #
 timer_francis: tag timer_francis
-francis1: testforblock -6975;64;3020;Gaia HAY_BLOCK
-francis2: testforblock -6975;64;3019;Gaia HAY_BLOCK
-francis3: testforblock -6975;64;3018;Gaia HAY_BLOCK
+francis1: testforblock -6754;55;2987;Gaia REDSTONE_TORCH_ON
+francis2: testforblock -6755;55;2987;Gaia REDSTONE_TORCH_ON
+francis3: testforblock -6756;55;2987;Gaia REDSTONE_TORCH_ON
 #
 tag_pain_francis: tag pain_francis
 tag_paul_francis: tag paul_francis

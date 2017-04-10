@@ -12,6 +12,7 @@ permissions:
   basedir: plugins/PermissionsEx
   backends:
     file:
-        file: permissions.yml
+      file: permissions.yml
+      type: file
 updater: false
 alwaysUpdate: false

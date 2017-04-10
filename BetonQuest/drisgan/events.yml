@@ -146,7 +146,7 @@ eko_mess8: 'message &6&oVous récupérez une lettre cachetée.'
 eko_givelettre: give lettre_cachetee:1
 #
 # replaced eko_q3startfolder with tempo_redirect
-eko_q2donefolder: folder eko_takelettre,eko_q2done,eko_q2end,eko_q2reward,eko_conversdone,tempo_redirect delay:2
+eko_q2donefolder: folder eko_takelettre,eko_q2done,eko_q2end,eko_q2reward,eko_conversdone delay:2
 eko_givechainlegs: 'command mm items give %player% chainlegs'
 eko_q2reward: folder quest_point_1,eko_givechainlegs,eko_givechainlegsmess
 eko_givechainlegsmess: 'message &6&oVous recevez des &aJambières annelées&6&o.'
@@ -162,6 +162,7 @@ eko_mess9: 'message &2Eko &f: &a&oEh bien il semblerait que j''ai vu juste ! &4E
 eko_q3startfolder2: folder eko_mess10,eko_q3startfolder3 delay:5
 eko_mess10: 'message &2Eko &f: &a&oJe vais envoyer un de mes hommes pour faire des repérages, retrouve le là-bas, il s''appelle &2Aldwin&a&o.'
 eko_q3startfolder3: folder eko_j3_del,eko_j4,eko_q3start,eko_conversdone,eko_objkill delay:2
+eko_objkill: objective start eko_objkill
 eko_q3start: tag add eko_q3start
 eko_q3end: tag del eko_q3start
 eko_q3done: tag add eko_q3done

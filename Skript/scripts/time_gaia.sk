@@ -79,7 +79,7 @@ on load:
 	set {cagnotte_herboristes} to location at -6791, 65, 2851 of the world "Gaia"
 	set {cagnotte_pecheurs} to location at -6456, 74, 3040 of the world "Gaia"
 #
-	set {thief.treasure.security} to location at -6753, 54, 2975 of the world "Gaia"
+	set {thief.treasure.security} to location at -6751, 54, 2963 of the world "Gaia"
 	set {louvre_break_sign} to location at -9761, 73, 2357 of the world "Gaia"
 	set {louvre_place_sign} to location at -9761, 73, 2359 of the world "Gaia"
 	set {louvre_total_sign} to location at -9761, 73, 2358 of the world "Gaia"
@@ -242,7 +242,7 @@ every 5 minutes in "Gaia":
 				execute console command "region flag first_men -w Gaia mob-spawning deny"
 				set {event.worldboss} to 0
 				loop all players:
-					send loop-player title "&aEvent Double XP" with subtitle "&cTerminé" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+					send loop-player title "&c&lKalphite - WorldBoss" with subtitle "&cTerminé" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 					
 #
 #
