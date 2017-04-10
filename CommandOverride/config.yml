@@ -40,15 +40,15 @@ commands:
   - '   &f---------------------- ~ ¤ ~ ----------------------'
   /pack:
   - command:/backpack
-  /sanction:
-  - console:/bq event <arg 1> hollish.prison_god_tester<arg 0>
-  - '&2<arg 1> &d&oa été sanctionné niveau : &2<arg 0>'
-  - ' '
-  - '&d&oUtilisez &aliberer [nom du joueur] &d&opour la/le libérer,'
-  - '&d&oou lorsque la personne est bloquée en prison.'
-  /liberer:
-  - console:/bq event <arg 0> hollish.prison_free
-  - '&2<arg 0> &d&oa été libéré(e) de prison.'
+#  /sanction:
+#  - console:/bq event <arg 1> hollish.prison_god_tester<arg 0>
+#  - '&2<arg 1> &d&oa été sanctionné niveau : &2<arg 0>'
+#  - ' '
+#  - '&d&oUtilisez &aliberer [nom du joueur] &d&opour la/le libérer,'
+#  - '&d&oou lorsque la personne est bloquée en prison.'
+#  /liberer:
+#  - console:/bq event <arg 0> hollish.prison_free
+#  - '&2<arg 0> &d&oa été libéré(e) de prison.'
   /bug:
   - console:/bq event <arg 0> hollish.bug_verified
   /thisisthelagcommand:

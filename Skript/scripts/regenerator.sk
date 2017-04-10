@@ -100,7 +100,10 @@ on place:
 			add location of event-block to {mini.skywars.place::*}
 
 on leaves decay:
-	if event-block is in the region "foret_athelas":
+	if event-block is in the region "east":
+		add location of event-block to {break.location.%{day.index}%::*}
+		add type of event-block to {break.type.%{day.index}%::*}
+	else if event-block is in the region "foret_athelas":
 		cancel event
 	else if event-block is in the region "foret_athelas2":
 		cancel event

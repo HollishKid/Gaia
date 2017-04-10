@@ -1,12 +1,19 @@
 #
 # Andrish #
 #
-andr_qE1: 'Il faut que j''aille trouver Kendan sur la demande d''Andrish pour récuperer l''argent qu''il lui doit'
+andr_q1E1: 'Il faut que j''aille trouver Kendan sur la demande d''Andrish pour récuperer l''argent qu''il lui doit.'
+andr_q1E2: 'J''ai récuperé l''argent d''Andrish auprès de Kendan ! Je devrais lui ramener.'
 #
 # Kendan #
 #
-ken_qE1: 'D''après Kendan, en allant à ce village j''y trouverais un objet intéressant.. Allons-y !'
-ken_qE2: 'Je suis arrivé au village, commençons les recherches !'
+ken_q1E1: 'D''après Kendan, en allant à ce village j''y trouverais un objet intéressant.. Allons-y !'
+ken_q1E2: 'Je suis arrivé au village, commençons les recherches ! Je devrais peut-être regarder si il ne reste pas quelqu''un dans ces maisons.'
+ken_q1E3: 'Grâce à l''aide de Komyl, je suis arrivé au temple. Je devrais chercher l''objet dans ce temple'
+#
+# Komyl #
+#
+kom_q1E1: 'Je dois ramener la lettre de Komyl à son ancien ami qui se situe au centre d''Athelas &2(-6875,64,2995).'
+kom_q1E2: 'Je devrais retourner voir Komyl afin de lui donner la lettre de Ronke.'
 #
 # Garderos et Kinsot #
 #

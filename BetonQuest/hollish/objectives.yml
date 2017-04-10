@@ -83,7 +83,16 @@ obj_fiole_sommet: location -6880;111;2530;Gaia 5 conditions:!midday,fiole_air_ha
 aang_baton_obj: craft baton 1 events:aang_baton_obj_done
 #
 #
-obj_earth_fiole: craft fiole 7 events:earth_fiole_mess,tag_earth_fiole
+obj_earth_fiole: craft fiole 7 events:earth_fiole_mess,tag_earth_fiole_have,journal_earth_fiole_del
+#
+ef_1: action right DIRT conditions:region_east,earth_fiole_hand events:ef_dirt,fiole_earth_tester loc:-5000;60;5000;Gaia range:7000
+ef_2: action right SAND conditions:region_east,earth_fiole_hand events:ef_sand,fiole_earth_tester loc:-5000;60;5000;Gaia range:7000 
+ef_3: action right STONE conditions:region_east,earth_fiole_hand events:ef_stone,fiole_earth_tester loc:-5000;60;5000;Gaia range:7000 
+ef_4: action right IRON_ORE conditions:earth_fiole_hand events:ef_iron,fiole_earth_tester loc:-5000;60;5000;Gaia range:7000 
+ef_5: action right GOLD_ORE conditions:earth_fiole_hand events:ef_gold,fiole_earth_tester loc:-5000;60;5000;Gaia range:7000 
+ef_6: action right EMERALD_ORE conditions:earth_fiole_hand events:ef_emerald,fiole_earth_tester loc:-5000;60;5000;Gaia range:7000 
+ef_7: action right DIAMOND_ORE conditions:earth_fiole_hand events:ef_diamond,fiole_earth_tester loc:-5000;60;5000;Gaia range:7000 
+earth_stick: craft baton 1 events:earth_baton_obj_done
 #
 obj_gros_os: action right GRASS conditions:os3_hand events:burried_gros_os loc:-5000;60;5000;Gaia range:7000
 #
