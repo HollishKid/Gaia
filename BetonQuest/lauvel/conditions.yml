@@ -1,41 +1,61 @@
-
-
+# 
+# Divers
 int_hist: tag default.approuved_intendant
 night: time 7-19
-
-#Condition Quêtes Secondaire
 #
+#Quêtes Secondaire
 Sir_tresor: tag Sir_tresor
 Tresor_trouve: tag Tresor_trouve
 Sir_James_done: tag Sir_James_done
-#
 Ryan_trouve: tag Ryan_trouve
 Soldat_Ryan: tag Soldat_Ryan
-Ryan_Tag: tag Ryan_Tag
 Ryan_Done: tag Ryan_Done
-# Recrue
-#
 Donner_Lettre: tag Donner_Lettre
 Hist_Tag: tag Hist_Tag
-Chef_Journal: tag riendutout
+#
+#Quêtes Principales
+#Recrue
 Recrutement_Tag: tag Recrutement_Tag
 Besoin_Aide: tag Besoin_Aide
-Deuxieme_Escadron1: tag Deuxieme_Escadron1
-#
-
+Recrue: tag Recrue
 Quetes_Loyer: tag Quetes_Loyer
 Cruel_Tag: tag Cruel_Tag
 Bonter_Tag: tag Bonter_Tag
 Loyer_Payer: tag Loyer_Payer
 money_Loyer: money 1000
 Loyer_Done: tag Loyer_Done
-#
-
 Physicien_Done: tag Physicien_Done
 Physicien_tag: tag Physicien_tag
 physicien_book_tagged: tag physicien_book_tagged
-#
-
-#Conditions Quêtes Principale
-#
 Quetes_promo: tag Quetes_promo
+Guerrier_Mute_kill: tag Guerrier_Mute_kill
+Alchimiste: tag Alchimiste
+Analyser: tag Analyser
+#
+#Soldat
+Soldat: tag Soldat
+Jacky_tag: tag Jacky_tag
+Jacky_res: item coal:30,cobblestone:64
+Jacky_res02: item stone_pickaxe:1,stone_sword:1
+Jacky_res_take: take stone_pickaxe,stone_sword
+#
+Colis_Mineur: item Colis_Mineur
+Cm_tag: tag Cm_tag
+Qo_tag: tag Qo_tag
+Q1_tag: tag Q1_tag
+Q2_tag: tag Q2_tag
+Q3_tag: tag Q3_tag
+Q_tag: or Qo_tag,Q1_tag,Q2_tag,Q3_tag
+#
+Cc_tag: tag Cc_tag
+Cc_done: tag Cc_done
+Cc_liv_tag: tag Cc_liv
+Cc_liv_done: tag Cc_liv_done
+#
+Me_tag: tag Me_tag
+Me_bois: item Oak_Wood:16 
+Me_ja: tag Me_ja
+M1: tag M1
+M2: tag M
+#
+Qs_done: tag add Qs_done

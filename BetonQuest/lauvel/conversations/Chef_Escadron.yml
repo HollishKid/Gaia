@@ -1,5 +1,5 @@
 quester: 'Chef d''escadron'
-first: qui,promotion,mais
+first: qui,promotion,chef_r1,aprouv,npc_01,mais
 stop: 'false'
 ###########
 #         #
@@ -21,7 +21,7 @@ NPC_options:
     text: 'Mais vous le faites tous exprès ! Allez voir ailleur si j''y suis !!!'
   promotion:
     text: 'Bien, je vois que vous êtes un élément intérressant ! Que dirais vous de passez au rang de soldat ?'
-    conditions: 'Loyer_Done,Ryan_Done,Physicien_Done'
+    conditions: 'Loyer_Done,Ryan_Done,Physicien_Done,!Guerrier_Mute_kill,!Quetes_promo,!Analyser'
     pointers: rangsoldat1
   rangsoldat2:
     text: 'J''ai reçu un rapport dans lequel des bruits étranges était émis depuis le moulin pendant la nuit ! \nEt je voudrais que vous enquêter puisque personne des autres recrue ose y allé. \nc''est à vous de joué !'
@@ -30,7 +30,40 @@ NPC_options:
     text: 'Bien ! Après ça, revenez faire votre rapport.'
     events: Quetes_promo
     pointers: ok
-#############
+  chef_r1:
+    text: 'Alors avez vous trouvez quelque chose ?'
+    conditions: 'Guerrier_Mute_kill'
+    pointers: chef_q1,chef_q2
+  chef_r2:
+    text: 'Quoi! Qu''est-ce que vous faites là ? bougez vous !!!'
+  chef_r3:
+    text: 'Je comprend. Et vous dites que vous avez trouver un bout de chair de ce muté ?'
+    pointers: chef_q3,chef_q4
+  chef_r4:
+    text: ok, je vois, ramené le à l''achimiste il devrais pouvoir l''analyser.'
+    events: alchimiste
+    pointers: chef_q5
+  aprouv:
+    text: 'Alors, il son occupe ?'
+    conditions: Analyser
+    pointer: analiser
+  aprouv1:
+    text: 'Ok, sinon...\nFélécitation pour votre promotion en tant que Soldat'
+    events: promotion1
+    pointer: chef_q6
+  chef_r5:
+    text: 'Bien, maintenant aller voir le Forgeron. J''ai entendu dire qu''il avais un souci.'
+    pointer: chef_q7
+  chef_r6:
+    text: 'Bien'
+    events: Forge_all
+  npc_01:
+    text: 'Te revoilà, tu as fini ta petite balade ?'
+    conditions: Qs_done
+    pointer: play_01
+  npc_02:
+    text: 'Je suis au courant. Jacky ma prévenue que tu risqué de revenir plus tard. Le Chef supérieur vous demande.\nJe connais pas la relation entre vous deux mais il a l''air de t''aprécier.'
+    events: Qs_done_del,Cs_Av,Quetes_promo_journal2_Del,Cs_jrl
 #           #
 #   Joueur  #
 #           #
@@ -50,3 +83,32 @@ player_options:
     pointers: bien2
   ok:
     text: 'Oui, Chef !'
+  chef_q1:
+    text: 'Non, j''ai pas encore étais.'
+    conditions: 'Quetes_promo,!Guerrier_Mute_kill'
+    pointers: chef_r2
+  chef_q2:
+    text: 'Oui. Voilà, pour commencer.'
+    conditions: 'Guerrier_Mute_kill,!Quetes_promo'
+    events: mes_chef_q2
+    pointers: chef_r3
+  chef_q3:
+    text: 'Euh, Oui.'
+    pointers: chef_r4
+  chef_q4:
+    text: 'Bien sur le voici.'
+    pointers: chef_r4
+  chef_q5:
+    text: 'Ok, je mon occupe.'
+  analiser:
+    text: 'Oui, il a dit qui lui fallait du temp pour l''analyser.'
+    pointer: aprouv1
+  chef_q6:
+    text: 'Merci, Chef!'
+    pointer: chef_r5
+  chef_q7:
+    text: 'Oui, j''y vais de suite, chef!'
+    pointer: chef_r6
+  play_01:
+    text: 'Euh...'
+    pointer: npc_02

@@ -1,5 +1,5 @@
 quester: 'Mike'
-first: ami
+first: ami,npc_01
 stop: 'false'
 ###########
 #         #
@@ -12,6 +12,34 @@ NPC_options:
     pointers: trav
   roi:
     text: 'D''après ma mère, après la mort du Roi Flok son fils Cony à monté sur le trône. Et depuis, la ville à complétement changé ...'
+  npc_01:
+    text: 'Oh salut l''ami, te revoilà, j''ai entendu dire que tu fesait partie de la mission! J''étais surpris.\nBref, je ne sais pas si tu le sais. Je suis le fils de la servante du Prince.'
+    conditions: 'Mi_Av'
+    pointer: play_01,play_02
+  npc_02:
+    text: 'Oui, toute à fais! Et j''ai quelque informations qui pourrais t'aider!'
+    pointer: play_03
+  npc_03:
+    text: 'Car je déteste le Prince! il traite ma mère comme de la merde! je le vois des fois la peloter, rien que le voir j''ai envie de le tuer!'
+    pointer: play_04
+  npc_04:
+    text: 'Est-ce que tu entendu parler de ce qui c''était passé avec la Reine?'
+    pointer: play_05,play_06
+  npc_05:
+    text: 'Après la mort du Roi, la Reine à mystèrieusement disparut sans laisserde trace. Certains pense qu'elle est morte de tristesse et d''autre que le prince à tuer le Roi. Mais aucun à de preuve.'
+    pointer: play_07
+  npc_06:
+    text: 'Je ne sais pas exactement, j''ai entendu dire que la Reine aurais une cache secrète et qu''elle pourrais planqué des preuve contre le Prince.'
+    pointer: play_08
+  npc_07: 
+    text: 'Non, mais je sais qu'elle à cacher 2 clé, une qui ouvre la cache secrète et l''autre un coffre qu''un villaguois aurrais.'
+    pointer: play_09
+  npc_08:
+    text:  'Il s'appelle &dDa She&0&o. il est le fils de Zhou She et Yun She, un couple très proche de la Reine. Tu devrais le trouver au village à côtés du Château.'
+    pointer: play_10
+  npc_09:
+    text: 'Ok, préviens moi quand tu as du nouveau !'
+    events: 'Da_She,Mi_jrl1,Mi_jrl_del'
 #############
 #           #
 #   Joueur  #
@@ -19,5 +47,35 @@ NPC_options:
 #############
 player_options:
   trav:
-    text: 'salut, non je travail ! Ah bon, qu''est-ce qui c''est passé ?'
+    text: 'Salut, non je travail ! Ah bon, qu''est-ce qui c''est passé ?'
     pointers: roi
+  play_01:
+    text: 'Ta mission est de collecter des informations?'
+    pointer: npc_02
+  play_02:
+    text: 'Ah bon ? pourquoi nous aidez ?'
+    pointer: npc_03
+  play_03:
+    text: 'Ah bon lesquels?'
+    pointer: npc_04
+  play_04:
+    text: 'Je vois. Tu as des informations à me donner je crois.'
+    pointer: npc_04
+  play_05:
+    text: 'Non, il sait passer quoi?'
+    pointer: npc_05
+  play_06:
+    text: 'Oui. Mais redis-le moi.'
+    pointer: npc_05
+  play_07:
+    text: 'Donc, vous avez trouver des preuves?'
+    pointer: npc_06
+  play_08:
+    text: 'Tu sait ou elle se trouve ?'
+    pointer: npc_07
+  play_09: 
+    text: 'Un villageois? Pourquoi aurais-t-il le coffre de la Reine? Aurais-t-il un lien avec la Reine?
+    pointer: npc_08
+  play_10:
+    text: 'Ok, je vais aller le rencontré.'
+    pointer: npc_09

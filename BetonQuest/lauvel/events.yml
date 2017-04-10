@@ -1,20 +1,16 @@
-#
+# 
 # Quêtes Secondaires
-#
-#Sir_James
+#Sir James
 Sir_tresor: tag add Sir_tresor
 Sir_Journal: journal add Sir_James_Journal
 Sir_tresor_objt: objective start Sir_tresor_objt
-#
 Tresor_Trouve_tous: folder Tresor_mess,Tresor_Journal1,Tresor_Journal2,Tresor_Tag delay:4
-Tresor_mess: 'message &dAprès avoir remarqué une croix sous la queue, vous cresez est trouvé un coffre au trésor.'
+Tresor_mess: message &dAprès avoir remarqué une croix sous la queue, vous cresez est trouvé un coffre au trésor.
 Tresor_Journal1: journal del Sir_James_Journal
 Tresor_Journal2: journal add Coffre_Tresor_Journal
 Tresor_Tag: tag add Tresor_trouve
-#
 Donner_Butin_tous: folder mess_Butin,butin_donner delay:2
-#                                             ~ H
-mess_Butin: 'message &dVous venez de recevoir &f¤&23000&d.'
+mess_Butin: message &dVous venez de recevoir &f¤&23000&d.
 butin_donner: money 3000
 defaut_tous: folder Journal_del,Tag_del1,Tag_del2,Sir_tresor_objt2,Sir_James_done delay:5
 Journal_del: journal del Coffre_Tresor_Journal
@@ -23,7 +19,7 @@ Tag_del2: tag del Tresor_trouve
 Sir_tresor_objt2: objective delete Sir_tresor_objt
 Sir_James_done: tag add Sir_James_done
 #
-#SoldatRyan
+#Soldat Ryan
 Soldat_Ryan_tous: folder Soldat_Ryan,Ryan_Journal delay:2
 Ryan_Journal: journal add Ryan_Journal
 Soldat_Ryan: tag add Soldat_Ryan
@@ -31,30 +27,27 @@ Ryan_trouve_tous: folder Ryan_trouve,Ryan_Journal_Del,Ryan_Journal2
 Ryan_Journal_Del: journal del Ryan_Journal
 Ryan_Journal2: journal add Ryan_Journal2
 Ryan_trouve: tag add Ryan_trouve
-Defaut_Ryan: folder Ryan_trouve_Del,Ryan_Journal2_Del,Ryan_Tag,Ryan_Argent,Soldat_Ryan_Del delay:5
+Defaut_Ryan: folder Ryan_trouve_Del,Ryan_Journal2_Del,Ryan_Done,Ryan_Argent,Soldat_Ryan_Del delay:5
 Soldat_Ryan_Del: tag del Soldat_Ryan
 Ryan_trouve_Del: tag del Ryan_trouve
 Ryan_Journal2_Del: journal del Ryan_Journal2
-Ryan_Tag: tag add Ryan_Tag
-Ryan_Argent: money 200
+Ryan_Done: tag add Ryan_Done
 #
-#SoldatDeprimer
+#Claire
+Ryan_Argent: money 200
 Quetes_Loyer: tag add Quetes_Loyer
 Loyer_Journal: journal add Loyer_Journal
-#
 Verifier_Argent: if money_Loyer Loyer_Payer_Bonter else messbonte
-messbonte: 'message &4Vous n''avez pas l''argent nécessaire !'
+messbonte: message &4Vous n'avez pas l'argent nécessaire !
 Loyer_Payer_Bonter: folder Payer_Loyer,Bonter_Tag,Loyer_Payer,Loyer_Journal2,Del_Loyer_Journal,Quetes_Loyer2 delay:6
 Payer_Loyer: money -1000
 Bonter_Tag: tag add Bonter_Tag
 Loyer_Payer: tag add Loyer_Payer
 Loyer_Journal2: journal add Loyer_Journal2
-#
 Loyer_Payer_Cruel: folder Cruel_Tag,Loyer_Payer,Loyer_Journal3,Del_Loyer_Journal,Quetes_Loyer2 delay:5
 Cruel_Tag: tag add Cruel_Tag
 Loyer_Journal3: journal add Loyer_Journal3
 Del_Loyer_Journal: journal del Loyer_Journal
-#
 Defaut_Loyer: folder Loyer_Journal2_Del,Loyer_Journal3_Del,Loyer_Payer_Del,Loyer_Done delay:4
 Loyer_Journal2_Del: journal del Loyer_Journal2
 Loyer_Journal3_Del: journal del Loyer_Journal3
@@ -67,27 +60,29 @@ Quetes_Physicien: folder Physicien_tag,Physicien_journal1,Physicien_book delay:1
 Physicien_book: objective start Physicien_book
 Physicien_journal1: journal add Physicien_journal1
 Physicien_tag: tag add Physicien_tag
-Physicien_message: 'message &dVous trouvez un livre avec le bon titre, écrit par &2Physicien Heimer&d, vous le prenez de l''étagère.'
+Physicien_message: message &dVous trouvez un livre avec le bon titre, écrit par &2Physicien Heimer&d, vous le prenez de l'étagère.
 Physicien_journal_reload: folder Physicien_journal1_del,Physicien_journal2 delay:0
 Physicien_journal1_del: journal del Physicien_journal1
 Physicien_journal2: journal add Physicien_journal2
 physique_book_tagged: tag add physique_book_tagged
-Physicien_book_give: 'command give %player% written_book 1 0 {pages:["[\"\",{\"text\":\"\n        \"},{\"text\":\"Études\",\"underlined\":true},{\"text\":\"\n      \",\"color\":\"reset\"},{\"text\":\"des Portails\",\"underlined\":true},{\"text\":\"\n\n\n\n\n\n\n\n\n\n\",\"color\":\"reset\"},{\"text\":\"Par Heimer, physicien\",\"italic\":true}]","[\"\",{\"text\":\"Sommaire:\",\"bold\":true,\"italic\":true,\"underlined\":true},{\"text\":\"\n\nI- Histoire\n\nII- Recherches et hypothèses\n\nIII- Expériences\n\nIV- Annexes\",\"color\":\"reset\",\"italic\":true},{\"text\":\"\n\n \",\"color\":\"reset\"}]","[\"\",{\"text\":\"I- \",\"bold\":true,\"italic\":true},{\"text\":\"Histoire\",\"bold\":true,\"italic\":true,\"underlined\":true},{\"text\":\"\n\nPendant la Seconde Ère, les serviteurs du mal reussirent à envahir le monde de Gaïa en passant par de mystérieux portails. Ces portails étaient étrangement violet avec un contour noir.\n \",\"color\":\"reset\"}]","{\"text\":\"Nous savons pas comment ces portails sont apparus, cela reste encore un mystère. Et je compte bien le découvrir !\n\n \"}","[\"\",{\"text\":\"III- \",\"bold\":true,\"italic\":true},{\"text\":\"Recherches et hypothèse\",\"bold\":true,\"italic\":true,\"underlined\":true},{\"text\":\"\n\nJe soupconne fortement que des forces divines aient propulsés ces serviteurs du mal par les portails ! Cette divinité leur a sûrement permis de construire ce portail grêce à la physique quantique permettant de séparer l\\u2019espace temps.\",\"color\":\"reset\"}]","{\"text\":\"Ce portail ne fais pas que déchirer l\\u2019espace temps mais aussi le stabilise pour éviter la destruction de celui-ci.\n\n \"}","[\"\",{\"text\":\"II- \",\"bold\":true,\"italic\":true},{\"text\":\"Expériences\",\"bold\":true,\"italic\":true,\"underlined\":true},{\"text\":\"\n\nMoi, Heimer, physicien sur la physique quantique, j\\u2019ai passé ma vie dans les recherches sur les téléportations quantiques. J\\u2019ai construit différentes machines permettant de déstabiliser le portail pour qu\\u2019il s\\u2019autodétruit.\",\"color\":\"reset\"}]","{\"text\":\"Mais ce fus en vain car il me manque une formule a mon équation ! Dans le but que mes recherche perdure pour mes successeur je vais inscicre toute mes recherche dans ce livre.\n\n \"}"],title:"Etude Des Portails",author:"Heimer, physicien",display:{Lore:["Vieux livre de la Seconde Ère."]}}'
+Physicien_book_give: command give %player% written_book 1 0 {pages:["[\"\",{\"text\":\"\n        \"},{\"text\":\"Études\",\"underlined\":true},{\"text\":\"\n      \",\"color\":\"reset\"},{\"text\":\"des Portails\",\"underlined\":true},{\"text\":\"\n\n\n\n\n\n\n\n\n\n\",\"color\":\"reset\"},{\"text\":\"Par Heimer, physicien\",\"italic\":true}]","[\"\",{\"text\":\"Sommaire:\",\"bold\":true,\"italic\":true,\"underlined\":true},{\"text\":\"\n\nI- Histoire\n\nII- Recherches et hypothèses\n\nIII- Expériences\n\nIV- Annexes\",\"color\":\"reset\",\"italic\":true},{\"text\":\"\n\n \",\"color\":\"reset\"}]","[\"\",{\"text\":\"I- \",\"bold\":true,\"italic\":true},{\"text\":\"Histoire\",\"bold\":true,\"italic\":true,\"underlined\":true},{\"text\":\"\n\nPendant la Seconde Ère, les serviteurs du mal reussirent à envahir le monde de Gaïa en passant par de mystérieux portails. Ces portails étaient étrangement violet avec un contour noir.\n \",\"color\":\"reset\"}]","{\"text\":\"Nous savons pas comment ces portails sont apparus, cela reste encore un mystère. Et je compte bien le découvrir !\n\n \"}","[\"\",{\"text\":\"III- \",\"bold\":true,\"italic\":true},{\"text\":\"Recherches et hypothèse\",\"bold\":true,\"italic\":true,\"underlined\":true},{\"text\":\"\n\nJe soupconne fortement que des forces divines aient propulsés ces serviteurs du mal par les portails ! Cette divinité leur a sûrement permis de construire ce portail grêce à la physique quantique permettant de séparer l\\u2019espace temps.\",\"color\":\"reset\"}]","{\"text\":\"Ce portail ne fais pas que déchirer l\\u2019espace temps mais aussi le stabilise pour éviter la destruction de celui-ci.\n\n \"}","[\"\",{\"text\":\"II- \",\"bold\":true,\"italic\":true},{\"text\":\"Expériences\",\"bold\":true,\"italic\":true,\"underlined\":true},{\"text\":\"\n\nMoi, Heimer, physicien sur la physique quantique, j\\u2019ai passé ma vie dans les recherches sur les téléportations quantiques. J\\u2019ai construit différentes machines permettant de déstabiliser le portail pour qu\\u2019il s\\u2019autodétruit.\",\"color\":\"reset\"}]","{\"text\":\"Mais ce fus en vain car il me manque une formule a mon équation ! Dans le but que mes recherche perdure pour mes successeur je vais inscicre toute mes recherche dans ce livre.\n\n \"}"],title:"Etude Des Portails",author:"Heimer, physicien",display:{Lore:["Vieux livre de la Seconde Ère."]}}
 Physicien_end_chap1: folder Physicien_journal2_del,physique_book_tagged_del,Physicien_Done,Physicien_tag_del delay:1
 Physicien_journal2_del: journal del Physicien_journal2
 Physicien_tag_del: tag del Physicien_tag
 physique_book_tagged_del: tag del physicien_book_tagged
 Physicien_Done: tag add Physicien_Done
-#Quêtes Principal
 #
-#Recrutement / Deuxieme_Escadron
+#Quêtes Princiapeles
+#Divers
 int_hist: tag add default.approuved_intendant
 Hist_Tag: tag add Hist_Tag
 Entre_Chateau: objective start Entre_Chateau
 acces_chateau: door -7857;61;3637;Gaia on
+#
+#Rang Recrue
 donner_lettre: tag add Donner_Lettre
 Prendre_Lettre: tag del Donner_Lettre
-Deuxieme_Escadron1: tag add Deuxieme_Escadron1
+Deuxieme_Escadron1: tag add Recrue
 Lettre_Journal: journal add Lettre_Journal
 Del_Journal: journal del Lettre_Journal
 Chef_Journal: journal add Chef_Journal
@@ -98,22 +93,132 @@ Chef_tous: folder Del_Chef_Journal,Aide_Journal,Besoin_Aide,Recrutement_Tag_Del 
 Aide_Journal: journal add Aide_Journal
 Besoin_Aide: tag add Besoin_Aide
 #
-#Promotion
 Quetes_promo: folder Quetes_promo_tag,Quetes_promo_journal,Quetes_promo_obj delay:2
 Quetes_promo_tag: tag add Quetes_promo
 Quetes_promo_journal: journal add Quetes_promo_journal1
 Quetes_promo_obj: folder Quetes_promo_obj1,Quetes_promo_obj2 delay:2
-Quetes_promo_obj1: objective start Quetes_promo_obj1
-Quetes_promo_obj2: objective start Quetes_promo_obj2
-Quetes_promo_modspawn: if !Day Aventurier_Ensorceler else Aventurier_Ensorceler
-Aventurier_Ensorceler: 'command mm mobs spawn Aventurier_Ensorceler 1 Gaia,-7814,68,3545'
+Quetes_promo_obj1: objective start promo_obj1
+Quetes_promo_obj2: objective start promo_obj2
+Guerrier_Mute: command mm mobs spawn Aventurier_Ensorceler 1 Gaia,-7814,68,3545
 Quetes_promo_Done: folder Quetes_promo_tag2,Quetes_promo_obj_del,Quetes_promo_journal2 delay:1
-Quetes_promo_tag2: folder Quetes_promo_tag_del,Aventurier_Ensorceler_kill delay:2
-Quetes_promo_tag_del: tag del Quetes_promo_tag
-Aventurier_Ensorceler_kill: tag add Aventurier_Ensorceler_kill
+Quetes_promo_tag2: folder Quetes_promo_tag_del,Guerrier_Mute_kill delay:2
+Quetes_promo_tag_del: tag del Quetes_promo
+Guerrier_Mute_kill: tag add Guerrier_Mute_kill
+GmK_Del: tag del Guerrier_Mute_kill
 Quetes_promo_journal2: folder Quetes_promo_journal_Del,Quetes_promo_journal2_Add delay:1
 Quetes_promo_journal_Del: journal del Quetes_promo_journal1
 Quetes_promo_journal2_Add: journal add Quetes_promo_journal2
+Quetes_promo_journal2_Del: journal del Quetes_promo_journal2
 Quetes_promo_obj_del: folder Promo_obj1_Del,Promo_obj2_Del delay:1
-Promo_obj1_Del: objective delete Quetes_promo_obj1
-Promo_obj2_Del: objective delete Quetes_promo_obj2
+Promo_obj1_Del: objective delete promo_obj1
+Promo_obj2_Del: objective delete promo_obj2
+mes_chef_q2: message &dAprès un long moment d'explication...
+#
+alchimiste: folder Quetes_promo_obj_del,Del_tag,Add_tag,Rel_Journal,GmK_Del delay:0
+Del_tag: tag del Quetes_promo
+Add_tag: tag add Alchimiste
+Rel_Journal: folder Quetes_promo_journal2_Del,alc_new1 delay:0
+alc_new1: journal add alc_new1
+alc_all: folder Prend_Chair,alc_new2,Analyser,tag_del,alc_new1_del delay:2
+tag_del: tag del Alchimiste
+Prend_Chair: take Chair_Mute
+alc_new1_del: journal del alc_new1
+alc_new2: journal add alc_new2
+Analyser: tag add Analyser
+promotion1: folder promo_tag delay:1
+promo_tag: folder promo_tag_del,tag_promo delay:1
+promo_tag_del: folder Ryan_Done_del,Loyer_Done_del,Physicien_Done_del dela3
+Ryan_Done_del: tag del Ryan_Done_del
+Loyer_Done_del: tag del Loyer_Done_del
+Physicien_Done_del: tag del Physicien_Done_del
+#
+#Rang Soldat
+tag_promo: tag add Soldat
+Forge_all: folder Forge_jrl,Forge_tag delay:2
+Forge_jrl: folder alc_new2_del,Forge_jrl_add delay:0
+alc_new2_del: journal del alc_new2
+Forge_jrl_add: journal add Forge_jrl
+Forge_tag: tag add Forge_tag
+Forge_jrl_del: journal del Forge_jrl
+Recup_Jacky: folder Jacky_jrl,Jacky_tag delay:1
+Jacky_jrl: journal add Jacky_jrl
+Jacky_tag: tag add Jacky_tag
+Jacky_res_02: give Cobblestone:5,stick:3
+Jacky_jrl_del: journal del Jacky_jrl
+Jacky_jrl02: journal add Jacky_jrl02
+Jacky_tag_del: tag del Jacky_tag
+Jacky_jrl02_del: journal del Jacky_jrl02
+Ja_take: take Oak_Wood:16
+#
+Cm_tag: tag add Cm_tag
+Cm_jrl: journal add Cm_jrl
+Q2_tag_del: tag del Q2_tag
+Q3_mes: folder Q3_mes01,Qdone_mes delay:3
+Q3_mes01: 'message Outils remis - 3/3'
+Qdone_mes: 'message vous pouvez retourner voir le &4Chef mineur.'
+colis_del: take Colis_Mine  
+colis_del: take Colis_Mine 
+Cm_give: give cobblestone:64
+Cm_jrl02: journal add Cm_jrl02
+Cm_jrl01_del: journal del Cm_jrl01
+Cm_del: folder Qo_tag_del,Q1_tag_del,Q2_tag_del,Q3_tag_del,Cm-tag delay:1
+Qo_tag_del: tag del Qo_tag
+Q1_tag_del: tag del Q1_tag
+Q2_tag_del: tag del Q2_tag
+Q3_tag_del: tag del Q3_tag
+Cm_tag: tag del Cm_tag
+Cm_jrl02_del: journal del Cm_jrl02
+#
+Cc_tag: tag add Cc_tag
+Cc_take: take cobblestone:60
+Cc_obj: objective start Cc_obj
+Cc_reset: folder Cc_1,Cc_2,Cc_3,Cc_4 delay:0
+Cc_1: setblock AIR ???;???;???;Gaia
+Cc_2: setblock AIR ???;???;???;Gaia
+Cc_3: setblock AIR ???;???;???;Gaia
+Cc_4: setblock AIR ???;???;???;Gaia
+Cc_done: tag add Cc_done
+Cc_done_del: tag del Cc_done
+Cc_jrl: journal add Cc_jrl
+Cc_jrl_del: journal del Cc_jrl
+Cc_jrl01: journal add Cc_jrl01
+Cc_tag_del: tag del Cc_tag
+Cc_liv_tag: tag add Cc_liv
+Cc_liv: give Oak_Wood:64,Oak_Wood:64
+Cc_take2: take Oak_Wood:64,Oak_Wood:64
+Cc_liv_del: tag del Cc_liv
+Cc_liv_done: tag add Cc_liv_done
+Cc_jrl01_del: journal del Cc_jrl01
+Cc_jrl02: journal add Cc_jrl02
+Cc_jrl02_del: journal del Cc_jrl02
+Cc_liv_done_del: tag del Cc_liv_done
+#
+Me_tag: tag add Me_tag
+Me_jrl: journal add Me_jrl
+Ga_tag: tag add Ga_tag
+Me_tag_del: tag del Me_tag
+Me_co: tag add Me_co
+Me_ja: tag add Me_ja
+Me_co_del: tag del Me_co
+Me_jrl_del: journal del Me_jrl
+Me_jrl01: journal add Me_jrl01
+Me_ja_del: tag del Me_ja
+Ga_tag_del: tag del Ga_tag
+M1: tag add M1
+M1_del: tag del M1
+M2: tag add M2
+M2_del:  tag del M2
+Me_jrl01_del: journal del Me_jrl01
+Qs_done: tag add Qs_done
+Me_ja2: folder Me_ja_del,Qs_done,Ja_take,Cc_liv_done_del,Quetes_promo_journal2_Add,Cc_jrl02_del,Me_jrl01_del delay:1
+Cs_Av: rag add Cs_Av
+Cs_jrl: journal add Cs_jrl
+Cs_jrl_del: journal del Cs_jrl
+#
+Mi_Av: tag add Mi_Av
+Mi_jrl: journal add Mi_jrl
+Mi_jrl_del: journal del Mi_jrl
+Mi_jrl1: journal add Mi_jrl1
+Mi_jrl1_del: journal del Mi_jrl1
+Da_She: tag add Da_She
+Da_ville: tag add Da_ville
