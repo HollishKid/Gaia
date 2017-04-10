@@ -1500,7 +1500,10 @@ metier_bucheron_xpboost: 'command pex user %player% add mcmmo.perks.xp.10percent
 #
 # Cleaner
 #
-metier_cleaner: folder mp_clean_tag,mp_clean_xpboost,me_clean_tag,me_clean_xpboost,mh_clean_tag,mh_clean_xpboost,ma_clean_tag,ma_clean_xpboost,mal_clean_tag,mal_clean_xpboost,mf_clean_tag,mf_clean_xpboost,mac_clean_tag,mac_clean_xpboost,mt_clean_tag,mt_clean_xpboost,mher_clean_tag,mher_clean_xpboost,mm_clean_tag,mm_clean_xpboost,mr_clean_tag,mr_clean_xpboost,mex_clean_tag,mex_clean_xpboost,mb_clean_tag,mb_clean_xpboost
+metier_cleaner: folder mp_clean_tag,mp_clean_xpboost,me_clean_tag,me_clean_xpboost,mh_clean_tag,mh_clean_xpboost,ma_clean_tag,ma_clean_xpboost,mal_clean_tag,mal_clean_xpboost,mf_clean_tag,mf_clean_xpboost,mac_clean_tag,mac_clean_xpboost,mt_clean_tag,mt_clean_xpboost,mher_clean_tag,mher_clean_xpboost,mm_clean_tag,mm_clean_xpboost,mr_clean_tag,mr_clean_xpboost,mex_clean_tag,mex_clean_xpboost,mb_clean_tag,mb_clean_xpboost,cagnotte_removal
+#
+cagnotte_removal: 'command thisisthecagnotteremoval %player%'
+#
 mp_clean_tag: tag del metier_poings
 mp_clean_xpboost: 'command pex user %player% remove mcmmo.perks.xp.10percentboost.unarmed'
 me_clean_tag: tag del metier_epees
@@ -2220,7 +2223,7 @@ bat_athelas_louvre22_teleport: teleport -10404;66;2996;Gaia
 #
 # Mysteria
 bat_mysteria: if on_bat_mysteria on_bat_mess else bat_mysteria1
-bat_mysteria1: if Mysteria.message_royal bat_mysteria2 else no_mysteria_bat_mess
+bat_mysteria1: if tempo_mysteria_access bat_mysteria2 else no_mysteria_bat_mess
 bat_mysteria2: if money_200 bat_mysteria22 else no_money200_mess
 #
 bat_mysteria22: folder bat_generic_teleport,money_200,bat_mysteria22_timer,bat_generic_message delay:1
@@ -3018,17 +3021,17 @@ randomizer: folder paulette_randomizer,paul_randomizer,francis_randomizer delay:
 #
 paulette_randomizer: folder paulette_random1,paulette_random2,paulette_random3 delay:2 random:1
 paulette_random1: folder paulette_random11,paulette_random12,paulette_random13 delay:1
-paulette_random11: setblock BREWING_STAND -6709;73;3071;Gaia
-paulette_random12: setblock AIR -6709;73;3069;Gaia
-paulette_random13: setblock AIR -6709;73;3067;Gaia
+paulette_random11: setblock REDSTONE_TORCH_ON -6750;55;2987;Gaia
+paulette_random12: setblock AIR -6751;55;2987;Gaia
+paulette_random13: setblock AIR -6752;55;2987;Gaia
 paulette_random2: folder paulette_random21,paulette_random22,paulette_random23 delay:1
-paulette_random21: setblock BREWING_STAND -6709;73;3069;Gaia
-paulette_random22: setblock AIR -6709;73;3071;Gaia
-paulette_random23: setblock AIR -6709;73;3067;Gaia
+paulette_random21: setblock AIR -6750;55;2987;Gaia
+paulette_random22: setblock REDSTONE_TORCH_ON -6751;55;2987;Gaia
+paulette_random23: setblock AIR -6752;55;2987;Gaia
 paulette_random3: folder paulette_random31,paulette_random32,paulette_random33 delay:1
-paulette_random31: setblock BREWING_STAND -6709;73;3067;Gaia
-paulette_random32: setblock AIR -6709;73;3069;Gaia
-paulette_random33: setblock AIR -6709;73;3071;Gaia
+paulette_random31: setblock AIR -6750;55;2987;Gaia
+paulette_random32: setblock AIR -6751;55;2987;Gaia
+paulette_random33: setblock REDSTONE_TORCH_ON -6752;55;2987;Gaia
 #
 paulette_timer: folder obj_timer_paulette,tag_timer_paulette delay:0
 tag_timer_paulette: tag add timer_paulette
@@ -3063,17 +3066,17 @@ paulette_oeuf_remove: tag del paulette_oeuf
 #
 paul_randomizer: folder paul_random1,paul_random2,paul_random3 delay:2 random:1
 paul_random1: folder paul_random11,paul_random12,paul_random13 delay:1
-paul_random11: setblock FLOWER_POT -6753;71;3042;Gaia
-paul_random12: setblock AIR -6753;71;3041;Gaia
-paul_random13: setblock AIR -6753;71;3040;Gaia
+paul_random11: setblock REDSTONE_TORCH_ON -6750;53;2987;Gaia
+paul_random12: setblock AIR -6751;53;2987;Gaia
+paul_random13: setblock AIR -6752;53;2987;Gaia
 paul_random2: folder paul_random21,paul_random22,paul_random23 delay:1
-paul_random21: setblock FLOWER_POT -6753;71;3041;Gaia
-paul_random22: setblock AIR -6753;71;3042;Gaia
-paul_random23: setblock AIR -6753;71;3040;Gaia
+paul_random21: setblock AIR -6750;53;2987;Gaia
+paul_random22: setblock REDSTONE_TORCH_ON -6751;53;2987;Gaia
+paul_random23: setblock AIR -6752;53;2987;Gaia
 paul_random3: folder paul_random31,paul_random32,paul_random33 delay:1
-paul_random31: setblock FLOWER_POT -6753;71;3040;Gaia
-paul_random32: setblock AIR -6753;71;3042;Gaia
-paul_random33: setblock AIR -6753;71;3041;Gaia
+paul_random31: setblock AIR -6750;53;2987;Gaia
+paul_random32: setblock AIR -6751;53;2987;Gaia
+paul_random33: setblock REDSTONE_TORCH_ON -6752;53;2987;Gaia
 #
 pain_paul: give pain_paul
 #
@@ -3113,17 +3116,17 @@ tag_pain_urgent_done_rem: tag del pain_urgent_done
 #
 francis_randomizer: folder francis_random1,francis_random2,francis_random3 delay:2 random:1
 francis_random1: folder francis_random11,francis_random12,francis_random13 delay:1
-francis_random11: setblock HAY_BLOCK -6975;64;3020;Gaia
-francis_random12: setblock AIR -6975;64;3019;Gaia
-francis_random13: setblock AIR -6975;64;3018;Gaia
+francis_random11: setblock REDSTONE_TORCH_ON -6754;55;2987;Gaia
+francis_random12: setblock AIR -6755;55;2987;Gaia
+francis_random13: setblock AIR -6756;55;2987;Gaia
 francis_random2: folder francis_random21,francis_random22,francis_random23 delay:1
-francis_random21: setblock HAY_BLOCK -6975;64;3019;Gaia
-francis_random22: setblock AIR -6975;64;3020;Gaia
-francis_random23: setblock AIR -6975;64;3018;Gaia
+francis_random21: setblock AIR -6754;55;2987;Gaia
+francis_random22: setblock REDSTONE_TORCH_ON -6755;55;2987;Gaia
+francis_random23: setblock AIR -6756;55;2987;Gaia
 francis_random3: folder francis_random31,francis_random32,francis_random33 delay:1
-francis_random31: setblock HAY_BLOCK -6975;64;3018;Gaia
-francis_random32: setblock AIR -6975;64;3020;Gaia
-francis_random33: setblock AIR -6975;64;3019;Gaia
+francis_random31: setblock AIR -6754;55;2987;Gaia
+francis_random32: setblock AIR -6755;55;2987;Gaia
+francis_random33: setblock REDSTONE_TORCH_ON -6756;55;2987;Gaia
 #
 francis_timer: folder obj_timer_francis,tag_timer_francis delay:0
 tag_timer_francis: tag add timer_francis

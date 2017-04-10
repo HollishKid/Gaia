@@ -1,9 +1,9 @@
-/sanction:
-  permission: admin.prison
-  message: '&cVous devez être modérateur pour exécuter cette commande.'
-/liberer:
-  permission: admin.prison
-  message: '&cVous devez être modérateur pour exécuter cette commande.'
+#/sanction:
+#  permission: admin.prison
+#  message: '&cVous devez être modérateur pour exécuter cette commande.'
+#/liberer:
+#  permission: admin.prison
+#  message: '&cVous devez être modérateur pour exécuter cette commande.'
 /bug:
   permission: admin.bug
   message: '&cVous devez être administrateur pour exécuter cette commande.'

@@ -454,18 +454,18 @@ air_temple_lose_message: 'message &dVous ne parvenez pas à trouver &2Aang&d, vo
 #
 # Mechanics
 #
-air_temple1_on: setblock REDSTONE_TORCH_ON -6748;57;2979;Gaia
+air_temple1_on: setblock REDSTONE_TORCH_ON -6759;53;2987;Gaia
 air_temple1_off: folder air_temple1_off_exe delay:3 conditions:!air_parcours_occupied2
-air_temple1_off_exe: setblock AIR -6748;57;2979;Gaia
-air_temple2_on: setblock REDSTONE_TORCH_ON -6750;57;2979;Gaia
+air_temple1_off_exe: setblock AIR -6759;53;2987;Gaia
+air_temple2_on: setblock REDSTONE_TORCH_ON -6761;53;2987;Gaia
 air_temple2_off: folder air_temple2_off_exe delay:3 conditions:!air_parcours_occupied2
-air_temple2_off_exe: setblock AIR -6750;57;2979;Gaia
-air_temple3_on: setblock REDSTONE_TORCH_ON -6752;57;2979;Gaia
+air_temple2_off_exe: setblock AIR -6761;53;2987;Gaia
+air_temple3_on: setblock REDSTONE_TORCH_ON -6763;53;2987;Gaia
 air_temple3_off: folder air_temple3_off_exe delay:3 conditions:!air_parcours_occupied2
-air_temple3_off_exe: setblock AIR -6752;57;2979;Gaia
-air_temple4_on: setblock REDSTONE_TORCH_ON -6754;57;2979;Gaia
+air_temple3_off_exe: setblock AIR -6763;53;2987;Gaia
+air_temple4_on: setblock REDSTONE_TORCH_ON -6765;53;2987;Gaia
 air_temple4_off: folder air_temple4_off_exe delay:3 conditions:!air_parcours_occupied2
-air_temple4_off_exe: setblock AIR -6754;57;2979;Gaia
+air_temple4_off_exe: setblock AIR -6765;53;2987;Gaia
 #
 # Aang
 #
@@ -613,6 +613,10 @@ journal_earthtemple_magic_learning: journal add journal_earthtemple_magic_learni
 journal_earthtemple_magic_learning_del: journal del journal_earthtemple_magic_learning
 journal_earth_fiole: journal add journal_earth_fiole
 journal_earth_fiole_del: journal del journal_earth_fiole
+journal_earth_fiole_fill: journal add journal_earth_fiole_fill
+journal_earth_fiole_fill_del: journal del journal_earth_fiole_fill
+journal_earth_stick: journal add journal_earth_stick
+journal_earth_stick_del: journal del journal_earth_stick
 #
 tag_toph: tag add toph
 earthtemple_magic_learning: tag add earthtemple_magic_learning
@@ -621,8 +625,88 @@ earth_reward: point default.spirituality 30
 earth_reward_mess: 'message &dVous gagnez &a&l30 &dpoints de Spiritualité !'
 #
 tag_earth_fiole: tag add earth_fiole
+tag_earth_fiole_del: tag del earth_fiole
 obj_earth_fiole: objective start obj_earth_fiole
-earth_fiole_mess: 'message &d&oVous venez de XX'
+earth_fiole_mess: 'message &d&oVous venez de crafter assez de fioles pour Toph. Vous devriez les lui ramener au Temple de la Terre.'
+tag_earth_fiole_have: tag add earth_fiole_have
+tag_earth_fiole_have_del: tag del earth_fiole_have
+tag_earth_fiole_fill: tag add earth_fiole_fill
+tag_earth_fiole_fill_del: tag del earth_fiole_fill
+#
+folder_earth_fiole_fill: folder ef_1,ef_2,ef_3,ef_4,ef_5,ef_6,ef_7,journal_earth_fiole_del,journal_earth_fiole_fill,tag_earth_fiole_fill,tag_earth_fiole_del,tag_earth_fiole_have_del,give_earth_fiole,take_earth_normalf
+give_earth_fiole: give fiole_earth:7
+take_earth_normalf: take fiole:7
+ef_1: objective start ef_1
+ef_2: objective start ef_2
+ef_3: objective start ef_3
+ef_4: objective start ef_4
+ef_5: objective start ef_5
+ef_6: objective start ef_6
+ef_7: objective start ef_7
+#
+ef_mess: 'message &d&oVous récupérez l''ingrédient dans la fiole.'
+ef_dirt: folder ef_dirt1,ef_dirt2,ef_dirt3,ef_mess
+ef_dirt1: tag add ef_dirt
+ef_dirt2: take fiole_earth
+ef_dirt3: give fiole_earth_dirt
+ef_sand: folder ef_sand1,ef_sand2,ef_sand3,ef_mess
+ef_sand1: tag add ef_sand
+ef_sand2: take fiole_earth
+ef_sand3: give fiole_earth_sand
+ef_stone: folder ef_stone1,ef_stone2,ef_stone3,ef_mess
+ef_stone1: tag add ef_stone
+ef_stone2: take fiole_earth
+ef_stone3: give fiole_earth_stone
+ef_iron: folder ef_iron1,ef_iron2,ef_iron3,ef_mess
+ef_iron1: tag add ef_iron
+ef_iron2: take fiole_earth
+ef_iron3: give fiole_earth_iron
+ef_gold: folder ef_gold1,ef_gold2,ef_gold3,ef_mess
+ef_gold1: tag add ef_gold
+ef_gold2: take fiole_earth
+ef_gold3: give fiole_earth_gold
+ef_emerald: folder ef_emerald1,ef_emerald2,ef_emerald3,ef_mess
+ef_emerald1: tag add ef_emerald
+ef_emerald2: take fiole_earth
+ef_emerald3: give fiole_earth_emerald
+ef_diamond: folder ef_diamond1,ef_diamond2,ef_diamond3,ef_mess
+ef_diamond1: tag add ef_diamond
+ef_diamond2: take fiole_earth
+ef_diamond3: give fiole_earth_diamond
+#
+ef_dirtd1: tag del ef_dirt
+ef_sandd1: tag del ef_sand
+ef_stoned1: tag del ef_stone
+ef_irond1: tag del ef_iron
+ef_goldd1: tag del ef_gold
+ef_emeraldd1: tag del ef_emerald
+ef_diamondd1: tag del ef_diamond
+#
+ef_dirtd: take fiole_earth_dirt
+ef_sandd: take fiole_earth_sand
+ef_stoned: take fiole_earth_stone
+ef_irond: take fiole_earth_iron
+ef_goldd: take fiole_earth_gold
+ef_emeraldd: take fiole_earth_emerald
+ef_diamondd: take fiole_earth_diamond
+#
+fiole_earth_tester: folder fiole_earth_tester_exe delay:2 condition:and_ef
+fiole_earth_tester_exe: 'message &d&oVous avez récupéré tous les ingrédients. Vous devriez les ramener à Toph au Temple de l''Air !'
+#
+folder_earth_stick: folder journal_earth_fiole_fill_del,journal_earth_stick,tag_earth_fiole_fill_del,obj_earth_stick,ef_dirtd,ef_sandd,ef_stoned,ef_irond,ef_goldd,ef_emeraldd,ef_diamondd,ef_dirtd1,ef_sandd1,ef_stoned1,ef_irond1,ef_goldd1,ef_emeraldd1,ef_diamondd1
+obj_earth_stick: objective start earth_stick
+earth_baton_obj_done: folder earth_baton_obj_mess,earth_baton_obj_tag
+earth_baton_obj_mess: 'message &d&oVous fabriquez le bâton pour le Maître de la Terre. Vous devriez le lui ramener au Temple de la Terre.'
+earth_baton_obj_tag: tag add earth_baton_obj
+earth_baton_obj_tag_del: tag del earth_baton_obj
+#
+#
+#
+folder_earth_wand: folder baton_remove,give_earth_wand,earth_mana_points_set,earth_mana_regen_set,tag_earth_wand,earth_baton_obj_tag_del,journal_earth_stick_del
+earth_mana_points_set: point earth_mana 100
+earth_mana_regen_set: point earth_mana_regen 5
+tag_earth_wand: tag add earth_wand
+give_earth_wand: 'command wandp %player% earthbender' 
 #
 #
 #
@@ -643,6 +727,7 @@ tag_erudit_feu: tag add erudit_feu
 #Generic
 #
 air_wand_menu: 'command cc open airwand %player%'
+earth_wand_menu: 'command cc open earthwand %player%'
 #
 # This artefact reparation requires manual update anytime a new wand, spell or other configuration added.
 #   Between different wands there must be check on which wand is held by player.
@@ -807,6 +892,125 @@ air_breathofwind_exe2: tag add air_breathofwind
 air_breathofwind_exe3: point default.spirituality -500
 #
 no_wand_hand_air: 'message &dVous ne tenez pas votre Baguette de l''Air dans votre main, tenez la pour pouvoir la modifier !'
+#
+#
+#
+#
+#
+#
+# EarthBook
+#
+earthbook_give: if spirituality1 earthbook_give_exe else no_spirit
+earthbook_give_exe: folder earthbook_give_exe1,earthbook_give_exe2,earthbook_give_exe3
+earthbook_give_exe1: 'command mgive %player% book:earthbending'
+earthbook_give_exe2: point default.spirituality -1
+earthbook_give_exe3: 'message &dVous recevez un Livre de Magie de la Terre.'
+#
+#Mana
+#
+manaup_earth: if spirituality100 manaup_earth1 else no_spirit
+manaup_earth1: if wand_earth manaup_earth2 else no_wand_hand_earth
+manaup_earth2: if !earth_mana_200 manaup_earth_exe else too_much_mana
+manaup_earth_exe: folder manaup_earth_exe1,manaup_earth_exe2
+manaup_earth_exe1: point earth_mana 5
+manaup_earth_exe2: folder manaup_earth_exe3,manaup_earth_exe4 delay:1
+manaup_earth_exe3: 'command wandp %player% configure xp_max %point.earth_mana.amount%'
+manaup_earth_exe4: folder manaup_earth_exe5 delay:1
+manaup_earth_exe5: point default.spirituality -100
+#
+manaregenup_earth: if spirituality100 regenup_earth1 else no_spirit
+regenup_earth1: if wand_earth regenup_earth2 else no_wand_hand_earth
+regenup_earth2: if !earth_mana_regen_20 regenup_earth_exe else too_much_mana
+regenup_earth_exe: folder regenup_earth_exe1,regenup_earth_exe2
+regenup_earth_exe1: point earth_mana_regen 1
+regenup_earth_exe2: folder regenup_earth_exe3,regenup_earth_exe4 delay:1
+regenup_earth_exe3: 'command wandp %player% configure xp_regeneration %point.earth_mana_regen.amount%'
+regenup_earth_exe4: folder regenup_earth_exe5 delay:1
+regenup_earth_exe5: point default.spirituality -100
+#
+# Earth Wand
+#
+earth_tossi: if earth_tossi spell_have else earth_tossi1
+earth_tossi1: if wand_earth earth_tossi2 else no_wand_hand_earth
+earth_tossi2: if spirituality150 earth_tossi_exe else no_spirit
+earth_tossi_exe: folder earth_tossi_exe1,earth_tossi_exe2,earth_tossi_exe3
+earth_tossi_exe1: 'command wandp %player% add tossi'
+earth_tossi_exe2: tag add earth_tossi
+earth_tossi_exe3: point default.spirituality -150
+#
+earth_earthblock: if earth_earthblock spell_have else earth_earthblock1
+earth_earthblock1: if wand_earth earth_earthblock2 else no_wand_hand_earth
+earth_earthblock2: if spirituality200 earth_earthblock_exe else no_spirit
+earth_earthblock_exe: folder earth_earthblock_exe1,earth_earthblock_exe2,earth_earthblock_exe3
+earth_earthblock_exe1: 'command wandp %player% add earthblock'
+earth_earthblock_exe2: tag add earth_earthblock
+earth_earthblock_exe3: point default.spirituality -200
+#
+earth_breche: if earth_breche spell_have else earth_breche1
+earth_breche1: if wand_earth earth_breche2 else no_wand_hand_earth
+earth_breche2: if spirituality150 earth_breche_exe else no_spirit
+earth_breche_exe: folder earth_breche_exe1,earth_breche_exe2,earth_breche_exe3
+earth_breche_exe1: 'command wandp %player% add breche'
+earth_breche_exe2: tag add earth_breche
+earth_breche_exe3: point default.spirituality -150
+#
+earth_compression: if earth_compression spell_have else earth_compression1
+earth_compression1: if wand_earth earth_compression2 else no_wand_hand_earth
+earth_compression2: if spirituality750 earth_compression_exe else no_spirit
+earth_compression_exe: folder earth_compression_exe1,earth_compression_exe2,earth_compression_exe3
+earth_compression_exe1: 'command wandp %player% add compression'
+earth_compression_exe2: tag add earth_compression
+earth_compression_exe3: point default.spirituality -750
+#
+earth_sandspout: if earth_sandspout spell_have else earth_sandspout1
+earth_sandspout1: if wand_earth earth_sandspout2 else no_wand_hand_earth
+earth_sandspout2: if spirituality150 earth_sandspout_exe else no_spirit
+earth_sandspout_exe: folder earth_sandspout_exe1,earth_sandspout_exe2,earth_sandspout_exe3
+earth_sandspout_exe1: 'command wandp %player% add sandspout'
+earth_sandspout_exe2: tag add earth_sandspout
+earth_sandspout_exe3: point default.spirituality -150
+#
+earth_earthsmash: if earth_earthsmash spell_have else earth_earthsmash1
+earth_earthsmash1: if wand_earth earth_earthsmash2 else no_wand_hand_earth
+earth_earthsmash2: if spirituality250 earth_earthsmash_exe else no_spirit
+earth_earthsmash_exe: folder earth_earthsmash_exe1,earth_earthsmash_exe2,earth_earthsmash_exe3
+earth_earthsmash_exe1: 'command wandp %player% add earthsmash'
+earth_earthsmash_exe2: tag add earth_earthsmash
+earth_earthsmash_exe3: point default.spirituality -250
+#
+earth_earthquaki: if earth_earthquaki spell_have else earth_earthquaki1
+earth_earthquaki1: if wand_earth earth_earthquaki2 else no_wand_hand_earth
+earth_earthquaki2: if spirituality500 earth_earthquaki_exe else no_spirit
+earth_earthquaki_exe: folder earth_earthquaki_exe1,earth_earthquaki_exe2,earth_earthquaki_exe3
+earth_earthquaki_exe1: 'command wandp %player% add earthquaki'
+earth_earthquaki_exe2: tag add earth_earthquaki
+earth_earthquaki_exe3: point default.spirituality -500
+#
+earth_collapsi: if earth_collapsi spell_have else earth_collapsi1
+earth_collapsi1: if wand_earth earth_collapsi2 else no_wand_hand_earth
+earth_collapsi2: if spirituality300 earth_collapsi_exe else no_spirit
+earth_collapsi_exe: folder earth_collapsi_exe1,earth_collapsi_exe2,earth_collapsi_exe3
+earth_collapsi_exe1: 'command wandp %player% add collapsi'
+earth_collapsi_exe2: tag add earth_collapsi
+earth_collapsi_exe3: point default.spirituality -300
+#
+earth_earthline: if earth_earthline spell_have else earth_earthline1
+earth_earthline1: if wand_earth earth_earthline2 else no_wand_hand_earth
+earth_earthline2: if spirituality250 earth_earthline_exe else no_spirit
+earth_earthline_exe: folder earth_earthline_exe1,earth_earthline_exe2,earth_earthline_exe3
+earth_earthline_exe1: 'command wandp %player% add earthline'
+earth_earthline_exe2: tag add earth_earthline
+earth_earthline_exe3: point default.spirituality -250
+#
+earth_durci: if earth_durci spell_have else earth_durci1
+earth_durci1: if wand_earth earth_durci2 else no_wand_hand_earth
+earth_durci2: if spirituality250 earth_durci_exe else no_spirit
+earth_durci_exe: folder earth_durci_exe1,earth_durci_exe2,earth_durci_exe3
+earth_durci_exe1: 'command wandp %player% add durci'
+earth_durci_exe2: tag add earth_durci
+earth_durci_exe3: point default.spirituality -250
+#
+no_wand_hand_earth: 'message &dVous ne tenez pas votre Baguette de la Terre dans votre main, tenez la pour pouvoir la modifier !'
 #
 #
 #
@@ -1328,8 +1532,6 @@ give_train_ticket_del: take train_ticket
 # Go to a Location
 #
 #
-# Avez vous vot'ticket ?! (OBSOLETE, ChestCommands VIEW-PERMISSION used)
-# Etes vous déjà à la gare ?
 #
 #
 destination_gare: if gare_loc already_there else gare_departure

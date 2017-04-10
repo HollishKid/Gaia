@@ -4,9 +4,17 @@ orno_book_beta: WRITTEN_BOOK data:0 lore:Manuscrit_d'un_Mage;§2Objet_de_Quête 
 book_and_quill: BOOK_AND_QUILL data:0
 baton: STICK
 tarte: PUMPKIN_PIE data:0
-fiole: GLASS_BOTTLE data:0
+fiole: GLASS_BOTTLE
 fiole_air: GLASS_BOTTLE data:0 lore:Une_fiole_agitée;avec_air_du_Continent_Est;§2Objet_de_Quête
 fiole_air_calmed: GLASS_BOTTLE name:§2Fiole_d'Air lore:Une_fiole_calme;avec_air_du_Continent_Est;§2Objet_de_Quête
+fiole_earth: GLASS_BOTTLE data:0 lore:Une_fiole_de_Terre;§2Objet_de_Quête
+fiole_earth_dirt: GLASS_BOTTLE data:0 lore:Une_fiole_de_Terre;contenant_de_la_terre;du_Continent_Est.;§2Objet_de_Quête
+fiole_earth_sand: GLASS_BOTTLE data:0 lore:Une_fiole_de_Terre;contenant_du_sable;du_Continent_Est.;§2Objet_de_Quête
+fiole_earth_stone: GLASS_BOTTLE data:0 lore:Une_fiole_de_Terre;contenant_de_la_pierre;du_Continent_Est.;§2Objet_de_Quête
+fiole_earth_iron: GLASS_BOTTLE data:0 lore:Une_fiole_de_Terre;contenant_du_fer;§2Objet_de_Quête
+fiole_earth_gold: GLASS_BOTTLE data:0 lore:Une_fiole_de_Terre;contenant_de_l'or;§2Objet_de_Quête
+fiole_earth_emerald: GLASS_BOTTLE data:0 lore:Une_fiole_de_Terre;contenant_d_l'emeraude;§2Objet_de_Quête
+fiole_earth_diamond: GLASS_BOTTLE data:0 lore:Une_fiole_de_Terre;contenant_du_diamond;§2Objet_de_Quête
 bone: BONE data:0 name:none
 bone_charged: BONE data:0 name:§6Os_Chargé lore:§7§oOs_chargé_en_spiritualité;§7§oà_enterrer_sous_de_l'herbe;_;§8§oSi_je_ne_peux_pas_l'enterrer;§8§oje_devrais_demander;§8§oconseil_à_un_Moine.
 bone_gros: BONE data:0 name:§2Gros_Os lore:§8§oJe_devrais_l'amener_au;§8§oMoine_François_au_spiritualium;§8§oau_centre_d'Athelas.;§2Objet_de_Quête

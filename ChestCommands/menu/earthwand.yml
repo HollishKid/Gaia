@@ -7,10 +7,10 @@
 menu-settings:
 
   # name - appears as the title - REQUIRED
-  name: '&dBaguette d''Air'
+  name: '&dBaguette de Terre'
 
   # rows - the number of rows of the chest - REQUIRED
-  rows: 3
+  rows: 4
 
   # command - OPTIONAL (you can remove this or set it to '')
   # Bind multiple commands using ; (command: 'menu; m; me')
@@ -45,13 +45,13 @@ menu-close:
   POSITION-Y: 1
 
 manaup:
-  COMMAND: 'console: bq event {player} hollish.manaup_air'
+  COMMAND: 'console: bq event {player} hollish.manaup_earth'
   NAME: '&6Niveau de Mana (&a+5&6)'
   ID: nether star
   LORE:
     - 'Augmentez le niveau de Mana'
     - 'Maximal de votre'
-    - 'Baguette d''Air de 5 points'
+    - 'Baguette de Terre de 5 points'
     - ' '
     - '&cRequiert :'
     - '&a100 &cPoints de Spiritualité'
@@ -61,7 +61,7 @@ manaup:
   POSITION-Y: 1
   
 manaregenup:
-  COMMAND: 'console: bq event {player} hollish.manaregenup_air'
+  COMMAND: 'console: bq event {player} hollish.manaregenup_earth'
   NAME: '&6Régénération de Mana (&a+1&6)'
   ID: nether star
   LORE:
@@ -77,12 +77,12 @@ manaregenup:
   POSITION-Y: 1
   
 airbook:
-  COMMAND: 'console: bq event {player} hollish.airbook_give'
-  NAME: '&2Livre de l''Air'
+  COMMAND: 'console: bq event {player} hollish.earthbook_give'
+  NAME: '&2Livre de la Terre'
   ID: book
   LORE:
     - 'Vous donne un livre de sorts'
-    - 'de Magie de l''Air'
+    - 'de Magie de la Terre'
     - ' '
     - 'A consulter avant d''apprendre'
     - 'des Sorts !'
@@ -93,18 +93,15 @@ airbook:
   POSITION-Y: 1
   
 
-### AIRBENDING
+### EARTHBENDING
 
 airblast:
-  COMMAND: 'console: bq event {player} hollish.air_airblast'
-  NAME: '&aRafale de Vent'
+  COMMAND: 'console: bq event {player} hollish.earth_tossi'
+  NAME: '&aLancer'
   ID: paper
   LORE:
     - 'Apprendre le sort'
-    - 'Rafale de Vent'
-    - ' '
-    - 'Crée une rafale de vent'
-    - 'directe devant vous.'
+    - 'Lancer'
     - ' '
     - '&cRequiert :'
     - '&a150 &cPoints de Spiritualité'
@@ -112,31 +109,25 @@ airblast:
   POSITION-Y: 3
 
 airbomb:
-  COMMAND: 'console: bq event {player} hollish.air_airbomb'
-  NAME: '&aBombe d''Air'
+  COMMAND: 'console: bq event {player} hollish.earth_earthblock'
+  NAME: '&aBloc de Terre'
   ID: paper
   LORE:
     - 'Apprendre le sort'
-    - 'Bombe d''Air'
+    - 'Bloc de Terre'
     - ' '
-    - 'Utilise l''Air qui vous'
-    - 'entoure pour pousser dans'
-    - 'toutes les directions'
-    - ' '
-    - '&cRequiert :'
+    - '&cRequiert:'
     - '&a200 &cPoints de Spiritualité'
   POSITION-X: 3
   POSITION-Y: 3
 
 suction:
-  COMMAND: 'console: bq event {player} hollish.air_suction'
-  NAME: '&aRapprochement'
+  COMMAND: 'console: bq event {player} hollish.earth_breche'
+  NAME: '&aBrèche'
   ID: paper
   LORE:
     - 'Apprendre le sort'
-    - 'Rapprochement'
-    - ' '
-    - 'Tirez votre cible vers vous.'
+    - 'Brèche'
     - ' '
     - '&cRequiert :'
     - '&a150 &cPoints de Spiritualité'
@@ -144,14 +135,12 @@ suction:
   POSITION-Y: 3
 
 tornade:
-  COMMAND: 'console: bq event {player} hollish.air_tornade'
-  NAME: '&aTornade'
+  COMMAND: 'console: bq event {player} hollish.earth_compression'
+  NAME: '&aCompression'
   ID: paper
   LORE:
     - 'Apprendre le sort'
-    - 'Tornade'
-    - ' '
-    - 'Crée une Tornade destructrice.'
+    - 'Compression'
     - ' '
     - '&cRequiert :'
     - '&a750 &cPoints de Spiritualité'
@@ -159,16 +148,12 @@ tornade:
   POSITION-Y: 3
 
 poussee:
-  COMMAND: 'console: bq event {player} hollish.air_poussee'
-  NAME: '&aPoussée'
+  COMMAND: 'console: bq event {player} hollish.earth_sandspout'
+  NAME: '&aJet de Sable'
   ID: paper
   LORE:
     - 'Apprendre le sort'
-    - 'Poussée'
-    - ' '
-    - 'Vous rapproche rapidement'
-    - 'de votre cible en vous servant de'
-    - 'l''Air qui vous entoure'
+    - 'Jet de Sable'
     - ' '
     - '&cRequiert :'
     - '&a150 &cPoints de Spiritualité'
@@ -176,15 +161,12 @@ poussee:
   POSITION-Y: 3
 
 airshield:
-  COMMAND: 'console: bq event {player} hollish.air_airshield'
-  NAME: '&aBouclier d''Air'
+  COMMAND: 'console: bq event {player} hollish.earth_earthsmash'
+  NAME: '&aExplosion'
   ID: paper
   LORE:
     - 'Apprendre le sort'
-    - 'Bouclier d''Air'
-    - ' '
-    - 'Repoussez ennemis et attaques '
-    - 'avec un bouclier d''Air'
+    - 'Explosion'
     - ' '
     - '&cRequiert :'
     - '&a250 &cPoints de Spiritualité'
@@ -192,52 +174,53 @@ airshield:
   POSITION-Y: 3
 
 enhancedspeed:
-  COMMAND: 'console: bq event {player} hollish.air_enhancedspeed'
-  NAME: '&aVitesse Augmentée'
+  COMMAND: 'console: bq event {player} hollish.earth_earthquaki'
+  NAME: '&aTremblement de Terre'
   ID: paper
   LORE:
     - 'Apprendre le sort'
-    - 'Vitesse Augmentée'
-    - ' '
-    - 'Bougez plus vite, sautez'
-    - 'plus loin en utilisant'
-    - 'l''Air qui vous entoure'
+    - 'Tremblement de Terre'
     - ' '
     - '&cRequiert :'
-    - '&a300 &cPoints de Spiritualité'
+    - '&a500 &cPoints de Spiritualité'
   POSITION-X: 7
   POSITION-Y: 3
 
 airscooter:
-  COMMAND: 'console: bq event {player} hollish.air_airscooter'
-  NAME: '&aScooter d''Air'
+  COMMAND: 'console: bq event {player} hollish.earth_collapsi'
+  NAME: '&aÉffondrement'
   ID: paper
   LORE:
     - 'Apprendre le sort'
-    - 'Scooter d''Air'
-    - ' '
-    - 'Voyagez avec distinction'
-    - 'sur un coussin de d''Air'
+    - 'Éffondrement'
     - ' '
     - '&cRequiert :'
-    - '&a500 &cPoints de Spiritualité'
+    - '&a300 &cPoints de Spiritualité'
   POSITION-X: 8
   POSITION-Y: 3
 
 breathofwind:
-  COMMAND: 'console: bq event {player} hollish.air_breathofwind'
-  NAME: '&aSouffle de Vent'
+  COMMAND: 'console: bq event {player} hollish.earth_earthline'
+  NAME: '&aFouet de Terre'
   ID: paper
   LORE:
     - 'Apprendre le sort'
-    - 'Souffle de Vent'
-    - ' '
-    - 'Expirez un Souffle de'
-    - 'vent puissant qui pousse '
-    - 'et blesse vos ennemis '
-    - 'autour de vous'
+    - 'Fouet de Terre'
     - ' '
     - '&cRequiert :'
-    - '&a500 &cPoints de Spiritualité'
+    - '&a250 &cPoints de Spiritualité'
   POSITION-X: 6
   POSITION-Y: 3
+  
+durcissement:
+  COMMAND: 'console: bq event {player} hollish.earth_durci'
+  NAME: '&aDurcissement'
+  ID: paper
+  LORE:
+    - 'Apprendre le sort'
+    - 'Durcissement'
+    - ' '
+    - '&cRequiert :'
+    - '&a250 &cPoints de Spiritualité'
+  POSITION-X: 5
+  POSITION-Y: 4

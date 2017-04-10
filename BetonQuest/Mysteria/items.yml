@@ -1,4 +1,12 @@
 #
+#   Komyl   #
+#
+komyl_letter: PAPER name:§2Lettre_de_Komyl_pour_Ronke lore:§8§oCette_lettre_porte_un;§8§osceau_inconnu_et_mystique;§2Objet_de_Quête
+#
+#   Ronke   #
+#
+ronke_letter: PAPER name:§2Lettre_de_Ronke_pour_Komyl lore:§8§oCette_lettre_porte_un;§8§osceau_un_peu_différent;§8§odu_précédent;§2Objet_de_Quête
+#
 #   Aktarion   #
 #
 akt_tool: IRON_PICKAXE name:§eOutil_fétiche_d'Aktarion lore:§8§oCet_outil_ne_ressemble;§8§oà_rien_de_connus;§2Objet_de_Quête

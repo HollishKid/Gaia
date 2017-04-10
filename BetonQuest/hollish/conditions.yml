@@ -261,9 +261,22 @@ air_enhancedspeed: tag air_enhancedspeed
 air_scooter: tag air_scooter
 air_breathofwind: tag air_breathofwind
 #
-air_mana_200: point air_mana 200
+earth_tossi: tag earth_tossi
+earth_earthblock: tag earth_earthblock
+earth_breche: tag earth_breche
+earth_compression: tag earth_compression
+earth_sandspout: tag earth_sandspout
+earth_earthsmash: tag earth_earthsmash
+earth_earthquaki: tag earth_earthquaki
+earth_collapsi: tag earth_collapsi
+earth_earthline: tag earth_earthline
+earth_durci: tag earth_durci
 #
+air_mana_200: point air_mana 200
 air_mana_regen_20: point air_mana_regen 20
+#
+earth_mana_200: point earth_mana 200
+earth_mana_regen_20: point earth_mana_regen 20
 #
 # Factions
 #
@@ -375,6 +388,22 @@ earth_temple_door_check_occupied: location -7422;24;126;Gaia 12
 #
 tag_toph: tag toph
 earthtemple_magic_learning: tag earthtemple_magic_learning
+earth_fiole: tag earth_fiole
+earth_fiole_have: tag earth_fiole_have
+earth_fiole_fill: tag earth_fiole_fill
+earth_fiole_item: item fiole
+earth_fiole_hand: hand fiole_earth
+#
+and_ef: and ef_earth,ef_sand,ef_stone,ef_iron,ef_gold,ef_emerald,ef_diamond
+ef_earth: tag ef_earth
+ef_sand: tag ef_sand
+ef_stone: tag ef_stone
+ef_iron: tag ef_iron
+ef_gold: tag ef_gold
+ef_emerald: tag ef_emerald
+ef_diamond: tag ef_diamond
+earth_baton_obj_tag: tag earth_baton_obj
+#
 #
 # Érudits (autres, tempo)
 #

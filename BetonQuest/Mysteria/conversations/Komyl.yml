@@ -1,0 +1,47 @@
+# Position: -6893,78,2650
+quester: 'Komyl'
+first: welcome,infos14
+stop: 'false'
+#   Options   #
+
+#     NPC     #
+NPC_options:
+  welcome:
+    text: 'Bonjour voyageur. Qui es-tu ? Et que viens tu faire ici ?'
+    conditions: ken_q1E2
+    pointers: bonjour
+  infos1:
+    text: 'Tu parles sûrement du bouclier des 4 Templiers de l''étoile sobre, il y a une entrée pas loin.'
+    pointers: infos1_rep
+  infos12:
+    text: 'C''est entièrement possible, mais j''aurais besoin que tu me rendes un service avant cela'
+    pointers: infos12_rep
+  infos13:
+    text: 'Pourrais-tu donner cette lettre à mon ancien ami qui se trouve à Athelas vers le centre !'
+    pointers: infos13_rep
+  infos14:
+    text: 'Ah ! Te revoilà ! Alors ? Tu as fais ce que je t''ai demandé ?'
+    pointers: infos14_rep
+  infos15:
+    text: 'Merci beaucoup à toi ! Cette lettre va m''être forte utile ! Allez ! Viens ! Je t''emmène à l''endroit que tu recherches !'
+    events: kom_dest
+#   Options   #
+
+#   Joueur    #
+player_options:
+  bonjour:
+    text: 'Bonjour à vous ! Je me nomme %player%. Je suis à la recherche d''un objet d''une extrême valeur, auriez-vous un quelconque renseignement sur ça ?'
+    pointers: infos1
+  infos1_rep:
+    text: 'Cette info me sera utile ! Pouvez vous m''amener à l''endroit en question ?'
+    pointers: infos12
+  infos12_rep:
+    text: 'Il n''y a pas de soucis, de quoi avez-vous besoin ?'
+    pointers: infos13
+  infos13_rep:
+    text: 'Je m''en occupe !'
+    events: kom_q1E1
+  infos14_rep:
+    text: 'Oui, et je vous ramène cette lettre de Ronke !'
+    events: ronke_letter,journal_kom_q1E2
+    pointers: infos15
