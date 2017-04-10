@@ -14,6 +14,8 @@ Shrek:
   Display: '&4Anton'
   Health: 300
   Damage: 8
+  Drops:
+  - shrek_drops
   Skills:
   - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
   - skill{s=MobHealth} ~onDamaged >0 1
@@ -279,6 +281,8 @@ Kara:
   Display: '&4Kara'
   Health: 300
   Damage: 8
+  Drops:
+  - kara_drops
   Skills:
   - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
   - skill{s=MobHealth} ~onDamaged >0 1
@@ -481,6 +485,8 @@ erek:
     Style: SOLID
   Health: 750
   Damage: 4
+  Drops:
+  - erek_drops
   Disguise:
     Type: player
     Player: '&4Erek'
@@ -566,6 +572,28 @@ Tesla:
   - FALL 0
   Skills:
   - skill {s=Firebolt} @target ~onTimer:180
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Equipment:
+  - 298:4
+  Options:
+    AlwaysShowName: true
+    KnockbackResistance: 10
+    MovementSpeed: 0.002
+    MaxCombatDistance: 30
+    PreventOtherDrops: true
+Testmob:
+  Mobtype: ZOMBIE
+  Display: '&4Cristal Guardien'
+  Health: 30
+  Damage: 3
+  Drops:
+  - testmobdrops
+  DamageModifiers:
+  - FALL 0
   AIGoalSelectors:
   - 0 clear
   AITargetSelectors:
