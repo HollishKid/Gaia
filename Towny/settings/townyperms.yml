@@ -11,15 +11,11 @@
 # The 'nomad' permission set covers players not in any town
 nomad:
     - towny.command.towny.prices
-#    - towny.command.towny.tree
     - towny.command.towny.time
-#    - towny.command.towny.universe
-#    - towny.command.towny.version
     - towny.command.towny.war
     - towny.command.town.list
     - towny.command.plot.perm
     - towny.command.nation.list
-#    - towny.town.spawn.public
     - towny.chat.general
     
 # This section of permissions covers players who are members of a town.

@@ -1,0 +1,25 @@
+#
+#
+#   SOUL LINKING
+#
+#
+#
+On pick up:
+	If lore of item contains "soul_link":
+		set the 1st line of the item's lore to "Lien d'âme %player%"
+	If lore of item contains "Lien d'âme":
+		if the 1st line of the item's lore is not "Lien d'âme %player%":
+			cancel event
+			wait 1 tick
+			message "&6&oVous n'êtes pas le propriétaire de cet objet."
+On unstore:
+	If lore of item contains "Lien d'âme":
+		if the 1st line of the item's lore is not "Lien d'âme %player%":
+			cancel event
+			wait 1 tick
+			message "&6&oVous n'êtes pas le propriétaire de cet objet."
+On Hopper Pickup:
+	If lore of item contains "soul_link":
+		cancel event
+	If lore of item contains "Lien d'âme":
+		cancel event

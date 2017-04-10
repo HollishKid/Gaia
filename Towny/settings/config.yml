@@ -186,7 +186,7 @@ town:
   # Default public status of the town (used for /town spawn)
   default_public: 'true'
   # Default Open status of the town (are new towns open and joinable by anyone at creation?)
-  default_open: 'true'
+  default_open: 'false'
   # Default tax settings for new towns.
   default_taxes:
     # Default amount of tax of a new town. This must be lower than the economy.daily_taxes.max_tax_percent setting.
@@ -371,17 +371,17 @@ plugin:
  
   # Valid load and save types are: flatfile, mysql, sqlite, h2.
   database:
-    database_load: flatfile
-    database_save: flatfile
+    database_load: mysql
+    database_save: mysql
  
     # SQL database connection details (IF set to use SQL).
     sql:
-      hostname: minecraft223.omgserv.com
+      hostname: localhost
       port: '3306'
-      dbname: minecraft_11340
+      dbname: gaiaprod
       table_prefix: towny_
-      username: minecraft_11340
-      password: wrongpassword
+      username: gaiaprod
+      password: tI%2hBoLBf
  
     # Flatfile backup settings.
     daily_backups: 'true'

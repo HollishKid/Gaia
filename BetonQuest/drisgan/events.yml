@@ -1,11 +1,10 @@
 #
 #
-# J'ai modifié toutes les commandes "sentry" en leur équivalent "sentinel"
-#   Il me semble que obrien_fold2 n'était pas complet, j'ai ajouté les events manquants
-#   (Il manque le 1, aucun ID de PNJ n'était indiqué ... Y a-t-il 11 PNJ de concerné?)
-#   Obligation de rajouter un delay progressif puisque les PNJ sont sélectionnées 1 à 1
-#   par la console. Temps total de l'exécution du folder = 12 secondes
-#                    Checker si cela ne pose pas de pb IG
+quest_point_1: folder default.quest_point_1
+quest_point_2: folder default.quest_point_2
+quest_point_3: folder default.quest_point_3
+quest_point_4: folder default.quest_point_4
+quest_point_5: folder default.quest_point_5
 #
 #                                                                                ~H
 folder_infilt: folder obj_loc1,drisgan_infilt delay:1
@@ -106,8 +105,10 @@ eko_fold1: folder eko_mess2,eko_fold2 delay:7
 eko_mess2: 'message &2Eko &f:&a&o Mais nos membres les plus doués en retirent des richesses que tu n''aurai certainement jamais vu de ta vie !'
 eko_fold2: folder eko_mess3,eko_fold3 delay:8
 eko_mess3: 'message &2Eko &f:&a&o Si ce genre de boulot t''intéresse, alors passe derrière le comptoir et actionne la torche dans la cave...'
-eko_fold3: folder eko_clean1,eko_q1start,eko_click,eko_conversdone,eko_j1 delay:1
-eko_clean1: tag del global.kal_q2start
+eko_fold3: folder eko_clean1,eko_clean2,eko_clean3,eko_q1start,eko_click,eko_conversdone,eko_j1 delay:1
+eko_clean1: tag del Zedd.kal_q2start
+eko_clean2: tag add Zedd.kal_q2done
+eko_clean3: journal del Zedd.kal_j3_del
 eko_q1start: tag add eko_q1start
 eko_click_delay: folder eko_click delay:2
 eko_click: objective start eko_click
@@ -126,18 +127,19 @@ eko_mess4: 'message &2Eko &f:&a&o J''ai entendu quelques rumeurs dernièrement..
 eko_q2startfolder2: folder eko_mess5,eko_q2startfolder3 delay:8
 eko_mess5: 'message &2Eko &f:&a&o Cet endroit est un ramassis de pouilleux et d''ordures en tous genres, seulement, certains d''entre eux sont assez puissants... Je commence à comprendre pourquoi le chef préfère t''envoyer plutôt que l''un d''entre nous...'
 eko_q2startfolder3: folder eko_mess6,eko_q2startfolder4 delay:8
-eko_mess6: 'message &2Eko &f:&a&o Quoiqu''il en soit, tu dois passer par la faille qui se situe à l''Est du Trou Noir pour pouvoir y accèder. Une fois sur place, élimine quelques une de ces ordures et fouille leurs cadavres!'
-eko_q2startfolder4: folder eko_mess7,eko_q2start,eko_q2obj,eko_j2,eko_conversdone,eko_makaupdate,eko_givechain,eko_givechainmess delay:8
+eko_mess6: 'message &2Eko &f:&a&o Quoiqu''il en soit, tu dois passer par la faille qui se situe à l''Est du Trou Noir pour pouvoir y accèder. Une fois sur place, élimine quelques unes de ces ordures et fouille leurs cadavres !'
+#removed eko_makaupdate from eko_q2startfolder4 and added it into tempo_redirect ; journal is taken over by tempo_journals
+eko_q2startfolder4: folder eko_mess7,eko_q2start,eko_q2obj,eko_j2,eko_conversdone,eko_givechain,eko_givechainmess delay:8
 eko_mess7: 'message &2Eko &f: &a&oReviens lorsque tu auras trouvé des informations intéressantes !'
 eko_q2start: tag add eko_q2start
 eko_q2end: tag del eko_q2start
 eko_q2done: tag add eko_q2done
 eko_q2obj: objective start eko_q2obj
-eko_givechain: 'command mm i give %player% chainfeet'
+eko_givechain: 'command mm items give %player% chainfeet'
 eko_givechainmess: 'message &6&oVous recevez des &aBottines en fer&6&o.'
 #
-eko_makaupdate: folder Zedd.maka_j3_del,Zedd.maka_j4,Zedd.makarow_access_exe,eko_makamess delay:6
-eko_makamess: 'message &6&oVous avez réunis assez d''informations, il est temps de faire un rapport au maître Makarov.'
+#eko_makaupdate: folder Zedd.maka_j3_del,Zedd.maka_j4,Zedd.makarow_access_exe,eko_makamess delay:6
+#eko_makamess: 'message &6&oVous avez réunis assez d''informations, il est temps de faire un rapport au maître Makarov.'
 #
 eko_q2droplettre: folder eko_mess8,eko_givelettre,eko_j2_del,eko_j3
 eko_mess8: 'message &6&oVous récupérez une lettre cachetée.'
@@ -145,18 +147,12 @@ eko_givelettre: give lettre_cachetee:1
 #
 # replaced eko_q3startfolder with tempo_redirect
 eko_q2donefolder: folder eko_takelettre,eko_q2done,eko_q2end,eko_q2reward,eko_conversdone,tempo_redirect delay:2
-eko_q2reward: folder eko_givechainlegs,eko_givechainlegsmess
-eko_givechainlegs: 'command mm i give %player% chainlegs'
+eko_givechainlegs: 'command mm items give %player% chainlegs'
+eko_q2reward: folder quest_point_1,eko_givechainlegs,eko_givechainlegsmess
 eko_givechainlegsmess: 'message &6&oVous recevez des &aJambières annelées&6&o.'
 eko_takelettre: take lettre_cachetee:1
 #
 #
-tempo_redirect: folder eko_tempo_tag,maka_tempo_redirect_journal,Zedd.makarow_access_exe
-eko_tempo_tag: tag add eko_tempo
-maka_tempo_redirect_journal: journal add maka_tempo_redirect_journal
-tempo_remover: folder eko_tempo_tag_del,maka_tempo_redirect_journal_del
-eko_tempo_tag_del: tag del eko_tempo
-maka_tempo_redirect_journal_del: journal del maka_tempo_redirect_journal
 #
 #
 ### Phase 3
@@ -165,10 +161,15 @@ eko_q3startfolder: folder eko_mess9,eko_q3startfolder2 delay:3
 eko_mess9: 'message &2Eko &f: &a&oEh bien il semblerait que j''ai vu juste ! &4Erek&a&o se terre dans ces souterrains !'
 eko_q3startfolder2: folder eko_mess10,eko_q3startfolder3 delay:5
 eko_mess10: 'message &2Eko &f: &a&oJe vais envoyer un de mes hommes pour faire des repérages, retrouve le là-bas, il s''appelle &2Aldwin&a&o.'
-eko_q3startfolder3: folder eko_j3_del,eko_j4,eko_q3start,eko_conversdone delay:2
+eko_q3startfolder3: folder eko_j3_del,eko_j4,eko_q3start,eko_conversdone,eko_objkill delay:2
 eko_q3start: tag add eko_q3start
 eko_q3end: tag del eko_q3start
 eko_q3done: tag add eko_q3done
+#
+eko_erekdead: tag add eko_erekdead
+eko_erekdead_remove: tag del eko_erekdead
+#
+#
 #
 ##########################
 #                        #
@@ -354,7 +355,7 @@ las_foldersuite3: folder las_mess24,las_foldersuite4 delay:6
 las_mess24: 'message &2Lasswell &f: &a&oÉlimine ce traitre, et tu prendras sa place au sein de notre confrérie. Ainsi le veut la tradition.'
 las_foldersuite4: folder las_mess25,eko_q1done,eko_q1end,las_foldersuite5 delay:6
 las_mess25: 'message &2Lasswell &f: &a&oRetourne voir &2Eko&a&o maintenant, il t''expliquera comment le trouver.'
-las_foldersuite5: folder las_conversdone,las_q1start,las_scoredel,las_gotestdel,eko_j1_del,las_j1,las_title1 delay:2
+las_foldersuite5: folder quest_point_1,las_conversdone,las_q1start,las_scoredel,las_gotestdel,eko_j1_del,las_j1,las_title1 delay:2
 las_q1start: tag add las_q1start
 #
 las_title1: folder las_title11,las_title12,las_title13
@@ -375,9 +376,9 @@ las_objarrowdel: objective delete las_objarrow
 ####### LASSWELL 2
 #
 #
-las2_holreward: folder las2_money,las2_givesword,las2_giveswordmess,las2_mess1,eko_q3done,eko_q3end,las2_fold2 delay:5
+las2_holreward: folder quest_point_5,las2_money,las2_givesword,las2_giveswordmess,las2_mess1,eko_q3done,eko_q3end,las2_fold2 delay:5
 las2_money: 'command eco give %player% 5000'
-las2_givesword: 'command mm i give %player% iron_sword1'
+las2_givesword: 'command mm items give %player% iron_sword1'
 las2_giveswordmess: 'message &6&oVous recevez une &aEpée robuste&6&o.'
 las2_mess1: 'message &2Lasswell:&a&o Bien, maintenant laisse moi, va donc continuer tes aventures ou explorer la ville, peu me chaut!'
 las2_fold2: folder las2_mess2,las2_journalupdate delay:7
@@ -621,20 +622,13 @@ hol_objtnt: objective start hol_objtnt
 hol_objplacetnt: objective start hol_objplacetnt
 #
 hol_checkpopsalleB3: if !hol_erekdead hol_popsalleB3 else nothing
-hol_popsalleB3: folder hol_erekstartfold,hol_popsalleB31,hol_popsalleB32,hol_poperekmess,hol_setairB3
+hol_popsalleB3: folder hol_erekstartfold,hol_popsalleB31,hol_poperekmess,hol_setairB3
 hol_setairB3: setblock AIR -7411;46;3272;Gaia
 hol_poperekmess: 'message &4Erek:&a&o C''est ça qu''ils envoient contre moi? Meurs vermisseau !!'
 hol_popsalleB31: 'command mm m spawn erek_p1 1 Gaia,-7426,51,3272'
-hol_popsalleB32: if !hol_redblock hol_popB3add else nothing
-hol_popB3add: folder hol_popB3add1,hol_popB3add2,hol_popB3addsuite,hol_popaddmess delay:10
-hol_popB3add1: 'command mm m spawn erek_renfort 1 Gaia,-7411,51,3258'
-hol_popB3add2: 'command mm m spawn erek_renfort 1 Gaia,-7411,51,3286'
-hol_popaddmess: 'message &6&oErek appelle des renforts !'
-hol_popB3addsuite: folder hol_popB3add1,hol_popB3add2,hol_popB3addreset delay:5
-# This leads into an infinite loop.
-hol_popB3addreset: folder hol_popsalleB32 delay:30
+
 #
-hol_depopsalleB3: folder hol_depopsalleB31,hol_depopsalleB32,hol_takeallresidus,hol_setair
+hol_depopsalleB3: folder hol_depopsalleB31,hol_depopsalleB32,hol_takeallresidus,hol_setair delay:1
 hol_depopsalleB31: 'command mm m kill erek_p1'
 hol_depopsalleB32: 'command mm m kill erek_renfort'
 hol_takeallresidus: if hol_residuscheck1 hol_taketake else nothing
@@ -669,7 +663,7 @@ hol_checkdone: if !hol_done hol_firstdone else nothing
 hol_firstdone: folder hol_done,eko_j4_del,eko_j5,las_j1del
 hol_done: tag add hol_done
 hol_checkmakaq3: if Zedd.maka_q3start hol_makavalid else nothing
-hol_makavalid: folder Zedd.maka_q3end,Zedd.maka_q3done,Zedd.maka_j5_del,Zedd.maka_j6,Zedd.makarow_access_exe delay:5
+hol_makavalid: folder Zedd.maka_lootcoffre,Zedd.maka_q3end,Zedd.maka_q3done,Zedd.maka_j5_del,Zedd.maka_j6,Zedd.makarow_access_exe delay:5
 #
 #
 #

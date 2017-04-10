@@ -21,4 +21,4 @@ spider1:
   ShowFlames: true
   Breakable: false
   Conditions: []
-  ActiveMobs: 3
+  ActiveMobs: 0

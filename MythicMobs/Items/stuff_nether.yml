@@ -3,8 +3,10 @@ nether_boss_head:
   Data: 3  
   Display: '&cTête du Netherien'
   Lore:
-  - '&6Cette tête dégage de la puissance'
-  - '&6elle protège contre le feux!'
+  - '&e&oCette tête dégage de la puissance'
+  - '&e&oelle protège contre le feux !'
+  - ' '
+  - '&7&oRareté : &9Rare'
   Options:
     SkinTexture: eyJ0aW1lc3RhbXAiOjE0NzIyNDc5Njk1NTEsInByb2ZpbGVJZCI6IjlmOWUxZjdhZDRjODQwY2Y5YTQ0MDg1NDQ4YzRjMDdmIiwicHJvZmlsZU5hbWUiOiJNcl9IZWRyYSIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kNGVkOGQ1MmY5M2MyMTZmZmFlNTU0MzZlZGYwZjgyN2M5NWMzM2Y1NzY2NzUxNDQzMzA4Zjc3Yjc4YTExIn19fQ==
   Enchantments:
@@ -12,10 +14,12 @@ nether_boss_head:
 casque_ignifuge:
   Id: 298
   Data: 0
-  Display: '&cCasque ignifugé'
+  Display: '&9Casque ignifugé'
   Lore:
-  - '&6Ce casque solide provient du'
-  - '&6Nether et protège contre le feu.'
+  - '&e&oCe casque solide provient du'
+  - '&e&oNether et protège contre le feu.'
+  - ' '
+  - '&7&oRareté : &9Rare'
   Amount: 1
   Attributes:
     Head:
@@ -24,32 +28,34 @@ casque_ignifuge:
     Unbreakable: true
     Color: 179,44,44
   Enchantments:
-  - PROTECTION_EVIRONMENTAL:3
-  - PROTECTION_FIRE:8
+  - PROTECTION_FIRE:3
 plastron_ignifuge:
   Id: 299
   Data: 0
-  Display: '&cPlastron ignifugé'
+  Display: '&9Plastron ignifugé'
   Lore:
-  - '&6Ce plastron solide provient du'
-  - '&6Nether et protège contre le feu.'
+  - '&e&oCe plastron solide provient du'
+  - '&e&oNether et protège contre le feu.'
+  - ' '
+  - '&7&oRareté : &9Rare'
   Amount: 1
   Attributes:
     Chest:
-      Armor: 10
+      Armor: 9
   Options:
     Unbreakable: true
     Color: 179,44,44
   Enchantments:
-   - PROTECTION_EVIRONMENTAL:3
-   - PROTECTION_FIRE:9
+   - PROTECTION_FIRE:3
 jambieres_ignifuge:
   Id: 300
   Data: 0
-  Display: '&cJambieres ignifugées'
+  Display: '&9Jambieres ignifugées'
   Lore:
-  - '&6Ces jambières solides proviennent du'
-  - '&6Nether et protègent contre le feu.'
+  - '&e&oCes jambières solides proviennent du'
+  - '&e&oNether et protègent contre le feu.'
+  - ' '
+  - '&7&oRareté : &9Rare'
   Amount: 1
   Attributes:
     Legs:
@@ -58,15 +64,16 @@ jambieres_ignifuge:
     Unbreakable: true
     Color: 179,44,44
   Enchantments:
-  - PROTECTION_EVIRONMENTAL:3
-  - PROTECTION_FIRE:6
+  - PROTECTION_FIRE:3
 souliers_ignifuge:
   Id: 301
   Data: 0
-  Display: '&cSouliers ignifugées'
+  Display: '&9Souliers ignifugées'
   Lore:
-  - '&6Ces souliers solides proviennent du'
-  - '&6Nether et protègent contre le feu.'  
+  - '&e&oCes souliers solides proviennent du'
+  - '&e&oNether et protègent contre le feu.'
+  - ' '
+  - '&7&oRareté : &9Rare'
   Amount: 1
   Attributes:
     Feet:
@@ -75,14 +82,4 @@ souliers_ignifuge:
     Unbreakable: true
     Color: 179,44,44
   Enchantments:
-  - PROTECTION_EVIRONMENTAL:3
-  - PROTECTION_FIRE:7
-Bee:
-  Id: 397
-  Data: 3  
-  Display: '&eAbeille'
-  Lore:
-  - '&6Bzzzzzz'
-  - '&6Bzzz'
-  Options:
-    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQ3MzIyZjgzMWUzYzE2OGNmYmQzZTI4ZmU5MjUxNDRiMjYxZTc5ZWIzOWM3NzEzNDlmYWM1NWE4MTI2NDczIn19fQ==
+  - PROTECTION_FIRE:3

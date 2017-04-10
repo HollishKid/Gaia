@@ -1,6 +1,6 @@
 assault_melee:
   Type: zombie
-  Display: '&cAssaillant &dNiv.<mob.level>'
+  Display: '&cOrc Péon &dNiv.<mob.level>'
   Health: 30
   Damage: 1
   Faction: assaillant
@@ -11,6 +11,10 @@ assault_melee:
     KnockbackResistance: 0.20
     AlwaysShowName: true
     Despawn: true
+  Disguise:
+    Type: player
+    Player: '&cOrc Péon &dNiv.<mob.level>'
+    Skin: Peon
   Modules:
     ThreatTable: false
   Equipment:
@@ -35,7 +39,7 @@ assault_melee:
 
 assault_archer:
   Type: skeleton
-  Display: '&cAssaillant Archer &dNiv.<mob.level>'
+  Display: '&cOrc Chaman &dNiv.<mob.level>'
   Health: 25
   Faction: assaillant
   Options:
@@ -44,6 +48,10 @@ assault_archer:
     PreventOtherDrops: true
     KnockbackResistance: 0.15
     AlwaysShowName: true
+  Disguise:
+    Type: player
+    Player: '&cOrc Chaman &dNiv.<mob.level>'
+    Skin: Prans
   Modules:
     ThreatTable: false
   Equipment:

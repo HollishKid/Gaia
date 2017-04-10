@@ -1,3 +1,91 @@
+#THIS IS APPLIED TO all USERS
+#
+#command /side:
+#	trigger:
+#		set name of sidebar of player to "   &1❄Ice Pearl❄   "
+#		set score "                      " in sidebar of player to 7
+#		set score "&7Grade: " in sidebar of player to 6
+#		set score "&7SuperCoins: " in sidebar of player to 5
+#		set score "&7MégaCoins: " in sidebar of player to 4
+#		set score "                 " in sidebar of player to 3
+#		set score "&7Connectés: " in sidebar of player to 2
+#		set score "            " in sidebar of player to 1
+
+#command /wipe:
+#	trigger:
+#		wipe player's sidebar
+
+
+#
+#LATEST SKELLETT VERSION HINDERS ENTIRE SKRIPT TO LOAD.
+#on breed:
+#	message "Breed" to breeder
+
+
+#SKQuery with errors in console
+#on shoot:
+#    trail projectile with particle drip lava
+
+# SKript
+#
+#show wolf hearts on the clicked wolf
+#
+#BARRIER
+#BLOCK_CRACK
+#BLOCK_DUST    
+#CLOUD  		   
+#CRIT  		   
+#CRIT_MAGIC  		   
+#DRIP_LAVA  		   
+#DRIP_WATER  		   
+#ENCHANTMENT_TABLE  		   
+#EXPLOSION_HUGE  		   
+#EXPLOSION_LARGE  		   
+#EXPLOSION_NORMAL  		   
+#FIREWORKS_SPARK  		   
+#FLAME  		  
+#FOOTSTEP  		   
+#HEART  		 
+#ITEM_CRACK  		 
+#ITEM_TAKE  		 
+#LAVA  		   
+#MOB_APPEARANCE  		   
+#NOTE  		    
+#PORTAL  		   
+#REDSTONE  		  
+#SLIME  		   
+#SMOKE_LARGE  		   
+#SMOKE_NORMAL  		   
+#SNOW_SHOVEL  		   
+#SNOWBALL  		 
+#SPELL  		 
+#SPELL_INSTANT  		 
+#SPELL_MOB  		 
+#SPELL_MOB_AMBIENT  		 
+#SPELL_WITCH  
+#SUSPENDED  		   
+#SUSPENDED_DEPTH  
+#TOWN_AURA  		   
+#VILLAGER_ANGRY  		   
+#VILLAGER_HAPPY  		   
+#WATER_BUBBLE  		   
+#WATER_DROP  		   
+#WATER_SPLASH  
+#WATER_WAKE  
+#command /particle:
+#	trigger:
+#		play mob spawner flames at the targeted block to the player
+
+#on any move:
+#	if player meets betonquest condition "builder":
+#		spawn 2 FLAME particles at location of player for player offset by 0.4, 0.7, 0.4
+#	else if player meets betonquest condition "moderator":
+#		spawn 2 SMOKE_NORMAL particles at location of player for player offset by 0.4, 0.7, 0.4
+#	if player meets betonquest condition "creator":
+#		spawn 2 of particle flame at location of player
+#	if player meets betonquest condition "founder":
+#		show 2 FLAME particles at location of player for all players witin 50 meters of the player offset by 0.4, 0.7, 0.4
+
 #command /redemarrer:
 #	trigger:
 #		loop players:
@@ -14,21 +102,76 @@
 #Ne fonctionne qu'avec des items de base, pas de custom recipies
 #on craft:
 #	message "Warm for your feet!"
-command /teamtesting:
-	trigger:
-		set {redteam.%player%} to 1
-		message "Vous avez rejoint l'équipe &cRouge"
-command /teamtestingoff:
-	trigger:
-		set {redteam.%player%} to 0
-		message "Vous avez quitté l'équipe &cRouge"
+#
+#
+#	loop {email.list::*}:
+#		if difference between {last.logout.%loop-value%} and now is smaller than 3 days:
+#			stop
+#		else:
+#			if {last.logout.mailed.%loop-value%} is 1:
+#				stop
+#			else:
+#				add 1 to {last.logout.mailed.%loop-value%}
+#				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus d'un mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
+#		
+#		if difference between {last.logout.%loop-value%} and now is smaller than 5 days:
+#			stop
+#		else:
+#			if {last.logout.mailed.%loop-value%} is 2:
+#				stop
+#			else:
+#				add 1 to {last.logout.mailed.%loop-value%}
+#				send email with subject "Bonjour %loop-value% ! Nous avons remarqué que ça fait plus de trois mois que vous ne vous êtes pas connecté ! Revenez nous voir rapidement à l'adresse IP: gaia.craft.gg" with message "Vous manquez à Gaïa !" to "%{email.%loop-value%}%"
+
+#
+#
+#%string% parsed as date[ formatted as %-string%]
+#parses a string date as a date
+
+#(year|month|month name|day of year|day of month|day of week|day name|hours|minutes|seconds) from date %date%
+#date %date%'s (year|month|month name|day of year|day of month|day of week|day name|hours|minutes|seconds)
+#gets information from a date
+
+
+#
+# This functions.
+#
+#command /totallyuselesstimecommandthatWORKS:
+#	trigger:
+#		set {_tmpO} to now
+#		if "%day name from date {_tmpO}%" is "WEDNESDAY":
+#			broadcast "WEDNESDAY"
+#		else:
+#			broadcast "Date: %{_tmpO}%"
+#			broadcast "Year: %year from date {_tmpO}%"
+#			broadcast "Month: %month from date {_tmpO}%"
+#			broadcast "Month Name: %month name from date {_tmpO}%"
+#			broadcast "Day of Year: %day of year from date {_tmpO}%"
+#			broadcast "Day of Month: %day of month from date {_tmpO}%"
+#			broadcast "Day of Week: %day of week from date {_tmpO}%"
+#			broadcast "Day Name: %day name from date {_tmpO}%"
+#			broadcast "Hour: %hours from date {_tmpO}%"
+#			broadcast "Minute: %minutes from date {_tmpO}%"
+#			broadcast "Second: %seconds from date {_tmpO}%"
+#			set {_tmpO} to now
+#		set {day.index} to day of week from date {_tmpO}
+#		message "%{day.index}%"
+
+#command /teamtesting:
+#	trigger:
+#		set {redteam.%player%} to 1
+#		message "Vous avez rejoint l'équipe &cRouge"
+#command /teamtestingoff:
+#	trigger:
+#		set {redteam.%player%} to 0
+#		message "Vous avez quitté l'équipe &cRouge"
 
 	
-on damage:
-    {redteam.%victim%} is 1:
-        {redteam.%attacker%} is 1:
-            cancel event
-            send "&cCe joueur est dans ton équipe" to attacker
+#on damage:
+#   {redteam.%victim%} is 1:
+#        {redteam.%attacker%} is 1:
+#            cancel event
+#            send "&cCe joueur est dans ton équipe" to attacker
 			
 #shoot an arrow
 #make the player shoot a creeper at speed 10
@@ -47,157 +190,3 @@ on damage:
 #command /ressourcepacktester:
 #	trigger:
 #		send resourcepack "https://www.dropbox.com/s/drnvydf8xhile1y/MedievalDarkness.zip?dl=1" to player
-#
-#
-#						#
-#						#
-#		SkyWars			#
-#						#
-#						#
-#
-command /minigameskzlobby:
-	trigger:
-		set {mini.skz.lobby} to location of player
-		message "Vous avez défini le Lobby du SkyWars."
-command /minigameskystart:
-	trigger:
-		add player's location to {mini.skz.start::*}
-		message "Vous avez ajouté un Spawn Aléatoire au SkyWars."
-#
-#
-# INITIATION
-#
-#
-command /thisistheskzminigameinitiation:
-	trigger:
-		if {mini.skz.initiated} is 0:
-			if player meets betonquest condition "empty_inventory":
-				clear {mini.skz.players::*}
-				set {mini.skz.initiated} to 1
-				set {mini.skz.%player%} to 1
-				set {mini.skz.started} to 0
-				set {mini.skz.teams} to 0
-	#
-				add player to {mini.skz.players::*}
-				add 1 to {mini.skz.teams}
-				set {mini.skz.teams.%player%} to {mini.skz.teams}
-				teleport player to {mini.skz.lobby}
-				broadcast "&aUn MiniJeux - &cSkyWars"
-				broadcast "&avient d'être lancé par &2%player% &a!"
-				broadcast "&aDébut dans &2&l2 &aminutes &a!"
-				broadcast "&aRejoignez en -6593,2917 !"
-	#
-				wait 1 minute
-				if {mini.skz.started} is 0:
-					broadcast "&aMiniJeux - &cSkyWars"
-					broadcast "&aDébut dans &2&l1 minute &a!"
-					broadcast "&aRejoignez en -6593,2917 !"
-	#
-					wait 1 minute
-					if {mini.skz.started} is 0:
-						if {mini.skz.teams} > 1:
-							set {mini.skz.started} to 1
-							loop all players:
-								if {mini.skz.%loop-player%} is 1:
-									message "&a&oL'Assault va commencer !" to loop-player
-									message "&a&oVoici les participants :" to loop-player
-									message "&2&o%{mini.skz.players::*}%" to loop-player
-									message "&c&oVague &2&l%%" to loop-player
-									message "&c&oTuez en 30 !" to loop-player
-									teleport loop-player to {mini.skz.start}
-						else:
-							message "Il n'y a pas assez de joueurs."
-							message "La partie va être remise !"
-# LOGOUT PROCEDURE
-#
-# Game Specifics 
-#	ADD THESE ASWELL TO INSCRIPTION
-		
-#			
-			else:
-				message "&c&oVous devez avoir un inventaire vide"
-				message "&c&opour pouvoir commencer ce jeu !"
-		else:
-			message "&c&oCe jeu a déjà été lancé !"
-			message "&a&oVous pouvez le rejoindre en parlant au Maître de Jeu !"	
-#
-#
-# INSCRIPTION
-#
-#
-command /thisistheskzminigameinscription:
-	trigger:
-		if {mini.skz.initiated} is 1:
-			if {mini.skz.started} is 0:
-				if player meets betonquest condition "empty_inventory":
-					set {mini.skz.%player%} to 1
-					add player to {mini.skz.players::*}
-					add 1 to {mini.skz.teams}
-					set {mini.skz.teams.%player%} to {mini.skz.teams}
-					teleport player to {mini.skz.lobby}
-					message "&aVous rejoignez la partie."
-					message "&aJoueurs dans la partie :"
-					message "&2%{mini.skz.players::*}%"
-					if {mini.skz.teams} > 9:
-						set {mini.skz.started} to 1
-						loop all players:
-							if {mini.skz.%loop-player%} is 1:
-								LAUNCH GAME
-				
-				
-				else:
-					message "&c&oVous devez avoir un inventaire vide"
-					message "&c&opour pouvoir commencer ce jeu !"
-			else:
-				message "&d&oCe minijeux a déjà commencé."
-				message "&d&oMerci d'attendre."	
-		else:
-			message "&d&oCe MiniJeux n'a pas encore été lancé."
-			message "&d&oVous pouvez le lancer en parlant au Maître de Jeu."
-#
-#
-# LEAVER TESTER
-#
-#
-command /thisistheleaveconsolecommandforskz:
-	trigger:
-		if {mini.skz.%player%} is 1:
-			wait 1 second
-			set {mini.in.ass} to 0
-			set {mini.skz.%player%} to 0
-			wait 1 second
-			loop all players:
-				if {mini.skz.%loop-player%} is 1:
-					add 1 to {mini.in.ass}
-			if {mini.in.ass} > 0:
-				loop all players:
-					if {mini.skz.%loop-player%} is 1:
-						message "&c&oUn des joueurs a quitté la partie." to loop-player
-						set {mini.in.ass} to 0
-			else:
-				clear {mini.skz.players::*}
-				set {mini.in.ass} to 0
-				set {mini.skz.mobs} to 0
-				set  to 0
-				set {mini.skz.started} to 0
-				set {mini.skz.initiated} to 0
-				broadcast "&cL'Assault est terminé ! Plus aucun aventurier dans la zone !"
-#
-# Losers
-#
-on death of a player:
-	if {mini.skz.%player%} is 1:
-		message "&c&oVous êtes mort pendant la partie."
-		message "&c&oVous perdez la partie de SkyWars !"
-		set {mini.in.ass} to 0
-		teleport player to {mini.skz.lobby}
-#					
-#
-# OUT
-#
-#
-on rightclick on sign:
-    if line 1 of the clicked block is "[Sortie]":
-        if line 2 of the clicked block is "Retour vers":
-            if line 3 of the clicked block is "Maître de Jeu":
-                teleport player to {mini.start}

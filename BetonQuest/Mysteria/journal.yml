@@ -1,22 +1,33 @@
 #
+# Andrish #
+#
+andr_qE1: 'Il faut que j''aille trouver Kendan sur la demande d''Andrish pour récuperer l''argent qu''il lui doit'
+#
+# Kendan #
+#
+ken_qE1: 'D''après Kendan, en allant à ce village j''y trouverais un objet intéressant.. Allons-y !'
+ken_qE2: 'Je suis arrivé au village, commençons les recherches !'
+#
 # Garderos et Kinsot #
 #
 journal_garderos_quete: 'Garderos m''a dit d''aller voir son superieur pour confirmer ma présence sous motif.'
 journal_superieur_quete: 'J''ai pu voir le supérieur de Garderos qui m''a demandé de me rendre au village afin d''y apprendre le développement de cet endroit.'
 #
-# Aktarion
+# Aktarion #
 #
 akt_qE1: 'Direction le camp des brigands &a(-8869;82;4564) après la demande d''Aktarion'
-akt_qE2: 'J''ai retrouvé l''objet d''Aktarion ! Il faut que j''aille lui ramener !'
+akt_qE2: 'J''ai trouvé des informations sur l''objet d''Aktarion, je devrais aller voir ce qu''il en est !'
+akt_qE3: 'J''ai retrouvé l''objet qu''Aktarion a perdu, il est temps de lui ramener !'
 #
-# Loukran
+# Loukran #
 #
 louk_qE1: 'Loukran m''a envoyé chercher vers le camp des brigands pour savoir où se trouve la cargaison &a(-8869;82;4564)'
 louk_qE2: 'J''ai trouvé la position de la cargaison ! Je devrais m''y rendre pour voir ce qu''il s''y est passé !'
 louk_qE3: 'Je suis arrivé au lieu où se trouve la cargaison, je devrais chercher des indices sur les plantes de Loukran'
 louk_qE4: 'Je viens de trouver une plante et un journal, je devrais rapporter ces objets à Loukran'
 #
-# Tatsu
+# Tatsu #
 #
 tatsu_q1: 'Tatsu m''a envoyé chercher son objet qu''il a perdu il y a peu'
 tatsu_q1_1: 'J''ai retrouvé l''objet en question, je devrais le rapporter à Tatsu'
+

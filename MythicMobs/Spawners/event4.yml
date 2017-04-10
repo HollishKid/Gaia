@@ -21,4 +21,4 @@ event4:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 6
+  ActiveMobs: 0

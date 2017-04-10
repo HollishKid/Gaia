@@ -28,3 +28,4 @@ an_arrow: ARROW data:0
 ombre_jaune: GOLD_BLOCK data:0 name:§2Ombre_Jaune lore:;§8§oDes_scènes_de_carnage_sont;§8§ogravées_sur_les_faces...;§2Objet_de_Quête
 gouttedelave: MAGMA_CREAM data:0 name:§2Goutte_de_lave lore:;§8§oLa_goutte_est_étrangement;§8§ofroide_au_contact...
 leather_oxy: LEATHER_HELMET data:0 name:§fMasque_de_plongée lore:_;§7§oRareté_:_§fCommun enchants:OXYGEN:1
+coffre_mysterieux: CHEST data:0

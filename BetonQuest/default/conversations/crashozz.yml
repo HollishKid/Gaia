@@ -1,0 +1,25 @@
+quester: 'crashozz'
+first: hello
+stop: 'false'
+#Options du NPC
+NPC_options:
+  hello:
+    text: 'Bonjour &2%player%&a&o, je suis &dcrashozz&a&o, &2Développeur &a&osur Gaïa.'
+    pointers: role,citation,sens
+  role_rep:
+    text: 'C''est de coder...'
+  citation_rep:
+    text: 'Je n''ai pas encore répondu à cette question.'
+  sens_rep:
+    text: 'Je n''ai pas encore répondu à cette question.'
+#Options du joueur
+player_options:
+  role:
+    text: 'Quel est ton rôle sur Gaïa ?'
+    pointers: role_rep
+  citation:
+    text: 'Quelle est ta citation préférée ?'
+    pointers: citation_rep
+  sens:
+    text: 'Quel est le Sens de la Vie ?'
+    pointers: sens_rep

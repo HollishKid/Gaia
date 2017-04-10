@@ -16,11 +16,15 @@ midday: time 1-23
 #
 #############
 castle_door_check: party 99999 castle_door_checker count:1
-castle_door_checker: location -7013;89;2937;Gaia;7
+castle_door_checker: location -7013;89;2937;Gaia 7
 biblio_door_check: party 9999 biblio_door_checker count:1
-biblio_door_checker: location -6723;66;2885;Gaia;14
+biblio_door_checker: location -6723;66;2885;Gaia 14
 sanctuary_door_check: party 9999 sanctuary_door_checker count:1
-sanctuary_door_checker: location -7110;67;2441;Gaia;20
+sanctuary_door_checker: location -7110;67;2441;Gaia 20
+louvre_door_check: party 9999 louvre_door_checker count:1
+louvre_door_checker: location -9729;71;2452;Gaia 10
+louvre_stairs_check: party 9999 louvre_stairs_checker count:1
+louvre_stairs_checker: location -9729;72;2387;Gaia 20
 #
 #
 # Spirituality
@@ -40,6 +44,7 @@ spirituality200: point default.spirituality 200
 spirituality250: point default.spirituality 250
 spirituality300: point default.spirituality 300
 spirituality500: point default.spirituality 500
+spirituality750: point default.spirituality 750
 spirituality1000: point default.spirituality 1000
 #
 #
@@ -80,7 +85,6 @@ fables_t3p1_have: item fables_t3p1
 fables_t3p2_have: item fables_t3p2
 fables_t3p3_have: item fables_t3p3
 fables_t3p4_have: item fables_t3p4
-
 #
 #
 # TRAIN
@@ -103,15 +107,15 @@ train_ticket_hand: hand train_ticket
 #
 # Location Checker
 #
-gare_loc: location -6525;59;3161;Gaia;30
-guilde_loc: location -6920;63;3169;Gaia;30
-porteo_loc: location -7055;65;3159;Gaia;30
-chateau_loc: location -6934;62;2935;Gaia;30
-porten_loc: location -6758;63;2793;Gaia;30
-gm_loc: location -6619;81;2968;Gaia;30
-dwarf_loc: location -6486;98;2771;Gaia;30
-village_loc: location -6838;69;2595;Gaia;30
-sanctuary_loc: location -7017;65;2500;Gaia;30
+gare_loc: location -6525;59;3161;Gaia 30
+guilde_loc: location -6920;63;3169;Gaia 30
+porteo_loc: location -7055;65;3159;Gaia 30
+chateau_loc: location -6934;62;2935;Gaia 30
+porten_loc: location -6758;63;2793;Gaia 30
+gm_loc: location -6619;81;2968;Gaia 30
+dwarf_loc: location -6486;98;2771;Gaia 30
+village_loc: location -6838;69;2595;Gaia 30
+sanctuary_loc: location -7017;65;2500;Gaia 30
 #
 # Arrivées
 #
@@ -121,22 +125,22 @@ train_in: or train_gare,train_guilde,train_porteo,train_chateau,train_porten,tra
 train_vill_or_sanct: or train_village,train_sanct
 #individuelles
 train_gare: tag train_gare
-#train_gare_loc: location -6573;59;3147;Gaia;20
+#train_gare_loc: location -6573;59;3147;Gaia 20
 #
 train_guilde: tag train_guilde
-#train_guilde_loc: location -6913;63;3160;Gaia;20
+#train_guilde_loc: location -6913;63;3160;Gaia 20
 #
 train_porteo: tag train_porteo
-#train_porteo_loc: location -7066;65;3169;Gaia;20
+#train_porteo_loc: location -7066;65;3169;Gaia 20
 #
 train_chateau: tag train_chateau
-#train_chateau_loc: location -6948;62;2941;Gaia;20
+#train_chateau_loc: location -6948;62;2941;Gaia 20
 #
 train_porten: tag train_porten
-#train_porten_loc: location -6765;63;2804;Gaia;20
+#train_porten_loc: location -6765;63;2804;Gaia 20
 #
 train_gm: tag train_gm
-#train_gm_loc: location -6609;81;2959;Gaia;20
+#train_gm_loc: location -6609;81;2959;Gaia 20
 #
 train_nains: tag train_nains
 train_village: tag train_village
@@ -150,14 +154,14 @@ in_mine_athelas1: region mine_athelas_mine
 in_mine_athelas2: region mine_athelas_mine2
 inside_mine: party 100 inside_mine_or count:1
 inside_mine_or: or mine_athelas1,mine_athelas2,mine_athelas3,mine_athelas4,mine_athelas5,mine_athelas6,mine_athelas7
-mine_athelas1: location -6825;56;2900;Gaia;5
-mine_athelas2: location -6840;51;2887;Gaia;10
-mine_athelas3: location -6860;51;2882;Gaia;10
-mine_athelas4: location -6880;54;2877;Gaia;7
-mine_athelas5: location -6892;57;2873;Gaia;5
-mine_athelas6: location -6831;50;2877;Gaia;11
-mine_athelas7: location -6815;57;2907;Gaia;6
-mine_obj_distance_exe: location -6850;57;2888;Gaia;60
+mine_athelas1: location -6825;56;2900;Gaia 5
+mine_athelas2: location -6840;51;2887;Gaia 10
+mine_athelas3: location -6860;51;2882;Gaia 10
+mine_athelas4: location -6880;54;2877;Gaia 7
+mine_athelas5: location -6892;57;2873;Gaia 5
+mine_athelas6: location -6831;50;2877;Gaia 11
+mine_athelas7: location -6815;57;2907;Gaia 6
+mine_obj_distance_exe: location -6850;57;2888;Gaia 60
 time_up_mine: tag time_up_mine
 #
 #
@@ -221,7 +225,7 @@ reput_athelas100: point default.reput_athelas 100
 #
 #
 ###########################
-avertissements_5: point avertissements 5
+avertissements_3: point avertissements 3
 #
 # Mage Entry
 #              & Baguette Magique
@@ -316,6 +320,7 @@ tag_tenzin: tag tenzin
 # Journal
 journal_findaang: journal journal_findaang
 #
+air_moine_tempo: tag air_moine_tempo
 air_obj_distance_exe: region air_temple
 air_parcours_occupied: party 9999 air_parcours_occupied_exe count:1
 air_parcours_occupied2: party 9999 air_parcours_occupied_exe count:2
@@ -353,14 +358,31 @@ terre_find: tag terre_find
 terre_found: tag terre_found
 terre_orno: tag terre_orno
 terre_orno_done: tag terre_orno_done
+tag_terre_ingor: tag tag_terre_ingor
+emerald_volcano: item emerald_volcano
+emerald_enchante_hold: hand emerald_volcano_ench
+emerald_volcano_have: item emerald_volcano:10
+#
+# Earth Passage
+#
+earth_passage: tag earth_passage
+earth_pass_check: party 7777 earth_pass_check_occupied count:1
+earth_pass_check_occupied: region earth_passage
+earth_temple_door_check: party 7777 earth_temple_door_check_occupied count:1
+earth_temple_door_check_occupied: location -7422;24;126;Gaia 12
+#
+# Toph
+#
+tag_toph: tag toph
+earthtemple_magic_learning: tag earthtemple_magic_learning
 #
 # Érudits (autres, tempo)
 #
-earthtemple_magic_learning: tag earthtemple_magic_learning
 firetemple_magic_learning: tag firetemple_magic_learning
 watertemple_magic_learning: tag watertemple_magic_learning
-tag_erudit_eau: tag erudit_eau
+
 tag_erudit_terre: tag erudit_terre
+tag_erudit_eau: tag erudit_eau
 tag_erudit_feu: tag erudit_feu
 #
 #
@@ -448,7 +470,7 @@ planks100: item planks:100
 # Hrota
 #
 hrota_start: tag hrota_start
-around_ingor_mine: location -6500;80;2200;Gaia;200
+around_ingor_mine: location -6500;80;2200;Gaia 200
 hrota_killed_gobs: and hrota_killed_gobs1,hrota_killed_gobs2
 hrota_killed_gobs1: tag hrota_killed_gobs1
 hrota_killed_gobs2: tag hrota_killed_gobs2
@@ -456,120 +478,9 @@ ingor_mine_access: tag ingor_mine_access
 #
 #
 #
-#  JEUX
+# Louvre
 #
 #
-##################################
-assault_started: testforblock -6591;75;2917;Gaia GLOWSTONE
-#
-#
-#
-# OLD STUFF
-uhc_tag: tag uhc
-uhc_in: region uhc
-uhc_in_lobby: region uhc_lobby
-uhc_outside: or uhc_in_lobby,!uhc_in
-uhc_players_left_check: party 5000 uhc_in,!uhc_in_lobby count:2
-uhc_players_left_check1: party 5000 uhc_in,!uhc_in_lobby,!uhc_team1 count:1
-uhc_players_left_check2: party 5000 uhc_in,!uhc_in_lobby,!uhc_team2 count:1
-uhc_players_left_check3: party 5000 uhc_in,!uhc_in_lobby,!uhc_team3 count:1
-uhc_players_left_check4: party 5000 uhc_in,!uhc_in_lobby,!uhc_team4 count:1
-#
-tag_uhc: tag uhc
-games_launched: testforblock -6589;70;2917;Gaia REDSTONE_BLOCK
-games_started: testforblock -6587;66;2913;Gaia REDSTONE_BLOCK
-#
-# Rules
-#
-#
-#General
-uhc_dynmaphide: testforblock -6590;66;2911;Gaia REDSTONE_BLOCK
-uhc_mobspawning: testforblock -6591;66;2911;Gaia REDSTONE_BLOCK
-#Time
-uhc_time20: testforblock -6590;66;2920;Gaia REDSTONE_BLOCK
-uhc_time30: testforblock -6591;66;2920;Gaia REDSTONE_BLOCK
-uhc_time40: testforblock -6592;66;2920;Gaia REDSTONE_BLOCK
-uhc_time50: testforblock -6593;66;2920;Gaia REDSTONE_BLOCK
-uhc_time60: testforblock -6594;66;2920;Gaia REDSTONE_BLOCK
-#
-#Types of Games
-#
-uhc_teams: or games_uhc_team2,games_uhc_team3,games_uhc_team4
-uhc_teams3: or games_uhc_team3,games_uhc_team4
-games_uhc_1: testforblock -6587;66;2914;Gaia REDSTONE_BLOCK
-games_uhc_team2: testforblock -6587;66;2915;Gaia REDSTONE_BLOCK
-games_uhc_team3: testforblock -6587;66;2916;Gaia REDSTONE_BLOCK
-games_uhc_team4: testforblock -6587;66;2917;Gaia REDSTONE_BLOCK
-#
-#Inscription
-#
-has_team: or uhc_team1,uhc_team2,uhc_team3,uhc_team4,has_place
-uhc_team1: tag uhc_team1
-uhc_team2: tag uhc_team2
-uhc_team3: tag uhc_team3
-uhc_team4: tag uhc_team4
-uhc_not_team1: or uhc_team2,uhc_team3,uhc_team4
-uhc_not_team2: or uhc_team1,uhc_team3,uhc_team4
-uhc_not_team3: or uhc_team1,uhc_team2,uhc_team4
-uhc_not_team4: or uhc_team1,uhc_team2,uhc_team3
-#
-# Individuel
-#
-has_place: or uhc_place1,uhc_place2,uhc_place3,uhc_place4,uhc_place5,uhc_place6,uhc_place7,uhc_place8,uhc_place9,uhc_place10,uhc_place11,uhc_place12,uhc_place13,uhc_place14,uhc_place15,uhc_place16,uhc_place17,uhc_place18,uhc_place19,uhc_place20
-uhc_place1: tag uhc_place1
-uhc_place2: tag uhc_place2
-uhc_place3: tag uhc_place3
-uhc_place4: tag uhc_place4
-uhc_place5: tag uhc_place5
-uhc_place6: tag uhc_place6
-uhc_place7: tag uhc_place7
-uhc_place8: tag uhc_place8
-uhc_place9: tag uhc_place9
-uhc_place10: tag uhc_place10
-uhc_place11: tag uhc_place11
-uhc_place12: tag uhc_place12
-uhc_place13: tag uhc_place13
-uhc_place14: tag uhc_place14
-uhc_place15: tag uhc_place15
-uhc_place16: tag uhc_place16
-uhc_place17: tag uhc_place17
-uhc_place18: tag uhc_place18
-uhc_place19: tag uhc_place19
-uhc_place20: tag uhc_place20
-#
-#Team1
-uhc_team1_full: and uhc1,uhc2,uhc3,uhc4,uhc5
-uhc1: testforblock -6590;71;2911;Gaia REDSTONE_BLOCK
-uhc2: testforblock -6590;71;2912;Gaia REDSTONE_BLOCK
-uhc3: testforblock -6590;71;2913;Gaia REDSTONE_BLOCK
-uhc4: testforblock -6590;71;2914;Gaia REDSTONE_BLOCK
-uhc5: testforblock -6590;71;2915;Gaia REDSTONE_BLOCK
-#Team2
-uhc_team2_full: and uhc6,uhc7,uhc8,uhc9,uhc10
-uhc6: testforblock -6590;71;2919;Gaia REDSTONE_BLOCK
-uhc7: testforblock -6590;71;2920;Gaia REDSTONE_BLOCK
-uhc8: testforblock -6590;71;2921;Gaia REDSTONE_BLOCK
-uhc9: testforblock -6590;71;2922;Gaia REDSTONE_BLOCK
-uhc10: testforblock -6590;71;2923;Gaia REDSTONE_BLOCK
-#Team3
-uhc_team3_full: and uhc11,uhc12,uhc13,uhc14,uhc15
-uhc11: testforblock -6590;69;2911;Gaia REDSTONE_BLOCK
-uhc12: testforblock -6590;69;2912;Gaia REDSTONE_BLOCK
-uhc13: testforblock -6590;69;2913;Gaia REDSTONE_BLOCK
-uhc14: testforblock -6590;69;2914;Gaia REDSTONE_BLOCK
-uhc15: testforblock -6590;69;2915;Gaia REDSTONE_BLOCK
-#Team4
-uhc_team4_full: and uhc16,uhc17,uhc18,uhc19,uhc20
-uhc16: testforblock -6590;69;2919;Gaia REDSTONE_BLOCK
-uhc17: testforblock -6590;69;2920;Gaia REDSTONE_BLOCK
-uhc18: testforblock -6590;69;2921;Gaia REDSTONE_BLOCK
-uhc19: testforblock -6590;69;2922;Gaia REDSTONE_BLOCK
-uhc20: testforblock -6590;69;2923;Gaia REDSTONE_BLOCK
-#
-# TIMER
-#
-uhc_var1: testforblock -6596;66;2916;Gaia REDSTONE_BLOCK
-uhc_var2: testforblock -6596;66;2917;Gaia REDSTONE_BLOCK
-uhc_var3: testforblock -6596;66;2918;Gaia REDSTONE_BLOCK
-uhc_var4: testforblock -6596;66;2919;Gaia REDSTONE_BLOCK
-uhc_var5: testforblock -6596;66;2920;Gaia REDSTONE_BLOCK
+################################################################
+registre_ecuyer_louvre: tag registre_ecuyer_louvre
+

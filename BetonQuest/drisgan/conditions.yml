@@ -33,6 +33,7 @@ eko_q2start: tag eko_q2start
 eko_q2done: tag eko_q2done
 eko_q3start: tag eko_q3start
 eko_q3done: tag eko_q3done
+eko_erekdead: tag eko_erekdead
 #
 # Tempo Redirect
 #

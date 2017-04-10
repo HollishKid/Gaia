@@ -10,7 +10,7 @@ menu-settings:
   name: '&dCrafts Spéciaux'
 
   # rows - the number of rows of the chest - REQUIRED
-  rows: 3
+  rows: 9
 
   # command - OPTIONAL (you can remove this diamant set it to '')
   # Bind multiple commands using ; (command: 'menu; m; me')
@@ -36,17 +36,34 @@ menu-settings:
 #+                  +#
 ######################
 
+retour:
+  COMMAND: 'open: Menu.yml'
+  NAME: '&aRetour'
+  ID: stick
+  LORE:
+    - 'Retour au Menu Principal.'
+  POSITION-X: 8
+  POSITION-Y: 1
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+
 furnace:
   COMMAND: 'open: craft_furnace.yml'
   NAME: 'Crafts de Matériaux'
   ID: 61
   POSITION-X: 1
-  POSITION-Y: 2
+  POSITION-Y: 4
   KEEP-OPEN: true
 
 cuir:
   COMMAND: 'open: craft_cuir.yml'
-  NAME: 'Cuir Tanné'
+  NAME: 'Armure en Cuir Tanné'
   LORE:
   - '&oRecettes de Crafts'
   - ' '
@@ -58,12 +75,46 @@ cuir:
   - '&osur la gauche.'
   ID: 58
   POSITION-X: 4
-  POSITION-Y: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+cuir2:
+  COMMAND: 'open: weapons_cuir.yml'
+  NAME: 'Armes en Cuir Tanné'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 4
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+cuir3:
+  COMMAND: 'open: tools_cuir.yml'
+  NAME: 'Outils en Cuir Tanné'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 4
+  POSITION-Y: 3
   KEEP-OPEN: true
 
 mailles:
   COMMAND: 'open: craft_mailles.yml'
-  NAME: 'Mailles'
+  NAME: 'Armure en Mailles'
   LORE:
   - '&oRecettes de Crafts'
   - ' '
@@ -75,12 +126,46 @@ mailles:
   - '&osur la gauche.'
   ID: 58
   POSITION-X: 5
-  POSITION-Y: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+mailles2:
+  COMMAND: 'open: weapons_mailles.yml'
+  NAME: 'Armes en Mailles'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 5
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+mailles3:
+  COMMAND: 'open: tools_mailles.yml'
+  NAME: 'Outils en Mailles'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 5
+  POSITION-Y: 3
   KEEP-OPEN: true
 
 fer:
   COMMAND: 'open: craft_fer.yml'
-  NAME: 'Fer Forgé'
+  NAME: 'Armure en Fer Forgé'
   LORE:
   - '&oRecettes de Crafts'
   - ' '
@@ -92,12 +177,46 @@ fer:
   - '&osur la gauche.'
   ID: 58
   POSITION-X: 6
-  POSITION-Y: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+fer2:
+  COMMAND: 'open: weapons_fer.yml'
+  NAME: 'Armes en Fer Forgé'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+fer3:
+  COMMAND: 'open: tools_fer.yml'
+  NAME: 'Outils en Fer Forgé'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 6
+  POSITION-Y: 3
   KEEP-OPEN: true
   
 or:
   COMMAND: 'open: craft_or.yml'
-  NAME: 'Or Décoré'
+  NAME: 'Armure en Or Décoré'
   LORE:
   - '&oRecettes de Crafts'
   - ' '
@@ -109,12 +228,46 @@ or:
   - '&osur la gauche.'
   ID: 58
   POSITION-X: 7
-  POSITION-Y: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+or2:
+  COMMAND: 'open: weapons_or.yml'
+  NAME: 'Armes en Or Décoré'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 7
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+or3:
+  COMMAND: 'open: tools_or.yml'
+  NAME: 'Outils en Or Décoré'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 7
+  POSITION-Y: 3
   KEEP-OPEN: true
   
 diamant:
   COMMAND: 'open: craft_diamant.yml'
-  NAME: 'Diamant Noble'
+  NAME: 'Armure en Diamant Noble'
   LORE:
   - '&oRecettes de Crafts'
   - ' '
@@ -126,12 +279,46 @@ diamant:
   - '&osur la gauche.'
   ID: 58
   POSITION-X: 8
-  POSITION-Y: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+diamant2:
+  COMMAND: 'open: weapons_diamant.yml'
+  NAME: 'Armes en Diamant Noble'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+diamant3:
+  COMMAND: 'open: tools_diamant.yml'
+  NAME: 'Outils en Diamant Noble'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus grâce à'
+  - '&oune table de craft.'
+  - '&oVoir onglet'
+  - '"Crafts de Matériaux"'
+  - '&osur la gauche.'
+  ID: 58
+  POSITION-X: 8
+  POSITION-Y: 3
   KEEP-OPEN: true
   
 fer_volca:
   COMMAND: 'open: craft_fer_volcanique.yml'
-  NAME: 'Fer Volcanique'
+  NAME: 'Armure en Fer Volcanique'
   LORE:
   - '&oRecettes de Crafts'
   - ' '
@@ -141,12 +328,42 @@ fer_volca:
   - '&otrouve au Grand Nord.'
   ID: 58
   POSITION-X: 6
-  POSITION-Y: 3
+  POSITION-Y: 9
+  KEEP-OPEN: true
+ 
+fer_volca2:
+  COMMAND: 'open: weapons_fer_volcanique.yml'
+  NAME: 'Armes en Fer Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 6
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+fer_volca3:
+  COMMAND: 'open: tools_fer_volcanique.yml'
+  NAME: 'Outils en Fer Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 6
+  POSITION-Y: 7
   KEEP-OPEN: true
   
 or_volca:
   COMMAND: 'open: craft_or_volcanique.yml'
-  NAME: 'Or Volcanique'
+  NAME: 'Armure en Or Volcanique'
   LORE:
   - '&oRecettes de Crafts'
   - ' '
@@ -156,12 +373,42 @@ or_volca:
   - '&otrouve au Grand Nord.'
   ID: 58
   POSITION-X: 7
-  POSITION-Y: 3
+  POSITION-Y: 9
+  KEEP-OPEN: true
+  
+or_volca2:
+  COMMAND: 'open: weapons_or_volcanique.yml'
+  NAME: 'Armes en Or Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 7
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+or_volca3:
+  COMMAND: 'open: tools_or_volcanique.yml'
+  NAME: 'Outils en Or Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 7
+  POSITION-Y: 7
   KEEP-OPEN: true
   
 diamant_volca:
   COMMAND: 'open: craft_diamant_volcanique.yml'
-  NAME: 'Diamant Volcanique'
+  NAME: 'Armure en Diamant Volcanique'
   LORE:
   - '&oRecettes de Crafts'
   - ' '
@@ -171,5 +418,161 @@ diamant_volca:
   - '&otrouve au Grand Nord.'
   ID: 58
   POSITION-X: 8
-  POSITION-Y: 3
+  POSITION-Y: 9
+  KEEP-OPEN: true
+  
+diamant_volca2:
+  COMMAND: 'open: weapons_diamant_volcanique.yml'
+  NAME: 'Armes en Diamant Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 8
+  POSITION-Y: 8
+  KEEP-OPEN: true
+  
+diamant_volca3:
+  COMMAND: 'open: tools_diamant_volcanique.yml'
+  NAME: 'Outils en Diamant Volcanique'
+  LORE:
+  - '&oRecettes de Crafts'
+  - ' '
+  - '&oCes matériaux peuvent'
+  - '&oêtre obtenus dans la'
+  - '&omine du Volcan qui se'
+  - '&otrouve au Grand Nord.'
+  ID: 58
+  POSITION-X: 8
+  POSITION-Y: 7
+  KEEP-OPEN: true
+
+blocker1:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker2:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker3:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker4:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker5:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker6:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker7:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker8:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker9:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 2
+  KEEP-OPEN: true
+  
+blocker12:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker72:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 6
+  KEEP-OPEN: true
+  
+blocker92:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 6
   KEEP-OPEN: true

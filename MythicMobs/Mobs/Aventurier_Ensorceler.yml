@@ -1,11 +1,11 @@
 Aventurier_Ensorceler:
   Type: baby_zombie
-  Display: "&4Aventurier Ensorcelé"
+  Display: "&4Guerrier Muté"
   Health: 100
   Damage: 5
   BossBar:
     Enabled: true
-    Title: '&4Aventurier Ensorcelé'
+    Title: '&4Guerrier Muté'
     Range: 15
     Color: BLUE
     Style: SOLID
@@ -24,8 +24,8 @@ Aventurier_Ensorceler:
   - 0 clear
   - 1 attacker
   - 2 players
-#  Drops:
-#  - 
+  Drops:
+  - chair_mute 1 1
   Equipment: 
   - 299:3
   - 300:2
@@ -33,5 +33,5 @@ Aventurier_Ensorceler:
   - 272:0
   Disguise:
     Type: player
-    Player: "&4Aventurier Ensorcelé"
+    Player: "&4Guerrier Muté"
     Skin: Yadulla666

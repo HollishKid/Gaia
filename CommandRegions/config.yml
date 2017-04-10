@@ -5,6 +5,16 @@
 #Perform certain commands when a player enters/leaves a specific WorldGuard region
 
 regions:
+    'earth_passage':
+        enterConsoleCommands:
+        - 'bq event %player% hollish.earth_passage'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
     'ingor_forge':
         enterConsoleCommands:
         - 'bq event %player% hollish.ingor_forge_entry'
@@ -30,9 +40,9 @@ regions:
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
-        leaveConsoleCommands: ''
-        leavePlayerCommands:
+        leaveConsoleCommands:
         - 'bq event %player% hollish.air_temple_lose'
+        leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
     'assault':
@@ -40,9 +50,19 @@ regions:
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
-        leaveConsoleCommands: ''
+        leaveConsoleCommands:
         leavePlayerCommands:
         - 'thisistheleaveconsolecommandforassault'
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'skywars':
+        enterConsoleCommands: ''
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        leavePlayerCommands:
+        - 'thisistheleaveconsolecommandforskz'
         sendLeaveMessage: false
         leaveMessage: ''
     'training_grounds':
@@ -326,6 +346,18 @@ regions:
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
+    'chateau_louvre':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":" ","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Château du Louvre","italic":true,"color":"gray"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
     'athelas_castle':
         enterConsoleCommands:
         - "title %player% times 20 100 20"
@@ -462,22 +494,12 @@ regions:
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
-    'pre_louvre':
-        enterConsoleCommands:
-        - "bq event %player% hollish.louvre_enter"
-        enterPlayerCommands: ''
-        sendJoinMessage: false
-        joinMessage: ''
-        leaveConsoleCommands: 
-        - "bq event %player% hollish.louvre_leave"
-        leavePlayerCommands: ''
-        sendLeaveMessage: false
-        leaveMessage: ''
     'thespawn':
         enterConsoleCommands:
         - "title %player% times 20 100 20"
         - 'title %player% subtitle {"text":"Centre d''Athelas","italic":true,"color":"gray"}'
         - 'title %player% title {"text":"Spawn","color":"dark_purple"}'
+        - 'pex user %player% remove -keepitems.keep'
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
@@ -493,7 +515,8 @@ regions:
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
-        leaveConsoleCommands: ''
+        leaveConsoleCommands:
+        - 'bq event %player% athelas_out_checker'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
@@ -580,6 +603,16 @@ regions:
         sendJoinMessage: false
         joinMessage: ''
         leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'nether_portal2':
+        enterConsoleCommands: ''
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'quittingnetherportal2 %player%'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
@@ -674,6 +707,19 @@ regions:
         enterConsoleCommands:
         - 'pex user %player% add -keepitems.keep'
         - 'title %player% title {"text":"Grand Nord","italic":true,"color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Perte d''Inventaire si vous mourrez !","bold":true,"color":"red"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'pex user %player% remove -keepitems.keep'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'gaia_nether':
+        enterConsoleCommands:
+        - 'pex user %player% add -keepitems.keep'
+        - 'title %player% title {"text":"Nether","italic":true,"color":"dark_purple"}'
         - 'title %player% subtitle {"text":"Perte d''Inventaire si vous mourrez !","bold":true,"color":"red"}'
         enterPlayerCommands: ''
         sendJoinMessage: false

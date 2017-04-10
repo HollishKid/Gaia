@@ -325,7 +325,7 @@ HealthPack:
   - message{msg="&6&oErek laisse tomber un &2Pack de soin &6!"} @PlayersInRadius{r=25} >0 1
 RandomPot:
   Skills:
-  - randomskill {skills=pot1,pot2,pot3}
+  - randomskill {skills=pot1,pot2,pot3,pot4}
   - message{msg="&6&oErek lance un flacon dans votre direction !"} @PlayersInRadius{r=25} >0 1
 pot1:
   Skills:
@@ -339,7 +339,61 @@ pot3:
   Skills:
   - potion{type=WEAKNESS;lvl=1;duration=200} @PlayersInRadius{r=25}
   - message{msg="&4&oFaiblesse !"} @PlayersInRadius{r=25} >0 1
+pot4:
+  Skills:
+  - potion{type=POISON;lvl=1;duration=100} @PlayersInRadius{r=25}
+  - message{msg="&4&oEmpoisonné !"} @PlayersInRadius{r=25} >0 1
 rally_call:
   Skills:
   - message{m="&6Le Type Louche appelle à l'aide !!"} @PlayersInRadius{r=10}
   - rally{types=hol_add;radius=10;ot=false}
+TpMissile:
+#  - teleportto{location=-7426,51,3271} @Self
+  - message{msg="&4Erek:&7&o Meurs vermisseau!!"} @PlayersInRadius{r=35} >0 1
+  - delay 1
+  - skill{s=MissileLauncher}
+Firebolt:
+  Skills:
+  - projectile{onTick=IceBolt-Tick;onHit=FireBolt-Hit;v=8;syo=2;tyo=0.5;i=1;hR=1;vR=1}
+FireBolt-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=25;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{particle=dripLava;amount=10;vSpread=.1;hSpread=.25;Speed=25;y=0;s=2} @origin
+  - effect:particles{p=lava;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+IceBolt-Tick:
+  Skills:
+  - effect:particles{p=snowballpoof;amount=20;speed=0;hR=0.2;vR=0.2} @origin
+FireBolt-Hit:
+  Skills:
+  - ignite{t=10}
+  - damage{a=3}
+  - potion{type=WEAKNESS;duration=100;lvl=2}
+  - effect:particles{p=flame;a=100;hs=0.3;vs=0.3;s=0.4;y=0.9}
+  - effect:particles{p=dripLava;a=100;hs=0.2;vs=0.2;s=0.5;y=0.9}
+  - effect:particles{p=lava;a=35;hs=0.2;vs=0.2;s=0.5;y=0.9}
+castGuardian:
+  Skills:
+  - randomskill {skills=castGuardian1,castGuardian2,castGuardian3,castGuardian4}
+  - message{msg="&6&oErek invoque un Gardien&6!"} @PlayersInRadius{r=25} >0 1
+castGuardian1:
+  Skills:
+  - summon{mob=Tesla;amount=1;noise=5} @Spawner{s=spawnerek1}
+castGuardian2:
+  Skills:
+  - summon{mob=Tesla;amount=1;noise=5} @Spawner{s=spawnerek2}
+castGuardian3:
+  Skills:
+  - summon{mob=Tesla;amount=1;noise=5} @Spawner{s=spawnerek3}
+castGuardian4:
+  Skills:
+  - summon{mob=Tesla;amount=1;noise=5} @Spawner{s=spawnerek4}
+call_hol_add:
+  Skills:
+  - randomskill {skills=call_hol_add1,call_hol_add2}
+  - message{msg="&6&oErek invoque des renforts!"} @PlayersInRadius{r=35} >0 1
+call_hol_add1:
+  Skills:
+  - summon{mob=erek_renfort;amount=2;noise=5} @Spawner{s=hol_add1}
+call_hol_add2:
+  Skills:
+  - summon{mob=erek_renfort;amount=2;noise=5} @Spawner{s=hol_add2}

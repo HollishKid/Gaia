@@ -21,4 +21,4 @@ endzomb4:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 5
+  ActiveMobs: 0

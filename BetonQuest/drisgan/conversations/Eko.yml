@@ -1,5 +1,5 @@
 quester: 'Eko'
-first: n1,n2,n3,n4,n_tempo,n5,n6
+first: n1,n2,n3,n4,n5,n6
 stop: 'false'
 ##########################
 #                        #
@@ -29,24 +29,14 @@ NPC_options:
     text: 'Comment avancent tes recherches ?'
     conditions: '!eko_inconvers,eko_q2start,!eko_q2done'
     pointers: suite4,suite5
-#
-# Tempo Section
-#
-# n_tempo remplace rep3 (n5 et n6 non accessibles)
-#
-#                J'ai redirigé vers Maka à partir d'ici,
-#                  la suite étant en développement.  ~ H
   rep3:
     text: 'Intéressant... Voyons voir ce que cette lettre nous raconte... \nMerci, je vais continuer mes investigations et je te tiendrais au courant. \nTu pourras revenir me voir plus tard.'
     events: eko_inconvers,eko_q2donefolder
-  n_tempo:
-    text: 'Je suis toujours entrain d''analyser la lettre que tu m''as ramené. \nReviens me voir plus tard !'
-    conditions: '!eko_inconvers,eko_tempo'
   n5:
     text: 'Va! Le temps presse!'
     conditions: '!eko_inconvers,eko_q3start,!eko_q3done'
   n6:
-    text: 'J''ai appris que tu avais accomplis ta mission. \nFélicitations, tu es des nôtres désormais...'
+    text: 'J''ai appris que tu avais accomplis ta mission. \nTu es des nôtres désormais... J''imagine que des félicitations sont de rigueur...'
     conditions: '!eko_inconvers,eko_q3done'
 #
 #

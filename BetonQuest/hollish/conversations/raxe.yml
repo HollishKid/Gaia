@@ -1,0 +1,29 @@
+quester: 'Raxë'
+first: welcome
+stop: 'false'
+############
+#          #
+#    NPC   #
+#          #
+############
+NPC_options:
+  welcome:
+    text: 'Ne t''éloignes pas trop de l''entrée mon ami, ces &cUruk &a&osont très dangereux !'
+    pointers: qui,pourquoi
+  qui_rep:
+    text: 'Ces sont des viles créatures qui ont réussi à refaire surface, grâce à un nouveau portail très certainnement !'
+  pourquoi_rep:
+    text: 'Ce n''est pas vraiment un Zombie banal ou un Gobelin gringalet que t''as devant toi là ! \nCes &cUruk &a&osont quasiment insensibles aux flèches, ont beaucoup de vie et une attaque redoutable. \nOn sent une sorte de force maléfique en leur présence...'
+############
+#          #
+#  JOUEUR  #
+#          #
+############
+player_options:
+  qui:
+    text: 'Uruk ? Qu''est-ce que c''est ?!'
+    pointers: qui_rep
+  pourquoi:
+    text: 'Pourquoi si dangereux ?'
+    pointer: pourquoi_rep
+

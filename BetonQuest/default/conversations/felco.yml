@@ -18,7 +18,7 @@ NPC_options:
     text: 'Ok ! Pensez à venir rejoindre ma Guilde une fois que vous serez Citoyen !'
     events: found_guild5,guild_tester
   member_ok:
-    text: 'Excellent, bienvenue parmi nous ! Notre Guilde renferme 4 spécialités différentes! \nLe Minage, l''Exavation, la Réparation et la Fonte. \nLe Menu de la Guilde te permet de choisir un métier parmis d''autres avantages !'
+    text: 'Excellent, bienvenue parmi nous ! Notre Guilde renferme 4 spécialités différentes ! \nLe Minage, l''Exavation, la Réparation et la Fonte. \nLe Menu de la Guilde te permet de choisir un métier parmis d''autres avantages !'
     events: mineur
     pointers: menu,merci
 #
@@ -27,14 +27,16 @@ NPC_options:
   member:
     text: 'Bienvenue dans votre guilde, &2%player% &a&o!'
     conditions: 'mineur'
-    pointers: menu,special,crafts,merci
+    pointers: menu,special,cagnotte,crafts,merci
   mineur_menu:
     text: 'Le voilà !'
     events: mineur_menu
+  cagnotte_rep:
+    text: 'La Cagnotte d''un métier est la somme de toutes les contributions des personnes exerçant ce métier. \nVous gagnez 1xp pour la cagnotte dès que vous gagnez de l''expérience dans la compétence de votre métier. \nLa Cagnotte est divisée par le nombre de contributeurs, puis distribué à chacun d''eux sous forme de bonus d''expérience, tous les Dimanche soir.'
   special_rep:
     text: 'Vous aurez 10% de Bonus d''Expérience dans la Compétence de votre métier. \nDe plus, vous aurez accès à la mine de la guilde, qui se situe en dehors d''Athelas vers le Nord-Est.'
   crafts_rep:
-    text: 'Vous pouvez créer des armures spéciales grâce à des matériaux nouveaux. \nPour créer un nouveau matériaux, mettez le dans un Four. \nVous pouvez y mettre: &dCuir&a&o, &dFicelle&a&o, &dFer&a&o, &dOr &a&oet &dDiamant&a&o. \nPour en fabriquer une armure, utilisez les recettes classiques.'
+    text: 'Vous pouvez créer des armures et des outils spéciaux grâce à des matériaux nouveaux. \nPour voir les recettes spécifiques, utilisez votre /menu.'
 #                   #
 #                   #
 # Options du Joueur #
@@ -55,6 +57,9 @@ player_options:
   special:
     text: 'Quels sont les avantages de cette guilde ?'
     pointers: special_rep
+  cagnotte:
+    text: 'Comment fonctionne la Cagnotte des Métiers ?'
+    pointers: cagnotte_rep
   crafts:
     text: 'Comment fonctionnent les Crafts Spéciaux ?'
     pointers: crafts_rep

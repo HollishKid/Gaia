@@ -179,25 +179,7 @@ Messages:
       
       # Messages displayed in all worlds.
       global:
-      - '&f[&dAstuce&f] &dPour vous repérer, utilisez la Carte Interactive sur &awww.gaia-minecraft.enjin.com/gallery'
-      #- '&f[&dAstuce&f] &dVoter pour Gaïa donne lieux à des accès inédits, rendez vous sur &awww.gaia-minecraft.enjin.com'
-      - '&f[&dAstuce&f] &dUtilisez le Menu, &a/menu'
-      - '&f[&dAstuce&f] &2Sofia &dsait énormément de choses ... Pensez à lui poser des questions si vous avez besoin !'
-      - '&f[&dAstuce&f] &dVotre Journal de Progression vous oriente et permet de connaître vos points. Vous pouvez le mettre à jour ou le retrouver grâce au &a/menu&d.'
-      - '&f[&dAstuce&f] &dRetrouvez un &2Gestionnaire &dpour vous aider à louer une maison! Ils se trouvent au Grand Marché et au Château.'
-      - '&f[&dAstuce&f] &dLe &aGrand Marché &dest plein de bonnes affaires ! Pensez à demander conseil à un &2Priseur &dpour faire des échanges lucratifs!'
-      #- '&f[&dAstuce&f] &dEn cas de lag, pensez à installer Optifine! &ahttp://optifine.net/downloads'
-      - '&f[&dInfo&f] &dNous sommes en phase Bêta! Pour toute erreur rapportée et confirmée (forum ou à un membre du Staff) vous serez récompensé !'
-      - '&f[&dInfo&f] &dNous sommes en phase Bêta! Si vous avez envie de participer au projet, rendez vous sur &awww.gaia-minecraft.enjin.com/contact'
-      - '&f[&dAstuce&f] &dCe tchat saura répondre à certaines de vos questions concernant Gaïa! Chaque mot qui s''affiche en vert lorsque vous l''avez tapé donne lieu à des explications. Essayez des lieux ou des personnes par exemple.'
-      #- '&f[&dInfo&f] &dLe Serveur Vocal est disponible! &ahttps://discord.gg/012juEmGJcE3dXOzv'
-      #- '&f[&dAstuce&f] &dUn portail mystérieux est apparu sur le Continent de l''Est ... Des monstres semblent en sortir! Armez-vous pour les combattre le temps que les forces Royales arrivent en renfort!'
-      - '&f[&dInfo&f] &dLa &aMusique &darrive sur Gaïa ! Utilisez &a/menu &dpuis en bas à droite "&aLecteur Musique&d". Activez votre lecteur avec la &aLaine Verte &den haut et écoutez la musique évoluer, ou choissisez votre morceau.'
-      - '&f[&dInfo&f] &dUne &aBoutique de Skins &dest arrivée au Grand Marché! Parlez à &2Charon&d.'
-      - '&4NOUVELLE: &cVeuillez détruire TOUS les portails Nether que vous possédez/trouvez.'
-      #- '&4NOUVELLE: &cLe &4Nether &cva être complètement réinitialisé avant de se voir appliqué quelques règles. Sortez vos affaires de là avant que ce ne soit trop tard!'
-      #- '&4NOUVELLE: &cGaïa devient un monde dangereux, désormais, vous perdrez votre Stuff lorsque vous mourrez!'
-      #- '&4NOUVELLE: &cEn vue de la fin de Bêta, merci de répondre au sondage suivant:&a http://gaia-minecraft.enjin.com/forum/m/37263426/viewthread/28032179-fin-de-la-bta-le-reset'
+      #- '&f[&dAstuce&f] &dPour vous repérer, utilisez la Carte Interactive sur &awww.gaia-minecraft.enjin.com/gallery'
 Mute:
   # Broadcast that the chat was mute?
   Broadcast: true
@@ -264,35 +246,44 @@ Console:
     # Remove certain messages from the server console.
     # Does not need to be whole message, just a part of the message you want to block.
     Filter_Console_Messages:
-    - Reached end of stream for
-    - Connection reset
-    - lost connection
-    - Constructing new userfile from base player
-    - checking if
-    - ClosedChannelException
-    - Set mob damage to
-    - SET DATA
-    - died
-    - at io.
-    - at net.
-    - at java.
-    - at sun.
-    - at com.
-    - io.netty
-    - Caused by
-    - ...
-    - That player cannot be found
-    - Indiquez le surnom du joueur.
-    - java.lang.NoSuchFieldException
-    - java.lang.NullPointerException
-    - at me.jaime29010
-    - at org.bukkit.craftbukkit.v1_9_R2.scheduler
-    - at org.bukkit.inventory.ItemStack.<init>(ItemStack.java
-    - '[MythicMobs] == Error occured during parsing of following drop table string'
-    - An error occured while parsing a drop table.
-    - Title command successfully executed
-    - moved too quickly!
-    - #!#!
+    - enregistrer
+    - modifiermdp
+    - ajoutermail
+    - modifiermail
+    - envoyermdp
+    - thisisthepasswordaddercommand
+    - thisisthepasswordchangercommand
+    - thisistheemailaddercommand
+    - thisisthechangerecoverycommand
+    #- Reached end of stream for
+    #- Connection reset
+    #- lost connection
+    #- Constructing new userfile from base player
+    #- checking if
+    #- ClosedChannelException
+    #- Set mob damage to
+    #- SET DATA
+    #- died
+    #- at io.
+    #- at net.
+    #- at java.
+    #- at sun.
+    #- at com.
+    #- io.netty
+    #- Caused by
+    #- ...
+    #- That player cannot be found
+    #- Indiquez le surnom du joueur.
+    #- java.lang.NoSuchFieldException
+    #- java.lang.NullPointerException
+    #- at me.jaime29010
+    #- at org.bukkit.craftbukkit.v1_9_R2.scheduler
+    #- at org.bukkit.inventory.ItemStack.<init>(ItemStack.java
+    #- '[MythicMobs] == Error occured during parsing of following drop table string'
+    #- An error occured while parsing a drop table.
+    #- Title command successfully executed
+    #- moved too quickly!
+    #- #!#!
 
 Signs:
   Duplication:
@@ -312,7 +303,7 @@ Sound_Notify:
   Enabled: true
   
   # Play a sound to player only when their are afk? Checked from Essentials plugin.
-  Notify_Only_When_Afk: true
+  Notify_Only_When_Afk: false
 
   # Play a sound to player only when someone writes following characters before
   # their name: Set to none to play a sound when the players name is mentioned in the chat.
@@ -360,8 +351,8 @@ Groups:
 
 Updater:
   Enabled: true
-  Notify: true
-  Download: true
+  Notify: false
+  Download: false
   
   # Disable important announcements after the plugin has been loaded
   Check_Notes: true
@@ -378,10 +369,14 @@ Writer:
   # Commands that will be saved along with chat messages.
   Write_Commands:
   - tell
+  - message
+  - whisper
+  - w
+  - r
 
-Minimum_Players_To_Enable_Checks: 0
+Minimum_Players_To_Enable_Checks: 1
 Op_Has_Permissions: true
-Regex_Timeout_Milis: 100
+Regex_Timeout_Milis: 250
 
 # To customize a locale, make file in localization/messages_LOCALENAME.yml
 # It will be filled with all the values.
@@ -391,7 +386,7 @@ Locale: fr
 # Time of some plugin's operations is measured.
 # Print a message in the console if they take longer than specified millisecond time.
 # Set to 0 to disable.
-Log_Lag_Over_Milis: 100
+Log_Lag_Over_Milis: 250
 
 # If a message was caught by a rule print info to the console.
 # It is possible to hide individual packet rules from appearing

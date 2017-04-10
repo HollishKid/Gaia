@@ -1,16 +1,87 @@
 quester: 'Garde Royal'
-first: unknown,jour,nuit
+first: unknown,hostile,n1,n2,n3,j1,j2,j3,j4,j5,j6,j7,j8,j9,j10,j11,j12,j13,j14,j15,j16,j17,j18,j19,j20
 stop: 'false'
 #Options du NPC
 NPC_options:
   unknown:
     text: 'Vous n''êtes pas citoyen de cette ville, parles à l''&2Intendant &a&o!'
     conditions: '!intendant_done'
-  jour:
-    text: 'Bonjour !'
-    conditions: 'day,intendant_done'
-  nuit:
+  hostile:
+    text: 'Votre réputation est au plus bas, je préfère ne pas m''entretenir avec vous.'
+    condition: '!neutre'
+  n1:
     text: 'Bonsoir, vous ne devriez pas vous aventurer à l''extérieur de nuit, les monstres sont féroces !'
-    conditions: '!day,intendant_done'
+    conditions: '!day'
+  n2:
+    text: 'Bonsoir, évitez de vous promener dehors à une telle heure !'
+    conditions: '!day'
+  n3:
+    text: 'Bonsoir, sortez de la ville à vos risques et périls !'
+    conditions: '!day'
+# Neutre
+  j1:
+    text: 'Bonjour ! \nBelle journée n''est-ce pas ?'
+    conditions: 'sun,neutre,!amical,random20'
+  j2:
+    text: 'Bonjour ! \nConnaissez vous Francis ? \nIl fait les meilleures côtelettes d''Athelas !'
+    conditions: 'neutre,!amical,random20'
+  j3:
+    text: 'Bonjour ! \nAvez-vous déjà rencontré Paul le Boulanger ? \nSon pain est un délice !'
+    conditions: 'neutre,!amical,random20'
+  j4:
+    text: 'Bonjour ! \nEnchanté !'
+    conditions: 'neutre,!amical,random20'
+  j5:
+    text: 'Bonjour ! \nVous devez être nouveau dans cette ville.'
+    conditions: 'neutre,!amical,random20'
+# Amical
+  j6:
+    text: 'Bonjour ! \nContent de vous revoir !'
+    conditions: 'amical,!honore,random20'
+  j7:
+    text: 'Bonjour ! \nQuel beau temps ! '
+    conditions: 'sun,amical,!honore,random20'
+  j8:
+    text: 'Bonjour ! \nAvez-vous déjà rencontré Paulette ? \nSon auberge est inégalée !'
+    conditions: 'amical,!honore,random20'
+  j9:
+    text: 'Bonjour ! \nEnchanté !'
+    conditions: 'amical,!honore,random20'
+  j10:
+    text: 'Bonjour ! \nIl me semble avoir déjà vu votre visage.'
+    conditions: 'amical,!honore,random20'
+# Honoré
+  j11:
+    text: 'Bonjour ! \nIl fait particulièrement beau aujourd''hui !'
+    conditions: 'sun,honore,!exalte,random20'
+  j12:
+    text: 'Bonjour ! \nNous nous sommes sûrement déjà rencontrés, puisque je connais votre nom &2%player% &a&o.'
+    conditions: 'honore,!exalte,random20'
+  j13:
+    text: 'Bonjour ! \nVotre réputation vous précède &2%player% &a&o!'
+    conditions: 'honore,!exalte,random20'
+  j14:
+    text: 'Bonjour ! \nJ''ai déjà entendu parler de vous... \nen bien !'
+    conditions: 'honore,!exalte,random20'
+  j15:
+    text: 'Bonjour ! \nJe suis ravi de vous voir !'
+    conditions: 'honore,!exalte,random20'
+# Exalté
+  j16:
+    text: 'Bonjour ! \nEst-ce que je peux vous demander... un autographe ?'
+    conditions: 'exalte,random20'
+  j17:
+    text: 'Bonjour ! \nVous ici ?! Votre réputation est sans égal &2%player% &a&o!'
+    conditions: 'exalte,random20'
+  j18:
+    text: 'Bonjour ! \nJ''ai beaucoup entendu parler de vous &2%player% &a&o!'
+    conditions: 'exalte,random20'
+  j19:
+    text: 'Bonjour ! \nQuel plaisir de vous voir &2%player% &a&o!'
+    conditions: 'exalte,random20'
+  j20:
+    text: 'Bonjour ! \nC''est un honneur de vous voir &2%player% &a&o!'
+    conditions: 'exalte,random20'
+
 #Options du joueur
 player_options:

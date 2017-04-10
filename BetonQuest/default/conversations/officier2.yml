@@ -12,7 +12,7 @@ NPC_options:
     pointers: nether,qui,rien
   nether_rep:
     text: 'Cet endroit est gardé par un vieux démon, un des anciens Nethériens. Es-tu sûr de vouloir entrer là dedans ? \n&2&oPour faire ce donjon, vous devez être 2 au minimum ! \n&2&oLe donjon commencera 1 minute après l''inscription du premier participant !'
-    pointers: rien
+    pointers: rien,nether_enter
   qui_rep:
     text: 'Officier de l''armée d''Athelas, assigné à garder cette entrée vers le Nether contre les aventuriers imprudents. \nSurtout pour tenter de garder ce qu''il y a là dedans, à l''intérieur...'
   jeu_de_mot_de_lyrtix:

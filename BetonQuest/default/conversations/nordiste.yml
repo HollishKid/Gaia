@@ -7,7 +7,8 @@ NPC_options:
     text: 'Bonjour à vous !'
     pointers: intendant,spawn,quoi
   intendant_rep:
-    text: 'Consultes ton &2Journal de Progression &a&oou &2http://gaia-minecraft.enjin.com/gallery &a&o.'
+    text: 'Consultes ton &2Journal de Progression. \nTu peux aussi trouver une carte dynamique sur le site de Gaïa.'
+    events: redirect_map
   spawn_rep:
     text: 'Utilises &2/spawn &a&opour y aller.'
   quoi_rep:

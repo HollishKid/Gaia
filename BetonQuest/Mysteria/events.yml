@@ -18,6 +18,42 @@ histoire_mysteria13: 'message &2Lieutenant Hashor &f: &a&oJ''espère que ces ren
 histoire_mysteria_tag: tag add histoire_mysteria_tag
 histoire_mysteria_tag1: tag del histoire_mysteria_tag
 #                 #
+#   PNJ Andrish   #
+#                 #
+andr_qE1: folder andr_qE12,andr_qE13,andr_qE14
+andr_qE12: tag add andr_qE1
+andr_qE13: journal add andr_qE1
+andr_qE14: 'message &d&oVous partez à la rencontre de Kendan le marchand pour récuperer l''argent d''Andrish'
+#
+andr_qE2: folder andr_qE22,andr_qE23,andr_qE24,andr_qE25
+andr_qE22: tag del ken_qrefE1
+andr_qE23: tag del andr_qE1
+andr_qE24: tag add andr_qE2
+andr_qE25: 'message &a&oAprès cette bonne leçon donnée à Kendan, j''ai récuperé l''argent !'
+#                #
+#   PNJ Kendan   #
+#                #
+ken_conv: conversation Kendan
+#
+ken_quest_acc: folder ken_qaccE1,ken_qaccE12,ken_qaccE13
+ken_qaccE1: tag add ken_qaccE1
+ken_qaccE12: 'message &d&oDirection le village désert pour cette fameuse découverte !'
+ken_qaccE13: journal add ken_qE1
+ken_qaccE14: objective start ken_qE1
+#
+ken_quest_ref: folder ken_qrefE1,ken_qrefE12,ken_qrefE13,ken_qrefE14
+ken_qrefE1: 'command mm mobs kill kendan'
+ken_qrefE12: mspawnmob -100;200;300;Gaia bossken:1 1
+ken_qrefE13: objective start ken_qkE1
+ken_qrefE14: tag add ken_qrefE1
+#
+ken_qE2: folder ken_qE22,ken_qE23,ken_qE24,ken_qE25,ken_qE26
+ken_qE22: tag del ken_qaccE1
+ken_qE23: tag add ken_qE2
+ken_qE24: 'message &a&oVous êtez arrivé ! Regardez les alentours pour trouver la cachette !'
+ken_qE25: journal del ken_qE1
+ken_qE26: journal add ken_qE2
+#                 #
 #   PNJ Roi Ubu   #
 #                 #
 demande_royale: tag add rencontrer_roi
@@ -29,19 +65,19 @@ enter_mysteria: tag add garderos_deja_vu
 #
 voir_superieur: folder voir_superieur1,voir_superieur2,voir_superieur3,voir_superieur4
 voir_superieur1: objective start voir_superieur
-voir_superieur2: 'message &dVous devez aller voir le superieur de Garderos !'
+voir_superieur2: 'message &d&oVous devez aller voir le superieur de Garderos !'
 voir_superieur3: journal add journal_garderos_quete
 voir_superieur4: tag add voir_superieur
 #
 voir_superieur_done: folder voir_superieur_done1,voir_superieur_done2,voir_superieur_done3 delay:5
-voir_superieur_done1: 'message &dVous êtes arrivé dans le poste d''avant garde !'
+voir_superieur_done1: 'message &a&oVous êtes arrivé dans le poste d''avant garde !'
 voir_superieur_done2: tag add voir_superieur_done
 voir_superieur_done3: journal del journal_garderos_quete
 #                        #
 #   PNJ Général Kinsot   #
 #                        #
 motif_donner: folder motif_donner1,motif_donner2,motif_donner3
-motif_donner1: 'message &dVous donnez votre motif au Général Kinsot.'
+motif_donner1: 'message &9&oVous donnez votre motif au Général Kinsot.'
 motif_donner2: tag add motif_donner
 motif_donner3: folder motif_donner4,motif_donner5 delay:7
 motif_donner4: 'message &2Général Kinsot &f: &a&oJe vois donc ce qui pousse le roi à nous envoyer un aventurier comme toi.'
@@ -50,26 +86,26 @@ motif_donner6: 'message &2Général Kinsot &f: &a&oTrès bien, je vais accèder 
 #
 tour_du_village: folder tour_du_village1,tour_du_village2,tour_du_village3,tour_du_village4
 tour_du_village1: objective start tour_du_village
-tour_du_village2: 'message &dVous devez aller dans le village afin d''y rencontrer les villageois !'
+tour_du_village2: 'message &d&oVous devez aller dans le village afin d''y rencontrer les villageois !'
 tour_du_village3: journal add journal_superieur_quete
 tour_du_village4: tag add tour_du_village
 #
 tour_du_village_done: folder tour_du_village_done1,tour_du_village_done2,tour_du_village_done3
-tour_du_village_done1: 'message &dVous êtes arrivé au village !'
+tour_du_village_done1: 'message &9&oVous êtes arrivé au village !'
 tour_du_village_done2: tag add tour_du_village_done
 tour_du_village_done3: journal del journal_superieur_quete
 #                  #
 #   PNJ Aktarion   #
 #                  #
 akt_qE1: folder akt_qE11,akt_qE12,akt_qE13,akt_qE14,akt_qE15
-akt_qE11: objective start akt_quest
-akt_qE12: 'message &dAprès la demande d''Aktarion qui vous a donné une destination, vous vous mettez vite en route !'
+akt_qE11: objective start akt_qE1
+akt_qE12: 'message &d&oAprès la demande d''Aktarion qui vous a donné une destination, vous vous mettez vite en route !'
 akt_qE13: tag add akt_qE1
 akt_qE14: journal add akt_qE1
 akt_qE15: compass add akt_quest
 #
 akt_objq1: folder akt_objkillB1,akt_objq1m,akt_objq1c
-akt_objq1m: 'message &dVous êtes arrivés, tuez quelques brigands pour retrouver l''objet d''Aktarion'
+akt_objq1m: 'message &a&oVous êtes arrivés, tuez quelques brigands pour retrouver l''objet d''Aktarion'
 akt_objq1c: compass del akt_quest
 #akt_objkill: objective start akt_objkill
 akt_objkillB1: objective start akt_objkillB1
@@ -92,21 +128,34 @@ akt_brigkilled8: objective start akt_objkillB9
 Bkill9: 'message &4Brigand&6&o tués 9/10'
 akt_brigkilled9: objective start akt_objkillB10
 Bkill10: 'message &4Brigand&6&o tués 10/10'
-#
 Bkilled: tag add Bkilled
 #
-akt_qE2: folder akt_qE21,akt_qE22,akt_qE23,akt_qE24,akt_qE25,akt_qE26
-akt_qE21: 'message &dVous vous hâtez de retourner voir Aktarion après avoir retrouver son objet'
-akt_qE22: tag del akt_qE1
-akt_qE23: tag add akt_qE2
-akt_qE24: journal del akt_qE1
-akt_qE25: journal add akt_qE2
-akt_qE26: compass add aktarion
+akt_qE2: folder akt_qE21,akt_qE22,akt_qE23,akt_qE24,akt_qE25,akt_qE26,akt_qE27
+akt_qE21: 'message &a&oServez-vous des informations récoltées pour trouver l''objet d''Aktarion'
+akt_qE22: objective start akt_qE2
+akt_qE23: tag del akt_qE1
+akt_qE24: tag add akt_qE2
+akt_qE25: journal del akt_qE1
+akt_qE26: journal add akt_qE2
+akt_qE27: compass add akt_tool
+#
+akt_objq2: folder akt_objkill2,akt_objq2m,akt_objq2c
+akt_objq2m: 'message &a&oVous êtes arrivés, interrogez le chef des mercenaires pour retrouver l''objet d''Aktarion'
+akt_objq2c: compass del akt_tool
+akt_objkill2: objective start akt_objkill2
+#
+akt_qE3: folder akt_qE31,akt_qE32,akt_qE33
+akt_qE31: 'message &a&oVous avez retrouvez l''objet d''Aktarion, retournez le voir !'
+akt_qE32: tag del akt_qE2
+akt_qE33: tag add akt_qE3
+akt_qE34: compass add aktarion
+akt_qE35: journal del akt_qE2
+akt_qE36: journal add akt_qE3
 #
 akt_qdone: folder akt_qdone1,akt_qdone2,akt_qdone3,akt_qdone4,akt_qdone5,akt_qdone6,akt_qdone7,akt_qdone8
 akt_qdone1: take akt_tool:1
-akt_qdone2: journal del akt_qE2
-akt_qdone3: tag del akt_qE2
+akt_qdone2: journal del akt_qE3
+akt_qdone3: tag del akt_qE3
 akt_qdone4: tag del Bkilled
 akt_qdone5: tag add akt_qdone
 akt_qdone6: 'command cc open aktarion_reward.yml %player%'
@@ -115,6 +164,21 @@ akt_qdone8: compass del aktarion
 akt_rew1: 'command mm items give %player% korutsu_sword 1'
 akt_rew2: 'command mm items give %player% ardenko_axe 1'
 akt_rew3: 'command mm items give %player% imiko_bow 1'
+#              #
+#   Korg'Han   #
+#              #
+kor_conv: conversation korghan
+#
+kor_acc: folder kor_acc1,kor_acc2,kor_acc3,kor_acc4
+kor_acc1: 'message &a&oVous avez accepté la proposition de Korg''han.'
+kor_acc2: 'message &9&oVous ne pouvez plus vous rendre au village de Mysteria désormais.'
+kor_acc3: tag del akt_qE3
+kor_acc4: tag add kor_acc
+#
+kor_ref: folder kor_ref1,kor_ref2,kor_ref3
+kor_ref1: tag add kor_ref
+kor_ref2: 'command mm mobs kill korghan'
+kor_ref3: mspawnmob -8866;77;4537;Gaia bosskor:1 1
 #                 #
 #   PNJ Loukran   #
 #                 #
@@ -131,27 +195,6 @@ louk_objch1: objective start louk_qch1
 louk_objch2: objective start louk_qch2
 louk_objch3: objective start louk_qch3
 louk_objchall: objective start louk_objchall
-
-
-
-#louk_objch1m: 'message &dIl n''y a rien dans ce coffre, continuez de chercher.'
-#louk_verch2: if louk_ch1 louk_objch2 else louk_refch2
-#louk_refch2: 'message &dVous oubliez sûrement des endroits à fouiller !'
-#louk_tagch2: tag del louk_ch1
-#louk_tagch2_1: tag add louk_ch2
-#louk_objch2: objective start louk_qch2
-#louk_objch2m: 'message &dRien dans celui là non plus'
-#louk_verch3: if louk_ch2 louk_objch3 else louk_refch3
-#louk_refch3: 'message &dVous oubliez sûrement des endroits à fouiller !'
-#louk_tagch3: tag del louk_ch2
-#louk_tagch3_1: tag add louk_ch3
-#louk_objch3: objective start louk_qch3
-#louk_objch3m: 'message &dVous avez trouvé l''endroit où se trouve la cargaison'
-#louk_verchall: if louk_ch3 louk_qE2 else louk_refchall
-#louk_refchall: 'message &dVos recherches ne sont pas terminées, continuez !'
-#
-# Hollish Proposition
-#
 #
 louk_chest_tester1: folder louk_chest_tag,louk_chest_found1,louk_give_key
 louk_chest_tag: tag add louk_ch1
@@ -179,7 +222,6 @@ louk_chest_found13: tag del louk_ch2
 louk_chest_closed4: folder louk_chest_closed5,louk_objch3
 louk_chest_closed5: 'message &c&oCe coffre est fermé à clé !'
 #
-# ~~~~~~~~~~~~~~~~~~
 louk_chest_testerall: if louk_ch3 louk_qE2 else louk_chest_forget
 louk_chest_forget: folder louk_chest_forget1,louk_objchall delay:2
 louk_chest_forget1: 'message &c&oVous avez sûrement oublier quelque chose !'
@@ -188,7 +230,7 @@ louk_qE2: folder louk_qE21,louk_qE22,louk_qE23,louk_qE24,louk_qE25,louk_qE26
 louk_qE21: objective start louk_qE2
 louk_qE22: tag del louk_ch3
 louk_qE23: tag add louk_qE2
-louk_qE24: 'message &dAllez voir ce qu''il en est de la cargaison !'
+louk_qE24: 'message &9&oAllez voir ce qu''il en est de la cargaison !'
 louk_qE25: journal del louk_qE1
 louk_qE26: journal add louk_qE2
 #
@@ -224,7 +266,7 @@ tatsu_dv: tag add tatsu_dv
 #
 tatsu_q1: folder tatsu_q11,tatsu_q12,tatsu_q13,tatsu_q14,tatsu_q15
 tatsu_q11: objective start tatsu_q1
-tatsu_q12: 'message &a&oAllez chercher l''objet de Tatsu'
+tatsu_q12: 'message &d&oAllez chercher l''objet de Tatsu'
 tatsu_q13: tag add tatsu_q1
 tatsu_q14: journal add tatsu_q1
 tatsu_q15: compass add tatsu_q1
@@ -248,6 +290,17 @@ tatsu_qdone6: 'command cc open aktarion_reward.yml %player%'
 tatsu_rew1: 'command mm items give %player% korutsu_sword 1'
 tatsu_rew2: 'command mm items give %player% ardenko_axe 1'
 tatsu_rew3: 'command mm items give %player% imiko_bow 1'
+#                 #
+#   PNJ Kitoune   #
+#                 #
+repos_kit: folder repos_kit1,repos_kit2,repos_kit3
+repos_kit1: objective start repos_kit
+repos_kit2: tag add repos_kit
+repos_kit3: 'message &d&oVous vous reposez pour apaiser vos douleurs'
+#
+repos_kit_done: folder repos_kit_done1,repos_kit_done2 delay:300
+repos_kit_done1: tag del repos_kit
+repos_kit_done2: 'message &d&oAprès votre repos, vous vous décidez à vous remettre à la tâche'
 #
 # Mechanisme de Porte
 #
@@ -265,3 +318,4 @@ porte1_open1: setblock REDSTONE_BLOCK -8970;76;4676;Gaia
 porte1_timer_close: folder porte1_close_testeur delay:2
 porte1_close_testeur: if porte1_door_check porte1_timer_close else porte1_close
 porte1_close: setblock AIR -8970;76;4676;Gaia
+

@@ -107,7 +107,7 @@ airblast:
     - 'directe devant vous.'
     - ' '
     - '&cRequiert:'
-    - '&a100 &cPoints de Spiritualité'
+    - '&a150 &cPoints de Spiritualité'
   POSITION-X: 1
   POSITION-Y: 3
 
@@ -154,7 +154,7 @@ tornade:
     - 'Crée une Tornade destructrice.'
     - ' '
     - '&cRequiert:'
-    - '&a1000 &cPoints de Spiritualité'
+    - '&a750 &cPoints de Spiritualité'
   POSITION-X: 9
   POSITION-Y: 3
 
@@ -171,7 +171,7 @@ poussee:
     - 'l''Air qui vous entoure'
     - ' '
     - '&cRequiert:'
-    - '&a200 &cPoints de Spiritualité'
+    - '&a150 &cPoints de Spiritualité'
   POSITION-X: 4
   POSITION-Y: 3
 
@@ -187,7 +187,7 @@ airshield:
     - 'avec un bouclier d''Air'
     - ' '
     - '&cRequiert:'
-    - '&a300 &cPoints de Spiritualité'
+    - '&a250 &cPoints de Spiritualité'
   POSITION-X: 5
   POSITION-Y: 3
 
@@ -204,7 +204,7 @@ enhancedspeed:
     - 'l''Air qui vous entoure'
     - ' '
     - '&cRequiert:'
-    - '&a500 &cPoints de Spiritualité'
+    - '&a300 &cPoints de Spiritualité'
   POSITION-X: 7
   POSITION-Y: 3
 

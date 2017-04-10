@@ -7,32 +7,40 @@
 #
 #
 varobj: variable
-sanctuary_door: location -7110;67;2441;Gaia;20 events:sanctuary_door
-castle_door: location -7013;89;2937;Gaia;7 events:castle_door
-biblio_door: location -6723;66;2885;Gaia;14 events:biblio_door
+sanctuary_door: location -7110;67;2441;Gaia 20 events:sanctuary_door
+castle_door: location -7013;89;2937;Gaia 7 events:castle_door
+biblio_door: location -6723;66;2885;Gaia 14 events:biblio_door
+louvre_doors: location -9729;71;2452;Gaia 10 events:louvre_doors
+louvre_stairs: location -9729;72;2387;Gaia 20 events:louvre_stairs
 #
-mine_athelas1: location -6825;56;2900;Gaia;5 conditions:!autorisation_mineur events:voleur
-mine_athelas2: location -6840;51;2887;Gaia;10 conditions:!autorisation_mineur events:voleur
-mine_athelas3: location -6860;51;2882;Gaia;10 conditions:!autorisation_mineur events:voleur
-mine_athelas4: location -6880;54;2877;Gaia;7 conditions:!autorisation_mineur events:voleur
-mine_athelas5: location -6892;57;2873;Gaia;5 conditions:!autorisation_mineur events:voleur
-mine_athelas6: location -6831;50;2877;Gaia;11 conditions:!autorisation_mineur events:voleur
-mine_athelas7: location -6815;57;2907;Gaia;6 conditions:!autorisation_mineur events:voleur
+mine_athelas1: location -6825;56;2900;Gaia 5 conditions:!autorisation_mineur events:voleur
+mine_athelas2: location -6840;51;2887;Gaia 10 conditions:!autorisation_mineur events:voleur
+mine_athelas3: location -6860;51;2882;Gaia 10 conditions:!autorisation_mineur events:voleur
+mine_athelas4: location -6880;54;2877;Gaia 7 conditions:!autorisation_mineur events:voleur
+mine_athelas5: location -6892;57;2873;Gaia 5 conditions:!autorisation_mineur events:voleur
+mine_athelas6: location -6831;50;2877;Gaia 11 conditions:!autorisation_mineur events:voleur
+mine_athelas7: location -6815;57;2907;Gaia 6 conditions:!autorisation_mineur events:voleur
+#
+#   PRISON Objectives
+#
+prison_bq_user1: delay 15 events:prison_bq_user4
+prison_bq_user2: delay 30 events:prison_bq_user5
+prison_bq_user3: delay 60 events:prison_bq_user6
 #
 ticket_timer: delay 15 events:ticket_over
 obj_train_ticket_reader: action right any conditions:train_ticket_hand events:ticket_reader
 #
 #Reach platform
 #
-gare_summon: location -6522;70;3158;Gaia;4 events:gare_summon_exe
-guilde_summon: location -6922;65;3164;Gaia;4 events:guilde_summon_exe
-porteo_summon: location -7061;68;3157;Gaia;4 events:porteo_summon_exe
-chateau_summon: location -6933;64;2941;Gaia;4 events:chateau_summon_exe
-porten_summon: location -6756;65;2799;Gaia;4 events:porten_summon_exe
-gm_summon: location -6614;81;2969;Gaia;4 events:gm_summon_exe
-nains_summon: location -6491;95;2773;Gaia;4 events:nains_summon_exe
-village_summon: location -6840;66;2589;Gaia;4 events:village_summon_exe
-sanct_summon: location -7019;62;2494;Gaia;4 events:sanct_summon_exe
+gare_summon: location -6522;70;3158;Gaia 4 events:gare_summon_exe
+guilde_summon: location -6922;65;3164;Gaia 4 events:guilde_summon_exe
+porteo_summon: location -7061;68;3157;Gaia 4 events:porteo_summon_exe
+chateau_summon: location -6933;64;2941;Gaia 4 events:chateau_summon_exe
+porten_summon: location -6756;65;2799;Gaia 4 events:porten_summon_exe
+gm_summon: location -6614;81;2969;Gaia 4 events:gm_summon_exe
+nains_summon: location -6491;95;2773;Gaia 4 events:nains_summon_exe
+village_summon: location -6840;66;2589;Gaia 4 events:village_summon_exe
+sanct_summon: location -7019;62;2494;Gaia 4 events:sanct_summon_exe
 #
 #Get in Cart
 #
@@ -54,32 +62,37 @@ mine_obj_distance: region mine_athelas_mine events:mine_obj_distance_exe
 mine_obj_distance_exe: delay 0 conditions:!or_in_mine_athelas events:mine_abandon interval:200
 mine_obj_logout: logout events:mine_abandon
 #
-orno_book: action any BOOKSHELF loc:-6630;64;2883;Gaia;1 conditions:orno_book events:orno_book_give,message_book,orno_book_tagged
-orno_beta: action any BOOKSHELF loc:-6632;64;2887;Gaia;1 conditions:orno_beta events:orno_book_beta_give,message_book_beta,orno_book_tagged2
+orno_book: action any BOOKSHELF loc:-6630;64;2883;Gaia range:1 conditions:orno_book events:orno_book_give,message_book,orno_book_tagged
+orno_beta: action any BOOKSHELF loc:-6632;64;2887;Gaia range:1 conditions:orno_beta events:orno_book_beta_give,message_book_beta,orno_book_tagged2
 book_erudit: craft book_and_quill 1 events:tag_erudit_book
 #
 #
+# Temples
 #
-obj_air_mill: location -2912;186;2868;Gaia;4 events:air_mill_attained
-obj_air_temple_loc1: location -2895;197;2877;Gaia;3 events:air_meka1
-obj_air_temple_loc2: location -2858;165;2885;Gaia;3 events:air_meka2
-obj_air_temple_loc3: location -2877;180;3049;Gaia;3 events:air_meka3
-obj_air_temple_loc4: location -2908;125;3020;Gaia;2 events:air_meka4
-obj_air_temple_loc5: location -2928;158;3000;Gaia;2 events:air_meka5
+#
+obj_air_mill: location -2912;186;2868;Gaia 4 events:air_mill_attained
+obj_air_temple_loc1: location -2895;197;2877;Gaia 3 events:air_meka1
+obj_air_temple_loc2: location -2858;165;2885;Gaia 3 events:air_meka2
+obj_air_temple_loc3: location -2877;180;3049;Gaia 3 events:air_meka3
+obj_air_temple_loc4: location -2908;125;3020;Gaia 2 events:air_meka4
+obj_air_temple_loc5: location -2928;158;3000;Gaia 2 events:air_meka5
 #
 obj_milo_fiole: craft fiole 1 events:milo_fiole_mess,tag_milo_fiole
-obj_air_catcher: action right any conditions:region_east,fiole_hand events:air_captured,take_fiole,give_fiole_air_est,milo_fiole1 loc:-5000;60;5000;Gaia;7000
-obj_fiole_sommet: location -6880;111;2530;Gaia;5 conditions:!midday,fiole_air_have events:fiole_calmed
+obj_air_catcher: action right any conditions:region_east,fiole_hand events:air_captured,take_fiole,give_fiole_air_est,milo_fiole1 loc:-5000;60;5000;Gaia range:7000
+obj_fiole_sommet: location -6880;111;2530;Gaia 5 conditions:!midday,fiole_air_have events:fiole_calmed
 aang_baton_obj: craft baton 1 events:aang_baton_obj_done
 #
-obj_gros_os: action right GRASS conditions:os3_hand events:burried_gros_os loc:-5000;60;5000;Gaia;7000
+#
+obj_earth_fiole: craft fiole 7 events:earth_fiole_mess,tag_earth_fiole
+#
+obj_gros_os: action right GRASS conditions:os3_hand events:burried_gros_os loc:-5000;60;5000;Gaia range:7000
 #
 # Ingor
 #
 obj_nauco_weapons1: craft ironaxe 3 events:nauco_weapons1_done
 obj_nauco_weapons2: craft iron_chestplate 3 events:nauco_weapons2_done
 sancossi_kill_obj: mmobkill sancossi amount:1 events:sancossi_killed
-obj_rally_dwarves: location -6293;95;2664;Gaia;15 events:rally_dwarves
+obj_rally_dwarves: location -6293;95;2664;Gaia 15 events:rally_dwarves
 sancossi_abandon_obj: delay 0 conditions:!dwarf_castle_occupied_exe events:sancossi_abandon
 objective_casar_killingspree: mmobkill zombielvlnorth amount:15 events:casar_killed_spree notify
 hrota_obj: mmobkill zombielvlnorth amount:30 conditions:around_ingor_mine events:hrota_tank_killed notify
@@ -92,16 +105,6 @@ hrota_obj2: mmobkill skeletonlvlnorth amount:20 conditions:around_ingor_mine eve
 terre_find: action right any conditions:pierre_terre_hand events:terre_find_exe 
 #
 #
-louvre_obj: password 'mellon' ignoreCase events:louvre_open
+#louvre_obj: password 'mellon' ignoreCase events:louvre_open
 #
-# MiniGames
-#
-uhc_obj_kill_solo: kill 1 required:tag_uhc events:uhc_obj_kill_solo_done
-uhc_obj_kill_team1: kill 1 required:uhc_not_team1 events:uhc_obj_kill_team1_done
-uhc_obj_kill_team2: kill 1 required:uhc_not_team2 events:uhc_obj_kill_team2_done
-uhc_obj_kill_team3: kill 1 required:uhc_not_team3 events:uhc_obj_kill_team3_done
-uhc_obj_kill_team4: kill 1 required:uhc_not_team4 events:uhc_obj_kill_team4_done
-#
-uhc_die: die cancel respawn:-10414;25;4912;Gaia events:uhc_death
-
 

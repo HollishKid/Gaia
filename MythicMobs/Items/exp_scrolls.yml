@@ -1,0 +1,356 @@
+########################################################
+#
+#
+#            EXPERIENCE SCROLLS
+#
+#
+########################################################
+#
+#
+#
+#####   EPEE
+#
+#
+sword_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Epées'
+sword_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Epées'
+sword_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Epées'
+#
+#
+#####   ACROBATIES
+#
+#
+acrobatic_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Acrobaties'
+acrobatic_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Acrobaties'
+acrobatic_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Acrobaties'
+#
+#
+#####   BUCHERONNAGE
+#
+#
+woodcutting_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Bûcheronnage'
+woodcutting_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Bûcheronnage'
+woodcutting_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Bûcheronnage'
+#
+#
+#####   PECHE
+#
+#
+fishing_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Pêche'
+fishing_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Pêche'
+fishing_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Pêche'
+#
+#
+#####   MINAGE
+#
+#
+mining_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Minage'
+mining_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Minage'
+mining_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Minage'
+#
+#
+#####   EXCAVATION
+#
+#
+excavation_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Excavation'
+excavation_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Excavation'
+excavation_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Excavation'
+#
+#
+#####   HACHES
+#
+#
+axes_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Haches'
+axes_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Haches'
+axes_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Haches'
+#
+#
+#####   FISTING -.-
+#
+#
+fisting_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Poings'
+fisting_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Poings'
+fisting_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Poings'
+#
+#
+#####   TIR A L'ARC
+#
+#
+archery_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Tir à l''arc'
+archery_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Tir à l''arc'
+archery_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Tir à l''arc'
+#
+#
+#####   TAMING
+#
+#
+taming_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Apprivoisement'
+taming_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Apprivoisement'
+taming_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Apprivoisement'
+#
+#
+#####   FONTE
+#
+#
+smelting_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Fonte'
+smelting_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Fonte'
+smelting_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Fonte'
+#
+#
+#####   ALCHIMIE
+#
+#
+alchemy_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Fonte'
+alchemy_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Fonte'
+alchemy_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Fonte'

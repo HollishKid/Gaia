@@ -1,0 +1,352 @@
+#
+#
+# Guildes - Travaux Communs
+#
+#
+on mcmmo player experience gain:
+	if event-skilltype is mining:
+		if event-player meets betonquest condition "metier_mineur":
+			if {minage_contributors::*} contains "%event-player%":
+				add 1 to {minage_total}
+			else:
+				message "&dVous commencez votre contribution à la Cagnotte du métier Mineur !"
+				message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+				message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+				message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+				message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+				add 1 to {minage_total}
+				add event-player to {minage_contributors::*}
+
+	else if event-skilltype is excavation:
+		if event-player meets betonquest condition "metier_excavation":
+			if {excavation_contributors::*} contains "%event-player%":
+				add 1 to {excavation_total}
+			else:
+				message "&dVous commencez votre contribution à la Cagnotte du métier Excavateur !"
+				message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+				message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+				message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+				message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+				add 1 to {excavation_total}
+				add event-player to {excavation_contributors::*}
+
+	else if event-skilltype is woodcutting:
+		if event-player meets betonquest condition "metier_bucheron":
+			if {bûcheronnage_contributors::*} contains "%event-player%":
+				add 1 to {bûcheronnage_total}
+			else:
+				message "&dVous commencez votre contribution à la Cagnotte du métier Bûcheron !"
+				message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+				message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+				message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+				message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+				add 1 to {bûcheronnage_total}
+				add event-player to {bûcheronnage_contributors::*}
+
+	else if event-skilltype is herbalism:
+		if event-player meets betonquest condition "metier_herboriste":
+			if {herboristerie_contributors::*} contains "%event-player%":
+				add 1 to {herboristerie_total}
+			else:
+				message "&dVous commencez votre contribution à la Cagnotte du métier Herboriste !"
+				message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+				message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+				message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+				message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+				add 1 to {herboristerie_total}
+				add event-player to {herboristerie_contributors::*}
+			
+	else if event-skilltype is unarmed:
+		if event-player meets betonquest condition "metier_poings":
+			if {poings_contributors::*} contains "%event-player%":
+				add 1 to {poings_total}
+			else:
+				message "&dVous commencez votre contribution à la Cagnotte du métier Pugiliste !"
+				message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+				message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+				message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+				message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+				add 1 to {poings_total}
+				add event-player to {poings_contributors::*}
+
+	else if event-skilltype is archery:
+		if event-player meets betonquest condition "metier_arc":
+			if {arc_contributors::*} contains "%event-player%":
+				add 1 to {arc_total}
+			else:
+				message "&dVous commencez votre contribution à la Cagnotte du métier Archer !"
+				message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+				message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+				message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+				message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+				add 1 to {arc_total}
+				add event-player to {arc_contributors::*}
+
+	else if event-skilltype is acrobatics:
+		if event-player meets betonquest condition "metier_acrobate":
+			if {acrobatie_contributors::*} contains "%event-player%":
+				add 1 to {acrobatie_total}
+			else:
+				message "&dVous commencez votre contribution à la Cagnotte du métier Acrobate !"
+				message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+				message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+				message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+				message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+				add 1 to {acrobatie_total}
+				add event-player to {acrobatie_contributors::*}
+
+	else if event-skilltype is fishing:
+		if event-player meets betonquest condition "metier_peche":
+			if {pêche_contributors::*} contains "%event-player%":
+				add 1 to {pêche_total}
+			else:
+				message "&dVous commencez votre contribution à la Cagnotte du métier Pêcheur !"
+				message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+				message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+				message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+				message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+				add 1 to {pêche_total}
+				add event-player to {pêche_contributors::*}
+				
+	else if event-skilltype is taming:
+		if event-player meets betonquest condition "metier_apprivoiseur":
+			if {apprivoisement_contributors::*} contains "%event-player%":
+				add 1 to {apprivoisement_total}
+			else:
+				message "&dVous commencez votre contribution à la Cagnotte du métier Apprivoiseur !"
+				message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+				message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+				message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+				message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+				add 1 to {apprivoisement_total}
+				add event-player to {apprivoisement_contributors::*}
+
+	else if event-skilltype is repair:
+		if event-player meets betonquest condition "metier_reparation":
+			if {réparation_contributors::*} contains "%event-player%":
+				add 1 to {réparation_total}
+			else:
+				message "&dVous commencez votre contribution à la Cagnotte du métier Réparateur !"
+				message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+				message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+				message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+				message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+				add 1 to {réparation_total}
+				add event-player to {réparation_contributors::*}
+				
+	else if event-skilltype is alchemy:
+		if event-player meets betonquest condition "metier_alchimiste":
+			if {alchimie_contributors::*} contains "%event-player%":
+				add 1 to {alchimie_total}
+			else:
+				message "&dVous commencez votre contribution à la Cagnotte du métier Alchimiste !"
+				message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+				message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+				message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+				message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+				add 1 to {alchimie_total}
+				add event-player to {alchimie_contributors::*}
+				
+	else:
+		set {_skill} to "%event-skilltype%"
+		if {_skill} is "épées":
+			if event-player meets betonquest condition "metier_epees":
+				if {épées_contributors::*} contains "%event-player%":
+					add 1 to {épées_total}
+				else:
+					message "&dVous commencez votre contribution à la Cagnotte du métier Épées !"
+					message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+					message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+					message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+					message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+					add 1 to {épées_total}
+					add event-player to {épées_contributors::*}
+
+		else if {_skill} is "haches":
+			if event-player meets betonquest condition "metier_haches":
+				if {haches_contributors::*} contains "%event-player%":
+					add 1 to {haches_total}
+				else:
+					message "&dVous commencez votre contribution à la Cagnotte du métier Milicien !"
+					message "&d&oEn adoptant un métier, vous ajoutez 1xp à la cagnotte dès que vous gagnez de l'expérience."
+					message "&d&oEn augmentant un niveau, vous ajoutez 100xp à la cagnotte !"
+					message "&d&oLes contributions de tous les membres de ce métier sont redistribuées, tous les dimanches."
+					message "&d&oPour plus d'information, consultez votre Maître de Guilde."
+					add 1 to {haches_total}
+					add event-player to {haches_contributors::*}
+
+
+on mcmmo skill level up:
+
+	if event-skilltype is mining:
+		if event-player meets betonquest condition "metier_mineur":
+			if {minage_contributors::*} contains "%event-player%":
+				add 100 to {minage_total}
+			else:
+				add event-player to {minage_contributors::*}
+				add 100 to {minage_total}
+	
+	else if event-skilltype is excavation:
+		if event-player meets betonquest condition "metier_excavation":
+			if {excavation_contributors::*} contains "%event-player%":
+				add 100 to {excavation_total}
+			else:
+				add event-player to {excavation_contributors::*}
+				add 100 to {excavation_total}
+	
+	else if event-skilltype is woodcutting:
+		if event-player meets betonquest condition "metier_bucheron":
+			if {bûcheronnage_contributors::*} contains "%event-player%":
+				add 100 to {bûcheronnage_total}
+			else:
+				add event-player to {bûcheronnage_contributors::*}
+				add 100 to {bûcheronnage_total}
+			
+	else if event-skilltype is herbalism:
+		if event-player meets betonquest condition "metier_herboriste":
+			if {herboristerie_contributors::*} contains "%event-player%":
+				add 100 to {herboristerie_total}
+			else:
+				add event-player to {herboristerie_contributors::*}
+				add 100 to {herboristerie_total}
+	
+	else if event-skilltype is unarmed:
+		if event-player meets betonquest condition "metier_poings":
+			if {poings_contributors::*} contains "%event-player%":
+				add 100 to {poings_total}
+			else:
+				add event-player to {poings_contributors::*}
+				add 100 to {poings_total}
+	
+	else if event-skilltype is archery:
+		if event-player meets betonquest condition "metier_arc":
+			if {arc_contributors::*} contains "%event-player%":
+				add 100 to {arc_total}
+			else:
+				add event-player to {arc_contributors::*}
+				add 100 to {arc_total}
+		
+	else if event-skilltype is acrobatics:
+		if event-player meets betonquest condition "metier_acrobate":
+			if {acrobatie_contributors::*} contains "%event-player%":
+				add 100 to {acrobatie_total}
+			else:
+				add event-player to {acrobatie_contributors::*}
+				add 100 to {acrobatie_total}
+		
+	else if event-skilltype is fishing:
+		if event-player meets betonquest condition "metier_peche":
+			if {pêche_contributors::*} contains "%event-player%":
+				add 100 to {pêche_total}
+			else:
+				add event-player to {pêche_contributors::*}
+				add 100 to {pêche_total}
+		
+	else if event-skilltype is taming:
+		if event-player meets betonquest condition "metier_apprivoiseur":
+			if {apprivoisement_contributors::*} contains "%event-player%":
+				add 100 to {apprivoisement_total}
+			else:
+				add event-player to {apprivoisement_contributors::*}
+				add 100 to {apprivoisement_total}
+		
+	else if event-skilltype is repair:
+		if event-player meets betonquest condition "metier_reparation":
+			if {réparation_contributors::*} contains "%event-player%":
+				add 100 to {réparation_total}
+			else:
+				add event-player to {réparation_contributors::*}
+				add 100 to {réparation_total}
+				
+	else if event-skilltype is alchemy:
+		if event-player meets betonquest condition "metier_alchimiste":
+			if {alchimie_contributors::*} contains "%event-player%":
+				add 100 to {alchimie_total}
+			else:
+				add event-player to {alchimie_contributors::*}
+				add 100 to {alchimie_total}
+				
+	else:
+		set {_skill} to "%event-skilltype%"
+		if {_skill} is "épées":
+			if event-player meets betonquest condition "metier_epees":
+				if {épées_contributors::*} contains "%event-player%":
+					add 100 to {épées_total}
+				else:
+					add event-player to {épées_contributors::*}
+					add 100 to {épées_total}
+			
+		if {_skill} is "haches":
+			if event-player meets betonquest condition "metier_haches":
+				if {haches_contributors::*} contains "%event-player%":
+					add 100 to {haches_total}
+				else:
+					add event-player to {haches_contributors::*}
+					add 100 to {haches_total}
+		
+on join:
+	wait 60 seconds
+	if {minage_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Mineur !"
+		execute console command "addxp %player% minage %{minage_%player%}%"
+		delete {minage_%player%}
+		
+	if {excavation_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Excavateur !"
+		execute console command "addxp %player% excavation %{excavation_%player%}%"
+		delete {excavation_%player%}
+	
+	if {bûcheronnage_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Bûcheron !"
+		execute console command "addxp %player% bûcheronnage %{bûcheronnage_%player%}%"
+		delete {bûcheronnage_%player%}
+		
+	if {herboristerie_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Herboriste !"
+		execute console command "addxp %player% herboristerie %{herboristerie_%player%}%"
+		delete {herboristerie_%player%}
+
+	if {poings_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Pugiliste !"
+		execute console command "addxp %player% poings %{poings_%player%}%"
+		delete {poings_%player%}
+
+	if {arc_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Archer !"
+		execute console command "addxp %player% arc %{arc_%player%}%"
+		delete {arc_%player%}
+		
+	if {épées_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Épéiste !"
+		execute console command "addxp %player% épées %{épées_%player%}%"
+		delete {épées_%player%}
+		
+	if {haches_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Milicien !"
+		execute console command "addxp %player% haches %{haches_%player%}%"
+		delete {haches_%player%}
+		
+	if {acrobatie_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Acrobate !"
+		execute console command "addxp %player% acrobatie %{acrobatie_%player%}%"
+		delete {acrobatie_%player%}
+		
+	if {pêche_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Pêcheur !"
+		execute console command "addxp %player% pêche %{pêche_%player%}%"
+		delete {pêche_%player%}
+		
+	if {apprivoisement_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Apprivoiseur !"
+		execute console command "addxp %player% apprivoisement %{apprivoisement_%player%}%"
+		delete {apprivoisement_%player%}
+		
+	if {réparation_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Réparateur !"
+		execute console command "addxp %player% réparation %{réparation_%player%}%"
+		delete {réparation_%player%}
+		
+	if {alchimie_%player%} is set:
+		message "&a&oVous recevez de l'Expérience pour avoir contribué à la Cagnotte du métier Alchimiste !"
+		execute console command "addxp %player% alchimie %{alchimie_%player%}%"
+		delete {alchimie_%player%}

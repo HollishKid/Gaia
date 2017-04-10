@@ -10,40 +10,61 @@ on break:
 		if player's gamemode is survival:
 			if town at player exists:
 				stop
-			if "%{place.location.%{day.index::1}%::*}%" contains "%location of event-block%":
+			if "%{place.location.%{day.index}%::*}%" contains "%location of event-block%":
 				stop
 			else:
-				add location of event-block to {break.location.%{day.index::1}%::*}
-				add type of event-block to {break.type.%{day.index::1}%::*}
-	else:
-		if event-block is in the region "mine_athelas_mine":
-			if "%{place.location.mine1::*}%" contains "%location of event-block%":
-				stop
-			else:	
-				if player's gamemode is survival:
-					add location of event-block to {break.location.mine1::*}
-					add type of event-block to {break.type.mine1::*}
-		if event-block is in the region "mine_athelas_mine2":
-			if "%{place.location.mine2::*}%" contains "%location of event-block%":
+				add location of event-block to {break.location.%{day.index}%::*}
+				add type of event-block to {break.type.%{day.index}%::*}
+	else if event-block is in the region "mine_athelas_mine":
+		if "%{place.location.mine1::*}%" contains "%location of event-block%":
+			stop
+		else:	
+			if player's gamemode is survival:
+				add location of event-block to {break.location.mine1::*}
+				add type of event-block to {break.type.mine1::*}
+	else if event-block is in the region "mine_athelas_mine2":
+		if "%{place.location.mine2::*}%" contains "%location of event-block%":
+			stop
+		else:
+			if player's gamemode is survival:
+				add location of event-block to {break.location.mine2::*}
+				add type of event-block to {break.type.mine2::*}
+	else if event-block is in the region "dwarf_mine":
+		if "%{place.location.mine3::*}%" contains "%location of event-block%":
+			stop
+		else:
+			if player's gamemode is survival:
+				add location of event-block to {break.location.mine3::*}
+				add type of event-block to {break.type.mine3::*}
+	else if event-block is in the region "ingor_volcano":
+		if "%{place.location.volcano::*}%" contains "%location of event-block%":
+			stop
+		else:
+			if player's gamemode is survival:
+				add location of event-block to {break.location.volcano::*}
+				add type of event-block to {break.type.volcano::*}
+	else if event-block is in the region "foret_athelas":
+		if player's gamemode is survival:
+			add location of event-block to {break.location.foret::*}
+			add type of event-block to {break.type.foret::*}
+	else if event-block is in the region "foret_athelas2":
+		if player's gamemode is survival:
+			add location of event-block to {break.location.foret2::*}
+			add type of event-block to {break.type.foret2::*}
+	else if event-block is in the region "residences":
+		if "%{louvre_registre::*}%" contains "%player%":
+			if "%{louvre_contributors::*}%" contains "%player%":
+				add 1 to {block.breaks.louvre}
+			else:
+				add player to {louvre_contributors::*}
+				add 1 to {block.breaks.louvre}
+	else if event-block is in the region "skywars":
+		if player's gamemode is survival:
+			if "%{mini.skywars.place::*}%" contains "%location of event-block%":
 				stop
 			else:
-				if player's gamemode is survival:
-					add location of event-block to {break.location.mine2::*}
-					add type of event-block to {break.type.mine2::*}
-		if event-block is in the region "dwarf_mine":
-			if "%{place.location.mine3::*}%" contains "%location of event-block%":
-				stop
-			else:
-				if player's gamemode is survival:
-					add location of event-block to {break.location.mine3::*}
-					add type of event-block to {break.type.mine3::*}
-		if event-block is in the region "ingor_volcano":
-			if "%{place.location.volcano::*}%" contains "%location of event-block%":
-				stop
-			else:
-				if player's gamemode is survival:
-					add location of event-block to {break.location.volcano::*}
-					add type of event-block to {break.type.volcano::*}
+				add location of event-block to {mini.skywars.location::*}
+				add type of event-block to {mini.skywars.type::*}
 
 on place:
 	if event-block is in the region "east":
@@ -51,16 +72,36 @@ on place:
 			if town at player exists:
 				stop
 			else:
-				add location of event-block to {place.location.%{day.index::1}%::*}
-	if event-block is in the region "mine_athelas_mine":
+				add location of event-block to {place.location.%{day.index}%::*}
+	else if event-block is in the region "mine_athelas_mine":
 		if player's gamemode is survival:
 			add location of event-block to {place.location.mine1::*}
-	if event-block is in the region "mine_athelas_mine2":
+	else if event-block is in the region "mine_athelas_mine2":
 		if player's gamemode is survival:
 			add location of event-block to {place.location.mine2::*}
-	if event-block is in the region "dwarf_mine":
+	else if event-block is in the region "foret_athelas2":
+		if player's gamemode is survival:
+			cancel event
+	else if event-block is in the region "dwarf_mine":
 		if player's gamemode is survival:
 			add location of event-block to {place.location.mine3::*}
-	if event-block is in the region "volcano":
+	else if event-block is in the region "ingor_volcano":
 		if player's gamemode is survival:
-			add location of event-block to {place.location.volcano::*}	
+			add location of event-block to {place.location.volcano::*}
+	else if event-block is in the region "residences":
+		if "%{louvre_registre::*}%" contains "%player%":
+			if "%{louvre_contributors::*}%" contains "%player%":
+				add 1 to {block.placed.louvre}
+			else:
+				add player to {louvre_contributors::*}
+				add 1 to {block.placed.louvre}
+	else if event-block is in the region "skywars":
+		if player's gamemode is survival:
+			add location of event-block to {mini.skywars.place::*}
+
+on leaves decay:
+	if event-block is in the region "foret_athelas":
+		cancel event
+	else if event-block is in the region "foret_athelas2":
+		cancel event
+		

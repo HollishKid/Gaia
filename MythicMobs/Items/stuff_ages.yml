@@ -1,12 +1,12 @@
 casque1:
   Id: 298
   Data: 0
-  Display: '&3Casque 1er Âge'
+  Display: '&5Casque 1er Âge'
   Lore:
   - '&e&oCe casque fut porté par les'
   - '&e&opremiers habitants de Gaïa.'
   - ' '
-  - '&7&oRareté : &3Épique'
+  - '&7&oRareté : &5Épique'
   Amount: 1
   Attributes:
     Head:
@@ -21,12 +21,12 @@ casque1:
 plastron1:
   Id: 299
   Data: 0
-  Display: '&3Plastron 1er Âge'
+  Display: '&5Plastron 1er Âge'
   Lore:
   - '&e&oCe plastron fut porté par les'
   - '&e&opremiers habitants de Gaïa.'
   - ' '
-  - '&7&oRareté : &3Épique'
+  - '&7&oRareté : &5Épique'
   Amount: 1
   Attributes:
     Chest:
@@ -42,12 +42,12 @@ plastron1:
 jambieres1:
   Id: 300
   Data: 0
-  Display: '&3Jambieres 1er Âge'
+  Display: '&5Jambieres 1er Âge'
   Lore:
   - '&e&oCes jambières furent portées par'
   - '&e&oles premiers habitants de Gaïa.'
   - ' '
-  - '&7&oRareté : &3Épique'
+  - '&7&oRareté : &5Épique'
   Amount: 1
   Attributes:
     Legs:
@@ -62,12 +62,12 @@ jambieres1:
 souliers1:
   Id: 301
   Data: 0
-  Display: '&3Bottes 1er Âge'
+  Display: '&5Bottes 1er Âge'
   Lore:
   - '&e&oCes bottes furent portées par'
   - '&e&oles premiers habitants de Gaïa.'
   - ' '
-  - '&7&oRareté : &3Épique'  
+  - '&7&oRareté : &5Épique'  
   Amount: 1
   Attributes:
     Feet:
@@ -83,12 +83,12 @@ souliers1:
 epee1:
   Id: 283
   Data: 0
-  Display: '&3Épée 1er Âge'
+  Display: '&5Épée 1er Âge'
   Lore:
   - '&e&oCette épée fut forgée par les'
   - '&e&opremiers habitants de Gaïa.'
   - ' '
-  - '&7&oRareté : &3Épique' 
+  - '&7&oRareté : &5Épique' 
   Amount: 1
   Attributes:
     MainHand:
@@ -102,12 +102,12 @@ epee1:
 hache1:
   Id: 286
   Data: 0
-  Display: '&3Hache 1er Âge'
+  Display: '&5Hache 1er Âge'
   Lore:
   - '&e&oCette hache fut utilisée par'
   - '&e&oles premiers habitants de Gaïa.'
   - ' '
-  - '&7&oRareté : &3Épique' 
+  - '&7&oRareté : &5Épique' 
   Amount: 1
   Attributes:
     MainHand:
@@ -124,12 +124,12 @@ hache1:
 casque2:
   Id: 298
   Data: 0
-  Display: '&aCasque 2ème Âge'
+  Display: '&9Casque 2ème Âge'
   Lore:
   - '&e&oUn casque ancien de'
   - '&e&ol''époque du Roi Ubu.'
   - ' '
-  - '&7&oRareté : &aRare'
+  - '&7&oRareté : &9Rare'
   Amount: 1
   Attributes:
     Head:
@@ -144,12 +144,12 @@ casque2:
 plastron2:
   Id: 299
   Data: 0
-  Display: '&aPlastron 2ème Âge'
+  Display: '&9Plastron 2ème Âge'
   Lore:
   - '&e&oUn plastron ancien de'
   - '&e&ol''époque du Roi Ubu.'
   - ' '
-  - '&7&oRareté : &aRare'
+  - '&7&oRareté : &9Rare'
   Amount: 1
   Attributes:
     Chest:
@@ -165,12 +165,12 @@ plastron2:
 jambieres2:
   Id: 300
   Data: 0
-  Display: '&aJambieres 2ème Âge'
+  Display: '&9Jambieres 2ème Âge'
   Lore:
   - '&e&oDes jambières anciennes de'
   - '&e&ol''époque du Roi Ubu.'
   - ' '
-  - '&7&oRareté : &aRare'
+  - '&7&oRareté : &9Rare'
   Amount: 1
   Attributes:
     Legs:
@@ -185,12 +185,12 @@ jambieres2:
 souliers2:
   Id: 301
   Data: 0
-  Display: '&aBottes 2ème Âge'
+  Display: '&9Bottes 2ème Âge'
   Lore:
   - '&e&oDes bottes anciennes de'
   - '&e&ol''époque du Roi Ubu.'
   - ' '
-  - '&7&oRareté : &aRare'  
+  - '&7&oRareté : &9Rare'  
   Amount: 1
   Attributes:
     Feet:
@@ -206,12 +206,12 @@ souliers2:
 epee2:
   Id: 283
   Data: 0
-  Display: '&aÉpée 2ème Âge'
+  Display: '&9Épée 2ème Âge'
   Lore:
   - '&e&oCette épée fut forgée par les'
   - '&e&oHommes du Roi Ubu.'
   - ' '
-  - '&7&oRareté : &aRare' 
+  - '&7&oRareté : &9Rare' 
   Amount: 1
   Attributes:
     MainHand:
@@ -225,12 +225,12 @@ epee2:
 hache2:
   Id: 286
   Data: 0
-  Display: '&aHache 2ème Âge'
+  Display: '&9Hache 2ème Âge'
   Lore:
   - '&e&oCette hache fut utilisée par'
   - '&e&oles Hommes du Roi Ubu.'
   - ' '
-  - '&7&oRareté : &aRare' 
+  - '&7&oRareté : &9Rare' 
   Amount: 1
   Attributes:
     MainHand:

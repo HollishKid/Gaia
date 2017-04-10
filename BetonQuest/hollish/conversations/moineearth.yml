@@ -1,0 +1,27 @@
+quester: 'Moine'
+first: bonjour
+stop: 'false'
+NPC_options:
+  bonjour:
+    text: 'Bonjour &2%player% &a&o!'
+    pointers: qui,temple,athelas
+  qui_rep:
+    text: 'Je viens d''une contrée peu connue par ici...'
+  temple_rep:
+    text: 'Allons-y Jeune Maître de la Terre !'
+    events: tree_temple
+  athelas_rep:
+    text: 'Allons-y Jeune Maître de la Terre !'
+    events: tree_athelas
+player_options:
+  qui:
+    text: 'Qui êtes vous ?'
+    pointers: qui_rep
+  temple:
+    text: 'Je voudrais retourner au Temple de la Terre.'
+    conditions: 'tag_toph'
+    pointers: temple_rep
+  athelas:
+    text: 'Je voudrais retourner à Athelas.'
+    conditions: 'tag_toph'
+    pointers: athelas_rep

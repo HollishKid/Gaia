@@ -15,7 +15,18 @@
 # Basique
 #
 #
+#
+#
+# Cuir
+#
+#
 on load:
+    new Recipe "biere"
+    "biere".Recipe.setIngredient{5, 1 wheat named "Houblon" with lore "Ce houblon peut||servir à faire de la||bonne bière !"};
+    "biere".Recipe.setIngredient{8, 1 water bucket};
+    "biere".Recipe.setResult{1 bottle of water named "Bière" with lore "&e&oCette bière est||&e&oartisanale de Gaïa !"};
+    "biere".Recipe.register{};
+
     new Recipe "casque_cuir"
     "casque_cuir".Recipe.setIngredient{1, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
     "casque_cuir".Recipe.setIngredient{2, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
@@ -60,6 +71,51 @@ on load:
     "pieds_cuir".Recipe.setResult{1 leather boots named "Bottes en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !"};
     "pieds_cuir".Recipe.register{};
 #
+# Outils
+#
+    new Recipe "pioche_cuir"
+    "pioche_cuir".Recipe.setIngredient{1, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
+    "pioche_cuir".Recipe.setIngredient{2, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
+    "pioche_cuir".Recipe.setIngredient{3, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
+    "pioche_cuir".Recipe.setIngredient{5, 1 stick};
+    "pioche_cuir".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "pioche_cuir".Recipe.setResult{1 wooden pickaxe named "Pioche en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !"};
+    "pioche_cuir".Recipe.register{};
+    
+    new Recipe "pelle_cuir"
+    "pelle_cuir".Recipe.setIngredient{2, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
+    "pelle_cuir".Recipe.setIngredient{5, 1 stick};
+    "pelle_cuir".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "pelle_cuir".Recipe.setResult{1 wooden spade named "Pelle en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !"};
+    "pelle_cuir".Recipe.register{};
+    
+    new Recipe "houe_cuir"
+    "houe_cuir".Recipe.setIngredient{1, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
+    "houe_cuir".Recipe.setIngredient{2, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
+    "houe_cuir".Recipe.setIngredient{5, 1 stick};
+    "houe_cuir".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "houe_cuir".Recipe.setResult{1 wooden hoe named "Houe en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !"};
+    "houe_cuir".Recipe.register{};
+#
+# Armes
+#
+    new Recipe "epee_cuir"
+    "epee_cuir".Recipe.setIngredient{2, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
+    "epee_cuir".Recipe.setIngredient{5, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
+    "epee_cuir".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "epee_cuir".Recipe.setResult{1 wooden sword named "Épée en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !"};
+    "epee_cuir".Recipe.register{};
+
+    new Recipe "hache_cuir"
+    "hache_cuir".Recipe.setIngredient{1, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
+    "hache_cuir".Recipe.setIngredient{2, 1 leather named "Cuir Tanné" with lore "Ce cuir est||beaucoup plus robuste !"};
+    "hache_cuir".Recipe.setIngredient{5, 1 stick};
+    "hache_cuir".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "hache_cuir".Recipe.setResult{1 wooden axe named "Hache en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !"};
+    "hache_cuir".Recipe.register{};
+#
+#
+# Maille
 #
 #
     new Recipe "casque_maille"
@@ -106,6 +162,52 @@ on load:
     "pieds_maille".Recipe.setResult{1 chainmail boots named "Bottes de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !"};
     "pieds_maille".Recipe.register{};
 #
+# Outils
+#
+    new Recipe "pioche_maille"
+    "pioche_maille".Recipe.setIngredient{1, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "pioche_maille".Recipe.setIngredient{2, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "pioche_maille".Recipe.setIngredient{3, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "pioche_maille".Recipe.setIngredient{5, 1 stick};
+    "pioche_maille".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "pioche_maille".Recipe.setResult{1 stone pickaxe named "Pioche de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !"};
+    "pioche_maille".Recipe.register{};
+    
+    new Recipe "pelle_maille"
+    "pelle_maille".Recipe.setIngredient{2, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "pelle_maille".Recipe.setIngredient{5, 1 stick};
+    "pelle_maille".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "pelle_maille".Recipe.setResult{1 stone spade named "Pelle de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !"};
+    "pelle_maille".Recipe.register{};
+    
+    new Recipe "houe_maille"
+    "houe_maille".Recipe.setIngredient{1, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "houe_maille".Recipe.setIngredient{2, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "houe_maille".Recipe.setIngredient{5, 1 stick};
+    "houe_maille".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "houe_maille".Recipe.setResult{1 stone hoe named "Houe de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !"};
+    "houe_maille".Recipe.register{};
+#
+# Armes
+#
+    new Recipe "epee_maille"
+    "epee_maille".Recipe.setIngredient{2, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "epee_maille".Recipe.setIngredient{5, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "epee_maille".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "epee_maille".Recipe.setResult{1 stone sword named "Épée de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !"};
+    "epee_maille".Recipe.register{};
+
+    new Recipe "hache_maille"
+    "hache_maille".Recipe.setIngredient{1, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "hache_maille".Recipe.setIngredient{2, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "hache_maille".Recipe.setIngredient{4, 1 string named "Mailles" with lore "Cette maille fera||une armure correcte."};
+    "hache_maille".Recipe.setIngredient{5, 1 stick};
+    "hache_maille".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "hache_maille".Recipe.setResult{1 stone axe named "Hache de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !"};
+    "hache_maille".Recipe.register{};
+#
+#
+# Fer
 #
 #
     new Recipe "casque_fer"
@@ -152,6 +254,53 @@ on load:
     "pieds_fer".Recipe.setResult{1 iron boots named "Bottes en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !"};
     "pieds_fer".Recipe.register{};
 #
+# Outils
+#
+    new Recipe "pioche_fer"
+    "pioche_fer".Recipe.setIngredient{1, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "pioche_fer".Recipe.setIngredient{2, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "pioche_fer".Recipe.setIngredient{3, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "pioche_fer".Recipe.setIngredient{5, 1 stick};
+    "pioche_fer".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "pioche_fer".Recipe.setResult{1 iron pickaxe named "Pioche en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !"};
+    "pioche_fer".Recipe.register{};
+    
+    new Recipe "pelle_fer"
+    "pelle_fer".Recipe.setIngredient{2, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "pelle_fer".Recipe.setIngredient{5, 1 stick};
+    "pelle_fer".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "pelle_fer".Recipe.setResult{1 iron spade named "Pelle en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !"};
+    "pelle_fer".Recipe.register{};
+    
+    new Recipe "houe_fer"
+    "houe_fer".Recipe.setIngredient{1, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "houe_fer".Recipe.setIngredient{2, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "houe_fer".Recipe.setIngredient{5, 1 stick};
+    "houe_fer".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "houe_fer".Recipe.setResult{1 iron hoe named "Houe en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !"};
+    "houe_fer".Recipe.register{};
+#
+# Armes
+#
+    new Recipe "epee_fer"
+    "epee_fer".Recipe.setIngredient{2, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "epee_fer".Recipe.setIngredient{5, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "epee_fer".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "epee_fer".Recipe.setResult{1 iron sword named "Épée en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !"};
+    "epee_fer".Recipe.register{};
+
+    new Recipe "hache_fer"
+    "hache_fer".Recipe.setIngredient{1, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "hache_fer".Recipe.setIngredient{2, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "hache_fer".Recipe.setIngredient{4, 1 iron ingot named "Fer Forgé" with lore "Ce fer est||très dense !"};
+    "hache_fer".Recipe.setIngredient{5, 1 stick};
+    "hache_fer".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "hache_fer".Recipe.setResult{1 iron axe named "Hache en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !"};
+    "hache_fer".Recipe.register{};
+
+#
+#
+# Or
 #
 #
     new Recipe "casque_or"
@@ -198,6 +347,52 @@ on load:
     "pieds_or".Recipe.setResult{1 gold boots named "Bottes en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..."};
     "pieds_or".Recipe.register{};
 #
+# Outils
+#
+    new Recipe "pioche_or"
+    "pioche_or".Recipe.setIngredient{1, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "pioche_or".Recipe.setIngredient{2, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "pioche_or".Recipe.setIngredient{3, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "pioche_or".Recipe.setIngredient{5, 1 stick};
+    "pioche_or".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "pioche_or".Recipe.setResult{1 gold pickaxe named "Pioche en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..."};
+    "pioche_or".Recipe.register{};
+    
+    new Recipe "pelle_or"
+    "pelle_or".Recipe.setIngredient{2, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "pelle_or".Recipe.setIngredient{5, 1 stick};
+    "pelle_or".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "pelle_or".Recipe.setResult{1 gold spade named "Pelle en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..."};
+    "pelle_or".Recipe.register{};
+    
+    new Recipe "houe_or"
+    "houe_or".Recipe.setIngredient{1, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "houe_or".Recipe.setIngredient{2, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "houe_or".Recipe.setIngredient{5, 1 stick};
+    "houe_or".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "houe_or".Recipe.setResult{1 gold hoe named "Houe en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..."};
+    "houe_or".Recipe.register{};
+#
+# Armes
+#
+    new Recipe "epee_or"
+    "epee_or".Recipe.setIngredient{2, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "epee_or".Recipe.setIngredient{5, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "epee_or".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "epee_or".Recipe.setResult{1 gold sword named "Épée en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..."};
+    "epee_or".Recipe.register{};
+
+    new Recipe "hache_or"
+    "hache_or".Recipe.setIngredient{1, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "hache_or".Recipe.setIngredient{2, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "hache_or".Recipe.setIngredient{4, 1 gold ingot named "Or Décoré" with lore "Cet or est||joliment travaillé..."};
+    "hache_or".Recipe.setIngredient{5, 1 stick};
+    "hache_or".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "hache_or".Recipe.setResult{1 gold axe named "Hache en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..."};
+    "hache_or".Recipe.register{};
+#
+#
+# Diamant
 #
 #
     new Recipe "casque_diamant"
@@ -244,17 +439,72 @@ on load:
     "pieds_diamant".Recipe.setResult{1 diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};
     "pieds_diamant".Recipe.register{};
 #
+# Outils
+#
+    new Recipe "pioche_diamant"
+    "pioche_diamant".Recipe.setIngredient{1, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "pioche_diamant".Recipe.setIngredient{2, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "pioche_diamant".Recipe.setIngredient{3, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "pioche_diamant".Recipe.setIngredient{5, 1 stick};
+    "pioche_diamant".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "pioche_diamant".Recipe.setResult{1 diamond pickaxe named "Pioche en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};
+    "pioche_diamant".Recipe.register{};
+    
+    new Recipe "pelle_diamant"
+    "pelle_diamant".Recipe.setIngredient{2, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "pelle_diamant".Recipe.setIngredient{5, 1 stick};
+    "pelle_diamant".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "pelle_diamant".Recipe.setResult{1 diamond spade named "Pelle en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};
+    "pelle_diamant".Recipe.register{};
+    
+    new Recipe "houe_diamant"
+    "houe_diamant".Recipe.setIngredient{1, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "houe_diamant".Recipe.setIngredient{2, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "houe_diamant".Recipe.setIngredient{5, 1 stick};
+    "houe_diamant".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "houe_diamant".Recipe.setResult{1 diamond hoe named "Houe en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};
+    "houe_diamant".Recipe.register{};
+#
+# Armes
+#
+    new Recipe "epee_diamant"
+    "epee_diamant".Recipe.setIngredient{2, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "epee_diamant".Recipe.setIngredient{5, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "epee_diamant".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "epee_diamant".Recipe.setResult{1 diamond sword named "Épée en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};
+    "epee_diamant".Recipe.register{};
+
+    new Recipe "hache_diamant"
+    "hache_diamant".Recipe.setIngredient{1, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "hache_diamant".Recipe.setIngredient{2, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "hache_diamant".Recipe.setIngredient{4, 1 diamond named "Diamant Noble" with lore "Ce diamant est||d'une qualité rare..."};
+    "hache_diamant".Recipe.setIngredient{5, 1 stick};
+    "hache_diamant".Recipe.setIngredient{8, 1 emerald named "Emeraude Polie" with lore "Cet Emeraude est||très raffiné !"};
+    "hache_diamant".Recipe.setResult{1 diamond axe named "Hache en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..."};
+    "hache_diamant".Recipe.register{};
+#
+#
+#
 #
 # Volcanique
 #
 #
+#
+#
+
+#
+#
+# Fer
+#
+#
+
     new Recipe "casque_fer_volcanique"
     "casque_fer_volcanique".Recipe.setIngredient{1, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
-    "casque_fer_volcanique".Recipe.setIngredient{5, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "casque_fer_volcanique".Recipe.setIngredient{2, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "casque_fer_volcanique".Recipe.setIngredient{3, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "casque_fer_volcanique".Recipe.setIngredient{4, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "casque_fer_volcanique".Recipe.setIngredient{6, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
-    "casque_fer_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "casque_fer_volcanique".Recipe.setIngredient{5, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "casque_fer_volcanique".Recipe.setResult{1 iron helmet named "Casque en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
     "casque_fer_volcanique".Recipe.register{};
   
@@ -262,24 +512,24 @@ on load:
     "plastron_fer_volcanique".Recipe.setIngredient{1, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "plastron_fer_volcanique".Recipe.setIngredient{3, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "plastron_fer_volcanique".Recipe.setIngredient{4, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
-    "plastron_fer_volcanique".Recipe.setIngredient{2, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.setIngredient{5, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "plastron_fer_volcanique".Recipe.setIngredient{6, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "plastron_fer_volcanique".Recipe.setIngredient{7, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "plastron_fer_volcanique".Recipe.setIngredient{8, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "plastron_fer_volcanique".Recipe.setIngredient{9, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
-    "plastron_fer_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "plastron_fer_volcanique".Recipe.setIngredient{2, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "plastron_fer_volcanique".Recipe.setResult{1 iron chestplate named "Plastron en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
     "plastron_fer_volcanique".Recipe.register{};
     
     new Recipe "jambes_fer_volcanique"
     "jambes_fer_volcanique".Recipe.setIngredient{1, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
-    "jambes_fer_volcanique".Recipe.setIngredient{5, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "jambes_fer_volcanique".Recipe.setIngredient{2, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "jambes_fer_volcanique".Recipe.setIngredient{3, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "jambes_fer_volcanique".Recipe.setIngredient{4, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "jambes_fer_volcanique".Recipe.setIngredient{6, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "jambes_fer_volcanique".Recipe.setIngredient{7, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "jambes_fer_volcanique".Recipe.setIngredient{9, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
-    "jambes_fer_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "jambes_fer_volcanique".Recipe.setIngredient{5, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "jambes_fer_volcanique".Recipe.setResult{1 iron leggings named "Jambières en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
     "jambes_fer_volcanique".Recipe.register{};
     
@@ -288,101 +538,238 @@ on load:
     "pieds_fer_volcanique".Recipe.setIngredient{6, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "pieds_fer_volcanique".Recipe.setIngredient{7, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
     "pieds_fer_volcanique".Recipe.setIngredient{9, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
-    "pieds_fer_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "pieds_fer_volcanique".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "pieds_fer_volcanique".Recipe.setResult{1 iron boots named "Bottes en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
     "pieds_fer_volcanique".Recipe.register{};
 #
+# Outils
+#
+    new Recipe "pioche_fer_volca"
+    "pioche_fer_volca".Recipe.setIngredient{1, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "pioche_fer_volca".Recipe.setIngredient{2, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "pioche_fer_volca".Recipe.setIngredient{3, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "pioche_fer_volca".Recipe.setIngredient{5, 1 stick};
+    "pioche_fer_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "pioche_fer_volca".Recipe.setResult{1 iron pickaxe named "Pioche en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
+    "pioche_fer_volca".Recipe.register{};
+    
+    new Recipe "pelle_fer_volca"
+    "pelle_fer_volca".Recipe.setIngredient{2, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "pelle_fer_volca".Recipe.setIngredient{5, 1 stick};
+    "pelle_fer_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "pelle_fer_volca".Recipe.setResult{1 iron spade named "Pelle en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
+    "pelle_fer_volca".Recipe.register{};
+    
+    new Recipe "houe_fer_volca"
+    "houe_fer_volca".Recipe.setIngredient{1, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "houe_fer_volca".Recipe.setIngredient{2, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "houe_fer_volca".Recipe.setIngredient{5, 1 stick};
+    "houe_fer_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "houe_fer_volca".Recipe.setResult{1 iron hoe named "Houe en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
+    "houe_fer_volca".Recipe.register{};
+#
+# Armes
+#
+    new Recipe "epee_fer_volca"
+    "epee_fer_volca".Recipe.setIngredient{2, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "epee_fer_volca".Recipe.setIngredient{5, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "epee_fer_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "epee_fer_volca".Recipe.setResult{1 iron sword named "Épée en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
+    "epee_fer_volca".Recipe.register{};
+
+    new Recipe "hache_fer_volca"
+    "hache_fer_volca".Recipe.setIngredient{1, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "hache_fer_volca".Recipe.setIngredient{2, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "hache_fer_volca".Recipe.setIngredient{4, 1 iron ingot named "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."};
+    "hache_fer_volca".Recipe.setIngredient{5, 1 stick};
+    "hache_fer_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "hache_fer_volca".Recipe.setResult{1 iron axe named "Hache en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif."};
+    "hache_fer_volca".Recipe.register{};
+#
+#
+# Or
 #
 #
     new Recipe "casque_or_volcanique"
-    "casque_or_volcanique".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "casque_or_volcanique".Recipe.setIngredient{5, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "casque_or_volcanique".Recipe.setIngredient{3, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "casque_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "casque_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "casque_or_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setIngredient{2, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setIngredient{3, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "casque_or_volcanique".Recipe.setIngredient{5, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "casque_or_volcanique".Recipe.setResult{1 gold helmet named "Casque en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
     "casque_or_volcanique".Recipe.register{};
   
     new Recipe "plastron_or_volcanique"
-    "plastron_or_volcanique".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "plastron_or_volcanique".Recipe.setIngredient{3, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "plastron_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "plastron_or_volcanique".Recipe.setIngredient{2, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "plastron_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "plastron_or_volcanique".Recipe.setIngredient{7, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "plastron_or_volcanique".Recipe.setIngredient{8, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "plastron_or_volcanique".Recipe.setIngredient{9, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "plastron_or_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{3, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{5, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{7, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{8, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{9, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "plastron_or_volcanique".Recipe.setIngredient{2, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "plastron_or_volcanique".Recipe.setResult{1 gold chestplate named "Plastron en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
     "plastron_or_volcanique".Recipe.register{};
     
     new Recipe "jambes_or_volcanique"
-    "jambes_or_volcanique".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "jambes_or_volcanique".Recipe.setIngredient{5, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "jambes_or_volcanique".Recipe.setIngredient{3, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "jambes_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "jambes_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "jambes_or_volcanique".Recipe.setIngredient{7, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "jambes_or_volcanique".Recipe.setIngredient{9, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "jambes_or_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{2, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{3, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{7, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{9, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "jambes_or_volcanique".Recipe.setIngredient{5, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "jambes_or_volcanique".Recipe.setResult{1 gold leggings named "Jambières en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
     "jambes_or_volcanique".Recipe.register{};
     
     new Recipe "pieds_or_volcanique"
-    "pieds_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "pieds_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "pieds_or_volcanique".Recipe.setIngredient{7, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "pieds_or_volcanique".Recipe.setIngredient{9, 1 gold ingot named "Or Volcanique" with lore "Cet or provient||d'un volcan actif."};
-    "pieds_or_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "pieds_or_volcanique".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "pieds_or_volcanique".Recipe.setIngredient{6, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "pieds_or_volcanique".Recipe.setIngredient{7, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "pieds_or_volcanique".Recipe.setIngredient{9, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "pieds_or_volcanique".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "pieds_or_volcanique".Recipe.setResult{1 gold boots named "Bottes en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
     "pieds_or_volcanique".Recipe.register{};
 #
+# Outils
+#
+    new Recipe "pioche_or_volca"
+    "pioche_or_volca".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "pioche_or_volca".Recipe.setIngredient{2, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "pioche_or_volca".Recipe.setIngredient{3, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "pioche_or_volca".Recipe.setIngredient{5, 1 stick};
+    "pioche_or_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "pioche_or_volca".Recipe.setResult{1 gold pickaxe named "Pioche en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
+    "pioche_or_volca".Recipe.register{};
+    
+    new Recipe "pelle_or_volca"
+    "pelle_or_volca".Recipe.setIngredient{2, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "pelle_or_volca".Recipe.setIngredient{5, 1 stick};
+    "pelle_or_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "pelle_or_volca".Recipe.setResult{1 gold spade named "Pelle en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
+    "pelle_or_volca".Recipe.register{};
+    
+    new Recipe "houe_or_volca"
+    "houe_or_volca".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "houe_or_volca".Recipe.setIngredient{2, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "houe_or_volca".Recipe.setIngredient{5, 1 stick};
+    "houe_or_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "houe_or_volca".Recipe.setResult{1 gold hoe named "Houe en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
+    "houe_or_volca".Recipe.register{};
+#
+# Armes
+#
+    new Recipe "epee_or_volca"
+    "epee_or_volca".Recipe.setIngredient{2, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "epee_or_volca".Recipe.setIngredient{5, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "epee_or_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "epee_or_volca".Recipe.setResult{1 gold sword named "Épée en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
+    "epee_or_volca".Recipe.register{};
+
+    new Recipe "hache_or_volca"
+    "hache_or_volca".Recipe.setIngredient{1, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "hache_or_volca".Recipe.setIngredient{2, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "hache_or_volca".Recipe.setIngredient{4, 1 gold ingot named "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."};
+    "hache_or_volca".Recipe.setIngredient{5, 1 stick};
+    "hache_or_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "hache_or_volca".Recipe.setResult{1 gold axe named "Hache en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif."};
+    "hache_or_volca".Recipe.register{};
+#
+#
+# Diamant
 #
 #
     new Recipe "casque_diamant_volcanique"
-    "casque_diamant_volcanique".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "casque_diamant_volcanique".Recipe.setIngredient{3, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "casque_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "casque_diamant_volcanique".Recipe.setIngredient{5, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "casque_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "casque_diamant_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setIngredient{3, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setIngredient{2, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "casque_diamant_volcanique".Recipe.setIngredient{5, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "casque_diamant_volcanique".Recipe.setResult{1 diamond helmet named "Casque en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
     "casque_diamant_volcanique".Recipe.register{};
   
     new Recipe "plastron_diamant_volcanique"
-    "plastron_diamant_volcanique".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "plastron_diamant_volcanique".Recipe.setIngredient{3, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "plastron_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "plastron_diamant_volcanique".Recipe.setIngredient{2, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "plastron_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "plastron_diamant_volcanique".Recipe.setIngredient{7, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "plastron_diamant_volcanique".Recipe.setIngredient{8, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "plastron_diamant_volcanique".Recipe.setIngredient{9, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "plastron_diamant_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{3, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{5, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{7, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{8, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{9, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "plastron_diamant_volcanique".Recipe.setIngredient{2, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "plastron_diamant_volcanique".Recipe.setResult{1 diamond chestplate named "Plastron en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
     "plastron_diamant_volcanique".Recipe.register{};
     
     new Recipe "jambes_diamant_volcanique"
-    "jambes_diamant_volcanique".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "jambes_diamant_volcanique".Recipe.setIngredient{3, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "jambes_diamant_volcanique".Recipe.setIngredient{5, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "jambes_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "jambes_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "jambes_diamant_volcanique".Recipe.setIngredient{7, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "jambes_diamant_volcanique".Recipe.setIngredient{9, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "jambes_diamant_volcanique".Recipe.setIngredient{2, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{3, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{2, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{7, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{9, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "jambes_diamant_volcanique".Recipe.setIngredient{5, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "jambes_diamant_volcanique".Recipe.setResult{1 diamond leggings named "Jambières en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
     "jambes_diamant_volcanique".Recipe.register{};
 
     new Recipe "pieds_diamant_volcanique"
-    "pieds_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "pieds_diamant_volcanique".Recipe.setIngredient{5, 1 emerald named "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."};
-    "pieds_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "pieds_diamant_volcanique".Recipe.setIngredient{7, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
-    "pieds_diamant_volcanique".Recipe.setIngredient{9, 1 diamond named "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."};
+    "pieds_diamant_volcanique".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "pieds_diamant_volcanique".Recipe.setIngredient{6, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "pieds_diamant_volcanique".Recipe.setIngredient{7, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "pieds_diamant_volcanique".Recipe.setIngredient{9, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "pieds_diamant_volcanique".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
     "pieds_diamant_volcanique".Recipe.setResult{1 diamond boots named "Bottes en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
     "pieds_diamant_volcanique".Recipe.register{};
+#
+# Outils
+#
+    new Recipe "pioche_diamant_volca"
+    "pioche_diamant_volca".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "pioche_diamant_volca".Recipe.setIngredient{2, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "pioche_diamant_volca".Recipe.setIngredient{3, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "pioche_diamant_volca".Recipe.setIngredient{5, 1 stick};
+    "pioche_diamant_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "pioche_diamant_volca".Recipe.setResult{1 diamond pickaxe named "Pioche en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
+    "pioche_diamant_volca".Recipe.register{};
+    
+    new Recipe "pelle_diamant_volca"
+    "pelle_diamant_volca".Recipe.setIngredient{2, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "pelle_diamant_volca".Recipe.setIngredient{5, 1 stick};
+    "pelle_diamant_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "pelle_diamant_volca".Recipe.setResult{1 diamond spade named "Pelle en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
+    "pelle_diamant_volca".Recipe.register{};
+    
+    new Recipe "houe_diamant_volca"
+    "houe_diamant_volca".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "houe_diamant_volca".Recipe.setIngredient{2, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "houe_diamant_volca".Recipe.setIngredient{5, 1 stick};
+    "houe_diamant_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "houe_diamant_volca".Recipe.setResult{1 diamond hoe named "Houe en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
+    "houe_diamant_volca".Recipe.register{};
+#
+# Armes
+#
+    new Recipe "epee_diamant_volca"
+    "epee_diamant_volca".Recipe.setIngredient{2, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "epee_diamant_volca".Recipe.setIngredient{5, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "epee_diamant_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "epee_diamant_volca".Recipe.setResult{1 diamond sword named "Épée en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
+    "epee_diamant_volca".Recipe.register{};
+
+    new Recipe "hache_diamant_volca"
+    "hache_diamant_volca".Recipe.setIngredient{1, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "hache_diamant_volca".Recipe.setIngredient{2, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "hache_diamant_volca".Recipe.setIngredient{4, 1 diamond named "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."};
+    "hache_diamant_volca".Recipe.setIngredient{5, 1 stick};
+    "hache_diamant_volca".Recipe.setIngredient{8, 1 redstone named "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."};
+    "hache_diamant_volca".Recipe.setResult{1 diamond axe named "Hache en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif."};
+    "hache_diamant_volca".Recipe.register{};
+#
 #
 #
 # A partir d'ici, tests à la fermeture d'un inventaire (on s'intéresse qu'aux tables de craft, mais pas moyen de le spécifier)
@@ -422,26 +809,75 @@ on inventory close:
             message "&dNiveau &25 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
 #
+    if player's inventory contains stone pickaxe named "Pioche de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
+        remove stone pickaxe named "Pioche de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
+        if player meets betonquest condition "fonte_1":
+            command "mm items give %player% pioche_maille"
+        else:
+            message "&dNiveau &21 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains stone spade named "Pelle de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
+        remove stone spade named "Pelle de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
+        if player meets betonquest condition "fonte_2":
+            command "mm items give %player% pelle_maille"
+        else:
+            message "&dNiveau &22 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains stone hoe named "Houe de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
+        remove stone hoe named "Houe de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
+        if player meets betonquest condition "fonte_3":
+            command "mm items give %player% houe_maille"
+        else:
+            message "&dNiveau &23 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains stone sword named "Épée de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
+        remove stone sword named "Épée de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
+        if player meets betonquest condition "fonte_4":
+            command "mm items give %player% epee_maille"
+        else:
+            message "&dNiveau &24 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains stone hoe named "Hache de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
+        remove stone hoe named "Hache de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
+        if player meets betonquest condition "fonte_5":
+            command "mm items give %player% hache_maille"
+        else:
+            message "&dNiveau &25 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+#
+#
 #
     if player's inventory contains leather helmet named "Casque en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather helmet named "Casque en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather helmet named "Casque en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's helmet
-        command "mm items give %player% casque_maille"
+        command "mm items give %player% casque_cuir"
 
     if player's inventory contains leather chestplate named "Plastron en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather chestplate named "Plastron en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather chestplate named "Plastron en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's chestplate
-        command "mm items give %player% plastron_maille"
+        command "mm items give %player% plastron_cuir"
 
     if player's inventory contains leather leggings named "Jambières en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather leggings named "Jambières en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather leggings named "Jambières en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's leggings
-        command "mm items give %player% jambes_maille"
+        command "mm items give %player% jambes_cuir"
 
     if player's inventory contains leather boots named "Bottes en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather boots named "Bottes en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather boots named "Bottes en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's shoes
-        command "mm items give %player% pieds_maille"
+        command "mm items give %player% pieds_cuir"
+#
+#
+    if player's inventory contains wooden pickaxe named "Pioche en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
+        remove wooden pickaxe named "Pioche en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
+        command "mm items give %player% pioche_cuir"
+    if player's inventory contains wooden spade named "Pelle en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
+        remove wooden spade named "Pelle en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
+        command "mm items give %player% pelle_cuir"
+    if player's inventory contains wooden hoe named "Houe en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
+        remove wooden hoe named "Houe en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
+        command "mm items give %player% houe_cuir"
+    if player's inventory contains wooden axe named "Hache en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
+        remove wooden axe named "Hache en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
+        command "mm items give %player% hache_cuir"
+    if player's inventory contains wooden sword named "Épée en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
+        remove wooden sword named "Épée en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
+        command "mm items give %player% epee_cuir"
 #
 #
 #
@@ -471,6 +907,38 @@ on inventory close:
         remove iron boots named "Bottes en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's shoes
         if player meets betonquest condition "fonte_10":
             command "mm items give %player% pieds_fer"
+        else:
+            message "&dNiveau &210 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+#
+#
+    if player's inventory contains iron pickaxe named "Pioche en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
+        remove iron pickaxe named "Pioche en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
+        if player meets betonquest condition "fonte_6":
+            command "mm items give %player% pioche_fer"
+        else:
+            message "&dNiveau &26 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains iron spade named "Pelle en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
+        remove iron spade named "Pelle en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
+        if player meets betonquest condition "fonte_7":
+            command "mm items give %player% pelle_fer"
+        else:
+            message "&dNiveau &27 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains iron hoe named "Houe en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
+        remove iron hoe named "Houe en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
+        if player meets betonquest condition "fonte_8":
+            command "mm items give %player% houe_fer"
+        else:
+            message "&dNiveau &28 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains iron sword named "Épée en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
+        remove iron sword named "Épée en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
+        if player meets betonquest condition "fonte_9":
+            command "mm items give %player% epee_fer"
+        else:
+            message "&dNiveau &29 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains iron axe named "Hache en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
+        remove iron axe named "Hache en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
+        if player meets betonquest condition "fonte_10":
+            command "mm items give %player% hache_fer"
         else:
             message "&dNiveau &210 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -506,6 +974,38 @@ on inventory close:
             message "&dNiveau &215 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
 #
+    if player's inventory contains gold pickaxe named "Pioche en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
+        remove gold pickaxe named "Pioche en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
+        if player meets betonquest condition "fonte_11":
+            command "mm items give %player% pioche_or"
+        else:
+            message "&dNiveau &211 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains gold spade named "Pelle en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
+        remove gold spade named "Pelle en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
+        if player meets betonquest condition "fonte_12":
+            command "mm items give %player% pelle_or"
+        else:
+            message "&dNiveau &212 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains gold hoe named "Houe en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
+        remove gold hoe named "Houe en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
+        if player meets betonquest condition "fonte_13":
+            command "mm items give %player% houe_or"
+        else:
+            message "&dNiveau &213 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains gold sword named "Épée en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
+        remove gold sword named "Épée en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
+        if player meets betonquest condition "fonte_14":
+            command "mm items give %player% epee_or"
+        else:
+            message "&dNiveau &214 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains gold axe named "Hache en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
+        remove gold axe named "Hache en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
+        if player meets betonquest condition "fonte_15":
+            command "mm items give %player% hache_or"
+        else:
+            message "&dNiveau &215 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+#
+#
 #
     if player's inventory contains diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
         remove diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
@@ -533,6 +1033,38 @@ on inventory close:
         remove diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's shoes
         if player meets betonquest condition "fonte_20":
             command "mm items give %player% pieds_diamant"
+        else:
+            message "&dNiveau &220 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+#
+#
+    if player's inventory contains diamond pickaxe named "Pioche en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
+        remove diamond pickaxe named "Pioche en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
+        if player meets betonquest condition "fonte_16":
+            command "mm items give %player% pioche_diamant"
+        else:
+            message "&dNiveau &216 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains diamond spade named "Pelle en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
+        remove diamond spade named "Pelle en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
+        if player meets betonquest condition "fonte_17":
+            command "mm items give %player% pelle_diamant"
+        else:
+            message "&dNiveau &217 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains diamond hoe named "Houe en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
+        remove diamond hoe named "Houe en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
+        if player meets betonquest condition "fonte_18":
+            command "mm items give %player% houe_diamant"
+        else:
+            message "&dNiveau &218 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains diamond sword named "Épée en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
+        remove diamond sword named "Épée en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
+        if player meets betonquest condition "fonte_19":
+            command "mm items give %player% epee_diamant"
+        else:
+            message "&dNiveau &219 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains diamond axe named "Hache en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
+        remove diamond axe named "Hache en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
+        if player meets betonquest condition "fonte_20":
+            command "mm items give %player% hache_diamant"
         else:
             message "&dNiveau &220 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -569,6 +1101,38 @@ on inventory close:
             message "&dNiveau &210 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
 #
+    if player's inventory contains iron pickaxe named "Pioche en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
+        remove iron pickaxe named "Pioche en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_6":
+            command "mm items give %player% pioche_fer_volcanique"
+        else:
+            message "&dNiveau &26 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains iron spade named "Pelle en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
+        remove iron spade named "Pelle en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_7":
+            command "mm items give %player% pelle_fer_volcanique"
+        else:
+            message "&dNiveau &27 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains iron hoe named "Houe en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
+        remove iron hoe named "Houe en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_8":
+            command "mm items give %player% houe_fer_volcanique"
+        else:
+            message "&dNiveau &28 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains iron sword named "Épée en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
+        remove iron sword named "Épée en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_9":
+            command "mm items give %player% epee_fer_volcanique"
+        else:
+            message "&dNiveau &29 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains iron axe named "Hache en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
+        remove iron axe named "Hache en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_10":
+            command "mm items give %player% hache_fer_volcanique"
+        else:
+            message "&dNiveau &210 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+#
+#
 #
     if player's inventory contains gold helmet named "Casque en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
         remove gold helmet named "Casque en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
@@ -596,6 +1160,38 @@ on inventory close:
         remove gold boots named "Bottes en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's shoes
         if player meets betonquest condition "fonte_15":
             command "mm items give %player% pieds_or_volcanique"
+        else:
+            message "&dNiveau &215 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+#
+#
+    if player's inventory contains gold pickaxe named "Pioche en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
+        remove gold pickaxe named "Pioche en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_11":
+            command "mm items give %player% pioche_or_volcanique"
+        else:
+            message "&dNiveau &211 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains gold spade named "Pelle en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
+        remove gold spade named "Pelle en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_12":
+            command "mm items give %player% pelle_or_volcanique"
+        else:
+            message "&dNiveau &212 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains gold hoe named "Houe en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
+        remove gold hoe named "Houe en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_13":
+            command "mm items give %player% houe_or_volcanique"
+        else:
+            message "&dNiveau &213 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains gold sword named "Épée en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
+        remove gold sword named "Épée en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_14":
+            command "mm items give %player% epee_or_volcanique"
+        else:
+            message "&dNiveau &214 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+    if player's inventory contains gold axe named "Hache en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
+        remove gold axe named "Hache en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_15":
+            command "mm items give %player% hache_or_volcanique"
         else:
             message "&dNiveau &215 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -631,6 +1227,42 @@ on inventory close:
             message "&dNiveau &220 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
 #
+    if player's inventory contains diamond pickaxe named "Pioche en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
+        remove diamond pickaxe named "Pioche en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_16":
+            command "mm items give %player% pioche_diamant_volcanique"
+        else:
+            message "&dNiveau &216 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+			
+    if player's inventory contains diamond spade named "Pelle en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
+        remove diamond spade named "Pelle en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_17":
+            command "mm items give %player% pelle_diamant_volcanique"
+        else:
+            message "&dNiveau &217 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+			
+    if player's inventory contains diamond hoe named "Houe en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
+        remove diamond hoe named "Houe en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_18":
+            command "mm items give %player% houe_diamant_volcanique"
+        else:
+            message "&dNiveau &218 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+			
+    if player's inventory contains diamond sword named "Épée en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
+        remove diamond sword named "Épée en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_19":
+            command "mm items give %player% epee_diamant_volcanique"
+        else:
+            message "&dNiveau &219 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+			
+    if player's inventory contains diamond axe named "Hache en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
+        remove diamond axe named "Hache en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
+        if player meets betonquest condition "fonte_20":
+            command "mm items give %player% hache_diamant_volcanique"
+        else:
+            message "&dNiveau &220 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
+#
+#
 # Custom Mining in Volcano
 #
 #
@@ -641,22 +1273,26 @@ on break:
 				cancel event
 				set event-block to air
 				drop 1 emerald with name "Emeraude Volcanique" with lore "Cet Emeraude provient||d'un volcan actif."
-			if event-block is iron ore:
+			else if event-block is iron ore:
 				cancel event
 				set event-block to air
 				drop 1 iron ingot with name "Fer Volcanique" with lore "Ce Fer provient||d'un volcan actif."
-			if event-block is gold ore:
+			else if event-block is gold ore:
 				cancel event
 				set event-block to air
 				drop 1 gold ingot with name "Or Volcanique" with lore "Cet Or provient||d'un volcan actif."
-			if event-block is diamond ore:
+			else if event-block is diamond ore:
 				cancel event
 				set event-block to air
-				drop 1 diamond with name "Diamant Volcanique" with lore "Ce diamant provient||d'un volcan actif."
-			if event-block is lapis ore:
+				drop 1 diamond with name "Diamant Volcanique" with lore "Ce Diamant provient||d'un volcan actif."
+			else if event-block is lapis ore:
 				cancel event
 				set event-block to air
 				drop 1 lapis with name "Lapis Volcanique" with lore "Ce Lapis provient||d'un volcan actif."
-			if event-block is obsidian:
+			else if event-block is redstone ore:
+				cancel event
+				set event-block to air
+				drop 1 redstone with name "Redstone Volcanique" with lore "Cette redstone provient||d'un volcan actif."
+			else if event-block is obsidian:
 				cancel event
 				message "Cette obsidienne est trop dure pour être cassée..."

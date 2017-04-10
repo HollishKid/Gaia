@@ -1,9 +1,11 @@
 #
+# -------------------------------
 #
-# Message for ZEDD
-#
-#   J'ai modifié toutes tes "command addxp %player% [remplacé par nouveau nom français]"
-#
+quest_point_1: folder default.quest_point_1
+quest_point_2: folder default.quest_point_2
+quest_point_3: folder default.quest_point_3
+quest_point_4: folder default.quest_point_4
+quest_point_5: folder default.quest_point_5
 #
 #
 event_test: if zae_lavatear testok else testpasok
@@ -78,15 +80,13 @@ maka_j5: journal add maka_j5
 maka_j5_del: journal del maka_j5
 maka_j6: journal add maka_j6
 maka_j6_del: journal del maka_j6
-maka_j7: journal add maka_j7
-maka_j7_del: journal del maka_j7
 #
 makarov_access: folder makarow_access_exe,makarov_access_journal
 makarow_access_exe: tag add makarov_access
 maka_inconvers: tag add maka_inconvers
 maka_outconvers: tag del maka_inconvers
 maka_presentation: folder maka_p1,maka_next,maka_suite1 delay:5
-maka_p1: 'message &2Makarov :&a&o Tu trouvera dans ces salons des revendeurs appartenant à la guilde, tu bénéficieras donc de meilleurs tarifs.'
+maka_p1: 'message &2Makarov :&a&o Tu trouveras dans ces salons maintes gens en quête d''aventure !'
 maka_suite1: folder maka_p2,maka_suite3 delay:4
 maka_p2: 'message &2Makarov :&a&o Tu pourras aussi trouver du travail plus facilement grâce aux autres membres de la guilde que tu rencontras.'
 maka_suite3: folder maka_p3 delay:2
@@ -100,13 +100,13 @@ maka_q1reward: folder maka_mess5,maka_mess6,maka_mess7,maka_fold0 delay:2
 maka_mess5: 'message &6'
 maka_mess6: 'message &6&oVous racontez ce qu''il s''est dit lors de la réunion.'
 maka_mess7: 'message &6'
-maka_fold0: folder maka_mess0,maka_mess02,maka_item1,maka_mess00,maka_eco1,maka_fold1 delay:3
+maka_fold0: folder maka_mess0,maka_mess02,maka_item1,maka_mess00,maka_eco1,quest_point_1,maka_fold1 delay:3
 maka_mess0: 'message &2Makarov:&a&o Prend ça, tu l''as bien mérité, et cela pourrait se révéler utile pour la suite!'
 maka_mess02: 'message &6&oRéunion suspecte (terminé)'
 maka_item1: 'command mm items give %player% leatherlegs_common'
 maka_mess00: 'message &6&oVous recevez un &aPantalon en cuir&6&o.'
 maka_eco1: 'command eco give %player% 500'
-maka_fold1: folder drisgan.tag_succesremove,maka_q1done,maka_endq1,maka_outconvers,maka_convers delay:4
+maka_fold1: folder drisgan.tag_succesremove,maka_q1done,maka_endq1,maka_outconvers,maka_convers,quest_point_1 delay:4
 maka_q1done: tag add maka_q1done
 maka_endq1: tag del maka_q1start
 maka_convers: conversation makarov
@@ -142,21 +142,41 @@ maka_title23: 'command title %player% title {"text":"A la conquête de Drisgan",
 #
 maka_etape3: folder maka_mess10,maka_fold4 delay:5
 maka_mess10: 'message &2Makarov : &a&oUn traître aux contrebandiers tu dis ? Qui aurait volé un &6Objet &a&odangereux ? Évidemment, il serait pratique que cet &6Objet&a&o soit encore en sa possession..'
-maka_fold4: folder maka_mess11,maka_j4_del,maka_j5,maka_givechain,maka_givechainmess,maka_q2end,maka_q2done,maka_q3start,makarov_denyaccess,maka_outconvers delay:8
+maka_fold4: folder maka_mess11,quest_point_1,maka_j4_del,maka_j5,maka_givechain,maka_givechainmess,maka_q2end,maka_q2done,maka_q3start,makarov_denyaccess,maka_outconvers delay:8
 maka_mess11: 'message &2Makarov : &a&oEssaye de retrouver sa trace, comme te le demandes &2Lasswell&a&o, après tout, il n''est pas bon pour &dAthelas&a&o que les contrebandiers soient trop agités. Prend ceci, et bon courage !'
-maka_givechain: 'command mm i give %player% chainchest'
+maka_givechain: 'command mm items give %player% chainchest'
 maka_givechainmess: 'message &6&oVous recevez une &aCotte de mailles&6&o.'
 maka_q3start: tag add maka_q3start
 maka_q3end: tag del maka_q3start
 maka_q2end: tag del maka_q2start
 maka_q2done: tag add maka_q2done
 maka_q3done: tag add maka_q3done
+maka_lootcoffre: give coffre_mysterieux:1
+maka_takecoffre: take coffre_mysterieux:1
+#
+### Maka finish. Yeah.
+#
+maka_end1: folder maka_end1_money,maka_takecoffre,maka_goodchoice,maka_endfolder delay:1
+maka_end1_money: 'command eco give %player% 4500'
+maka_goodchoice: tag add maka_goodchoice
+maka_end2: folder maka_end2_money,maka_badchoice,maka_endfolder delay:1
+maka_end2_money: 'command eco give %player% 1500'
+maka_badchoice: tag add maka_badchoice
+#
+maka_endfolder: folder maka_mess12,maka_endfolder2 delay:3
+maka_mess12: 'message &2Makarov : &a&oTu as démontré ta valeur, aux yeux de la guilde et aux miens. Je parlerai en ta faveur à l''Intendant, cela t''ouvriras des portes!'
+maka_endfolder2: folder maka_mess13,maka_allclean,maka_end,quest_point_3,maka_j6_del,maka_tempo_journal_intendant,makarov_denyaccess
+maka_mess13: 'message &2Makarov : &a&oPuisse Gaïa guider tes pas et ton bras.'
+maka_end: tag add maka_end
+maka_allclean: folder maka_remove_q1done,maka_remove_q2done,maka_remove_q3done,maka_remove_etape1,maka_remove_etape2
+maka_remove_q1done: tag del maka_q1done
+maka_remove_q2done: tag del maka_q2done
+maka_remove_q3done: tag del maka_q3done
+maka_remove_etape1: tag del maka_etape1
+maka_remove_etape2: tag del maka_etape2
 #
 #
-# Tempo redirect
 #
-#
-maka_tempo_done: folder maka_tempo_journal_intendant,makarov_denyaccess,drisgan.tempo_remover
 maka_tempo_journal_intendant: journal add maka_tempo_journal_intendant
 maka_tempo_journal_intendant_del: journal del maka_tempo_journal_intendant
 #
@@ -216,7 +236,7 @@ jim_title1: folder jim_title11,jim_title12,jim_title13 delay:4
 jim_title11: 'command title %player% times 40 60 80'
 jim_title12: 'command title %player% subtitle {"text":"Le test de recrutement","color":"gold"}'
 jim_title13: 'command title %player% title {"text":"Guilde des Aventuriers","color":"green"}'
-jim_firstend: folder progress_done,jim_removestart1,makarov_access,jim_reward1,jim_q1done
+jim_firstend: folder progress_done,quest_point_1,jim_removestart1,makarov_access,jim_reward1,jim_q1done
 jim_reward1: folder jim_reward1_item,jim_reward1_mess,jim_reward1_mess1,jim_reward1_money delay:1
 jim_reward1_item: 'command mm items give %player% stonesword_common'
 jim_reward1_mess: 'message &6&oLe test de recrutement (terminé)'
@@ -230,7 +250,7 @@ jim_q2start: tag add jim_q2start
 jim_q2end: tag del jim_q2start
 jim_inconvers: tag add jim_inconvers
 jimconvers_done: tag del jim_inconvers
-jim_q2ending: folder jim_q2done,jim_convers,progress_done,jim_q2_journal_del,jim_q23_journal delay:4
+jim_q2ending: folder jim_q2done,quest_point_1,jim_convers,progress_done,jim_q2_journal_del,jim_q23_journal delay:4
 jim_q2done: tag add jim_q2done
 jim_convers: conversation jim_convers
 #
@@ -319,7 +339,7 @@ Mkilled: tag add Mkilled
 ynv_MBkilled_check: if ynv_MBkilled ynv_MBkilled_folder else nothing
 ynv_MBkilled_folder: folder ynv_q12_journal,ynv_q13_journal
 #
-ynv_q1reward: folder ynv_reward1mess,ynv_xpreward1,ynv_money1,ynv_q1rewarditem,ynv_q1rewardmess,ynv_q1done,ynv_endq1,ynv_clean1,ynv_clean2,ynv_q1_journal_del delay:2
+ynv_q1reward: folder quest_point_1,ynv_reward1mess,ynv_xpreward1,ynv_money1,ynv_q1rewarditem,ynv_q1rewardmess,ynv_q1done,ynv_endq1,ynv_clean1,ynv_clean2,ynv_q1_journal_del delay:2
 ynv_reward1mess: 'message &6&oLeçon de diplomatie, de force (terminé)'
 ynv_xpreward1: 'command addxp %player% épées 3000'
 ynv_money1: 'command eco give %player% 500'
@@ -329,7 +349,7 @@ ynv_q1done: tag add ynv_q1done
 ynv_endq1: tag del ynv_q1start
 ynv_clean1: tag del Mkilled
 ynv_clean2: tag del Bkilled
-ynv_q2reward: folder ynv_reward2mess,ynv_xpreward2,ynv_money2,ynv_q2rewarditem,ynv_q2rewardmess,ynv_q2done,ynv_endq2,ynv_q2_journal_del delay:2
+ynv_q2reward: folder quest_point_1,ynv_reward2mess,ynv_xpreward2,ynv_money2,ynv_q2rewarditem,ynv_q2rewardmess,ynv_q2done,ynv_endq2,ynv_q2_journal_del delay:2
 ynv_reward2mess: 'message &6&oLeçon de diplomatie, de gré (terminé)'
 ynv_xpreward2: 'command addxp %player% acrobatie 1500'
 ynv_money2: 'command eco give %player% 500'
@@ -353,9 +373,9 @@ ynv_q3messretry: 'message &6En cas d''échec, vous pouvez recommencer cette quê
 #
 # Récompense de Yvngard & la Cache des Voleurs
 ynv_q3done: tag add ynv_q3done
-ynv_q3reward: folder ynv_q3mess1,ynv_q3item,ynv_q3mess2,ynv_q3eco,yre_eventdoneremove,ynv_endprogress,ynv_q3end,ynv_q3_journal_del delay:2
+ynv_q3reward: folder quest_point_1,ynv_q3mess1,ynv_q3item,ynv_q3mess2,ynv_q3eco,yre_eventdoneremove,ynv_endprogress,ynv_q3end,ynv_q3_journal_del delay:2
 ynv_q3mess1: 'message &6&oHold-up chez les voleurs! (terminé)'
-ynv_q3item: 'command mm i give %player% bow_common'
+ynv_q3item: 'command mm items give %player% bow_common'
 ynv_q3mess2: 'message &6&oVous recevez un &aArc simple&6&o.'
 ynv_q3eco: 'command eco give %player% 2500'
 yre_eventdoneremove: tag del yre_eventdone
@@ -506,7 +526,7 @@ thiefkey_fold_occupied2: folder thieftreasure_removemember,thiefkey_fold_occupie
 thiefkey_fold_occupied_message: 'message &dIl semblerait que quelqu''un soit déjà entrain d''explorer cette cache, &crevenez plus tard&d!'
 thiefkey_fold_occupied_tele: teleport -7593;63;3072;Gaia
 ## ELSE
-thiefkey_fold: folder thieftreasure_member,open_thieftreasure
+thiefkey_fold: folder thieftreasure_member,open_thieftreasure,thieftreasure_tempo_tag
 thieftreasure_member: 'command region addmember thief_treasure -w Gaia %player%'
 thieftreasure_removemember: 'command region removemember thief_treasure -w Gaia %player%'
 open_thieftreasure: folder open_thieftreasure_exe,tt_closedelay delay:2
@@ -514,7 +534,9 @@ open_thieftreasure_exe: setblock REDSTONE_BLOCK -7587;58;3058;Gaia
 tt_closedelay: folder close_thieftreasure delay:7
 close_thieftreasure: setblock AIR -7587;58;3058;Gaia
 ##
-thieftreasure_reset: folder thieftreasure_removemember,yre_depop,orion_depop,orion_gateopen,fold_depop,yre_objkill_delete,yre_clean
+thieftreasure_tempo_tag: tag add thieftreasure_tempo_tag
+thieftreasure_tempo_tag_del: tag del thieftreasure_tempo_tag
+thieftreasure_reset: folder thieftreasure_tempo_tag,thieftreasure_removemember,yre_depop,orion_depop,orion_gateopen,fold_depop,yre_objkill_delete,yre_clean condition:thieftreasure_tempo_tag
 #
 nothing: tag del lachatemissembales
 ###
@@ -536,7 +558,7 @@ var_q1start: tag add var_q1start
 var_q1start_fold: folder var_q1start,var_convers_done,var_pitch_remove
 var_convers_done: tag del var_inconvers
 var_pitch_remove: tag del var_pitch
-var_q1reward: folder var_money1,var_xpreward1,var_q1startremove,var_q1done,var_takeitem1,var_takeitem2,var_q1_journal_del delay:1
+var_q1reward: folder quest_point_1,var_money1,var_xpreward1,var_q1startremove,var_q1done,var_takeitem1,var_takeitem2,var_q1_journal_del delay:1
 var_money1: 'command eco give %player% 1250'
 var_xpreward1: 'command addxp %player% alchimie 2500'
 var_q1startremove: tag del var_q1start
@@ -571,7 +593,7 @@ zae_noloc_mess: 'message &6&oVous n''êtes pas à portée d''une zone à relever
 zae_noloc_check1: if zae_chatal_done zae_relevedonef else zae_noloc_check2
 zae_noloc_check2: if zae_biblio_done zae_relevedonef else zae_noloc_check3
 zae_noloc_check3: if zae_grande_done zae_relevedonef else zae_relevedonef
-#zae_q12_journal
+#
 zae_relevedonef: folder zae_noloc_reset,zae_relevedone delay:1
 zae_noloc_reset: objective start zae_click4
 zae_click4_remove: objective delete zae_click4
@@ -590,7 +612,7 @@ zae_loc3mess: 'message &6&oVous êtes à portée de: &dGrand Marché&6.'
 zae_q1if: if zae_checkq1 zae_q1if_folder else nothing
 zae_q1if_folder: folder zae_q13_journal,zae_q12_journal
 #
-zae_q1reward: folder zae_mess00,zae_takehyper,zae_eco,zae_xpreward,zae_clean,zae_click4_remove
+zae_q1reward: folder quest_point_1,zae_mess00,zae_takehyper,zae_eco,zae_xpreward,zae_clean,zae_click4_remove
 zae_mess00: 'message &6&oFaire les relevés (terminé)'
 zae_takehyper: take hypercap:1
 zae_eco: 'command eco give %player% 500'
@@ -627,7 +649,7 @@ zae_faillefold: folder zae_faillemess1,zae_obj4_delete,zae_q2_journal_del,zae_q2
 zae_q21_journal: journal add zae_q22_journal
 zae_q12_journal_del: journal del zae_q22_journal
 zae_faillemess1: 'message &2Hypercapaciteur:&6&o Enregistrement terminé.'
-zae_q2reward: folder zae_mess7,zae_eco2,zae_mess8,zae_givesandales,zae_takehyperreg,zae_clean1,zae_clean2,zae_q2done,zae_q12_journal_del delay:1
+zae_q2reward: folder quest_point_1,zae_mess7,zae_eco2,zae_mess8,zae_givesandales,zae_takehyperreg,zae_clean1,zae_clean2,zae_q2done,zae_q12_journal_del delay:1
 zae_mess7: 'message &6&oLocaliser la faille (terminé)'
 zae_eco2: 'command eco give %player% 1250'
 zae_mess8: 'message &6&oVous recevez des &aChausses en cuir gravé&6&o.'
@@ -649,7 +671,7 @@ zae_title3: folder zae_title31,zae_title32,zae_title33 delay:1
 zae_title31: 'command title %player% times 40 60 80'
 zae_title32: 'command title %player% subtitle {"text":"Préparer le contre-sort","color":"gold"}'
 zae_title33: 'command title %player% title {"text":"Troubles arcaniques","color":"green"}'
-zae_q3reward: folder zae_takenether,zae_mess12,zae_eco3,zae_xpreward2,zae_q3end,zae_q3done,zae_q3_journal_del delay:1
+zae_q3reward: folder quest_point_1,zae_takenether,zae_mess12,zae_eco3,zae_xpreward2,zae_q3end,zae_q3done,zae_q3_journal_del delay:1
 zae_takenether: take lava_tear:3
 zae_mess12: 'message &6&oPréparer le contre-sort (terminé)'
 zae_eco3: 'command eco give %player% 1250'
@@ -688,7 +710,7 @@ zae_q4_foldjournal: folder zae_q4_journal_del,zae_q41_journal delay:5
 zae_q41_journal: journal add zae_q42_journal
 zae_q41_journal_del: journal del zae_q42_journal
 #
-zae_q4reward: folder zae_mess15,zae_q4reward2,zae_q2rewardfold,zae_q41_journal_del,zae_takeitem delay:5
+zae_q4reward: folder quest_point_1,zae_mess15,zae_q4reward2,zae_q2rewardfold,zae_q41_journal_del,zae_takeitem delay:5
 zae_mess15: 'message &2Zael:&a&o Je vais enquêter un peu sur l''hypothèse que ce village est impliqué dans les récents évènements. Mais tu as rendu un fier service à ta guilde %player%!'
 zae_q2rewardfold: folder zae_mess16,zae_eco4,zae_xpreward3,zae_q4clean1,zae_q4clean2,zae_q4done delay:3
 zae_mess16: 'message &6&oFermer le portail (terminé)'
@@ -731,7 +753,7 @@ kal_title12: 'command title %player% subtitle {"text":"A la recherche de l''ombr
 kal_title13: 'command title %player% title {"text":"Opération infiltration","color":"green"}'
 kal_rep3: folder kal_mess3,kal_conversdone delay:5
 kal_mess3: 'message &2Kali Jones:&a&o Je n''ai pas trouvé plus d''informations vu que les habitants d''&dAthelas&a&o ne sont pas très amicaux envers ceux de &dDrisgan&a&o. Peut-être auras-tu plus de chance en demandant autour de toi...'
-kal_q1reward: folder kal_mess5,kal_takeombre,kal_eco1,kal_q1done,kal_clean1,kal_j2_del,kal_convers delay:1
+kal_q1reward: folder quest_point_2,kal_mess5,kal_takeombre,kal_eco1,kal_q1done,kal_clean1,kal_j2_del,kal_convers delay:1
 kal_mess5: 'message &6&oA la recherche de l''ombre jaune (terminé)'
 kal_takeombre: take ombre_jaune:1
 kal_eco1: 'command eco give %player% 3000'
@@ -745,6 +767,8 @@ kal_mess6: 'message &2Kali Jones &f:&a&o Il souhaite donc te faire une propositi
 kal_fold3: folder kal_mess7,kal_q2start,kal_conversdone,kal_j3 delay:8
 kal_mess7: 'message &2Kali Jones &f:&a&o Une fois dans la ville, cherche &2Eko&a&o. C''est mon supérieur dans le syndicat.'
 kal_q2start: tag add kal_q2start
+#
+kal_q2done: tag add kal_q2done
 #
 #
 #
@@ -1028,7 +1052,7 @@ its_mess5: 'message &3Elimination des voleurs'
 its_objr1q1: objective start its_objr1q1
 #
 its_objr1q1_complete: folder its_r1done,its_mess6,its_jr1q1_del,its_jr1done
-its_mess6: 'message &3Vous avez accompli le contrat de guilde - Elimination des voleurs.'
+its_mess6: 'message &3Vous avez accompli le contrat de guilde - Élimination des voleurs.'
 #
 #
 ##Elementaires de lave
@@ -1037,7 +1061,7 @@ its_mess7: 'message &3Elimination d''élémentaires de lave'
 its_objr1q2: objective start its_objr1q2
 #
 its_objr1q2_complete: folder its_r1done,its_mess8,its_jr1q2_del,its_jr1done
-its_mess8: 'message &3Vous avez accompli le contrat de guilde - Elimination d''élémentaires de lave.'
+its_mess8: 'message &3Vous avez accompli le contrat de guilde - Élimination d''élémentaires de lave.'
 #
 #
 ##Type louche
@@ -1046,7 +1070,7 @@ its_mess9: 'message &3Elimination d''ordures'
 its_objr1q3: objective start its_objr1q3
 #
 its_objr1q3_complete: folder its_r1done,its_mess10,its_jr1q3_del,its_jr1done
-its_mess10: 'message &3Vous avez accompli le contrat de guilde - Elimination d''ordures.'
+its_mess10: 'message &3Vous avez accompli le contrat de guilde - Élimination d''ordures.'
 #
 ##Elementaires d'eau
 its_r1q4: folder its_mess11,its_jr1q4,its_objr1q4
@@ -1054,7 +1078,7 @@ its_mess11: 'message &3Elimination d''élémentaires d''eau'
 its_objr1q4: objective start its_objr1q4
 #
 its_objr1q4_complete: folder its_r1done,its_mess12,its_jr1q4_del,its_jr1done
-its_mess12: 'message &3Vous avez accompli le contrat de guilde - Elimination d''élémentaires de lave.'
+its_mess12: 'message &3Vous avez accompli le contrat de guilde - Élimination d''élémentaires de lave.'
 #
 #
 ##Ghoule
@@ -1063,7 +1087,7 @@ its_mess13: 'message &3Elimination de mort-vivants'
 its_objr1q5: objective start its_objr1q5
 #
 its_objr1q5_complete: folder its_r1done,its_mess14,its_jr1q5_del,its_jr1done
-its_mess14: 'message &3Vous avez accompli le contrat de guilde - Elimination de mort-vivants.'
+its_mess14: 'message &3Vous avez accompli le contrat de guilde - Élimination de mort-vivants.'
 #
 #
 #
@@ -1081,6 +1105,263 @@ its_mess14: 'message &3Vous avez accompli le contrat de guilde - Elimination de 
 #
 #
 #
+# RANDOM EVENTS
 #
 #
-######################
+choix_diamond: folder tag_diamond,roulette
+remove_diamond: folder rdiamond,tag_gold
+rdiamond: tag del diamond
+tag_diamond: folder adiamond,remove_gold
+adiamond: tag add diamond
+tag_gold: tag add gold
+remove_gold: tag del gold
+loto_start: folder tag_lotostart,fold_init,mess_init,fold_roulette,tag_gold
+mess_init: 'message &dLe loto va bientôt démarrer!'
+tag_lotostart: tag add loto_start
+fold_roulette: folder start3,mess0 delay:1
+mess0: 'message &dDémarrage dans'
+start3: folder start4,mess3 delay:1
+mess3: 'message &d3 !'
+start4: folder start5,mess4 delay:1
+mess4: 'message &d2 !'
+start5: folder start6,mess5 delay:1
+mess5: 'message &d1 !!'
+start6: folder mess6,pre_roulette delay:1
+mess6: 'message &d GO !!'
+pre_roulette: conversation choix_diamond
+roulette: folder start_roulette delay:1
+start_roulette: conversation loto
+fold_init: folder c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16
+c1: objective start loose1
+c2: objective start loose2
+c3: objective start loose3
+c4: objective start loose4
+c5: objective start loose5
+c6: objective start loose6
+c7: objective start loose7
+c8: objective start loose8
+c9: objective start loose9
+c10: objective start loose10
+c11: objective start loose11
+c12: objective start loose12
+c13: objective start loose13
+c14: objective start loose14
+c15: objective start loose15
+c16: objective start loose16
+desinit: folder rc1,rc2,rc3,rc4,rc5,rc6,rc7,rc8,rc9,rc10,rc11,rc12,rc13,rc14,rc15,rc16
+rc1: objective delete loose1
+rc2: objective delete loose2
+rc3: objective delete loose3
+rc4: objective delete loose4
+rc5: objective delete loose5
+rc6: objective delete loose6
+rc7: objective delete loose7
+rc8: objective delete loose8
+rc9: objective delete loose9
+rc10: objective delete loose10
+rc11: objective delete loose11
+rc12: objective delete loose12
+rc13: objective delete loose13
+rc14: objective delete loose14
+rc15: objective delete loose15
+rc16: objective delete loose16
+loose: folder remove_loto_start,mess_loose,desinit,rdiamond,remove_gold
+remove_loto_start: tag del loto_start
+mess_loose: 'message &6Comment t''as perdu la!!'
+win: folder mess_win,remove_loto_start,desinit,rdiamond,remove_gold
+mess_win: 'message c''est gagné! c''est gagné!'
+bwin: folder mess_bwin,remove_loto_start,desinit,rdiamond,remove_gold
+mess_bwin: 'message &4&oBINGOOOOOOOOOOOOOOOOOO!!'
+p1: folder place1,win1,tick1
+place1: setblock GOLD_BLOCK -6768;5;2975;Gaia
+win1: objective start win1
+tick1: folder replace1,dewin1,pre_roulette delay:1
+replace1: setblock WOOL -6768;5;2975;Gaia
+dewin1: objective delete win1
+p2: folder place2,win2,tick2
+place2: setblock GOLD_BLOCK -6768;5;2974;Gaia
+win2: objective start win2
+tick2: folder replace2,dewin2,pre_roulette delay:1
+replace2: setblock WOOL -6768;5;2974;Gaia
+dewin2: objective delete win2
+p3: folder place3,win3,tick3
+place3: setblock GOLD_BLOCK -6768;5;2973;Gaia
+win3: objective start win3
+tick3: folder replace3,dewin3,pre_roulette delay:1
+replace3: setblock WOOL -6768;5;2973;Gaia
+dewin3: objective delete win3
+p4: folder place4,win4,tick4
+place4: setblock GOLD_BLOCK -6768;5;2972;Gaia
+win4: objective start win4
+tick4: folder replace4,dewin4,pre_roulette delay:1
+replace4: setblock WOOL -6768;5;2972;Gaia
+dewin4: objective delete win4
+p5: folder place5,win5,tick5
+place5: setblock GOLD_BLOCK -6768;4;2975;Gaia
+win5: objective start win5
+tick5: folder replace5,dewin5,pre_roulette delay:1
+replace5: setblock WOOL -6768;4;2975;Gaia
+dewin5: objective delete win5
+p6: folder place6,win6,tick6
+place6: setblock GOLD_BLOCK -6768;4;2974;Gaia
+win6: objective start win6
+tick6: folder replace6,dewin6,pre_roulette delay:1
+replace6: setblock WOOL -6768;4;2974;Gaia
+dewin6: objective delete win6
+p7: folder place7,win7,tick7
+place7: setblock GOLD_BLOCK -6768;4;2973;Gaia
+win7: objective start win7
+tick7: folder replace7,dewin7,pre_roulette delay:1
+replace7: setblock WOOL -6768;4;2973;Gaia
+dewin7: objective delete win7
+p8: folder place8,win8,tick8
+place8: setblock GOLD_BLOCK -6768;4;2972;Gaia
+win8: objective start win8
+tick8: folder replace8,dewin8,pre_roulette delay:1
+replace8: setblock WOOL -6768;4;2972;Gaia
+dewin8: objective delete win8
+p9: folder place9,win9,tick9
+place9: setblock GOLD_BLOCK -6768;3;2975;Gaia
+win9: objective start win9
+tick9: folder replace9,dewin9,pre_roulette delay:1
+replace9: setblock WOOL -6768;3;2975;Gaia
+dewin9: objective delete win9
+p10: folder place10,win10,tick10
+place10: setblock GOLD_BLOCK -6768;3;2974;Gaia
+win10: objective start win10
+tick10: folder replace10,dewin10,pre_roulette delay:1
+replace10: setblock WOOL -6768;3;2974;Gaia
+dewin10: objective delete win10
+p11: folder place11,win11,tick11
+place11: setblock GOLD_BLOCK -6768;3;2973;Gaia
+win11: objective start win11
+tick11: folder replace11,dewin11,pre_roulette delay:1
+replace11: setblock WOOL -6768;3;2973;Gaia
+dewin11: objective delete win11
+p12: folder place12,win12,tick12
+place12: setblock GOLD_BLOCK -6768;3;2972;Gaia
+win12: objective start win12
+tick12: folder replace12,dewin12,pre_roulette delay:1
+replace12: setblock WOOL -6768;3;2972;Gaia
+dewin12: objective delete win12
+p13: folder place13,win13,tick13
+place13: setblock GOLD_BLOCK -6768;2;2975;Gaia
+win13: objective start win13
+tick13: folder replace13,dewin13,pre_roulette delay:1
+replace13: setblock WOOL -6768;2;2975;Gaia
+dewin13: objective delete win13
+p14: folder place14,win14,tick14
+place14: setblock GOLD_BLOCK -6768;2;2974;Gaia
+win14: objective start win14
+tick14: folder replace14,dewin14,pre_roulette delay:1
+replace14: setblock WOOL -6768;2;2974;Gaia
+dewin14: objective delete win14
+p15: folder place15,win15,tick15
+place15: setblock GOLD_BLOCK -6768;2;2973;Gaia
+win15: objective start win15
+tick15: folder replace15,dewin15,pre_roulette delay:1
+replace15: setblock WOOL -6768;2;2973;Gaia
+dewin15: objective delete win15
+p16: folder place16,win16,tick16
+place16: setblock GOLD_BLOCK -6768;2;2972;Gaia
+win16: objective start win16
+tick16: folder replace16,dewin16,pre_roulette delay:1
+replace16: setblock WOOL -6768;2;2972;Gaia
+dewin16: objective delete win16
+b1: folder bplace1,bwin1,btick1
+bplace1: setblock DIAMOND_BLOCK -6768;5;2975;Gaia
+bwin1: objective start bwin1
+btick1: folder breplace1,bdewin1,remove_diamond,pre_roulette delay:1
+breplace1: setblock WOOL -6768;5;2975;Gaia
+bdewin1: objective delete bwin1
+b2: folder bplace2,bwin2,btick2
+bplace2: setblock DIAMOND_BLOCK -6768;5;2974;Gaia
+bwin2: objective start bwin2
+btick2: folder breplace2,bdewin2,remove_diamond,pre_roulette delay:1
+breplace2: setblock WOOL -6768;5;2974;Gaia
+bdewin2: objective delete bwin2
+b3: folder bplace3,bwin3,btick3
+bplace3: setblock DIAMOND_BLOCK -6768;5;2973;Gaia
+bwin3: objective start bwin3
+btick3: folder breplace3,bdewin3,remove_diamond,pre_roulette delay:1
+breplace3: setblock WOOL -6768;5;2973;Gaia
+bdewin3: objective delete bwin3
+b4: folder bplace4,bwin4,btick4
+bplace4: setblock DIAMOND_BLOCK -6768;5;2972;Gaia
+bwin4: objective start bwin4
+btick4: folder breplace4,bdewin4,remove_diamond,pre_roulette delay:1
+breplace4: setblock WOOL -6768;5;2972;Gaia
+bdewin4: objective delete bwin4
+b5: folder bplace5,bwin5,btick5
+bplace5: setblock DIAMOND_BLOCK -6768;4;2975;Gaia
+bwin5: objective start bwin5
+btick5: folder breplace5,bdewin5,remove_diamond,pre_roulette delay:1
+breplace5: setblock WOOL -6768;4;2975;Gaia
+bdewin5: objective delete bwin5
+b6: folder bplace6,bwin6,btick6
+bplace6: setblock DIAMOND_BLOCK -6768;4;2974;Gaia
+bwin6: objective start bwin6
+btick6: folder breplace6,bdewin6,remove_diamond,pre_roulette delay:1
+breplace6: setblock WOOL -6768;4;2974;Gaia
+bdewin6: objective delete bwin6
+b7: folder bplace7,bwin7,btick7
+bplace7: setblock DIAMOND_BLOCK -6768;4;2973;Gaia
+bwin7: objective start bwin7
+btick7: folder breplace7,bdewin7,remove_diamond,pre_roulette delay:1
+breplace7: setblock WOOL -6768;4;2973;Gaia
+bdewin7: objective delete bwin7
+b8: folder bplace8,bwin8,btick8
+bplace8: setblock DIAMOND_BLOCK -6768;4;2972;Gaia
+bwin8: objective start bwin8
+btick8: folder breplace8,bdewin8,remove_diamond,pre_roulette delay:1
+breplace8: setblock WOOL -6768;4;2972;Gaia
+bdewin8: objective delete bwin8
+b9: folder bplace9,bwin9,btick9
+bplace9: setblock DIAMOND_BLOCK -6768;3;2975;Gaia
+bwin9: objective start bwin9
+btick9: folder breplace9,bdewin9,remove_diamond,pre_roulette delay:1
+breplace9: setblock WOOL -6768;3;2975;Gaia
+bdewin9: objective delete bwin9
+b10: folder bplace10,bwin10,btick10
+bplace10: setblock DIAMOND_BLOCK -6768;3;2974;Gaia
+bwin10: objective start bwin10
+btick10: folder breplace10,bdewin10,remove_diamond,pre_roulette delay:1
+breplace10: setblock WOOL -6768;3;2974;Gaia
+bdewin10: objective delete bwin10
+b11: folder bplace11,bwin11,btick11
+bplace11: setblock DIAMOND_BLOCK -6768;3;2973;Gaia
+bwin11: objective start bwin11
+btick11: folder breplace11,bdewin11,remove_diamond,pre_roulette delay:1
+breplace11: setblock WOOL -6768;3;2973;Gaia
+bdewin11: objective delete bwin11
+b12: folder bplace12,bwin12,btick12
+bplace12: setblock DIAMOND_BLOCK -6768;3;2972;Gaia
+bwin12: objective start bwin12
+btick12: folder breplace12,bdewin12,remove_diamond,pre_roulette delay:1
+breplace12: setblock WOOL -6768;3;2972;Gaia
+bdewin12: objective delete bwin12
+b13: folder bplace13,bwin13,btick13
+bplace13: setblock DIAMOND_BLOCK -6768;2;2975;Gaia
+bwin13: objective start bwin13
+btick13: folder breplace13,bdewin13,remove_diamond,pre_roulette delay:1
+breplace13: setblock WOOL -6768;2;2975;Gaia
+bdewin13: objective delete bwin13
+b14: folder place14,win14,tick14
+bplace14: setblock DIAMOND_BLOCK -6768;2;2974;Gaia
+bwin14: objective start bwin14
+btick14: folder breplace14,bdewin14,remove_diamond,pre_roulette delay:1
+breplace14: setblock WOOL -6768;2;2974;Gaia
+bdewin14: objective delete bwin14
+b15: folder bplace15,bwin15,btick15
+bplace15: setblock DIAMOND_BLOCK -6768;2;2973;Gaia
+bwin15: objective start bwin15
+btick15: folder breplace15,bdewin15,remove_diamond,pre_roulette delay:1
+breplace15: setblock WOOL -6768;2;2973;Gaia
+bdewin15: objective delete bwin15
+b16: folder bplace16,bwin16,btick16
+bplace16: setblock DIAMOND_BLOCK -6768;2;2972;Gaia
+bwin16: objective start bwin16
+btick16: folder breplace16,bdewin16,remove_diamond,pre_roulette delay:1
+breplace16: setblock WOOL -6768;2;2972;Gaia
+bdewin16: objective delete bwin16
+
