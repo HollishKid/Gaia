@@ -7,7 +7,7 @@
 regions:
     'earth_passage':
         enterConsoleCommands:
-        - 'bq event %player% hollish.earth_passage'
+        - 'bq event %player% hollish.earth_passage_checking'
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''

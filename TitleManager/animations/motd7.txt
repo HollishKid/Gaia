@@ -1,0 +1,3 @@
+[10;40;0]&d&o&lÉcoutez la musique de Gaïa depuis le &a/menu&d&o&l.
+[0;40;0]&d&o&lÉcoutez la musique de Gaïa depuis le &a/menu&d&o&l.
+[0;40;10]&d&o&lÉcoutez la musique de Gaïa depuis le &a/menu&d&o&l.

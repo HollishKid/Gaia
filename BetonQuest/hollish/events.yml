@@ -589,9 +589,10 @@ tag_terre_orno_done_del: tag del terre_orno_done
 folder_terre_ingor: folder tag_terre_orno_done_del,journal_terre_orno_done_del,tag_terre_ingor,journal_terre_ingor
 tag_terre_ingor: tag add tag_terre_ingor
 tag_terre_ingor_del: tag del tag_terre_ingor
-folder_terre_ingor_done: folder journal_terre_ingor_del,tag_terre_ingor_del,give_enchanted_emerald,tag_earth_passage,journal_terre_emerald delay:7
+folder_terre_ingor_done: folder journal_terre_ingor_del,tag_terre_ingor_del,give_enchanted_emerald,take_emerald_volcano,tag_earth_passage,journal_terre_emerald delay:7
 tag_earth_passage: tag add earth_passage
 give_enchanted_emerald: give emerald_volcano_ench
+take_emerald_volcano: take emerald_volcano:10
 #
 # Earth Temple Passage & Tree
 #
@@ -1204,15 +1205,15 @@ norno_phase3: tag add dwarf_castle_phase3
 norno_phase4: tag add dwarf_castle_phase4
 norno_phase5: tag add dwarf_castle_phase5
 #
-norno_price1: mcmmoexp woodcutting 1000
-norno_price2: mcmmoexp excavation 2000
-norno_price3: mcmmoexp repair 3000
-norno_price4: mcmmoexp mining 4000
-norno_price5: money 2000
-norno_price6: mcmmoexp woodcutting 2000
-norno_price7: mcmmoexp mining 3000
-norno_price8: mcmmoexp repair 5000
-norno_price9: money 2500
+norno_price1: 'command addxp %player% bûcheronnage 1000'
+norno_price2: 'command addxp %player% excavation 2000'
+norno_price3: 'command addxp %player% réparation 3000'
+norno_price4: 'command addxp %player% minage 4000'
+norno_price5: 'command eco give %player% 2000'
+norno_price6: 'command addxp %player% bûcheronnage 2000'
+norno_price7: 'command addxp %player% minage 3000'
+norno_price8: 'command addxp %player% réparation 5000'
+norno_price9: 'command eco give %player% 2500'
 #
 wood1000_take: take planks:1000
 stone2000_take: take stone:2000
@@ -1964,19 +1965,6 @@ temp_bannissement: 'command tempban %player% 48h 1s Vous avez été averti 3 foi
 #
 prison_free: teleport -6952;64;2970;Gaia
 #
-###################################################################################################
-#
-#
-# Récompenses de Bugs trouvés
-#
-#
-###################################################################################################
-bug_verified: folder bug_message,bug_money,default.reput_athelas1_positif delay:1
-bug_message: folder bug_message1,bug_message2,bug_message3 delay:1
-bug_message1: 'command title %player% times 40 200 40'
-bug_message2: 'command title %player% subtitle {"text":"Merci de votre aide!","italic":true,"color":"gray"}'
-bug_message3: 'command title %player% title {"text":"Bug Identifié","bold":true,"color":"green"}'
-bug_money: 'command eco give %player% 200'
 ###################################################################################################
 ###################################################################################################
 ###################################################################################################

@@ -1,3 +1,15 @@
+# L'event est reconnu et bien chargé dans SKRIPT mais ne fait rien i.e. rien n'est exécuté on vehicle create			
+#on vehicle create:
+#	set {_vehicle} to event-entity
+#	message "%{_vehicle}%"
+#	message "hello" to event-player
+#	if {_vehicle} is minecart:
+#		message "%{_vehicle}%2"
+#		if event-player is in the region "east":
+#			stop
+#		else:
+#			delete vehicle of the player
+#			message "&cLa création de tels objets est réservé aux Gares officielles de la Ville d'Athelas !"
 #THIS IS APPLIED TO all USERS
 #
 #command /side:
