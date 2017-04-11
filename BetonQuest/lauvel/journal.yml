@@ -43,3 +43,8 @@ Cs_jrl: 'Vous devez retourner voir le Chef supérieure'
 #
 Mi_jrl: 'Vous devez allez voir Mike.'
 Mi_jrl1: 'Allez trouver Da_She dans le village.'
+#
+#
+######## MIZUKI ######
+#
+miz_jr1done: 'Vous avez accompli votre contrat de guilde de rang 1. Retournez voir Itsuki à la Guilde pour toucher votre récompense.'

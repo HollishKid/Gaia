@@ -64,7 +64,7 @@ ut_coffre5click: action right chest events:ut_coffre5loot loc:-6829;12;3252;Gaia
 #
 ### Itsuki
 #
-its_delay: delay 120 events:its_timer_remove
+its_r1delay: delay 120 events:its_r1timer_remove
 #
 its_objr1q1: mmobkill bandit amount:8 events:its_objr1q1_complete
 its_objr1q2: mmobkill lava_elem amount:6 events:its_objr1q2_complete

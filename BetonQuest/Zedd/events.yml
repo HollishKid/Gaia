@@ -859,28 +859,7 @@ kal_reset5_exe: setblock REDSTONE_TORCH_ON -6765;55;2987;Gaia
 #
 its_inconvers: tag add its_inconvers
 its_conversdone: tag del its_inconvers
-itsuki_recomp: conversation itsuki_recomp
-itsuki_promo: conversation itsuki_promo
 #
-#Quetes Done
-rang1_done: tag add rang1_done
-rang1_done_del: tag del rang1_done
-rang2_done: tag add rang2_done
-rang2_done_del: tag del rang2_done
-rang3_done: tag add rang3_done
-rang3_done_del: tag del rang3_done
-rang4_done: tag add rang4_done
-rang4_done_del: tag del rang4_done
-rang5_done: tag add rang5_done
-rang5_done_del: tag del rang5_done
-rang6_done: tag add rang6_done
-rang6_done_del: tag del rang6_done
-rang7_done: tag add rang7_done
-rang7_done_del: tag del rang7_done
-rang8_done: tag add rang8_done
-rang8_done_del: tag del rang8_done
-rang9_done: tag add rang9_done
-rang9_done_del: tag del rang9_done
 ## Journal
 #
 its_jr1done: journal add its_jr1done
@@ -899,152 +878,38 @@ its_jr1q5_del: journal del its_jr1q5
 ### Beginning
 #
 its_beginnerfold: folder its_mess1,its_beginnerfold2 delay:6
-its_mess1: 'message &2Itsuki:&a&o La guilde accepte les requêtes de grandes villes, villages ou même individus.Les détails et récompenses des quêtes introduites par la guilde sont généralement corrects et dignes de confiance.'
-its_beginnerfold2: folder its_mess2,its_beginnerfold3 delay:9
-its_mess2: 'message &2Itsuki:&a&o C''est à l''aventurier de choisir s''il prend la quête ou pas. La guilde prend 10% de la récompense financière du client en tant que commission. Cette somme est déjà retirée de la récompense montrée sur les avis de requêtes.'
-its_beginnerfold3: folder its_mess3,its_beginnerfold4 delay:9
-its_mess3: 'message &2Itsuki:&a&o Mais en cas d’échec de la quête, ou d’impossibilité à continuer, une charge d’annulation adaptée à la situation est requise, afin que la quête puisse être transférée à un autre aventurier.'
-its_beginnerfold4: folder its_mess4,its_convers0,its_convers delay:11
-its_mess4: 'message &2Itsuki:&a&o Si tu as tout compris, alors tant mieux sinon demande quel partie que tu n''a pas compris!'
-its_convers0: tag add its_convers0
-its_convers: conversation itsuki
-its_convers0_del: tag dell its_convers0
-#
-######################
-#                    #
-#     Point de       #
-#  Réputation/Money  #
-#                    #
-######################
-#
-re_r1: folder pr_3,ar_100,re_r1_mes,rang1_done_del delay:1
-pr_3: 
-ar_100: 'command eco give %player% 100'
-re_r1_mes: 'message &f¤ &2Vous avez reçu 100¤ avec 3 PR.'
-#
-re_r2: folder pr_4,ar_150,re_r2_mes,rang2_done_del delay:1
-pr_4: 
-ar_150: 'command eco give %player% 150'
-re_r2_mes: 'message &f¤ &2Vous avez reçu 150¤ avec 4 PR.'
-#
-re_r3: folder pr_5,ar_200,re_r1_mes,rang3_done_del delay:1
-pr_5: 
-ar_200: 'command eco give %player% 200'
-re_r1_mes: 'message &f¤ &2Vous avez reçu 200¤ avec 5 PR.'
-#
-re_r4:  folder pr_6,ar_250,re_r1_mes,rang4_done_del delay:1
-pr_6: 
-ar_250: 'command eco give %player% 250'
-re_r1_mes: 'message &f¤ &2Vous avez reçu 250¤ avec 6 PR.'
-#
-re_r5: folder pr_7,ar_300,re_r1_mes,rang5_done_del delay:1
-pr_7: 
-ar_300: 'command eco give %player% 300'
-re_r1_mes: 'message &f¤ &2Vous avez reçu 300¤ avec 7 PR.'
-#
-re_r6: folder pr_8,ar_350,re_r1_mes,rang6_done_del delay:1
-pr_8: 
-ar_350: 'command eco give %player% 350'
-re_r1_mes: 'message &f¤ &2Vous avez reçu 350¤ avec 8 PR.'
-#
-re_r7: folder pr_9,ar_400,re_r1_mes, rang7_done_del delay:1
-pr_9: 
-ar_400: 'command eco give %player% 400'
-re_r1_mes: 'message &f¤ &2Vous avez reçu 400¤ avec 9 PR.'
-#
-re_r8: folder ,pr_10,ar_450,re_r1_mes,rang8_done_del delay:1
-pr_10: 
-ar_450: 'command eco give %player% 450'
-re_r1_mes: 'message &f¤ &2Vous avez reçu 450¤ avec 10 PR.' 
-#
-re_r9: folder pr_11,ar_500,re_r1_mes,rang9_done_del delay:1
-pr_11: 
-ar_500: 'command eco give %player% 500'
-re_r1_mes: 'message &f¤ &2Vous avez reçu 500¤ avec 11 PR.'
-
-
-#
-#####################
-#                   #
-#        Rang       #
-#                   #
-#####################
-#
-promo_r2: folder rang2,r1_del delay:0
-rang2: tag add rang2
-r1_del: tag del rang1
-#
-promo_r3: folder rang3,r2_del delay:0
-rang3: tag add rang3
-r2_del: tag del rang2
-#
-promo_r4: folder rang4,r3_del delay:0
-rang4: tag add rang4
-r3_del: tag del rang3
-#
-promo_r5: folder rang5,r4_del delay:0
-rang5: tag add rang5
-r4_del: tag del rang4
-#
-promo_r6: folder rang6,r5_del delay:0
-rang56: tag add rang6
-r5_del: tag del rang5
-#
-promo_r7: folder rang7,r6_del delay:0
-rang7: tag add rang7
-r6_del: tag del rang6
-#
-promo_r8: folder rang8,r7_del delay:0
-rang8: tag add rang8
-r7_del: tag del rang7
-#
-promo_r9: folder rang9,r8_del delay:0
-rang9: tag add rang9
-r8_del: tag del rang8
-### Rang 1~9
-#
+its_mess1: 'message &2Itsuki:&a&o On peut dire que c''est un service de nettoyage et d''approvisionnement fournit par notre guilde, moyennant finance évidemment !'
+its_beginnerfold2: folder its_mess2,its_beginnerfold3 delay:7
+its_mess2: 'message &2Itsuki:&a&o Ne t''inquiètes pas, tu toucheras ta part également! Bien que les quêtes de rang 1 ne rapporte pas énormément, tu auras accès aux rangs suivants au fur et à mesure que tu feras tes preuves dans la guilde.'
+its_beginnerfold3: folder its_mess3,its_beginnerfold4 delay:8
+its_mess3: 'message &2Itsuki:&a&o En ce qui concerne les restrictions du rang 1, tu ne pourras effectuer qu''une quête toute les 2 heures. Tu n''es pas le seul aventurier à chercher du travail!'
+its_beginnerfold4: folder its_mess4,its_rang1,its_conversdone,its_convers delay:8
+its_mess4: 'message &2Itsuki:&a&o Si tu as tout compris, il ne te reste plus qu''à te lancer !'
 its_rang1: tag add its_rang1
-its_rang1_del: tag del its_rang1
-its_rang2: tag add its_rang2
-its_rang2_del: tag del its_rang2
-its_rang3: tag add its_rang3
-its_rang3_del: tag del its_rang3
-its_rang4: tag add its_rang4
-its_rang4_del: tag del its_rang4
-its_rang5: tag add its_rang5
-its_rang5_del: tag del its_rang5
-its_rang6: tag add its_rang6
-its_ran6_del: tag del its_rang6
-its_rang7: tag add its_rang7
-its_ran7_del: tag del its_rang7
-its_rang8: tag add its_rang8
-its_rang8_del: tag del its_rang8
-its_rang9: tag add its_rang9
-its_rang9_del: tag del its_rang9
+its_convers: conversation itsuki
+#
 #
 ### Rang 1
 #
-### Rang 2
+its_checkstartr1: if !its_r1timer its_checkstart2 else its_r1timerdeny
+its_r1timerdeny: 'message &2Itsuki:&a&o Vous devez attendre avant d''accomplir un autre contrat. (Temps restant:&d %objective.its_r1delay.left% &a&o)'
+its_checkstart2: if !its_r1inprogress its_rang1go else its_r1inprogressdeny
+its_r1inprogressdeny: 'message &2Itsuki:&a&o Finissez d''abord le contrat que je vous ai fournit!'
 #
-its_checkstartr1: if !its_timer its_checkstart2 else its_timerdeny
-its_timerdeny: 'message &2Itsuki:&a&o Vous devez attendre avant d''accomplir un autre contrat. (Temps restant:&d %objective.its_delay.left% &a&o)'
-its_checkstart2: if !its_inprogress its_rang1go else its_r1inprogressdeny
-its_inprogressdeny: 'message &2Itsuki:&a&o Finissez d''abord le contrat que je vous ai fournit!'
+its_checkclaimr1: if its_r1done its_r1reward else its_r1rewarddeny
+its_r1rewarddeny: 'message &2Itsuki:&a&o Vous n''avez pas de récompense à retirer.'
+its_r1reward: folder its_r1money,its_r1mess,its_r1delay,its_r1timer,its_r1doneremove,its_jr1done_del delay:1
+its_r1money: 'command eco give %player% 1500'
+its_r1mess: 'message &3Récompense de contrat retirée !'
+its_r1delay: objective start its_r1delay
 #
-its_checkclaimr1: if its_done its_reward else its_r1rewarddeny
-its_rewarddeny: 'message &2Itsuki:&a&o Vous n''avez pas de récompense à retirer.'
-its_reward: folder its_money,its_mess,its_delay,its_timer,its_doneremove,its_jdone_del delay:1
-its_money: 'command eco give %player% 1500'
-its_mess: 'message &3Récompense de contrat retirée !'
-its_delay: objective start its_delay
-#
-its_rang1go: folder its_r1q1,its_r1q2,its_r1q3,its_r1q4,its_r1q5,its_inprogress delay:1 random:1
-its_done: tag add its_r1done
-its_doneremove: tag del its_done
-its_inprogress: tag add its_inprogress
-its_inprogress_remove: tag del its_inprogress
-its_timer: tag add its_timer
-its_timer_remove: tag del its_timer
+its_rang1go: folder its_r1q1,its_r1q2,its_r1q3,its_r1q4,its_r1q5,its_r1inprogress delay:1 random:1
+its_r1done: tag add its_r1done
+its_r1doneremove: tag del its_r1done
+its_r1inprogress: tag add its_r1inprogress
+its_r1inprogress_remove: tag del its_r1inprogress
+its_r1timer: tag add its_r1timer
+its_r1timer_remove: tag del its_r1timer
 #
 #
 ##Voleurs
