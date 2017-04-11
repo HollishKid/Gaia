@@ -59,3 +59,35 @@ M1: tag M1
 M2: tag M
 #
 Qs_done: tag add Qs_done
+
+
+
+#
+#
+#
+########### MIZUKI
+#
+miz_inconvers: tag its_inconvers
+miz_inprogress: tag its_inprogress
+miz_timer: tag its_timer
+#
+rang1: tag rang1
+rang2: tag rang2
+rang3: tag rang3
+rang4: tag rang4
+rang5: tag rang5
+rang6: tag rang6
+rang7: tag rang7
+rang8: tag rang8
+rang9: tag rang9
+#
+pr_10: point reput_athelas 10
+pr_20: point reput_athelas 20
+pr_30: point reput_athelas 30
+pr_40: point reput_athelas 40
+pr_50: point reput_athelas 50
+pr_60: point reput_athelas 60
+pr_70: point reput_athelas 70
+pr_80: point reput_athelas 80
+pr_90: point reput_athelas 90
+#

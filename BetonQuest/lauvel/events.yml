@@ -172,11 +172,13 @@ Cm_jrl02_del: journal del Cm_jrl02
 Cc_tag: tag add Cc_tag
 Cc_take: take cobblestone:60
 Cc_obj: objective start Cc_obj
-Cc_reset: folder Cc_1,Cc_2,Cc_3,Cc_4 delay:0
-Cc_1: setblock AIR ???;???;???;Gaia
-Cc_2: setblock AIR ???;???;???;Gaia
-Cc_3: setblock AIR ???;???;???;Gaia
-Cc_4: setblock AIR ???;???;???;Gaia
+Cc_reset: folder Cc_1,Cc_2,Cc_3,Cc_4,Cc_5,Cc_6 delay:0
+Cc_1: setblock AIR -7785;85;3621;Gaia
+Cc_2: setblock AIR -7786;85;3621;Gaia
+Cc_3: setblock AIR -7787;85;3621;Gaia
+Cc_4: setblock AIR -7787;85;3620;Gaia
+Cc_5: setblock AIR -7787;85;3619;Gaia
+Cc_6: setblock AIR -7786;85;3619;Gaia
 Cc_done: tag add Cc_done
 Cc_done_del: tag del Cc_done
 Cc_jrl: journal add Cc_jrl
@@ -222,3 +224,167 @@ Mi_jrl1: journal add Mi_jrl1
 Mi_jrl1_del: journal del Mi_jrl1
 Da_She: tag add Da_She
 Da_ville: tag add Da_ville
+
+
+#####################
+#                   #
+#     MIZUKI        #
+#                   #
+#####################
+#
+## Overall
+#
+miz_inconvers: tag add its_inconvers
+miz_conversdone: tag del its_inconvers
+mizuki_recomp: conversation Mizuki_recomp
+mizuki_promo: conversation Mizuki_promo
+#
+#Quetes Done
+rang1_done: tag add rang1_done
+rang1_done_del: tag del rang1_done
+rang2_done: tag add rang2_done
+rang2_done_del: tag del rang2_done
+rang3_done: tag add rang3_done
+rang3_done_del: tag del rang3_done
+rang4_done: tag add rang4_done
+rang4_done_del: tag del rang4_done
+rang5_done: tag add rang5_done
+rang5_done_del: tag del rang5_done
+rang6_done: tag add rang6_done
+rang6_done_del: tag del rang6_done
+rang7_done: tag add rang7_done
+rang7_done_del: tag del rang7_done
+rang8_done: tag add rang8_done
+rang8_done_del: tag del rang8_done
+rang9_done: tag add rang9_done
+rang9_done_del: tag del rang9_done
+## Journal
+#
+miz_jr1done: journal add its_jr1done
+miz_jr1done_del: journal del its_jr1done
+
+#
+### Beginning
+#
+miz_beginnerfold: folder miz_mess1,miz_beginnerfold2 delay:6
+miz_mess1: 'message &2Mizuki:&a&o Vous, aventurier, vous pouvez les accepter et les valider. Les détails et récompenses des quêtes introduites par la guilde sont généralement corrects et dignes de confiance.'
+miz_beginnerfold2: folder miz_mess2,miz_beginnerfold3 delay:9
+miz_mess2: 'message &2Mizuki:&a&o C''est à l''aventurier de choisir s''il prend la quête ou pas. La guilde prend 10% de la récompense financière du client en tant que commission. Cette somme est déjà retirée de la récompense montrée sur les avis de requêtes.'
+miz_beginnerfold3: folder miz_mess3,miz_beginnerfold4 delay:
+miz_mess3: 'message &2Mizuki:&a&o Mais en cas d’échec de la quête, ou d’impossibilité à continuer, une charge d’annulation adaptée à la situation est requise, afin que la quête puisse être transférée à un autre aventurier.'
+miz_beginnerfold4: folder miz_mess4,miz_convers0,miz_convers delay:11
+miz_mess4: 'message &2Mizuki:&a&o Donc, vu que vous êtes pas le seul aventurier. Vous aurez droit à une quêtes toute les 2heure. Si tu as tout compris, alors tant mieux sinon demande quel partie que tu n'a pas compris!'
+miz_convers0: tag add miz_convers0
+miz_convers: conversation Mizuki
+miz_convers0_del: tag dell miz_convers0
+#
+######################
+#                    #
+#     Point de       #
+#  Réputation/Money  #
+#                    #
+######################
+#
+re_r1: folder pr_3,ar_100,re_r1_mes,rang1_done_del delay:1
+pr_3: 
+ar_100: 'command eco give %player% 100'
+re_r1_mes: 'message &f¤ &2Vous avez reçu 100¤ avec 3 PR.'
+#
+re_r2: folder pr_4,ar_150,re_r2_mes,rang2_done_del delay:1
+pr_4: 
+ar_150: 'command eco give %player% 150'
+re_r2_mes: 'message &f¤ &2Vous avez reçu 150¤ avec 4 PR.'
+#
+re_r3: folder pr_5,ar_200,re_r1_mes,rang3_done_del delay:1
+pr_5: 
+ar_200: 'command eco give %player% 200'
+re_r1_mes: 'message &f¤ &2Vous avez reçu 200¤ avec 5 PR.'
+#
+re_r4:  folder pr_6,ar_250,re_r1_mes,rang4_done_del delay:1
+pr_6: 
+ar_250: 'command eco give %player% 250'
+re_r1_mes: 'message &f¤ &2Vous avez reçu 250¤ avec 6 PR.'
+#
+re_r5: folder pr_7,ar_300,re_r1_mes,rang5_done_del delay:1
+pr_7: 
+ar_300: 'command eco give %player% 300'
+re_r1_mes: 'message &f¤ &2Vous avez reçu 300¤ avec 7 PR.'
+#
+re_r6: folder pr_8,ar_350,re_r1_mes,rang6_done_del delay:1
+pr_8: 
+ar_350: 'command eco give %player% 350'
+re_r1_mes: 'message &f¤ &2Vous avez reçu 350¤ avec 8 PR.'
+#
+re_r7: folder pr_9,ar_400,re_r1_mes, rang7_done_del delay:1
+pr_9: 
+ar_400: 'command eco give %player% 400'
+re_r1_mes: 'message &f¤ &2Vous avez reçu 400¤ avec 9 PR.'
+#
+re_r8: folder ,pr_10,ar_450,re_r1_mes,rang8_done_del delay:1
+pr_10: 
+ar_450: 'command eco give %player% 450'
+re_r1_mes: 'message &f¤ &2Vous avez reçu 450¤ avec 10 PR.' 
+#
+re_r9: folder pr_11,ar_500,re_r1_mes,rang9_done_del delay:1
+pr_11: 
+ar_500: 'command eco give %player% 500'
+re_r1_mes: 'message &f¤ &2Vous avez reçu 500¤ avec 11 PR.'
+
+#
+#####################
+#                   #
+#        Rang       #
+#                   #
+#####################
+#
+promo_r2: folder rang2,r1_del delay:0
+rang2: tag add rang2
+r1_del: tag del rang1
+#
+promo_r3: folder rang3,r2_del delay:0
+rang3: tag add rang3
+r2_del: tag del rang2
+#
+promo_r4: folder rang4,r3_del delay:0
+rang4: tag add rang4
+r3_del: tag del rang3
+#
+promo_r5: folder rang5,r4_del delay:0
+rang5: tag add rang5
+r4_del: tag del rang4
+#
+promo_r6: folder rang6,r5_del delay:0
+rang56: tag add rang6
+r5_del: tag del rang5
+#
+promo_r7: folder rang7,r6_del delay:0
+rang7: tag add rang7
+r6_del: tag del rang6
+#
+promo_r8: folder rang8,r7_del delay:0
+rang8: tag add rang8
+r7_del: tag del rang7
+#
+promo_r9: folder rang9,r8_del delay:0
+rang9: tag add rang9
+r8_del: tag del rang8
+### Rang 1~9
+#
+miz_rang1: tag add its_rang1
+miz_rang1_del: tag del its_rang1
+miz_rang2: tag add its_rang2
+miz_rang2_del: tag del its_rang2
+miz_rang3: tag add its_rang3
+miz_rang3_del: tag del its_rang3
+miz_rang4: tag add its_rang4
+miz_rang4_del: tag del its_rang4
+miz_rang5: tag add its_rang5
+miz_rang5_del: tag del its_rang5
+miz_rang6: tag add its_rang6
+miz_ran6_del: tag del its_rang6
+miz_rang7: tag add its_rang7
+miz_ran7_del: tag del its_rang7
+miz_rang8: tag add its_rang8
+miz_rang8_del: tag del its_rang8
+miz_rang9: tag add its_rang9
+miz_rang9_del: tag del its_rang9
