@@ -494,12 +494,12 @@ journal_aang_baton_del: journal del journal_aang_baton
 #
 obj_milo_fiole: objective start obj_milo_fiole
 obj_air_catcher: objective start obj_air_catcher
-milo_fiole_mess: 'message &dJ''ai fabriqué une fiole! Je devrais la rapporter à &2Aang &dau Temple de l''Air.'
+milo_fiole_mess: 'message &dJ''ai fabriqué une fiole ! Je devrais la rapporter à &2Aang &dau Temple de l''Air.'
 tag_milo_fiole: tag add milo_fiole
 tag_remove_fiole: tag del milo_fiole
 milo_fiole1: tag add milo_fiole1
 milo_fiole1_remove: tag del milo_fiole1
-air_captured: 'message &dJ''ai réussi à capturer de l''air du continent de l''Est. La fiole semble s''agiter!'
+air_captured: 'message &dJ''ai réussi à capturer de l''air du continent de l''Est. La fiole semble s''agiter !'
 take_fiole: take fiole:1
 give_fiole_air_est: give fiole_air:1
 take_fiole_air_est: take fiole_air:1
@@ -536,7 +536,7 @@ journal_terre_find_del: journal del journal_terre_find
 journal_terre_found: journal add journal_terre_found
 journal_terre_found_del: journal del journal_terre_found
 journal_terre_orno: journal add journal_terre_orno
-journal_terre_orno_del: journal del journal_terre_orno_del
+journal_terre_orno_del: journal del journal_terre_orno
 journal_terre_orno_done: journal add journal_terre_orno_done
 journal_terre_orno_done_del: journal del journal_terre_orno_done
 journal_terre_ingor: journal add journal_terre_ingor
@@ -566,7 +566,8 @@ pierre_terre: give pierre_terre
 pierre_terre_take: take pierre_terre
 #
 terre_find_exe: folder obj_terre_find_delayed,obj_terre_sudo
-obj_terre_find_delayed: folder obj_terre_find delay:3
+obj_terre_find_delayed: folder obj_terre_finder delay:3 
+obj_terre_finder: if terre_found nothing else obj_terre_find
 obj_terre_sudo: sudo thisisatopsecreteruditterrelocationcommand
 earth_temple_fall: folder earth_temple_fall1,earth_temple_fall2
 earth_temple_fall1: teleport -7411;64;360;Gaia
@@ -578,7 +579,7 @@ pierre_perdu_give1: 'message &2Érudit &f: &a&oPrenez en soin cette fois !'
 folder_borne_found: folder tag_terre_find_del,tag_terre_found,mess_terre_found,journal_terre_find_del,journal_terre_found,pierre_terre_take
 tag_terre_found: tag add terre_found
 tag_terre_found_del: tag del terre_found
-mess_terre_found: 'message Je devrais aller la dire à l''Érudit de la Terre.'
+mess_terre_found: 'message &d&oJe devrais aller la dire à l''Érudit de la Terre.'
 #
 folder_earth_orno: folder tag_terre_found_del,journal_terre_found_del,tag_terre_orno,journal_terre_orno
 tag_terre_orno: tag add terre_orno
@@ -589,9 +590,10 @@ tag_terre_orno_done_del: tag del terre_orno_done
 folder_terre_ingor: folder tag_terre_orno_done_del,journal_terre_orno_done_del,tag_terre_ingor,journal_terre_ingor
 tag_terre_ingor: tag add tag_terre_ingor
 tag_terre_ingor_del: tag del tag_terre_ingor
-folder_terre_ingor_done: folder journal_terre_ingor_del,tag_terre_ingor_del,give_enchanted_emerald,tag_earth_passage,journal_terre_emerald delay:7
+folder_terre_ingor_done: folder journal_terre_ingor_del,tag_terre_ingor_del,give_enchanted_emerald,take_emerald_volcano,tag_earth_passage,journal_terre_emerald delay:7
 tag_earth_passage: tag add earth_passage
 give_enchanted_emerald: give emerald_volcano_ench
+take_emerald_volcano: take emerald_volcano:10
 #
 # Earth Temple Passage & Tree
 #
@@ -635,6 +637,7 @@ tag_earth_fiole_fill_del: tag del earth_fiole_fill
 #
 folder_earth_fiole_fill: folder ef_1,ef_2,ef_3,ef_4,ef_5,ef_6,ef_7,journal_earth_fiole_del,journal_earth_fiole_fill,tag_earth_fiole_fill,tag_earth_fiole_del,tag_earth_fiole_have_del,give_earth_fiole,take_earth_normalf
 give_earth_fiole: give fiole_earth:7
+give_earth_fiole1: give fiole_earth
 take_earth_normalf: take fiole:7
 ef_1: objective start ef_1
 ef_2: objective start ef_2
@@ -1204,15 +1207,15 @@ norno_phase3: tag add dwarf_castle_phase3
 norno_phase4: tag add dwarf_castle_phase4
 norno_phase5: tag add dwarf_castle_phase5
 #
-norno_price1: mcmmoexp woodcutting 1000
-norno_price2: mcmmoexp excavation 2000
-norno_price3: mcmmoexp repair 3000
-norno_price4: mcmmoexp mining 4000
-norno_price5: money 2000
-norno_price6: mcmmoexp woodcutting 2000
-norno_price7: mcmmoexp mining 3000
-norno_price8: mcmmoexp repair 5000
-norno_price9: money 2500
+norno_price1: 'command addxp %player% bûcheronnage 1000'
+norno_price2: 'command addxp %player% excavation 2000'
+norno_price3: 'command addxp %player% réparation 3000'
+norno_price4: 'command addxp %player% minage 4000'
+norno_price5: 'command eco give %player% 2000'
+norno_price6: 'command addxp %player% bûcheronnage 2000'
+norno_price7: 'command addxp %player% minage 3000'
+norno_price8: 'command addxp %player% réparation 5000'
+norno_price9: 'command eco give %player% 2500'
 #
 wood1000_take: take planks:1000
 stone2000_take: take stone:2000
@@ -1964,19 +1967,6 @@ temp_bannissement: 'command tempban %player% 48h 1s Vous avez été averti 3 foi
 #
 prison_free: teleport -6952;64;2970;Gaia
 #
-###################################################################################################
-#
-#
-# Récompenses de Bugs trouvés
-#
-#
-###################################################################################################
-bug_verified: folder bug_message,bug_money,default.reput_athelas1_positif delay:1
-bug_message: folder bug_message1,bug_message2,bug_message3 delay:1
-bug_message1: 'command title %player% times 40 200 40'
-bug_message2: 'command title %player% subtitle {"text":"Merci de votre aide!","italic":true,"color":"gray"}'
-bug_message3: 'command title %player% title {"text":"Bug Identifié","bold":true,"color":"green"}'
-bug_money: 'command eco give %player% 200'
 ###################################################################################################
 ###################################################################################################
 ###################################################################################################

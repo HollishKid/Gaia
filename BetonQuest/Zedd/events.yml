@@ -61,7 +61,7 @@ sta_delay: folder sta_close1,sta_close2 delay:10
 #
 bureau_maka_check: if !makarov_access maka_accessdenied else nothing
 maka_accessdenied: folder maka_tele,maka_deniedmess
-maka_tele: teleport -6918;79;3192;Gaia
+maka_tele: teleport -6917;79;3185;Gaia
 maka_deniedmess: 'message &dJe n''ai rien à faire ici.'
 #
 #Guild member
@@ -100,7 +100,7 @@ maka_q1reward: folder maka_mess5,maka_mess6,maka_mess7,maka_fold0 delay:2
 maka_mess5: 'message &6'
 maka_mess6: 'message &6&oVous racontez ce qu''il s''est dit lors de la réunion.'
 maka_mess7: 'message &6'
-maka_fold0: folder maka_mess0,maka_mess02,maka_item1,maka_mess00,maka_eco1,quest_point_1,maka_fold1 delay:3
+maka_fold0: folder maka_mess0,maka_mess02,maka_item1,maka_mess00,maka_eco1,maka_fold1 delay:3
 maka_mess0: 'message &2Makarov:&a&o Prend ça, tu l''as bien mérité, et cela pourrait se révéler utile pour la suite!'
 maka_mess02: 'message &6&oRéunion suspecte (terminé)'
 maka_item1: 'command mm items give %player% leatherlegs_common'
@@ -797,7 +797,7 @@ ut_coffre5loot: folder ut_coffre5lootmess,ut_coffre5lootspawn delay:1
 ut_coffre5lootmess: 'message &4Revenant:&7&o Meurs insolent!'
 ut_coffre5lootspawn: 'command mm m spawn revenant:1 1 Gaia,-6829,13,3252'
 kal_clickombre: objective start kal_click
-kal_collapse: folder kal_giveombre,kal_mess4,kal_replaceombre,kal_collapse1,kal_dizzy,kal_folderexpl,kal_folderreset,kal_j1_del,kal_j2 delay:1
+kal_collapse: folder kal_giveombre,kal_mess4,kal_replaceombre,kal_collapse1,kal_dizzy,kal_folderexpl,kal_j1_del,kal_j2 delay:1
 kal_folderexpl: folder kal_expl1,kal_expl2delay,kal_expl3delay,kal_expl6delay,kal_expl5delay
 kal_expl1: explosion 0 0 3 -6828;20;3310;Gaia
 kal_expl2delay: folder kal_expl2 delay:1
@@ -817,7 +817,7 @@ kal_collapse13: setblock AIR -6837;31;3316;Gaia
 kal_collapse14: setblock AIR -6835;31;3315;Gaia
 kal_bridgefold1: folder kal_toggle1expl,kal_toggle1 delay:2
 kal_toggle1expl: explosion 0 0 3 -6836;9;3315;Gaia
-kal_toggle1: setblock REDSTONE_BLOCK -6842;3;3280;Gaia
+kal_toggle1: setblock REDSTONE_TORCH_ON -6759;55;2987;Gaia
 kal_collapse2: folder kal_collapse2expl,kal_collapse21,kal_collapse22,kal_collapse23,kal_collapse24,kal_bridgefold2,kal_collapse3 delay:5
 kal_collapse2expl: explosion 0 0 4 -6823;26;3304;Gaia
 kal_collapse21: setblock AIR -6825;25;3304;Gaia
@@ -826,7 +826,7 @@ kal_collapse23: setblock AIR -6824;31;3305;Gaia
 kal_collapse24: setblock AIR -6825;30;3305;Gaia
 kal_bridgefold2: folder kal_toggle2expl,kal_toggle2 delay:2
 kal_toggle2expl: explosion 0 0 2 -6824;9;3304;Gaia
-kal_toggle2: setblock REDSTONE_BLOCK -6840;3;3280;Gaia
+kal_toggle2: setblock REDSTONE_TORCH_ON -6761;55;2987;Gaia
 kal_collapse3: folder kal_collapse3expl,kal_collapse31,kal_collapse32,kal_collapse33,kal_bridgefold3 delay:5
 kal_collapse3expl: explosion 0 0 4 -6849;24;3304;Gaia
 kal_collapse31: setblock AIR -6849;30;3305;Gaia
@@ -834,16 +834,17 @@ kal_collapse32: setblock AIR -6850;29;3304;Gaia
 kal_collapse33: setblock AIR -6849;30;3303;Gaia
 kal_bridgefold3: folder kal_toggle3expl,kal_toggle3 delay:2
 kal_toggle3expl: explosion 0 0 2 -6848;9;3304;Gaia
-kal_toggle3: setblock REDSTONE_BLOCK -6838;3;3280;Gaia
+kal_toggle3: setblock REDSTONE_TORCH_ON -6763;55;2987;Gaia
 kal_mess4: 'message &7&o... clic !'
 kal_dizzy: folder kal_nausea delay:1
 kal_nausea: effect CONFUSION 8 1
-kal_folderreset: folder kal_reset1,kal_reset2,kal_reset3,kal_reset4,kal_reset5 delay:60
-kal_reset1: setblock AIR -6842;3;3280;Gaia
-kal_reset2: setblock AIR -6840;3;3280;Gaia
-kal_reset3: setblock AIR -6838;3;3280;Gaia
-kal_reset4: setblock AIR -6836;3;3280;Gaia
-kal_reset5: setblock REDSTONE_BLOCK -6836;3;3280;Gaia
+kal_folderreset: folder kal_reset1,kal_reset2,kal_reset3,kal_reset4,kal_reset5
+kal_reset1: setblock AIR -6759;55;2987;Gaia
+kal_reset2: setblock AIR -6761;55;2987;Gaia
+kal_reset3: setblock AIR -6763;55;2987;Gaia
+kal_reset4: setblock AIR -6765;55;2987;Gaia
+kal_reset5: folder kal_reset5_exe delay:2
+kal_reset5_exe: setblock REDSTONE_TORCH_ON -6765;55;2987;Gaia
 #
 #
 #### Fin event temple

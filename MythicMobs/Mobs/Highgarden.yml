@@ -6,7 +6,7 @@ lava_elem:
 #  Equipment:
 #  - 0:0
   Skills:
-  - skill {s=FireBolt} @target ~onTimer:25 <70% 0.5
+  - skill {s=Firebolt2} @target ~onTimer:25 <70% 0.5
   Disguise:
     Type: player
     Player: '&6Goutte de lave'

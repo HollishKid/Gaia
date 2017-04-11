@@ -5,13 +5,55 @@
 #Perform certain commands when a player enters/leaves a specific WorldGuard region
 
 regions:
+    'residences':
+        enterConsoleCommands:
+        - 'pex user %player% remove Magic.bypass_build'
+        - 'pex user %player% remove Magic.bypass_break'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'pex user %player% add Magic.bypass_build'
+        - 'pex user %player% add Magic.bypass_break'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'sanctuaire':
+        enterConsoleCommands:
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":" ","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Sanctuaire","italic":true,"color":"gray"}'
+        - 'pex user %player% remove Magic.bypass_build'
+        - 'pex user %player% remove Magic.bypass_break'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'pex user %player% add Magic.bypass_build'
+        - 'pex user %player% add Magic.bypass_break'
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
     'earth_passage':
         enterConsoleCommands:
-        - 'bq event %player% hollish.earth_passage'
+        - 'bq event %player% hollish.earth_passage_checking'
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
         leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'earth_temple':
+        enterConsoleCommands:
+        - 'pex user %player% remove Magic.bypass_build'
+        - 'pex user %player% remove Magic.bypass_break'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands:
+        - 'pex user %player% add Magic.bypass_build'
+        - 'pex user %player% add Magic.bypass_break'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
@@ -36,12 +78,16 @@ regions:
         sendLeaveMessage: false
         leaveMessage: ''
     'air_temple':
-        enterConsoleCommands: ''
+        enterConsoleCommands:
+        - 'pex user %player% remove Magic.bypass_build'
+        - 'pex user %player% remove Magic.bypass_break'
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
         leaveConsoleCommands:
         - 'bq event %player% hollish.air_temple_lose'
+        - 'pex user %player% add Magic.bypass_build'
+        - 'pex user %player% add Magic.bypass_break'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
@@ -319,10 +365,14 @@ regions:
         - 'title %player% title {"text":"Drisgan","color":"dark_purple"}'
         - 'title %player% subtitle {"text":" ","italic":true,"color":"gray"}'
         - 'bq event %player% drisgan.check_indrisgan'
+        - 'pex user %player% remove Magic.bypass_build'
+        - 'pex user %player% remove Magic.bypass_break'
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
-        leaveConsoleCommands: ''
+        leaveConsoleCommands:
+        - 'pex user %player% add Magic.bypass_build'
+        - 'pex user %player% add Magic.bypass_break'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
@@ -480,7 +530,7 @@ regions:
         sendJoinMessage: false
         joinMessage: ''
         leaveConsoleCommands:
-        - 'bq event %player% Zedd.stacy_open'
+        - 'bq event %player% Zedd.sta_delay'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
@@ -509,14 +559,18 @@ regions:
         leaveMessage: ''
     'athelas':
         enterConsoleCommands:
-        - "title %player% times 20 100 20"
-        - 'title %player% subtitle {"text":"Première Ville","italic":true,"color":"gray"}'
+        - 'title %player% times 20 100 20'
+        - 'title %player% subtitle {"text":"Ville du Roi Kahn","italic":true,"color":"gray"}'
         - 'title %player% title {"text":"Athelas","color":"dark_purple"}'
+        - 'pex user %player% remove Magic.bypass_build'
+        - 'pex user %player% remove Magic.bypass_break'
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
         leaveConsoleCommands:
         - 'bq event %player% athelas_out_checker'
+        - 'pex user %player% add Magic.bypass_build'
+        - 'pex user %player% add Magic.bypass_break'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
@@ -664,10 +718,14 @@ regions:
         - "title %player% times 20 100 20"
         - 'title %player% subtitle {"text":"Ville des Nains","italic":true,"color":"gray"}'
         - 'title %player% title {"text":"Ingor","color":"dark_purple"}'
+        - 'pex user %player% remove Magic.bypass_build'
+        - 'pex user %player% remove Magic.bypass_break'
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
-        leaveConsoleCommands: ''
+        leaveConsoleCommands:
+        - 'pex user %player% add Magic.bypass_build'
+        - 'pex user %player% add Magic.bypass_break'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''

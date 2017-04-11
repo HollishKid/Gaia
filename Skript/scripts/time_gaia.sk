@@ -96,7 +96,7 @@ on load:
 #
 #
 every 3 minutes in "Gaia":
-	set {_random.motd} to a random integer between 1 and 9
+	set {_random.motd} to a random integer between 1 and 15
 	execute console command "tm abc -silent ${motd%{_random.motd}%}"
 #
 	set block at {thief.treasure.security} to redstone torch on
@@ -189,7 +189,7 @@ every 5 minutes in "Gaia":
 		if {hour.system} is "19":
 			if {event.breach} is 0:
 				set {event.breach} to 1
-				execute console command "setblock -6751 50 2971 redstone_torch 5 replace"
+				execute console command "setblock -6755 54 2963 redstone_torch 5 replace"
 				execute console command "region flag event_breach -w Gaia mob-spawning allow"
 				broadcast "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"
 				loop all players:
@@ -199,7 +199,7 @@ every 5 minutes in "Gaia":
 		else if {hour.system} is "22":
 			if {event.breach} is 1:
 				set {event.breach} to 0
-				execute console command "setblock -6751 50 2971 air 0 replace"
+				execute console command "setblock -6755 54 2963 air 0 replace"
 				execute console command "region flag event_breach -w Gaia mob-spawning deny"
 				broadcast "&aLa Brèche en -7050;3200 a été refermée."
 				loop all players:
@@ -285,88 +285,98 @@ every 59 minutes in "Gaia":
 #
 	else if {hour.system} is "22":
 		if {day.index} is "7":
-			broadcast "&dLes Cagnottes d'expérience des Guildes ont été distribuées !"
-			wait 2 ticks
-			broadcast "&d&oPour recevoir votre part, reconnectez vous sur Gaïa."
-			wait 2 ticks
 
 			set {minage_total} to {minage_total} / size of {minage_contributors::*}
 			loop {minage_contributors::*}:
 				add {minage_total} to {minage_%loop-value%}
 				delete {minage_contributors::%loop-index%}
+				wait 1 tick
 			set {minage_total} to 0
 			
 			set {excavation_total} to {excavation_total} / size of {excavation_contributors::*}
 			loop {excavation_contributors::*}:
 				add {excavation_total} to {excavation_%loop-value%}
 				delete {excavation_contributors::%loop-index%}
+				wait 1 tick
 			set {excavation_total} to 0	
 			
 			set {bûcheronnage_total} to {bûcheronnage_total} / size of {bûcheronnage_contributors::*}
 			loop {bûcheronnage_contributors::*}:
 				add {bûcheronnage_total} to {bûcheronnage_%loop-value%}
 				delete {bûcheronnage_contributors::%loop-index%}
+				wait 1 tick
 			set {bûcheronnage_total} to 0
 			
 			set {herboristerie_total} to {herboristerie_total} / size of {herboristerie_contributors::*}
 			loop {herboristerie_contributors::*}:
 				add {herboristerie_total} to {herboristerie_%loop-value%}
 				delete {herboristerie_contributors::%loop-index%}
+				wait 1 tick
 			set {herboristerie_total} to 0
 			
 			set {poings_total} to {poings_total} / size of {poings_contributors::*}
 			loop {poings_contributors::*}:
 				add {poings_total} to {poings_%loop-value%}
 				delete {poings_contributors::%loop-index%}
+				wait 1 tick
 			set {poings_total} to 0
 
 			set {arc_total} to {arc_total} / size of {arc_contributors::*}
 			loop {arc_contributors::*}:
 				add {arc_total} to {arc_%loop-value%}
 				delete {arc_contributors::%loop-index%}
+				wait 1 tick
 			set {arc_total} to 0
 			
 			set {épées_total} to {épées_total} / size of {épées_contributors::*}
 			loop {épées_contributors::*}:
 				add {épées_total} to {épées_%loop-value%}
 				delete {épées_contributors::%loop-index%}
+				wait 1 tick
 			set {épées_total} to 0
 			
 			set {haches_total} to {haches_total} / size of {haches_contributors::*}
 			loop {haches_contributors::*}:
 				add {haches_total} to {haches_%loop-value%}
 				delete {haches_contributors::%loop-index%}
+				wait 1 tick
 			set {haches_total} to 0
 			
 			set {acrobatie_total} to {acrobatie_total} / size of {acrobatie_contributors::*}
 			loop {acrobatie_contributors::*}:
 				add {acrobatie_total} to {acrobatie_%loop-value%}
 				delete {acrobatie_contributors::%loop-index%}
+				wait 1 tick
 			set {acrobatie_total} to 0
 			
 			set {pêche_total} to {pêche_total} / size of {pêche_contributors::*}
 			loop {pêche_contributors::*}:
 				add {pêche_total} to {pêche_%loop-value%}
 				delete {pêche_contributors::%loop-index%}
+				wait 1 tick
 			set {pêche_total} to 0
 			
 			set {apprivoisement_total} to {apprivoisement_total} / size of {apprivoisement_contributors::*}
 			loop {apprivoisement_contributors::*}:
 				add {apprivoisement_total} to {apprivoisement_%loop-value%}
 				delete {apprivoisement_contributors::%loop-index%}
+				wait 1 tick
 			set {apprivoisement_total} to 0
 			
 			set {réparation_total} to {réparation_total} / size of {réparation_contributors::*}
 			loop {réparation_contributors::*}:
 				add {réparation_total} to {réparation_%loop-value%}
 				delete {réparation_contributors::%loop-index%}
+				wait 1 tick
 			set {réparation_total} to 0
 			
 			set {alchimie_total} to {alchimie_total} / size of {alchimie_contributors::*}
 			loop {alchimie_contributors::*}:
 				add {alchimie_total} to {alchimie_%loop-value%}
 				delete {alchimie_contributors::%loop-index%}
+				wait 1 tick
 			set {alchimie_total} to 0
+			
 			wait 2 ticks
 			broadcast "&dLes Cagnottes d'expérience des Guildes ont été distribuées !"
 			wait 2 ticks

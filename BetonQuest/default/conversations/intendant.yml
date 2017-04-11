@@ -102,7 +102,7 @@ player_options:
 #
   bat:
     text: 'Je voudrais naviguer sur les bateaux et accéder au Continent Est.'
-    conditions: 'intendant_done,!autorisation_bateau'
+    conditions: 'intendant_done,!jacopo,!autorisation_bateau'
     pointers: bat_rep
   bat_done:
     text: 'J''ai fini ma formation avec Jacopo !'

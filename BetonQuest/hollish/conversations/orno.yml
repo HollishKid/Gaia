@@ -169,17 +169,17 @@ player_options:
     condition: terre_orno
     pointer: terre_orno_rep
   terre_inc1:
-    text: '"Elan síla lúmenn'' omentielvo"'
+    text: 'Elan síla lúmenn'' omentielvo'
     pointer: terre_inc_no
   terre_inc2:
-    text: '"Elen síla lúmenn'' omentielva"'
+    text: 'Elen síla lúmenn'' omentielva'
     pointer: terre_inc_no
   terre_inc3:
-    text: '"Elen síla lúmenn'' omentielvo"'
+    text: 'Elen síla lúmenn'' omentielvo'
     pointer: terre_inc_ok
   terre_inc4:
-    text: '"Elen síla lúmann'' omentielvo"'
+    text: 'Elen síla lúmann'' omentielvo'
     pointer: terre_inc_no
   terre_inc5:
-    text: '"Elen síle lúmenn'' omentielvo"'
+    text: 'Elen síle lúmenn'' omentielvo'
     pointer: terre_inc_no

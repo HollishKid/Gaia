@@ -126,7 +126,7 @@ kal_inconvers: tag kal_inconvers
 kal_q1start: tag kal_q1start
 kal_q1done: tag kal_q1done
 ombre_jaune: item ombre_jaune
-kal_q2start: tag global.kal_q2start
+kal_q2start: tag kal_q2start
 kal_q2done: tag kal_q2done
 #
 #

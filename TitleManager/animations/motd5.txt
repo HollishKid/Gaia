@@ -1,0 +1,3 @@
+[10;40;0]&d&o&lAllez au &aGrand Marché &d&o&lpour de bonnes affaires !
+[0;40;0]&d&o&lAllez au &aGrand Marché &d&o&lpour de bonnes affaires !
+[0;40;10]&d&o&lAllez au &aGrand Marché &d&o&lpour de bonnes affaires !

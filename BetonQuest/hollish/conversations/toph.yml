@@ -14,7 +14,7 @@ NPC_options:
   welcomebis:
     text: 'Que puis-je pour toi ?'
     conditions: 'tag_toph'
-    pointers: preuve,rentrer,temple,preuve_perdue,magic,fiole_have,earth_wand_upgrade,rienmerci
+    pointers: preuve,rentrer,temple,preuve_perdue,magic,fiole_have,fiole_earth,fiole_earth_lost,stick_have,earth_wand_upgrade,rienmerci
   raconter_rep:
     text: 'Érudit de la Terre tu dis... \nNous ne communiquons pas avec le monde extérieur, donc ça ne me dit rien ! \nQue puis-je faire pour toi ?'
     pointers: preuve,rentrer,temple,rienmerci
@@ -37,6 +37,9 @@ NPC_options:
   fiole_have_rep:
     text: 'Très bien. \nJ''ai enchanté tes fioles pour qu''elles puissent contenir des formes de Terre diverses. \nJe t''ai mis les ingrédients qu''il te faut dans ton Journal de Progression. \nPour récupérer un ingrédient, il suffit de faire un clic-droit, fiole en main, sur l''ingrédient que tu veux récupérer !'
     events: folder_earth_fiole_fill
+  fiole_earth_lost_rep:
+    text: 'Veille à ne pas les perdre cette fois !'
+    events: give_earth_fiole1
   fiole_earth_have:
     text: 'De parfaits échantillons ! Je vais les garder pour vous. \nPour terminer, il te faut un récipient pour absorber cette spiritualité. \nVa crafter un bâton et ramènes le moi !'
     events: folder_earth_stick
@@ -55,7 +58,7 @@ NPC_options:
 #
   earth_wand_upgrade_fine:
     text: 'Soit ! Voici vos options.'
-    events: air_wand_menu
+    events: earth_wand_menu
 #                #
 
 # Options Joueur #
@@ -97,6 +100,10 @@ player_options:
     text: 'J''ai tous les ingrédients qu''il faut pour une Baguette de la Terre !'
     conditions: 'and_ef'
     pointer: fiole_earth_have
+  fiole_earth_lost:
+    text: 'J''ai perdu une fiole pour les ingrédients de la Baguette !'
+    conditions: '!earth_fiole_lost,!earth_wand,!and_ef'
+    pointer: fiole_earth_lost_rep
   stick_have:
     text: 'J''ai le bâton qu''il faut pour ma Baguette de la Terre !'
     conditions: 'earth_baton_obj_tag,!earth_wand'

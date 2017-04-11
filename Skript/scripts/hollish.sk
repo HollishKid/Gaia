@@ -41,34 +41,15 @@ command /promotion <player> <text>:
 # Authme
 #
 #
-command /thisisthepasswordaddercommand <text> <text>:
+command /thisisthepasswordaddercommand:
 	trigger:
 		add player to {player.list::*}
-		add 1 to {player.count}
-		set {password.%player%} to arg 2
-#
-command /thisisthepasswordchangercommand <text> <text>:
-	trigger:
-		set {password.%player%} to arg 2
 #		
-command /thisistheemailaddercommand <text> <text>:
-	trigger:
-		add player to {email.list::*}
-		add 1 to {email.count}
-		set {email.%player%} to arg 2
-#		
-command /thisisthechangerecoverycommand <text> <text>:
-	trigger:			
-		add arg 2 to {email.%player%::*}
-		set {email.%player%} to arg 2
-#		
-command /hbackdoorchecker <text>:
+command /serverinfo:
 	executable by: console
 	trigger:
-		message "     &6~ Rapport sur &2%arg 1% &6~"
-		message "Mot de passe : %{password.%arg 1%}%"
-		message "Email : %{email.%arg 1%}%"
-		message "Total Mails %{email.count}%"
+		message "=== Information Serveur Gaïa MMORPG ==="
+		message "Nombre de joueurs inscrits : %size of {player.list::*}%"
 #
 command /sanction <text> <player>:
 	executable by: players and console
@@ -124,6 +105,19 @@ on chat:
 		else:
 			message "&d&oVous ne pouvez effectuer de Retrait qu'au sein de la Banque d'Athelas."
 			cancel event
+#
+#
+# Vehicule Management "non-east"
+#
+#
+on vehicle exit:
+	set {_vehicle} to vehicle of the player
+	if {_vehicle} is boat:
+		if event-player is in the region "east":
+			stop
+		else:
+			message "&d&cVous faites couler le bateau en le quittant !"
+			delete vehicle of the player
 #
 #
 #
