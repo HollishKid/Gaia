@@ -53,7 +53,7 @@ zae_click3: action right any conditions:hypercap_inhand,loc_grande events:zae_cl
 zae_click4: action right any conditions:hypercap_inhand events:zae_click4
 zae_clichyperreg: action right any conditions:hyperreg_inhand events:zae_starthyperreg
 zae_shootpotion: action right any conditions:potion_closeportal_inhand,inregion_faille events:zae_q4event
-kal_click: action right GOLD_BLOCK conditions:kal_q1start events:kal_collapse loc:-6836;11;3304;Gaia range:2
+kal_click: action right WOOL:4 conditions:kal_q1start events:kal_collapse loc:-6836;11;3304;Gaia range:2
 ut_coffre: location -6836;13;3254;Gaia 3 events:ut_coffre
 ut_coffre1click: action right chest events:ut_coffre1loot loc:-6843;12;3252;Gaia range:2
 ut_coffre2click: action right chest events:ut_coffre2loot loc:-6843;12;3245;Gaia range:2

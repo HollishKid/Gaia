@@ -480,7 +480,7 @@ regions:
         sendJoinMessage: false
         joinMessage: ''
         leaveConsoleCommands:
-        - 'bq event %player% Zedd.stacy_open'
+        - 'bq event %player% Zedd.sta_delay'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''

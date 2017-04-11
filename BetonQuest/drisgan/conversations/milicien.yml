@@ -8,18 +8,18 @@ stop: 'true'
 ##########################
 NPC_options:
   n1:
-    text: 'Qui va là?'
+    text: 'Qui va là ?'
     conditions: '!succes'
     pointers: moi
   n2:
-    text: 'Tu as réussi? Bien, dépêche-toi de faire ton rapport au maître dans ce cas!'
+    text: 'Tu as réussi ? Bien, dépêche-toi de faire ton rapport au maître dans ce cas !'
     conditions: 'succes'
   next:
-    text: 'Tu tombe bien, il y a justement une réunion cette nuit! Tu vois cette fenêtre avec les motifs rouge et blanc qui l''encadrent? C''est le lieu de la réunion. Tâche de l''atteindre sans te faire repérer!'
+    text: 'Tu tombe bien, il y a justement une réunion cette nuit ! \nTu vois cette fenêtre avec les motifs rouge et blanc qui l''encadrent ? \nC''est le lieu de la réunion. Tâche de l''atteindre sans te faire repérer !'
     events: folder_infilt
     pointers: ok,cmt
   cmt_rep:
-    text: 'Tu vas devoir passer par les toits de la ville. Tu peux y accèder un peu plus loin sur le chemin de ronde. Prend garde à ne pas tomber, si un autre garde te vois, il attaquera sans sommation!'
+    text: 'Tu vas devoir passer par les toits de la ville. \nTu peux y accèder un peu plus loin sur le chemin de ronde. \nPrend garde à ne pas tomber, si un autre garde te vois, il attaquera sans sommation !'
 #
 ##########################
 #                        #
@@ -34,5 +34,5 @@ player_options:
   ok:
     text: 'Pas de problèmes.'
   cmt:
-    text: 'Comment puis-je l''atteindre?'
+    text: 'Comment puis-je l''atteindre ?'
     pointers: cmt_rep

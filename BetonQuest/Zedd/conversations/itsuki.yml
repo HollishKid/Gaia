@@ -8,11 +8,11 @@ stop: 'false'
 ##########################
 NPC_options:
   n0:
-    text: 'Bonjour %Player%, vous êtes la pour de nouvelle quêtes?'
+    text: 'Bonjour %player%, vous êtes la pour de nouvelle quêtes ?'
     conditions: '!its_inconvers,its_convers'
     pointers: bronze,info
   n00:
-    text: 'Bonjour %Player%, comment ce passe avec votre quêtes?'
+    text: 'Bonjour %player%, comment ce passe avec votre quêtes ?'
     conditions: '!its_inconvers,its_convers,its_inprogress'
     pointers: rang1,info,non_merci
   n1:
@@ -40,7 +40,7 @@ NPC_options:
     pointers: r1
   pr2:
     text: 'Alors voilà. Les Points de Réputation (RP) permet la promotion au Rang. Tout aventurier commence au Rang 1, puis après avoir atteins un certains nombre de points nous pouvons demander à être promu au suivant rang \nPar exemple pour passer de Rang1 à Rang2, il faus 10RP, puis de rang2 à rang3, il faudras 20RP, ainsi de suite.'  
-    pointers:  r1
+    pointers: r1
   quetes:
     text: ''
     pointer: r1
@@ -75,7 +75,7 @@ player_options:
     text: 'Rang 1~9'
     pointers: menu_bronze
   promo:
-    text: 'Je voudrais monter mon rang, s''il vous plaît.''
+    text: 'Je voudrais monter mon rang, s''il vous plaît.'
     events: itsuki_promo
   menu:
     text: 'Commencer un contrat &l(aucun contrat disponible pour le moment.)'

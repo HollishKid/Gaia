@@ -56,7 +56,7 @@ NPC_options:
     conditions: '!maka_inconvers,maka_hascoffre,!maka_end'
     pointer: p3,p4
   n10:
-    text: 'Merveilleuse nouvelle! Le roi &2Ubu &a&osera comblé! Laisse moi te récompenser dignement pour cela!'
+    text: 'Merveilleuse nouvelle ! Le roi &2Kahn &a&osera comblé! Laisse moi te récompenser dignement pour cela !'
     event: maka_inconvers,maka_end1
   n11:
     text: 'Voilà qui est dommage... Et intriguant... Néanmoins, laisse moi te remercier pour cette mission menée à bien.'
@@ -65,7 +65,7 @@ NPC_options:
 ### Maka finish. Oddly sounds like jerking off. All over their faces. Yeah.
 #
   n12:
-    text: 'Je n''ai rien à ajouter pour le moment. Voyons ce que l''avenir nous réserve!'
+    text: 'Je n''ai rien à ajouter pour le moment. Voyons ce que l''avenir nous réserve !'
     conditions: '!maka_inconvers,maka_end'
 #
 ##########################

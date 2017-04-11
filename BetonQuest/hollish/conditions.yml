@@ -235,6 +235,7 @@ temple_cabin_full: party 200 in_temple_cabin count:1
 in_temple_cabin: region temple_cabin
 inv_place_1: empty 1
 mageentry_approved: tag mageentry_approved
+mage_entry_branching_out: journal mage_entry_branching_out
 #
 #
 #

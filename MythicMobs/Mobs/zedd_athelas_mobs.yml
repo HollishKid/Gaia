@@ -571,7 +571,7 @@ Tesla:
   DamageModifiers:
   - FALL 0
   Skills:
-  - skill {s=Firebolt} @target ~onTimer:180
+  - skill {s=Firebolt2} @target ~onTimer:180
   AIGoalSelectors:
   - 0 clear
   AITargetSelectors:

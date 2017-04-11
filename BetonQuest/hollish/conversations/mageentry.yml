@@ -131,7 +131,7 @@ player_options:
 ###
   branching_out:
     text: 'J''ai fini ma formation avec l''Érudit de l''Air.'
-    conditions: 'airtemple_magic_learning'
+    conditions: 'airtemple_magic_learning,!mage_entry_branching_out,!default.grade_ecuyer'
     pointers: branching_out_ok
 #######################################
 #                                     #
