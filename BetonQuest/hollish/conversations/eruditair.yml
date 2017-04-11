@@ -47,8 +47,6 @@ NPC_options:
 #A partir d'ici commence chaque spécialité de l'Erudit (delete me)
   etudiant:
     text: 'Ah ! Je vois... Il s''avère que je pourrais vous enseigner, votre esprit me convient. \nJe ne vois pas en vous le moindre savoir pour entamer ces études. \nAvant de vous lancer, fabriquez vous un &dlivre avec une plume&a&o, pour prendre vos notes éventuelles !'
-    conditions: '!tag_erudit_book'
-    events: tag_erudit_air
     pointers: book_ok,book_non
 #
   book_rep:
@@ -132,7 +130,7 @@ player_options:
     pointers: ermite
   book_ok:
     text: 'Aucun problème, j''y vais de ce pas !'
-    events: book_erudit,book_erudit_journal
+    events: book_erudit,book_erudit_journal,tag_erudit_air
   book_non:
     text: 'Eh, non pas tout de suite.'
   book:
@@ -184,13 +182,3 @@ player_options:
 #Tracking Sense
 #Whip (AIR BEGGINING)
 #Wound*
-#######################################
-#
-#
-# NOTES GENERALES SUR ORGANISATION MAGIE
-#
-#
-#######################################
-# Maître de Temple donne accès au Menu avec les Sorts achetables.
-#   Points de Spiritualité.
-# WAND UNDROPPABLE

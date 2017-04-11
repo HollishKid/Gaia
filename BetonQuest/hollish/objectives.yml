@@ -112,8 +112,4 @@ hrota_obj2: mmobkill skeletonlvlnorth amount:20 conditions:around_ingor_mine eve
 #
 #
 terre_find: action right any conditions:pierre_terre_hand events:terre_find_exe 
-#
-#
-#louvre_obj: password 'mellon' ignoreCase events:louvre_open
-#
 

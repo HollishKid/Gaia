@@ -189,7 +189,7 @@ every 5 minutes in "Gaia":
 		if {hour.system} is "19":
 			if {event.breach} is 0:
 				set {event.breach} to 1
-				execute console command "setblock -6751 50 2971 redstone_torch 5 replace"
+				execute console command "setblock -6755 54 2963 redstone_torch 5 replace"
 				execute console command "region flag event_breach -w Gaia mob-spawning allow"
 				broadcast "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"
 				loop all players:
@@ -199,7 +199,7 @@ every 5 minutes in "Gaia":
 		else if {hour.system} is "22":
 			if {event.breach} is 1:
 				set {event.breach} to 0
-				execute console command "setblock -6751 50 2971 air 0 replace"
+				execute console command "setblock -6755 54 2963 air 0 replace"
 				execute console command "region flag event_breach -w Gaia mob-spawning deny"
 				broadcast "&aLa Brèche en -7050;3200 a été refermée."
 				loop all players:

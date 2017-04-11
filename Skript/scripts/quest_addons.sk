@@ -83,7 +83,7 @@ command /thisisatopsecreteruditterrelocationcommand:
 	trigger:
 		if player is in the region "north":
 			if distance between player and {earth_temple_loc} is smaller than 10:
-				message "Cette borne porte une inscription mystérieuse..."
+				message "&d&oCette borne porte une inscription mystérieuse..."
 				if player meets betonquest condition "hollish.terre_find":
 					fire betonquest event "hollish.folder_borne_found" for player
 			else:

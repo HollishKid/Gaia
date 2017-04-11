@@ -494,12 +494,12 @@ journal_aang_baton_del: journal del journal_aang_baton
 #
 obj_milo_fiole: objective start obj_milo_fiole
 obj_air_catcher: objective start obj_air_catcher
-milo_fiole_mess: 'message &dJ''ai fabriqué une fiole! Je devrais la rapporter à &2Aang &dau Temple de l''Air.'
+milo_fiole_mess: 'message &dJ''ai fabriqué une fiole ! Je devrais la rapporter à &2Aang &dau Temple de l''Air.'
 tag_milo_fiole: tag add milo_fiole
 tag_remove_fiole: tag del milo_fiole
 milo_fiole1: tag add milo_fiole1
 milo_fiole1_remove: tag del milo_fiole1
-air_captured: 'message &dJ''ai réussi à capturer de l''air du continent de l''Est. La fiole semble s''agiter!'
+air_captured: 'message &dJ''ai réussi à capturer de l''air du continent de l''Est. La fiole semble s''agiter !'
 take_fiole: take fiole:1
 give_fiole_air_est: give fiole_air:1
 take_fiole_air_est: take fiole_air:1
@@ -536,7 +536,7 @@ journal_terre_find_del: journal del journal_terre_find
 journal_terre_found: journal add journal_terre_found
 journal_terre_found_del: journal del journal_terre_found
 journal_terre_orno: journal add journal_terre_orno
-journal_terre_orno_del: journal del journal_terre_orno_del
+journal_terre_orno_del: journal del journal_terre_orno
 journal_terre_orno_done: journal add journal_terre_orno_done
 journal_terre_orno_done_del: journal del journal_terre_orno_done
 journal_terre_ingor: journal add journal_terre_ingor
@@ -566,7 +566,8 @@ pierre_terre: give pierre_terre
 pierre_terre_take: take pierre_terre
 #
 terre_find_exe: folder obj_terre_find_delayed,obj_terre_sudo
-obj_terre_find_delayed: folder obj_terre_find delay:3
+obj_terre_find_delayed: folder obj_terre_finder delay:3 
+obj_terre_finder: if terre_found nothing else obj_terre_find
 obj_terre_sudo: sudo thisisatopsecreteruditterrelocationcommand
 earth_temple_fall: folder earth_temple_fall1,earth_temple_fall2
 earth_temple_fall1: teleport -7411;64;360;Gaia
@@ -578,7 +579,7 @@ pierre_perdu_give1: 'message &2Érudit &f: &a&oPrenez en soin cette fois !'
 folder_borne_found: folder tag_terre_find_del,tag_terre_found,mess_terre_found,journal_terre_find_del,journal_terre_found,pierre_terre_take
 tag_terre_found: tag add terre_found
 tag_terre_found_del: tag del terre_found
-mess_terre_found: 'message Je devrais aller la dire à l''Érudit de la Terre.'
+mess_terre_found: 'message &d&oJe devrais aller la dire à l''Érudit de la Terre.'
 #
 folder_earth_orno: folder tag_terre_found_del,journal_terre_found_del,tag_terre_orno,journal_terre_orno
 tag_terre_orno: tag add terre_orno
@@ -636,6 +637,7 @@ tag_earth_fiole_fill_del: tag del earth_fiole_fill
 #
 folder_earth_fiole_fill: folder ef_1,ef_2,ef_3,ef_4,ef_5,ef_6,ef_7,journal_earth_fiole_del,journal_earth_fiole_fill,tag_earth_fiole_fill,tag_earth_fiole_del,tag_earth_fiole_have_del,give_earth_fiole,take_earth_normalf
 give_earth_fiole: give fiole_earth:7
+give_earth_fiole1: give fiole_earth
 take_earth_normalf: take fiole:7
 ef_1: objective start ef_1
 ef_2: objective start ef_2
