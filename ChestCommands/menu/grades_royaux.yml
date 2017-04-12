@@ -43,7 +43,190 @@ menu-close:
     - 'Ferme cette fenêtre.'
   POSITION-X: 9
   POSITION-Y: 1
+  
+info:
+  NAME: '&aAdopter un Grade'
+  ID: torch
+  LORE:
+    - '&oEn adoptant un grade,'
+    - '&ovous en obtiendrais le préfixe.'
+  POSITION-X: 4
+  POSITION-Y: 1
+  KEEP-OPEN: true
+  
+standardprefix:
+  COMMAND: 'console: bq event {player} default.basic_prefix'
+  NAME: '&6Retour Grade Habituel'
+  LORE:
+    - '&oCliquez ici pour'
+    - '&oremettre votre'
+    - '&ograde habituel.'
+  ID: paper
+  POSITION-X: 9
+  POSITION-Y: 6
+  
+vagabond:
+  NAME: '&2Vagabond'
+  ID: map
+  LORE:
+    - '&oGrade par défaut.'
+    - ' '
+    - '&c&oNe peut être adopté.'
+  POSITION-X: 2
+  POSITION-Y: 3
+  KEEP-OPEN: true
 
+ecuyer:
+  NAME: '&2Écuyer'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '&oAvoir été approuvé par'
+    - '&ola Guilde des Aventuriers'
+    - '&oet le Sanctuaire.'
+    - ' '
+    - 'Vous sera remis par'
+    - 'l''Intendant en personne.'
+    - ' '
+    - '&lCe grade est requis pour'
+    - '&ladopter un grade supérieur.'
+  POSITION-X: 3
+  POSITION-Y: 3
+  KEEP-OPEN: true
+ 
+chevalier:
+  COMMAND: 'commandedegradesroyaux Chevalier qp40 15'
+  NAME: '&2Chevalier'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '- &o40 Points de Quête'
+    - '- &o15 jours d''ancienneté'
+  POSITION-X: 4
+  POSITION-Y: 3
+  
+champion:
+  COMMAND: 'commandedegradesroyaux Champion qp60 30'
+  NAME: '&2Chevalier'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '- &o60 Points de Quête'
+    - '- &o30 jours d''ancienneté'
+  POSITION-X: 5
+  POSITION-Y: 3
+  
+seigneur:
+  COMMAND: 'commandedegradesroyaux Seigneur qp80 60'
+  NAME: '&2Seigneur'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '- &o80 Points de Quête'
+    - '- &o60 jours d''ancienneté'
+  POSITION-X: 6
+  POSITION-Y: 3
+  
+banneret:
+  COMMAND: 'commandedegradesroyaux Banneret qp100 90'
+  NAME: '&2Banneret'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '- &o100 Points de Quête'
+    - '- &o90 jours d''ancienneté'
+  POSITION-X: 7
+  POSITION-Y: 3
+  
+baron:
+  COMMAND: 'commandedegradesroyaux Baron qp120 120'
+  NAME: '&2Baron'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '- &o120 Points de Quête'
+    - '- &o120 jours d''ancienneté'
+  POSITION-X: 8
+  POSITION-Y: 3
+
+vicomte:
+  COMMAND: 'commandedegradesroyaux Vicomte qp140 150'
+  NAME: '&2Vicomte'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '- &o140 Points de Quête'
+    - '- &o150 jours d''ancienneté'
+  POSITION-X: 2
+  POSITION-Y: 4
+
+comte:
+  COMMAND: 'commandedegradesroyaux Comte qp160 180'
+  NAME: '&2Comte'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '- &o160 Points de Quête'
+    - '- &o180 jours d''ancienneté'
+  POSITION-X: 3
+  POSITION-Y: 4
+  
+marquis:
+  COMMAND: 'commandedegradesroyaux Marquis qp180 210'
+  NAME: '&2Comte'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '- &o180 Points de Quête'
+    - '- &o210 jours d''ancienneté'
+  POSITION-X: 5
+  POSITION-Y: 4
+  
+duc:
+  COMMAND: 'commandedegradesroyaux Duc qp200 240'
+  NAME: '&2Duc'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '- &o200 Points de Quête'
+    - '- &o240 jours d''ancienneté'
+  POSITION-X: 6
+  POSITION-Y: 4
+  
+prince:
+  COMMAND: 'commandedegradesroyaux Prince qp220 270'
+  NAME: '&2Comte'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '- &o220 Points de Quête'
+    - '- &o270 jours d''ancienneté'
+  POSITION-X: 7
+  POSITION-Y: 4
+  
+legend:
+  COMMAND: 'commandedegradesroyaux Légende qp250 300'
+  NAME: '&2Légende'
+  ID: map
+  LORE:
+    - '&cRequiert :'
+    - ' '
+    - '- &o250 Points de Quête'
+    - '- &o300 jours d''ancienneté'
+  POSITION-X: 8
+  POSITION-Y: 4
+  
 blocker1:
   NAME: ' '
   ID: '160:7'
@@ -107,3 +290,65 @@ blocker9:
   POSITION-Y: 2
   KEEP-OPEN: true
   
+blocker12:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 1
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker22:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 2
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker32:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 3
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker42:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 4
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker52:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 5
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker62:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 6
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker72:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 7
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker82:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 8
+  POSITION-Y: 5
+  KEEP-OPEN: true
+  
+blocker92:
+  NAME: ' '
+  ID: '160:7'
+  POSITION-X: 9
+  POSITION-Y: 5
+  KEEP-OPEN: true

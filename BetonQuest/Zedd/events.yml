@@ -764,7 +764,8 @@ kal_clean1: tag del kal_q1start
 #
 kal_q2startfold: folder kal_mess6,kal_fold3 delay:8
 kal_mess6: 'message &2Kali Jones &f:&a&o Il souhaite donc te faire une proposition. Si cela t''intéresse, rend toi à &dDrisgan&a&o, et présente toi aux gardes de la porte nord.'
-kal_fold3: folder kal_mess7,kal_q2start,kal_conversdone,kal_j3 delay:8
+kal_fold3: folder kal_mess7,kal_q2start,kal_conversdone,kal_j3,drisganignore delay:8
+drisganignore: 'command drisganignoretarget %player%'
 kal_mess7: 'message &2Kali Jones &f:&a&o Une fois dans la ville, cherche &2Eko&a&o. C''est mon supérieur dans le syndicat.'
 kal_q2start: tag add kal_q2start
 #

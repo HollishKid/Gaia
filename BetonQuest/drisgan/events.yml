@@ -11,68 +11,6 @@ folder_infilt: folder obj_loc1,drisgan_infilt delay:1
 drisgan_infilt: tag add drisgan_infilt
 drisgan_infiltremove: tag del drisgan_infilt
 obj_loc1: objective start obj_loc1
-obrien_fold2: folder tag_obrien2,targetupdate2,targetupdate3,targetupdate4,targetupdate5,targetupdate6,targetupdate7,targetupdate8,targetupdate9,targetupdate10,targetupdate11,targetupdate12,acces_drisgan delay:1
-tag_obrien2: tag add obrien2
-acces_drisgan: tag add drisgan
-targetupdate2: folder targetupdate2_exe,targetupdate2_fold delay:1
-targetupdate2_exe: 'command npc sel 144'
-targetupdate2_fold: folder targetupdate2_exe2 delay:1
-targetupdate2_exe2: 'command sentinel addignore player:%player%'
-targetupdate3: folder targetupdate3_exe,targetupdate3_fold delay:2
-targetupdate3_exe: 'command npc sel 140'
-targetupdate3_fold: folder targetupdate3_exe2 delay:1
-targetupdate3_exe2: 'command sentinel addignore player:%player%'
-targetupdate4: folder targetupdate4_exe,targetupdate4_fold delay:3
-targetupdate4_exe: 'command npc sel 141'
-targetupdate4_fold: folder targetupdate4_exe2 delay:1
-targetupdate4_exe2: 'command sentinel addignore player:%player%'
-targetupdate5: folder targetupdate5_exe,targetupdate5_fold delay:4
-targetupdate5_exe: 'command npc sel 138'
-targetupdate5_fold: folder targetupdate5_exe2 delay:1
-targetupdate5_exe2: 'command sentinel addignore player:%player%'
-targetupdate6: folder targetupdate6_exe,targetupdate6_fold delay:5
-targetupdate6_exe: 'command npc sel 146'
-targetupdate6_fold: folder targetupdate6_exe2 delay:1
-targetupdate6_exe2: 'command sentinel addignore player:%player%'
-targetupdate7: folder targetupdate7_exe,targetupdate7_fold delay:7
-targetupdate7_exe: 'command npc sel 145'
-targetupdate7_fold: folder targetupdate7_exe2 delay:1
-targetupdate7_exe2: 'command sentinel addignore player:%player%'
-targetupdate8: folder targetupdate8_exe,targetupdate8_fold delay:7
-targetupdate8_exe: 'command npc sel 168'
-targetupdate8_fold: folder targetupdate8_exe2 delay:1
-targetupdate8_exe2: 'command sentinel addignore player:%player%'
-targetupdate9: folder targetupdate9_exe,targetupdate9_fold delay:8
-targetupdate9_exe: 'command npc sel 150'
-targetupdate9_fold: folder targetupdate9_exe2 delay:1
-targetupdate9_exe2: 'command sentinel addignore player:%player%'
-targetupdate10: folder targetupdate10_exe,targetupdate10_fold delay:9
-targetupdate10_exe: 'command npc sel 147'
-targetupdate10_fold: folder targetupdate10_exe2 delay:1
-targetupdate10_exe2: 'command sentinel addignore player:%player%'
-targetupdate11: folder targetupdate11_exe,targetupdate11_fold delay:10
-targetupdate11_exe: 'command npc sel 148'
-targetupdate11_fold: folder targetupdate11_exe2 delay:1
-targetupdate11_exe2: 'command sentinel addignore player:%player%'
-targetupdate12: folder targetupdate12_exe,targetupdate12_fold delay:11
-targetupdate12_exe: 'command npc sel 167'
-targetupdate12_fold: folder targetupdate12_exe2 delay:1
-targetupdate12_exe2: 'command sentinel addignore player:%player%'
-#
-# Code remplacé
-#  Deprecated depuis update à Sentinel
-#
-#targetupdate1: command sentry 140 ignore add player:%player%
-#targetupdate2: command sentry 141 ignore add player:%player%
-#targetupdate3: command sentry 138 ignore add player:%player%
-#targetupdate4: command sentry 146 ignore add player:%player%
-#targetupdate5: command sentry 145 ignore add player:%player%
-#targetupdate8: command sentry 168 ignore add player:%player%
-#targetupdate9: command sentry 150 ignore add player:%player%
-#targetupdate10: command sentry 147 ignore add player:%player%
-#targetupdate11: command sentry 148 ignore add player:%player%
-#targetupdate12: command sentry 167 ignore add player:%player%
-#
 #
 ##########################
 #                        #
