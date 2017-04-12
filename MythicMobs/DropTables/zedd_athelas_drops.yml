@@ -6,12 +6,17 @@ testmobdrops:
   - casque_fer_dj1 1 1
 shrek_drops:
   Drops:
-  - exp 75
   - pieds_fer_dj1 1 1
 kara_drops:
-  - exp 75
+  Drops:
   - jambes_fer_dj1 1 1
 erek_drops:
-  - exp 150
+  Drops:
   - plastron_fer_dj1 1 1
   - casque_fer_dj1 1 0.2
+black_hole_scrolls:
+  MaxItems: 1
+  Drops:
+  - archery_scroll_1 1 0.33
+  - alchemy_scroll_1 1 0.33
+  - fisting_scroll_1 1 0.33  

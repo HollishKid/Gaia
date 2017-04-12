@@ -17,10 +17,12 @@ casque_fer_dj1:
   Amount: 1
   Attributes:
     Head:
-      Armor: 4
+      Armor: 6
       Health: 3
   Options:
     Unbreakable: true
+  Enchantments:
+  - projectile_protection:1
 plastron_fer_dj1:
   Id: 307
   Data: 0
@@ -35,11 +37,12 @@ plastron_fer_dj1:
   Amount: 1
   Attributes:
     Chest:
-      Armor: 7
-      Health: 3
+      Armor: 10
+      Health: 4
   Options:
     Unbreakable: true
   Enchantments:
+  - protection:1
 jambes_fer_dj1:
   Id: 308
   Data: 0
@@ -54,11 +57,12 @@ jambes_fer_dj1:
   Amount: 1
   Attributes:
     Legs:
-      Armor: 6
-      Health: 2
+      Armor: 8
+      Health: 3
   Options:
     Unbreakable: true
   Enchantments:
+  - thorns:1
 pieds_fer_dj1:
   Id: 309
   Data: 0
@@ -74,8 +78,9 @@ pieds_fer_dj1:
   Amount: 1
   Attributes:
     Feet:
-      Armor: 4
+      Armor: 6
       Health: 2
   Options:
     Unbreakable: true
   Enchantments:
+  - depth_strider:1
