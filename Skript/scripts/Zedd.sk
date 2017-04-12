@@ -49,12 +49,12 @@ On rightclick holding paper:
 				else:
 					if the item's lore contains "moyenne":
 						command "bq event %player% scrolls.acrobatic_scroll_2"
-						command "addxp %player% acrobatie 1000""
+						command "addxp %player% acrobatie 1000"
 					else:
 						command "bq event %player% scrolls.acrobatic_scroll_3"
 						command "addxp %player% acrobatie 2000"
 			else:
-				if the item's lore contains "cheronnage":
+				if the item's lore contains "Bûcheronnage":
 					If the item's lore contains "faible":
 						command "bq event %player% scrolls.woodcutting_scroll_1"
 						command "addxp %player% bûcheronnage 500"

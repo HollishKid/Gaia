@@ -337,7 +337,7 @@ alchemy_scroll_1:
   - ''
   - '&e&oConfère une faible'
   - '&e&oquantité d''expérience.'
-  - '&7&oCatégorie: &7Fonte'
+  - '&7&oCatégorie: &7Alchimie'
 alchemy_scroll_2:
   Id: 339
   Display: '&a&oParchemin d''expérience I'
@@ -345,7 +345,7 @@ alchemy_scroll_2:
   - ''
   - '&e&oConfère une quantité'
   - '&e&omoyenne d''expérience.'
-  - '&7&oCatégorie: &7Fonte'
+  - '&7&oCatégorie: &7Alchimie'
 alchemy_scroll_3:
   Id: 339
   Display: '&a&oParchemin d''expérience I'
@@ -353,7 +353,7 @@ alchemy_scroll_3:
   - ''
   - '&e&oConfère une importante'
   - '&e&oquantité d''expérience.'
-  - '&7&oCatégorie: &7Fonte'
+  - '&7&oCatégorie: &7Alchimie'
 #
 #
 #
