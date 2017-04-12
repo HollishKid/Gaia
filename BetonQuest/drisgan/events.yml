@@ -1,5 +1,7 @@
 #
 #
+acces_drisgan: tag add drisgan
+
 quest_point_1: folder default.quest_point_1
 quest_point_2: folder default.quest_point_2
 quest_point_3: folder default.quest_point_3
