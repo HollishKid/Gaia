@@ -40,7 +40,7 @@ water_elem:
   Disguise:
     Type: player
     Player: "&6Goutte d'eau"
-    Skin: water
+    Skin: mikeell
   Drops:
   - waterelemDrops
   AIGoalSelectors:
