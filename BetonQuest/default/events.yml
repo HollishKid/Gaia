@@ -68,10 +68,15 @@ tag_remover_begin: folder tag_remove_passeur,start_removemembre delay:5
 tag_remove_passeur: tag del passeur
 jac_fold: folder jac_mess1,title_athelas,tag_amiral_del,tag_player,j_entry_int,pex_debuttempo,journal_update delay:3
 jac_mess1: 'message &2Jacopo: &a&oEt gardez votre &dJournal de Progression &a&oproche de vous, &f/menu &a&osi vous l''avez perdu !'
-title_athelas: folder title_athelas1,title_athelas2,title_athelas3 delay:3
+title_athelas: folder title_athelas1,title_athelas2,title_athelas3,title_carte delay:3
 title_athelas1: 'command title %player% times 40 60 80'
 title_athelas2: 'command title %player% subtitle {"text":"Retrouver l''Intendant","color":"gold"}'
 title_athelas3: 'command title %player% title {"text":"Athelas","color":"purple"}'
+title_carte: folder title_carte1,title_carte2,title_carte3,title_carte4 delay:5
+title_carte1: 'command title %player% times 40 60 80'
+title_carte2: 'command title %player% subtitle {"text":"Utilisez la Carte","color":"gold"}'
+title_carte3: 'command title %player% title {"text":"carte.gaia-craft.fr","color":"purple"}'
+title_carte4: 'command tellraw %player% {"text":"Cliquez ici pour être redirigé vers la carte.","color":"green","clickEvent":{"action":"open_url","value":"https://carte.gaia-craft.fr/"},"hoverEvent":{"action":"show_text","value":"Lien direct vers la Carte de Gaïa"}}'
 j_entry_int: if j_entry_int journal_update else j_entry_int_exe
 j_entry_int_exe: journal add trouver_intendant
 pex_debuttempo: 'command pex user %player% group set debuttempo'

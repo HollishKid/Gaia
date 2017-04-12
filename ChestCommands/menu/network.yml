@@ -90,7 +90,7 @@ discord:
   POSITION-Y: 3
   
 votegui:
-  COMMAND: 'thisistheopenvotemenucommand'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour être redirigé vers la page des votes.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/vote.html"},"hoverEvent":{"action":"show_text","value":"Lien direct vers la page de votes de Gaïa"}}'
   NAME: '&aVotez pour Gaïa'
   LORE:
     - '&fGagnez &21 &fpoint de vote'

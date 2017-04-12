@@ -71,6 +71,28 @@ command /liberer <player>:
 #
 #
 #
+# Grades Royaux
+#
+#
+command /commandedegradesroyaux <text> <text> <number>:
+	trigger:
+		if player meets betonquest condition "grade_ecuyer":
+			if player meets betonquest condition "%arg 2%":
+				set {_span} to arg 3
+				set {_sincelog} to difference between first login of player and now converted into days
+				if {_sincelog} is bigger than {_span}:
+					execute console command "pex user %player% prefix ""§6[§2%arg 1%§6]"""
+					message "&d&oVous venez d'adopter le Grade &2%arg 1%&d&o."
+				else:
+					message "&d&oVous n'avez pas assez d'ancienneté pour ce grade."
+					message "&d&oSeulement inscrit depuis &2%{_sincelog}% &d&ojours / &2%arg 3% &d&orequis."
+			else:
+				message "&d&oVous n'avez pas assez de Points de Quête pour ce grade."
+		else:
+			message "&d&oVous devez être Écuyer pour adopter un grade supérieur."
+#
+#
+#
 # Banking System
 #
 #

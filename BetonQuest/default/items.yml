@@ -1,6 +1,8 @@
 #
 #
-#    Items for Gaïa
+#   Default Items for Gaïa
+#
+#
 bow: BOW
 an_arrow: ARROW
 wooden_sword: WOOD_SWORD
@@ -141,4 +143,3 @@ dirt: DIRT data:0
 gravel: GRAVEL data:0
 splash_potion: SPLASH_POTION data:0 type:WATER
 mundane_potion: POTION type:MUNDANE
-
