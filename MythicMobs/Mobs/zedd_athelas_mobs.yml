@@ -12,10 +12,11 @@ Shrek:
     Color: RED
     Style: SOLID
   Display: '&4Anton'
-  Health: 300
+  Health: 350
   Damage: 8
   Drops:
   - shrek_drops
+  - black_hole_scrolls
   Skills:
   - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
   - skill{s=MobHealth} ~onDamaged >0 1
@@ -33,13 +34,9 @@ Shrek:
   - 1 attacker
   - 2 players
   Equipment:
-  - SwampHead:4
-  - SwampChestplate:3
-  - SwampLeggings:2
-  - SwampBoots:1
   - air:0
   Options:
-    MovementSpeed: 0.2
+    MovementSpeed: 0.3
     KnockbackResistance: 1
     MaxCombatDistance: 25
     PreventOtherDrops: true
@@ -91,6 +88,7 @@ acolyte:
   - 1 attacker
   - 2 players
   Options:
+    MaxCombatDistance: 25
     MovementSpeed: 0.3
     Collidable: false
     PreventOtherDrops: true
@@ -112,6 +110,7 @@ acolyteJr:
   - 1 attacker
   - 2 players
   Options:
+    MaxCombatDistance: 25
     MovementSpeed: 0.3
     Collidable: false
     PreventOtherDrops: true
@@ -139,6 +138,7 @@ acolyte_ranged:
   Equipment:
   - bow:0
   Options:
+    MaxCombatDistance: 25
     MovementSpeed: 0.2
     Collidable: false
     PreventOtherDrops: true
@@ -164,6 +164,7 @@ acolyte_rangedJr:
   Equipment:
   - bow:0
   Options:
+    MaxCombatDistance: 25
     MovementSpeed: 0.2
     Collidable: false
     PreventOtherDrops: true
@@ -283,6 +284,7 @@ Kara:
   Damage: 8
   Drops:
   - kara_drops
+  - black_hole_scrolls
   Skills:
   - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
   - skill{s=MobHealth} ~onDamaged >0 1
@@ -337,7 +339,7 @@ erek_p1:
   Disguise:
     Type: player
     Player: '&4Erek'
-    Skin: superman
+    Skin: The_Pro_HUNTER
   Skills:
   - potion{type=SLOW;d=999999;l=10} @self ~onSpawn
   - skill{s=MissileLauncher} ~onTimer:240
@@ -430,9 +432,6 @@ erek_renfort:
     PreventOtherDrops: true
     PreventRandomEquipment: true
   Equipment:
-  - ShrekChestplate:3
-  - ShrekLeggings:2
-  - ShrekBoots:1
   - air:0
   Modules:
     ThreatTable: true
@@ -487,10 +486,11 @@ erek:
   Damage: 4
   Drops:
   - erek_drops
+  - black_hole_scrolls
   Disguise:
     Type: player
     Player: '&4Erek'
-    Skin: superman
+    Skin: The_Pro_HUNTER
   AIGoalSelectors:
   - 0 clear
   - 1 RandomStroll
