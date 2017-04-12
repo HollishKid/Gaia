@@ -242,3 +242,34 @@ command /thisistheurukakilledcommand:
 				add 1 to {louvre_uruka_kills}
 		else:
 			stop
+#
+#
+#
+#
+command /drisganignoretarget <player>:
+	executable by: console
+	trigger:
+		loop yaml list "drisgannpcs" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_drisgan.npcs::*}
+		loop {_drisgan.npcs::*}:
+			execute console command "npc sel %loop-value%"
+			wait 2 ticks
+			execute console command "sentinel addignore player:%arg 1%"
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

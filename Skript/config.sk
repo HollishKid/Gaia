@@ -37,7 +37,7 @@ language: english
 # (open the jar as zip or rename it to Skript.zip to access it)
 
 
-check for new version: true
+check for new version: false
 # Whether Skript should check for whether a new version of Skript is available when the server starts.
 # If this is set to true Skript will announce a new version to all players with the "skript.admin" permission.
 # If set to false you can still check for a new version with '/skript update check'.
@@ -123,7 +123,7 @@ plugin priority: high
 #                                                  Skript removes drops it shouldn't => decrease priority or specify which item types to remove
 
 
-log player commands: true
+log player commands: false
 # Whether Skript should log the usage of custom commands.
 # They will be logged as [INFORMATION] in this format: '<player>: /<command> <arguments>'
 
@@ -150,7 +150,7 @@ allow function calls before definations: false
 # If enabled, functions' existences are checked after loading ALL scripts.
 # Warning: Unless you have text editor with good directory-search, it can be hard to find your functions!
 
-disable variable conflict warnings: false
+disable variable conflict warnings: true
 # Disables warnings of potential variable name conflicts if set to true.
 # I recommend to not touch this option, but if you do so you should at least set it back to false
 # whenever you create new scripts with new variables.

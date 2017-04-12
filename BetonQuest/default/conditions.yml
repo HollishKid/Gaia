@@ -74,11 +74,25 @@ random999: random 999-1000
 random100: random 100-100
 #
 #
-# Réputation Athelas (Points)
-#   Points de Vote
+#  Points de Quête
+#    Réputation Athelas
+#      Points de Vote
 #
 #
 ##########################
+qp1: point quest_points 1
+qp40: point quest_points 40
+qp60: point quest_points 60
+qp80: point quest_points 80
+qp100: point quest_points 100
+qp120: point quest_points 120
+qp140: point quest_points 140
+qp160: point quest_points 160
+qp180: point quest_points 180
+qp200: point quest_points 200
+qp220: point quest_points 220
+qp250: point quest_points 250
+#
 reput_athelas1: point reput_athelas 1
 reput_athelas2: point reput_athelas 2
 reput_athelas3: point reput_athelas 3

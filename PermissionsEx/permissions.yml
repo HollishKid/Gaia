@@ -248,11 +248,9 @@ groups:
     - grades.ecuyer
     - areashop.limits.ecuyer
     options:
-      rank: '798'
+      rank: '750'
       prefix: §6[§2Écuyer§6]§7
   north:
-    inheritance:
-    - debutant
     permissions:
     - regions.north
     options:
@@ -528,7 +526,10 @@ users:
     - god
     options:
       name: Hollish
-    permissions: []
+      prefix: ''
+    permissions:
+    - Magic.bypass_break
+    - Magic.bypass_build
   101c5daf-3f56-232c-9565-ac1a102f44f0:
     group: []
   c9593601-87a9-3aa3-9750-93bf1f701809:
@@ -538,15 +539,20 @@ users:
     options:
       name: crashozz
     permissions:
+    - Magic.bypass_break
+    - Magic.bypass_build
     - essentials.invsee.modify
   3e599dd9-abba-387d-bd82-7a37109a679e:
     group:
+    - north
     - beta
     - aventurier
     options:
       name: Xgamer365
       prefix: ''
-    permissions: []
+    permissions:
+    - Magic.bypass_break
+    - Magic.bypass_build
   ae241e16-183a-2490-98c8-241ef7b5a761:
     group: []
   45e02074-74b8-2846-a7ab-b19cd1b474f8:
@@ -572,7 +578,9 @@ users:
     - moderator
     options:
       name: demonra
-    permissions: []
+    permissions:
+    - Magic.bypass_break
+    - Magic.bypass_build
   577a8c28-afa6-3e62-8224-351ee94d060f:
     group:
     - aventurier
@@ -592,6 +600,8 @@ users:
       name: julienhx
       prefix: §6[§2Mineur§6]§7
     permissions:
+    - Magic.bypass_break
+    - Magic.bypass_build
     - mcmmo.perks.xp.10percentboost.mining
   7fed2df9-0145-2dea-a445-8c75d485ba7c:
     group: []
@@ -619,6 +629,7 @@ users:
     - moderator
     options:
       name: MathieuxZ88
+      prefix: ''
     permissions: []
   e603a083-3ee4-227d-b570-5a7ac80d6a97:
     group: []
@@ -629,7 +640,9 @@ users:
     - admin
     options:
       name: Zedd
-    permissions: []
+    permissions:
+    - Magic.bypass_break
+    - Magic.bypass_build
   274c590a-690a-2c7f-88a1-746ec8559991:
     group: []
     options:
@@ -664,13 +677,18 @@ users:
     - aventurier
     options:
       name: PixiosMan45
-    permissions: []
+    permissions:
+    - Magic.bypass_break
+    - Magic.bypass_build
   723bea7e-15ac-3765-a0ce-35dad1bd71b4:
     group:
+    - beta
     - aventurier
     options:
       name: Silonix
-    permissions: []
+    permissions:
+    - Magic.bypass_break
+    - Magic.bypass_build
   55ef921d-2d15-2910-bdaa-0f41b352f0e7:
     group: []
     options:
@@ -705,8 +723,30 @@ users:
     group: []
   e1d851c5-dfe0-3e22-a5c5-8aa7ebb39ccc:
     group:
-    - debuttempo
+    - debuttempobis
     options:
       name: fireice
     permissions:
-    - -keepitems.keep
+    - Magic.bypass_break
+    - Magic.bypass_build
+  §fkilian:
+    group: []
+    permissions: []
+  078e982b-ff41-2dea-81ff-2c4bfc58d53a:
+    group: []
+  1e5ddd7c-d00c-2d39-a7b3-5f290ad323f1:
+    group: []
+  §3seimag:
+    group: []
+    permissions: []
+  francis:
+    group: []
+    permissions: []
+  §2marie:
+    group: []
+    permissions: []
+  015e8802-bd1c-2de3-8584-e483e107937e:
+    group: []
+  §2cilinyul:
+    group: []
+    permissions: []
