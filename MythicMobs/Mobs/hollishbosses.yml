@@ -285,7 +285,7 @@ sancossi:
   Display: '&cSancossi'
   Health: 300
   Faction: sancossi
-  Damage: 15
+  Damage: 10
   Skills:
   - message{cooldown=20;m="<mob.name><&co> MEURT HUMAIN !!"} @PlayersInRadius{r=30} ~onCombat >0 0.2
   - message{m="<mob.name><&co> Je vais te démembrer et te manger cru, HUMAIN ! MEURT !"} @PlayersInRadius{r=30} ~onPlayerKill >0 1

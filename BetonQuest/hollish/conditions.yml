@@ -6,6 +6,16 @@
 #
 #
 #############################################
+
+#
+# Hack while waiting for Lauvel
+#
+#############
+
+physicien_tag: tag physicien
+
+#############
+
 builder: tag builder
 builder_in: tag builder_in
 #
