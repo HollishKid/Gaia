@@ -15,7 +15,7 @@ Shrek:
   Health: 350
   Damage: 8
   Drops:
-  - shrek_drops
+  - bl_drops
   - black_hole_scrolls
   Skills:
   - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
@@ -283,7 +283,7 @@ Kara:
   Health: 300
   Damage: 8
   Drops:
-  - kara_drops
+  - bl_drops
   - black_hole_scrolls
   Skills:
   - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
@@ -485,7 +485,8 @@ erek:
   Health: 750
   Damage: 4
   Drops:
-  - erek_drops
+#  - bl_swords
+  - bl_drops
   - black_hole_scrolls
   Disguise:
     Type: player
@@ -591,7 +592,8 @@ Testmob:
   Health: 30
   Damage: 3
   Drops:
-  - testmobdrops
+  - bl_swords
+  - bl_drops
   DamageModifiers:
   - FALL 0
   AIGoalSelectors:
