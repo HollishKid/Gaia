@@ -47,7 +47,7 @@ acrobatic_scroll_1:
   - ''
   - '&e&oConfère une faible'
   - '&e&oquantité d''expérience.'
-  - '&7&oCatégorie: &7Acrobaties'
+  - '&7&oCatégorie: &7Acrobatie'
 acrobatic_scroll_2:
   Id: 339
   Display: '&a&oParchemin d''expérience I'
@@ -55,7 +55,7 @@ acrobatic_scroll_2:
   - ''
   - '&e&oConfère une quantité'
   - '&e&omoyenne d''expérience.'
-  - '&7&oCatégorie: &7Acrobaties'
+  - '&7&oCatégorie: &7Acrobatie'
 acrobatic_scroll_3:
   Id: 339
   Display: '&a&oParchemin d''expérience I'
@@ -63,7 +63,7 @@ acrobatic_scroll_3:
   - ''
   - '&e&oConfère une importante'
   - '&e&oquantité d''expérience.'
-  - '&7&oCatégorie: &7Acrobaties'
+  - '&7&oCatégorie: &7Acrobatie'
 #
 #
 #####   BUCHERONNAGE
@@ -354,3 +354,93 @@ alchemy_scroll_3:
   - '&e&oConfère une importante'
   - '&e&oquantité d''expérience.'
   - '&7&oCatégorie: &7Fonte'
+#
+#
+#
+#####   RECYCLAGE
+#
+#
+salvation_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Recyclage'
+salvation_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Recyclage'
+salvation_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Recyclage'
+#
+#
+#
+#####   HERBORISTERIE
+#
+#
+herbalism_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Herboristerie'
+herbalism_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Herboristerie'
+herbalism_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Herboristerie'
+#
+#
+#
+#####   REPARATION
+#
+#
+repair_scroll_1:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une faible'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Réparation'
+repair_scroll_2:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une quantité'
+  - '&e&omoyenne d''expérience.'
+  - '&7&oCatégorie: &7Réparation'
+repair_scroll_3:
+  Id: 339
+  Display: '&a&oParchemin d''expérience I'
+  Lore:
+  - ''
+  - '&e&oConfère une importante'
+  - '&e&oquantité d''expérience.'
+  - '&7&oCatégorie: &7Réparation'

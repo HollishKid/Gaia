@@ -1,0 +1,67 @@
+#
+#
+#
+#
+#######
+#
+#
+sword_scroll_1: take sword_scroll_1:1
+sword_scroll_2: take sword_scroll_2:1
+sword_scroll_3: take sword_scroll_3:1
+#
+acrobatic_scroll_1: take acrobatic_scroll_1:1
+acrobatic_scroll_2: take acrobatic_scroll_2:1
+acrobatic_scroll_3: take acrobatic_scroll_3:1
+#
+woodcutting_scroll_1: take woodcutting_scroll_1:1
+woodcutting_scroll_2: take woodcutting_scroll_2:1
+woodcutting_scroll_3: take woodcutting_scroll_3:1
+#
+fishing_scroll_1: take fishing_scroll_1:1
+fishing_scroll_2: take fishing_scroll_2:1
+fishing_scroll_3: take fishing_scroll_3:1
+#
+mining_scroll_1: take mining_scroll_1:1
+mining_scroll_2: take mining_scroll_2:1
+mining_scroll_3: take mining_scroll_3:1
+#
+excavation_scroll_1: take excavation_scroll_1:1
+excavation_scroll_2: take excavation_scroll_2:1
+excavation_scroll_3: take excavation_scroll_3:1
+#
+axes_scroll_1: take axes_scroll_1:1
+axes_scroll_2: take axes_scroll_2:1
+axes_scroll_3: take axes_scroll_3:1
+#
+fisting_scroll_1: take fisting_scroll_1:1
+fisting_scroll_2: take fisting_scroll_2:1
+fisting_scroll_3: take fisting_scroll_3:1
+#
+archery_scroll_1: take archery_scroll_1:1
+archery_scroll_2: take archery_scroll_2:1
+archery_scroll_3: take archery_scroll_3:1
+#
+taming_scroll_1: take taming_scroll_1:1
+taming_scroll_2: take taming_scroll_2:1
+taming_scroll_3: take taming_scroll_3:1
+#
+smelting_scroll_1: take smelting_scroll_1:1
+smelting_scroll_2: take smelting_scroll_2:1
+smelting_scroll_3: take smelting_scroll_3:1
+#
+alchemy_scroll_1: take alchemy_scroll_1:1
+alchemy_scroll_2: take alchemy_scroll_2:1
+alchemy_scroll_3: take alchemy_scroll_3:1
+#
+salvation_scroll_1: take salvation_scroll_1:1
+salvation_scroll_2: take salvation_scroll_2:1
+salvation_scroll_3: take salvation_scroll_3:1
+#
+herbalism_scroll_1: take herbalism_scroll_1:1
+herbalism_scroll_2: take herbalism_scroll_2:1
+herbalism_scroll_3: take herbalism_scroll_3:1
+#
+repair_scroll_1: take repair_scroll_1:1
+repair_scroll_2: take repair_scroll_2:1
+repair_scroll_3: take repair_scroll_3:1
+#
