@@ -220,7 +220,6 @@ command /louvreweeklyreward <player>:
 			
 #	
 command /thisistheurukkilledcommand:
-	executable by: console
 	trigger:
 		if "%{louvre_registre::*}%" contains "%player%":
 			if "%{louvre_contributors}%" contains "%player%":
@@ -232,7 +231,6 @@ command /thisistheurukkilledcommand:
 			stop
 #
 command /thisistheurukakilledcommand:
-	executable by: console
 	trigger:
 		if "%{louvre_registre::*}%" contains "%player%":
 			if "%{louvre_contributors}%" contains "%player%":
@@ -258,30 +256,18 @@ command /drisganignoretarget <player>:
 #
 #
 #
-command /spawneventminion <player> <text>:
-	executable by: console
+command /spawneventminion <text>:
 	trigger:
-		loop entities in radius 70 around %arg 1%:
+		loop all entities in radius 40 around player:
 			if loop-entity is a mythicmob:
-				add 1 to {_mms}
-			if {_mms} is > 15:
-				stop
-			else:
-				spawn a mythicmob worldboss_minion%arg 2% at the location of %arg 1%
+				if altitude of loop-entity is higher than 60:
+					add 1 to {_mms}
+		if {_mms} is bigger than 50:
+			stop
+		else:
+			set {_player_loc} to location of the player
+			add a random integer between -10 and 10 to x coordinate of {_player_loc}
+			add a random integer between -10 and 10 to y coordinate of {_player_loc}
+			sharpsk spawn a mythicmob "worldboss_minion%arg 1%" at the {_player_loc} with level 1
+
  
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
