@@ -116,8 +116,7 @@ meca16: folder meca17,message16,npc_minion delay:9
 meca17: folder meca18,message17 delay:8
 meca18: folder meca19,npc_mage_off,npc_erudit_off,npc_moine_off,npc_minion_off delay:7
 meca19: folder meca20,image_biblio_off delay:6
-meca20: folder teleport_back,end_histoire delay:6
-end_histoire: conversation mageentry
+meca20: folder teleport_back delay:6
 message_welcome: 'message &2Mage&f: &a&oN''ayez pas peur &2%player%&a&o, vous êtes toujours vivant ! Je suis entré dans votre esprit pour mieux vous conter mon histoire...'
 message1: 'message &a&oTout cela commence il y a fort longtemps, pendant la Première Ère de notre temps, juste après la création du monde par &6Gaïa&a&o.'
 message2: 'message &a&oLe monde était alors harmonieux et opulent et la population prenait le temps d''apprécier sa nature et sa force.'

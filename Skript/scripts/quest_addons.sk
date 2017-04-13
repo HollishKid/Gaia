@@ -255,8 +255,20 @@ command /drisganignoretarget <player>:
 			execute console command "npc sel %loop-value%"
 			wait 2 ticks
 			execute console command "sentinel addignore player:%arg 1%"
-		
-		
+#
+#
+#
+command /spawneventminion <player> <text>:
+	executable by: console
+	trigger:
+		loop entities in radius 70 around %arg 1%:
+			if loop-entity is a mythicmob:
+				add 1 to {_mms}
+			if {_mms} is > 15:
+				stop
+			else:
+				spawn a mythicmob worldboss_minion%arg 2% at the location of %arg 1%
+ 
 		
 		
 		

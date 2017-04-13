@@ -36,7 +36,8 @@ worldbossalpha:
   - message{m="<mob.name><&co> Une âme de plus à tourmenter !"} @ThreatTablePlayers ~onPlayerKill >0 1
   - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged
   - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#8ad9ff} @self ~onDamaged
-  - summon{type=worldboss_minionalpha;amount=1;radius=15} ~onDamaged 0.20
+#  - summon{type=worldboss_minionalpha;amount=1;radius=15} ~onDamaged 0.05
+  - command{c="spawneventminion <target.name> alpha"} ~onDamaged 0.17
   - effect:particletornado{p=flame;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @self ~onDeath
   - message{m="<mob.name><&co> Vous pensez que je vais en rester là ?! Vermine !"} @ThreatTablePlayers ~onPlayerKill >0 1
   - summon{type=worldbossbeta;amount=1;radius=5} ~onDeath
@@ -54,6 +55,7 @@ worldbossalpha:
   AITargetSelectors:
   - 0 clear
   - 1 Players
+  - 2 attacker
   Drops:
   - worldboss_drops
 
@@ -84,12 +86,13 @@ worldboss_minionalpha:
   Faction: netherien
   AIGoalSelectors:
   - 0 clear
-  - 1 skeletonbowattack
+  - 1 arrowattack
   - 2 RandomStroll
   - 3 AvoidArrows
   AITargetSelectors:
   - 0 clear
   - 1 Players
+  - 2 attacker
   Drops:
   - worldboss_drops_minions
 
@@ -127,7 +130,8 @@ worldbossbeta:
   - message{m="<mob.name><&co> Mon tableau de chasse s'accroît !"} @ThreatTablePlayers ~onPlayerKill >0 1
   - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged
   - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#8ad9ff} @self ~onDamaged
-  - summon{type=worldboss_minionbeta;amount=1;radius=15} ~onDamaged 0.20
+#  - summon{type=worldboss_minionbeta;amount=1;radius=15} ~onDamaged 0.20
+  - command{c="spawneventminion <target.name> beta"} ~onDamaged 0.17
   - effect:particletornado{p=flame;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @self ~onDeath
   - message{m="<mob.name><&co> Je n'ai pas dit mon dernier mot !"} @ThreatTablePlayers ~onPlayerKill >0 1
   - summon{type=worldbosstres;amount=1;radius=5} ~onDeath
@@ -139,12 +143,13 @@ worldbossbeta:
   Faction: netherien
   AIGoalSelectors:
   - 0 clear
-  - 1 skeletonbowattack
+  - 1 arrowattack
   - 2 RandomStroll
   - 3 AvoidArrows
   AITargetSelectors:
   - 0 clear
   - 1 Players
+  - 2 attacker
   Drops:
   - worldboss_drops
  
@@ -182,6 +187,7 @@ worldboss_minionbeta:
   AITargetSelectors:
   - 0 clear
   - 1 Players
+  - 2 attacker
   Drops:
   - worldboss_drops_minions
   
@@ -220,8 +226,10 @@ worldbosstres:
   - message{m="<mob.name><&co> Un esprit de plus dans ma collection !"} @ThreatTablePlayers ~onPlayerKill >0 1
   - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged
   - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#8ad9ff} @self ~onDamaged
-  - summon{type=worldboss_minionalpha;amount=1;radius=15} ~onDamaged 0.15
-  - summon{type=worldboss_minionbeta;amount=1;radius=15} ~onDamaged 0.15
+#  - summon{type=worldboss_minionalpha;amount=1;radius=15} ~onDamaged 0.15
+#  - summon{type=worldboss_minionbeta;amount=1;radius=15} ~onDamaged 0.15
+  - command{c="spawneventminion <target.name> alpha"} ~onDamaged 0.17
+  - command{c="spawneventminion <target.name> beta"} ~onDamaged 0.17
   - summon{type=nether_cloud;amount=1;radius=15} ~onDamaged 0.17
   - skill{s=KarazschArcaneBolt} @target ~onTimer:50
   - summon{type=netherien_laser;amount=1;radius=5;os=true} ~onTimer:200
@@ -243,6 +251,7 @@ worldbosstres:
   AITargetSelectors:
   - 0 clear
   - 1 Players
+  - 2 attacker
   Drops:
   - worldboss_drops
   
@@ -338,7 +347,7 @@ revarcher:
   AIGoalSelectors:
   - 0 clear
   - 1 RandomStroll
-  - 2 skeletonbowattack
+  - 2 arrowattack
   - 3 float
   AITargetSelectors:
   - 0 clear
