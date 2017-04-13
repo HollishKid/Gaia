@@ -7,7 +7,7 @@
 On pick up:
 	If lore of item contains "soul_link":
 		set the 1st line of the item's lore to "&3Appartient à %player%"
-	If lore of item contains "Lien d'âme":
+	If lore of item contains "Appartient à":
 		if the 1st line of the item's lore is not "&3Appartient à %player%":
 			cancel event
 			wait 1 tick
@@ -211,3 +211,16 @@ On rightclick holding paper:
 																		command "addxp %player% recyclage 2000"
 																else:
 																	message "must be something wrong somewhere..."
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
