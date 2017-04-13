@@ -87,7 +87,7 @@ player_options:
 #
   air_temple:
     text: 'J''ai été envoyé par l''Erudit de l''Air. Il me dit que vous auriez vu une chute d''eau du ciel ?'
-    conditions: 'erudit_air_student,!tag_air_temple_loser,!tag_voyage_air,!tag_aang'
+    conditions: 'erudit_air_student,!or_loser_or_backer,!tag_voyage_air,!tag_aang,!tag_ermite_tarteur'
     pointers: air_temple_rep
   vieux:
     text: 'Vieux curieux? Vous parlez comme ça d''un Erudit ?'
@@ -117,7 +117,7 @@ player_options:
     text: 'Et si je me propose de me charger des provisions pour le voyage ... Je ramènerais mon meilleur pain !'
     pointers: tarte
   tarte_have:
-    text: 'J''ai une tarte à la citrouille! Vous êtes prêt à embarquer pour me montrer cette chute d''eau ?'
+    text: 'J''ai une tarte à la citrouille ! Vous êtes prêt à embarquer pour me montrer cette chute d''eau ?'
     conditions: 'ermite_tarte,tag_ermite_tarteur,!tag_aang'
     pointers: tarte_have_rep
   voyage_air:

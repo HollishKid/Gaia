@@ -1,4 +1,4 @@
-quester: 'Érudit'
+quester: 'Érudit Air'
 first: inconnu,porteur,connu
 stop: 'false'
 #########
@@ -100,19 +100,19 @@ player_options:
 #
 ##
   air1:
-    text: 'C''est effectivement le cas, Érudit &6Wilya &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Wilya &7!'
     pointers: faux
   air2:
-    text: 'C''est effectivement le cas, Érudit &6Wilma &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Wilma &7!'
     pointers: faux
   air3:
-    text: 'C''est effectivement le cas, Érudit &6Vilya &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Vilya &7!'
     pointers: faux
   air4:
-    text: 'C''est effectivement le cas, Érudit &6Vilin &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Vilin &7!'
     pointers: faux
   air5:
-    text: 'C''est effectivement le cas, Érudit &6Vista &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Vista &7!'
     pointers: acceptation
 ##
 #
@@ -146,11 +146,10 @@ player_options:
 #
   aang:
     text: 'J''ai trouvé le temple de l''Air !'
-    conditions: 'livre_air'
+    conditions: 'livre_air,!airtemple_magic_learning'
     pointers: aang_rep
   livre_air:
     text: 'Et pourtant, voici un livre pour vous le prouver !'
-    conditions: '!airtemple_magic_learning'
     events: livre_air_inspection
   welldont:
     text: 'Alors ne me croyez pas !'

@@ -88,7 +88,7 @@ mage_entry_branching_out_del: journal del mage_entry_branching_out
 #######################################
 #
 histoire_temple_tester: if temple_cabin_full mage_cabin_full else histoire_folder
-mage_cabin_full: 'message &2Mage &f: &a&oJe suis actuellement occupé avec quelqu''un d''autre, revenez vers moi quand je n''aurais plus de block de Pierre Lumineuse au dessus de ma tête !'
+mage_cabin_full: 'message &2Mage &f: &a&oMalheureusement, je suis actuellement occupé avec quelqu''un d''autre, revenez vers moi un peu plus tard !'
 histoire_folder: folder teleport_go,meca,tag_mage_entry delay:0
 tag_mage_entry: tag add tag_mage_entry
 teleport_go: folder teleport_go_exe delay:3
@@ -116,27 +116,25 @@ meca16: folder meca17,message16,npc_minion delay:9
 meca17: folder meca18,message17 delay:8
 meca18: folder meca19,npc_mage_off,npc_erudit_off,npc_moine_off,npc_minion_off delay:7
 meca19: folder meca20,image_biblio_off delay:6
-meca20: folder meca21,teleport_back delay:6
-meca21: folder end_histoire delay:7
-end_histoire: conversation mageentry
-message_welcome: 'message &dMage &f: &a&oN''ayez pas peur &2%player%&a&o, vous êtes toujours vivant! Je suis entré dans votre esprit pour mieux vous conter mon histoire...'
-message1: 'message &a&oTout cela commence il y a fort longtemps, pendant la Première Ere de notre temps, juste après la création du monde par &6Gaïa&a&o.'
-message2: 'message &a&oLe monde était alors harmonieux et opulent et la population prenait le temps d''apprécier son opulence et sa force.'
-message3: 'message &a&oLes habitants de cette Première Ere ont certainnement réussi à maîtriser cette force. Cet Art de Maîtrise est aujourd''hui perdu.'
+meca20: folder teleport_back delay:6
+message_welcome: 'message &2Mage&f: &a&oN''ayez pas peur &2%player%&a&o, vous êtes toujours vivant ! Je suis entré dans votre esprit pour mieux vous conter mon histoire...'
+message1: 'message &a&oTout cela commence il y a fort longtemps, pendant la Première Ère de notre temps, juste après la création du monde par &6Gaïa&a&o.'
+message2: 'message &a&oLe monde était alors harmonieux et opulent et la population prenait le temps d''apprécier sa nature et sa force.'
+message3: 'message &a&oLes habitants de cette Première Ère ont certainnement réussi à maîtriser cette force. Cet Art de Maîtrise est aujourd''hui perdu.'
 message4: 'message &a&oIl ne reste plus que les mythes des temples qui furent alors érigés, quatre au total. Un temple par élément constituant ce monde.'
 message5: 'message &a&oUn temple du Feu.'
 message6: 'message &a&oUn temple de l''Eau.'
 message7: 'message &a&oUn temple de la Terre.'
 message8: 'message &a&oUn temple de l''Air.'
-message9: 'message &a&oSelon les récits, ces temples furent abandonnés lors de l''avènement de la Seconde Ere, beaucoup plus tumultueuse avec l''arrivée de Forces Maléfiques sur Gaïa.'
-message10: 'message &6Gaïa &a&oaurait alors caché ces temples pour empêcher ces Forces de s''emparer de leur Spiritualité. Certains Mages pensent qu''elle en a simplement obstrué le passage, mais personne ne les a jamais revu depuis la fin de la Première Ere.'
-message11: 'message &a&oLes habitants qui habitaient les temples sont alors devenus nomades, empportant leurs Spiritualité avec eux ...'
-message12: 'message &a&oAu début de la Troisième et actuelle Ere, &6Ubu &a&oa fait ériger le &dSanctuaire &a&opour tenter de rassembler les informations sur ces temples et leur Spiritualité.'
+message9: 'message &a&oSelon les récits, ces temples furent abandonnés lors de l''avènement de la Seconde Ère, beaucoup plus tumultueuse avec l''arrivée de Forces Maléfiques sur Gaïa.'
+message10: 'message &6Gaïa &a&oaurait alors caché ces temples pour empêcher ces Forces de s''emparer de leur Spiritualité. Certains Mages pensent qu''elle en a simplement obstrué le passage, mais personne ne les a jamais revu depuis la fin de la Première Ère.'
+message11: 'message &a&oLes habitants qui habitaient les temples sont alors devenus nomades, emportant leur Spiritualité avec eux...'
+message12: 'message &a&oAu début de la Troisième et actuelle Ère, &6Ubu &a&oa fait ériger le &dSanctuaire &a&opour tenter de rassembler les informations sur ces temples et leur Spiritualité.'
 message13: 'message &a&oDans ce &dSanctuaire&a&o, &6Ubu &a&oordonna aux 13 plus sages de son entourage de réunir tous les documents qui instruisaient sur les temples et de développer les pouvoirs qu''ils y trouvaient.'
 message14: 'message &a&oIl nomma ensuite 4 Érudits pour qu''ils diffusent le savoir.'
 message15: 'message &a&oCes Érudits forment alors les Moines, qui sont chargées de rapporter leur savoir à la population actuelle et de façon locale.'
 message16: 'message &a&oLes Moines doivent d''abord passer par l''apprentissage en étant Minion auprès de tous les Érudits du &dSanctuaire&a&o.'
-message17: 'message &4Mage &f: &a&oVoici où nous en sommes donc de nos jours. Préparez vous, je vais progressivement vous faire revenir à vous même...'
+message17: 'message &2Mage&f: &a&oVoici où nous en sommes donc de nos jours. Préparez vous, je vais progressivement vous faire revenir à vous même...'
 #
 #
 #
@@ -195,7 +193,7 @@ npc_minion197_eff: explosion 0 0 1 -7104;128;2428;Gaia
 #
 #            L'Historier
 #
-orno_title_tag: folder tag_orno,orno_title1,orno_title2,orno_title3 delay:2
+orno_title_tag: folder tag_orno,orno_title1,orno_title2,orno_title3
 tag_orno: tag add orno
 journal_update: journal update
 journal_find_orno: journal add journal_find_orno
@@ -207,7 +205,7 @@ journal_orno_book_bis_del: journal del journal_orno_book_bis
 journal_mageentry: journal add journal_mageentry
 journal_mageentry_del: journal del journal_mageentry
 orno_title1: 'command title %player% times 20 100 20'
-orno_title2: 'command title %player% title {"text":"Baguette Magique","color":"light_purple"}'
+orno_title2: 'command title %player% title {"text":"Jeune Spiritus","color":"light_purple"}'
 orno_title3: 'command title %player% subtitle {"text":"Retrouver Orno, l''historier","italic":true,"color":"yellow"}'
 orno_book: folder tag_orno_book,obj_orno_book,journal_find_orno_del,journal_orno_book delay:0
 tag_orno_book: tag add orno_book
@@ -348,26 +346,25 @@ title_air2: 'command title %player% subtitle {"text":"Retrouver l''Ermite","ital
 title_air3: 'command title %player% title {"text":"Le Temple de l''Air","color":"blue"}'
 #
 #
-livre_air_inspection: folder air_book_inspection1,bookmeka1 delay:3
+livre_air_inspection: folder air_book_inspection1,bookmeka1,tag_airtemple_magic_learning delay:3
 bookmeka1: folder air_book_inspection2,bookmeka2 delay:5
 bookmeka2: folder air_book_inspection3,bookmeka3 delay:5
 bookmeka3: folder air_book_inspection4,bookmeka4 delay:5
 bookmeka4: folder air_book_inspection5,bookmeka5 delay:5
 bookmeka5: folder air_book_inspection6,bookmeka6 delay:5
-bookmeka6: folder air_book_inspection7,journal_airtemple_magic_learning,journal_livre_air_found_del,tag_airtemple_magic_learning,quest_point_1 delay:5
+bookmeka6: folder air_book_inspection7,journal_airtemple_magic_learning,journal_livre_air_found_del,quest_point_1 delay:5
 tag_airtemple_magic_learning: tag add airtemple_magic_learning
 air_book_inspection1: 'message &dVous montrez le livre de Sorts de l''Air à l''Érudit.'
-air_book_inspection2: 'message &4Érudit de l''Air &f: &a&oCe manuscrit est incroyable... Époustouflant...'
-air_book_inspection3: 'message &4Érudit de l''Air &f: &a&oJe ne pensais pas un jour avoir ceci entre les mains...'
-air_book_inspection4: 'message &4Érudit de l''Air &f: &a&oJe vais demander à l''Ermite de m''amener à mon tour, retournez y pour vous instruire davantage.'
-air_book_inspection5: 'message &4Érudit de l''Air &f: &a&oJe ne doute pas que vous en apprendrez plus sur la Magie de l''Air là bas qu''avec moi !'
-air_book_inspection6: 'message &4Érudit de l''Air &f: &a&oPar conséquent je vous libère de mon apprentissage ; retournez au Temple de l''Air pour découvrir la Magie de l''Air !'
+air_book_inspection2: 'message &2Érudit de l''Air&f: &a&oCe manuscrit est incroyable... Époustouflant...'
+air_book_inspection3: 'message &a&oJe ne pensais pas un jour avoir ceci entre les mains...'
+air_book_inspection4: 'message &a&oJe vais demander à l''Ermite de m''amener à mon tour, retournez y pour vous instruire davantage.'
+air_book_inspection5: 'message &a&oJe ne doute pas que vous en apprendrez plus sur la Magie de l''Air là bas qu''avec moi !'
+air_book_inspection6: 'message &a&oPar conséquent je vous libère de mon apprentissage ; retournez au Temple de l''Air pour découvrir la Magie de l''Air !'
 air_book_inspection7: 'message &4Érudit de l''Air &f: &a&oEn attendant retournez voir le Mage du Sanctuaire, il sera ravi d''apprendre cette belle découverte !'
 #
 # Ermite
 #
 voyage_ermite_folder: folder air_temple_voyage,journal_ermite_bateau_del delay:1
-take_tarte_ermite: take tarte:1
 tag_ermite_voyage: tag add ermite_voyage
 air_temple_voyage: folder mequa1,ermite_spawn,messa1,ermite_boat_on,tag_voyage_air_remove,tag_done_voyage_air,tag_air_loser_remove delay:2
 mequa1: folder mequa2,teleport_waiter,ermite2_spawn delay:5
@@ -393,14 +390,14 @@ ermite_boat_on: setblock AIR -6193;65;3329;Gaia
 ermite_boat_off: setblock REDSTONE_TORCH_ON -6193;65;3329;Gaia
 ermite_boat2_on: setblock AIR -6191;65;3329;Gaia
 ermite_boat2_off: setblock REDSTONE_TORCH_ON -6191;65;3329;Gaia
-messa1: 'message &4Ermite&f: &a&oNous voilà prêts pour le départ, j''espère que vous vous sentez prêt! Ceci va durer un petit moment ... !'
-messa2: 'message &4Ermite&f: &a&oNous nous approchons du point où il me semble l''avoir vu ...'
-messa3: 'message &4Ermite&f: &a&oJ''ai remarqué que le crépuscule y était permament dans les parages, le soleil semblait fixe dans le ciel!'
-messa4: 'message &4Ermite&f: &a&oNous y voilà!'
-messa5: 'message &4Ermite&f: &a&oJ''ai comme l''impression de voir quelque chose dans le ciel, quelque chose de grand!'
-messa6: 'message &4Ermite&f: &a&oC''est incroyable!! La chute d''eau semble êtrele seul contact avec la mer et une île flottante!'
-messa7: 'message &4Ermite&f: &a&oIl doit y avoir un moyen de la rejoindre ...! Je suis trop âgé pour faire ça, mais essayez de remonter le courant de la chute, vers le haut!'
-messa8: 'message &4Ermite&f: &a&oUne fois que vous serez en haut, je retournerais à mon île, pour prévenir l''&2Erudit de l''Air &a&o de cette découverte grandiose!'
+messa1: 'message &2Ermite&f: &a&oNous voilà prêts pour le départ, j''espère que vous vous sentez prêt ! Ceci va durer un petit moment... !'
+messa2: 'message &a&oNous nous approchons du point où il me semble l''avoir vu...'
+messa3: 'message &a&oJ''ai remarqué que le crépuscule y était permament dans les parages, le soleil semblait fixe dans le ciel !'
+messa4: 'message &a&oNous y voilà !'
+messa5: 'message &2Ermite&f: &a&oJ''ai comme l''impression de voir quelque chose dans le ciel, quelque chose de grand !'
+messa6: 'message &a&oC''est incroyable !! La chute d''eau semble être le seul contact avec la mer et une île flottante !'
+messa7: 'message &a&oIl doit y avoir un moyen de la rejoindre... ! Je suis trop âgé pour faire ça, mais essayez de remonter le courant de la chute, vers le haut !'
+messa8: 'message &a&oUne fois que vous serez en haut, je retournerais à mon île, pour prévenir l''&2Érudit de l''Air &a&o de cette découverte grandiose !'
 #
 #
 # Temple de l'Air
@@ -474,6 +471,10 @@ aang_sort: 'command wandp %player% add peek'
 baguette_peek_tag: tag add baguette_peek
 livre_air_give: 'command mgive %player% book:airbending'
 tag_livre_air: tag add livre_air
+air_wand_title: folder air_wand_title1,air_wand_title2,air_wand_title3
+air_wand_title1: 'command title %player% times 20 100 20'
+air_wand_title2: 'command title %player% subtitle {"text":"Baguette Magique","italic":true,"color":"gold"}'
+air_wand_title3: 'command title %player% title {"text":"Le Temple de l''Air","color":"blue"}'
 #
 # Milo -- or not -- taken over by Aang for Wand Creation
 #
@@ -551,13 +552,18 @@ terre_instruc_meka1: folder terre_instruc_meka2,terre_instruc2 delay:7
 terre_instruc_meka2: folder terre_instruc_meka3,terre_instruc3 delay:7
 terre_instruc_meka3: folder terre_instruc_meka4,terre_instruc4 delay:5
 terre_instruc_meka4: folder terre_instruc_meka5,terre_instruc5 delay:5
-terre_instruc_meka5: folder terre_instruc6,journal_terre_find,tag_terre_find,obj_terre_find,pierre_terre delay:5
+terre_instruc_meka5: folder terre_instruc6,journal_terre_find,tag_terre_find,obj_terre_find,pierre_terre,title_earth_instruc delay:5
 terre_instruc1: 'message &a&oLa localisation du Temple de la Terre est encore incertaine de nos jours.'
 terre_instruc2: 'message &a&oD''après mes recherches, ce temple se situe dans le Grand Nord.'
 terre_instruc3: 'message &a&oMalheureusement, cette vaste contrée est occupée par des hordes de Goblins.'
 terre_instruc4: 'message &a&oLes Nains d''Ingor ont donc bloqué l''accès par précaution.'
 terre_instruc5: 'message &a&oSi ce n''est pas déjà le cas, vous devriez voir si vous pouvez trouver un moyen de passer au Nord par Ingor.'
 terre_instruc6: 'message &a&oUne fois au Nord utilisez cette Pierre de Terre, elle permet de détecter la distance à une forme de Magie de la Terre.'
+#
+title_earth_instruc: folder title_earth_temp1,title_earth_temp2,title_earth_temp3
+title_earth_temp1: 'command title %player% times 20 100 20'
+title_earth_temp2: 'command title %player% subtitle {"text":"Fouilles","italic":true,"color":"gold"}'
+title_earth_temp3: 'command title %player% title {"text":"Le Temple de la Terre","color":"blue"}'
 #
 tag_terre_find: tag add terre_find
 tag_terre_find_del: tag del terre_find
@@ -594,6 +600,7 @@ folder_terre_ingor_done: folder journal_terre_ingor_del,tag_terre_ingor_del,give
 tag_earth_passage: tag add earth_passage
 give_enchanted_emerald: give emerald_volcano_ench
 take_emerald_volcano: take emerald_volcano:10
+t2ake_emerald_volcano: give emerald_volcano:10
 #
 # Earth Temple Passage & Tree
 #
@@ -629,6 +636,10 @@ earth_reward_mess: 'message &dVous gagnez &a&l30 &dpoints de Spiritualité !'
 tag_earth_fiole: tag add earth_fiole
 tag_earth_fiole_del: tag del earth_fiole
 obj_earth_fiole: objective start obj_earth_fiole
+earth_wand_title: folder earth_wand_title1,earth_wand_title2,earth_wand_title3
+earth_wand_title1: 'command title %player% times 20 100 20'
+earth_wand_title2: 'command title %player% subtitle {"text":"Baguette Magique","italic":true,"color":"gold"}'
+earth_wand_title3: 'command title %player% title {"text":"Le Temple de la Terre","color":"blue"}'
 earth_fiole_mess: 'message &d&oVous venez de crafter assez de fioles pour Toph. Vous devriez les lui ramener au Temple de la Terre.'
 tag_earth_fiole_have: tag add earth_fiole_have
 tag_earth_fiole_have_del: tag del earth_fiole_have

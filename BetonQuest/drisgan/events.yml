@@ -567,7 +567,6 @@ hol_popsalleB3: folder hol_erekstartfold,hol_popsalleB31,hol_poperekmess,hol_set
 hol_setairB3: setblock AIR -7411;46;3272;Gaia
 hol_poperekmess: 'message &4Erek:&a&o C''est ça qu''ils envoient contre moi? Meurs vermisseau !!'
 hol_popsalleB31: 'command mm m spawn erek_p1 1 Gaia,-7426,51,3272'
-
 #
 hol_depopsalleB3: folder hol_depopsalleB31,hol_depopsalleB32,hol_takeallresidus,hol_setair delay:1
 hol_depopsalleB31: 'command mm m kill erek_p1'

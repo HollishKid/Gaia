@@ -20,7 +20,7 @@ Shrek:
   Skills:
   - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
   - skill{s=MobHealth} ~onDamaged >0 1
-  - skill{s=MiniShrek} ~onTimer:400
+  - skill{s=MiniShrek} ~onTimer:600
   - skill{s=Tempest-Blast} @target ~onTimer:150
   - skill{s=Fart} ~onDamaged .1
   - heal{amount=1} @self ~onTimer:40
@@ -335,7 +335,7 @@ killer:
 erek_p1:
   Type: SKELETON
   Health: 800
-  Damage: 1
+  Damage: 3
   Disguise:
     Type: player
     Player: '&4Erek'
