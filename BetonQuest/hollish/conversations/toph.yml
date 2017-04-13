@@ -54,7 +54,7 @@ NPC_options:
   earth_wand:
     text: 'Parfait ! Voici votre Baguette de la Terre ! \nElle est neuve et peu puissante, tu peux toujours me demander pour l''améliorer !'
     ocnditions: 'empty_1'
-    events: folder_earth_wand
+    events: folder_earth_wand,journal_earthtemple_magic_learning_del
 #
   earth_wand_upgrade_fine:
     text: 'Soit ! Voici vos options.'
@@ -89,7 +89,7 @@ player_options:
 #
   magic:
     text: 'Pouvez vous m''en apprendre plus sur la Magie de la Terre ?'
-    conditions: 'earthtemple_magic_learning,!earth_fiole,!earth_fiole_fill'
+    conditions: 'earthtemple_magic_learning,!earth_fiole,!earth_fiole_fill,!earth_wand'
     pointers: magic_rep
 #
   fiole_have:
@@ -98,11 +98,11 @@ player_options:
     pointer: fiole_have_rep
   fiole_earth:
     text: 'J''ai tous les ingrédients qu''il faut pour une Baguette de la Terre !'
-    conditions: 'and_ef'
+    conditions: 'and_ef,!earth_wand'
     pointer: fiole_earth_have
   fiole_earth_lost:
     text: 'J''ai perdu une fiole pour les ingrédients de la Baguette !'
-    conditions: '!earth_fiole_lost,!earth_wand,!and_ef'
+    conditions: '!earth_fiole_lost,!earth_wand,!and_ef,earth_fiole_fill'
     pointer: fiole_earth_lost_rep
   stick_have:
     text: 'J''ai le bâton qu''il faut pour ma Baguette de la Terre !'

@@ -2380,7 +2380,7 @@ take_tarte_ermite: take tarte:1
 obj_ermite_bat: objective start obj_ermite_bat
 tag_ermite_tarteur: tag add ermite_tarteur
 tag_tarteur_remove: tag del ermite_tarteur
-tag_voyage_air: tag add global.voyage_air
+tag_voyage_air: tag add hollish.voyage_air
 #
 #
 #
@@ -3553,7 +3553,7 @@ message11: 'message &2&oMalgré cela, la Révolution continua, et &6Ubu &2&oet s
 message12: 'message &6Ubu &2&ofut proclamé Roi pour ses exploits et se battra pour contenir l''ennemi pendant le restant de ses jours.'
 title_begin5: folder title_begin51,title_begin52,title_begin53 delay:0
 title_begin51: 'command title %player% times 20 100 20'
-title_begin52: 'command title %player% title {"text":"Troisième Ere","bold":true,"color":"dark_green"}'
+title_begin52: 'command title %player% title {"text":"Troisième Ère","bold":true,"color":"dark_green"}'
 title_begin53: 'command title %player% subtitle {"text":"Epoque Actuelle","italic":true,"color":"blue"}'
 message13: 'message &2&oDe nos jours, c''est le petit fils du Roi &6Ubu &2&oqui règne sur la ville d''Athelas fondée par son illustre aïeul.'
 message14: 'message &2&oIl se nomme &6Kahn&2&o. Ce Roi règne sur la ville et ses terres pour y faire respecter l''ordre et surtout pour maintenir les ennemis endehors de la ville.'

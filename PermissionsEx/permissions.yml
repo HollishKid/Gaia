@@ -527,14 +527,11 @@ users:
     options:
       name: Hollish
       prefix: ''
-    permissions:
-    - Magic.bypass_break
-    - Magic.bypass_build
+    permissions: []
   101c5daf-3f56-232c-9565-ac1a102f44f0:
     group: []
   c9593601-87a9-3aa3-9750-93bf1f701809:
     group:
-    - god
     - admin
     options:
       name: crashozz
@@ -542,6 +539,9 @@ users:
     - Magic.bypass_break
     - Magic.bypass_build
     - essentials.invsee.modify
+    worlds:
+      god:
+        permissions: []
   3e599dd9-abba-387d-bd82-7a37109a679e:
     group:
     - north
@@ -637,6 +637,7 @@ users:
       name: §6Milicien
   d524ff9a-dc5d-3c3a-a702-4985264fbb14:
     group:
+    - god
     - admin
     options:
       name: Zedd
@@ -748,5 +749,8 @@ users:
   015e8802-bd1c-2de3-8584-e483e107937e:
     group: []
   §2cilinyul:
+    group: []
+    permissions: []
+  §dclélia:
     group: []
     permissions: []

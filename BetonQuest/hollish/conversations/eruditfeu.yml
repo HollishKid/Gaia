@@ -1,4 +1,4 @@
-quester: 'Érudit'
+quester: 'Érudit Feu'
 first: inconnu,porteur,connu
 stop: 'false'
 #########
@@ -51,7 +51,9 @@ NPC_options:
     text: 'Ah! Je suis ravi de l''apprendre, mais je ne prends pas d''étudiants à la légère. Parlez d''abord à l''Érudit de la Terre !'
     conditions: '!earthtemple_magic_learning'
   etudiant:
-    text: 'Très bien... Je vois que vous avez déjà été l''étudiant de l''Érudit de la Terre. \nCommençons votre instruction.'
+#This is tempo text. USED FOR V1 ONLY !
+    text: 'Très bien... Je vois que vous avez déjà été l''étudiant de l''Érudit de la Terre. \nMalheureusement, je n''ai pas la moindre idée de l''endroit où chercher le Temple de mon élément. \nRevenez me voir plus tard...'
+    conditions: 'earthtemple_magic_learning'
 #    events: tag_erudit_feu
 ##
 #
@@ -94,19 +96,19 @@ player_options:
 #
 ##
   feu1:
-    text: 'C''est effectivement le cas, Érudit &6Ruina &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Ruina &7!'
     pointers: faux
   feu2:
-    text: 'C''est effectivement le cas, Érudit &6Ruivë &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Ruivë &7!'
     pointers: faux
   feu3:
-    text: 'C''est effectivement le cas, Érudit &6Ruinë &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Ruinë &7!'
     pointers: acceptation
   feu4:
-    text: 'C''est effectivement le cas, Érudit &6Ruimen &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Ruimen &7!'
     pointers: faux
   feu5:
-    text: 'C''est effectivement le cas, Érudit &6Ruhta &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Ruhta &7!'
     pointers: faux
 ##
 #

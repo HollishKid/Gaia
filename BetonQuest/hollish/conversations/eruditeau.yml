@@ -1,4 +1,4 @@
-quester: 'Érudit'
+quester: 'Érudit Eau'
 first: inconnu,porteur,connu
 stop: 'false'
 #########
@@ -18,7 +18,7 @@ NPC_options:
     conditions: '!mageentry_approved'
     pointers: qui,keske,merciaurevoir
   qui_rep:
-    text: 'Je suis un des 4 &3Érudits &a&odu &dSanctuaire &a&o. Je suis &dÉrudit &a&ode l''Eau.'
+    text: 'Je suis un des 4 &3Érudits &a&odu &dSanctuaire&a&o. Je suis &dÉrudit &a&ode l''Eau.'
     pointers: comment,autres
   keske_rep:
     text: 'Cet endroit est consacré à la recherche sur l''Eau en tant qu''élément. J''y fais mes recherches, j''y enseigne et j''y vis. Mon rôle est aussi d''enseigner les &dMinions&a&o.'
@@ -52,7 +52,7 @@ NPC_options:
     conditions: '!firetemple_magic_learning'
   etudiant:
     text: 'Très bien... Je vois que vous avez déjà été l''étudiant de tous les autres Érudits. \nCommençons votre instruction.'
-#    events: tag_erudit_eau
+    conditions: 'firetemple_magic_learning'
 ##
 #
 # Jeune Spiritus
@@ -94,19 +94,19 @@ player_options:
 #
 ##
   eau1:
-    text: 'C''est effectivement le cas, Érudit &6Calta &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Calta &7!'
     pointers: faux
   eau2:
-    text: 'C''est effectivement le cas, Érudit &6Calpa &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Calpa &7!'
     pointers: acceptation
   eau3:
-    text: 'C''est effectivement le cas, Érudit &6Calya &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Calya &7!'
     pointers: faux
   eau4:
-    text: 'C''est effectivement le cas, Érudit &6Calwa &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Calwa &7!'
     pointers: faux
   eau5:
-    text: 'C''est effectivement le cas, Érudit &6Camba &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Camba &7!'
     pointers: faux
 ##
 #
