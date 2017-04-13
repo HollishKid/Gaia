@@ -1,4 +1,4 @@
-quester: 'Érudit'
+quester: 'Érudit Terre'
 first: inconnu,porteur,connu
 stop: 'false'
 #########
@@ -77,7 +77,7 @@ NPC_options:
     events: folder_terre_ingor_done
   temple_found_rep:
     text: 'C''est une incroyable nouvelle ! \nMerci de m''avoir aidé dans cette recherche ! \nJe vous libère de mon Apprentissage. \nRetournez au &dTemple de la Terre &a&opour en apprendre plus sur la Magie !'
-    events: journal_airtemple_magic_learning_del,journal_livre_earth_found_del,earthtemple_magic_learning,journal_earthtemple_magic_learning,quest_point_2,earth_reward,earth_reward_mess
+    events: journal_livre_earth_found_del,earthtemple_magic_learning,journal_earthtemple_magic_learning,quest_point_2,earth_reward,earth_reward_mess
 ############
 #          #
 #  JOUEUR  #
@@ -110,19 +110,19 @@ player_options:
 #
 ##
   terre1:
-    text: 'C''est effectivement le cas, Érudit &6Kemen &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Kemen &7!'
     pointers: acceptation
   terre2:
-    text: 'C''est effectivement le cas, Érudit &6Kelva &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Kelva &7!'
     pointers: faux
   terre3:
-    text: 'C''est effectivement le cas, Érudit &6Invis &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Invis &7!'
     pointers: faux
   terre4:
-    text: 'C''est effectivement le cas, Érudit &6Ilva &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Ilva &7!'
     pointers: faux
   terre5:
-    text: 'C''est effectivement le cas, Érudit &6Itila &a&o!'
+    text: 'C''est effectivement le cas, Érudit &6Itila &7!'
     pointers: faux
 ##
 #

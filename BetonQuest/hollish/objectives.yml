@@ -83,7 +83,7 @@ obj_fiole_sommet: location -6781;108;2485;Gaia 10 conditions:!midday,fiole_air_h
 aang_baton_obj: craft baton 1 events:aang_baton_obj_done
 #
 #
-obj_earth_fiole: craft fiole 7 events:earth_fiole_mess,tag_earth_fiole_have,journal_earth_fiole_del
+obj_earth_fiole: craft fiole 7 events:earth_fiole_mess,tag_earth_fiole_have
 #
 ef_1: action right DIRT conditions:region_east,earth_fiole_hand events:ef_dirt,fiole_earth_tester loc:-5000;60;5000;Gaia range:7000
 ef_2: action right SAND conditions:region_east,earth_fiole_hand events:ef_sand,fiole_earth_tester loc:-5000;60;5000;Gaia range:7000 

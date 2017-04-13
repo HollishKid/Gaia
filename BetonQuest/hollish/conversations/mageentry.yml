@@ -39,7 +39,7 @@ NPC_options:
 #  POST-HISTOIRE
 ###
   connu:
-    text: 'Avant de vous rendre auprès des Érudits, allez vous documenter dans la &dLibrairie Royale d''Athelas&a&o. Adressez-vous à &2Orno&a&o, il sait que vous venez...'
+    text: 'Avant de vous rendre auprès des Érudits, allez vous documenter dans la &dBibliothèque d''Athelas&a&o. Adressez-vous à &2Orno&a&o, il sait que vous venez...'
     conditions: 'tag_mage_entry,!tag_orno,!tag_orno_end,!mageentry_approved'
     events: orno_title_tag,journal_find_orno
   connu_orno_not:
@@ -47,7 +47,7 @@ NPC_options:
     conditions: 'tag_mage_entry,tag_orno,!tag_orno_end'
     pointers: orno_ou
   orno_ou_rep:
-    text: 'Il se trouve à la &dLibrairie d''Athelas&a&o.'
+    text: 'Il se trouve à la &dBibliothèque d''Athelas&a&o.'
   connu_orno_end:
     text: 'Orno m''a informé de la bonne réussite de votre apprentissage pour vous adresser aux Érudits ! Il est donc temps de vous envoyer chez eux, allez les trouver ici, dans le &dSanctuaire&a&o. \nPensez à conserver les livres d''&2Orno &a&oet d''en tirer beaucoup de sagesse !'
     conditions: 'tag_mage_entry,tag_orno_end,!mageentry_approved'
@@ -120,7 +120,8 @@ player_options:
     text: 'Pourriez-vous me montrer à nouveau l''histoire que vous m''aviez conté, sur l''histoire de Gaïa et ses 4 Temples ?'
     pointers: histoire_bis
   magie:
-    text: 'Pourrez vous m''apprendre plus sur ma Baguette Magique ?'
+    text: 'Pourrez vous m''apprendre plus sur une Baguette Magique ?'
+    condition: air_wand
     pointers: magie_apprenti
 ###
 #

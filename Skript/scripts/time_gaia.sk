@@ -151,7 +151,6 @@ every 3 minutes in "Gaia":
 	set {_louvre_uruk_total} to {_louvre_uruk_total} / 10
 	set {_louvre_weekly_reward} to {_block.total.louvre} + {_louvre_uruk_total}
 	set line 3 of block at {louvre_total_amount_sign} to "¤ %{_louvre_weekly_reward}%"
-
 #		
 #
 #
