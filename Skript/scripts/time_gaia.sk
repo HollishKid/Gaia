@@ -122,7 +122,7 @@ every 3 minutes in "Gaia":
 	set line 2 of block at {cagnotte_bucherons} to "%{bûcheronnage_total}%"
 	set line 4 of block at {cagnotte_bucherons} to "%size of {bûcheronnage_contributors::*}%"
 	set line 2 of block at {cagnotte_mineurs} to "%{minage_total}%"
-	set line 4 of block at {cagnotte_mineurs} to "%size of {minage_contributors::*}%"
+	set line 4 of block at {cagnotte_mineurs} to "%size of {other_contributors::*}%"
 	set line 2 of block at {cagnotte_reparateurs} to "%{réparation_total}%"
 	set line 4 of block at {cagnotte_reparateurs} to "%size of {réparation_contributors::*}%"
 	
@@ -285,10 +285,10 @@ every 59 minutes in "Gaia":
 	else if {hour.system} is "22":
 		if {day.index} is "7":
 
-			set {minage_total} to {minage_total} / size of {minage_contributors::*}
-			loop {minage_contributors::*}:
+			set {minage_total} to {minage_total} / size of {other_contributors::*}
+			loop {other_contributors::*}:
 				add {minage_total} to {minage_%loop-value%}
-				delete {minage_contributors::%loop-index%}
+				delete {other_contributors::%loop-index%}
 				wait 1 tick
 			set {minage_total} to 0
 			
