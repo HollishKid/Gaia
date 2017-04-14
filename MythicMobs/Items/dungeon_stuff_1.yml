@@ -170,7 +170,7 @@ jambes_maille_dj1:
     Unbreakable: true
   Enchantments:
   - thorns:1
-pieds_fer_dj1:
+pieds_maille_dj1:
   Id: 305
   Data: 0
   Display: '&9Bottes à éperons'
