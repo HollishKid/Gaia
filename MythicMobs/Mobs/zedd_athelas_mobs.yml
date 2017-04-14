@@ -501,7 +501,7 @@ erek:
   - 0 clear
   - 1 players
   Equipment:
-  - 298:4
+  - mc_leather_helmet:4
   DamageModifiers:
   - ENTITY_EXPLOSION 250
   Skills:
@@ -579,7 +579,7 @@ Tesla:
   - 0 clear
   - 1 players
   Equipment:
-  - 298:4
+  - mc_leather_helmet:4
   Options:
     AlwaysShowName: true
     KnockbackResistance: 10
@@ -593,6 +593,7 @@ Testmob:
   Damage: 3
   Drops:
   - bl_swords
+  - black_hole_scrolls
   - bl_drops
   DamageModifiers:
   - FALL 0
@@ -602,7 +603,7 @@ Testmob:
   - 0 clear
   - 1 players
   Equipment:
-  - 298:4
+  - mc_leather_helmet:4
   Options:
     AlwaysShowName: true
     KnockbackResistance: 10
