@@ -25,7 +25,7 @@ NPC_options:
     pointers: aide3_bis
 #
   occupe1:
-    text: 'Vous êtes là pour m''aider? Sinon, je vais retourner travailler... !'
+    text: 'Vous êtes là pour m''aider ? Sinon, je vais retourner travailler... !'
     conditions: 'francis1,!timer_francis,!tag_pain_francis,intendant_done'
     events: francis_cleaner
     pointers: aide1,non
@@ -52,7 +52,7 @@ NPC_options:
     text: 'Au chef de la cuisine du Château d''Athelas ! \nIl devrait vous donner une tarte qu''il m''a promis depuis longtemps !'
     events: francis_occupe3
   aide3_bis_rep:
-    text: 'Merci beaucoup, ça me fera un bon dessert! Voici un peu d''argent pour vous dédommager !'
+    text: 'Merci beaucoup, ça me fera un bon dessert ! Voici un peu d''argent pour vous dédommager !'
     events: betteraves_urgent_done
 ###################
 #Options du joueur#
