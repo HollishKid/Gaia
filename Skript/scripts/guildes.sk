@@ -9,10 +9,10 @@ on mcmmo player experience gain:
 	else:
 		if event-skilltype is mining:
 			if event-player meets betonquest condition "metier_mineur":
-				if {minage_contributors::*} contains "%event-player%":
+				if {other_contributors::*} contains "%event-player%":
 					add 1 to {minage_total}
 				else:
-					invoke "cagnotte_initializer" from player, "Mineur" and "minage"
+					invoke "cagnotte_initializer" from player, "Mineur" and "other"
 
 		else if event-skilltype is excavation:
 			if event-player meets betonquest condition "metier_excavation":
@@ -112,10 +112,10 @@ sub "cagnotte_initializer":
 on mcmmo skill level up:
 	if event-skilltype is mining:
 		if event-player meets betonquest condition "metier_mineur":
-			if {minage_contributors::*} contains "%event-player%":
+			if {other_contributors::*} contains "%event-player%":
 				add 100 to {minage_total}
 			else:
-				add event-player to {minage_contributors::*}
+				add event-player to {other_contributors::*}
 				add 100 to {minage_total}
 	
 	else if event-skilltype is excavation:
