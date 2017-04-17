@@ -3167,7 +3167,7 @@ francis_cleaner: folder tag_pain_francis_rem,paul_francis_rem,francis_carot_rem,
 tag_pain_francis_rem: tag del pain_francis
 paul_francis_rem: tag del paul_francis
 francis_carot_rem: tag del francis_carot
-betteraves_urgent_rem: tag del pain_urgent_done
+betteraves_urgent_rem: tag del betteraves_urgent
 tag_tarte_chef_rem: tag del tarte_chef
 #
 # Gorick
