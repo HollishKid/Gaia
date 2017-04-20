@@ -64,7 +64,8 @@ ut_coffre5click: action right chest events:ut_coffre5loot loc:-6829;12;3252;Gaia
 #
 ### Itsuki
 #
-its_r1delay: delay 120 events:its_r1timer_remove
+its_r1delay: delay 180 events:its_r1timer_remove
+its_r2delay: delay 1 events:its_r2timer_remove
 #
 its_objr1q1: mmobkill bandit amount:8 events:its_objr1q1_complete
 its_objr1q2: mmobkill lava_elem amount:6 events:its_objr1q2_complete
@@ -72,6 +73,9 @@ its_objr1q3: mmobkill hol_add amount:8 events:its_objr1q3_complete
 its_objr1q4: mmobkill water_elem amount:6 events:its_objr1q4_complete
 its_objr1q5: mmobkill ghoule amount:8 events:its_objr1q5_complete
 #
+its_objr2q1: mmobkill Shrek amount:1 events:its_objr2q1_complete
+its_objr2q2: mmobkill Kara amount:1 events:its_objr2q2_complete
+its_objr2q3: mmobkill erek amount:1 events:its_objr2q3_complete
 #
 #
 #

@@ -1,0 +1,81 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dContrats de Guilde'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 5
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 1
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+retour:
+  COMMAND: 'open: itsuki.yml'
+  NAME: '&aRetour'
+  ID: stick
+  LORE:
+    - 'Retour au menu précédent.'
+  POSITION-X: 8
+  POSITION-Y: 1   
+rang1:
+  COMMAND: 'console: bq event {player} Zedd.its_menur1'
+  NAME: '&3Rang 1'
+  LORE:
+    - ''
+  ID: 'wool:4'
+  POSITION-X: 4
+  POSITION-Y: 4
+  KEEP-OPEN: true
+  
+rang2:
+  COMMAND: 'console: bq event {player} Zedd.its_checkr2'
+  NAME: '&3Rang 2'
+  LORE:
+    - ''
+  ID: 'wool:1'
+  POSITION-X: 6
+  POSITION-Y: 4
+  KEEP-OPEN: true
+rang3:
+  COMMAND: 'console: bq event {player} Zedd.its_checkr3'
+  NAME: '&3Rang 3'
+  LORE:
+    - ''
+  ID: 'wool:14'
+  POSITION-X: 8
+  POSITION-Y: 4
+  KEEP-OPEN: true

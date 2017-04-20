@@ -54,6 +54,10 @@ its_jr1q3: '[Contrat de guilde]: Élimination d''ordures. Abattez 10 Type louche
 its_jr1q4: '[Contrat de guilde]: Élimination d''élémentaires d''eau. Abattez 6 Goutte d''eau à High Garden. (-6900;3290)'
 its_jr1q5: '[Contrat de guilde]: Élimination de mort-vivants. Abattez 8 Ghoules à High Garden, par temps de pluie. (-6900;3290)'
 #
+its_jr2done: 'Vous avez accompli votre contrat de guilde de rang 2. Retournez voir Itsuki à la Guilde pour toucher votre récompense.'
+its_jr2q1: '[Cible à abattre]: Éliminez Anton, dans la Tanière du Traître. (-7327;3263)'
+its_jr2q2: '[Cible à abattre]: Éliminez Kara, dans la Tanière du Traître. (-7327;3263)'
+its_jr2q3: '[Cible à abattre]: Éliminez Erek, dans la Tanière du Traître. (-7327;3263)'
 #
 #
 #
