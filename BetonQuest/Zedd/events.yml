@@ -106,7 +106,7 @@ maka_mess02: 'message &6&oRéunion suspecte (terminé)'
 maka_item1: 'command mm items give %player% leatherlegs_common'
 maka_mess00: 'message &6&oVous recevez un &aPantalon en cuir&6&o.'
 maka_eco1: 'command eco give %player% 500'
-maka_fold1: folder drisgan.tag_succesremove,maka_q1done,maka_endq1,maka_outconvers,maka_convers,quest_point_1 delay:4
+maka_fold1: folder drisgan.tag_succesremove,maka_q1done,maka_endq1,maka_outconvers,maka_convers,quest_point_1 delay:2
 maka_q1done: tag add maka_q1done
 maka_endq1: tag del maka_q1start
 maka_convers: conversation makarov
@@ -860,19 +860,17 @@ kal_reset5_exe: setblock REDSTONE_TORCH_ON -6765;55;2987;Gaia
 #
 its_inconvers: tag add its_inconvers
 its_conversdone: tag del its_inconvers
-its_menu: 'command cc open itsuki %player%'
-its_menur1: 'command cc open itsuki_r1 %player%'
-its_menur2: 'command cc open itsuki_r2 %player%'
-its_menur3: 'command cc open itsuki_r3 %player%'
+its_menu: folder its_menu2 delay:1
+its_menu2: 'command cc open itsuki %player%'
 #
 its_r1quit_check: if its_r1inprogress its_r1quit_confirm else its_quitdenymess
-its_r2quit_check: if its_r2inprogress its_r1quit_confirm else its_quitdenymess
-its_r1quit_confirm: 'command cc open itsuki_quitconfirm1 %player%'
-its_r2quit_confirm: 'command cc open itsuki_quitconfirm2 %player%'
+its_r2quit_check: if its_r2inprogress its_r2quit_confirm else its_quitdenymess
+its_r1quit_confirm: folder its_r1quit_confirm2 delay:1
+its_r1quit_confirm2: 'command cc open itsuki_quitconfirm1 %player%'
+its_r2quit_confirm: folder its_r1quit_confirm3 delay:1
+its_r1quit_confirm3: 'command cc open itsuki_quitconfirm2 %player%'
 its_quitdenymess: 'message &3Vous n''avez pas de contrat de ce rang à abandonner.'
 #
-its_checkr2: if drisgan.hol_access its_menur2 else its_menudeny
-its_checkr3: folder its_menudeny delay:1
 its_menudeny: 'message &2Itsuki: &a&oVous ne remplissez pas les conditions nécessaires pour accéder à ce rang.'
 #
 ## Journal

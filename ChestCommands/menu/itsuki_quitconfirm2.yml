@@ -44,7 +44,7 @@ menu-close:
   POSITION-X: 9
   POSITION-Y: 1
 retour:
-  COMMAND: 'console: bq event {player} Zedd.its_menur2'
+  COMMAND: 'open: itsuki.yml'
   NAME: '&aRetour'
   ID: stick
   LORE:
@@ -52,7 +52,7 @@ retour:
   POSITION-X: 8
   POSITION-Y: 1  
 oui:
-  COMMAND: 'console: bq event (player) Zedd.its_r2quit'
+  COMMAND: 'console: bq event {player} Zedd.its_r2quit'
   NAME: '&4xxxxxxxxxxxxxxxx'
   LORE:
     - ''
@@ -64,7 +64,7 @@ oui:
   POSITION-X: 6
   POSITION-Y: 4  
 non:
-  COMMAND: 'console: bq event {player} Zedd.its_menur2'
+  COMMAND: 'open: itsuki.yml'
   NAME: '&aoooooooooooooooo'
   LORE:
     - ''
@@ -76,14 +76,14 @@ non:
   POSITION-X: 4
   POSITION-Y: 4
 abandon:
-  NAME: '&3----------------'
+  NAME: '&3---------------------'
   LORE:
     - ''
-    - 'Abandonner '
-    - 'un contrat.'
+    - 'Voulez-vous vraiment'
+    - 'abandonner le contrat?'
     - ''
-    - '&3----------------'
-  ID: 'wool:10'
+    - '&3---------------------'
+  ID: '155'
   POSITION-X: 5
   POSITION-Y: 2
   KEEP-OPEN: true
