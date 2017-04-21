@@ -100,6 +100,7 @@ loc_chatal: region athelas_castle
 loc_biblio: region athelas_biblio
 loc_grande: region athelas_gm
 zae_noloc: and !loc_biblio,!loc_chatal,!loc_grande
+zae_all_loc: and loc_biblio,loc_chatal,loc_grande
 zae_loc1: tag zae_loc1
 zae_loc2: tag zae_loc2
 zae_loc3: tag zae_loc3

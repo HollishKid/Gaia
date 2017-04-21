@@ -452,6 +452,29 @@ hol_foldertele: folder hol_tele,hol_mess0
 hol_tele: teleport -7348;71;3264;Gaia
 hol_mess0: 'message &d&oOuups! C''est un peu haut tout de même...'
 #
+#### Protection des salles de boss
+#
+## B1 Anton
+#
+hol_enterb1check: if hol_salleb1_occupied hol_enterb1deny else nothing
+hol_enterb1deny: folder hol_enterb1deny_tele,hol_enterb1deny_mess
+hol_enterb1deny_tele: teleport -7417;41;3355;Gaia
+hol_enterb1deny_mess: 'message &d&oMieux vaut ne pas intervenir dans ce combat...'
+#
+## B2 Kara
+#
+hol_enterb2check: if hol_salleb2_occupied hol_enterb2deny else nothing
+hol_enterb2deny: folder hol_enterb2deny_tele,hol_enterb2deny_mess
+hol_enterb2deny_tele: teleport -7401;43;3236;Gaia
+hol_enterb2deny_mess: 'message &d&oMieux vaut ne pas intervenir dans ce combat...'
+#
+## B3 Erek
+#
+hol_enterb3check: if hol_salleb3_occupied hol_enterb3deny else nothing
+hol_enterb3deny: folder hol_enterb3deny_tele,hol_enterb3deny_mess
+hol_enterb3deny_tele: teleport -7370;51;3273;Gaia
+hol_enterb3deny_mess: 'message &d&oMieux vaut ne pas intervenir dans ce combat...'
+#
 ##
 ###########  ALDWIN
 ##
