@@ -146,14 +146,12 @@ rang2_quit:
   POSITION-X: 4
   POSITION-Y: 5
 #
+####
 #
+## Rang 3
 #
+####
 #
-#
-#
-#
-#
-#############################################
 rang3:
   NAME: '&3Rang 3'
   LORE:
@@ -162,6 +160,49 @@ rang3:
   POSITION-X: 5
   POSITION-Y: 2
   KEEP-OPEN: true
+rang3_start:
+  COMMAND: 'console: bq event {player} Zedd.its_menudeny'
+  NAME: '&3----------------'
+  LORE:
+    - ''
+    - 'Accepter un'
+    - 'nouveau contrat.'
+    - ''
+    - '&3----------------'
+  ID: 'wool:14'
+  POSITION-X: 5
+  POSITION-Y: 3
+rang3_claim:
+  COMMAND: 'console: bq event {player} Zedd.its_menudeny'
+  NAME: '&3----------------'
+  LORE:
+    - ''
+    - 'Rendre un '
+    - 'contrat'
+    - ''
+    - '&3----------------'
+  ID: 'wool:14'
+  POSITION-X: 5
+  POSITION-Y: 4
+rang3_quit:
+  COMMAND: 'console: bq event {player} Zedd.its_menudeny'
+  NAME: '&3----------------'
+  LORE:
+    - ''
+    - 'Abandonner'
+    - 'un contrat.'
+    - ''
+    - '&3----------------'
+  ID: 'wool:14'
+  POSITION-X: 5
+  POSITION-Y: 5
+#
+####
+#
+## Rang 4
+#
+####
+#
 rang4:
   NAME: '&3Rang 4'
   LORE:
@@ -170,6 +211,49 @@ rang4:
   POSITION-X: 6
   POSITION-Y: 2
   KEEP-OPEN: true
+rang4_start:
+  COMMAND: 'console: bq event {player} Zedd.its_menudeny'
+  NAME: '&3----------------'
+  LORE:
+    - ''
+    - 'Accepter un'
+    - 'nouveau contrat.'
+    - ''
+    - '&3----------------'
+  ID: 'wool:12'
+  POSITION-X: 6
+  POSITION-Y: 3
+rang4_claim:
+  COMMAND: 'console: bq event {player} Zedd.its_menudeny'
+  NAME: '&3----------------'
+  LORE:
+    - ''
+    - 'Rendre un '
+    - 'contrat'
+    - ''
+    - '&3----------------'
+  ID: 'wool:12'
+  POSITION-X: 6
+  POSITION-Y: 4
+rang4_quit:
+  COMMAND: 'console: bq event {player} Zedd.its_menudeny'
+  NAME: '&3----------------'
+  LORE:
+    - ''
+    - 'Abandonner'
+    - 'un contrat.'
+    - ''
+    - '&3----------------'
+  ID: 'wool:12'
+  POSITION-X: 6
+  POSITION-Y: 5
+#
+####
+#
+## Rang 5
+#
+####
+#
 rang5:
   NAME: '&3Rang 5'
   LORE:
@@ -178,3 +262,39 @@ rang5:
   POSITION-X: 7
   POSITION-Y: 2
   KEEP-OPEN: true
+rang5_start:
+  COMMAND: 'console: bq event {player} Zedd.its_menudeny'
+  NAME: '&3----------------'
+  LORE:
+    - ''
+    - 'Accepter un'
+    - 'nouveau contrat.'
+    - ''
+    - '&3----------------'
+  ID: 'wool:15'
+  POSITION-X: 7
+  POSITION-Y: 3
+rang5_claim:
+  COMMAND: 'console: bq event {player} Zedd.its_menudeny'
+  NAME: '&3----------------'
+  LORE:
+    - ''
+    - 'Rendre un '
+    - 'contrat'
+    - ''
+    - '&3----------------'
+  ID: 'wool:15'
+  POSITION-X: 7
+  POSITION-Y: 4
+rang5_quit:
+  COMMAND: 'console: bq event {player} Zedd.its_menudeny'
+  NAME: '&3----------------'
+  LORE:
+    - ''
+    - 'Abandonner'
+    - 'un contrat.'
+    - ''
+    - '&3----------------'
+  ID: 'wool:15'
+  POSITION-X: 7
+  POSITION-Y: 5
