@@ -31,7 +31,7 @@ NPC_options:
     events: makarov_access_journal_del
   n5:
     text: 'Fais moi ton rapport.'
-    conditions: 'drisgan.succes,!maka_end'
+    conditions: 'drisgan.succes,!maka_end,!maka_inconvers'
     events: maka_q1reward,maka_inconvers,makarov_access_journal_del,maka_j2_del
   n6:
     text: 'On dirait bien qu''il va falloir s''infiltrer dans leur organisation si on veut avoir plus d''informations... \nPuis-je compter sur toi encore une fois ?'
