@@ -122,4 +122,4 @@ revenant:
     PreventOtherDrops: true
     PreventRandomEquipment: true
   Modules:
-ThreatTable: true
+    ThreatTable: true
