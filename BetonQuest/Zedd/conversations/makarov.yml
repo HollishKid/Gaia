@@ -31,7 +31,7 @@ NPC_options:
     events: makarov_access_journal_del
   n5:
     text: 'Fais moi ton rapport.'
-    conditions: 'drisgan.succes,!maka_end'
+    conditions: 'drisgan.succes,!maka_end,!maka_inconvers'
     events: maka_q1reward,maka_inconvers,makarov_access_journal_del,maka_j2_del
   n6:
     text: 'On dirait bien qu''il va falloir s''infiltrer dans leur organisation si on veut avoir plus d''informations... \nPuis-je compter sur toi encore une fois ?'
@@ -46,7 +46,7 @@ NPC_options:
 #
   n7:
     text: Bienvenue &2%player% &a&o! Alors, tu as de nouvelles informations pour moi ?
-    conditions: '!maka_inconvers,maka_q2start,!maka_q2done,drisgan.eko_q3start,!maka_end'
+    conditions: '!maka_inconvers,maka_q2start,!maka_q2done,maka_fix,!maka_end'
     event: maka_etape3,maka_inconvers
   n8:
     text: Encore une fois bon courage &2%player%&a&o, tu en auras besoin...

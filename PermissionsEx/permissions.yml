@@ -258,85 +258,30 @@ groups:
     inheritance:
     - aventurier
     permissions:
-    - notification.vulgarite
-    - notification.commandes
-    - essentials.tpa
-    - essentials.tpahere
-    - essentials.tpaccept
     - essentials.helpop.receive
     - authme.vip
     - Pet.rabbit
     - Pet.blaze
     options:
       rank: '700'
-      prefix: §6[§aBêta§6]§7
+      prefix: §6[§aGuide§6]§7
   beta_est:
     inheritance:
     - aventurier_est
     permissions:
-    - notification.vulgarite
-    - notification.commandes
-    - essentials.tpa
-    - essentials.tpaccept
     - essentials.helpop.receive
     - authme.vip
     options:
       rank: '600'
-      prefix: §6[§aBêta§6]§7
+      prefix: §6[§aGuide§6]§7
   builder:
     inheritance:
     - aventurier
     permissions:
-    - authme.vip
-    - notification.vulgarite
-    - notification.commandes
-    - chestcommands.open.admin.yml
-    - menu.admin
-    - admin.histoire
-    - menu.admin.gm1
-    - menu.tetes
-    - essentials.warp
-    - essentials.warp.list
-    - essentials.warps.*
-    - essentials.speed
-    - essentials.speed.fly
-    - essentials.speed.walk
-    - essentials.tp
-    - essentials.tp.others
-    - essentials.tppos
-    - essentials.teleport.cooldown.bypass
     - essentials.helpop.receive
-    - worldedit.clipboard.cut
-    - worldedit.region.replace
-    - worldedit.region.set
-    - worldedit.clipboard.copy
-    - worldedit.clipboard.paste
-    - worldedit.clipboard.rotate
-    - worldedit.history.undo
-    - worldedit.history.redo
-    - worldedit.fixlava
-    - worldedit.fixwater
-    - worldedit.region.stack
-    - worldedit.region.move
-    - worldedit.drain
-    - worldedit.selection.pos
-    - worldedit.wand
-    - worldedit.brush.*
-    - worldedit.clipboard.load
-    - worldedit.schematic.load
-    - worldedit.fill
-    - modifyworld.*
-    - voxelsniper.*
-    - voxelsniper.sniper
-    - voxelsniper.goto
-    - voxelsniper.brush.*
-    - voxelsniper.command.brush
-    - voxelsniper.command.help
-    - voxelsniper.command.material
-    - voxelsniper.command.materialmask
-    - voxelsniper.command.undo
-    - voxelsniper.command.redo
-    - voxelsniper.command.reset
+    - authme.vip
+    - Pet.rabbit
+    - Pet.blaze
     options:
       rank: '150'
       prefix: §6[§aArchitecte§6]§f
@@ -344,17 +289,8 @@ groups:
     inheritance:
     - aventurier_est
     permissions:
-    - authme.vip
-    - notification.vulgarite
-    - notification.commandes
-    - chestcommands.open.admin.yml
-    - menu.admin
-    - admin.histoire
-    - essentials.warp
-    - essentials.warp.list
-    - essentials.warps.*
     - essentials.helpop.receive
-    - essentials.teleport.cooldown.bypass
+    - authme.vip
     options:
       rank: '125'
       prefix: §6[§aArchitecte§6]§f
@@ -362,22 +298,15 @@ groups:
     inheritance:
     - builder
     permissions:
-    - authme.vip
-    - globalchestshop.admin
     - authme.admin.register
+    - authme.vip
     - admin.prison
-    - essentials.vanish
-    - essentials.helpop.receive
-    - essentials.tp
-    - essentials.tp.others
-    - essentials.tppos
     - essentials.ban
     - essentials.banip
     - essentials.tempban
     - essentials.ban.notify
     - essentials.ban.offline
     - essentials.tempban.offline
-    - essentials.teleport.cooldown.bypass
     - essentials.invsee
     - essentials.mute
     - essentials.seen
@@ -386,12 +315,7 @@ groups:
     - essentials.seen.ipsearch
     - notification.vulgarite
     - notification.commandes
-    - chestcommands.open.admin.yml
-    - chestcommands.open.tetes.yml
-    - menu.admin
     - admin.histoire
-    - menu.admin.gm1
-    - menu.tetes
     options:
       rank: '110'
       prefix: §6[§aModérateur§6]§f
@@ -399,21 +323,15 @@ groups:
     inheritance:
     - builder_est
     permissions:
-    - authme.vip
     - authme.admin.register
+    - authme.vip
     - admin.prison
-    - essentials.vanish
-    - essentials.helpop.receive
-    - essentials.tp
-    - essentials.tp.others
-    - essentials.tppos
     - essentials.ban
     - essentials.banip
     - essentials.tempban
     - essentials.ban.notify
     - essentials.ban.offline
     - essentials.tempban.offline
-    - essentials.teleport.cooldown.bypass
     - essentials.invsee
     - essentials.mute
     - essentials.seen
@@ -422,33 +340,19 @@ groups:
     - essentials.seen.ipsearch
     - notification.vulgarite
     - notification.commandes
-    - chestcommands.open.admin.yml
-    - menu.admin
     - admin.histoire
-    - menu.tetes
     options:
       rank: '100'
       prefix: §6[§aModérateur§6]§f
   horloger:
     inheritance:
     - moderator
-    - builder
-    permissions:
-    - authme.vip
-    - menu.npc.info
-    - globalchestshop.admin
-    - essentials.fly
     options:
       rank: '50'
       prefix: §6[§aHorloger§6]§f
   horloger_est:
     inheritance:
     - moderator_est
-    - builder_est
-    permissions:
-    - authme.vip
-    - menu.npc.info
-    - globalchestshop.admin
     options:
       rank: '49'
       prefix: §6[§aHorloger§6]§f
@@ -456,7 +360,6 @@ groups:
     inheritance:
     - horloger
     permissions:
-    - authme.vip
     - essentials.vanish.see
     - essentials.ban.exempt
     - essentials.invsee.preventmodify
@@ -464,9 +367,9 @@ groups:
       rank: '2'
       prefix: §6[§aGrand Horloger§6]§f
   god:
-    inheritance:
-    - admin
     permissions:
+    - towny.*
+    - chatcontrol.bypass.rules
     - authme.vip
     - essentials.sudo.exempt
     - authme.vip
