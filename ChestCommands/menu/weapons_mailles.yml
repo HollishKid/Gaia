@@ -73,6 +73,13 @@ mailles_epee:
   - '&e&osont bien plus robuste !'
   - ' '
   - '&7&oRareté : &aCommun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 4 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous la craftez !'
   ID: 272
   POSITION-X: 4
   POSITION-Y: 2
@@ -135,6 +142,13 @@ mailles_hache:
   - '&e&osont bien plus robuste !'
   - ' '
   - '&7&oRareté : &aCommun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 5 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous la craftez !'
   ID: 275
   POSITION-X: 9
   POSITION-Y: 2

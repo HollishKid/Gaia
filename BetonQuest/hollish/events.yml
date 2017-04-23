@@ -493,6 +493,8 @@ journal_fiole_for_wand_del: journal del journal_fiole_for_wand
 journal_aang_baton: journal add journal_aang_baton
 journal_aang_baton_del: journal del journal_aang_baton
 #
+air_continum_tag: tag add air_continum
+air_continum_tag_del: tag del air_continum
 obj_milo_fiole: objective start obj_milo_fiole
 obj_air_catcher: objective start obj_air_catcher
 milo_fiole_mess: 'message &dJ''ai fabriqué une fiole ! Je devrais la rapporter à &2Aang &dau Temple de l''Air.'
