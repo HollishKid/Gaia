@@ -782,7 +782,7 @@ on inventory close:
         remove chainmail helmet named "Casque de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
         remove chainmail helmet named "Casque de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's helmet
         if player meets betonquest condition "fonte_2":
-            command "mm items give %player% casque_maille"
+            command "sudo %player% gaiaitemgiver casque_maille"
         else:
             message "&dNiveau &22 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 
@@ -790,21 +790,21 @@ on inventory close:
         remove chainmail chestplate named "Plastron de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
         remove chainmail chestplate named "Plastron de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's chestplate
         if player meets betonquest condition "fonte_3":
-            command "mm items give %player% plastron_maille"
+            command "sudo %player% gaiaitemgiver plastron_maille"
         else:
             message "&dNiveau &23 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains chainmail leggings named "Jambières de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
         remove chainmail leggings named "Jambières de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
         remove chainmail leggings named "Jambières de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's leggings
         if player meets betonquest condition "fonte_4":
-            command "mm items give %player% jambes_maille"
+            command "sudo %player% gaiaitemgiver jambes_maille"
         else:
             message "&dNiveau &24 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains chainmail boots named "Bottes de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
         remove chainmail boots named "Bottes de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
         remove chainmail boots named "Bottes de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's shoes
         if player meets betonquest condition "fonte_5":
-            command "mm items give %player% pieds_maille"
+            command "sudo %player% gaiaitemgiver pieds_maille"
         else:
             message "&dNiveau &25 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -812,31 +812,31 @@ on inventory close:
     if player's inventory contains stone pickaxe named "Pioche de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
         remove stone pickaxe named "Pioche de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
         if player meets betonquest condition "fonte_1":
-            command "mm items give %player% pioche_maille"
+            command "sudo %player% gaiaitemgiver pioche_maille"
         else:
             message "&dNiveau &21 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains stone spade named "Pelle de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
         remove stone spade named "Pelle de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
         if player meets betonquest condition "fonte_2":
-            command "mm items give %player% pelle_maille"
+            command "sudo %player% gaiaitemgiver pelle_maille"
         else:
             message "&dNiveau &22 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains stone hoe named "Houe de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
         remove stone hoe named "Houe de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
         if player meets betonquest condition "fonte_3":
-            command "mm items give %player% houe_maille"
+            command "sudo %player% gaiaitemgiver houe_maille"
         else:
             message "&dNiveau &23 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains stone sword named "Épée de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
         remove stone sword named "Épée de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
         if player meets betonquest condition "fonte_4":
-            command "mm items give %player% epee_maille"
+            command "sudo %player% gaiaitemgiver epee_maille"
         else:
             message "&dNiveau &24 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains stone hoe named "Hache de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !":
         remove stone hoe named "Hache de Mailles" with lore "&e&oCes mailles renforcées||&e&osont bien plus robuste !" from player's inventory
         if player meets betonquest condition "fonte_5":
-            command "mm items give %player% hache_maille"
+            command "sudo %player% gaiaitemgiver hache_maille"
         else:
             message "&dNiveau &25 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -845,39 +845,39 @@ on inventory close:
     if player's inventory contains leather helmet named "Casque en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather helmet named "Casque en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather helmet named "Casque en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's helmet
-        command "mm items give %player% casque_cuir"
+        command "sudo %player% gaiaitemgiver casque_cuir"
 
     if player's inventory contains leather chestplate named "Plastron en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather chestplate named "Plastron en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather chestplate named "Plastron en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's chestplate
-        command "mm items give %player% plastron_cuir"
+        command "sudo %player% gaiaitemgiver plastron_cuir"
 
     if player's inventory contains leather leggings named "Jambières en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather leggings named "Jambières en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather leggings named "Jambières en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's leggings
-        command "mm items give %player% jambes_cuir"
+        command "sudo %player% gaiaitemgiver jambes_cuir"
 
     if player's inventory contains leather boots named "Bottes en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove leather boots named "Bottes en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
         remove leather boots named "Bottes en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's shoes
-        command "mm items give %player% pieds_cuir"
+        command "sudo %player% gaiaitemgiver pieds_cuir"
 #
 #
     if player's inventory contains wooden pickaxe named "Pioche en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove wooden pickaxe named "Pioche en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
-        command "mm items give %player% pioche_cuir"
+        command "sudo %player% gaiaitemgiver pioche_cuir"
     if player's inventory contains wooden spade named "Pelle en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove wooden spade named "Pelle en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
-        command "mm items give %player% pelle_cuir"
+        command "sudo %player% gaiaitemgiver pelle_cuir"
     if player's inventory contains wooden hoe named "Houe en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove wooden hoe named "Houe en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
-        command "mm items give %player% houe_cuir"
+        command "sudo %player% gaiaitemgiver houe_cuir"
     if player's inventory contains wooden axe named "Hache en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove wooden axe named "Hache en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
-        command "mm items give %player% hache_cuir"
+        command "sudo %player% gaiaitemgiver hache_cuir"
     if player's inventory contains wooden sword named "Épée en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !":
         remove wooden sword named "Épée en Cuir Tanné" with lore "&e&oCe cuir est||&e&obeaucoup plus robuste !" from player's inventory
-        command "mm items give %player% epee_cuir"
+        command "sudo %player% gaiaitemgiver epee_cuir"
 #
 #
 #
@@ -885,28 +885,28 @@ on inventory close:
         remove iron helmet named "Casque en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
         remove iron helmet named "Casque en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's helmet
         if player meets betonquest condition "fonte_7":
-            command "mm items give %player% casque_fer"
+            command "sudo %player% gaiaitemgiver casque_fer"
         else:
             message "&dNiveau &27 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron chestplate named "Plastron en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
         remove iron chestplate named "Plastron en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
         remove iron chestplate named "Plastron en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's chestplate
         if player meets betonquest condition "fonte_8":
-            command "mm items give %player% plastron_fer"
+            command "sudo %player% gaiaitemgiver plastron_fer"
         else:
             message "&dNiveau &28 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron leggings named "Jambières en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
         remove iron leggings named "Jambières en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
         remove iron leggings named "Jambières en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's leggings
         if player meets betonquest condition "fonte_9":
-            command "mm items give %player% jambes_fer"
+            command "sudo %player% gaiaitemgiver jambes_fer"
         else:
             message "&dNiveau &29 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron boots named "Bottes en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
         remove iron boots named "Bottes en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
         remove iron boots named "Bottes en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's shoes
         if player meets betonquest condition "fonte_10":
-            command "mm items give %player% pieds_fer"
+            command "sudo %player% gaiaitemgiver pieds_fer"
         else:
             message "&dNiveau &210 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -914,31 +914,31 @@ on inventory close:
     if player's inventory contains iron pickaxe named "Pioche en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
         remove iron pickaxe named "Pioche en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
         if player meets betonquest condition "fonte_6":
-            command "mm items give %player% pioche_fer"
+            command "sudo %player% gaiaitemgiver pioche_fer"
         else:
             message "&dNiveau &26 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron spade named "Pelle en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
         remove iron spade named "Pelle en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
         if player meets betonquest condition "fonte_7":
-            command "mm items give %player% pelle_fer"
+            command "sudo %player% gaiaitemgiver pelle_fer"
         else:
             message "&dNiveau &27 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron hoe named "Houe en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
         remove iron hoe named "Houe en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
         if player meets betonquest condition "fonte_8":
-            command "mm items give %player% houe_fer"
+            command "sudo %player% gaiaitemgiver houe_fer"
         else:
             message "&dNiveau &28 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron sword named "Épée en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
         remove iron sword named "Épée en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
         if player meets betonquest condition "fonte_9":
-            command "mm items give %player% epee_fer"
+            command "sudo %player% gaiaitemgiver epee_fer"
         else:
             message "&dNiveau &29 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron axe named "Hache en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !":
         remove iron axe named "Hache en Fer Forgé" with lore "&e&oCe fer forgé||&e&oest très dense !" from player's inventory
         if player meets betonquest condition "fonte_10":
-            command "mm items give %player% hache_fer"
+            command "sudo %player% gaiaitemgiver hache_fer"
         else:
             message "&dNiveau &210 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -948,28 +948,28 @@ on inventory close:
         remove gold helmet named "Casque en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
         remove gold helmet named "Casque en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's helmet
         if player meets betonquest condition "fonte_12":
-            command "mm items give %player% casque_or"
+            command "sudo %player% gaiaitemgiver casque_or"
         else:
             message "&dNiveau &212 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold chestplate named "Plastron en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
         remove gold chestplate named "Plastron en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
         remove gold chestplate named "Plastron en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's chestplate
         if player meets betonquest condition "fonte_13":
-            command "mm items give %player% plastron_or"
+            command "sudo %player% gaiaitemgiver plastron_or"
         else:
             message "&dNiveau &213 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold leggings named "Jambières en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
         remove gold leggings named "Jambières en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
         remove gold leggings named "Jambières en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's leggings
         if player meets betonquest condition "fonte_14":
-            command "mm items give %player% jambes_or"
+            command "sudo %player% gaiaitemgiver jambes_or"
         else:
             message "&dNiveau &214 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold boots named "Bottes en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
         remove gold boots named "Bottes en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
         remove gold boots named "Bottes en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's shoes
         if player meets betonquest condition "fonte_15":
-            command "mm items give %player% pieds_or"
+            command "sudo %player% gaiaitemgiver pieds_or"
         else:
             message "&dNiveau &215 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -977,31 +977,31 @@ on inventory close:
     if player's inventory contains gold pickaxe named "Pioche en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
         remove gold pickaxe named "Pioche en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
         if player meets betonquest condition "fonte_11":
-            command "mm items give %player% pioche_or"
+            command "sudo %player% gaiaitemgiver pioche_or"
         else:
             message "&dNiveau &211 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold spade named "Pelle en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
         remove gold spade named "Pelle en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
         if player meets betonquest condition "fonte_12":
-            command "mm items give %player% pelle_or"
+            command "sudo %player% gaiaitemgiver pelle_or"
         else:
             message "&dNiveau &212 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold hoe named "Houe en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
         remove gold hoe named "Houe en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
         if player meets betonquest condition "fonte_13":
-            command "mm items give %player% houe_or"
+            command "sudo %player% gaiaitemgiver houe_or"
         else:
             message "&dNiveau &213 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold sword named "Épée en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
         remove gold sword named "Épée en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
         if player meets betonquest condition "fonte_14":
-            command "mm items give %player% epee_or"
+            command "sudo %player% gaiaitemgiver epee_or"
         else:
             message "&dNiveau &214 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold axe named "Hache en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé...":
         remove gold axe named "Hache en Or Décoré" with lore "&e&oCet or est||&e&ojoliment travaillé..." from player's inventory
         if player meets betonquest condition "fonte_15":
-            command "mm items give %player% hache_or"
+            command "sudo %player% gaiaitemgiver hache_or"
         else:
             message "&dNiveau &215 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -1011,28 +1011,28 @@ on inventory close:
         remove diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
         remove diamond helmet named "Casque en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's helmet
         if player meets betonquest condition "fonte_17":
-            command "mm items give %player% casque_diamant"
+            command "sudo %player% gaiaitemgiver casque_diamant"
         else:
             message "&dNiveau &217 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
         remove diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
         remove diamond chestplate named "Plastron en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's chestplate
         if player meets betonquest condition "fonte_18":
-            command "mm items give %player% plastron_diamant"
+            command "sudo %player% gaiaitemgiver plastron_diamant"
         else:
             message "&dNiveau &218 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
         remove diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
         remove diamond leggings named "Jambières en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's leggings
         if player meets betonquest condition "fonte_19":
-            command "mm items give %player% jambes_diamant"
+            command "sudo %player% gaiaitemgiver jambes_diamant"
         else:
             message "&dNiveau &219 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
         remove diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
         remove diamond boots named "Bottes en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's shoes
         if player meets betonquest condition "fonte_20":
-            command "mm items give %player% pieds_diamant"
+            command "sudo %player% gaiaitemgiver pieds_diamant"
         else:
             message "&dNiveau &220 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -1040,31 +1040,31 @@ on inventory close:
     if player's inventory contains diamond pickaxe named "Pioche en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
         remove diamond pickaxe named "Pioche en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
         if player meets betonquest condition "fonte_16":
-            command "mm items give %player% pioche_diamant"
+            command "sudo %player% gaiaitemgiver pioche_diamant"
         else:
             message "&dNiveau &216 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains diamond spade named "Pelle en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
         remove diamond spade named "Pelle en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
         if player meets betonquest condition "fonte_17":
-            command "mm items give %player% pelle_diamant"
+            command "sudo %player% gaiaitemgiver pelle_diamant"
         else:
             message "&dNiveau &217 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains diamond hoe named "Houe en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
         remove diamond hoe named "Houe en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
         if player meets betonquest condition "fonte_18":
-            command "mm items give %player% houe_diamant"
+            command "sudo %player% gaiaitemgiver houe_diamant"
         else:
             message "&dNiveau &218 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains diamond sword named "Épée en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
         remove diamond sword named "Épée en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
         if player meets betonquest condition "fonte_19":
-            command "mm items give %player% epee_diamant"
+            command "sudo %player% gaiaitemgiver epee_diamant"
         else:
             message "&dNiveau &219 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains diamond axe named "Hache en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare...":
         remove diamond axe named "Hache en Diamant Noble" with lore "&e&oCe diamant est||&e&od'une qualité rare..." from player's inventory
         if player meets betonquest condition "fonte_20":
-            command "mm items give %player% hache_diamant"
+            command "sudo %player% gaiaitemgiver hache_diamant"
         else:
             message "&dNiveau &220 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -1075,28 +1075,28 @@ on inventory close:
         remove iron helmet named "Casque en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
         remove iron helmet named "Casque en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's helmet
         if player meets betonquest condition "fonte_7":
-            command "mm items give %player% casque_fer_volcanique"
+            command "sudo %player% gaiaitemgiver casque_fer_volcanique"
         else:
             message "&dNiveau &27 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron chestplate named "Plastron en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
         remove iron chestplate named "Plastron en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
         remove iron chestplate named "Plastron en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's chestplate
         if player meets betonquest condition "fonte_8":
-            command "mm items give %player% plastron_fer_volcanique"
+            command "sudo %player% gaiaitemgiver plastron_fer_volcanique"
         else:
             message "&dNiveau &28 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron leggings named "Jambières en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
         remove iron leggings named "Jambières en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
         remove iron leggings named "Jambières en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's leggings
         if player meets betonquest condition "fonte_9":
-            command "mm items give %player% jambes_fer_volcanique"
+            command "sudo %player% gaiaitemgiver jambes_fer_volcanique"
         else:
             message "&dNiveau &29 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron boots named "Bottes en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
         remove iron boots named "Bottes en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
         remove iron boots named "Bottes en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's shoes
         if player meets betonquest condition "fonte_10":
-            command "mm items give %player% pieds_fer_volcanique"
+            command "sudo %player% gaiaitemgiver pieds_fer_volcanique"
         else:
             message "&dNiveau &210 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -1104,31 +1104,31 @@ on inventory close:
     if player's inventory contains iron pickaxe named "Pioche en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
         remove iron pickaxe named "Pioche en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_6":
-            command "mm items give %player% pioche_fer_volcanique"
+            command "sudo %player% gaiaitemgiver pioche_fer_volcanique"
         else:
             message "&dNiveau &26 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron spade named "Pelle en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
         remove iron spade named "Pelle en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_7":
-            command "mm items give %player% pelle_fer_volcanique"
+            command "sudo %player% gaiaitemgiver pelle_fer_volcanique"
         else:
             message "&dNiveau &27 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron hoe named "Houe en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
         remove iron hoe named "Houe en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_8":
-            command "mm items give %player% houe_fer_volcanique"
+            command "sudo %player% gaiaitemgiver houe_fer_volcanique"
         else:
             message "&dNiveau &28 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron sword named "Épée en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
         remove iron sword named "Épée en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_9":
-            command "mm items give %player% epee_fer_volcanique"
+            command "sudo %player% gaiaitemgiver epee_fer_volcanique"
         else:
             message "&dNiveau &29 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains iron axe named "Hache en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif.":
         remove iron axe named "Hache en Fer Volcanique" with lore "&e&oCe Fer provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_10":
-            command "mm items give %player% hache_fer_volcanique"
+            command "sudo %player% gaiaitemgiver hache_fer_volcanique"
         else:
             message "&dNiveau &210 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -1138,28 +1138,28 @@ on inventory close:
         remove gold helmet named "Casque en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
         remove gold helmet named "Casque en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's helmet
         if player meets betonquest condition "fonte_12":
-            command "mm items give %player% casque_or_volcanique"
+            command "sudo %player% gaiaitemgiver casque_or_volcanique"
         else:
             message "&dNiveau &212 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold chestplate named "Plastron en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
         remove gold chestplate named "Plastron en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
         remove gold chestplate named "Plastron en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's chestplate
         if player meets betonquest condition "fonte_13":
-            command "mm items give %player% plastron_or_volcanique"
+            command "sudo %player% gaiaitemgiver plastron_or_volcanique"
         else:
             message "&dNiveau &213 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold leggings named "Jambières en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
         remove gold leggings named "Jambières en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
         remove gold leggings named "Jambières en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's leggings
         if player meets betonquest condition "fonte_14":
-            command "mm items give %player% jambes_or_volcanique"
+            command "sudo %player% gaiaitemgiver jambes_or_volcanique"
         else:
             message "&dNiveau &214 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold boots named "Bottes en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
         remove gold boots named "Bottes en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
         remove gold boots named "Bottes en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's shoes
         if player meets betonquest condition "fonte_15":
-            command "mm items give %player% pieds_or_volcanique"
+            command "sudo %player% gaiaitemgiver pieds_or_volcanique"
         else:
             message "&dNiveau &215 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -1167,31 +1167,31 @@ on inventory close:
     if player's inventory contains gold pickaxe named "Pioche en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
         remove gold pickaxe named "Pioche en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_11":
-            command "mm items give %player% pioche_or_volcanique"
+            command "sudo %player% gaiaitemgiver pioche_or_volcanique"
         else:
             message "&dNiveau &211 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold spade named "Pelle en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
         remove gold spade named "Pelle en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_12":
-            command "mm items give %player% pelle_or_volcanique"
+            command "sudo %player% gaiaitemgiver pelle_or_volcanique"
         else:
             message "&dNiveau &212 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold hoe named "Houe en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
         remove gold hoe named "Houe en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_13":
-            command "mm items give %player% houe_or_volcanique"
+            command "sudo %player% gaiaitemgiver houe_or_volcanique"
         else:
             message "&dNiveau &213 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold sword named "Épée en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
         remove gold sword named "Épée en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_14":
-            command "mm items give %player% epee_or_volcanique"
+            command "sudo %player% gaiaitemgiver epee_or_volcanique"
         else:
             message "&dNiveau &214 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains gold axe named "Hache en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif.":
         remove gold axe named "Hache en Or Volcanique" with lore "&e&oCet Or provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_15":
-            command "mm items give %player% hache_or_volcanique"
+            command "sudo %player% gaiaitemgiver hache_or_volcanique"
         else:
             message "&dNiveau &215 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -1201,28 +1201,28 @@ on inventory close:
         remove diamond helmet named "Casque en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
         remove diamond helmet named "Casque en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's helmet
         if player meets betonquest condition "fonte_17":
-            command "mm items give %player% casque_diamant_volcanique"
+            command "sudo %player% gaiaitemgiver casque_diamant_volcanique"
         else:
             message "&dNiveau &217 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains diamond chestplate named "Plastron en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
         remove diamond chestplate named "Plastron en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
         remove diamond chestplate named "Plastron en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's chestplate
         if player meets betonquest condition "fonte_18":
-            command "mm items give %player% plastron_diamant_volcanique"
+            command "sudo %player% gaiaitemgiver plastron_diamant_volcanique"
         else:
             message "&dNiveau &218 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains diamond leggings named "Jambières en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
         remove diamond leggings named "Jambières en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
         remove diamond leggings named "Jambières en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's leggings
         if player meets betonquest condition "fonte_19":
-            command "mm items give %player% jambes_diamant_volcanique"
+            command "sudo %player% gaiaitemgiver jambes_diamant_volcanique"
         else:
             message "&dNiveau &219 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
     if player's inventory contains diamond boots named "Bottes en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
         remove diamond boots named "Bottes en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
         remove diamond boots named "Bottes en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's shoes
         if player meets betonquest condition "fonte_20":
-            command "mm items give %player% pieds_diamant_volcanique"
+            command "sudo %player% gaiaitemgiver pieds_diamant_volcanique"
         else:
             message "&dNiveau &220 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #
@@ -1230,35 +1230,35 @@ on inventory close:
     if player's inventory contains diamond pickaxe named "Pioche en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
         remove diamond pickaxe named "Pioche en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_16":
-            command "mm items give %player% pioche_diamant_volcanique"
+            command "sudo %player% gaiaitemgiver pioche_diamant_volcanique"
         else:
             message "&dNiveau &216 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 			
     if player's inventory contains diamond spade named "Pelle en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
         remove diamond spade named "Pelle en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_17":
-            command "mm items give %player% pelle_diamant_volcanique"
+            command "sudo %player% gaiaitemgiver pelle_diamant_volcanique"
         else:
             message "&dNiveau &217 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 			
     if player's inventory contains diamond hoe named "Houe en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
         remove diamond hoe named "Houe en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_18":
-            command "mm items give %player% houe_diamant_volcanique"
+            command "sudo %player% gaiaitemgiver houe_diamant_volcanique"
         else:
             message "&dNiveau &218 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 			
     if player's inventory contains diamond sword named "Épée en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
         remove diamond sword named "Épée en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_19":
-            command "mm items give %player% epee_diamant_volcanique"
+            command "sudo %player% gaiaitemgiver epee_diamant_volcanique"
         else:
             message "&dNiveau &219 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 			
     if player's inventory contains diamond axe named "Hache en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif.":
         remove diamond axe named "Hache en Diamant Volcanique" with lore "&e&oCe diamant provient||&e&od'un volcan actif." from player's inventory
         if player meets betonquest condition "fonte_20":
-            command "mm items give %player% hache_diamant_volcanique"
+            command "sudo %player% gaiaitemgiver hache_diamant_volcanique"
         else:
             message "&dNiveau &220 &den &2Fonte &drequis pour pouvoir crafter cet objet !"
 #

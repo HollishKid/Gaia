@@ -51,6 +51,7 @@ worldbossalpha:
   - 1 meleeattack
   - 2 RandomStroll
   - 3 AvoidArrows
+  - 4 opendoors
   AITargetSelectors:
   - 0 clear
   - 1 Players
@@ -87,6 +88,9 @@ worldboss_minionalpha:
   AIGoalSelectors:
   - 0 clear
   - 1 arrowattack
+  - 2 RandomStroll
+  - 3 AvoidArrows
+  - 4 opendoors
   AITargetSelectors:
   - 0 clear
   - 1 Players
@@ -142,6 +146,9 @@ worldbossbeta:
   AIGoalSelectors:
   - 0 clear
   - 1 arrowattack
+  - 2 RandomStroll
+  - 3 AvoidArrows
+  - 4 opendoors
   AITargetSelectors:
   - 0 clear
   - 1 Players
@@ -180,6 +187,7 @@ worldboss_minionbeta:
   - 1 meleeattack
   - 2 RandomStroll
   - 3 AvoidArrows
+  - 4 opendoors
   AITargetSelectors:
   - 0 clear
   - 1 Players
@@ -240,6 +248,9 @@ worldbosstres:
   AIGoalSelectors:
   - 0 clear
   - 1 meleeattack
+  - 2 RandomStroll
+  - 3 AvoidArrows
+  - 4 opendoors
   AITargetSelectors:
   - 0 clear
   - 1 Players
