@@ -398,6 +398,86 @@ every 59 minutes in "Gaia":
 			loop {louvre_contribution_received::*}:
 				delete {louvre_contribution_received::%loop-index%}
 	wait 22 ticks
+
+#
+#
+# ¤ Salary ¤
+#
+#
+	loop yaml list "grades_bq" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {grades_bq::*}
+	loop yaml list "grades_noms" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {grades_noms::*}	
+	loop yaml list "metiers_bq" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {metiers_bq::*}
+	loop yaml list "metiers_noms" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {metiers_noms::*}
+	loop yaml list "metiers_competences" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {metiers_competences::*}
+	
+	loop all players:
+		if loop-player meets betonquest condition "ami_first":
+			message "&d&oParlez à l'Amiral pour commencer !" to loop-player
+		else:
+			set {_salary.receiver} to loop-player
+			fire betonquest event "variable_giver" for loop-player
+			wait 5 ticks
+			set {salaire.%loop-player%} to 100 + {reput_athelas.%loop-player%}
+			
+			loop {grades_bq::*}:
+				if {_salary.receiver} meets betonquest condition "%{grades_bq::%loop-index%}%":
+					add 50 to {salaire.%{_salary.receiver}%}
+					add 50 to {_grade_salary}
+					set {_grade_nom} to {grades_noms::%loop-index%}
+				delete {grades_bq::%loop-index%}
+			
+			loop {metiers_bq::*}:
+				if {_salary.receiver} meets betonquest condition "%{metiers_bq::%loop-index%}%":
+					set {_skill} to {metiers_competences::%loop-index%}
+					set {_skill_salary} to placeholder parse "%%mcmmo_level_%{_skill}%%%" as loop-player parsed as integer
+					add {_skill_salary} to {salaire.%{_salary.receiver}%}
+					set {_metier_nom} to {metiers_noms::%loop-index%}
+				delete {metiers_bq::%loop-index%}
+			
+			if {_metier_nom} is set:
+				wait 1 tick
+			else:
+				set {_metier_nom} to "&7&oAucun métier adopté."
+				set {_skill_salary} to 0
+			if {_grade_nom} is set:
+				wait 1 tick
+			else:
+				set {_grade_nom} to "&7&oVagabond"
+				set {_grade_salary} to 0
+			
+			message "&f======================= ~ &6¤ &f~ =======================" to loop-player
+			message "  &6&o&nDétail de votre Salaire" to loop-player
+			message "&f" to loop-player
+			message "&fMétier : &a&o%{_metier_nom}%" to loop-player
+			message "&fGrade : &a&o%{_grade_nom}%" to loop-player
+			message "&f" to loop-player
+			message "&fBase :             &6¤&a100" to loop-player
+			message "&fRéputation :      &6¤&a%{reput_athelas.%loop-player%}%" to loop-player
+			message "&fMétier :           &6¤&a%{_skill_salary}%" to loop-player
+			message "&fGrade :           &6¤&a%{_grade_salary}%       &2+" to loop-player
+			message "&f                  -----------" to loop-player
+			message "&fTotal :            &6¤&a%{salaire.%loop-player%}%" to loop-player
+			message "&f======================= ~ &6¤ &f~ =======================" to loop-player
+			
+			wait 1 tick
+			execute console command "eco give %{_salary.receiver}% %{salaire.%loop-player%}%"
+			wait 1 tick
+			delete {salaire.%loop-player%}
+			delete {reput_athelas.%loop-player%}
+				
+	wait 5 ticks	
+	loop {grades_noms::*}:
+		delete {grades_noms::%loop-index%}
+	loop {metiers_noms::*}:
+		delete {metiers_noms::%loop-index%}
+	loop {metiers_competences::*}:
+		delete {metiers_competences::%loop-index%}	
+	wait 5 ticks
 #
 #
 # Mine Manager
@@ -577,12 +657,19 @@ every 59 minutes in "Gaia":
 			add a random item out of {_random.item.list::*} to the inventory of block at {chester::%loop-index%}
 #
 #
-# Commands & Addons
+# Complement Commands & Addons
 #
+# 
 #
-
+# BQ Var Giver
+#
+command /variablegiver1 <player> <number>:
+	executable by: console
+	trigger:
+		set {reput_athelas.%arg 1%} to arg 2
+#
 # East Rollback
-
+#
 command /rollbackeast <text>:
 	executable by: console
 	trigger:

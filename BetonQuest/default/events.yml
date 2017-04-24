@@ -687,6 +687,43 @@ welcome_ecuyer_mess5: 'message &2Intendant &f: &a&oJe vous recommande d''aller l
 #
 open_grades_royaux: 'command cc open grades_royaux %player%'
 #
+grades_cleaner: folder gcl1,gcl2,gcl3,gcl4,gcl5,gcl6,gcl7,gcl8,gcl9,gcl10,gcl11
+#
+gcl1: tag del grade_chevalier
+gcl2: tag del grade_champion
+gcl3: tag del grade_seigneur
+gcl4: tag del grade_banneret
+gcl5: tag del grade_baron
+gcl6: tag del grade_vicomte
+gcl7: tag del grade_comte
+gcl8: tag del grade_marquis
+gcl9: tag del grade_duc
+gcl10: tag del grade_prince
+gcl11: tag del grade_legende
+#
+grade_chevalier: folder grade_chevalier_exe
+grade_champion: folder grade_chevalier,grade_champion_exe
+grade_seigneur: folder grade_champion,grade_seigneur_exe
+grade_banneret: folder grade_seigneur,grade_banneret_exe
+grade_baron: folder grade_banneret,grade_baron_exe
+grade_vicomte: folder grade_baron,grade_vicomte_exe
+grade_comte: folder grade_vicomte,grade_comte_exe
+grade_marquis: folder grade_comte,grade_marquis_exe
+grade_duc: folder grade_marquis,grade_duc_exe
+grade_prince: folder grade_duc,grade_prince_exe
+grade_legende: folder grade_prince,grade_legende_exe
+#
+grade_chevalier_exe: tag add grade_chevalier
+grade_champion_exe: tag add grade_champion
+grade_seigneur_exe: tag add grade_seigneur
+grade_banneret_exe: tag add grade_banneret
+grade_baron_exe: tag add grade_baron
+grade_vicomte_exe: tag add grade_vicomte
+grade_comte_exe: tag add grade_comte
+grade_marquis_exe: tag add grade_marquis
+grade_duc_exe: tag add grade_duc
+grade_prince_exe: tag add grade_prince
+grade_legende_exe: tag add grade_legende
 #
 #
 # Guildes
@@ -2075,6 +2112,7 @@ compte_ret_all: point compte *0
 # ¤ Salary ¤
 #
 #
+variable_giver: 'command variablegiver1 %player% %point.reput_athelas.amount%'
 obj_salaire_timer: objective start obj_salaire_timer
 #
 #
@@ -2175,7 +2213,7 @@ salaire_mess8: 'message &f|----------------------- ~ &6¤ &f~ ------------------
 # Checks for (in order): -Already on boat  -Reputation=>5  -Money=>100
 #  if passed, than -teleport to generic boat  -timer on
 #   PER DESTINATION
-######################################  THINK ON A TAG CHECKER FOR FURTHER DESTINATIONS (OR QUEST POINTS FOR THAT MATTER)
+######################################
 bateau_menu_opener: 'command cc open bateau %player%'
 #
 # Global
@@ -2188,7 +2226,7 @@ no_reput30_bat_mess: 'message &dVous n''avez pas assez de points de Réputation 
 no_money100_mess: 'message &dVous n''avez pas assez d''argent pour aller à cette destination ! (&f¤ &a%money.left:100% &f/ &f¤ &c100&d)'
 no_money200_mess: 'message &dVous n''avez pas assez d''argent pour aller à cette destination ! (&f¤ &a%money.left:100% &f/ &f¤ &c200&d)'
 no_grade_bat_mess: 'message &dVous n''avez pas le Grade requis pour accéder à cet endroit.'
-no_mysteria_bat_mess: 'message &dVous devez parler au &2Lieutenant Hashor &dau deuxième étage du château Royal d''Athelas avant de naviguer vers Mysteria.'
+dev_bat_mess: 'message &dCe port n''est pas accessible pour le moment.'
 #
 bat_generic_teleport: teleport -4620;62;3848;Gaia
 bat_generic_message: 'message &dVous partez pour un long voyage...'
@@ -2198,7 +2236,6 @@ bat_generic_message: 'message &dVous partez pour un long voyage...'
 #
 # Athelas Central
 bat_athelas_central: if on_bat_athelas_central on_bat_mess else bat_athelas_central2
-##bat_athelas_central1: if reput_athelas5 bat_athelas_central2 else no_reput5_bat_mess
 bat_athelas_central2: if money_100 bat_generic_athelas1 else no_money100_mess
 #
 bat_generic_athelas1: folder bat_generic_teleport,money_100,bat_generic_athelas1_timer,bat_generic_message delay:1
@@ -2208,7 +2245,6 @@ bat_generic_athelas1_teleport: teleport -6602;66;3170;Gaia
 #
 # Athelas East
 bat_athelas_east: if on_bat_athelas_east on_bat_mess else bat_athelas_east2
-##bat_athelas_east1: if reput_athelas5 bat_athelas_east2 else no_reput5_bat_mess
 bat_athelas_east2: if money_100 bat_generic_athelas2 else no_money100_mess
 #
 bat_generic_athelas2: folder bat_generic_teleport,money_100,bat_generic_athelas2_timer,bat_generic_message delay:1
@@ -2228,7 +2264,7 @@ bat_athelas_louvre22_teleport: teleport -10404;66;2996;Gaia
 #
 # Mysteria
 bat_mysteria: if on_bat_mysteria on_bat_mess else bat_mysteria1
-bat_mysteria1: if tempo_mysteria_access bat_mysteria2 else no_mysteria_bat_mess
+bat_mysteria1: if tempo_dev_access bat_mysteria2 else dev_bat_mess
 bat_mysteria2: if money_200 bat_mysteria22 else no_money200_mess
 #
 bat_mysteria22: folder bat_generic_teleport,money_200,bat_mysteria22_timer,bat_generic_message delay:1
@@ -2238,7 +2274,7 @@ bat_mysteria22_teleport: teleport -8994;65;4604;Gaia
 #
 # Historia
 bat_historia: if on_bat_historia on_bat_mess else bat_historia1
-bat_historia1: if grade_ecuyer bat_historia2 else no_grade_bat_mess
+bat_historia1: if tempo_dev_access bat_historia2 else dev_bat_mess
 bat_historia2: if money_200 bat_historia22 else no_money200_mess
 #
 bat_historia22: folder bat_generic_teleport,money_200,bat_historia22_timer,bat_generic_message delay:1
@@ -2248,7 +2284,7 @@ bat_historia22_teleport: teleport -7835;65;3683;Gaia
 #
 # Tortuga
 bat_tortuga: if on_bat_tortuga on_bat_mess else bat_tortuga1
-bat_tortuga1: if grade_ecuyer bat_tortuga2 else no_grade_bat_mess
+bat_tortuga1: if tempo_dev_access bat_tortuga2 else dev_bat_mess
 bat_tortuga2: if money_200 bat_tortuga22 else no_money200_mess
 #
 bat_tortuga22: folder bat_generic_teleport,money_200,bat_tortuga22_timer,bat_generic_message delay:1

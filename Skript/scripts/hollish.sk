@@ -83,6 +83,9 @@ command /commandedegradesroyaux <text> <text> <number>:
 				if {_sincelog} is bigger than {_span}:
 					execute console command "pex user %player% prefix ""§6[§2%arg 1%§6]"""
 					message "&d&oVous venez d'adopter le Grade &2%arg 1%&d&o."
+					fire betonquest event "grades_cleaner" for player
+					wait 7 ticks
+					fire betonquest event "grade_%arg 1%" for player
 				else:
 					message "&d&oVous n'avez pas assez d'ancienneté pour ce grade."
 					message "&d&oSeulement inscrit depuis &2%{_sincelog}% &d&ojours / &2%arg 3% &d&orequis."
