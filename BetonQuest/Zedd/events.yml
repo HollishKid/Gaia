@@ -544,7 +544,8 @@ nothing: tag del lachatemissembales
 #
 give_test: give lava_tear
 give_test2: give water_tear
-or_keyrenew: folder or_takemoney,give_thiefkey,thiefkey_reload_delay
+or_keyrenew: if default.money_500 or_keyrenew2 else nothing
+or_keyrenew2: folder or_takemoney,give_thiefkey,thiefkey_reload_delay
 or_takemoney: 'command eco take %player% 500'
 var_pitch_fold: folder var_mess1,var_pitch_fold2,var_q1_journal delay:5
 var_mess1: 'message &2Varko:&a&o Il semblerait que les mages s''intéressent aux élémentaires qui apparaissent dans &dHigh Garden&a&o, qui est juste en face de nous, au-delà de cette fenêtre.'
@@ -1231,4 +1232,3 @@ bwin16: objective start bwin16
 btick16: folder breplace16,bdewin16,remove_diamond,pre_roulette delay:1
 breplace16: setblock WOOL -6768;2;2972;Gaia
 bdewin16: objective delete bwin16
-

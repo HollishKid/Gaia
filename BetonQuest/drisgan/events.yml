@@ -142,10 +142,12 @@ las_fold4: folder las_mess4,las_fold5 delay:8
 las_mess4: 'message &2Lasswell &f:&a&o Enfin, dis moi quand tu sera prêt, je lancerai la machinerie pour le test.'
 las_fold5: folder las_gotest,las_conversdone delay:2
 las_gotest: tag add las_gotest
-las_buybow: folder las_takebowmoney,las_givebow delay:2
+las_buybow: if default.money_1500 las_buybow2 else nothing
+las_buybow2: folder las_takebowmoney,las_givebow delay:2
 las_takebowmoney: 'command eco take %player% 1500'
 las_givebow: give bow:1
-las_buyarrows: folder las_takearrowsmoney,las_givearrows delay:2
+las_buyarrows: if default.money_1500 las_buyarrows2 else nothing
+las_buyarrows2: folder las_takearrowsmoney,las_givearrows delay:2
 las_takearrowsmoney: 'command eco take %player% 1500'
 las_givearrows: give an_arrow:16
 #
