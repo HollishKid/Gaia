@@ -93,6 +93,13 @@ or_pioche:
   - '&e&od''un volcan actif.'
   - ' '
   - '&7&oRareté : &9Rare'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 11 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 285
   POSITION-X: 4
   POSITION-Y: 2
@@ -135,6 +142,13 @@ or_pelle:
   - '&e&od''un volcan actif.'
   - ' '
   - '&7&oRareté : &9Rare'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 12 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 284
   POSITION-X: 9
   POSITION-Y: 2
@@ -187,6 +201,13 @@ or_houe:
   - '&e&od''un volcan actif.'
   - ' '
   - '&7&oRareté : &9Rare'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 13 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 294
   POSITION-X: 4
   POSITION-Y: 6

@@ -103,6 +103,13 @@ fer_casque:
   - '&d&otrès dense !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 7 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 306
   POSITION-X: 4
   POSITION-Y: 2
@@ -205,6 +212,13 @@ fer_plastron:
   - '&d&otrès dense !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 8 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 307
   POSITION-X: 9
   POSITION-Y: 2
@@ -297,6 +311,13 @@ fer_jambes:
   - '&d&otrès dense !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 9 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 308
   POSITION-X: 4
   POSITION-Y: 5
@@ -359,6 +380,13 @@ fer_pieds:
   - '&d&otrès dense !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 10 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 309
   POSITION-X: 9
   POSITION-Y: 5

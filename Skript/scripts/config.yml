@@ -2,6 +2,76 @@
 #  Configuration
 #
 #
+grades_bq:
+- intendant_done
+- grade_ecuyer
+- grade_chevalier
+- grade_champion
+- grade_seigneur
+- grade_banneret
+- grade_baron
+- grade_vicomte
+- grade_comte
+- grade_marquis
+- grade_duc
+- grade_prince
+- grade_legende
+grades_noms:
+- Citoyen
+- Écuyer
+- Chevalier
+- Champion
+- Seigneur
+- Banneret
+- Baron
+- Vicomte
+- Comte
+- Marquis
+- Duc
+- Prince
+- Légende
+metiers_bq:
+- metier_poings
+- metier_epees
+- metier_haches
+- metier_arc
+- metier_alchimiste
+- metier_acrobate
+- metier_peche
+- metier_apprivoiseur
+- metier_herboriste
+- metier_mineur
+- metier_reparation
+- metier_excavation
+- metier_bucheron
+metiers_noms:
+- Pugiliste
+- Épéiste
+- Milicien
+- Archer
+- Alchimiste
+- Acrobate
+- Pêcheur
+- Apprivoiseur
+- Herboriste
+- Mineur
+- Réparateur
+- Excavateur
+- Bûcheron
+metiers_competences:
+- unarmed
+- swords
+- axes
+- archery
+- alchemy
+- acrobatics
+- fishing
+- taming
+- herbalism
+- mining
+- repair
+- excavation
+- woodcutting
 drisgannpcs: 
 - 138
 - 140

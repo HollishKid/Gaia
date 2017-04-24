@@ -224,7 +224,7 @@ on_bat_est5: location -3048;65;1382;Gaia 33
 on_bat_est6: location -3538;65;-944;Gaia 33
 on_bat_est7: location -756;65;456;Gaia 33
 #
-tempo_mysteria_access: tag tempo_mysteria_access
+tempo_dev_access: tag tempo_dev_access
 #
 #
 divine: tag divine
@@ -299,7 +299,17 @@ mage_recommandation: journal hollish.mage_entry_branching_out
 #
 or_ecuyer_sup: or grade_ecuyer,grade_baron
 grade_ecuyer: tag grade_ecuyer
+grade_chevalier: tag grade_chevalier
+grade_champion: tag grade_champion
+grade_seigneur: tag grade_seigneur
+grade_banneret: tag grade_banneret
 grade_baron: tag grade_baron
+grade_vicomte: tag grade_vicomte
+grade_comte: tag grade_comte
+grade_marquis: tag grade_marquis
+grade_duc: tag grade_duc
+grade_prince: tag grade_prince
+grade_legende: tag grade_legende
 #
 #
 #

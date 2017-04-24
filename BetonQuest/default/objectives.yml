@@ -7,21 +7,6 @@ obj_salaire_timer: delay 60 events:salaire interval:1200
 #
 athelas_out_timer: delay 1 events:athelas_out_checkerbis interval:700
 #
-# Banking
-#
-#Deprecated so far
-#taxes_permanent: delay 10080 events:taxation,taxes_permanent
-#
-#banking: variable
-#
-#banking_compte_on1: delay 0 conditions:compte_tempo_defined events:banking_compte_tempo_done interval:27
-#banking_compte_on2: delay 0 conditions:compte_tempo_wrong events:banking_tempo_wrong interval:52
-#banking_compte_delay: delay 7 events:banking_compte_delay_over interval:1200
-#
-#banking_poche_on1: delay 0 conditions:poche_tempo_defined events:banking_poche_tempo_done interval:27
-#banking_poche_on2: delay 0 conditions:poche_tempo_wrong events:banking_tempo_wrong interval:52
-#banking_poche_delay: delay 7 events:banking_poche_delay_over interval:1200
-#
 # Praying
 #
 spiritualium1: location -6630;110;3000;Gaia 50 conditions:sneaking,in_spiritualium events:pray

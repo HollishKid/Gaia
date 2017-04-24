@@ -6,13 +6,11 @@ NPC_options:
   hello:
     text: 'Bonjour &2%player%&a&o, je suis &6Hollish&a&o, Co-Fondateur de Gaïa.'
     pointers: role,citation,sens
-    events: hollishpresentation
   role_rep:
     text: 'Je m''occupe de tout ce que vous ne voyez pas, tout ce qui permet de faire fonctionner Gaïa le plus parfaitement possible.'
-    events: hollishrole
   citation_rep:
     text: 'La Nature est un livre écrit en langage Mathématique.'
-    events: hollish.atom,hollishcitation
+    events: hollish.atom
   sens_rep:
     text: 'https://gaia-craft.fr/Ressources/Le_Penseur.jpg'
     events: hollish.helix
