@@ -103,6 +103,13 @@ mailles_casque:
   - '&e&osont bien plus robuste !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 2 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 302
   POSITION-X: 4
   POSITION-Y: 2
@@ -205,6 +212,13 @@ mailles_plastron:
   - '&e&osont bien plus robuste !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 3 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 303
   POSITION-X: 9
   POSITION-Y: 2
@@ -297,6 +311,13 @@ mailles_jambes:
   - '&e&osont bien plus robuste !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 4 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 304
   POSITION-X: 4
   POSITION-Y: 5
@@ -359,6 +380,13 @@ mailles_pieds:
   - '&e&osont bien plus robuste !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 5 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 305
   POSITION-X: 9
   POSITION-Y: 5

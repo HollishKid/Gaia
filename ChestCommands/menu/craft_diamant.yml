@@ -103,6 +103,13 @@ diamant_casque:
   - '&e&od''une qualité rare !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 17 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous la craftez !'
   ID: 310
   POSITION-X: 4
   POSITION-Y: 2
@@ -205,6 +212,13 @@ diamant_plastron:
   - '&e&od''une qualité rare !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 18 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous la craftez !'
   ID: 311
   POSITION-X: 9
   POSITION-Y: 2
@@ -297,6 +311,13 @@ diamant_jambes:
   - '&e&od''une qualité rare !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 19 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 312
   POSITION-X: 4
   POSITION-Y: 5
@@ -359,6 +380,13 @@ diamant_pieds:
   - '&e&od''une qualité rare !'
   - ' '
   - '&7&oRareté : &aNon-Commun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 20 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 313
   POSITION-X: 9
   POSITION-Y: 5

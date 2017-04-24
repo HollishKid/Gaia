@@ -3,102 +3,101 @@
 #   Default Items for Gaïa
 #
 #
-bow: BOW
-an_arrow: ARROW
-wooden_sword: WOOD_SWORD
-leather_boots: LEATHER_BOOTS
-leather_tunic: LEATHER_CHESTPLATE
-leather_pants: LEATHER_LEGGINGS
-leathershoes: LEATHER_BOOTS
-leather_helmet: LEATHER_HELMET
-iron_helmet: IRON_HELMET
-iron_chestplate: IRON_CHESTPLATE
-iron_legs: IRON_LEGGINGS
-iron_boots: IRON_BOOTS
-iron_sword: IRON_SWORD
-chain_helmet: CHAINMAIL_HELMET
-chain_body: CHAINMAIL_CHESTPLATE
-chain_legs: CHAINMAIL_LEGGINGS
-chain_boots: CHAINMAIL_BOOTS
-gold_helmet: GOLD_HELMET
-gold_plate: GOLD_CHESTPLATE
-gold_legs: GOLD_LEGGINGS
-gold_boots: GOLD_BOOTS
-diamond_helmet: DIAMOND_HELMET
-diamond_body: DIAMOND_CHESTPLATE
-diamond_legs: DIAMOND_LEGGINGS
-diamond_boots: DIAMOND_BOOTS
-gold_body: GOLD_CHESTPLATE
-wooden_axe: WOOD_AXE
-gold_axe: GOLD_AXE
-diamond_axe: DIAMOND_AXE
-stone_sword: STONE_SWORD
-gold_sword: GOLD_SWORD
-diamond_sword: DIAMOND_SWORD
-stone_pickaxe: STONE_PICKAXE data:0
-stone_axe: STONE_AXE
-stone_shovel: STONE_SPADE data:0
-ironpickaxe: IRON_PICKAXE data:0
-ironore: IRON_ORE data:0
-ironbar: IRON_INGOT data:0
-ironaxe: IRON_AXE
-wooden_hoe: WOOD_HOE data:0
-stone_hoe: STONE_HOE data:0
-iron_hoe: IRON_HOE data:0
-gold_hoe: GOLD_HOE data:0
-diamond_hoe: DIAMOND_HOE data:0
-fishing_rod: FISHING_ROD data:0
-fishingrod: FISHING_ROD data:0
-cooked_mutton: COOKED_MUTTON data:0
-cooked_fish: COOKED_FISH data:0
+bow: BOW lore:none
+an_arrow: ARROW lore:none
+wooden_sword: WOOD_SWORD lore:none
+leather_boots: LEATHER_BOOTS lore:none
+leather_tunic: LEATHER_CHESTPLATE lore:none
+leather_pants: LEATHER_LEGGINGS lore:none
+leathershoes: LEATHER_BOOTS lore:none
+leather_helmet: LEATHER_HELMET lore:none
+iron_helmet: IRON_HELMET lore:none
+iron_chestplate: IRON_CHESTPLATE lore:none
+iron_legs: IRON_LEGGINGS lore:none
+iron_boots: IRON_BOOTS lore:none
+iron_sword: IRON_SWORD lore:none
+chain_helmet: CHAINMAIL_HELMET lore:none
+chain_body: CHAINMAIL_CHESTPLATE lore:none
+chain_legs: CHAINMAIL_LEGGINGS lore:none
+chain_boots: CHAINMAIL_BOOTS lore:none
+gold_helmet: GOLD_HELMET lore:none
+gold_plate: GOLD_CHESTPLATE lore:none
+gold_legs: GOLD_LEGGINGS lore:none
+gold_boots: GOLD_BOOTS lore:none
+diamond_helmet: DIAMOND_HELMET lore:none
+diamond_body: DIAMOND_CHESTPLATE lore:none
+diamond_legs: DIAMOND_LEGGINGS lore:none
+diamond_boots: DIAMOND_BOOTS lore:none
+gold_body: GOLD_CHESTPLATE lore:none
+wooden_axe: WOOD_AXE lore:none
+gold_axe: GOLD_AXE lore:none
+diamond_axe: DIAMOND_AXE lore:none
+stone_sword: STONE_SWORD lore:none
+gold_sword: GOLD_SWORD lore:none
+diamond_sword: DIAMOND_SWORD lore:none
+stone_pickaxe: STONE_PICKAXE lore:none
+stone_axe: STONE_AXE lore:none
+stone_shovel: STONE_SPADE lore:none
+ironpickaxe: IRON_PICKAXE lore:none
+ironore: IRON_ORE lore:none
+ironbar: IRON_INGOT lore:none
+ironaxe: IRON_AXE lore:none
+wooden_hoe: WOOD_HOE lore:none
+stone_hoe: STONE_HOE lore:none
+iron_hoe: IRON_HOE lore:none
+gold_hoe: GOLD_HOE lore:none
+diamond_hoe: DIAMOND_HOE lore:none
+fishing_rod: FISHING_ROD lore:none
+fishingrod: FISHING_ROD lore:none
+cooked_mutton: COOKED_MUTTON lore:none
+cooked_fish: COOKED_FISH lore:none
 cooked_salmon: COOKED_FISH data:1
 clownfish: RAW_FISH data:2
-bread: BREAD
-cookedfish: COOKED_FISH data:0
-rawfish: RAW_FISH data:0
-rawsteack: RAW_BEEF data:0
-rawpork: PORK data:0
+bread: BREAD lore:none
+cookedfish: COOKED_FISH lore:none
+rawfish: RAW_FISH lore:none
+rawsteack: RAW_BEEF lore:none
+rawpork: PORK lore:none
 emerald: EMERALD data:0 name:Emerald_Item lore:Made_of_emeralds;§2Objet_de_Quête
-wood: LOG
-redstone_torch: REDSTONE_TORCH_ON data:0
-stick: STICK data:0
-oakwoodlog: LOG data:0
-oakwoodplanks: WOOD data:0
-oakwoodstairs: WOOD_STAIRS data:0
-oakwoodslab: WOOD_STEP data:0
+wood: LOG lore:none
+redstone_torch: REDSTONE_TORCH_ON lore:none
+stick: STICK lore:none
+oakwoodlog: LOG lore:none
+oakwoodplanks: WOOD lore:none
+oakwoodstairs: WOOD_STAIRS lore:none
+oakwoodslab: WOOD_STEP lore:none
 spiderblood: SLIME_BALL data:0 name:§dSpider_Blood lore:§oBeerk...
-oakleaves: LEAVES data:0
-waterbucket: WATER_BUCKET data:0
+oakleaves: LEAVES lore:none
+waterbucket: WATER_BUCKET lore:none
 flask_nighthaste: POTION data:0 name:Flacon_de_hâte_nocturne lore:§8Par_Gretchen_Inc.;§cNotice:_Peut_causer_des_troubles_intestinaux. type:UNCRAFTABLE effects:NIGHT_VISION:1:90,SPEED:2:90
 waterbottle: POTION data:0 type:WATER
-goldencarrot: GOLDEN_CARROT data:0
+goldencarrot: GOLDEN_CARROT lore:none
 flask_strength: POTION data:0 name:Flacon_de_robustesse lore:§8Par_Gretchen_Inc.;§cNotice:_Peut_causer_des_troubles_cardiaques. type:UNCRAFTABLE effects:REGENERATION:1:90,DAMAGE_RESISTANCE:1:90
 flask_suspect: POTION data:0 name:Flacon_suspect lore:§8Par_Gretchen_Inc.;§cNotice:_Peut_causer_des_troubles_cérébraux. type:UNCRAFTABLE effects:SLOW:1:30,WEAKNESS:1:30
-boat: BOAT
+boat: BOAT lore:none
 list: BLAZE_ROD data:0 name:§2Brouilleur_arcanique lore:;§8§oDevrait_suffire_à_rendre;§8§ole_portail_inutilisable.;§2Objet_de_Quête
 the: POTION data:0 name:§2Thé_de_Nimuë type:UNCRAFTABLE
 recall_token: COMPASS data:0 name:§6Recall_Token§4_(§c5_utilisations§4) lore:§o§aTeleport_to_waypoints;§c5_utilisations
 ami_pack: CHEST data:0 name:§2Pack_de_survie lore:;§8§oCLIC_DROIT_pour_utiliser;§8§oun_objet_tenu_en_main;§2Objet_de_Quête
-tarte: PUMPKIN_PIE data:0
+tarte: PUMPKIN_PIE lore:none
 the_basic: POTION data:0 name:§2Thé type:UNCRAFTABLE effects:REGENERATION:1:90
-soupe_betteraves: BEETROOT_SOUP data:0
-gateau_paulette: CAKE data:0 name:§2Gâteau_de_Paulette
-egg: EGG data:0
-pain_paul: BREAD data:0 name:§2Pain_de_Paul
-ble: WHEAT data:0
-carrot: CARROT_ITEM data:0
-betteraves: BEETROOT data:0
-tarte_chef: CAKE data:0 name:§2Gâteau_du_Chef
-goupil_head: SKULL_ITEM data:3 name:§rGoupilDC16 owner:goupildc16
-wheat_seed: SEEDS data:0
-pumpkin_seed: PUMPKIN_SEEDS data:0
-pasteque_seed: MELON_SEEDS data:0
-betteraves_seed: BEETROOT_SEEDS data:0
-diamond: DIAMOND data:0
-gold_ingot: GOLD_INGOT data:0
-coal: COAL data:0
-coal_ore: COAL_ORE data:0
-rope: STRING data:0
+soupe_betteraves: BEETROOT_SOUP lore:none
+gateau_paulette: CAKE name:§2Gâteau_de_Paulette
+egg: EGG lore:none
+pain_paul: BREAD name:§2Pain_de_Paul
+ble: WHEAT lore:none
+carrot: CARROT_ITEM lore:none
+betteraves: BEETROOT lore:none
+tarte_chef: CAKE name:§2Gâteau_du_Chef
+wheat_seed: SEEDS lore:none
+pumpkin_seed: PUMPKIN_SEEDS lore:none
+pasteque_seed: MELON_SEEDS lore:none
+betteraves_seed: BEETROOT_SEEDS lore:none
+diamond: DIAMOND lore:none
+gold_ingot: GOLD_INGOT lore:none
+coal: COAL lore:none
+coal_ore: COAL_ORE lore:none
+rope: STRING lore:none
 lapis: INK_SACK data:4
 epee1: GOLD_SWORD data:0 name:§aÉpée_1er_Âge lore:§6Cet_épée_est_forgée_par_les;§6premiers_habitants_de_Gaïa;_;Rareté:_§aLégendaire enchants:DAMAGE_UNDEAD:4,DAMAGE_ARTHROPODS:4
 bone: BONE data:0 name:none
@@ -109,11 +108,11 @@ air_wand: STICK data:0 name:§3Baguette_d'Air lore:§o§3Lié_à_[Fondateur]Holl
 fire_wand: BLAZE_ROD data:0 name:§3Baguette_de_Feu lore:§o§3Lié_à_[Fondateur]Hollish;§d§oMana:_100;§r§dRégénération_Mana:_5/s
 earth_wand: LEVER data:0 name:§3Baguette_de_Terre lore:§o§3Lié_à_[Fondateur]Hollish;§d§oMana:_100;§r§dRégénération_Mana:_5/s
 water_wand: END_ROD data:0 name:§3Baguette_d'Eau lore:§o§3Lié_à_[Fondateur]Hollish;§d§oMana:_100;§r§dRégénération_Mana:_5/s
-stone_bricks: SMOOTH_BRICK data:0
-stone: COBBLESTONE data:0
-stone_block: STONE data:0
-stone_stairs: COBBLESTONE_STAIRS data:0
-Plume: FEATHER data:0
+stone_bricks: SMOOTH_BRICK lore:none
+stone: COBBLESTONE lore:none
+stone_block: STONE lore:none
+stone_stairs: COBBLESTONE_STAIRS lore:none
+Plume: FEATHER lore:none
 Plume_etrange: FEATHER data:0 name:Plume_étrange lore:Elle_semble_porter_le_poids_du_monde...
 craft_casque_cuir: LEATHER_HELMET data:0 name:§aCasque_Cuir_Tanné lore:§e§oCe_cuir_renforcé;§e§oest_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun enchants:DURABILITY:3
 craft_plastron_cuir: LEATHER_CHESTPLATE data:0 name:§aPlastron_Cuir_Tanné lore:§e§oCe_cuir_renforcé;§e§oest_bien_plus_robuste_!;_;§7§oRareté_:_§aCommun enchants:DURABILITY:3
@@ -139,7 +138,7 @@ craft_leather: LEATHER data:0 name:Cuir_Tanné lore:Ce_cuir_est;beaucoup_plus_ro
 craft_string: STRING data:0 name:Mailles lore:Cette_maille_fera;une_armure_correcte.
 craft_iron: IRON_INGOT data:0 name:Fer_Forgé lore:Ce_fer_est;très_dense_!
 craft_gold: GOLD_INGOT data:0 name:Or_Décoré lore:Cet_or_est;joliment_travaillé...
-dirt: DIRT data:0
-gravel: GRAVEL data:0
+dirt: DIRT lore:none
+gravel: GRAVEL lore:none
 splash_potion: SPLASH_POTION data:0 type:WATER
 mundane_potion: POTION type:MUNDANE

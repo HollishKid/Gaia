@@ -352,6 +352,7 @@ air_parcours_occupied_exe: region air_parcours
 tag_moine_air: tag moine_air
 tag_aang: tag aang
 livre_air: tag livre_air
+air_continum: tag air_continum
 milo_fiole: tag milo_fiole
 fiole_have: item fiole:1
 fiole_hand: hand fiole

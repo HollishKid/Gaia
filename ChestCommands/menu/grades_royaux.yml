@@ -50,7 +50,7 @@ info:
   LORE:
     - '&oEn adoptant un grade,'
     - '&ovous en obtiendrais le préfixe.'
-  POSITION-X: 4
+  POSITION-X: 5
   POSITION-Y: 1
   KEEP-OPEN: true
   
@@ -109,7 +109,7 @@ chevalier:
   
 champion:
   COMMAND: 'commandedegradesroyaux Champion qp60 30'
-  NAME: '&2Chevalier'
+  NAME: '&2Champion'
   ID: map
   LORE:
     - '&cRequiert :'
@@ -181,14 +181,14 @@ comte:
   
 marquis:
   COMMAND: 'commandedegradesroyaux Marquis qp180 210'
-  NAME: '&2Comte'
+  NAME: '&2Marquis'
   ID: map
   LORE:
     - '&cRequiert :'
     - ' '
     - '- &o180 Points de Quête'
     - '- &o210 jours d''ancienneté'
-  POSITION-X: 5
+  POSITION-X: 4
   POSITION-Y: 4
   
 duc:
@@ -205,7 +205,7 @@ duc:
   
 prince:
   COMMAND: 'commandedegradesroyaux Prince qp220 270'
-  NAME: '&2Comte'
+  NAME: '&2Prince'
   ID: map
   LORE:
     - '&cRequiert :'

@@ -73,6 +73,13 @@ diamant_epee:
   - '&e&od''une qualitée rare !'
   - ' '
   - '&7&oRareté : &aCommun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 19 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 276
   POSITION-X: 4
   POSITION-Y: 2
@@ -135,6 +142,13 @@ diamant_hache:
   - '&e&od''une qualitée rare !'
   - ' '
   - '&7&oRareté : &aCommun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 20 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 279
   POSITION-X: 9
   POSITION-Y: 2

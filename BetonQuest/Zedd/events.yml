@@ -103,7 +103,7 @@ maka_mess7: 'message &6'
 maka_fold0: folder maka_mess0,maka_mess02,maka_item1,maka_mess00,maka_eco1,maka_fold1 delay:3
 maka_mess0: 'message &2Makarov:&a&o Prend ça, tu l''as bien mérité, et cela pourrait se révéler utile pour la suite!'
 maka_mess02: 'message &6&oRéunion suspecte (terminé)'
-maka_item1: 'command mm items give %player% leatherlegs_common'
+maka_item1: 'command sudo %player% gaiaitemgiver leatherlegs_common'
 maka_mess00: 'message &6&oVous recevez un &aPantalon en cuir&6&o.'
 maka_eco1: 'command eco give %player% 500'
 maka_fold1: folder drisgan.tag_succesremove,maka_q1done,maka_endq1,maka_outconvers,maka_convers,quest_point_1 delay:4
@@ -144,7 +144,7 @@ maka_etape3: folder maka_mess10,maka_fold4 delay:5
 maka_mess10: 'message &2Makarov : &a&oUn traître aux contrebandiers tu dis ? Qui aurait volé un &6Objet &a&odangereux ? Évidemment, il serait pratique que cet &6Objet&a&o soit encore en sa possession..'
 maka_fold4: folder maka_mess11,quest_point_1,maka_j4_del,maka_j5,maka_givechain,maka_givechainmess,maka_q2end,maka_q2done,maka_q3start,makarov_denyaccess,maka_outconvers delay:8
 maka_mess11: 'message &2Makarov : &a&oEssaye de retrouver sa trace, comme te le demandes &2Lasswell&a&o, après tout, il n''est pas bon pour &dAthelas&a&o que les contrebandiers soient trop agités. Prend ceci, et bon courage !'
-maka_givechain: 'command mm items give %player% chainchest'
+maka_givechain: 'command sudo %player% gaiaitemgiver chainchest'
 maka_givechainmess: 'message &6&oVous recevez une &aCotte de mailles&6&o.'
 maka_q3start: tag add maka_q3start
 maka_q3end: tag del maka_q3start
@@ -238,7 +238,7 @@ jim_title12: 'command title %player% subtitle {"text":"Le test de recrutement","
 jim_title13: 'command title %player% title {"text":"Guilde des Aventuriers","color":"green"}'
 jim_firstend: folder progress_done,quest_point_1,jim_removestart1,makarov_access,jim_reward1,jim_q1done
 jim_reward1: folder jim_reward1_item,jim_reward1_mess,jim_reward1_mess1,jim_reward1_money delay:1
-jim_reward1_item: 'command mm items give %player% stonesword_common'
+jim_reward1_item: 'command sudo %player% gaiaitemgiver stonesword_common'
 jim_reward1_mess: 'message &6&oLe test de recrutement (terminé)'
 jim_reward1_mess1: 'message &6&oVous recevez &aEpée du 1er âge&6&o.'
 jim_reward1_money: 'command eco give %player% 500'
@@ -375,7 +375,7 @@ ynv_q3messretry: 'message &6En cas d''échec, vous pouvez recommencer cette quê
 ynv_q3done: tag add ynv_q3done
 ynv_q3reward: folder quest_point_1,ynv_q3mess1,ynv_q3item,ynv_q3mess2,ynv_q3eco,yre_eventdoneremove,ynv_endprogress,ynv_q3end,ynv_q3_journal_del delay:2
 ynv_q3mess1: 'message &6&oHold-up chez les voleurs! (terminé)'
-ynv_q3item: 'command mm items give %player% bow_common'
+ynv_q3item: 'command sudo %player% gaiaitemgiver bow_common'
 ynv_q3mess2: 'message &6&oVous recevez un &aArc simple&6&o.'
 ynv_q3eco: 'command eco give %player% 2500'
 yre_eventdoneremove: tag del yre_eventdone
@@ -472,7 +472,7 @@ tv2_mess: 'message &6&oVous recevez 3 Diamants.'
 tvc_click3: objective start tv_coffre3click
 tv_coffre3loot: folder tv3_eco,tv3_item,tv3_mess
 tv3_eco: 'command eco give %player% 750'
-tv3_item: 'command mm items give %player% chainchest_common'
+tv3_item: 'command sudo %player% gaiaitemgiver chainchest_common'
 tv3_mess: 'message &6&oVous recevez 1 &aCotte de mailles&6&o.'
 tvc_click4: objective start tv_coffre4click
 tv_coffre4loot: folder tv4_eco,tv4_item1,tv4_item2,tv4_mess
@@ -544,7 +544,8 @@ nothing: tag del lachatemissembales
 #
 give_test: give lava_tear
 give_test2: give water_tear
-or_keyrenew: folder or_takemoney,give_thiefkey,thiefkey_reload_delay
+or_keyrenew: if default.money_500 or_keyrenew2 else nothing
+or_keyrenew2: folder or_takemoney,give_thiefkey,thiefkey_reload_delay
 or_takemoney: 'command eco take %player% 500'
 var_pitch_fold: folder var_mess1,var_pitch_fold2,var_q1_journal delay:5
 var_mess1: 'message &2Varko:&a&o Il semblerait que les mages s''intéressent aux élémentaires qui apparaissent dans &dHigh Garden&a&o, qui est juste en face de nous, au-delà de cette fenêtre.'
@@ -653,7 +654,7 @@ zae_q2reward: folder quest_point_1,zae_mess7,zae_eco2,zae_mess8,zae_givesandales
 zae_mess7: 'message &6&oLocaliser la faille (terminé)'
 zae_eco2: 'command eco give %player% 1250'
 zae_mess8: 'message &6&oVous recevez des &aChausses en cuir gravé&6&o.'
-zae_givesandales: 'command mm items give %player% leatherlegs_uncommon'
+zae_givesandales: 'command sudo %player% gaiaitemgiver leatherlegs_uncommon'
 zae_takehyperreg: take hyperreg:1
 zae_clean1: tag del zae_q2start
 zae_clean2: tag del zae_faille
@@ -743,7 +744,7 @@ kal_j3_del: journal del kal_j3
 kal_q1startfold: folder kal_mess1,kal_fold1,kal_j1 delay:8
 kal_mess1: 'message &2Kali Jones:&a&o Je n''ai que très peu d''informations sur son emplacement, mais je sais qu''il contenait un joyaux qui n''avait pas son pareil, l''&dOmbre Jaune&a&o!'
 kal_fold1: folder kal_mess2,kal_giveoxy,kal_fold2 delay:8
-kal_giveoxy: 'command mm items give %player% leather_oxy'
+kal_giveoxy: 'command sudo %player% gaiaitemgiver leather_oxy'
 kal_mess2: 'message &2Kali Jones:&a&o Si tu arrives à retrouver ce temple et le joyaux qu''il contient, rapporte le moi, tu seras bien récompensé pour tes services! Et prend ce &fMasque de plongée &a&oavec toi, cela pourrait être utile...'
 kal_fold2: folder kal_q1start,kal_conversdone,kal_title1,kal_clickombre delay:5
 kal_q1start: tag add kal_q1start
@@ -793,7 +794,7 @@ ut_coffre3lootmess: 'message &4Revenant:&7&o Donne moi ... ta vie ...'
 ut_coffre3lootspawn: 'command mm m spawn revenant:1 1 Gaia,-6829,13,3245'
 ut_coffre4loot: folder ut_coffre4lootmess,ut_coffre4lootgive delay:1
 ut_coffre4lootmess: 'message &6&oVous recevez une &3Coiffe rituelle&6&o.'
-ut_coffre4lootgive: 'command mm items give %player% leatherhead_uncommon'
+ut_coffre4lootgive: 'command sudo %player% gaiaitemgiver leatherhead_uncommon'
 ut_coffre5loot: folder ut_coffre5lootmess,ut_coffre5lootspawn delay:1
 ut_coffre5lootmess: 'message &4Revenant:&7&o Meurs insolent!'
 ut_coffre5lootspawn: 'command mm m spawn revenant:1 1 Gaia,-6829,13,3252'
@@ -1231,4 +1232,3 @@ bwin16: objective start bwin16
 btick16: folder breplace16,bdewin16,remove_diamond,pre_roulette delay:1
 breplace16: setblock WOOL -6768;2;2972;Gaia
 bdewin16: objective delete bwin16
-
