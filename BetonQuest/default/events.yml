@@ -555,8 +555,8 @@ intendant_done_mess32: 'command title %player% title {"text":"Bienvenue","bold":
 intendant_done_mess33: 'command title %player% subtitle {"text":"Citoyen d''Athelas","italic":true,"color":"light_purple"}'
 pex_citoyen: 'command pex user %player% group set aventurier'
 intendant_starter_stuff: folder intendant_starter_stuff1,intendant_starter_stuff2
-intendant_starter_stuff1: 'command mm items give %player% stuff_leatherchest'
-intendant_starter_stuff2: 'command mm items give %player% stuff_leatherlegs'
+intendant_starter_stuff1: 'command sudo %player% gaiaitemgiver stuff_leatherchest'
+intendant_starter_stuff2: 'command sudo %player% gaiaitemgiver stuff_leatherlegs'
 #
 #
 #

@@ -75,7 +75,7 @@ eko_q2start: tag add eko_q2start
 eko_q2end: tag del eko_q2start
 eko_q2done: tag add eko_q2done
 eko_q2obj: objective start eko_q2obj
-eko_givechain: 'command mm items give %player% chainfeet'
+eko_givechain: 'command sudo %player% gaiaitemgiver chainfeet'
 eko_givechainmess: 'message &6&oVous recevez des &aBottines en fer&6&o.'
 #
 #eko_makaupdate: folder Zedd.maka_j3_del,Zedd.maka_j4,Zedd.makarow_access_exe,eko_makamess delay:6
@@ -88,7 +88,7 @@ eko_givelettre: give lettre_cachetee:1
 # replaced eko_q3startfolder with tempo_redirect
 eko_q2donefolder: folder eko_takelettre,eko_q2done,eko_q2end,eko_q2reward,eko_conversdone,eko_q3startfolder delay:2
 eko_q2reward: folder quest_point_1,eko_givechainlegs,eko_givechainlegsmess
-eko_givechainlegs: 'command mm items give %player% chainlegs'
+eko_givechainlegs: 'command sudo %player% gaiaitemgiver chainlegs'
 eko_givechainlegsmess: 'message &6&oVous recevez des &aJambières annelées&6&o.'
 eko_takelettre: take lettre_cachetee:1
 #
@@ -319,7 +319,7 @@ las_objarrowdel: objective delete las_objarrow
 #
 las2_holreward: folder quest_point_5,las2_money,las2_givesword,las2_giveswordmess,las2_mess1,eko_q3done,eko_q3end,las2_fold2 delay:5
 las2_money: 'command eco give %player% 5000'
-las2_givesword: 'command mm items give %player% iron_sword1'
+las2_givesword: 'command sudo %player% gaiaitemgiver iron_sword1'
 las2_giveswordmess: 'message &6&oVous recevez une &aEpée robuste&6&o.'
 las2_mess1: 'message &2Lasswell:&a&o Bien, maintenant laisse moi, va donc continuer tes aventures ou explorer la ville, peu me chaut!'
 las2_fold2: folder las2_mess2,las2_journalupdate delay:7
