@@ -2981,46 +2981,6 @@ potion_ilse5: effect INVISIBILITY 60 1
 ####################################################################################
 randomizer: folder paulette_randomizer,paul_randomizer,francis_randomizer delay:1
 #
-# /xprate 2 true
-# /xprate reset
-#
-#  /mm s addcondition goblin_assault1 world Gaia_nether
-#  /mm s removecondition goblin_assault1 world Gaia_nether
-#
-#   Assault de Ingor - Petit Village
-#
-#  Donjon Spécial
-#
-#
-#
-# !! COMPLETELY UNSAFE AND UNSOUND !!
-#
-# Day Counter
-#
-#
-#day_counter: if monday go_tuesday else day_counter2
-#day_counter: if tuesday go_wednesday else day_counter2
-#day_counter: if wednesday go_thursday else day_counter2
-#day_counter: if thursday go_friday else day_counter2
-#day_counter: if friday go_saturday else day_counter2
-#day_counter: if saturday go_sunday else day_counter2
-#day_counter: if sunday go_monday else error_day_counting
-#
-#go_monday: folder day_resetter,go_monday_exe
-#go_monday_exe: folder go_monday_exe2 delay:2
-#
-#day_resetter: folder day_r1,day_r2,day_r3,day_r4,day_r5,day_r6,day_r7
-#day_r1: SETBLOCK GLOWSTONE -6768;61;2965;Gaia
-#tuesday: SETBLOCK GLOWSTONE -6767;61;2964;Gaia
-#wednesday: SETBLOCK GLOWSTONE -6766;61;2963;Gaia
-#thursday: SETBLOCK GLOWSTONE -6765;61;2962;Gaia
-#friday: SETBLOCK GLOWSTONE -6764;61;2961;Gaia
-#saturday: SETBLOCK GLOWSTONE -6763;61;2960;Gaia
-#sunday: SETBLOCK GLOWSTONE -6762;61;2959;Gaia
-#
-#error_day_counting: 'command mail send Hollish Une erreur dans le comptage de jours en survenue.'
-#
-#
 # Paulette
 #
 #
@@ -3463,18 +3423,6 @@ tag_foret_athelas_remove_exe: tag del foret_athelas
 foret_obj_remove: folder foret_obj_distance_remove,foret_obj_logout_remove delay:1
 foret_obj_distance_remove: objective delete foret_obj_distance
 foret_obj_logout_remove: objective delete foret_obj_logout
-#############################
-#
-#
-#
-#                Voix de Gaïa
-#
-#
-#
-###############################################################################
-hollishpresentation: 'command jukebox sound %player% http://files.enjin.com/1186825/voices/welcomehollish.mp3'
-hollishcitation: 'command jukebox sound %player% http://files.enjin.com/1186825/voices/citationhollish.mp3'
-hollishrole: 'command jukebox sound %player% http://files.enjin.com/1186825/voices/hollishrole.mp3'
 #############################
 #
 #
