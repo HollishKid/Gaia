@@ -9,77 +9,77 @@ on mcmmo player experience gain:
 	else:
 		if event-skilltype is mining:
 			if event-player meets betonquest condition "metier_mineur":
-				if {other_contributors::*} contains "%event-player%":
+				if "%{other_contributors::*}%" contains "%event-player%":
 					add 1 to {minage_total}
 				else:
 					invoke "cagnotte_initializer" from player, "Mineur" and "other"
 
 		else if event-skilltype is excavation:
 			if event-player meets betonquest condition "metier_excavation":
-				if {excavation_contributors::*} contains "%event-player%":
+				if "%{excavation_contributors::*}%" contains "%event-player%":
 					add 1 to {excavation_total}
 				else:
 					invoke "cagnotte_initializer" from player, "Excavateur" and "excavation"
 
 		else if event-skilltype is woodcutting:
 			if event-player meets betonquest condition "metier_bucheron":
-				if {bûcheronnage_contributors::*} contains "%event-player%":
+				if "%{bûcheronnage_contributors::*}%" contains "%event-player%":
 					add 1 to {bûcheronnage_total}
 				else:
 					invoke "cagnotte_initializer" from player, "Bûcheron" and "bûcheronnage"
 
 		else if event-skilltype is herbalism:
 			if event-player meets betonquest condition "metier_herboriste":
-				if {herboristerie_contributors::*} contains "%event-player%":
+				if "%{herboristerie_contributors::*}%" contains "%event-player%":
 					add 1 to {herboristerie_total}
 				else:
 					invoke "cagnotte_initializer" from player, "Herboriste" and "herboristerie"
 				
 		else if event-skilltype is unarmed:
 			if event-player meets betonquest condition "metier_poings":
-				if {poings_contributors::*} contains "%event-player%":
+				if "%{poings_contributors::*}%" contains "%event-player%":
 					add 1 to {poings_total}
 				else:
 					invoke "cagnotte_initializer" from player, "Pugiliste" and "poings"
 
 		else if event-skilltype is archery:
 			if event-player meets betonquest condition "metier_arc":
-				if {arc_contributors::*} contains "%event-player%":
+				if "%{arc_contributors::*}%" contains "%event-player%":
 					add 1 to {arc_total}
 				else:
 					invoke "cagnotte_initializer" from player, "Archer" and "arc"
 
 		else if event-skilltype is acrobatics:
 			if event-player meets betonquest condition "metier_acrobate":
-				if {acrobatie_contributors::*} contains "%event-player%":
+				if "%{acrobatie_contributors::*}%" contains "%event-player%":
 					add 1 to {acrobatie_total}
 				else:
 					invoke "cagnotte_initializer" from player, "Acrobate" and "acrobatie"
 
 		else if event-skilltype is fishing:
 			if event-player meets betonquest condition "metier_peche":
-				if {pêche_contributors::*} contains "%event-player%":
+				if "%{pêche_contributors::*}%" contains "%event-player%":
 					add 1 to {pêche_total}
 				else:
 					invoke "cagnotte_initializer" from player, "Pêche" and "pêcheur"
 					
 		else if event-skilltype is taming:
 			if event-player meets betonquest condition "metier_apprivoiseur":
-				if {apprivoisement_contributors::*} contains "%event-player%":
+				if "%{apprivoisement_contributors::*}%" contains "%event-player%":
 					add 1 to {apprivoisement_total}
 				else:
 					invoke "cagnotte_initializer" from player, "Apprivoiseur" and "apprivoisement"
 
 		else if event-skilltype is repair:
 			if event-player meets betonquest condition "metier_reparation":
-				if {réparation_contributors::*} contains "%event-player%":
+				if "%{réparation_contributors::*}%" contains "%event-player%":
 					add 1 to {réparation_total}
 				else:
 					invoke "cagnotte_initializer" from player, "Réparateur" and "réparation"
 					
 		else if event-skilltype is alchemy:
 			if event-player meets betonquest condition "metier_alchimiste":
-				if {alchimie_contributors::*} contains "%event-player%":
+				if "%{alchimie_contributors::*}%" contains "%event-player%":
 					add 1 to {alchimie_total}
 				else:
 					invoke "cagnotte_initializer" from player, "Alchimiste" and "alchimie"
@@ -88,14 +88,14 @@ on mcmmo player experience gain:
 			set {_skill} to "%event-skilltype%"
 			if {_skill} is "épées":
 				if event-player meets betonquest condition "metier_epees":
-					if {épées_contributors::*} contains "%event-player%":
+					if "%{épées_contributors::*}%" contains "%event-player%":
 						add 1 to {épées_total}
 					else:
 						invoke "cagnotte_initializer" from player, "Épéiste" and "épées"
 
 			else if {_skill} is "haches":
 				if event-player meets betonquest condition "metier_haches":
-					if {haches_contributors::*} contains "%event-player%":
+					if "%{haches_contributors::*}%" contains "%event-player%":
 						add 1 to {haches_total}
 					else:
 						invoke "cagnotte_initializer" from player, "Milicien" and "haches"
@@ -112,7 +112,7 @@ sub "cagnotte_initializer":
 on mcmmo skill level up:
 	if event-skilltype is mining:
 		if event-player meets betonquest condition "metier_mineur":
-			if {other_contributors::*} contains "%event-player%":
+			if "%{other_contributors::*}%" contains "%event-player%":
 				add 100 to {minage_total}
 			else:
 				add event-player to {other_contributors::*}
@@ -120,7 +120,7 @@ on mcmmo skill level up:
 	
 	else if event-skilltype is excavation:
 		if event-player meets betonquest condition "metier_excavation":
-			if {excavation_contributors::*} contains "%event-player%":
+			if "%{excavation_contributors::*}%" contains "%event-player%":
 				add 100 to {excavation_total}
 			else:
 				add event-player to {excavation_contributors::*}
@@ -128,7 +128,7 @@ on mcmmo skill level up:
 	
 	else if event-skilltype is woodcutting:
 		if event-player meets betonquest condition "metier_bucheron":
-			if {bûcheronnage_contributors::*} contains "%event-player%":
+			if "%{bûcheronnage_contributors::*}%" contains "%event-player%":
 				add 100 to {bûcheronnage_total}
 			else:
 				add event-player to {bûcheronnage_contributors::*}
@@ -136,7 +136,7 @@ on mcmmo skill level up:
 			
 	else if event-skilltype is herbalism:
 		if event-player meets betonquest condition "metier_herboriste":
-			if {herboristerie_contributors::*} contains "%event-player%":
+			if "%{herboristerie_contributors::*}%" contains "%event-player%":
 				add 100 to {herboristerie_total}
 			else:
 				add event-player to {herboristerie_contributors::*}
@@ -144,7 +144,7 @@ on mcmmo skill level up:
 	
 	else if event-skilltype is unarmed:
 		if event-player meets betonquest condition "metier_poings":
-			if {poings_contributors::*} contains "%event-player%":
+			if "%{poings_contributors::*}%" contains "%event-player%":
 				add 100 to {poings_total}
 			else:
 				add event-player to {poings_contributors::*}
@@ -152,7 +152,7 @@ on mcmmo skill level up:
 	
 	else if event-skilltype is archery:
 		if event-player meets betonquest condition "metier_arc":
-			if {arc_contributors::*} contains "%event-player%":
+			if "%{arc_contributors::*}%" contains "%event-player%":
 				add 100 to {arc_total}
 			else:
 				add event-player to {arc_contributors::*}
@@ -160,7 +160,7 @@ on mcmmo skill level up:
 		
 	else if event-skilltype is acrobatics:
 		if event-player meets betonquest condition "metier_acrobate":
-			if {acrobatie_contributors::*} contains "%event-player%":
+			if "%{acrobatie_contributors::*}%" contains "%event-player%":
 				add 100 to {acrobatie_total}
 			else:
 				add event-player to {acrobatie_contributors::*}
@@ -168,7 +168,7 @@ on mcmmo skill level up:
 		
 	else if event-skilltype is fishing:
 		if event-player meets betonquest condition "metier_peche":
-			if {pêche_contributors::*} contains "%event-player%":
+			if "%{pêche_contributors::*}%" contains "%event-player%":
 				add 100 to {pêche_total}
 			else:
 				add event-player to {pêche_contributors::*}
@@ -176,7 +176,7 @@ on mcmmo skill level up:
 		
 	else if event-skilltype is taming:
 		if event-player meets betonquest condition "metier_apprivoiseur":
-			if {apprivoisement_contributors::*} contains "%event-player%":
+			if "%{apprivoisement_contributors::*}%" contains "%event-player%":
 				add 100 to {apprivoisement_total}
 			else:
 				add event-player to {apprivoisement_contributors::*}
@@ -184,7 +184,7 @@ on mcmmo skill level up:
 		
 	else if event-skilltype is repair:
 		if event-player meets betonquest condition "metier_reparation":
-			if {réparation_contributors::*} contains "%event-player%":
+			if "%{réparation_contributors::*}%" contains "%event-player%":
 				add 100 to {réparation_total}
 			else:
 				add event-player to {réparation_contributors::*}
@@ -192,7 +192,7 @@ on mcmmo skill level up:
 				
 	else if event-skilltype is alchemy:
 		if event-player meets betonquest condition "metier_alchimiste":
-			if {alchimie_contributors::*} contains "%event-player%":
+			if "%{alchimie_contributors::*}%" contains "%event-player%":
 				add 100 to {alchimie_total}
 			else:
 				add event-player to {alchimie_contributors::*}
@@ -202,7 +202,7 @@ on mcmmo skill level up:
 		set {_skill} to "%event-skilltype%"
 		if {_skill} is "épées":
 			if event-player meets betonquest condition "metier_epees":
-				if {épées_contributors::*} contains "%event-player%":
+				if "%{épées_contributors::*}%" contains "%event-player%":
 					add 100 to {épées_total}
 				else:
 					add event-player to {épées_contributors::*}
@@ -210,7 +210,7 @@ on mcmmo skill level up:
 			
 		if {_skill} is "haches":
 			if event-player meets betonquest condition "metier_haches":
-				if {haches_contributors::*} contains "%event-player%":
+				if "%{haches_contributors::*}%" contains "%event-player%":
 					add 100 to {haches_total}
 				else:
 					add event-player to {haches_contributors::*}
