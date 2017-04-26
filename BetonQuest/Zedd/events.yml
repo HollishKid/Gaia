@@ -106,7 +106,7 @@ maka_mess02: 'message &6&oRéunion suspecte (terminé)'
 maka_item1: 'command sudo %player% gaiaitemgiver leatherlegs_common'
 maka_mess00: 'message &6&oVous recevez un &aPantalon en cuir&6&o.'
 maka_eco1: 'command eco give %player% 500'
-maka_fold1: folder drisgan.tag_succesremove,maka_q1done,maka_endq1,maka_outconvers,maka_convers,quest_point_1 delay:4
+maka_fold1: folder drisgan.tag_succesremove,maka_q1done,maka_endq1,maka_outconvers,maka_convers,quest_point_1 delay:2
 maka_q1done: tag add maka_q1done
 maka_endq1: tag del maka_q1start
 maka_convers: conversation makarov
@@ -861,6 +861,19 @@ kal_reset5_exe: setblock REDSTONE_TORCH_ON -6765;55;2987;Gaia
 #
 its_inconvers: tag add its_inconvers
 its_conversdone: tag del its_inconvers
+its_menu: folder its_menu2 delay:1
+its_menu2: 'command cc open itsuki %player%'
+#
+its_r1quit_check: if its_r1inprogress its_r1quit_confirm else its_quitdenymess
+its_r2quit_check: if hol_access its_r2qui_check2 else its_menudeny
+its_r2qui_check2: if its_r2inprogress its_r2quit_confirm else its_quitdenymess
+its_r1quit_confirm: folder its_r1quit_confirm2 delay:1
+its_r1quit_confirm2: 'command cc open itsuki_quitconfirm1 %player%'
+its_r2quit_confirm: folder its_r1quit_confirm3 delay:1
+its_r1quit_confirm3: 'command cc open itsuki_quitconfirm2 %player%'
+its_quitdenymess: 'message &3Vous n''avez pas de contrat de ce rang à abandonner.'
+#
+its_menudeny: 'message &2Itsuki: &a&oVous ne remplissez pas les conditions nécessaires pour accéder à ce rang.'
 #
 ## Journal
 #
@@ -876,6 +889,16 @@ its_jr1q4: journal add its_jr1q4
 its_jr1q4_del: journal del its_jr1q4
 its_jr1q5: journal add its_jr1q5
 its_jr1q5_del: journal del its_jr1q5
+#
+its_jr2done: journal add its_jr2done
+its_jr2done_del: journal del its_jr2done
+its_jr2q1: journal add its_jr2q1
+its_jr2q1_del: journal del its_jr2q1
+its_jr2q2: journal add its_jr2q2
+its_jr2q2_del: journal del its_jr2q2
+its_jr2q3: journal add its_jr2q3
+its_jr2q3_del: journal del its_jr2q3
+#
 #
 ### Beginning
 #
@@ -900,12 +923,12 @@ its_r1inprogressdeny: 'message &2Itsuki:&a&o Finissez d''abord le contrat que je
 #
 its_checkclaimr1: if its_r1done its_r1reward else its_r1rewarddeny
 its_r1rewarddeny: 'message &2Itsuki:&a&o Vous n''avez pas de récompense à retirer.'
-its_r1reward: folder its_r1money,its_r1mess,its_r1delay,its_r1timer,its_r1doneremove,its_jr1done_del delay:1
-its_r1money: 'command eco give %player% 1500'
+its_r1reward: folder its_r1money,its_r1mess,its_r1delay,its_r1timer,its_r1doneremove,its_jr1done_del,its_r1inprogress_remove delay:1
+its_r1money: 'command eco give %player% 1000'
 its_r1mess: 'message &3Récompense de contrat retirée !'
 its_r1delay: objective start its_r1delay
 #
-its_rang1go: folder its_r1q1,its_r1q2,its_r1q3,its_r1q4,its_r1q5,its_r1inprogress delay:1 random:1
+its_rang1go: folder its_r1q1,its_r1q2,its_r1q3,its_r1q4,its_r1q5 delay:1 random:1
 its_r1done: tag add its_r1done
 its_r1doneremove: tag del its_r1done
 its_r1inprogress: tag add its_r1inprogress
@@ -913,9 +936,19 @@ its_r1inprogress_remove: tag del its_r1inprogress
 its_r1timer: tag add its_r1timer
 its_r1timer_remove: tag del its_r1timer
 #
+its_r1quit: folder its_r1inprogress_remove,its_r1timer,its_objr1_removeall,its_r1journal_removeall,its_r1quitmess
+its_objr1_removeall: folder its_del_objr1q1,its_del_objr1q2,its_del_objr1q3,its_del_objr1q4,its_del_objr1q5
+its_del_objr1q1: objective delete its_objr1q1
+its_del_objr1q2: objective delete its_objr1q2
+its_del_objr1q3: objective delete its_objr1q3
+its_del_objr1q4: objective delete its_objr1q4
+its_del_objr1q5: objective delete its_objr1q5
+its_r1journal_removeall: folder its_jr1q1_del,its_jr1q2_del,its_jr1q3_del,its_jr1q4_del,its_jr1q5_del
+its_r1quitmess: 'message &3Vous abandonnez votre contrat de rang 1.'
+#
 #
 ##Voleurs
-its_r1q1: folder its_mess5,its_jr1q1,its_objr1q1
+its_r1q1: folder its_mess5,its_jr1q1,its_objr1q1,its_r1inprogress
 its_mess5: 'message &3Elimination des voleurs'
 its_objr1q1: objective start its_objr1q1
 #
@@ -924,7 +957,7 @@ its_mess6: 'message &3Vous avez accompli le contrat de guilde - Élimination des
 #
 #
 ##Elementaires de lave
-its_r1q2: folder its_mess7,its_jr1q2,its_objr1q2
+its_r1q2: folder its_mess7,its_jr1q2,its_objr1q2,its_r1inprogress
 its_mess7: 'message &3Elimination d''élémentaires de lave'
 its_objr1q2: objective start its_objr1q2
 #
@@ -933,7 +966,7 @@ its_mess8: 'message &3Vous avez accompli le contrat de guilde - Élimination d''
 #
 #
 ##Type louche
-its_r1q3: folder its_mess9,its_jr1q3,its_objr1q3
+its_r1q3: folder its_mess9,its_jr1q3,its_objr1q3,its_r1inprogress
 its_mess9: 'message &3Elimination d''ordures'
 its_objr1q3: objective start its_objr1q3
 #
@@ -941,16 +974,16 @@ its_objr1q3_complete: folder its_r1done,its_mess10,its_jr1q3_del,its_jr1done
 its_mess10: 'message &3Vous avez accompli le contrat de guilde - Élimination d''ordures.'
 #
 ##Elementaires d'eau
-its_r1q4: folder its_mess11,its_jr1q4,its_objr1q4
+its_r1q4: folder its_mess11,its_jr1q4,its_objr1q4,its_r1inprogress
 its_mess11: 'message &3Elimination d''élémentaires d''eau'
 its_objr1q4: objective start its_objr1q4
 #
 its_objr1q4_complete: folder its_r1done,its_mess12,its_jr1q4_del,its_jr1done
-its_mess12: 'message &3Vous avez accompli le contrat de guilde - Élimination d''élémentaires de lave.'
+its_mess12: 'message &3Vous avez accompli le contrat de guilde - Élimination d''élémentaires d''eau.'
 #
 #
 ##Ghoule
-its_r1q5: folder its_mess13,its_jr1q5,its_objr1q5
+its_r1q5: folder its_mess13,its_jr1q5,its_objr1q5,its_r1inprogress
 its_mess13: 'message &3Elimination de mort-vivants'
 its_objr1q5: objective start its_objr1q5
 #
@@ -959,6 +992,63 @@ its_mess14: 'message &3Vous avez accompli le contrat de guilde - Élimination de
 #
 #
 #
+### Rang 2
+#
+its_checkstartr2: if !its_r2timer its_checkstartr22 else its_r2timerdeny
+its_r2timerdeny: 'message &2Itsuki:&a&o Vous devez attendre avant d''accomplir un autre contrat. (Temps restant:&d %objective.its_r2delay.left% &a&o)'
+its_checkstartr22: if !its_r2inprogress its_rang2go else its_r2inprogressdeny
+its_r2inprogressdeny: 'message &2Itsuki:&a&o Finissez d''abord le contrat que je vous ai fournit!'
+#
+its_checkclaimr2: if hol_access its_checkclaimr22 else its_menudeny
+its_checkclaimr22: if its_r2done its_r2reward else its_r2rewarddeny
+its_r2rewarddeny: 'message &2Itsuki:&a&o Vous n''avez pas de récompense à retirer.'
+its_r2reward: folder its_r2money,its_r2mess,its_r2delay,its_r2timer,its_r2doneremove,its_jr2done_del,its_r2inprogress_remove delay:1
+its_r2money: 'command eco give %player% 2500'
+its_r2mess: 'message &3Récompense de contrat retirée !'
+its_r2delay: objective start its_r2delay
+#
+its_rang2go: folder its_r2q1,its_r2q2,its_r2q3 delay:1 random:1
+its_r2done: tag add its_r2done
+its_r2doneremove: tag del its_r2done
+its_r2inprogress: tag add its_r2inprogress
+its_r2inprogress_remove: tag del its_r2inprogress
+its_r2timer: tag add its_r2timer
+its_r2timer_remove: tag del its_r2timer
+#
+its_r2quit: folder its_r2inprogress_remove,its_r2timer,its_objr2_removeall,its_r2journal_removeall,its_r2quitmess
+its_objr2_removeall: folder its_del_objr2q1,its_del_objr2q2,its_del_objr2q3
+its_del_objr2q1: objective delete its_objr2q1
+its_del_objr2q2: objective delete its_objr2q2
+its_del_objr2q3: objective delete its_objr2q3
+its_r2journal_removeall: folder its_jr2q1_del,its_jr2q2_del,its_jr2q3_del
+its_r2quitmess: 'message &3Vous abandonnez votre contrat de rang 2.'
+#
+#
+##Anton
+its_r2q1: folder its_mess15,its_jr2q1,its_objr2q1,its_r2inprogress
+its_mess15: 'message &3Cible à abattre - Anton'
+its_objr2q1: objective start its_objr2q1
+#
+its_objr2q1_complete: folder its_r2done,its_mess16,its_jr2q1_del,its_jr2done
+its_mess16: 'message &3Vous avez accompli le contrat de cible - Anton.'
+#
+#
+##Kara
+its_r2q2: folder its_mess17,its_jr2q2,its_objr2q2,its_r2inprogress
+its_mess17: 'message &3Cible à abattre - Kara'
+its_objr2q2: objective start its_objr2q2
+#
+its_objr2q2_complete: folder its_r2done,its_mess18,its_jr2q2_del,its_jr2done
+its_mess18: 'message &3Vous avez accompli le contrat de cible - Kara.'
+#
+#
+##Erek
+its_r2q3: folder its_mess19,its_jr2q3,its_objr2q3,its_r2inprogress
+its_mess19: 'message &3Cible à abattre - Erek'
+its_objr2q3: objective start its_objr2q3
+#
+its_objr2q3_complete: folder its_r2done,its_mess20,its_jr2q3_del,its_jr2done
+its_mess20: 'message &3Vous avez accompli le contrat de cible - Erek.'
 #
 #
 #
