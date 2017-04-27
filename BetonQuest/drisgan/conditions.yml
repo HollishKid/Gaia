@@ -178,6 +178,13 @@ hol_redblock: and hol_redblock1,hol_insalleb3
 hol_redblock1: testforblock -7435;51;3274;Gaia REDSTONE_BLOCK
 hol_insalleb3: region hol_salleb3
 #
+hol_salleb1_occupied: party 14000 hol_salleb1_exe count:1
+hol_salleb1_exe: region hol_erek_salleb1
 #
+hol_salleb2_occupied: party 14000 hol_salleb2_exe count:1
+hol_salleb2_exe: region hol_salleb2
+#
+hol_salleb3_occupied: party 14000 hol_salleb3_exe count:1
+hol_salleb3_exe: region hol_salleb3
 #
 #

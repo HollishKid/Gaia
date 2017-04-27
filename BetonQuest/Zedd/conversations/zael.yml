@@ -20,16 +20,9 @@ NPC_options:
   zae_q1start:
     text: 'Bien. Tu vas prendre cet &2Hypercapaciteur bidulotron&a&o, il te permettra de mesurer les composantes arcaniques aux endroits sensibles.'
     events: zae_q1startfold,zae_givehyper,zae_inconvers
-  hypercap_regive:
-    text: 'Ne le perd pas cette fois, ces appareils ne sont pas donnés !'
-    events: zae_takehyper,zae_q1retry
   zae_q1reward:
     text: 'Bien, voyons voir ce que ça donne...'
-    conditions: 'hypercap_inbag'
     events: zae_q1reward
-  zae_nohypercap:
-    text: 'Il me faut l''&2Hypercapaciteur&a&o pour en lire les relevés !'
-    conditions: '!hypercap_inbag'
 #
 ### 2eme étape
 #
@@ -43,17 +36,10 @@ NPC_options:
   n3:
     text: 'Alors tu as trouvé la faille ?'
     conditions: 'zae_q2start,!zae_inconvers'
-    pointers: check2,hyperreg_lost
-  hyperreg_regive:
-    text: 'Ne le perd pas cette fois, ces appareils ne sont pas donnés !'
-    events: zae_takehyperreg,zae_q2retry
+    pointers: check2
   repq2:
     text: 'Bien joué &2%player%&a&o! Je vais regarder les données enregistrées par l''&2Hypercapaciteur&a&o pour savoir à quoi nous avons à faire...'
-    conditions: 'hyperreg_inbag'
     events: zae_q2reward
-  nohyperreg:
-    text: 'Il me faut l''&2Hypercapaciteur&a&o pour en lire les relevés !'
-    conditions: '!hyperreg_inbag'
 #
 ### 3ème étape
 #
@@ -120,15 +106,7 @@ player_options:
   check1:
     text: 'J''ai effectué les relevés.'
     conditions: 'zae_loc1,zae_loc2,zae_loc3'
-    pointers: zae_nohypercap,zae_q1reward
-  hypercap_lost:
-    text: 'J''ai perdu mon Hypercapaciteur Bidulotron ou il ne marche plus !'
-    conditions: 'zae_q1start'
-# Commenting this out to patch peoples objectives getting lost (?)
-#    this allows them to manually restart them.
-#    1 item is removed extra in hypercap_regive
-#    conditions: '!hypercap_inbag'
-    pointers: hypercap_regive
+    pointers: zae_q1reward
   p1:
     text: 'Pas de problème.'
     pointers: prise_q2
@@ -137,14 +115,7 @@ player_options:
   check2:
     text: 'Je l''ai trouvé !'
     conditions: 'zae_faille'
-    pointers: repq2,nohyperreg
-  hyperreg_lost:
-    text: 'J''ai perdu mon Hypercapaciteur Bidulotron ou il ne marche plus !'
-# Commenting this out to patch peoples objectives getting lost (?)
-#    this allows them to manually restart them.
-#    1 item is removed extra in hyperreg_give
-#    conditions: '!hyperreg_inbag'
-    pointers: hyperreg_regive
+    pointers: repq2
   p3:
     text: 'Oui.'
     pointers: zae_q3start

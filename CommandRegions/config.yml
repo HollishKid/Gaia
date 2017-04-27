@@ -186,6 +186,36 @@ regions:
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
+    'hol_salleb12':
+        enterConsoleCommands:
+        - 'bq event %player% drisgan.hol_enterb1check'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_salleb22':
+        enterConsoleCommands:
+        - 'bq event %player% drisgan.hol_enterb2check'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
+    'hol_salleb32':
+        enterConsoleCommands:
+        - 'bq event %player% drisgan.hol_enterb3check'
+        enterPlayerCommands: ''
+        sendJoinMessage: false
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
     'hol_erek_salleb1':
         enterConsoleCommands:
         - 'bq event %player% drisgan.hol_checkpopsalleB1'
