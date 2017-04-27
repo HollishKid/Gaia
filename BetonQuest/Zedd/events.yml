@@ -865,7 +865,7 @@ its_menu: folder its_menu2 delay:1
 its_menu2: 'command cc open itsuki %player%'
 #
 its_r1quit_check: if its_r1inprogress its_r1quit_confirm else its_quitdenymess
-its_r2quit_check: if hol_access its_r2qui_check2 else its_menudeny
+its_r2quit_check: if drisgan.hol_access its_r2qui_check2 else its_menudeny
 its_r2qui_check2: if its_r2inprogress its_r2quit_confirm else its_quitdenymess
 its_r1quit_confirm: folder its_r1quit_confirm2 delay:1
 its_r1quit_confirm2: 'command cc open itsuki_quitconfirm1 %player%'
@@ -999,7 +999,7 @@ its_r2timerdeny: 'message &2Itsuki:&a&o Vous devez attendre avant d''accomplir u
 its_checkstartr22: if !its_r2inprogress its_rang2go else its_r2inprogressdeny
 its_r2inprogressdeny: 'message &2Itsuki:&a&o Finissez d''abord le contrat que je vous ai fournit!'
 #
-its_checkclaimr2: if hol_access its_checkclaimr22 else its_menudeny
+its_checkclaimr2: if drisgan.hol_access its_checkclaimr22 else its_menudeny
 its_checkclaimr22: if its_r2done its_r2reward else its_r2rewarddeny
 its_r2rewarddeny: 'message &2Itsuki:&a&o Vous n''avez pas de récompense à retirer.'
 its_r2reward: folder its_r2money,its_r2mess,its_r2delay,its_r2timer,its_r2doneremove,its_jr2done_del,its_r2inprogress_remove delay:1
