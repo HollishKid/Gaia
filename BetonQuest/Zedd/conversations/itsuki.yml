@@ -46,9 +46,9 @@ player_options:
     text: 'Je ne fais que passer, merci.'
   its_fix1:
     text: 'Si vous rencontrez un problème avec ce personnage, cliquez ici.'
-    conditions: '!its_r1done,!its_r1timer,its_r1inprogress'
+    conditions: '!its_r1done,!its_r1timer,its_r1inprogress,its_noquest1'
     events: its_r1inprogress_remove
   its_fix2:
     text: 'Si vous rencontrez un problème avec ce personnage, cliquez ici.'
-    conditions: '!its_r2done,!its_r2timer,its_r2inprogress'
+    conditions: '!its_r2done,!its_r2timer,its_r2inprogress,its_noquest2'
     events: its_r2inprogress_remove
