@@ -42,7 +42,6 @@ SingleTargetFire:
 Darkness:
   Skills:
   - potion{type=SLOW;lvl=127;duration=40} @Self
-  - summon{mob=MarkerStand;amount=1;noise=0} @target
   - effect:smokeswirl{duration=60;interval=1} @Self
   - effect:particleline{particle=reddust;color=#000000;amount=10;ys=1.5} @target
   - damage{amount=3} @target
