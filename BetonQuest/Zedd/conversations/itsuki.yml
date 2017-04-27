@@ -17,7 +17,7 @@ NPC_options:
   n2:
     text: 'Bonjour %player%. Que puis-je faire pour toi cette fois?'
     conditions: '!its_inconvers,its_rang1'
-    pointer: p1,p2
+    pointer: p1,p2,its_fix1,its_fix2
   menu:
     text: 'Voici les contrats disponibles.'
     events: its_menu
@@ -44,3 +44,11 @@ player_options:
     pointer: menu
   p2:
     text: 'Je ne fais que passer, merci.'
+  its_fix1:
+    text: 'Si vous rencontrez un problème avec ce personnage, cliquez ici.'
+    conditions: '!its_r1done,!its_r1timer,its_r1inprogress'
+    events: its_r1inprogress_remove
+  its_fix2:
+    text: 'Si vous rencontrez un problème avec ce personnage, cliquez ici.'
+    conditions: '!its_r2done,!its_r2timer,its_r2inprogress'
+    events: its_r2inprogress_remove
