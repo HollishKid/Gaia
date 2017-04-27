@@ -490,31 +490,37 @@ on vote:
 #
 #
 On death of player:
-	if victim meets betonquest condition "player":
-		if attacker is a player:
-			Wait 7 ticks
-			set {_death_money.%player%} to victim's money
-			set {_01} to 0.1
-			set {_death_money_result.%player%} to {_death_money.%player%} * {_01}
-			Wait 7 ticks
-			give the victim's skull to the attacker
-			execute console command "eco take %victim% %{_death_money_result.%player%}%"
-			execute console command "eco give %attacker% %{_death_money_result.%player%}%"
-			send "&aVous volez &f¤&2%{_death_money_result.%victim%}% &ade &2%victim% &aen l'assasinant." to attacker
-			send "&cVous perdez &f¤&2%{_death_money_result.%victim%}% &crécupérés par &2%attacker%&c." to victim
-			execute console command "title %victim% times 60 100 60"
-			execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
-			execute console command "title %victim% subtitle {""text"":""-%{_death_money_result.%victim%}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
-		else:
-			Wait 7 ticks
-			set {_death_money.%player%} to victim's money
-			set {_01} to 0.1
-			set {_death_money_result.%player%} to {_death_money.%player%} * {_01}
-			execute console command "eco take %victim% %{_death_money_result.%player%}%"
-			send "&cVous perdez &f¤&2%{_death_money_result.%victim%}% &cen mourrant." to victim
-			execute console command "title %victim% times 60 100 60"
-			execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
-			execute console command "title %victim% subtitle {""text"":""-%{_death_money_result.%victim%}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
+    if player meets betonquest condition "colisee.arena_isin":
+		wait 1 tick
+    else:
+        if victim meets betonquest condition "player":
+            if attacker is a player:
+                Wait 7 ticks
+                set {_death_money.%player%} to victim's money
+                set {_01} to 0.1
+                set {_death_money_result.%player%} to {_death_money.%player%} * {_01}
+                Wait 7 ticks
+                give the victim's skull to the attacker
+                execute console command "eco take %victim% %{_death_money_result.%player%}%"
+                execute console command "eco give %attacker% %{_death_money_result.%player%}%"
+                send "&aVous volez &f¤&2%{_death_money_result.%victim%}% &ade &2%victim% &aen l'assasinant." to attacker
+                send "&cVous perdez &f¤&2%{_death_money_result.%victim%}% &crécupérés par &2%attacker%&c." to victim
+                execute console command "title %victim% times 60 100 60"
+                execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
+                execute console command "title %victim% subtitle {""text"":""-%{_death_money_result.%victim%}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
+                set {_tempname} to attacker's name
+                if {_tempname} meets betonquest condition "colisee.boo_p1":
+                    execute console command "bq event %{_tempname}% colisee.eastern_kill"
+            else:
+                Wait 7 ticks
+                set {_death_money.%player%} to victim's money
+                set {_01} to 0.1
+                set {_death_money_result.%player%} to {_death_money.%player%} * {_01}
+                execute console command "eco take %victim% %{_death_money_result.%player%}%"
+                send "&cVous perdez &f¤&2%{_death_money_result.%victim%}% &cen mourrant." to victim
+                execute console command "title %victim% times 60 100 60"
+                execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
+                execute console command "title %victim% subtitle {""text"":""-%{_death_money_result.%victim%}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
 
 #
 # Disables rain & thunder in all worlds
