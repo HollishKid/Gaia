@@ -537,7 +537,7 @@ int_fold2: folder int_mess3,int_fold3 delay:7
 int_mess3: 'message &2Intendant : &a&oAvant toute chose, allez trouver le &2Gestionnaire &a&oqui se trouve en sortant de cette grande porte à votre droite.'
 int_fold3: folder int_mess4,int_fold4 delay:7
 int_mess4: 'message &2Intendant : &a&oIl vous expliquera comment vous devrez procéder pour vous procurer une première résidence dans la ville.'
-int_fold4: folder ami_first_remove,int_conversdone,obj_salaire_timer,j_entry_gestionnaire delay:1
+int_fold4: folder ami_first_remove,int_conversdone,j_entry_gestionnaire delay:1
 int_inconvers: tag add int_inconvers
 int_conversdone: tag del int_inconvers
 #
