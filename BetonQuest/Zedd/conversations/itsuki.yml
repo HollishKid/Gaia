@@ -17,10 +17,12 @@ NPC_options:
   n2:
     text: 'Bonjour %player%. Que puis-je faire pour toi cette fois?'
     conditions: '!its_inconvers,its_rang1'
-    pointer: p1,p2,its_fix1,its_fix2
+    pointer: p1,p2,p3,its_fix1,its_fix2
   menu:
     text: 'Voici les contrats disponibles.'
     events: its_menu
+  next_rank:
+    text: 'Tu pourras effectuer des quêtes de rang 2 après avoir prouvé ta valeur au maitre Makarov. Quant aux autres rangs, ils sont bien trop dangereux pour quelqu''un comme toi!'
 #
 ##########################
 #                        #
@@ -40,9 +42,12 @@ player_options:
   au_revoir:
     text: 'Au revoir'
   p1:
-    text: 'Je cherche une mission de guilde.'
+    text: 'Menu des missions de guilde.'
     pointer: menu
   p2:
+    text: 'Dites m''en plus sur les rangs suivants.'
+    pointer: next_rank
+  p3:
     text: 'Je ne fais que passer, merci.'
   its_fix1:
     text: 'Si vous rencontrez un problème avec ce personnage, cliquez ici.'
