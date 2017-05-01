@@ -526,7 +526,7 @@ On death of player:
 # Disables rain & thunder in all worlds
 #			
 on weather change to rain or thunder:
-	wait 1 minute
+	wait 5 minute
 	set weather to sunny
 
 #

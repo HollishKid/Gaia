@@ -145,8 +145,19 @@ its_r2done: tag its_r2done
 its_r2inprogress: tag its_r2inprogress
 its_r2timer: tag its_r2timer
 #
+its_noquest1: and !its_r1q1,!its_r1q2,!its_r1q3,!its_r1q4,!its_r1q5
 #
+its_r1q1: tag its_r1q1
+its_r1q2: tag its_r1q2
+its_r1q3: tag its_r1q3
+its_r1q4: tag its_r1q4
+its_r1q5: tag its_r1q5
 #
+its_noquest2: and !its_r2q1,!its_r2q2,!its_r2q3
+#
+its_r2q1: tag its_r2q1
+its_r2q2: tag its_r2q2
+its_r2q3: tag its_r2q3
 #
 #
 #

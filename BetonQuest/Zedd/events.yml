@@ -907,7 +907,7 @@ its_mess1: 'message &2Itsuki:&a&o On peut dire que c''est un service de nettoyag
 its_beginnerfold2: folder its_mess2,its_beginnerfold3 delay:7
 its_mess2: 'message &2Itsuki:&a&o Ne t''inquiètes pas, tu toucheras ta part également! Bien que les quêtes de rang 1 ne rapporte pas énormément, tu auras accès aux rangs suivants au fur et à mesure que tu feras tes preuves dans la guilde.'
 its_beginnerfold3: folder its_mess3,its_beginnerfold4 delay:8
-its_mess3: 'message &2Itsuki:&a&o En ce qui concerne les restrictions du rang 1, tu ne pourras effectuer qu''une quête toute les 2 heures. Tu n''es pas le seul aventurier à chercher du travail!'
+its_mess3: 'message &2Itsuki:&a&o En ce qui concerne les restrictions du rang 1, tu ne pourras effectuer qu''une quête toute les 12 heures pour le rang 1. Tu n''es pas le seul aventurier à chercher du travail!'
 its_beginnerfold4: folder its_mess4,its_rang1,its_conversdone,its_convers delay:8
 its_mess4: 'message &2Itsuki:&a&o Si tu as tout compris, il ne te reste plus qu''à te lancer !'
 its_rang1: tag add its_rang1
@@ -936,7 +936,7 @@ its_r1inprogress_remove: tag del its_r1inprogress
 its_r1timer: tag add its_r1timer
 its_r1timer_remove: tag del its_r1timer
 #
-its_r1quit: folder its_r1inprogress_remove,its_r1timer,its_objr1_removeall,its_r1journal_removeall,its_r1quitmess
+its_r1quit: folder its_r1inprogress_remove,its_r1timer,its_objr1_removeall,its_r1journal_removeall,its_r1quitmess,its_r1delay
 its_objr1_removeall: folder its_del_objr1q1,its_del_objr1q2,its_del_objr1q3,its_del_objr1q4,its_del_objr1q5
 its_del_objr1q1: objective delete its_objr1q1
 its_del_objr1q2: objective delete its_objr1q2
@@ -994,7 +994,9 @@ its_mess14: 'message &3Vous avez accompli le contrat de guilde - Élimination de
 #
 ### Rang 2
 #
-its_checkstartr2: if !its_r2timer its_checkstartr22 else its_r2timerdeny
+its_checkstartr2: if drisgan.hol_access its_checkstartr222 else its_r2denied
+its_r2denied: 'message &2Itsuki:&a&o Vous n''avez pas encore accès au rang 2. Vous devriez faire vos preuves d''abord...'
+its_checkstartr222: if !its_r2timer its_checkstartr22 else its_r2timerdeny
 its_r2timerdeny: 'message &2Itsuki:&a&o Vous devez attendre avant d''accomplir un autre contrat. (Temps restant:&d %objective.its_r2delay.left% &a&o)'
 its_checkstartr22: if !its_r2inprogress its_rang2go else its_r2inprogressdeny
 its_r2inprogressdeny: 'message &2Itsuki:&a&o Finissez d''abord le contrat que je vous ai fournit!'
@@ -1015,7 +1017,7 @@ its_r2inprogress_remove: tag del its_r2inprogress
 its_r2timer: tag add its_r2timer
 its_r2timer_remove: tag del its_r2timer
 #
-its_r2quit: folder its_r2inprogress_remove,its_r2timer,its_objr2_removeall,its_r2journal_removeall,its_r2quitmess
+its_r2quit: folder its_r2inprogress_remove,its_r2timer,its_objr2_removeall,its_r2journal_removeall,its_r2quitmess,its_r2delay
 its_objr2_removeall: folder its_del_objr2q1,its_del_objr2q2,its_del_objr2q3
 its_del_objr2q1: objective delete its_objr2q1
 its_del_objr2q2: objective delete its_objr2q2
