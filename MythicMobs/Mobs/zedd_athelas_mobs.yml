@@ -411,7 +411,7 @@ erek_p1:
     PreventOtherDrops: true
 erek_renfort:
   Type: PIG_ZOMBIE
-  Health: 30
+  Health: 35
   Damage: 4
   Disguise:
     Type: player
@@ -483,7 +483,7 @@ erek:
     Color: RED
     Style: SOLID
   Health: 750
-  Damage: 4
+  Damage: 5
   Drops:
 #  - bl_swords
   - bl_drops
