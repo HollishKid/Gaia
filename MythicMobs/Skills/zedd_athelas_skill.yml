@@ -31,10 +31,14 @@ Tempest-Blast-Hit:
   - damage{a=2}
   - throw{velocitiy=35;velocityY=15}
 acolyte_slow:
+  TargetConditions:
+  - lineofsight true
   Skills:
   - damage{a=2}
   - potion{type=SLOW;duration=50;lvl=3}
 SingleTargetFire:
+  TargetConditions:
+  - lineofsight true
   Skills:
   - effect:particles{p=flame;hs=1;vs=1;a=50;s=0.01;} @target  
   - damage{a=6;ignorearmor=true;}
