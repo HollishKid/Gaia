@@ -263,14 +263,14 @@ sub "cagnotte_distribution":
 	wait 2 ticks
 	execute console command "addxp %parameter 1% %parameter 3% %{%parameter 3%_%parameter 1%}%"
 	wait 1 second
-	remove parameter 1 from {%parameter 1%_contributors::*}
+	remove parameter 1 from {%parameter 3%_contributors::*}
 	delete {tempo_xp_block_%parameter 1%}
 	delete {%parameter 3%_%parameter 1%}
 		
 command /thisisthecagnotteremoval <player>:
 	executable by: console
 	trigger:
-		remove player from {minage_contributors::*}
+		remove player from {other_contributors::*}
 		remove player from {excavation_contributors::*}
 		remove player from {bûcheronnage_contributors::*}
 		remove player from {herboristerie_contributors::*}
@@ -283,8 +283,3 @@ command /thisisthecagnotteremoval <player>:
 		remove player from {alchimie_contributors::*}
 		remove player from {épées_contributors::*}
 		remove player from {haches_contributors::*}
-		
-command /xptester:
-	trigger:
-		set {acrobatie_%player%} to 25
-		message "%{acrobatie_%player%}%"
