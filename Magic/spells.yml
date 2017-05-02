@@ -1,0 +1,1671 @@
+#
+# Modify this file to change the available spells.
+# New spells can be added, existing spells modified or removed (disabled)
+#
+
+#
+# This is the Spell configuration file for the Magic plugin.
+#
+# Here you may alter default spell behavior, or add and remove spells.
+#
+# See https://github.com/elBukkit/MagicPlugin/blob/master/SPELLS.md for more information.
+#
+# To see the default spells and configurations, look in defaults/spells.defaults.yml
+# 
+# The name, description, and usage of a spell should be defined in messages.yml as
+#  messages.spells.<spellkey>.name
+#  messages.spells.<spellkey>.description
+#  messages.spells.<spellkey>.usage
+#  messages.spells.<spellkey>.cast
+#  ... etc.
+#
+# General format:
+#
+# <spellkey>:
+#       icon:  <material name>
+#       category: <anything>
+#       class: <Must be a class from the spells package.>
+#       costs:
+#           xp: <xp/mana amount>
+#           <material_name>: <reagent amount>#      
+#       parameters:
+#           <specific spell parameters- TODO: list common ones>
+#
+#
+#############################################################################################
+#
+#
+#        "Sorts Standards"
+#
+#
+#############################################################################################
+
+# Missile
+upgrades:
+    icon: diamond_axe:187
+    icon_url: http://textures.minecraft.net/texture/ce6ed0a5f7e23bc3d34d73baa0b9c3f838e85014d2ff290801dc7486dd4da6
+    category: npc
+    hidden: true
+    quick_cast: true
+    parameters:
+      quiet: true
+    actions:
+        cast:
+        -  class: SpellProgress
+
+upgradeshop:
+    icon: iron_hoe
+    category: npc
+    hidden: true
+    actions:
+        cast:
+        -  class: SpellShop
+    parameters:
+        quiet: true
+        path_end: airbender
+        auto_upgrade: true
+        use_sp: true
+        confirm_filler: stained_glass:2
+        
+tweakshop:
+    icon: nether_star
+    category: npc
+    hidden: true
+    actions:
+        cast:
+        -  class: ItemShop
+    parameters:
+        quiet: true
+        confirm: false
+        require_wand: true
+        items:
+          - gold_nugget
+          - wand|inventorymode
+          - wand|chestmode
+          - wand|cyclemode
+          - none
+          - none
+          - wand|quickcast_enable
+          - wand|quickcast_disable
+          - wand|quickcast_normal
+          - wand|quickcast_manual
+          - wand|mode_drop
+          - wand|mode_rightclick
+          - wand|mode_sword
+          - wand|mode_swap
+          - none
+          - wand|organizer
+          - wand|alphabetizer
+          - none
+          - none
+          - wand|loud
+          - wand|quiet
+          - wand|silent
+
+        
+colorshop:
+    icon: ink_sack
+    category: npc
+    hidden: true
+    actions:
+        cast:
+        -  class: ItemShop
+    parameters:
+        quiet: true
+        confirm_filler: stained_glass:9
+        confirm: true
+        require_wand: true
+        items:
+        - item: wand|redeffects
+          cost: 10
+        - item: wand|greeneffects
+          cost: 10
+        - item: wand|blueeffects
+          cost: 10
+        - item: wand|lightblueeffects
+          cost: 10
+        - item: wand|aquaeffects
+          cost: 10
+        - item: wand|whiteeffects
+          cost: 10
+        - item: wand|blackeffects
+          cost: 10
+        - item: wand|purpleeffects
+          cost: 10
+        - item: wand|yelloweffects
+          cost: 10
+        - item: wand|orangeeffects
+          cost: 10
+        - item: wand|pinkeffects
+          cost: 10
+        - item: wand|magentaeffects
+          cost: 10
+        - item: wand|grayeffects
+          cost: 10
+        - item: wand|lightgrayeffects
+          cost: 10
+        - item: wand|browneffects
+          cost: 10
+        - item: wand|darkgreeneffects
+          cost: 10
+        - item: none
+        - item: wand|randomeffects
+          cost: 5
+
+missile:
+    icon_url: http://textures.minecraft.net/texture/2ba95570c7b712713632d4c0d2fc66906613d3850a596a0267c6d763fe741ac
+    upgrade_required_casts: 400
+    category: bases
+    worth: 150
+    earns_cooldown: 10000
+    actions:
+        cast:
+        - class: CustomProjectile
+          actions:
+          - class: Damage
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: magic.zap_crack
+           location: origin
+           color_override: color
+           effectlib:
+             class: ConeEffect
+             iterations: 10
+             particle: redstone
+             lengthGrow: 0.1
+             radiusGrow: 0.003
+             updateLocations: false
+             updateDirections: false
+        tick:
+        - particle: redstone
+          location: target
+        hit_block:
+        -  class: EffectSingle
+           location: target
+           particle: block_crack
+           particle_count: 50
+           particle_offset_x: 0.2
+           particle_offset_y: 1
+           particle_offset_z: 0.2
+        hit_entity:
+        -  class: EffectSingle
+           location: target
+           particle: block_crack
+           material: redstone_block
+           particle_count: 30
+           particle_offset_x: 0.2
+           particle_offset_y: 0.2
+           particle_offset_z: 0.2
+        hit:
+        -  class: EffectSingle
+           location: target
+           particle: fireworks_spark
+           particle_count: 20
+           particle_offset_x: 0.3
+           particle_offset_y: 0.5
+           particle_offset_z: 0.3
+           sound: magic.zap
+           sound_volume: .3
+           particle_data: 0.3
+        headshot:
+        -  class: EffectSingle
+           location: target
+           particle: fireworks_spark
+           particle_count: 15
+           particle_offset_y: 0.2
+           particle_offset_x: 0.2
+           particle_offset_z: 0.2
+           particle_data: 0.1
+           sound: magic.zap
+           sound_volume: .3
+        -  class: EffectSingle
+           sound: entity_slime_attack
+           sound_pitch: 0.8
+           location: target
+           effectlib:
+            class: AnimatedBallEffect
+            particles: 50
+            particlesPerIteration: 4
+            iterations: 10
+            particle: block_crack
+            particleCount: 20
+            material: redstone_block
+            size: 0.1
+            yOffset: 0
+    headshot_parameters:
+      player_damage: 4
+      entity_damage: 6
+    parameters:
+        allow_max_range: true
+        velocity: 200
+        range: 24
+        hitbox: true
+        target_type: Damageable
+        player_damage: 2
+        entity_damage: 4
+        target_breakables: 1
+        cooldown: 1000
+        reorient: false
+    costs:
+        mana: 15
+
+missile|2:
+    upgrade_required_casts: 600
+    earns_cooldown: 600000
+    headshot_parameters:
+      player_damage: 5
+      entity_damage: 8
+    parameters:
+        range: 32
+        player_damage: 3
+        entity_damage: 6
+        target_breakables: 2
+    costs:
+        mana: 20
+
+missile|3:
+    upgrade_required_casts: 800
+    earns_cooldown: 900000
+    headshot_parameters:
+      player_damage: 6
+      entity_damage: 10
+    parameters:
+        range: 48
+        player_damage: 4
+        entity_damage: 8
+        target_breakables: 3
+    costs:
+        mana: 50
+
+missile|4:
+    headshot_parameters:
+      player_damage: 7
+      entity_damage: 11
+    parameters:
+        range: 64
+        player_damage: 4
+        entity_damage: 10
+        target_breakables: 4
+    costs:
+        mana: 80
+
+# Flare
+
+flare:
+    icon_url: http://textures.minecraft.net/texture/aa7e54c1c7634bdf1118db91da9e12b6b4d17f7fb7b7d5b0d06d554feb737bf
+    category: bases
+    worth: 20
+    show_undoable: false
+    upgrade_required_casts: 500
+    actions:
+        cast:
+        -  class: Firework
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_firework_launch
+    parameters:
+        target_type: LivingEntity
+        allow_max_range: true
+        range: 16
+        ticks_flown: 2
+        expected_lifespan: 1
+        cooldown: 2000
+    costs:
+        mana: 10
+
+flare|2:
+  effects:
+    cast:
+    -  class: EffectRing
+       location: target
+       firework: star
+       radius: 8
+       target_offset: 0,4,0
+       size: 6
+#############################################################################################
+#
+#
+#        BENDING SPELLS
+#
+#
+#############################################################################################
+
+### FIREBENDING
+
+fireballi:
+    icon: fire_charge
+    upgrade_required_casts: 200
+    icon_url: http://textures.minecraft.net/texture/e511624fac75f03cf2f3a56d5fe4582d6e74fc9f5e1e1160af1941ee144928
+    category: firebending
+    pvp_restricted: true
+    worth: 150
+    actions:
+        cast:
+        -  class: Projectile
+    effects:
+        cast:
+        -  class: EffectSingle
+           effectlib:
+             class: ConeEffect
+             iterations: 15
+             particle: lava
+             lengthGrow: 0.4
+           sound: magic.burn
+           sound_volume: 1
+           sound_pitch: -.25
+        projectile:
+        -  class: EffectSingle
+           location: origin
+           effectlib:
+             class: SmokeEffect
+             iterations: 4
+             period: 5
+             particle: lava
+        hit:
+        -  class: EffectSingle
+           location: target
+           color: FE642E
+           firework: ball
+    parameters:
+        projectile: LargeFireball
+        fire: false
+        size: 1
+        undo: 4000
+        cooldown: 10000
+        start: 1
+        break_blocks: true
+        undo_speed: 1
+    costs:
+        mana: 40
+
+fireballi|2:
+    upgrade_required_casts: 300
+    parameters:
+        size: 1
+        spread: 4
+
+fireballi|3:
+    upgrade_required_casts: 400
+    parameters:
+        spread: 0
+        speed: 0.8
+
+fireballi|4:
+    parameters:
+        fire: true
+
+firei:
+    icon: fire_charge
+    icon_url: http://textures.minecraft.net/texture/7dbb7f75e74ad4218d2af7191752b5952144436ce8aa2bb6fb27168e6f28af
+    category: firebending
+    pvp_restricted: true
+    worth: 200
+    upgrade_required_casts: 400
+    actions:
+        cast:
+        - class: CustomProjectile
+          actions:
+          - class: Disc
+            actions:
+            - class: Cover
+              actions:
+              - class: Burn
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: magic.burn
+           sound_volume: 1
+           location: both
+        tick:
+        -  class: EffectSingle
+           location: target
+           particle: lava
+           particle_count: 2
+           particle_offset_x: 0.1
+           particle_offset_y: 0.1
+           particle_offset_z: 0.1
+        hit:
+        -  class: EffectSingle
+           location: target
+           color: FE642E
+           firework: ball
+    parameters:
+        velocity: 80
+        target_type: LivingEntity
+        allow_max_range: true
+        range: 48
+        hitbox: true
+        fov: 0.03
+        radius: 0
+        vertical_range: 4
+        undo: 1000
+        cooldown: 3000
+        target_breakables: 0
+        destructible: burnable
+    costs:
+        mana: 35
+
+firei|2:
+    upgrade_required_casts: 500
+    parameters:
+        radius: 1
+        cooldown: 4000
+        undo: 1500
+        target_breakables: 1
+    costs:
+        mana: 50
+
+firei|3:
+    upgrade_required_casts: 500
+    parameters:
+        radius: 1
+        undo: 5000
+        target_breakables: 1
+    costs:
+        mana: 60
+
+firei|3:
+    parameters:
+        radius: 2
+        cooldown: 4000
+        undo: 5500
+        target_breakables: 2
+    costs:
+        mana: 70
+
+lightningi:
+    icon: firework_charge
+    icon_url: http://textures.minecraft.net/texture/c0d34b6c68eca9dae0f9dabeadeb5f72536fa20ab4ecf669be895baf1c17
+    upgrade_required_casts: 500
+    category: firebending
+    pvp_restricted: true
+    worth: 300
+    actions:
+        cast:
+        -  class: Spread
+           actions:
+           -  class: Lightning
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_firework_large_blast
+        -  class: EffectTrail
+           particle: smoke_normal
+           particle_count: 2
+        -  class: EffectSingle
+           location: target
+           effectlib:
+             class: HelixEffect
+             particle: smoke_normal
+             iterations: 3
+    parameters:
+        target_type: LivingEntity
+        allow_max_range: true
+        range: 32
+        radius: 8
+        cooldown: 10000
+    costs:
+        mana: 80
+
+lightningi|2:
+    upgrade_required_casts: 500
+    parameters:
+        radius: 6
+
+lightningi|3:
+    actions:
+        cast:
+         - class: Repeat
+           actions:
+           - class: Spread
+             actions:
+             - class: Lightning
+    parameters:
+        repeat: 2
+
+firestream:
+  inherit: flamethrower
+  category: firebending
+
+combustion:
+  inherit: boom
+  category: firebending
+  upgrade_required_casts: 150
+
+combustion|2:
+  inherit: boom|2
+  category: firebending
+  upgrade_required_path: firebending
+
+lavai:
+    icon: fire_charge
+    icon_url: http://textures.minecraft.net/texture/a9e073da36aaf2c844da428cd4a19dfde32c8cdc2404eed4a135f6095b17c
+    category: firebending
+    pvp_restricted: true
+    worth: 250
+    actions:
+      cast:
+      - class: DisablePhysics
+      - class: Line
+        actions:
+        - class: ModifyBlock
+        - class: Delay
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: block_lava_ambient
+        iterate:
+        -  class: EffectSingle
+           particle: lava
+    parameters:
+        target_type: LivingEntity
+        transparent: transparent_to_construction
+        allow_max_range: true
+        range: 8
+        size: 8
+        brush: stationary_lava
+        increment_data: true
+        undo: 200
+        cooldown: 5000
+        destructible: destructible_replace
+        delay: 1
+    costs:
+        mana: 65
+
+### AIRBENDING
+
+airblast:
+  inherit: push
+  category: airbending
+  upgrade_required_casts: 400
+  actions:
+      alternate_sneak:
+      - class: ChangeContext
+        target_caster: true
+        actions:
+        - class: FallProtection
+        - class: VelocityAction
+          y_offset: 1
+        - class: Repeat
+          actions:
+          - class: Delay
+          - class: VelocityAction
+  parameters:
+      living_entity_speed: 0.7
+      range: 16
+      target_count: 8
+      repeat: 4
+      cooldown: 500
+      duration: 10000
+
+airbomb:
+    icon_url: http://textures.minecraft.net/texture/44a760e06345bd9edd2475d6469dfb952278ca3ec7634aa334e1d7bfcc8644f
+    icon: tnt
+    category: airbending
+    worth: 50
+    actions:
+        cast:
+        - class: AreaOfEffect
+          radius: 8
+          actions:
+          - class: Velocity
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: fizz
+           sound_volume: 1
+           sound_pitch: -0.1
+           location: origin
+           effectlib:
+             class: HelixEffect
+             particle: spell
+             iterations: 1
+    parameters:
+        target: self
+        target_type: Entity
+        target_count: 8
+        item_speed: 0.1
+        living_entity_speed: 1
+        push: 1
+        cooldown: 5000
+        y_offset: 1
+    costs:
+        mana: 50
+
+suction:
+  inherit: pull
+  category: airbending
+
+tornade:
+    icon: diamond_axe:192
+    upgrade_required_casts: 500
+    icon_url: http://textures.minecraft.net/texture/2362826553aaf78fd8b511fdedba941738ddd21c0f889e6bf2697d5a4f74f27
+    category: airbending
+    pvp_restricted: true
+    actions:
+        cast:
+         - class: CustomProjectile
+           tick:
+           - class: ChangeContext
+             actions:
+             - class: Sphere
+               ignore_result: true
+               actions:
+               - class: Volume
+                 actions:
+                 - class: ModifyBlock
+                   direction: 0,1,0
+                   speed: 0.2
+           - class: AreaOfEffect
+             actions:
+              - class: Velocity
+                ignore_result: true
+              - class: Damage
+    effects:
+        projectile:
+        -  class: EffectSingle
+           sound: block_fire_extinguish
+           sound_volume: 0.2
+           sound_pitch: 0.3
+           effectlib:
+             class: TornadoEffect
+             duration: $lifetime
+             tornadoHeight: 8
+             distance: 0.8
+             cloudSize: 1
+             tornadoParticle: spell
+             offset: 0,-2,0
+        cast:
+        -  class: EffectSingle
+           sound: block_fire_extinguish
+           sound_volume: 1
+           sound_pitch: 0.2
+           location: origin
+    parameters:
+        target: none
+        ignore_targeting: true
+        transparent: air,destructible
+        target_type: Entity
+        radius: 2
+        target_count: 16
+        item_speed: 0.1
+        living_entity_speed: 0.2
+        push: -1
+        y_offset: 1
+        velocity: 5
+        cooldown: 10000
+        lifetime: 3000
+        interval: 4
+        damage: 1
+        brush: erase
+        falling: true
+        falling_probability: 0.8
+        undo: 15000
+        x_size: 0
+        z_size: 0
+        y_size: 2
+        destructible_override: true
+    costs:
+        mana: 150
+
+tornade|2:
+    parameters:
+        destructible: destructible,destructible2,destructible3
+        transparent: air,destructible,destructible2,destructible3
+        target_offset: 0,5,0
+        x_size: 1
+        z_size: 1
+        y_size: 4
+        radius: 4
+
+poussee:
+    icon: string
+    icon_url: http://textures.minecraft.net/texture/7cc2fb583d1762a16a50fa5ac37bc09b46def63e68205116d650391f9233ed
+    category: airbending
+    worth: 400
+    upgrade_required_casts: 250
+    actions:
+        cast:
+        - class: Velocity
+        - class: FallProtection
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_enderdragon_flap
+           sound_volume: 1
+           effectlib:
+             class: TraceEffect
+             iterations: 30
+             particle: spell
+        land:
+        -  sound: block_stone_step
+           sound_pitch: 0.7
+        -  class: EffectRing
+           particle: block_crack
+           use_wand_location: false
+           use_eye_location: false
+           period: 4
+           particle_count: 80
+           radius: 4
+           particle_offset_x: 0.9
+           particle_offset_z: 0.9
+           particle_offset_y: 0.1
+    parameters:
+        duration: 20000
+        target: self
+        min_speed: 1.5
+        max_speed: 2.0
+        bypass_confusion: true
+        cooldown: 5000
+    costs:
+        mana: 60
+
+poussee|2:
+    upgrade_required_casts: 500
+    parameters:
+        min_speed: 2
+        max_speed: 3
+        cooldown: 2000
+    costs:
+        mana: 75
+
+poussee|3:
+    upgrade_required_casts: 1000
+    parameters:
+        min_speed: 3
+        max_speed: 4
+        cooldown: 1000
+    costs:
+        mana: 90
+
+poussee|4:
+    parameters:
+        min_speed: 3
+        max_speed: 5
+        cooldown: 0
+    costs:
+        mana: 90
+
+airshield:
+    icon_url: http://textures.minecraft.net/texture/3dbb78853b526f9b712b4e431fb332eae0e6cd3dea9a610e9ecf54c31f7c6d
+    icon: iron_helmet
+    category: airbending
+    worth: 200
+    actions:
+        cast:
+        -  class: Plane
+           actions:
+           -  class: ModifyBlock
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: magic.shield_boom
+           location: origin
+    parameters:
+        allow_max_range: true
+        range: 2
+        radius: 1
+        axis: z
+        brush: web
+        orient: true
+        transparent: transparent_to_construction
+        destructible: air
+        check_destructible: true
+        brushcolor: true
+        undo: 1000
+        cooldown: 3000
+        breakable: 3
+        reflect_chance: 0.75
+        bypass_confusion: true
+        bypass_backfire: true
+    costs:
+        mana: 40
+
+enhancedspeed:
+    icon_url: http://textures.minecraft.net/texture/15987e49e7ed16df536f4dbf685e7720b88b4de6deaf614d84ab9f9884725c
+    icon: red_rose:2
+    category: airbending
+    worth: 60
+    actions:
+        cast:
+        -  class: PotionEffect
+    effects:
+        cast:
+           - class: EffectSingle
+             sound: enderdragon_wings
+             location: origin
+             use_wand_location: false
+             effectlib:
+                 class: SphereEffect
+                 particle: redstone
+                 color: FFFFFF
+                 radius: 2.5
+    costs:
+        mana: 50
+    parameters:
+        target: self
+        duration: 10000
+        cooldown: 15000
+        effect_speed: 2
+        effect_jump: 5
+
+airscooter:
+    icon_url: http://textures.minecraft.net/texture/4a23ccd51565d2e246675c86aef11b5412662c15ecc2e9f3ef425adc91d1
+    icon: gold_boots
+    category: airbending
+    class: LevitateSpell
+    worth: 200
+    show_undoable: false
+    quick_cast: true
+    effects:
+        cast:
+           - class: EffectSingle
+             sound: enderdragon_wings
+             location: origin
+             use_wand_location: false
+             effectlib:
+                 class: SphereEffect
+                 particle: redstone
+                 radius: 1.0
+                 offset: 0,-1.5,0
+                 color: FFFFFF
+        deactivate:
+        -  class: EffectSingle
+           sound: enderdragon_wings
+           sound_pitch: 0.2
+    parameters:
+        thrust: 3
+        speed: 6
+        flight: false
+        mount_type: Horse
+        mount_variant: undead_horse
+        mount_invisible: true
+        mount_boost_ticks: 100
+        mount_health: 8
+        mount_boost: 0.5
+        slow_ticks: 1
+        steer_speed: 0.6
+        slow_steer_speed: 0.05
+        mount_boost_per_jump: 1
+        sound: magic.flying
+        effect_sound_interval: 120
+        effect_sound_volume: 15
+        max_height_above_ground: 2
+        y_boost: 0.5
+        power_mount_boost_ticks: 500
+        power_mount_health: 12
+        power_mount_boost: 1
+        power_slow_ticks: 19
+        power_steer_speed: 2
+        power_mount_boost_per_jump: 2
+    costs:
+        mana: 20
+    active_costs:
+        mana: 10
+
+breathofwind:
+    icon: ink_sack:1
+    icon_url: http://textures.minecraft.net/texture/44a760e06345bd9edd2475d6469dfb952278ca3ec7634aa334e1d7bfcc8644f
+    category: airbending
+    worth: 150
+    actions:
+        cast:
+        - class: CustomProjectile
+          actions:
+          - class: Damage
+          - class: Velocity
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: fizz
+           sound_volume: .3
+        tick:
+        - particle: spell
+          location: target
+          particle_count: 8
+          particle_offset_x: 0.8
+          particle_offset_y: 0.8
+          particle_offset_z: 0.8
+        hit:
+        -  class: EffectSingle
+           location: target
+           effectlib:
+             class: SphereEffect
+             particle: spell
+             iterations: 10
+             radius: 3
+        backfire:
+        -  class: EffectSingle
+           sound: magic.zap
+        -  class: EffectSingle
+           sound: magic.zap_crack
+           location: origin
+           entity_effect: hurt
+    parameters:
+        target: none
+        reorient: true
+        target_type: LivingEntity
+        player_damage: 2
+        entity_damage: 4
+        target_breakables: 1
+        bypass_backfire: false
+        cooldown: 1000
+        velocity: 40
+        interval: 250
+        hitbox_size: 3
+    costs:
+        mana: 40
+#
+#
+### WATERBENDING
+#
+#
+
+waterjet:
+  inherit: stream
+  category: waterbending
+  parameters:
+    player_damage: 4
+    entity_damage: 6
+    range: 6
+    speed: 1
+
+waterwhip:
+  category: waterbending
+  icon: ink_sack:6
+  icon_url: http://textures.minecraft.net/texture/b750768d23e447d95b662344f426cc96228a4047f7a8ced0f4861edbbeaced
+  worth: 150
+  actions:
+      cast:
+      - class: DisablePhysics
+      - class: Line
+        actions:
+        - class: ModifyBlock
+        - class: AreaOfEffect
+          actions:
+          - class: Damage
+          - class: Velocity
+        - class: Delay
+  effects:
+      cast:
+      - class: EffectSingle
+        sound: water
+  parameters:
+      target: none
+      reorient: true
+      target_type: LivingEntity
+      radius: 2
+      size: 8
+      brush: stationary_water
+      increment_data: true
+      undo: 800
+      player_damage: 1
+      entity_damage: 2
+      cooldown: 5000
+      delay: 250
+  costs:
+      mana: 50
+
+iceshield:
+    icon_url: http://textures.minecraft.net/texture/3dbb78853b526f9b712b4e431fb332eae0e6cd3dea9a610e9ecf54c31f7c6d
+    icon: iron_helmet
+    category: waterbending
+    worth: 200
+    actions:
+        cast:
+        -  class: Plane
+           actions:
+           -  class: ModifyBlock
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: magic.shield_boom
+           location: origin
+    parameters:
+        allow_max_range: true
+        range: 3
+        radius: 2
+        axis: z
+        brush: ice
+        orient: true
+        transparent: transparent_to_construction
+        destructible: air,fire,water,stationary_water
+        check_destructible: true
+        brushcolor: true
+        undo: 1500
+        cooldown: 3000
+        breakable: 3
+        bypass_confusion: true
+        bypass_backfire: true
+    costs:
+        mana: 40
+
+bulle:
+    icon: water_bucket
+    icon_url: http://textures.minecraft.net/texture/b750768d23e447d95b662344f426cc96228a4047f7a8ced0f4861edbbeaced
+    category: waterbending
+    worth: 100
+    upgrade_required_casts: 500
+    actions:
+        cast:
+        - class: CustomProjectile
+          actions:
+          - class: DisablePhysics
+          - class: Volume
+            actions:
+            - class: ModifyBlock
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: entity_generic_splash
+           location: both
+        tick:
+        -  location: target
+           particle: drip_water
+           particle_count: 4
+           particle_offset_x: 0.5
+           particle_offset_y: 0.5
+           particle_offset_z: 0.5
+        hit:
+        -  class: EffectSingle
+           location: target
+           effectlib:
+             class: SphereEffect
+             iterations: 10
+             period: .1
+             particle: drip_water
+             radius: 1.8
+             particles: 20
+    parameters:
+        velocity: 250
+        target_type: LivingEntity
+        allow_max_range: true
+        radius: 1
+        range: 25
+        cooldown: 2000
+        undo: 1000
+        duration: 3000
+        destructible: destructible_replace
+        brush: stationary_water
+        hitbox: true
+    costs:
+        mana: 10
+
+bulle|2:
+    parameters:
+        radius: 2
+        range: 40
+        undo: 2000
+
+sangbending:
+  inherit: force
+  category: waterbending
+
+guerison:
+    icon: potion
+    icon_url: http://textures.minecraft.net/texture/6b7da98ef45cf45185d21d61f5fa3d5966a3ee52273620a6e4dfd54cf99dbc
+    category: waterbending
+    upgrade_required_casts: 500
+    worth: 300
+    actions:
+        cast:
+        - class: Repeat
+          actions:
+          - class: Delay
+          - class: Heal
+    effects:
+        cast:
+        - class: EffectSingle
+          custom_sound: magic.rennervate
+          effectlib:
+            class: ConeEffect
+            iterations: 5
+            lengthGrow: .12
+            particle: heart
+        - class: EffectSingle
+          sound: entity_player_levelup
+          custom_sound: magic.rennervate
+          location: target
+          target_offset: 0,-2,0
+          effectlib:
+            class: WarpEffect
+            duration: $total_duration
+            period: 2
+            particle: heart
+            particles: 7
+            iterations: 40
+            radius: 1
+        cast_self:
+        - class: EffectSingle
+          sound: entity_player_levelup
+          custom_sound: magic.rennervate
+          location: target
+          target_offset: 0,-2,0
+          effectlib:
+            class: WarpEffect
+            duration: $total_duration
+            period: 2
+            particle: heart
+            particles: 7
+            iterations: 40
+            radius: 1
+        cast_finish:
+        -  class: EffectSingle
+           custom_sound: magic.shimmer
+           sound_pitch: 5
+           location: origin
+        -  location: origin
+           effectlib:
+             class: AnimatedBall
+             duration: 200
+             particle: heart
+             size: 3
+    parameters:
+        cancel_on_damage: 0.5
+        delay: 500
+        repeat: 10
+        total_duration: 5000
+        target_type: LivingEntity
+        target: any_entity
+        allow_max_range: false
+        range: 5
+        cooldown: 20000
+        bypass_pvp: true
+        bypass_friendly_fire: true
+        hitbox: true
+        amount: 1
+    costs:
+        mana: 50
+
+guerison|2:
+    upgrade_required_casts: 500
+    parameters:
+        range: 32
+        cooldown: 15000
+
+guerison|3:
+    parameters:
+        cooldown: 10000
+
+soin:
+    icon: splash_potion
+    icon_url: http://textures.minecraft.net/texture/1364e3f9597a295108d202d20c2f02539d5ad8377fef53ef622603a7f45b52f
+    upgrade_required_casts: 200
+    category: waterbending
+    worth: 175
+    actions:
+        cast:
+        -  class: PotionEffect
+    effects:
+        cast:
+        - class: EffectSingle
+          sound: magic.shimmer
+          location: target
+          particle_override: particleOrbital
+          effectlib:
+             class: AtomEffect
+             particleNucleus: heart
+             particleOrbital: crit
+             iterations: 5
+        -  class: EffectSingle
+           location: target
+           use_hit_location: false
+           effectlib:
+             class: LoveEffect
+             iterations: 5
+             period: 2
+    parameters:
+        bypass_mage_cooldown: true
+        target_type: LivingEntity
+        target: any_entity
+        allow_max_range: false
+        range: 5
+        bypass_confusion: true
+        cooldown: 20000
+        bypass_pvp: true
+        bypass_friendly_fire: true
+        remove_effects:
+        - confusion
+        - poison
+        - slow
+        - slow_digging
+    costs:
+        mana: 30
+
+soin|2:
+    upgrade_required_casts: 300
+    parameters:
+        remove_effects:
+        - confusion
+        - weakness
+        - poison
+        - slow
+        - slow_digging
+        - wither
+
+soin|3:
+    upgrade_required_casts: 300
+    actions:
+        cast:
+        -  class: PotionEffect
+        -  class: ApplyCooldown
+           clear: true
+           duration: 0
+
+soin|4:
+    actions:
+        cast:
+        -  class: PotionEffect
+        -  class: ApplyCooldown
+           clear: true
+           duration: 0
+        - class: Repeat
+          actions:
+          - class: Delay
+          - class: Feed
+    parameters:
+        feed: 1
+        cancel_on_damage: 0.5
+        delay: 500
+        repeat: 10
+
+
+breathofice:
+  inherit: frost
+  category: waterbending
+
+## EARTHBENDING
+
+compression:
+  inherit: blob
+  category: earthbending
+  parameters:
+     brush: copy
+     check_destructible: true
+     destructible: destructible
+     targetable: earth
+
+breche:
+    icon: dirt
+    icon_url: http://textures.minecraft.net/texture/672e0c305074a7acf671e7644291d7f745baecf05743395e28d1f04cbbb4
+    category: earthbending
+    worth: 400
+    upgrade_required_casts: 500
+    actions:
+        cast:
+        - class: Sphere
+          actions:
+          - class: ModifyBlock
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: block_fire_extinguish
+        -  class: EffectTrail
+           particle: smoke_normal
+    parameters:
+        allow_max_range: false
+        destructible: destructible_mining
+        range: 32
+        transparent: transparent_to_construction
+        undo: 10000
+        brush: air
+        radius: 1
+        type: sphere
+        cooldown: 15000
+        undo_speed: 0.2
+    costs:
+        mana: 50
+
+breche|2:
+    upgrade_required_casts: 500
+    parameters:
+        radius: 1.5
+
+breche|3:
+    upgrade_required_casts: 500
+    parameters:
+        radius: 2
+
+
+sandspout:
+  inherit: sandblast
+  category: earthbending
+
+earthsmash:
+  inherit: blast
+  category: earthbending
+
+durci:
+    icon: stone
+    icon_url: http://textures.minecraft.net/texture/25147d8c6addc07635b183ae1c4459f173bdfde239d949f56ce56d2728911e2
+    category: earthbending
+    worth: 150
+    upgrade_required_casts: 500
+    actions:
+        cast:
+        - class: Recurse
+          actions:
+          - class: ModifyBlock
+    effects:
+        cast:
+        -  class: EffectTrail
+           particle: block_crack
+           sound: magic.shimmer
+    parameters:
+        allow_max_range: false
+        range: 16
+        size: 2
+        destructible_override: true
+        destructible: destructible,hardenable
+        brush: smooth_brick
+        transparent: transparent_to_construction
+        undo: 4000
+        cooldown: 1000
+        bypass_backfire: true
+        select_self: false
+        replace: true
+    costs:
+        mana: 30
+
+durci|2:
+    parameters:
+        size: 3
+        undo: 6000
+        brush: obsidian
+
+earthquaki:
+    icon: dirt
+    icon_url: http://textures.minecraft.net/texture/64764ad7b991afd8886d847f439b3d1753bc2632a7dbc047a9a040aa1ff98
+    category: earthbending
+    worth: 450
+    actions:
+        cast:
+        - class: AreaOfEffect
+          actions:
+          - class: Velocity
+        - class: Delay
+          delay: 500
+        - class: Parallel
+          actions:
+          - class: Repeat
+            repeat: 5
+            actions:
+            - class: Delay
+              delay: 1000
+            - class: AreaOfEffect
+              actions:
+              - class: Damage
+              - class: Velocity
+                speed: 0.2
+          - class: Disc
+            ignore_result: true
+            actions:
+            - class: Skip
+              actions:
+              - class: Delay
+                delay: 500
+            - class: Cover
+              actions:
+              - class: ModifyBlock
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: magic.ignite
+           sound_volume: 1
+           location: origin
+           effectlib:
+             class: ConeEffect
+             iterations: 10
+             particle: spell_witch
+             lengthGrow: 0.4
+        -  class: EffectSingle
+           target_offset: 0,0.5,0
+           location: target
+           color: FFFF00
+           firework: burst
+        -  class: EffectSingle
+           location: target
+           target_offset: 0,0.5,0
+           effectlib:
+             class: HelixEffect
+             iterations: 1
+             radius: 4
+             particle: flame
+    parameters:
+        target: other
+        target_type: Damageable
+        allow_max_range: false
+        range: 16
+        speed: 0.5
+        item_speed: 0.2
+        entity_speed: 1.2
+        falling: true
+        brush: air
+        direction: 0,1,0
+        radius: 5
+        destructible: destructible_mining
+        undo: 10000
+        skip: 8
+        target_self: true
+        cooldown: 20000
+        undo_speed: 0.5
+        damage: 1
+    costs:
+        mana: 150
+
+collapsi:
+    icon: dirt
+    icon_url: http://textures.minecraft.net/texture/1789289cba5bdef5f92dee5165a99d063f8785db78bdc6b41e3c4b099c04ca4
+    category: earthbending
+    worth: 150
+    upgrade_required_casts: 500
+    actions:
+        cast:
+        -  class: Sphere
+           actions:
+           -  class: ModifyBlock
+    effects:
+        cast:
+        -  class: EffectSingle
+           sound: magic.ignite
+           sound_volume: 1
+           location: origin
+           effectlib:
+             class: ConeEffect
+             iterations: 10
+             particle: spell_witch
+             lengthGrow: 0.4
+        -  class: EffectSingle
+           target_offset: 0,0.5,0
+           location: target
+           color: FFFF00
+           firework: burst
+        -  class: EffectSingle
+           location: target
+           target_offset: 0,0.5,0
+           effectlib:
+             class: HelixEffect
+             iterations: 1
+             radius: 4
+             particle: flame
+        undo:
+        -  class: EffectSingle
+           sound: magic.shimmer
+           location: target
+           effectlib:
+               class: AtomEffect
+               particleNucleus: smoke_large
+               particleOrbital: redstone
+               iterations: 8
+    parameters:
+        allow_max_range: false
+        range: 16
+        brush: air
+        falling: true
+        radius: 2
+        transparent: transparent_to_construction
+        destructible_override: true
+        undo: 10000
+        cooldown: 8000
+        select_self: false
+        physics_blocks: true
+        undo_speed: 1
+    costs:
+        mana: 50
+
+collapsi|2:
+    parameters:
+       destructible: destructible,destructible2,destructible3
+       radius: 3
+
+tossi:
+    icon: dirt
+    icon_url: http://textures.minecraft.net/texture/44471f5f9792fd21dd1e652f2ac5f47e49eeebd4fb289f4174ec20dc7b57e6
+    category: earthbending
+    worth: 100
+    actions:
+        cast:
+        -  class: ThrowBlock
+    effects:
+        hit:
+        -  class: EffectSingle
+           particle: block_crack
+           location: origin
+    parameters:
+      speed_min: 1.2
+      speed_max: 2.2
+      consume: true
+      undo: 5000
+      brush: dirt      
+    costs:
+        mana: 20
+
+earthblock:
+    icon_url: http://textures.minecraft.net/texture/4a23ccd51565d2e246675c86aef11b5412662c15ecc2e9f3ef425adc91d1
+    icon: ink_sack:8
+    category: earthbending
+    worth: 150
+    pvp_restricted: true
+    actions:
+        cast:
+        - class: MoveBlock
+        - class: Delay
+        - class: ChangeContext
+          actions:
+          - class: Brush
+            sample: true
+            actions:
+            - class: ThrowBlock
+              actions:
+              - class: AreaOfEffect
+                actions:
+                - class: Velocity
+                - class: Damage
+          - class: ModifyBlock
+    effects:
+        cast:
+        -  class: EffectSingle
+           location: origin
+           sound: enderdragon_wings
+           sound_pitch: 2
+        -  class: EffectSingle
+           target_offset: 0.5,2.5,0.5
+           location: target
+           effectlib:
+             class: SphereEffect
+             iterations: 5
+             period: 2
+             particle: redstone
+             radius: 0.8
+             color: "A52A2A"
+        -  class: EffectSingle
+           location: target
+           effectlib:
+             class: ConeEffect
+             iterations: 8
+             particle: redstone
+             autoOrient: false
+             color: "A52A2A"
+        throw:
+        -  class: EffectSingle
+           location: target
+           effectlib:
+             class: ConeEffect
+             iterations: 8
+             particle: redstone
+             autoOrient: true
+             color: "FFA500"
+        no_target:
+        -  class: EffectSingle
+           location: origin
+           sound: enderdragon_wings
+           sound_pitch: 2
+    parameters:
+        brush: erase
+        allow_max_range: false
+        range: 8
+        damage: 4
+        radius: 3
+        destructible: earth
+        targetable: earth
+        undo: 15000
+        cooldown: 2000
+        offset: 0,2,0
+        target_offset: 0,2,0
+        target_breakables: 2
+        source_at_target: true
+        delay: 500
+        speed: 1.5
+        item_speed: 0.3
+        living_entity_speed: 0.8
+    costs:
+        mana: 40
+
+earthline:
+  category: earthbending
+  icon_url: http://textures.minecraft.net/texture/ce5eef24e2cf406bcd9d2b44f418ac72e26731b9a7e7402490e473af8145e0ba
+  icon: ink_sack:2
+  worth: 150
+  actions:
+      cast:
+      - class: Line
+        actions:
+        - class: ModifyBlock
+        - class: AreaOfEffect
+          actions:
+          - class: Damage
+        - class: Delay
+  effects:
+      cast:
+      - class: EffectSingle
+        sound: water
+  parameters:
+      target: none
+      reorient: true
+      target_type: LivingEntity
+      radius: 2
+      size: 8
+      brush: dirt
+      undo: 800
+      player_damage: 2
+      entity_damage: 4
+      cooldown: 8000
+      delay: 100
+  costs:
+      mana: 50
+
+### AVATAR
+
+airsphere:
+  inherit: levitate
+  category: avatar
+
+boon:
+    enabled: true
+    hidden: true
+
+boon|2:
+    enabled: true
+    hidden: true
