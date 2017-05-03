@@ -1,0 +1,51 @@
+#     _____ _       _           _  _____ _               _    _____ _                 
+#    / ____| |     | |         | |/ ____| |             | |  / ____| |                
+#   | |  __| | ___ | |__   __ _| | |    | |__   ___  ___| |_| (___ | |__   ___  _ __  
+#   | | |_ | |/ _ \| '_ \ / _` | | |    | '_ \ / _ \/ __| __|\___ \| '_ \ / _ \| '_ \ 
+#   | |__| | | (_) | |_) | (_| | | |____| | | |  __/\__ \ |_ ____) | | | | (_) | |_) |
+#    \_____|_|\___/|_.__/ \__,_|_|\_____|_| |_|\___||___/\__|_____/|_| |_|\___/| .__/ 
+#                                                                              | |    
+#                                                                              |_|  
+#
+#	In this file you can customize how many running auctions a player can have.
+#	The maximum auction limit can be different for every WorldGroup.  
+#	If you like, you can also define your own VIP_Groups, to privilege certain 
+#	permission holders with a bigger limit. 
+#
+#
+#
+# 	Here is an example of how this file could look like:
+#
+#WorldGroup:
+#  1:
+#    MaximumAuctionsPerPlayerInThisWorldGroup: 30
+#    VIP_Groups:
+#      vip1:
+#        Players_in_this_VIP_group_can_exceed_maximum_by: 20
+#      vip2:
+#        Players_in_this_VIP_group_can_exceed_maximum_by: 40
+#      vip3:
+#        Players_in_this_VIP_group_can_exceed_maximum_by: 60
+#  2:
+#    MaximumAuctionsPerPlayerInThisWorldGroup: 1000
+#    VIP_Groups:
+#      vip1:
+#        Players_in_this_VIP_group_can_exceed_maximum_by: 200
+#      vip2:
+#        Players_in_this_VIP_group_can_exceed_maximum_by: 400
+#      vip3:
+#        Players_in_this_VIP_group_can_exceed_maximum_by: 600
+#
+#
+#
+#   Players with the permission:  - GLOBALCHESTSHOP.VIP.EXCEED_AUCTION_LIMIT.vip1.1
+#	would be able to create 50 auctions (30 + 20) inside a world with the WorldGroup 1.
+#	The permission build:  GLOBALCHESTSHOP.VIP.EXCEED_AUCTION_LIMIT.<VIP_Group>.<WorldGroup>
+#
+# ___________________________________________________________________________________________________
+WorldGroup:
+  1:
+    MaximumAuctionsPerPlayerInThisWorldGroup: 60
+    VIP_Groups:
+      mySpecialVIPGroup:
+        Players_in_this_VIP_group_can_exceed_maximum_by: 40
