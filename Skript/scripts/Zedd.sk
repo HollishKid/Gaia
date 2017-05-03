@@ -5,24 +5,38 @@
 #
 #
 On pick up:
-	If lore of item contains "soul_link":
+	If lore of item contains "Lien d'âme":
 		set the 1st line of the item's lore to "&3Appartient à %player%"
 	If lore of item contains "Appartient à":
 		if the 1st line of the item's lore is not "&3Appartient à %player%":
 			cancel event
 			wait 1 tick
 			message "&6&oVous n'êtes pas le propriétaire de cet objet."
-On unstore:
-	If lore of item contains "Lien d'âme":
-		if the 1st line of the item's lore is not "&3Appartient à %player%":
+On store:
+	If lore of event-item contains "Appartient à":
+		if the 1st line of the event-item's lore is not "&3Appartient à %player%":
 			cancel event
 			wait 1 tick
 			message "&6&oVous n'êtes pas le propriétaire de cet objet."
 On Hopper Pickup:
-	If lore of item contains "soul_link":
-		cancel event
 	If lore of item contains "Lien d'âme":
 		cancel event
+		wait 1 tick
+	If lore of item contains "Appartient à":
+		cancel event
+		wait 1 tick
+mor.inventory click:
+#	send "event-item, cursor-item, event-inventory, player"
+#	send "%event-item%, %cursor-item%, %event-inventory%, %player%"
+	If lore of event-item contains "Appartient à":
+		if the 1st line of the event-item's lore is not "&3Appartient à %player%":
+			cancel event
+			wait 1 tick
+			message "&6&oVous n'êtes pas le propriétaire de cet objet."
+		else:
+			wait 1 tick
+	else:
+		wait 1 tick
 #
 #
 # EXP SCROLLS
