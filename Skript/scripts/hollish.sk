@@ -500,37 +500,70 @@ on vote:
 #
 #
 On death of player:
-    if player meets betonquest condition "colisee.arena_isin":
-		wait 1 tick
-    else:
-        if victim meets betonquest condition "player":
-            if attacker is a player:
-                Wait 7 ticks
-                set {_death_money.%player%} to victim's money
-                set {_01} to 0.1
-                set {_death_money_result.%player%} to {_death_money.%player%} * {_01}
-                Wait 7 ticks
-                give the victim's skull to the attacker
-                execute console command "eco take %victim% %{_death_money_result.%player%}%"
-                execute console command "eco give %attacker% %{_death_money_result.%player%}%"
-                send "&aVous volez &f¤&2%{_death_money_result.%victim%}% &ade &2%victim% &aen l'assasinant." to attacker
-                send "&cVous perdez &f¤&2%{_death_money_result.%victim%}% &crécupérés par &2%attacker%&c." to victim
-                execute console command "title %victim% times 60 100 60"
-                execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
-                execute console command "title %victim% subtitle {""text"":""-%{_death_money_result.%victim%}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
-                set {_tempname} to attacker's name
-                if {_tempname} meets betonquest condition "colisee.boo_p1":
-                    execute console command "bq event %{_tempname}% colisee.eastern_kill"
-            else:
-                Wait 7 ticks
-                set {_death_money.%player%} to victim's money
-                set {_01} to 0.1
-                set {_death_money_result.%player%} to {_death_money.%player%} * {_01}
-                execute console command "eco take %victim% %{_death_money_result.%player%}%"
-                send "&cVous perdez &f¤&2%{_death_money_result.%victim%}% &cen mourrant." to victim
-                execute console command "title %victim% times 60 100 60"
-                execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
-                execute console command "title %victim% subtitle {""text"":""-%{_death_money_result.%victim%}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
+	if victim meets betonquest condition "player":
+		loop yaml list "penalty_free_regions" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_regions_list::*}
+		loop {_regions_list::*}:
+			set {_cycle_region} to "%{_regions_list::%loop-index%}%"
+			set {_player_region} to "%region at player%"
+			broadcast "%{_cycle_region}%"
+			broadcast "%{_player_region}%"
+			if {_player_region} contains {_cycle_region}:
+				set {_protected} to 1
+		if {_protected} is set:
+			stop
+		else:
+			if attacker is a player:
+				Wait 7 ticks
+				set {_death_money} to victim's money
+				set {_01} to 0.1
+				set {_death_money_result} to {_death_money} * {_01}
+				Wait 7 ticks
+				give the victim's skull to the attacker
+				execute console command "eco take %victim% %{_death_money_result}%"
+				execute console command "eco give %attacker% %{_death_money_result}%"
+				send "&aVous volez &f¤&2%{_death_money_result}% &ade &2%victim% &aen l'assasinant." to attacker
+				send "&cVous perdez &f¤&2%{_death_money_result}% &crécupérés par &2%attacker%&c." to victim
+				execute console command "title %victim% times 60 100 60"
+				execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
+				execute console command "title %victim% subtitle {""text"":""-%{_death_money_result}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
+				set {_tempname} to attacker's name
+				if attacker meets betonquest condition "colisee.boo_p1":
+					execute console command "bq event %attacker% colisee.eastern_killcollect"
+			else:
+				Wait 7 ticks
+				set {_death_money} to victim's money
+				set {_01} to 0.1
+				set {_death_money_result} to {_death_money} * {_01}
+				execute console command "eco take %victim% %{_death_money_result}%"
+				send "&cVous perdez &f¤&2%{_death_money_result}% &cen mourrant." to victim
+				execute console command "title %victim% times 60 100 60"
+				execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
+				execute console command "title %victim% subtitle {""text"":""-%{_death_money_result}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
+#
+# Combat Logger
+#
+on damage of player:
+	if "%type of attacker%" is "player":
+		invoke "combat_tracker" from attacker
+		invoke "combat_tracker" from attacked
+	else:
+		stop
+		
+sub "combat_tracker":
+	if {incombat.%parameter 1%} is 10:
+		stop
+	else if {incombat.%parameter 1%} > 0:
+		set {incombat.%parameter 1%} to 10
+	else if {incombat.%parameter 1%} is not set:
+		set {incombat.%parameter 1%} to 10
+		set {_fighter} to parameter 1
+		while {incombat.%{_fighter}%} is set:
+			set {incombat.%{_fighter}%} to {incombat.%{_fighter}%} - 1
+			set action bar of {_fighter} to "&c&lEn Combat ! [ &4%{incombat.%{_fighter}%}% &c&l]"
+			wait 23 ticks
+			if {incombat.%{_fighter}%} is 0:
+				delete {incombat.%{_fighter}%}
 
 #
 # Disables rain & thunder in all worlds

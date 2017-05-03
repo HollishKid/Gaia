@@ -2,6 +2,8 @@
 #  Configuration
 #
 #
+penalty_free_regions:
+- minigames
 air_spells:
 - airblast
 - airbomb
