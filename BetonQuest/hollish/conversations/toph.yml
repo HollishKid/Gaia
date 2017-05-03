@@ -53,7 +53,7 @@ NPC_options:
     conditions: '!empty_1'    
   earth_wand:
     text: 'Parfait ! Voici votre Baguette de la Terre ! \nElle est neuve et peu puissante, tu peux toujours me demander pour l''améliorer !'
-    ocnditions: 'empty_1'
+    conditions: 'empty_1'
     events: folder_earth_wand,journal_earthtemple_magic_learning_del
 #
   earth_wand_upgrade_fine:

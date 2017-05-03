@@ -13,13 +13,31 @@ on quit:
 	set {last.logout.%player%} to now
 	remove player from {online.players::*}
 	discord send message "%player% est parti de Gaïa." to channel with id "186938785026539523" as bot "Gaia"
+	if {incombat.%player%} is set:
+		set {traitor.%player%} to 1
+		broadcast "&2%player% &c&ls'est lâchement déconnecté pendant un combat."
 on join:
 	add player to {online.players::*}
 	discord send message "%player% est arrivé sur Gaïa." to channel with id "186938785026539523" as bot "Gaia"
 	set {g.channel.%player%} to 1
 	set {l.channel.%player%} to 1
 	set {c.channel.%player%} to 1
-
+	wait 10 seconds
+	if {traitor.%player%} is set:
+		delete {traitor.%player%}
+		message "&c&lVous avez été déloyal lors de votre "
+		message "&c&ldernier combat en vous déconnectant !"
+		message "&c&oVous êtes donc sanctionné."
+		set {_money} to placeholder parse "%%vault_eco_balance_fixed%%" as player
+		set {_money} to {_money} parsed as integer
+		broadcast "%{_money}%"
+		set {_02} to 0.2
+		set {_money_result} to {_money} * {_02}
+		wait 7 ticks
+		execute console command "eco take %player% %{_money_result}%"
+		broadcast "%{_money_result}%"
+		wait 7 ticks
+		fire event "reput_athelas3_negatif" for player
 #
 	wait 30 seconds
 	if {event.double.xp} is 1:

@@ -366,11 +366,6 @@ then warn &d&oSi vous êtes à la recherche de la &aBanque&d&o, elle se trouve e
 match (pnj|npc)
 then warn &d&oSi vous avez des problèmes de &aPNJ&d&o, pensez à &aconsulter l'aide&a&o. &d&oUtilisez votre interface d'Aide dans le &a/menu &d&opour des renseignements.
 
-#Ilcë
-match (i+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(c+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+)
-then deny
-handle as ilce
-
 #
 #
 #Lag Helper
@@ -436,42 +431,13 @@ then replace &6Gaïa &f
 match \b(h+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(s+)(\s+|\.+|\*+|)(h+|)
 then replace &6Hollish &7
 
-# Hollish Helper
-match \b(h+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(s+)(\s+|\.+|\*+|)(h+|)(\s+|\.+|\*+|)(\?)
-then replace &6Hollish ? &7
-then warn &aHollish&f: &cNe m'interpellez pas&f, posez directement votre question.
-
 # Zedd
 match (zedd|zed)
 then replace &aZedd &7
 
-# Sparadra59
-match \b(s+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(d+|)(\s+|\.+|\*+|)(r+|a+|)(\s+|\.+|\*+|)(a+|r+|)(\s+|\.+|\*+|)(9+|5+|)(\s+|\.+|\*+|)(9+|5+|)
-then replace &aSparadra59 &7
-
 # crashozz
 match \b(c+)(\s+|\.+|\*+|)(r+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(s+|z+)(\s+|\.+|\*+|)(h+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(z+|s+|)\b
 then replace &acrashozz &7
-
-# MathieuxZ88
-match \b(m+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(h+|)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(e+)(\s+|\.+|\*+|)(u+|)(\s+|\.+|\*+|)(x+|)(\s+|\.+|\*+|)(z+|)(\s+|\.+|\*+|)(8+|)
-then replace &aMathieuxZ88 &7
-
-# GoupilDC16
-match \b(g+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(u+)(\s+|\.+|\*+|)(p+)(\s+|\.+|\*+|)(i+)(\s+|\.+|\*+|)(l+)(\s+|\.+|\*+|)(d+|c+|)(\s+|\.+|\*+|)(d+|c+|)(\s+|\.+|\*+|)(1+|6+|)(\s+|\.+|\*+|)(1+|6+|)\b
-then replace &aGoupilDC16  &7
-
-# Lyrtix
-match (lyrtix\b|lirtyx\b|lyrti\b|\blirtix\b|lirty\b|\blytrix\b|\blytix\b)
-then replace &aLyrtix &7
-
-# guigui
-match guigui
-then replace &aguigui &7
-
-#Vodax
-match \b(v+)(\s+|\.+|\*+|)(o+)(\s+|\.+|\*+|)(d+)(\s+|\.+|\*+|)(a+)(\s+|\.+|\*+|)(x+)
-then replace &aVodaX &7
 
 #
 #

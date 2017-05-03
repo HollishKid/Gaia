@@ -2,6 +2,50 @@
 #  Configuration
 #
 #
+penalty_free_regions:
+- minigames
+air_spells:
+- airblast
+- airbomb
+- suction
+- tornade
+- poussee
+- airshield
+- enhancedspeed
+- airscooter
+- breathofwind
+air_spells_bq:
+- air_airblast
+- air_bomb
+- air_suction
+- air_tornado
+- air_poussee
+- air_shield
+- air_enhancedspeed
+- air_scooter
+- air_breathofwind
+earth_spells:
+- tossi
+- earthblock
+- breche
+- compression
+- sandspout
+- earthsmash
+- earthquaki
+- collapsi
+- earthline
+- durci
+earth_spells_bq:
+- earth_tossi
+- earth_earthblock
+- earth_breche
+- earth_compression
+- earth_sandspout
+- earth_earthsmash
+- earth_earthquaki
+- earth_collapsi
+- earth_earthline
+- earth_durci
 grades_bq:
 - intendant_done
 - grade_ecuyer

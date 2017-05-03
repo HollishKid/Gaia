@@ -182,7 +182,125 @@ command /thisistheearthlockpadchecker <player>:
 			message "&cVous n'avez pas rentré la bonne combinaison." to arg 1
 			loop {earth_lockpad_%arg 1%::*}:
 				delete {earth_lockpad_%arg 1%::%loop-index%}
-			
+#		
+#
+# Wand Management
+#
+#
+#
+# 1 - Status teller
+command /wandstatusteller <player>:
+	executable by: console
+	trigger:
+		set {_apprentice} to arg 1
+		message "&3&o~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ &kk&r&3&o ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" to arg 1
+		if {_apprentice} meets betonquest condition "hollish.air_wand":
+			message "&d&oBaguette de l'Air - &aObtenue" to arg 1
+		else:
+			message "&d&oBaguette de l'Air - &cPas encore obtenue" to arg 1
+		if {_apprentice} meets betonquest condition "hollish.earth_wand":
+			message "&d&oBaguette de la Terre - &aObtenue" to arg 1
+		else:
+			message "&d&oBaguette de la Terre - &cPas encore obtenue" to arg 1
+		if {_apprentice} meets betonquest condition "hollish.fire_wand":
+			message "&d&oBaguette du Feu - &aObtenue" to arg 1
+		else:
+			message "&d&oBaguette du Feu - &cPas encore obtenue" to arg 1
+		if {_apprentice} meets betonquest condition "hollish.water_wand":
+			message "&d&oBaguette de l'Eau - &aObtenue" to arg 1
+		else:
+			message "&d&oBaguette de l'Eau - &cPas encore obtenue" to arg 1
+		message "&3&o~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ &kk&r&3&o ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" to arg 1
+#
+#
+# 2 - Wand "storer"
+command /wandstorer <player> <text>:
+	executable by: console
+	trigger:
+		set {_apprentice} to arg 1
+		if {_apprentice} meets betonquest condition "hollish.%arg 2%_wand":
+			if {_apprentice} meets betonquest condition "hollish.wand_store_%arg 2%":
+				message "&d&oVous avez déjà stocké cette Baguette." to {_apprentice}
+			else:
+				if {_apprentice} meets betonquest condition "hollish.wand_%arg 2%":
+					execute console command "wandp %{_apprentice}% unenchant"
+					fire event "hollish.wand_store_%arg 2%" for {_apprentice}
+					fire event "hollish.fountain" for {_apprentice}
+					wait 5 ticks
+					message "&a&oVous stockez votre Baguette." to {_apprentice}
+					fire event "hollish.%arg 2%_remover" for {_apprentice}
+				else:
+					message "&d&oVous devez tenir la Baguette en main avant de la stocker." to {_apprentice}
+		else:
+			message "&d&oVous n'êtes pas en possession de cette Baguette." to {_apprentice}
+#
+#
+# 3 - Wand "restorer"
+command /wandrestorer <player> <text> <text>:
+	executable by: console
+	trigger:
+		set {_apprentice} to arg 1
+		if {_apprentice} meets betonquest condition "hollish.%arg 2%_wand":
+			if {_apprentice} meets betonquest condition "hollish.wand_store_%arg 2%":
+				if {_apprentice} meets betonquest condition "hollish.wand%arg 3%_inventory":
+					message "&d&oVous avez déjà cette Baguette dans votre inventaire." to {_apprentice}
+					message "&d&oPour la mettre à jour, tenez la en main et cliquez à nouveau." to {_apprentice}
+				else if {_apprentice} meets betonquest condition "hollish.empty_1":
+					message "&d&oVous recevez votre Baguette." to {_apprentice}
+					message "&d&oSi vous ne l'aviez pas en main, tenez la en main et recliquez sur le bouton pour la mettre à jour." to {_apprentice}
+					execute console command "wandp %arg 1% %arg 2%bender"
+					fire event "hollish.wand_unstore_%arg 2%" for {_apprentice}
+					wait 2 ticks
+					if {_apprentice} meets betonquest condition "hollish.wand_%arg 2%":
+						invoke "wandupdater" from arg 1 and arg 2
+					else:
+						message "&d&oTenez votre Baguette en main et cliquez le bouton approprié pour la mettre à jour." to {_apprentice}
+				else:
+					message "&d&oVous n'avez pas de place dans votre inventaire." to {_apprentice}
+			else:
+				message "&d&oVous n'avez pas stocké cette Baguette." to {_apprentice}
+		else:
+			message "&d&oVous n'êtes pas en possession de cette Baguette." to {_apprentice}
+		
+		
+#
+#
+# 4 - Wand "updater"
+command /wandupdater <player> <text>:
+	executable by: console
+	trigger:
+		set {_apprentice} to arg 1
+		if {_apprentice} meets betonquest condition "hollish.%arg 2%_wand":
+			if {_apprentice} meets betonquest condition "hollish.wand_%arg 2%":
+				message "&d&oVotre Baguette a été mise à jour." to {_apprentice}
+				invoke "wandupdater" from arg 1 and arg 2
+			else:
+				message "&d&oTenez votre Baguette en main et cliquez à nouveau sur le bouton pour la mettre à jour." to {_apprentice}
+		else:
+			message "&d&oVous n'êtes pas en possession de cette Baguette." to {_apprentice}
+		
+sub "wandupdater":
+	set {_apprentice} to parameter 1
+	set {_element} to parameter 2
+	fire event "hollish.regenup_%{_element}%_exe3" for {_apprentice}
+	fire event "hollish.manaup_%{_element}%_exe3" for {_apprentice}
+	if parameter 2 is "air":
+		loop yaml list "air_spells" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_air_spells::*}
+		loop yaml list "air_spells_bq" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_air_spells_bq::*}
+		loop {_air_spells_bq::*}:
+			if {_apprentice} meets betonquest condition "hollish.%{_air_spells_bq::%loop-index%}%":
+				execute console command "wandp %{_apprentice}% add %{_air_spells::%loop-index%}%"
+	else if parameter 2 is "earth":
+		loop yaml list "earth_spells" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_earth_spells::*}
+		loop yaml list "earth_spells_bq" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_earth_spells_bq::*}
+		loop {_earth_spells_bq::*}:
+			if {_apprentice} meets betonquest condition "hollish.%{_earth_spells_bq::%loop-index%}%":
+				execute console command "wandp %{_apprentice}% add %{_earth_spells::%loop-index%}%"	
+				
 #
 #
 #
