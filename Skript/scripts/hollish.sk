@@ -95,43 +95,6 @@ command /commandedegradesroyaux <text> <text> <number>:
 			message "&d&oVous devez être Écuyer pour adopter un grade supérieur."
 #
 #
-#
-# Banking System
-#
-#
-on chat:
-	if message starts with "Depot:":
-		if player is in the region "athelas_bank":
-			set {_montant_depot::*} to groups 0 of "%message%" matched to "\d+$"
-			if {_montant_depot::1} is set:
-				cancel event
-				execute console command "bq point %player% add depot %{_montant_depot::1}%"
-				message "Vous déposez %{_montant_depot::1}%"
-				wait 2 ticks
-				execute console command "bq event %player% default.banking_compte_enter"
-			else:
-				message "&d&oVous devez spécifier un nombre entier et positif."
-				cancel event
-		else:
-			message "&d&oVous ne pouvez effectuer de Dépôt qu'au sein de la Banque d'Athelas."
-			cancel event
-	else if message starts with "Retrait:":
-		if player is in the region "athelas_bank":
-			set {_montant_retrait::*} to groups 0 of "%message%" matched to "\d+$"
-			if {_montant_retrait::1} is set:
-				cancel event
-				execute console command "bq point %player% add retrait %{_montant_retrait::1}%"
-				message "Vous retirez %{_montant_retrait::1}%"
-				wait 2 ticks
-				execute console command "bq event %player% default.banking_poche_enter"
-			else:
-				message "&d&oVous devez spécifier un nombre entier et positif."
-				cancel event
-		else:
-			message "&d&oVous ne pouvez effectuer de Retrait qu'au sein de la Banque d'Athelas."
-			cancel event
-#
-#
 # Vehicule Management "non-east"
 #
 #
@@ -161,12 +124,59 @@ on load:
 
 on chat:
 	cancel event
+	if message starts with "Depot:":
+		if player is in the region "athelas_bank":
+			if player meets betonquest condition "client":
+				set {_montant_depot::*} to groups 0 of "%message%" matched to "\d+$"
+				if {_montant_depot::1} is set:
+					execute console command "bq point %player% add depot %{_montant_depot::1}%"
+					message "Vous déposez %{_montant_depot::1}%"
+					wait 2 ticks
+					execute console command "bq event %player% default.banking_compte_enter"
+					stop
+				else:
+					message "&d&oVous devez spécifier un nombre entier et positif."
+					stop
+			else:
+				message "&d&oVous devez être client à la Banque pour effectuer cette opération."
+				message "&d&oAdressez vous à un Banquier au sein d'une Banque."
+				stop
+		else:
+			message "&d&oVous ne pouvez effectuer de Dépôt qu'au sein de la Banque d'Athelas."
+			stop
+#
+	else if message starts with "Retrait:":
+		if player is in the region "athelas_bank":
+			if player meets betonquest condition "client":
+				set {_montant_retrait::*} to groups 0 of "%message%" matched to "\d+$"
+				if {_montant_retrait::1} is set:
+					execute console command "bq point %player% add retrait %{_montant_retrait::1}%"
+					message "Vous retirez %{_montant_retrait::1}%"
+					wait 2 ticks
+					execute console command "bq event %player% default.banking_poche_enter"
+					stop
+				else:
+					message "&d&oVous devez spécifier un nombre entier et positif."
+					stop
+			else:
+				message "&d&oVous devez être client à la Banque pour effectuer cette opération."
+				message "&d&oAdressez vous à un Banquier au sein d'une Banque."
+				stop
+		else:
+			message "&d&oVous ne pouvez effectuer de Retrait qu'au sein de la Banque d'Athelas."
+			stop
+#
+	else if message is "Ilcë":
+		message "&d&oVoici le Gestionnaire de Baguettes."
+		execute console command "chestcommands open wandmanager.yml %player%"
+		stop
+#
 	set {_chat} to message	
 	replace every "§1" and "§2" and "§3" and "§4" and "§5" and "§6" and "§7" and "§8" and "§9" and "§u" and "§l" and "§o" and "§u" with "" in {_chat}
 	replace every "&1" and "&2" and "&3" and "&4" and "&5" and "&6" and "&7" and "&8" and "&9" and "&u" and "&l" and "&o" and "&u" with "" in {_chat}
 	replace every "§a" and "§b" and "§c" and "§d" and "§e" and "§f" with "" in {_chat}
 	replace every "&a" and "&b" and "&c" and "&d" and "&e" and "&f" with "" in {_chat}
-	
+#	
 	if {_chat} contains "!l":
 		if {l.channel.%player%} is set:
 			replace every "!l" with "" in {_chat}

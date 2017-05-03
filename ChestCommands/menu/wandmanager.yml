@@ -1,0 +1,231 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dGestionnaire de Baguettes'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 4
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 10
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+  
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+
+wandstatusteller:
+  COMMAND: 'console: wandstatusteller {player}'
+  NAME: '&6Vos Baguettes'
+  ID: nether star
+  LORE:
+    - '&oAffiche les Baguettes'
+    - '&oMagique que vous possédez.'
+  POSITION-X: 1
+  POSITION-Y: 2
+#
+#
+#
+wandstorerair:
+  COMMAND: 'console: wandstorer {player} air'
+  NAME: '&aDéposer Baguette Air'
+  ID: stick
+  LORE:
+    - 'Vous pouvez stocker'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous pourrez la récupérer'
+    - '&oavec l''icône ci-dessous.'
+  POSITION-X: 3
+  POSITION-Y: 2
+  
+wandrestorerair:
+  COMMAND: 'console: wandrestorer {player} air 1'
+  NAME: '&aRécupérer Baguette Air'
+  ID: stick
+  LORE:
+    - 'Permet de récupérer'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous devez avoir les mains'
+    - '&ovides pour la récupérer.'
+  POSITION-X: 3
+  POSITION-Y: 3
+  
+wandupdaterair:
+  COMMAND: 'console: wandupdater {player} air'
+  NAME: '&aMettre à Jour Baguette Air'
+  ID: stick
+  LORE:
+    - 'Permet de mettre à jour'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous devez l''avoir en main'
+    - '&opour la mettre à jour.'
+  POSITION-X: 3
+  POSITION-Y: 4
+#
+#
+#
+wandstorerearth:
+  COMMAND: 'console: wandstorer {player} earth'
+  NAME: '&aDéposer Baguette Terre'
+  ID: lever
+  LORE:
+    - 'Vous pouvez stocker'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous pourrez la récupérer'
+    - '&oavec l''icône ci-dessous.'
+  POSITION-X: 4
+  POSITION-Y: 2
+  
+wandrestorerearth:
+  COMMAND: 'console: wandrestorer {player} earth 2'
+  NAME: '&aRécupérer Baguette Terre'
+  ID: lever
+  LORE:
+    - 'Permet de récupérer'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous devez avoir les mains'
+    - '&ovides pour la récupérer.'
+  POSITION-X: 4
+  POSITION-Y: 3
+  
+wandupdaterearth:
+  COMMAND: 'console: wandupdater {player} earth'
+  NAME: '&aMettre à Jour Baguette Terre'
+  ID: lever
+  LORE:
+    - 'Permet de mettre à jour'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous devez l''avoir en main'
+    - '&opour la mettre à jour.'
+  POSITION-X: 4
+  POSITION-Y: 4
+#
+#
+#
+wandstorerfire:
+  COMMAND: 'console: wandstorer {player} fire'
+  NAME: '&aDéposer Baguette Feu'
+  ID: 369
+  LORE:
+    - 'Vous pouvez stocker'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous pourrez la récupérer'
+    - '&oavec l''icône ci-dessous.'
+  POSITION-X: 5
+  POSITION-Y: 2
+  
+wandrestorerfire:
+  COMMAND: 'console: wandrestorer {player} fire 3'
+  NAME: '&aRécupérer Baguette Feu'
+  ID: 369
+  LORE:
+    - 'Permet de récupérer'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous devez avoir les mains'
+    - '&ovides pour la récupérer.'
+  POSITION-X: 5
+  POSITION-Y: 3
+  
+wandupdaterfire:
+  COMMAND: 'console: wandupdater {player} fire'
+  NAME: '&aMettre à Jour Baguette Feu'
+  ID: 369
+  LORE:
+    - 'Permet de mettre à jour'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous devez l''avoir en main'
+    - '&opour la mettre à jour.'
+  POSITION-X: 5
+  POSITION-Y: 4
+#
+#
+#
+wandstorerwater:
+  COMMAND: 'console: wandstorer {player} water'
+  NAME: '&aDéposer Baguette Eau'
+  ID: 198
+  LORE:
+    - 'Vous pouvez stocker'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous pourrez la récupérer'
+    - '&oavec l''icône ci-dessous.'
+  POSITION-X: 6
+  POSITION-Y: 2
+  
+wandrestorerwater:
+  COMMAND: 'console: wandrestorer {player} water 4'
+  NAME: '&aRécupérer Baguette Eau'
+  ID: 198
+  LORE:
+    - 'Permet de récupérer'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous devez avoir les mains'
+    - '&ovides pour la récupérer.'
+  POSITION-X: 6
+  POSITION-Y: 3
+  
+wandupdaterwater:
+  COMMAND: 'console: wandupdater {player} water'
+  NAME: '&aMettre à Jour Baguette Eau'
+  ID: 198
+  LORE:
+    - 'Permet de mettre à jour'
+    - 'votre Baguette en'
+    - 'cliquant ici.'
+    - ' '
+    - '&oVous devez l''avoir en main'
+    - '&opour la mettre à jour.'
+  POSITION-X: 6
+  POSITION-Y: 4

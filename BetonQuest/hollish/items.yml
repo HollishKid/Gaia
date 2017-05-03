@@ -39,6 +39,9 @@ oak_door: WOOD_DOOR lore:none
 emerald_block: EMERALD_BLOCK lore:none
 diamond_block: DIAMOND_BLOCK lore:none
 paper: PAPER lore:none
+lever: LEVER lore:none
+blaze_rod: BLAZE_ROD lore:none
+end_rod: END_ROD lore:none
 pierre_terre: FLINT name:§2§lPierre_de_Terre lore:_;§8§oClic_droit_pour_détecter;§8§ode_la_Magie_de_la_Terre.;_;§2Objet_de_Quête
 emerald_volcano: EMERALD data:0 name:Emeraude_Volcanique lore:Cet_Emeraude_provient;d'un_volcan_actif.
 emerald_volcano_ench: EMERALD data:0 name:Emeraude_Enchanté lore:Cet_Emeraude_a_fusionné;et_enchanté.;_;§f§oA_tenir_en_main;en_cliquant_sur_la_borne;avec_l'incantation.;_;§2Objet_de_Quête
