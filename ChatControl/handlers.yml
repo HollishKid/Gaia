@@ -96,7 +96,3 @@ teleportlogger:
   
 questionlogger:
   Write_To_File: logs/questionlog.txt
-    
-ilce:
-  Execute_Commands:
-    - bq event %player hollish.ilce

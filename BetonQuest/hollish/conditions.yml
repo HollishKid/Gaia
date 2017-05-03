@@ -262,6 +262,13 @@ wand_earth: wand hand name:earthbender
 wand_water: wand hand name:waterbender
 wand_fire: wand hand name:firebender
 #
+#
+wand_store_air: tag wand_store_air
+wand_store_earth: tag wand_store_earth
+wand_store_fire: tag wand_store_fire
+wand_store_water: tag wand_store_water
+#
+#
 air_airblast: tag air_airblast
 air_bomb: tag air_bomb
 air_suction: tag air_suction

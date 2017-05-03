@@ -140,6 +140,7 @@ groups:
     - chestcommands.open.craft_or_volcanique.yml
     - chestcommands.open.craft_fer_volcanique.yml
     - chestcommands.open.aktarion_reward.yml
+    - chestcommands.open.wandmanager.yml
     - chatcontrol.notify.whenmentioned
     - chatcontrol.broadcaster.view
     - towny.wild.*
