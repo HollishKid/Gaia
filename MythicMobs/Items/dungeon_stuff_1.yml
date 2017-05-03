@@ -8,7 +8,7 @@ casque_fer_dj1:
   Data: 0
   Display: '&9Heaume vaillant'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oLa tête haute.'
   - '&e&oLe regard droit.'
@@ -28,7 +28,7 @@ plastron_fer_dj1:
   Data: 0
   Display: '&9Plastron vaillant'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oInsuffle du courage'
   - '&e&oà son porteur.'
@@ -48,7 +48,7 @@ jambes_fer_dj1:
   Data: 0
   Display: '&9Jambières vaillantes'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oElles sont plus légère'
   - '&e&oqu''il n''y parait.'
@@ -68,7 +68,7 @@ pieds_fer_dj1:
   Data: 0
   Display: '&9Bottes vaillantes'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oOn pourrait marcher toute'
   - '&e&ola journée sans se fatiguer'
@@ -89,7 +89,7 @@ pieds_fer_dj1:
   Data: 0
   Display: '&9Épée vaillante'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&aBonus de set: Régénération'
   - '&e&oUne douce magie'
@@ -114,7 +114,7 @@ casque_maille_dj1:
   Data: 0
   Display: '&9Casque ailé'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oLes ailettes rappellent'
   - '&e&oun certain gaulois...'
@@ -134,7 +134,7 @@ plastron_maille_dj1:
   Data: 0
   Display: '&9Maille annelée'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oPermet des'
   - '&e&omouvement amples.'
@@ -154,7 +154,7 @@ jambes_maille_dj1:
   Data: 0
   Display: '&9Jambières plaquées'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oSans doute prélevées'
   - '&e&osur le cadavre de son'
@@ -175,7 +175,7 @@ pieds_maille_dj1:
   Data: 0
   Display: '&9Bottes à éperons'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oUn aiguillon bien placé'
   - '&e&ofais des merveilles sur'
@@ -196,7 +196,7 @@ vive_épée:
   Data: 0
   Display: '&9Vive épée'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&aBonus de set: Vitesse'
   - '&e&oTranchant comme une'
