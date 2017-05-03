@@ -1,0 +1,50 @@
+#
+# Modify this file to change the behavior of various materials.
+#
+# This controls how magic deals with individual materials in a variety of ways,
+# such as which are indestructible, destructible, transparent, etc.
+#
+# To see all available options, look in the defaults/materials.defaults.yml file.
+#
+# You only need to edit this file if you want to change the default configuration.
+#
+destructible:
+- air
+- snow
+- long_grass
+- dead_bush
+- yellow_flower
+- red_rose
+- brown_mushroom
+- red_mushroom
+
+earth:
+- stone
+- grass
+- dirt
+- cobblestone
+- mossy_cobblestone
+- clay
+- hard_clay
+- stained_clay
+- sand
+- gravel
+- netherrack
+- ender_stone
+- mycel
+- soul_sand
+- sandstone
+- gold_ore
+- iron_ore
+- coal_ore
+- lapis_ore
+- diamond_ore
+- redstone_ore
+- glowing_redstone_ore
+- emerald_ore
+- quartz_ore
+
+
+metal:
+- iron_block
+- gold_block

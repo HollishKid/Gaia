@@ -1,0 +1,92 @@
+########################################
+## -- SimpleTrading  -  Configuration ##
+########################################
+#
+# This is the main configuration file of SimpleTrading
+#
+blocks:
+  # Block to accept trade
+  accept: 'ink_sack:10'
+  # Block to decline trade
+  decline: 'ink_sack:1'
+  # Block to seperate inventories
+  seperator: 'barrier'
+inventory:
+  # Specifies the inventory-gui name while trading
+  # Note: Use @p as a placeholder for the playername
+  name: 'Échange - @p'
+
+  # These key-value sets define the amount of money a
+  # player can add or remove in the trading inventory
+  money-value-1: 50
+  money-value-2: 100
+  money-value-3: 500
+
+  # Same thing with exp. Define the exp amount of each
+  # button in the trading inventory
+  exp-value-1: 5
+  exp-value-2: 50
+  exp-value-3: 100
+localization:
+  # The language this plugin is using. Currently
+  # an english and german translation is available
+  #
+  # Possible values:
+  # en_US - English
+  # de_DE - German
+  #
+  # If you want to help with the translation of SimpleTrading
+  # feel free to translate it into your own language.
+  # For doing this, use the file located under
+  # /language/locale_en_US.yml as a template.
+  # Your translated file should have the following
+  # format: locale_<language-code>_<country-code>.yml
+  locale: fr_FR
+global:
+  # The maximum distance where players are able to initiate a trade
+  # Set to -1 to disable max distance and world checking
+  max-distance: 15
+  # Specifies wether trading in creative mode is enabled or not
+  creative-trading: false
+  # Specifies the timeout for trading requests in seconds
+  timeout: 60
+  # Specifies wether to use xp trading or not
+  use-xp-trading: true
+item-control:
+  # The control mode the plugin is running
+  # Available modes: blacklist, whitelist
+  # Explanation:
+  #   blacklist: All items can be traded except the
+  #              items configured not to be.
+  #   whitelist: No items can be traded except the
+  #              items configured to be.
+  control-mode: blacklist
+  
+  # A list of items that cannot be traded or can be traded
+  # depending on your control-mode setting
+  item-list:
+  - 'cake'
+  
+  # A list of lores (the description text of an item) marking
+  # an item to be untradable or tradeable depending on your
+  # control-mode setting
+  item-lore:
+  - '[Untradeable]'
+  - 'Régénération Mana: 5/s'
+  - 'Régénération Mana: 6/s'
+  - 'Régénération Mana: 7/s'
+  - 'Régénération Mana: 8/s'
+  - 'Régénération Mana: 9/s'
+  - 'Régénération Mana: 10/s'
+  - 'Régénération Mana: 11/s'
+  - 'Régénération Mana: 12/s'
+  - 'Régénération Mana: 13/s'
+  - 'Régénération Mana: 14/s'
+  - 'Régénération Mana: 15/s'
+  - 'Régénération Mana: 16/s'
+  - 'Régénération Mana: 17/s'
+  - 'Régénération Mana: 18/s'
+  - 'Régénération Mana: 19/s'
+  - 'Régénération Mana: 20/s'
+
+config-version: 1
