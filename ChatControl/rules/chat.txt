@@ -137,7 +137,7 @@ then replace &cpuis&7
 
 # je ne sais pas
 match \bjsp\b
-then replace &cpuis&7
+then replace &cje ne sais pas&7
 
 ##############################
 #

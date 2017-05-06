@@ -279,7 +279,14 @@ every 59 minutes in "Gaia":
 	set {_tmpO} to now
 	set {day.index} to day of week from date {_tmpO}
 	set {hour.system} to "%hour%"
-	wait 1 second
+#
+# Auto Debug
+#
+	loop all players:
+		if loop-player is in the region "nether_portal2":
+			set {_security_ouest_donjon} to 1
+	if {_security_ouest_donjon} is not set:
+		execute console command "resettingnetherportal2"
 #
 #
 # At Midnight

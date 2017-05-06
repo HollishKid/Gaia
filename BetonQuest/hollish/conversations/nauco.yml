@@ -26,6 +26,9 @@ NPC_options:
     events: journal_sancossi,sancossi_tag,dwarf_bridge1_tag,journal_nauco_weapons_done_del,journal_nauco_armes_del
   sancossi_killed_rep:
     text: 'Je n''arrive pas à y croire ! C''est la meilleure nouvelle que mon peuple puisse entendre ! \nRetourne donner cette nouvelle à notre chef, &2Casar &a&o! Il te sera très reconnaissant !'
+  liar:
+    text: 'Vous vous prenez pour qui ?! \nRevenez quand vous aurais vraiment les matériaux requis !'
+    events: 'default.reput_athelas1_negatif'
 #                #
 
 # Options Joueur #

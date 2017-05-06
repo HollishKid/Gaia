@@ -46,7 +46,11 @@ NPC_options:
     events: journal_north_bridge_repair,journal_killed_spree_del
   repair_north_bridge_rep:
     text: 'Passez moi ça, je fais réparer le pont. Vous avez désormais accès au Pont du Nord. \nNe prenez pas cette région à la légère, les Goblins y ont toujours le pouvoir ! \nJe vous fais don de cet argent et cette expérience !'
+    conditions: 'north_bridge_repair_have'
     events: journal_north_bridge_repair_del,take_repair_bridge,casar_price1,casar_price2,casar_price3,dwarf_bridge2_tag,entry_north_allow
+  liar:
+    text: 'C''est quoi ce mensonge ?!'
+    events: 'default.reput_athelas1_negatif'
 #                #
 
 # Options Joueur #
@@ -95,4 +99,4 @@ player_options:
   repair_north_bridge:
     text: 'J''ai les matériaux pour réparer le pont vers le nord.'
     conditions: 'north_bridge_repair_have,journal_north_bridge_repair'
-    pointers: repair_north_bridge_rep
+    pointers: repair_north_bridge_rep,liar

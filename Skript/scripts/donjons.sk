@@ -5,7 +5,7 @@ command /netherportalouest <player>:
 	executable by: console
 	trigger:
 		if {donjon_ouest_started} is set:
-			message "&d&oCe donjon est déjà pris d'assault. Veuillez attendre que cet Assault soit terminé." to arg 1
+			message "&d&oCe donjon est déjà pris d'assaut. Veuillez attendre que cet Assaut soit terminé." to arg 1
 		else: # Initialisation du donjon.
 			if {donjon_ouest_init} is set:
 				if "%{donjon_ouest_participants::*}%" contains "%arg 1%":
@@ -18,20 +18,20 @@ command /netherportalouest <player>:
 			else:
 				set {donjon_ouest_init} to 1
 				add arg 1 to {donjon_ouest_participants::*}
-				message "&d&oVous initiez le Donjon du Nether." to arg 1
+				message "&d&oVous lancez l'Assaut contre le Donjon du Nether." to arg 1
 				wait 3 seconds
-				broadcast "&2%arg 1% &dvient de lancer l'assault sur le Donjon du Nether."
+				broadcast "&2%arg 1% &dvient de lancer l'assaut sur le Donjon du Nether."
 				broadcast "&dRejoignez en parlant à l'&2Officier &dsur place. (&f&o-7652,2902&d)"
-				set {louvre_init_block} to location at -7652, 61, 2902 of the world "Gaia" 
-				set block at {louvre_init_block} to block of redstone
+				set {donjon_ouest_init_block} to location at -7652, 61, 2902 of the world "Gaia" 
+				set block at {donjon_ouest_init_block} to block of redstone
 				wait 60 seconds
 
 				if {donjon_ouest_started} is set:
 					stop
 				else:
 					set {donjon_ouest_started} to 1
-					set {louvre_start_block} to location at -7724, 34, 2902 of the world "Gaia"
-					set block at {louvre_start_block} to block of redstone
+					set {donjon_ouest_start_block} to location at -7724, 34, 2902 of the world "Gaia"
+					set block at {donjon_ouest_start_block} to block of redstone
 
 					loop {donjon_ouest_participants::*}:
 						add 1 to {dj_o_p_amount}
@@ -55,7 +55,7 @@ command /netherportalouest <player>:
 						
 					else:
 						loop {donjon_ouest_participants::*}:
-							message "&c&lIl n'y a pas assez de participants, l'Assault est annulé." to loop-value
+							message "&c&lIl n'y a pas assez de participants, l'Assaut est annulé." to loop-value
 							execute console command "resettingnetherportal2"
 					
 					
@@ -86,8 +86,8 @@ command /thisisthezombieminionkilled:
 				message "&a&oVous avez tué assez de Minions. Le Néthérien apparaît dans l'autre salle !" to loop-value
 				execute console command "region addmember nether_portal_passage2 %loop-value% -w Gaia"
 				
-				set {louvre_pass_block} to location at -7724, 34, 2900 of the world "Gaia"
-				set block at {louvre_pass_block} to block of redstone
+				set {donjon_ouest_pass_block} to location at -7724, 34, 2900 of the world "Gaia"
+				set block at {donjon_ouest_pass_block} to block of redstone
 				
 			delete {zombiem_killed}
 			execute console command "mm mobs spawn netherien2 1 Gaia,-7760,37,2902"
@@ -98,8 +98,8 @@ command /netherien2killed:
 	executable by: console
 	trigger:
 		# Donjon DONE
-		set {louvre_gate_block} to location at -7764, 33, 2902 of the world "Gaia"
-		set block at {louvre_gate_block} to block of redstone
+		set {donjon_ouest_gate_block} to location at -7764, 33, 2902 of the world "Gaia"
+		set block at {donjon_ouest_gate_block} to block of redstone
 		loop {donjon_ouest_participants::*}:
 			message "&4&lLe Néthérien, est mort !" to loop-value
 			message "&4&lLe portail au fond de la salle s'ouvre !" to loop-value
@@ -125,10 +125,10 @@ command /resettingnetherportal2:
 		loop {donjon_ouest_participants::*}:
 			delete {donjon_ouest_participants::%loop-value%}
 		
-		set block at {louvre_init_block} to a AIR
-		set block at {louvre_start_block} to a AIR
-		set block at {louvre_pass_block} to a AIR
-		set block at {louvre_gate_block} to a AIR
+		set block at {donjon_ouest_init_block} to a AIR
+		set block at {donjon_ouest_start_block} to a AIR
+		set block at {donjon_ouest_pass_block} to a AIR
+		set block at {donjon_ouest_gate_block} to a AIR
 		
 		execute console command "region removemember nether_portal_passage2 -a -w Gaia"
 		execute console command "mm mobs kill skeleton_minion2"
