@@ -11,9 +11,9 @@ NPC_options:
     text: 'Bonjour, &2%player%&a&o. \nJ''ai entendu parler de votre nomination nouvelle ! \nSoyez le bienvenu au Louvre !'
     pointers: qui,pourquoi,keske,louvre
   qui_rep:
-    text: 'Je m''appelle &2Númeheru &a&oet je suis le Fils du &6Roi Kahn&a&o. \nC''est habituellement un Prince qui détient le Château du Louvre.'
+    text: 'Je m''appelle &2Númeheru &a&oet je suis le Fils du &6Roi Kahn&a&o. \nC''est habituellement un Prince qui détient le Château du Louvre, d''où ma présence ici.'
   pourquoi_rep:
-    text: 'Je représente le Gardien de l''Est à Athelas. \nJe maintiens les relations avec la Ville Royale.'
+    text: 'Je suis le Gardien de l''Est à Athelas. \nJe dois maintenir ce château et m''occpuer de ces viles créatures de la Forêt de Mirk...'
   keske_rep:
     text: 'Ce Château est le dernier rempart avant la Forêt de Mirk. \nIl est important de garder les créatures de la Forêt de Mirk au plus loin de nos villes !'
   louvre_rep:
