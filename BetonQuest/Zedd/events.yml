@@ -626,12 +626,12 @@ zae_q1startrem: tag del zae_q1start
 zae_q1done: tag add zae_q1done
 #added zae_givehyper after a new "takehyper" in Zael Conversation in case of people still having them. See Zael conversation for comments.
 zae_q1retry: folder zae_loc1rem,zae_loc2rem,zae_loc3rem,zae_obj1,zae_obj2,zae_obj3,zae_givehyper
-zae_q2startfold: folder zae_mess4,zae_q2start,zae_messfold1,zae_q2_journal delay:4
+zae_q2startfold: folder zae_mess4,zae_q2start,zae_obj4,zae_messfold1,zae_q2_journal delay:4
 zae_mess4: 'message &2Zael:&a&o Il faut commencer par localiser plus précisément l''origine de ce trouble. Tu va te resservir de l''&2hypercapaciteur bidulotron&a&o.'
 zae_q2start: tag add zae_q2start
 zae_messfold1: folder zae_mess5,zae_messfold2 delay:5
 zae_mess5: 'message &2Zael:&a&o J''ai reglé sa sensibilité au maximum, il devrait maintenant être capable de t''indiquer si tu es plus ou moins proche de la faille qui se trouve au chateau.'
-zae_messfold2: folder zae_mess6,zae_givehyperreg,zae_conversdone,zae_obj4,zae_title2 delay:5
+zae_messfold2: folder zae_mess6,zae_givehyperreg,zae_conversdone,zae_title2 delay:5
 zae_mess6: 'message &2Zael:&a&o Quand tu auras trouvé la faille, assure toi d''enregistrer ses caractérisques avec l''&2hypercapaciteur&a&o puis reviens me voir.'
 zae_givehyperreg: give hyperreg:1
 zae_delayobj4: folder zae_obj4 delay:1
