@@ -10,22 +10,28 @@ NPC_options:
     conditions: '!madame_betteraves'
     pointers: paulette,bonjour
   second:
-    text: 'Re-bonjour ...'
+    text: 'Re-bonjour...'
     conditions: 'madame_betteraves'
     pointers: quoi,betteraves
   paulette_rep:
-    text: 'Ah! Je meurs de faim, nourrissez moi ! Amenez moi une &dsoupe de betteraves &a&o!'
+    text: 'Ah ! Je meurs de faim, nourrissez moi ! Amenez moi une &dsoupe de betteraves &a&o!'
     events: madame_betteraves
   quoi_rep:
     text: 'Une &dsoupe de betteraves &a&ovoyons ! Ce n''est pas compliqué !!'
   merci:
     text: 'Il était temps, merci à vous ! Vous pouvez disposer !'
+    conditions: 'madame_betteraves_have'
+    events: betteraves_done
+  liar:
+    text: 'Vous vous fichez de moi ? \nDonnez moi cette soupe !'
+    conditions: '!madame_betteraves_have'
+    events: reput_athelas2_negatif
 ###################
 #Options du joueur#
 ###################
 player_options:
   bonjour:
-    text: 'Bonjour à vous ! Et ... aurevoir !'
+    text: 'Bonjour à vous ! Et... aurevoir !'
   paulette:
     text: 'Paulette m''envoie pour savoir ce que vous souhaiteriez manger...'
     conditions: 'madame'
@@ -36,5 +42,4 @@ player_options:
   betteraves:
     text: 'Voici une soupe de betteraves pour Madame !'
     conditions: 'madame_betteraves_have'
-    events: betteraves_done
-    pointers: merci
+    pointers: merci,liar

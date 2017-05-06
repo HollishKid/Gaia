@@ -9,7 +9,45 @@ on death of player:
 		fire betonquest event "hollish.air_temple_lose" for victim
 	if victim meets betonquest condition "Zedd.thieftreasure_tempo_tag":
 		fire betonquest event "Zedd.thieftreasure_reset" for victim
-
+#
+#
+# Quêtes Journalières Athelas
+#
+#
+command /dailyquesterstart <player>:
+	executable by: console
+	trigger:
+		if "%{daily.questers::*}%" contains "%arg 1%":
+			stop
+		else:
+			add arg 1 to {daily.questers::*}
+		
+command /dailyquesterdone <player>:
+	executable by: console
+	trigger:
+		if arg 1 meets betonquest condition "daily_quester":
+			stop
+		else:
+			remove arg 1 from {daily.questers::*}
+			
+command /dailyquesterreset:
+	executable by: console
+	trigger:
+		loop {daily.questers::*}:
+			if loop-value is online:
+				message "&c&lVous n'avez pas rendu une quête journalière à temps." to loop-value
+				wait 2 ticks
+				fire event "reput_athelas1_negatif" for loop-value
+				wait 2 ticks
+				fire event "paulette_cleaner" for loop-value
+				wait 2 ticks
+				fire event "paul_cleaner" for loop-value
+				wait 2 ticks
+				fire event "francis_cleaner" for loop-value
+			else:
+				set {daily.quester.%loop-value%} to 1
+			delete {daily.questers::%loop-index%}
+		
 
 #
 #

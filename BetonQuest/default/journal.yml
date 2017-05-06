@@ -26,6 +26,18 @@ guilde3: 'La Guilde des Guerriers est représentée par Ingolmo, dans le Châtea
 guilde4: 'La Guilde des Pêcheurs est représentée par Halatir, dans la Tour sur le port Est d''Athelas (-6462,73,3037). L''Intendant m''a dit d''aller le retrouver !'
 guilde5: 'La Guilde des Mineurs est représentée par Felco, dans la Forge à côté de la mine d''Athelas (-6816,66,2880). L''Intendant m''a dit d''aller le retrouver !'
 guilde6: 'La Guilde des Apprivoiseurs est représentée par Kelva, dans les étables au Sud de la Ville, à côté de chez Paulette (-6730,63,3071). L''Intendant m''a dit d''aller la retrouver !'
-guilde7: 'La Guilde des Herbologistes est représentée par Pirindë, dans le jardin au Nord d''Athelas (-6805,64,2836). L''Intendant m''a dit d''aller le retrouver !'
+guilde7: 'La Guilde des Herboristes est représentée par Pirindë, dans le jardin au Nord d''Athelas (-6805,64,2836). L''Intendant m''a dit d''aller le retrouver !'
 guilde8: 'La Guilde des Bûcherons est représentée par Tano, près de la forêt au Nord-Ouest d''Athelas (-7047,70,2800). L''Intendant m''a dit d''aller le retrouver !'
 guilds_found: 'J''ai trouvé tous les Maîtres de Guilde. Je devrais retourner voir l''Intendant pour l''en informer !'
+#
+# Quêtes Journalières
+#
+paulette1: 'Paulette m''a demandé d''apporter un gâteau à son fils. C''est un des gardes devant le Château d''Athelas. [Vous devez rendre cette quête avant minuit, ou vous perdrez des points de réputation !]'
+paulette2: 'Paulette m''a demandé de lui apporter 5 oeufs. [Vous devez rendre cette quête avant minuit, ou vous perdrez des points de réputation !]'
+paulette3: 'Paulette m''a demandé de servir madame, à l''étage de son auberge. [Vous devez rendre cette quête avant minuit, ou vous perdrez des points de réputation !]'
+paul1: 'Paul m''a demandé de livrer 10 pains au Chef du Château d''Athelas, dans la cuisine. [Vous devez rendre cette quête avant minuit, ou vous perdrez des points de réputation !]'
+paul2: 'Paul m''a demandé de lui apporter 10 blé. [Vous devez rendre cette quête avant minuit, ou vous perdrez des points de réputation !]'
+paul3: 'Paul m''a demandé de lui fabriquer 3 pains. [Vous devez rendre cette quête avant minuit, ou vous perdrez des points de réputation !]'
+francis1: 'Françis m''a demandé d''aller chercher du pain chez Paul. [Vous devez rendre cette quête avant minuit, ou vous perdrez des points de réputation !]'
+francis2: 'Françis m''a demandé de livrer 10 carottes chez Paulette. [Vous devez rendre cette quête avant minuit, ou vous perdrez des points de réputation !]'
+francis3: 'Françis m''a demandé des betteraves au Chef du Château d''Athelas, dans la cuisine. [Vous devez rendre cette quête avant minuit, ou vous perdrez des points de réputation !]'

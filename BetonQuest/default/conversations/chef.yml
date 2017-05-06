@@ -6,25 +6,30 @@ stop: 'false'
 ################
 NPC_options:
   livraison:
-    text: 'Que faites vous dans ma cuisine?!'
+    text: 'Que faites vous dans ma cuisine ?!'
     pointers: bonjour,bonjour_francis,rien
   oui:
-    text: 'Ah! Très bien. Bonne journée à vous!'
+    text: 'Ah ! Très bien. \nBonne journée à vous !'
     events: livraison_paul_done
   merci:
-    text: 'Ah! Très bien. Faites moi le plaisir de lui rendre cette tarte!'
+    text: 'Ah ! Très bien. Faites moi le plaisir de lui rendre cette tarte !'
+    conditions: 'betteraves_have'
     events: tarte_chef,tag_tarte_chef,take_francis_betteraves
+  liar:
+    text: 'Vous vous moquez de moi ?! \nVous n''avez pas les betteraves que Françis m''avait promis !!'
+    conditions: '!betteraves_have'
+    events: reput_athelas1_negatif
 ###################
 #Options du joueur#
 ###################
 player_options:
   bonjour:
-    text: 'Paul m''envoie pour vous livrer le pain!'
+    text: 'Paul m''envoie pour vous livrer le pain !'
     conditions: 'pain_paul,tag_pain_paul'
     pointers: oui
   bonjour_francis:
-    text: 'Francis m''envoie pour vous livrer les betteraves!'
+    text: 'Francis m''envoie pour vous livrer les betteraves !'
     conditions: 'betteraves_urgent,betteraves_have'
-    pointers: merci
+    pointers: merci,liar
   rien:
-    text: 'Rien, j''allais justement partir!'
+    text: 'Rien, j''allais justement partir !'
