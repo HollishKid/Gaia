@@ -86,6 +86,9 @@ eko_mess8: 'message &6&oVous récupérez une lettre cachetée.'
 eko_givelettre: give lettre_cachetee:1
 #
 # replaced eko_q3startfolder with tempo_redirect
+eko_q2donefolder: if eko_lettre eko_q2donefolder2 else eko_punit
+eko_punit: folder default.reput_athelas1_negatif,eko_messbatardelombre
+eko_messbatardelombre: '&7&omessage Ne tentez pas ce genre de choses.'
 eko_q2donefolder: folder eko_takelettre,eko_q2done,eko_q2end,eko_q2reward,eko_conversdone,eko_q3startfolder delay:2
 eko_q2reward: folder quest_point_1,eko_givechainlegs,eko_givechainlegsmess
 eko_givechainlegs: 'command sudo %player% gaiaitemgiver chainlegs'

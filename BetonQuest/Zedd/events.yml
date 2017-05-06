@@ -156,7 +156,9 @@ maka_takecoffre: take coffre_mysterieux:1
 #
 ### Maka finish. Yeah.
 #
-maka_end1: folder maka_end1_money,maka_takecoffre,maka_goodchoice,maka_endfolder delay:1
+maka_punit: folder or_messbatardelombre,default.reput_athelas3_negatif
+maka_end1: if maka_hascoffre maka_end12 else maka_punit
+maka_end12: folder maka_end1_money,maka_takecoffre,maka_goodchoice,maka_endfolder delay:1
 maka_end1_money: 'command eco give %player% 4500'
 maka_goodchoice: tag add maka_goodchoice
 maka_end2: folder maka_end2_money,maka_badchoice,maka_endfolder delay:1
@@ -562,7 +564,8 @@ var_q1start: tag add var_q1start
 var_q1start_fold: folder var_q1start,var_convers_done,var_pitch_remove
 var_convers_done: tag del var_inconvers
 var_pitch_remove: tag del var_pitch
-var_q1reward: folder quest_point_1,var_money1,var_xpreward1,var_q1startremove,var_q1done,var_takeitem1,var_takeitem2,var_q1_journal_del delay:1
+var_q1reward: if var_ok var_q1reward2 else or_punit
+var_q1reward2: folder quest_point_1,var_money1,var_xpreward1,var_q1startremove,var_q1done,var_takeitem1,var_takeitem2,var_q1_journal_del delay:1
 var_money1: 'command eco give %player% 1250'
 var_xpreward1: 'command addxp %player% alchimie 2500'
 var_q1startremove: tag del var_q1start
@@ -675,7 +678,8 @@ zae_title3: folder zae_title31,zae_title32,zae_title33 delay:1
 zae_title31: 'command title %player% times 40 60 80'
 zae_title32: 'command title %player% subtitle {"text":"Préparer le contre-sort","color":"gold"}'
 zae_title33: 'command title %player% title {"text":"Troubles arcaniques","color":"green"}'
-zae_q3reward: folder quest_point_1,zae_takenether,zae_mess12,zae_eco3,zae_xpreward2,zae_q3end,zae_q3done,zae_q3_journal_del delay:1
+zae_q3reward: if zae_lavatear zae_q3reward2 else or_punit
+zae_q3reward2: folder quest_point_1,zae_takenether,zae_mess12,zae_eco3,zae_xpreward2,zae_q3end,zae_q3done,zae_q3_journal_del delay:1
 zae_takenether: take lava_tear:3
 zae_mess12: 'message &6&oPréparer le contre-sort (terminé)'
 zae_eco3: 'command eco give %player% 1250'
