@@ -761,7 +761,6 @@ herboriste22: tag add herboriste
 bucheron: folder metier_cleaner,guilder_cleaner,bucheron2
 bucheron2: folder bucheron22 delay:2
 bucheron22: tag add bucheron
-#guilde_bucheron_bonus: 'command region addmember foret_athelas2 %player% -w Gaia'
 #
 guilder_cleaner: folder alchimiste3,acrobate3,guerrier3,pecheur3,mineur3,apprivoiseur3,herboriste3,bucheron3
 alchimiste3: tag del alchimiste
@@ -1542,7 +1541,7 @@ metier_bucheron_xpboost: 'command pex user %player% add mcmmo.perks.xp.10percent
 #
 # Cleaner
 #
-metier_cleaner: folder mp_clean_tag,mp_clean_xpboost,me_clean_tag,me_clean_xpboost,mh_clean_tag,mh_clean_xpboost,ma_clean_tag,ma_clean_xpboost,mal_clean_tag,mal_clean_xpboost,mf_clean_tag,mf_clean_xpboost,mac_clean_tag,mac_clean_xpboost,mt_clean_tag,mt_clean_xpboost,mher_clean_tag,mher_clean_xpboost,mm_clean_tag,mm_clean_xpboost,mr_clean_tag,mr_clean_xpboost,mex_clean_tag,mex_clean_xpboost,mb_clean_tag,mb_clean_xpboost,cagnotte_removal
+metier_cleaner: folder mp_clean_tag,mp_clean_xpboost,me_clean_tag,me_clean_xpboost,mh_clean_tag,mh_clean_xpboost,ma_clean_tag,ma_clean_xpboost,mal_clean_tag,mal_clean_xpboost,mf_clean_tag,mf_clean_xpboost,mac_clean_tag,mac_clean_xpboost,mt_clean_tag,mt_clean_xpboost,mher_clean_tag,mher_clean_xpboost,mm_clean_tag,mm_clean_xpboost,mr_clean_tag,mr_clean_xpboost,mex_clean_tag,mex_clean_xpboost,mb_clean_tag,mb_clean_xpboost,cagnotte_removal,basic_prefix
 #
 cagnotte_removal: 'command thisisthecagnotteremoval %player%'
 #
@@ -2452,10 +2451,13 @@ os_charge1: folder os_take1,os_give1
 os_take1: take bone:1
 os_give1: give bone_charged:1
 #
-os_chargeall: folder os_chargeall1,os_chargeall2
-os_chargeall1: give bone_charged:%item.bone.amount%
-os_chargeall2: folder os_chargeall3 delay:1
-os_chargeall3: take bone:%item.bone.amount%
+os_chargeall: folder os_chargeall1,os_chargeall2,os_chargeall3
+os_chargeall1: point os_charged %item.bone.amount%
+os_chargeall2: take bone:%item.bone.amount%
+os_chargeall3: folder os_chargeall4,os_chargeall5 delay:3
+os_chargeall4: give bone_charged:%point.os_charged.amount%
+os_chargeall5: folder os_chargeall6 delay:1
+os_chargeall6: 'command bq %player% point del os_charged'
 #
 #
 # Rituel
@@ -3015,7 +3017,8 @@ potion_ilse5: effect INVISIBILITY 60 1
 # RANDOMIZER
 #
 ####################################################################################
-randomizer: folder paulette_randomizer,paul_randomizer,francis_randomizer delay:1
+randomizer: folder paulette_randomizer,paul_randomizer,francis_randomizer,daily_quester_reset
+daily_quester_reset: 'command dailyquesterreset'
 #
 # Paulette
 #
@@ -3034,27 +3037,58 @@ paulette_random31: setblock AIR -6750;55;2987;Gaia
 paulette_random32: setblock AIR -6751;55;2987;Gaia
 paulette_random33: setblock REDSTONE_TORCH_ON -6752;55;2987;Gaia
 #
-paulette_timer: folder obj_timer_paulette,tag_timer_paulette delay:0
+# Journal
+#
+journal_paulette1: journal add paulette1
+journal_paulette2: journal add paulette2
+journal_paulette3: journal add paulette3
+journal_paul1: journal add paul1
+journal_paul2: journal add paul2
+journal_paul3: journal add paul3
+journal_francis1: journal add francis1
+journal_francis2: journal add francis2
+journal_francis3: journal add francis3
+journal_paulette1_del: journal del paulette1
+journal_paulette2_del: journal del paulette2
+journal_paulette3_del: journal del paulette3
+journal_paul1_del: journal del paul1
+journal_paul2_del: journal del paul2
+journal_paul3_del: journal del paul3
+journal_francis1_del: journal del francis1
+journal_francis2_del: journal del francis2
+journal_francis3_del: journal del francis3
+#
+# Generic
+#
+daily_quester_on: folder daily_quester_on_exe delay:2
+daily_quester_on_exe: 'command dailyquesterstart %player%'
+daily_quester_off: folder daily_quester_off_exe delay:2
+daily_quester_off_exe: 'command dailyquesterdone %player%'
+#
+paulette_timer: folder obj_timer_paulette,tag_timer_paulette
 tag_timer_paulette: tag add timer_paulette
 obj_timer_paulette: objective start paulette_timer
 paulette_timer_up: tag del timer_paulette
 #
-paulette_occupe1: folder give_gateau_paulette,tag_fils_paulette delay:0
+paulette_occupe1: folder give_gateau_paulette,tag_fils_paulette,journal_paulette1,daily_quester_on
 give_gateau_paulette: give gateau_paulette
 tag_fils_paulette: tag add fils_paulette
-livraison_paulette_done: folder reput_athelas2_positif,take_gateau_paulette,paulette_cleaner,paulette_timer delay:0
+livraison_paulette_done: folder reput_athelas2_positif,take_gateau_paulette,paulette_cleaner,paulette_timer
 take_gateau_paulette: take gateau_paulette
 #
-paulette_occupe2: tag add paulette_oeuf
-paulette_ressources_done: folder reput_athelas2_positif,take_eggs,paulette_cleaner,paulette_timer delay:0
+paulette_occupe2: folder tag_paulette_oeuf,journal_paulette2,daily_quester_on
+tag_paulette_oeuf: tag add paulette_oeuf
+paulette_ressources_done: folder reput_athelas2_positif,take_eggs,paulette_cleaner,paulette_timer
 take_eggs: take egg:5
 #
-paulette_occupe3: tag add madame
+paulette_occupe3: folder tag_madame,journal_paulette3,daily_quester_on
+tag_madame: tag add madame
 madame_betteraves: tag add madame_betteraves
-betteraves_done: folder reput_athelas2_positif,take_betteraves,paulette_cleaner,paulette_timer delay:0
+betteraves_done: folder reput_athelas2_positif,take_betteraves,paulette_cleaner,paulette_timer
 take_betteraves: take soupe_betteraves
 #
-paulette_cleaner: folder tag_madame_remove,madame_betteraves_remove,tag_fils_paulette_remove,paulette_oeuf_remove delay:0
+paulette_cleaner: folder daily_quester_off,obj_timer_paulette_del,tag_madame_remove,madame_betteraves_remove,tag_fils_paulette_remove,paulette_oeuf_remove,journal_paulette1_del,journal_paulette2_del,journal_paulette3_del
+obj_timer_paulette_del: objective delete paulette_timer
 tag_madame_remove: tag del madame
 madame_betteraves_remove: tag del madame_betteraves
 tag_fils_paulette_remove: tag del fils_paulette
@@ -3081,30 +3115,32 @@ paul_random33: setblock REDSTONE_TORCH_ON -6752;53;2987;Gaia
 #
 pain_paul: give pain_paul
 #
-paul_timer: folder obj_timer_paul,tag_timer_paul delay:0
+paul_timer: folder obj_timer_paul,tag_timer_paul
 tag_timer_paul: tag add timer_paul
 obj_timer_paul: objective start paul_timer
 paul_timer_up: tag del timer_paul
 #
-paul_occupe1: folder give_pain_paul,tag_pain_paul delay:0
+paul_occupe1: folder give_pain_paul,tag_pain_paul,journal_paul1,daily_quester_on
 give_pain_paul: give pain_paul:10
 tag_pain_paul: tag add pain_paul
-livraison_paul_done: folder reput_athelas2_positif,take_pain_paul,paul_cleaner,paul_timer delay:0
+livraison_paul_done: folder reput_athelas2_positif,take_pain_paul,paul_cleaner,paul_timer
 take_pain_paul: take pain_paul:10
 #
-paul_occupe2: tag add paul_ble
-paul_ressources_done: folder reput_athelas2_positif,take_ble_paul,paul_cleaner,paul_timer delay:0
+paul_occupe2: folder tag_paul_ble,journal_paul2,daily_quester_on
+tag_paul_ble: tag add paul_ble
+paul_ressources_done: folder reput_athelas2_positif,take_ble_paul,paul_cleaner,paul_timer
 take_ble_paul: take ble:10
 #
-paul_occupe3: folder tag_pain_urgent,obj_pain_urgent delay:0
+paul_occupe3: folder tag_pain_urgent,obj_pain_urgent,journal_paul3,daily_quester_on
 tag_pain_urgent: tag add pain_urgent
 obj_pain_urgent: objective start pain_urgent
 pain_urgent_mess: 'message &dJ''ai fini de faire les pains, je devrais les donner à &fPaul&d.'
 tag_pain_urgent_done: tag add pain_urgent_done
-pain_urgent_done: folder reput_athelas3_positif,take_urgent_bread,paul_cleaner,paul_timer delay:0
+pain_urgent_done: folder reput_athelas3_positif,take_urgent_bread,paul_cleaner,paul_timer
 take_urgent_bread: take bread:3
 #
-paul_cleaner: folder tag_pain_paul_rem,paul_occupe2_rem,tag_pain_urgent_rem,tag_pain_urgent_done_rem delay:0
+paul_cleaner: folder daily_quester_off,obj_timer_paul_del,tag_pain_paul_rem,paul_occupe2_rem,tag_pain_urgent_rem,tag_pain_urgent_done_rem,journal_paul1_del,journal_paul2_del,journal_paul3_del
+obj_timer_paul_del: objective delete paul_timer
 tag_pain_paul_rem: tag del pain_paul
 paul_occupe2_rem: tag del paul_ble
 tag_pain_urgent_rem: tag del pain_urgent
@@ -3129,37 +3165,38 @@ francis_random31: setblock AIR -6754;55;2987;Gaia
 francis_random32: setblock AIR -6755;55;2987;Gaia
 francis_random33: setblock REDSTONE_TORCH_ON -6756;55;2987;Gaia
 #
-francis_timer: folder obj_timer_francis,tag_timer_francis delay:0
+francis_timer: folder obj_timer_francis,tag_timer_francis
 tag_timer_francis: tag add timer_francis
 obj_timer_francis: objective start francis_timer
 francis_timer_up: tag del timer_francis
 #
-francis_occupe1: folder tag_pain_francis,obj_pain_francis delay:0
+francis_occupe1: folder tag_pain_francis,obj_pain_francis,journal_francis1,daily_quester_on
 tag_pain_francis: tag add pain_francis
 obj_pain_francis: objective start obj_pain_francis
-pain_francis_done: folder pain_message,give_francis_pain,tag_paul_francis delay:0
+pain_francis_done: folder pain_message,give_francis_pain,tag_paul_francis
 pain_message: 'message &fPaul: &a&oVoici le pain que &fFrancis &a&oa commandé!'
 give_francis_pain: give pain_paul:2
 tag_paul_francis: tag add paul_francis
-francis_ressources_done: folder reput_athelas2_positif,take_pain_francis,francis_cleaner,francis_timer,money_p25 delay:0
+francis_ressources_done: folder reput_athelas2_positif,take_pain_francis,francis_cleaner,francis_timer,money_p25
 take_pain_francis: take pain_paul:2
 #
-francis_occupe2: folder give_francis_carot,tag_francis_carot delay:0
+francis_occupe2: folder give_francis_carot,tag_francis_carot,journal_francis2,daily_quester_on
 give_francis_carot: give carrot:10
 tag_francis_carot: tag add francis_carot
-francis_livraison_done: folder reput_athelas2_positif,take_carrot_francis,francis_cleaner,francis_timer,money_p25 delay:0
+francis_livraison_done: folder reput_athelas2_positif,take_carrot_francis,francis_cleaner,francis_timer,money_p25
 take_carrot_francis: take carrot:10
 #
-francis_occupe3: folder tag_betteraves_urgent,give_francis_betteraves delay:0
+francis_occupe3: folder tag_betteraves_urgent,give_francis_betteraves,journal_francis3,daily_quester_on
 tag_betteraves_urgent: tag add betteraves_urgent
 give_francis_betteraves: give betteraves:7
 take_francis_betteraves: take betteraves:7
 tarte_chef: give tarte_chef
 tag_tarte_chef: tag add tarte_chef
-betteraves_urgent_done: folder reput_athelas3_positif,tarte_chef_take,francis_cleaner,francis_timer,money_p50 delay:0
+betteraves_urgent_done: folder reput_athelas3_positif,tarte_chef_take,francis_cleaner,francis_timer,money_p50
 tarte_chef_take: take tarte_chef
 #
-francis_cleaner: folder tag_pain_francis_rem,paul_francis_rem,francis_carot_rem,betteraves_urgent_rem,tag_tarte_chef_rem delay:0
+francis_cleaner: folder daily_quester_off,obj_timer_francis_del,tag_pain_francis_rem,paul_francis_rem,francis_carot_rem,betteraves_urgent_rem,tag_tarte_chef_rem,journal_francis1_del,journal_francis2_del,journal_francis3_del
+obj_timer_francis_del: objective delete francis_timer
 tag_pain_francis_rem: tag del pain_francis
 paul_francis_rem: tag del paul_francis
 francis_carot_rem: tag del francis_carot

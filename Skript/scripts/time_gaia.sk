@@ -38,8 +38,16 @@ on join:
 		broadcast "%{_money_result}%"
 		wait 7 ticks
 		fire event "reput_athelas3_negatif" for player
+		wait 7 seconds
+	if {daily.quester.%player%} is set:
+		message "&c&lVous n'avez pas fini une quête journalière à temps !"
+		wait 2 ticks
+		fire event "reput_athelas1_negatif" for player
+		fire event "paulette_cleaner" for player
+		fire event "paul_cleaner" for player
+		fire event "francis_cleaner" for player
 #
-	wait 30 seconds
+	wait 20 seconds
 	if {event.double.xp} is 1:
 		send player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 		message "&aTous les XP gagnés sont doublés tous les samedis entre 18H et 20H !"
@@ -271,7 +279,14 @@ every 59 minutes in "Gaia":
 	set {_tmpO} to now
 	set {day.index} to day of week from date {_tmpO}
 	set {hour.system} to "%hour%"
-	wait 1 second
+#
+# Auto Debug
+#
+	loop all players:
+		if loop-player is in the region "nether_portal2":
+			set {_security_ouest_donjon} to 1
+	if {_security_ouest_donjon} is not set:
+		execute console command "resettingnetherportal2"
 #
 #
 # At Midnight

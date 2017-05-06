@@ -22,24 +22,28 @@ NPC_options:
     pointers: woodhave,stone_next,stonehave,third_next,fourth_next,thirdhave,fourthhave,keske,statue,statuehave,bonjour
   woodhave_ok:
     text: 'Parfait, passez les moi ! Cela nous permettra de réparer la première partie du Château, à savoir le flanc Nord ! C''est un excellent début !'
+    conditions: 'planks1000'
     events: norno_phase1,wood1000_take,journal_norno1_del,norno_price1
   stone_next_ok:
     text: 'Très bien ! Pour la suite nous allons avoir besoin de pierre... 2000 plus précisément !'
     events: journal_norno2
   stonehave_ok:
     text: 'Excellent, passez les moi ! Cela nous permettra de réparer la seconde partie du Château, à savoir le flanc Est !'
+    conditions: 'stone2000'
     events: norno_phase2,stone2000_take,journal_norno2_del,norno_price2
   third_next_ok:
     text: 'Je suis ravi de l''entendre ! Pour la suite nous allons avoir besoin de plusieurs choses : \n50 Pierres Taillées \n25 Escaliers de Pierre \n10 Coffres \net finalement 5 Lits.'
     events: journal_norno3
   thirdhave_ok:
     text: 'Parfait ! On pourra rendre vivable l''endroit et nous permettra de réparer la troisième partie du Château, à savoir le flanc Sud !'
+    conditions: 'and_third_norno'
     events: norno_phase3,third_take,journal_norno3_del,norno_price3
   fourth_next_ok:
     text: 'Pour finir il nous faudra : \n100 Pierres Taillées \n33 Lingots de Fer \n10 Lingots d''Or \n...et 5 Portes en Chêne.'
     events: journal_norno4
   fourthhave_ok:
     text: 'C''est INCROYABLE ! Je vais voir ce Château réparé de mon vivant ! \nMerci pour votre précieuse aide ! \nPrenez en guise de récompense cet argent et cette expérience. \nVous pouvez désormais retourner voir &2Casar &a&o!'
+    conditions: 'and_fourth_norno'
     events: norno_phase4,fourth_take,journal_norno4_del,norno_price4,norno_price5,journal_norno_trans_del,journal_casar_north
   statue_help:
     text: 'Nous avons pour projet d''ériger une statue en l''honneur de notre chef &2Casar &a&o! Il nous manque beaucoup de blocs pour la construire. \nSi vous voulez aider, apportez moi : \n250 Pierres Taillées \n50 Lingots de Fer \n25 Lingots d''Or \n5 Blocs de Diamant \net 2 blocs d''Emeraude'
@@ -47,9 +51,9 @@ NPC_options:
   statuehave_rep:
     text: 'Excellent, passez moi tout ça. Nous allons ériger la Statue le plus rapidement possible ! Prenez cet argent et cette expérience en guise de remerciement !'
     events: journal_norno5_del,take_statue,norno_phase5,norno_price6,norno_price7,norno_price8,norno_price9
-#
-# TAKE ON FROM HERE !
-#
+  liar:
+    text: 'Vous vous prenez pour qui ?! \nRevenez quand vous aurais vraiment les matériaux requis !'
+    events: 'default.reput_athelas1_negatif'
 #                #
 
 # Options Joueur #
@@ -70,7 +74,7 @@ player_options:
   woodhave:
     text: 'J''ai le bois qu''il vous faut pour la reconstruction du château !'
     conditions: 'planks1000,journal_norno1'
-    pointers: woodhave_ok
+    pointers: woodhave_ok,liar
   stone_next:
     text: 'Je veux vous aider à reconstruire la suite !'
     conditions: 'dwarf_castle_phase1,!dwarf_castle_phase2'
@@ -78,7 +82,7 @@ player_options:
   stonehave:
     text: 'J''ai les pierres qu''il vous faut pour la reconstruction du château !'
     conditions: 'stone2000,journal_norno2'
-    pointers: stonehave_ok
+    pointers: stonehave_ok,liar
   third_next:
     text: 'Je veux aider à reconstruire le Château !'
     conditions: 'dwarf_castle_phase2,!dwarf_castle_phase3'
@@ -86,7 +90,7 @@ player_options:
   thirdhave:
     text: 'J''ai ce qu''il vous faut pour la reconstruction du château !'
     conditions: 'and_third_norno,journal_norno3'
-    pointers: thirdhave_ok
+    pointers: thirdhave_ok,liar
   fourth_next:
     text: 'Je veux aider à finir la reconstruction du Château !'
     conditions: 'dwarf_castle_phase3,!dwarf_castle_phase4'
@@ -94,7 +98,7 @@ player_options:
   fourthhave:
     text: 'J''ai ce qu''il vous faut pour terminer la reconstruction du château !'
     conditions: 'and_fourth_norno,journal_norno4'
-    pointers: fourthhave_ok
+    pointers: fourthhave_ok,liar
   statue:
     text: 'Est-ce que je peux vous aider à faire autre chose ?'
     conditions: 'dwarf_castle_phase4,!dwarf_castle_phase5'

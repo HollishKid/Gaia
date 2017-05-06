@@ -10,7 +10,11 @@ NPC_options:
     pointers: bonjour
   oui:
     text: 'Elle m''envoie à manger c''est ça ? Merci pour le voyage !'
+    conditions: 'gateau_paulette'
     events: livraison_paulette_done
+  liar:
+    text: 'Que vouliez vous me donner ?'
+    conditions: '!gateau_paulette'
 ###################
 #Options du joueur#
 ###################
@@ -18,4 +22,4 @@ player_options:
   bonjour:
     text: 'Vous êtes le fils de Paulette ? J''ai quelque chose  pour vous !'
     conditions: 'gateau_paulette,tag_fils_paulette'
-    pointers: oui
+    pointers: oui,liar

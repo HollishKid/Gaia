@@ -760,6 +760,9 @@ saut_eau: item waterbucket:1
 tag_gorick: tag tag_gorick
 random33: random 10-100
 #
+#
+daily_quester: or tag_fils_paulette,paulette_oeuf,madame,madame_betteraves,tag_pain_paul,paul_ble,pain_urgent,pain_urgent_done,tag_pain_francis,tag_paul_francis,tag_francis_carot,betteraves_urgent,tag_tarte_chef
+#
 # Paulette
 #
 timer_paulette: tag timer_paulette

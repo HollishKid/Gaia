@@ -6,7 +6,7 @@ stop: 'false'
 ################
 NPC_options:
   normal:
-    text: 'Bonjour! Vous êtes à la recherche d''un bon pain ? Il vous coûtera seulement &f¤&2100 &a&o!'
+    text: 'Bonjour ! Vous êtes à la recherche d''un bon pain ? Il vous coûtera seulement &f¤&2100 &a&o!'
     conditions: 'timer_paul'
     pointers: pain,bonjour
   pain_buy_rep:
@@ -14,7 +14,7 @@ NPC_options:
     conditions: 'money_100'
     events: give_pain_paul,money_100
   pain_rep_funds:
-    text: 'Vous n''avez pas assez d''argent ...'
+    text: 'Vous n''avez pas assez d''argent...'
     conditions: '!money_100'
 #
   occupe_inprogress1:
@@ -43,10 +43,11 @@ NPC_options:
     events: paul_cleaner
     pointers: aide2,aide2_bis,non
   ressources_rep:
-    text: 'C''est gentil! Apportez moi &d10 blé &a&oalors !'
+    text: 'C''est gentil ! Apportez moi &d10 blé &a&oalors !'
     events: paul_occupe2
   aide2_bis_rep:
-    text: 'Merci beaucoup! Ca devrait me faire quelques pains !'
+    text: 'Merci beaucoup ! Ca devrait me faire quelques pains !'
+    conditions: 'paul_ble_have'
     events: paul_ressources_done
   occupe3:
     text: 'Je ne peux pas vous parler. J''ai du pain à faire en urgence !'
@@ -54,19 +55,23 @@ NPC_options:
     events: paul_cleaner
     pointers: aide3,non
   pain_rep:
-    text: 'Merci ! Il faut que les pains soient chauds, donc faites &d3 pains. \n&a&oUtilisez ma table de craft derrière si vous voulez.'
+    text: 'Merci ! Il faut que les pains soient chauds, donc faites &d3 pains. \n&a&oUtilisez mon établi derrière si vous voulez.'
     events: paul_occupe3
   aide3_bis_rep:
-    text: 'Merci beaucoup, je suis sauvé!'
+    text: 'Merci beaucoup, je suis sauvé !'
+    conditions: 'pain_urgent_have'
     events: pain_urgent_done
+  liar:
+    text: 'Ce n''est pas comme ça qu''on traite un boulanger de renom !'
+    events: reput_athelas1_negatif
 ###################
 #Options du joueur#
 ###################
 player_options:
   bonjour:
-    text: 'Bonjour à vous! Et ... non merci !'
+    text: 'Bonjour à vous ! Et... non merci !'
   pain:
-    text: 'Absolument!'
+    text: 'Absolument !'
     pointers: pain_buy_rep,pain_rep_funds
 #
 #
@@ -79,13 +84,13 @@ player_options:
   aide2_bis:
     text: 'J''ai le blé qu''il vous faut !'
     conditions: 'paul_ble,paul_ble_have'
-    pointers: aide2_bis_rep
+    pointers: aide2_bis_rep,liar
   aide3:
     text: 'Je peux m''en occuper si vous voulez !'
     pointers: pain_rep
   aide3_bis:
     text: 'J''ai les pains qu''il vous faut !'
     conditions: 'pain_urgent_done,pain_urgent_have'
-    pointers: aide3_bis_rep
+    pointers: aide3_bis_rep,liar
   non:
     text: 'Je reviendrais plus tard.'
