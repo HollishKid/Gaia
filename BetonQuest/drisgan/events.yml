@@ -667,7 +667,7 @@ hol_checkexit2: if !hol_checkin hol_removedie else nothing
 #
 #
 #
-hol_takeall: folder hol_iftnt,hol_ifpowder delay:1
+hol_takeall: folder hol_iftnt delay:1
 #
 hol_iftnt: if hol_hastnt hol_taketntfold else nothing
 hol_taketntfold: folder hol_taketnt,hol_iftnt delay:1
