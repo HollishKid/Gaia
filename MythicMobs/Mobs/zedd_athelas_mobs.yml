@@ -511,7 +511,7 @@ erek:
   - skill{s=castGuardian} ~onTimer:550
   - command{c="setblock -7411 46 3272 redstone_block"} ~onDeath 1
   Options:
-    MovementSpeed: 0.01
+    MovementSpeed: 0.3
     FollowRange: 40
     Collidable: true
     PreventOtherDrops: true
