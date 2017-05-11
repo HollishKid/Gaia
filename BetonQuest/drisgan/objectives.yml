@@ -13,7 +13,7 @@ eko_objkill: mmobkill erek amount:1 events:eko_erekdead
 #
 ########## Black Hole Erek
 #
-hol_delay: delay 240 events:hol_timerremove,hol_resetmess
+hol_delay: delay 720 events:hol_timerremove,hol_resetmess
 hol_die: die cancel respawn:-7365;51;3272;Gaia 90 events:hol_respawn
 #
 hol_obj1: location -7373;51;3292;Gaia 3 events:hol_pop2
