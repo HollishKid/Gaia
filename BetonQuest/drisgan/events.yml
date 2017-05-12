@@ -86,6 +86,9 @@ eko_mess8: 'message &6&oVous récupérez une lettre cachetée.'
 eko_givelettre: give lettre_cachetee:1
 #
 # replaced eko_q3startfolder with tempo_redirect
+eko_q2donefolder: if eko_lettre eko_q2donefolder2 else eko_punit
+eko_punit: folder default.reput_athelas1_negatif,eko_messbatardelombre
+eko_messbatardelombre: 'message &7&oNe tentez pas ce genre de choses.'
 eko_q2donefolder: folder eko_takelettre,eko_q2done,eko_q2end,eko_q2reward,eko_conversdone,eko_q3startfolder delay:2
 eko_q2reward: folder quest_point_1,eko_givechainlegs,eko_givechainlegsmess
 eko_givechainlegs: 'command sudo %player% gaiaitemgiver chainlegs'
@@ -531,7 +534,8 @@ hol_pop42: 'command mm m spawn acolyte 1 Gaia,-7413,43,3349'
 hol_pop43: 'command mm m spawn acolyte 1 Gaia,-7416,41,3355'
 #
 #
-hol_checkpopsalleB1: if !hol_shrekdead hol_popsalleB1 else nothing
+hol_checkpopsalleB1: folder hol_checkpopsalleB12 delay:2
+hol_checkpopsalleB12: if !hol_shrekdead hol_popsalleB1 else nothing
 hol_popsalleB1: folder hol_popsalleB01,hol_setairB1
 hol_popsalleB01: 'command mm m spawn Shrek 1 Gaia,-7413,40,3390'
 hol_setairB1: setblock AIR -7415;38;3389;Gaia
@@ -567,7 +571,8 @@ hol_pop74: 'command mm m spawn acolyte_ranged 1 Gaia,-7406,38,3251'
 hol_pop75: 'command mm m spawn acolyte 1 Gaia,-7398,38,3243'
 #
 #
-hol_checkpopsalleB2: if !hol_karadead hol_popsalleB2 else nothing
+hol_checkpopsalleB2: folder hol_checkpopsalleB22 delay:2
+hol_checkpopsalleB22: if !hol_karadead hol_popsalleB2 else nothing
 hol_popsalleB2: folder hol_popsalleB02,hol_setairB2
 hol_popsalleB02: 'command mm m spawn Kara 1 Gaia,-7409,29,3242'
 hol_setairB2: setblock AIR -7413;27;3238;Gaia
@@ -587,7 +592,8 @@ hol_erekstartfold: folder hol_objtnt,hol_objplacetnt
 hol_objtnt: objective start hol_objtnt
 hol_objplacetnt: objective start hol_objplacetnt
 #
-hol_checkpopsalleB3: if !hol_erekdead hol_popsalleB3 else nothing
+hol_checkpopsalleB3: folder hol_checkpopsalleB32 delay:2
+hol_checkpopsalleB32: if !hol_erekdead hol_popsalleB3 else nothing
 hol_popsalleB3: folder hol_erekstartfold,hol_popsalleB31,hol_poperekmess,hol_setairB3
 hol_setairB3: setblock AIR -7411;46;3272;Gaia
 hol_poperekmess: 'message &4Erek:&a&o C''est ça qu''ils envoient contre moi? Meurs vermisseau !!'
@@ -612,7 +618,7 @@ hol_givetntmess: 'message &6&oVous recevez une &2Charge explosive&6&o !'
 ### Phase 2
 #
 #
-hol_erekphase2: folder hol_ep2placeblock1,hol_ep2placeblock2,hol_depopsalleB31
+hol_erekphase2: folder hol_taketnt,hol_ep2placeblock1,hol_ep2placeblock2,hol_depopsalleB31
 hol_ep2placeblock21: setblock REDSTONE_BLOCK -7435;51;3274;Gaia
 hol_setair: setblock AIR -7435;51;3274;Gaia
 hol_ep2placeblock2: folder hol_ep2placeblock21,hol_poperek delay:4
@@ -661,7 +667,11 @@ hol_checkexit2: if !hol_checkin hol_removedie else nothing
 #
 #
 #
+hol_takeall: folder hol_iftnt delay:1
 #
+hol_iftnt: if hol_hastnt hol_taketntfold else nothing
+hol_taketntfold: folder hol_taketnt,hol_iftnt delay:1
+hol_taketnt: take erek_tnt:64
 #
 #
 #
