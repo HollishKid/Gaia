@@ -46,6 +46,7 @@ on join:
 		fire event "paulette_cleaner" for player
 		fire event "paul_cleaner" for player
 		fire event "francis_cleaner" for player
+		delete {daily.quester.%player%}
 #
 	wait 20 seconds
 	if {event.double.xp} is 1:
