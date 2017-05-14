@@ -64,7 +64,7 @@ NPC_options:
     pointers: histoire,magie,branching_out
   histoire_bis:
     text: 'Avec plaisir, &2%player% &a&o!'
-    events: histoire_folder
+    events: histoire_temple_tester
   magie_apprenti:
     text: 'Demandez à l''&2Apprenti &a&ode vous aider !'
   branching_out_ok:
