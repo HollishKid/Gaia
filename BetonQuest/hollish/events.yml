@@ -89,8 +89,9 @@ mage_entry_branching_out_del: journal del mage_entry_branching_out
 #
 histoire_temple_tester: if temple_cabin_full mage_cabin_full else histoire_folder
 mage_cabin_full: 'message &2Mage &f: &a&oMalheureusement, je suis actuellement occupé avec quelqu''un d''autre, revenez vers moi un peu plus tard !'
-histoire_folder: folder teleport_go,meca,tag_mage_entry delay:0
-tag_mage_entry: tag add tag_mage_entry
+histoire_folder: folder teleport_go,meca,tag_mage_entry,histoire_security delay:0
+tag_mage_entry: folder tag_mage_entry_exe conditions:!mageentry_approved
+tag_mage_entry_exe: tag add tag_mage_entry
 teleport_go: folder teleport_go_exe delay:3
 teleport_go_exe: teleport -7110;128;2421;Gaia
 teleport_back: folder teleport_back_exe delay:0
@@ -117,7 +118,7 @@ meca17: folder meca18,message17 delay:8
 meca18: folder meca19,npc_mage_off,npc_erudit_off,npc_moine_off,npc_minion_off delay:7
 meca19: folder meca20,image_biblio_off delay:6
 meca20: folder teleport_back delay:6
-message_welcome: 'message &2Mage&f: &a&oN''ayez pas peur &2%player%&a&o, vous êtes toujours vivant ! Je suis entré dans votre esprit pour mieux vous conter mon histoire...'
+message_welcome: 'message &2Mage &f: &a&oN''ayez pas peur &2%player%&a&o, vous êtes toujours vivant ! Je suis entré dans votre esprit pour mieux vous conter mon histoire...'
 message1: 'message &a&oTout cela commence il y a fort longtemps, pendant la Première Ère de notre temps, juste après la création du monde par &6Gaïa&a&o.'
 message2: 'message &a&oLe monde était alors harmonieux et opulent et la population prenait le temps d''apprécier sa nature et sa force.'
 message3: 'message &a&oLes habitants de cette Première Ère ont certainnement réussi à maîtriser cette force. Cet Art de Maîtrise est aujourd''hui perdu.'
@@ -134,8 +135,11 @@ message13: 'message &a&oDans ce &dSanctuaire&a&o, &6Ubu &a&oordonna aux 13 plus 
 message14: 'message &a&oIl nomma ensuite 4 Érudits pour qu''ils diffusent le savoir.'
 message15: 'message &a&oCes Érudits forment alors les Moines, qui sont chargées de rapporter leur savoir à la population actuelle et de façon locale.'
 message16: 'message &a&oLes Moines doivent d''abord passer par l''apprentissage en étant Minion auprès de tous les Érudits du &dSanctuaire&a&o.'
-message17: 'message &2Mage&f: &a&oVoici où nous en sommes donc de nos jours. Préparez vous, je vais progressivement vous faire revenir à vous même...'
+message17: 'message &2Mage &f: &a&oVoici où nous en sommes donc de nos jours. Préparez vous, je vais progressivement vous faire revenir à vous même...'
 #
+#
+histoire_security: objective start histoire_security
+histoire_security_exe: folder teleport_back conditions:in_temple_cabin
 #
 #
 mage_entry_story_leaver: folder image_world_eff,image_ftemp_eff,image_wtemp_eff,image_etemp_eff,image_atemp_eff,monde_off,image_biblio_off,npc_mage_off,npc_moine_off,npc_erudit_off,npc_minion_off

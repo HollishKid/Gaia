@@ -3087,7 +3087,7 @@ madame_betteraves: tag add madame_betteraves
 betteraves_done: folder reput_athelas2_positif,take_betteraves,paulette_cleaner,paulette_timer
 take_betteraves: take soupe_betteraves
 #
-paulette_cleaner: folder daily_quester_off,obj_timer_paulette_del,tag_madame_remove,madame_betteraves_remove,tag_fils_paulette_remove,paulette_oeuf_remove,journal_paulette1_del,journal_paulette2_del,journal_paulette3_del
+paulette_cleaner: folder paulette_timer_up,daily_quester_off,obj_timer_paulette_del,tag_madame_remove,madame_betteraves_remove,tag_fils_paulette_remove,paulette_oeuf_remove,journal_paulette1_del,journal_paulette2_del,journal_paulette3_del
 obj_timer_paulette_del: objective delete paulette_timer
 tag_madame_remove: tag del madame
 madame_betteraves_remove: tag del madame_betteraves
@@ -3139,7 +3139,7 @@ tag_pain_urgent_done: tag add pain_urgent_done
 pain_urgent_done: folder reput_athelas3_positif,take_urgent_bread,paul_cleaner,paul_timer
 take_urgent_bread: take bread:3
 #
-paul_cleaner: folder daily_quester_off,obj_timer_paul_del,tag_pain_paul_rem,paul_occupe2_rem,tag_pain_urgent_rem,tag_pain_urgent_done_rem,journal_paul1_del,journal_paul2_del,journal_paul3_del
+paul_cleaner: folder paul_timer_up,daily_quester_off,obj_timer_paul_del,tag_pain_paul_rem,paul_occupe2_rem,tag_pain_urgent_rem,tag_pain_urgent_done_rem,journal_paul1_del,journal_paul2_del,journal_paul3_del
 obj_timer_paul_del: objective delete paul_timer
 tag_pain_paul_rem: tag del pain_paul
 paul_occupe2_rem: tag del paul_ble
@@ -3195,7 +3195,7 @@ tag_tarte_chef: tag add tarte_chef
 betteraves_urgent_done: folder reput_athelas3_positif,tarte_chef_take,francis_cleaner,francis_timer,money_p50
 tarte_chef_take: take tarte_chef
 #
-francis_cleaner: folder daily_quester_off,obj_timer_francis_del,tag_pain_francis_rem,paul_francis_rem,francis_carot_rem,betteraves_urgent_rem,tag_tarte_chef_rem,journal_francis1_del,journal_francis2_del,journal_francis3_del
+francis_cleaner: folder francis_timer_up,daily_quester_off,obj_timer_francis_del,tag_pain_francis_rem,paul_francis_rem,francis_carot_rem,betteraves_urgent_rem,tag_tarte_chef_rem,journal_francis1_del,journal_francis2_del,journal_francis3_del
 obj_timer_francis_del: objective delete francis_timer
 tag_pain_francis_rem: tag del pain_francis
 paul_francis_rem: tag del paul_francis

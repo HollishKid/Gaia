@@ -198,7 +198,7 @@ regions:
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
-   'hol_salleb12':
+    'hol_salleb12':
         enterConsoleCommands:
         - 'bq event %player% drisgan.hol_enterb1check'
         enterPlayerCommands: ''

@@ -491,7 +491,7 @@ give_log: give oakwoodlog:10
 give_rod: give fishingrod_common:1
 or_reward1: if or_fish or_reward12 else or_punit
 or_punit: folder default.reput_athelas1_negatif,or_messbatardelombre
-or_messbatardelombre: '&7&omessage Ne tentez pas ce genre de choses.'
+or_messbatardelombre: 'message &7&oNe tentez pas ce genre de choses.'
 or_reward12: folder or_xp1,or_money1,or_takefish,or_q1done,or_endq1,or_removeobj,or_q1_journal_del delay:1
 or_takefish: take cookedfish:5
 or_xp1: 'command addxp %player% pêche 1000'

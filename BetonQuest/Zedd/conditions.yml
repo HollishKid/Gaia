@@ -86,7 +86,7 @@ var_pitch: tag var_pitch
 var_inconvers: tag var_inconvers
 var_q1start: tag var_q1start
 var_lavatear: item lava_tear:5
-var_ok: and lava_tear,var_watertear
+var_ok: and var_lavatear,var_watertear
 #
 zae_lavatear: item lava_tear:3
 var_watertear: item water_tear:5
