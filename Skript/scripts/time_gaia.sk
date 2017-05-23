@@ -52,9 +52,9 @@ on join:
 	if {event.double.xp} is 1:
 		send player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 		message "&aTous les XP gagnés sont doublés tous les mercredis entre 17H et 18H et tous les samedis entre 18H et 19H !"
-	else if {event.triple.xp} is 1:
-		send player title "&aEvent Triple XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
-		message "&aTous les XP gagnés sont triplés tous les mercredis entre 16H et 20H !"
+#	else if {event.triple.xp} is 1:
+#		send player title "&aEvent Triple XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+#		message "&aTous les XP gagnés sont triplés tous les mercredis entre 16H et 20H !"
 	else if {event.breach} is 1:
 		send player title "&c&lBrèche" with subtitle "Athelas est assiégé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 		message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"	
