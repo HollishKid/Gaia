@@ -189,25 +189,25 @@ every 5 minutes in "Gaia":
 	set {_tmpO} to now
 	set {day.index} to day of week from date {_tmpO}
 	set {hour.system} to "%hour%"
-#
-# Mercredi entre 16h et 20h
+# 
+# Mercredi entre 17h et 18h
 #
 	if {day.index} is "3":
-		if {hour.system} is "16":
-			if {event.triple.xp} is 0:
-				set {event.triple.xp} to 1
+		if {hour.system} is "17":
+			if {event.double.xp} is 0:
+				set {event.double.xp} to 1
 				execute console command "xprate 3 true"
 				broadcast "&aTous les XP gagnés sont triplés tous les mercredis entre 16H et 20H !"
 				loop all players:
-					send loop-player title "&aEvent Triple XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+					send loop-player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 			
-		else if {hour.system} is "20":
-			if {event.triple.xp} is 1:
+		else if {hour.system} is "18":
+			if {event.double.xp} is 1:
 				execute console command "xprate reset"
-				set {event.triple.xp} to 0
-				broadcast "&aEvent Triple XP &f- &cTerminé"
+				set {event.double.xp} to 0
+				broadcast "&aEvent Double XP &f- &cTerminé"
 				loop all players:
-					send loop-player title "&aEvent Triple XP" with subtitle "&cTerminé" for 10 seconds with 2 seconds fade in and 2 seconds fade out
+					send loop-player title "&aEvent Double XP" with subtitle "&cTerminé" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 #
 # Vendredi entre 19h et 22h
 #
@@ -232,7 +232,7 @@ every 5 minutes in "Gaia":
 					send loop-player title "&aBrèche" with subtitle "&aEnnemi repoussé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 					
 #
-# Samedi entre 18h et 20h
+# Samedi entre 18h et 19h
 #
 	else if {day.index} is "6":
 		if {hour.system} is "18":
@@ -243,7 +243,7 @@ every 5 minutes in "Gaia":
 				loop all players:
 					send loop-player title "&aEvent Double XP" with subtitle "actuellement en cours !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 			
-		else if {hour.system} is "20":
+		else if {hour.system} is "19":
 			if {event.double.xp} is 1:
 				execute console command "xprate reset"
 				set {event.double.xp} to 0
