@@ -106,6 +106,13 @@ athelas_out_n1: 'message &d&lJe devrais d''abord aller voir l''&dIntendant &d&le
 athelas_out_n2: teleport -6945;65;2956;Gaia
 #
 #
+herboriste_testeur: if herboriste herboriste_farm_welcome else herboriste_farm_out
+herboriste_farm_welcome: 'message &a&oBienvenue dans la Ferme de votre Guilde &2%player% &a&o!'
+herboriste_farm_out: folder herboriste_farm_out1,herboriste_farm_out2
+herboriste_farm_out1: 'message &c&oCette ferme est réservée aux membres de la Guilde des Herboristes.'
+herboriste_farm_out2: teleport -6951;65;3010;Gaia
+
+
 #
 #
 arena_testeur: if arena_occupied arena_testeur_disallow else nothing

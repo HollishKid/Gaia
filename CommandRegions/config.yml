@@ -537,6 +537,19 @@ regions:
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
+    'athelas_farm2':
+        enterConsoleCommands:
+        - 'bq event %player% default.herboriste_testeur'
+        - "title %player% times 20 100 20"
+        - 'title %player% title {"text":" ","color":"dark_purple"}'
+        - 'title %player% subtitle {"text":"Ferme des Herboristes","italic":true,"color":"gray"}'
+        enterPlayerCommands: ''
+        sendJoinMessage: true
+        joinMessage: ''
+        leaveConsoleCommands: ''
+        leavePlayerCommands: ''
+        sendLeaveMessage: false
+        leaveMessage: ''
     'start3':
         enterConsoleCommands:
         - 'bq event %player% default.player_testeur'
