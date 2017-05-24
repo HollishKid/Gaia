@@ -74,8 +74,8 @@ day3:
   NAME: '&aMercredi'
   ID: '35:3'
   LORE:
-    - 'De 16h à 20h :'
-    - '&cTriple Expérience'
+    - 'De 17h à 18h :'
+    - '&cDouble Expérience'
     - '&otoutes compétences !'
   POSITION-X: 4
   POSITION-Y: 3
@@ -104,7 +104,7 @@ day6:
   NAME: '&aSamedi'
   ID: '35:11'
   LORE:
-    - 'De 18h à 20h :'
+    - 'De 18h à 19h :'
     - '&cDouble Expérience'
     - '&otoutes compétences !'
   POSITION-X: 7

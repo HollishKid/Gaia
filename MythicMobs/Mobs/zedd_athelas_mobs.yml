@@ -502,8 +502,6 @@ erek:
   - 1 players
   Equipment:
   - mc_leather_helmet:4
-  DamageModifiers:
-  - ENTITY_EXPLOSION 250
   Skills:
   - skill{s=MobHealth} ~onDamaged >0 1
   - skill{s=HealthPack} ~onDamaged >8 0.08
