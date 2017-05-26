@@ -562,7 +562,60 @@ sub "combat_tracker":
 			wait 23 ticks
 			if {incombat.%{_fighter}%} is 0:
 				delete {incombat.%{_fighter}%}
+#
+#
+# Protection Animale
+#	
+# 	Réduction de lags en contrôlant 
+#	les exploitations de bétail.
+#
+#
+on rightclick on chicken:
+	if player is holding seeds:
+		invoke "animal_protection" from player and "chicken"
+	
+on rightclick on cow or sheep or mooshroom:
+	if player is holding wheat:	
+		invoke "animal_protection" from player and "cow"
+		
+on rightclick on sheep:
+	if player is holding wheat:	
+		invoke "animal_protection" from player and "sheep"
+		
+on rightclick on mooshroom:
+	if player is holding wheat:	
+		invoke "animal_protection" from player and "mooshroom"
+		
+on rightclick on pig:
+	if player is holding carrot:	
+		invoke "animal_protection" from player and "pig"
+		
+on rightclick on wolf:
+	if player is holding any food:	
+		invoke "animal_protection" from player and "wolf"
 
+#Non-utilisé, tout cheval spawné est remplacé par un MythicMob.		
+#on rightclick on horse:
+#	if player is holding golden carrot or golden apple:	
+#		invoke "animal_protection" from player and "horse"
+		
+sub "animal_protection":
+	loop entities in radius 16 around parameter 1:
+		if "%loop-entity%" is "%parameter 2%":
+			add 1 to {_loop.entities}
+	if {_loop.entities} > 10:
+		message "&d&oPour des raisons de protection de l'animal," to parameter 1
+		message "&d&oune limite réglementaire de &210 animaux &d&odu même type" to parameter 1
+		message "&d&odans un rayon de &216 blocs &d&oest en vigueur." to parameter 1
+		message "&c&oLe bétail excédentaire a été abattu." to parameter 1
+		loop entities in radius 16 around parameter 1:
+			if "%loop-entity%" is "%parameter 2%":
+				if {_loop.entities} > 10:
+					kill loop-entity
+					set {_loop.entities} to {_loop.entities} - 1
+				else:
+					stop
+				
 #
 # Disables rain & thunder in all worlds
 #			
