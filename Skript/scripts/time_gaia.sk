@@ -220,7 +220,6 @@ every 5 minutes in "Gaia":
 				broadcast "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"
 				loop all players:
 					send loop-player title "&c&lBrèche" with subtitle "Athelas est assiégé !" for 10 seconds with 2 seconds fade in and 2 seconds fade out
-					message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !" to loop-player
 			
 		else if {hour.system} is "22":
 			if {event.breach} is 1:
