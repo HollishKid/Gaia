@@ -1,0 +1,212 @@
+# Dynmap-WorldGuard configuration
+update:
+  period: 300
+layer:
+  name: Maisons et Terrains
+  hidebydefault: true
+  layerprio: 0
+  minzoom: 3
+use3dregions: false
+infowindow: <div class=\"infowindow\"><span style=\"font-size:120%;">%regionname%</span><br/>Locataire <span style="font-weight:bold;">%playermembers%<br/>%groupmembers%</span></div>
+regionstyle:
+  strokeColor: '#FF0000'
+  strokeOpacity: 0.8
+  strokeWeight: 3
+  fillColor: '#FF0000'
+  fillOpacity: 0.35
+  unownedStrokeColor: '#00FF00'
+visibleregions:
+- place_centrale1
+- place_centrale2
+- place_centrale3
+- place_centrale4
+- place_centrale5
+- place_centrale6
+- place_centrale7
+- place_centrale8
+- place_centrale9
+- place_centrale10
+- place_centrale11
+- place_centrale12
+- place_centrale13
+- place_centrale14
+- place_centrale15
+- place_centrale16
+- place_centrale17
+- place_centrale18
+- place_centrale19
+- place_centrale20
+- rue_du_pin1
+- rue_du_pin2
+- rue_du_pin3
+- rue_du_pin4
+- rue_du_pin5
+- rue_du_pin6
+- rue_du_pin7
+- rue_du_pin8
+- rue_du_pin9
+- rue_du_pin10
+- rue_du_pin11
+- rue_du_pin12
+- rue_du_pin13
+- rue_du_pin14
+- rue_du_pin15
+- rue_du_pin16
+- rue_du_pin17
+- rue_du_pin18
+- rue_du_pin19
+- rue_du_pin20
+- rue_du_pin21
+- rue_du_pin22
+- rue_du_pin23
+- rue_du_pin24
+- rue_bouffard_1
+- rue_bouffard_2
+- rue_bouffard_3
+- rue_bouffard_4
+- rue_bouffard_5
+- rue_bouffard_6
+- rue_bouffard_7
+- rue_bouffard_10
+- rue_bouffard_11
+- rue_bouffard_12
+- rue_bouffard_13
+- rue_de_la_guilde_1
+- rue_de_la_guilde_2
+- rue_de_la_guilde_3
+- rue_de_la_guilde_4
+- rue_de_la_guilde_5
+- rue_de_la_guilde_6
+- rue_de_la_guilde_7
+- rue_de_la_guilde_9
+- rue_duchamp_1
+- rue_duchamp_2
+- rue_duchamp_4
+- rue_duchamp_5
+- rue_duchamp_6
+- rue_duchamp_7
+- rue_duchamp_8
+- rue_duchamp_9
+- rue_duchamp_10
+- rue_duchamp_11
+- route_acacia_1
+- route_acacia_2
+- route_acacia_3
+- route_acacia_4
+- route_acacia_5
+- route_acacia_6
+- route_acacia_7
+- route_acacia_8
+- route_acacia_9
+- route_acacia_10
+- route_acacia_11
+- route_acacia_12
+- route_acacia_13
+- route_acacia_14
+- rue_arene_1
+- rue_arene_2
+- rue_arene_3
+- rue_arene_4
+- rue_arene_5
+- rue_arene_6
+- rue_arene_7
+- rue_arene_8
+- rue_arene_9
+- rue_arene_10
+- rue_arene_11
+- rue_arene_12
+- residence_1
+- residence_2
+- residence_3
+- residence_4
+- residence_5
+- residence_6
+- residence_7
+- residence_8
+- residence_9
+- residence_10
+- residence_11
+- residence_12
+- residence_13
+- residence_14
+- residence_15
+- residence_16
+- residence_17
+- residence_18
+- residence_19
+- residence_20
+- residence_21
+- residence_22
+- residence_23
+- residence_24
+- residence_25
+- residence_26
+- residence_27
+- residence_28
+- residence_29
+- residence_30
+- residence_31
+- residence_32
+- residence_33
+- residence_34
+- residence_35
+- residence_36
+- residence_37
+- residence_38
+- residence_39
+- residence_40
+- residence_41
+- residence_42
+- residence_43
+- residence_44
+- residence_45
+- residence_46
+- residence_47
+- residence_48
+- residence_49
+- residence_50
+- residence_51
+- residence_52
+- residence_53
+- residence_54
+- residence_55
+- residence_56
+- residence_57
+- residence_58
+- residence_59
+- residence_60
+- residence_61
+- residence_62
+- residence_63
+- residence_64
+- residence_65
+- residence_66
+- residence_67
+- residence_68
+- residence_69
+- residence_70
+- residence_71
+- residence_72
+- residence_73
+- residence_74
+- residence_75
+- rue_tarmen_1
+- rue_tarmen_2
+- rue_tarmen_3
+- rue_tarmen_4
+- rue_tarmen_5
+- rue_tarmen_6
+- rue_tarmen_7
+- rue_tarmen_8
+- rue_tarmen_9
+- rue_tarmen_10
+- rue_tarmen_11
+hiddenregions: []
+custstyle:
+  customregion1:
+    strokeColor: '#00FF00'
+ownerstyle:
+  kingoftheworld:
+    strokecolor: '#C0C0C0'
+maxdepth: 16
+updates-per-tick: 20

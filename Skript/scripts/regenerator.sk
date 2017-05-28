@@ -103,8 +103,37 @@ on leaves decay:
 	if event-block is in the region "east":
 		add location of event-block to {break.location.%{day.index}%::*}
 		add type of event-block to {break.type.%{day.index}%::*}
-	else if event-block is in the region "foret_athelas":
-		cancel event
-	else if event-block is in the region "foret_athelas2":
-		cancel event
-		
+
+#
+# Enregistre les arbres abattus avec TreeFeller
+#	dans la base adéquate.
+#
+#	Ne fonctionne pas avec l'acacia.
+#
+on block damage:
+	if event-block is wood:
+		wait 1 tick
+		if mcmmo event-player's TREE FELLER is enabled:
+			if event-block is in the region "east":
+				invoke "treefeller" from event-block and "%{day.index}%"
+			else if event-block is in the region "foret_athelas":
+				invoke "treefeller" from event-block and "foret"
+			else if event-block is in the region "foret_athelas2":
+				invoke "treefeller" from event-block and "foret2"
+
+
+sub "treefeller":
+	loop blocks in radius 2 around parameter 1:
+		if loop-block is wood:
+			if "%altitude of parameter 1%" is "%altitude of loop-block%":
+				add location of loop-block to {_feller.locations::*}
+	loop {_feller.locations::*}:
+		loop blocks above loop-value:
+			if loop-block is wood or leaves:
+				loop blocks in radius 3 around loop-block:
+					if loop-block-2 is wood or leaves:
+						if "%{break.location.%parameter 2%::*}%" does not contain "%location of loop-block-2%":
+							add location of loop-block-2 to {break.location.%parameter 2%::*}
+							add type of loop-block-2 to {break.type.%parameter 2%::*}
+			else:
+				exit loop
