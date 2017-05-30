@@ -605,7 +605,7 @@ sub "animal_protection":
 			add 1 to {_loop.entities}
 	if {_loop.entities} > 20:
 		message "&d&oPour des raisons de protection de l'animal," to parameter 1
-		message "&d&oune limite réglementaire de &210 animaux &d&odu même type" to parameter 1
+		message "&d&oune limite réglementaire de &220 animaux &d&odu même type" to parameter 1
 		message "&d&odans un rayon de &216 blocs &d&oest en vigueur." to parameter 1
 		message "&c&oLe bétail excédentaire a été abattu." to parameter 1
 		loop entities in radius 16 around parameter 1:

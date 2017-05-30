@@ -409,6 +409,7 @@ command /drisganignoretarget <player>:
 			execute console command "npc sel %loop-value%"
 			wait 2 ticks
 			execute console command "sentinel addignore player:%arg 1%"
+			wait 2 ticks
 #
 #
 #
