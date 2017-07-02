@@ -282,21 +282,34 @@ command /wandrestorer <player> <text> <text>:
 			if {_apprentice} meets betonquest condition "hollish.wand_store_%arg 2%":
 				if {_apprentice} meets betonquest condition "hollish.wand%arg 3%_inventory":
 					message "&d&oVous avez déjà cette Baguette dans votre inventaire." to {_apprentice}
-					message "&d&oPour la mettre à jour, tenez la en main et cliquez à nouveau." to {_apprentice}
+					message "&d&oPour la mettre à jour, tenez la en main et cliquez sur le bouton 'Mettre à jour'." to {_apprentice}
 				else if {_apprentice} meets betonquest condition "hollish.empty_1":
 					message "&d&oVous recevez votre Baguette." to {_apprentice}
-					message "&d&oSi vous ne l'aviez pas en main, tenez la en main et recliquez sur le bouton pour la mettre à jour." to {_apprentice}
 					execute console command "wandp %arg 1% %arg 2%bender"
 					fire event "hollish.wand_unstore_%arg 2%" for {_apprentice}
 					wait 2 ticks
 					if {_apprentice} meets betonquest condition "hollish.wand_%arg 2%":
 						invoke "wandupdater" from arg 1 and arg 2
 					else:
-						message "&d&oTenez votre Baguette en main et cliquez le bouton approprié pour la mettre à jour." to {_apprentice}
+						message "&d&oVous devez tenir votre Baguette en main. Cliquez le bouton 'Mettre à jour' une fois que vous l'aurez en main." to {_apprentice}
 				else:
 					message "&d&oVous n'avez pas de place dans votre inventaire." to {_apprentice}
 			else:
-				message "&d&oVous n'avez pas stocké cette Baguette." to {_apprentice}
+				if {_apprentice} meets betonquest condition "hollish.wand%arg 3%_inventory":
+					message "&d&oVous avez déjà cette Baguette dans votre inventaire." to {_apprentice}
+					message "&d&oPour la mettre à jour, tenez la en main et cliquez sur le bouton 'Mettre à jour'." to {_apprentice}
+				else:
+					message "&d&oIl semblerait que vous ayez perdu votre Baguette." to {_apprentice}
+					if {_apprentice} meets betonquest condition "hollish.empty_1":
+						message "&d&oElle vous a été correctement rendue." to {_apprentice}
+						execute console command "wandp %arg 1% %arg 2%bender"
+						wait 2 ticks
+						if {_apprentice} meets betonquest condition "hollish.wand_%arg 2%":
+							invoke "wandupdater" from arg 1 and arg 2
+						else:
+							message "&d&oVous devez tenir votre Baguette en main. Cliquez le bouton 'Mettre à jour' une fois que vous l'aurez en main." to {_apprentice}
+					else:
+						message "&d&oVous n'avez pas assez de place dans votre inventaire pour la récupérer." to {_apprentice}
 		else:
 			message "&d&oVous n'êtes pas en possession de cette Baguette." to {_apprentice}
 		
