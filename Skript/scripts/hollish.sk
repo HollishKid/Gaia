@@ -70,6 +70,21 @@ command /liberer <player>:
 		message "&2%arg 1% &d&oa été libéré de prison."
 #
 #
+# Particules de Téléportation
+#
+#
+on command "/spawn":
+	set {_ploc} to location of player
+	loop 5 times:
+		drawComplexCircle particle "redstone", RGB 255, 255, 255, center player, id "circle.%loop-value%.%player%", rainbowMode false, randomRotation true, radius 1.5, density 20, start 0, visibleRange 30
+		wait 2 seconds and 1 tick
+		if {_ploc} is not location of player:
+			loop 5 times:
+				stopEffect id "circle.%loop-value-2%.%player%"
+			exit loop
+	loop 5 times:
+		stopEffect id "circle.%loop-value%.%player%"
+#
 #
 # Grades Royaux
 #
