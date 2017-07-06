@@ -43,6 +43,11 @@ groups:
     - -modifyworld.blocks.place.15
     - -modifyworld.blocks.place.16
     - -modifyworld.blocks.place.21
+    - -modifyworld.blocks.place.56
+    - -modifyworld.blocks.place.73
+    - -modifyworld.blocks.place.74
+    - -modifyworld.blocks.place.129
+    - -modifyworld.blocks.place.153
     - -modifyworld.items.craft.381
     - -townywands.cmd.townywands
     - -townywands.cmd.reload
@@ -113,6 +118,9 @@ groups:
     - chestcommands.open.network.yml
     - chestcommands.open.villes.yml
     - chestcommands.open.events.yml
+    - chestcommands.open.packages.yml
+    - chestcommands.open.charon.yml
+    - chestcommands.open.charonshop.yml
     - chestcommands.open.craft_custom.yml
     - chestcommands.open.craft_furnace.yml
     - chestcommands.open.craft_diamant.yml
