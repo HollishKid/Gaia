@@ -43,7 +43,7 @@ spawn:
   LORE:
     - 'Vous amène au Spawn.'
     - ' '
-    - 'Utilisation: &l/spawn'
+    - 'Utilisation : &l/spawn'
   ID: torch
   POSITION-X: 4
   POSITION-Y: 1  
@@ -70,12 +70,12 @@ home:
   POSITION-Y: 1
   
 competences:
-  COMMAND: 'open: competences.yml'
+  COMMAND: 'competences'
   NAME: '&6Compétences'
   LORE:
     - 'Gestionnaire des Compétences'
     - ' '
-    - 'Utilisation: &l/competences'
+    - 'Utilisation : &l/competences'
     - '(alias: /compet, /c)'
   ID: diamond axe
   POSITION-X: 5
@@ -89,9 +89,9 @@ journal:
     - 'actualise le Journal.'
     - ' '
     - '&lDocument Important'
-    - '&là Consulter!'
+    - '&là Consulter !'
     - ' '
-    - 'Utilisation: &l/journal'
+    - 'Utilisation : &l/journal'
   ID: book
   POSITION-X: 6
   POSITION-Y: 3
@@ -110,7 +110,7 @@ sac:
     - 'pour libérer de la place'
     - 'dans votre inventaire.'
     - ' '
-    - 'Utilisation: &l/sac'
+    - 'Utilisation : &l/sac'
   POSITION-X: 4
   POSITION-Y: 3
   
@@ -122,6 +122,19 @@ menu-close:
   POSITION-X: 9
   POSITION-Y: 1
 
+packages:
+  COMMAND: 'open: packages.yml'
+  NAME: '&6Packages'
+  LORE:
+    - '&aCliquez ici pour activer'
+    - '&aou désactiver vos achats'
+    - '&adans la Boutique de Charon'
+    - '&aou la Boutique en Ligne.'
+  ID: ender chest
+  POSITION-X: 1
+  POSITION-Y: 1
+  KEEP-OPEN: true  
+  
 enpoche:
   COMMAND: 'console: bq event {player} default.account'
   NAME: '&6Argent en poche'
@@ -132,7 +145,7 @@ enpoche:
     - '&ovotre solde de compte.'
   ID: gold ingot
   POSITION-X: 1
-  POSITION-Y: 1
+  POSITION-Y: 3
   KEEP-OPEN: true
 
 dyn:
@@ -143,7 +156,7 @@ dyn:
     - 'Affiche un lien direct vers'
     - 'la Carte Dynamique dans le tchat.'
   POSITION-X: 1
-  POSITION-Y: 2
+  POSITION-Y: 4
 
 site:
   COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le site.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
@@ -153,7 +166,7 @@ site:
     - 'Affiche un lien direct vers'
     - 'le Guide dans le tchat.'
   POSITION-X: 1
-  POSITION-Y: 3
+  POSITION-Y: 5
 
 chanels:
   COMMAND: 'open: chanels.yml'
