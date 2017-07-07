@@ -36,7 +36,7 @@ NPC_options:
     conditions: Cs_Av
     pointer: play_01
   npc_02:
-    text: 'Mike, ...,ah vous avez l''air de le connaître vu votre expression.'
+    text: 'Mike, ..., ah vous avez l''air de le connaître vu votre expression.'
     pointer: play_02
   npc_03:
     text: 'Je vois, alors allé lui parler, il a des infos.'
