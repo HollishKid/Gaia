@@ -131,7 +131,7 @@ on vehicle exit:
 #
 #
 on load:
-	#discord login to user with token "MjkyODI4MDc5ODEyNzcxODQx.C69tDQ.0eb-o2euVhQRzgzUMKNZ1XWAC48" with name "Gaia"
+	discord login to user with token "MjkyODI4MDc5ODEyNzcxODQx.C69tDQ.0eb-o2euVhQRzgzUMKNZ1XWAC48" with name "Gaia"
 	broadcast "&aLoggé sur Discord !"
 	discord send message "Le Monde de Gaïa vient de s'ouvrir." to channel with id "186938785026539523" as bot "Gaia"
 	discord send message "Merci de ne pas vous ""spam-connecter""." to channel with id "186938785026539523" as bot "Gaia"
