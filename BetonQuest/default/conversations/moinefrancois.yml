@@ -50,7 +50,7 @@ NPC_options:
 #
 #
   spirituality_win_rep:
-    text: 'Je connais un rituel qui vous permet de gagner plus de Spiritualité. Il vous suffit de vous accroupir dans un Spiritualium pendant 10 secondes. \nAinsi vous gagnerez deux fois plus de Spiritualité pendant 30 minutes lorsque vous enterez un Os Chargé !'
+    text: 'Je connais un rituel qui vous permet de gagner plus de Spiritualité. \nIl vous suffit de vous accroupir dans un Spiritualium pendant 10 secondes. \nAinsi vous gagnerez deux fois plus de Spiritualité pendant 30 minutes lorsque vous enterez un Os Chargé !'
 #                #
 
 # Options Joueur #
@@ -98,7 +98,7 @@ player_options:
     conditions: 'francois_apprenti,!francois_burried_gros_os'
     pointers: apprenti_rep
   burriergrosos:
-    text: 'J''ai enterré le Gros Os; une forte Spiritualité s''est emparée de moi !'
+    text: 'J''ai enterré le Gros Os ; une forte Spiritualité s''est emparée de moi !'
     conditions: 'francois_burried_gros_os'
     pointers: burriergrosos_rep
 #

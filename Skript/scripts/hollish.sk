@@ -41,34 +41,15 @@ command /promotion <player> <text>:
 # Authme
 #
 #
-command /thisisthepasswordaddercommand <text> <text>:
+command /thisisthepasswordaddercommand:
 	trigger:
 		add player to {player.list::*}
-		add 1 to {player.count}
-		set {password.%player%} to arg 2
-#
-command /thisisthepasswordchangercommand <text> <text>:
-	trigger:
-		set {password.%player%} to arg 2
 #		
-command /thisistheemailaddercommand <text> <text>:
-	trigger:
-		add player to {email.list::*}
-		add 1 to {email.count}
-		set {email.%player%} to arg 2
-#		
-command /thisisthechangerecoverycommand <text> <text>:
-	trigger:			
-		add arg 2 to {email.%player%::*}
-		set {email.%player%} to arg 2
-#		
-command /hbackdoorchecker <text>:
+command /serverinfo:
 	executable by: console
 	trigger:
-		message "     &6~ Rapport sur &2%arg 1% &6~"
-		message "Mot de passe : %{password.%arg 1%}%"
-		message "Email : %{email.%arg 1%}%"
-		message "Total Mails %{email.count}%"
+		message "=== Information Serveur Gaïa MMORPG ==="
+		message "Nombre de joueurs inscrits : %size of {player.list::*}%"
 #
 command /sanction <text> <player>:
 	executable by: players and console
@@ -89,41 +70,57 @@ command /liberer <player>:
 		message "&2%arg 1% &d&oa été libéré de prison."
 #
 #
+# Particules de Téléportation
 #
-# Banking System
+#
+on command "/spawn":
+	set {_ploc} to location of player
+	loop 5 times:
+		drawComplexCircle particle "redstone", RGB 255, 255, 255, center player, id "circle.%loop-value%.%player%", rainbowMode false, randomRotation true, radius 1.5, density 20, start 0, visibleRange 30
+		wait 2 seconds and 1 tick
+		if {_ploc} is not location of player:
+			loop 5 times:
+				stopEffect id "circle.%loop-value-2%.%player%"
+			exit loop
+	loop 5 times:
+		stopEffect id "circle.%loop-value%.%player%"
 #
 #
-on chat:
-	if message starts with "Depot:":
-		if player is in the region "athelas_bank":
-			set {_montant_depot::*} to groups 0 of "%message%" matched to "\d+$"
-			if {_montant_depot::1} is set:
-				cancel event
-				execute console command "bq point %player% add depot %{_montant_depot::1}%"
-				message "Vous déposez %{_montant_depot::1}%"
-				wait 2 ticks
-				execute console command "bq event %player% default.banking_compte_enter"
+# Grades Royaux
+#
+#
+command /commandedegradesroyaux <text> <text> <number>:
+	trigger:
+		if player meets betonquest condition "grade_ecuyer":
+			if player meets betonquest condition "%arg 2%":
+				set {_span} to arg 3
+				set {_sincelog} to difference between first login of player and now converted into days
+				if {_sincelog} is bigger than {_span}:
+					execute console command "pex user %player% prefix ""§6[§2%arg 1%§6]"""
+					message "&d&oVous venez d'adopter le Grade &2%arg 1%&d&o."
+					fire betonquest event "grades_cleaner" for player
+					wait 7 ticks
+					fire betonquest event "grade_%arg 1%" for player
+				else:
+					message "&d&oVous n'avez pas assez d'ancienneté pour ce grade."
+					message "&d&oSeulement inscrit depuis &2%{_sincelog}% &d&ojours / &2%arg 3% &d&orequis."
 			else:
-				message "&d&oVous devez spécifier un nombre entier et positif."
-				cancel event
+				message "&d&oVous n'avez pas assez de Points de Quête pour ce grade."
 		else:
-			message "&d&oVous ne pouvez effectuer de Dépôt qu'au sein de la Banque d'Athelas."
-			cancel event
-	else if message starts with "Retrait:":
-		if player is in the region "athelas_bank":
-			set {_montant_retrait::*} to groups 0 of "%message%" matched to "\d+$"
-			if {_montant_retrait::1} is set:
-				cancel event
-				execute console command "bq point %player% add retrait %{_montant_retrait::1}%"
-				message "Vous retirez %{_montant_retrait::1}%"
-				wait 2 ticks
-				execute console command "bq event %player% default.banking_poche_enter"
-			else:
-				message "&d&oVous devez spécifier un nombre entier et positif."
-				cancel event
+			message "&d&oVous devez être Écuyer pour adopter un grade supérieur."
+#
+#
+# Vehicule Management "non-east"
+#
+#
+on vehicle exit:
+	set {_vehicle} to vehicle of the player
+	if {_vehicle} is boat:
+		if event-player is in the region "east":
+			stop
 		else:
-			message "&d&oVous ne pouvez effectuer de Retrait qu'au sein de la Banque d'Athelas."
-			cancel event
+			message "&d&cVous faites couler le bateau en le quittant !"
+			delete vehicle of the player
 #
 #
 #
@@ -139,177 +136,166 @@ on load:
 	discord send message "Le Monde de Gaïa vient de s'ouvrir." to channel with id "186938785026539523" as bot "Gaia"
 	discord send message "Merci de ne pas vous ""spam-connecter""." to channel with id "186938785026539523" as bot "Gaia"
 
-
+#
+#
+# Global Chat Management
+#
+#
 on chat:
 	cancel event
-	set {_chat} to message	
-	replace every "§1" and "§2" and "§3" and "§4" and "§5" and "§6" and "§7" and "§8" and "§9" and "§u" and "§l" and "§o" and "§u" with "" in {_chat}
-	replace every "&1" and "&2" and "&3" and "&4" and "&5" and "&6" and "&7" and "&8" and "&9" and "&u" and "&l" and "&o" and "&u" with "" in {_chat}
-	replace every "§a" and "§b" and "§c" and "§d" and "§e" and "§f" with "" in {_chat}
-	replace every "&a" and "&b" and "&c" and "&d" and "&e" and "&f" with "" in {_chat}
-	
-	if {_chat} contains "!l":
+
+#
+# Banking
+#
+	if message starts with "Depot:":
+		if player is in the region "athelas_bank":
+			if player meets betonquest condition "client":
+				set {_montant_depot::*} to groups 0 of "%message%" matched to "\d+$"
+				if {_montant_depot::1} is set:
+					execute console command "bq point %player% add depot %{_montant_depot::1}%"
+					message "Vous déposez %{_montant_depot::1}%"
+					wait 2 ticks
+					execute console command "bq event %player% default.banking_compte_enter"
+					stop
+				else:
+					message "&d&oVous devez spécifier un nombre entier et positif."
+					stop
+			else:
+				message "&d&oVous devez être client à la Banque pour effectuer cette opération."
+				message "&d&oAdressez vous à un Banquier au sein d'une Banque."
+				stop
+		else:
+			message "&d&oVous ne pouvez effectuer de Dépôt qu'au sein de la Banque d'Athelas."
+			stop
+#
+	else if message starts with "Retrait:":
+		if player is in the region "athelas_bank":
+			if player meets betonquest condition "client":
+				set {_montant_retrait::*} to groups 0 of "%message%" matched to "\d+$"
+				if {_montant_retrait::1} is set:
+					execute console command "bq point %player% add retrait %{_montant_retrait::1}%"
+					message "Vous retirez %{_montant_retrait::1}%"
+					wait 2 ticks
+					execute console command "bq event %player% default.banking_poche_enter"
+					stop
+				else:
+					message "&d&oVous devez spécifier un nombre entier et positif."
+					stop
+			else:
+				message "&d&oVous devez être client à la Banque pour effectuer cette opération."
+				message "&d&oAdressez vous à un Banquier au sein d'une Banque."
+				stop
+		else:
+			message "&d&oVous ne pouvez effectuer de Retrait qu'au sein de la Banque d'Athelas."
+			stop
+
+#
+# Wands
+#
+	else if message is "Ilcë":
+		message "&d&oVoici le Gestionnaire de Baguettes."
+		execute console command "chestcommands open wandmanager.yml %player%"
+		stop
+#
+	set {chat.%player%} to message	
+	replace every "§1" and "§2" and "§3" and "§4" and "§5" and "§6" and "§7" and "§8" and "§9" and "§u" and "§l" and "§o" and "§u" with "" in {chat.%player%}
+	replace every "&1" and "&2" and "&3" and "&4" and "&5" and "&6" and "&7" and "&8" and "&9" and "&u" and "&l" and "&o" and "&u" with "" in {chat.%player%}
+	replace every "§a" and "§b" and "§c" and "§d" and "§e" and "§f" with "" in {chat.%player%}
+	replace every "&a" and "&b" and "&c" and "&d" and "&e" and "&f" with "" in {chat.%player%}
+#
+	if {chat.%player%} contains "!l":
 		if {l.channel.%player%} is set:
-			replace every "!l" with "" in {_chat}
+			replace every "!l" with "" in {chat.%player%}
 			loop all players in radius 75 around player's location:
 				if {l.channel.%loop-player%} is set:
-					message "&6[&9Local&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
-					
-			set {_l} to length of {_chat}
-			if {_l} > 80:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
-				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
-				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
-				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-
-			else if {_l} > 50:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
-				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-				
-			else if {_l} > 20:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-			else:
-				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+					message "&6[&9Local&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% %player's suffix%: &7%{chat.%player%}%" to loop-player
+			
+			invoke "holographic_chat" from player
 					
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aLocal&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
 			
-	else if {_chat} contains "!c":
+	else if {chat.%player%} contains "!c":
 		if {c.channel.%player%} is set:
-			replace every "!c" with "" in {_chat}
+			replace every "!c" with "" in {chat.%player%}
+			discord send message "%player% %player's suffix%: %{chat.%player%}%" to channel with id "332188388767694852" as bot "Gaia"
 			loop all players:
 				if {c.channel.%loop-player%} is set:
-					message "&6[&9Comm.&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
+					message "&6[&9Comm.&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% %player's suffix%: &7%{chat.%player%}%" to loop-player
 					
-			set {_l} to length of {_chat}
-			if {_l} > 80:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
-				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
-				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
-				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-
-			else if {_l} > 50:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
-				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-				
-			else if {_l} > 20:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-			else:
-				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+			invoke "holographic_chat" from player
 					
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aCommerce&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
 		
-	else if {_chat} contains "!a":
+	else if {chat.%player%} contains "!a":
 		if {a.channel.%player%} is set:
-			replace every "!a" with "" in {_chat}
+			replace every "!a" with "" in {chat.%player%}
 			loop all players:
 				if {a.channel.%loop-player%} is set:
-					message "&6[&9Staff&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
+					message "&6[&9Staff&6]%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% %player's suffix%: &7%{chat.%player%}%" to loop-player
 					
-			set {_l} to length of {_chat}
-			if {_l} > 80:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
-				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
-				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
-				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-
-			else if {_l} > 50:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
-				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-				
-			else if {_l} > 20:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-			else:
-				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+			invoke "holographic_chat" from player
 					
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aStaff&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
 	else:
 		if {g.channel.%player%} is set:
-			discord send message "%player% : %{_chat}%" to channel with id "186938785026539523" as bot "Gaia"
+			discord send message "%player% %player's suffix%: %{chat.%player%}%" to channel with id "186938785026539523" as bot "Gaia"
 			loop all players:
 				if {g.channel.%loop-player%} is set:
-					message "%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% : &7%{_chat}%" to loop-player
+					message "%player's prefix%&7[&2%mcmmo powerlevel of player%&7]&f%player% %player's suffix%: &7%{chat.%player%}%" to loop-player
 					
-			set {_l} to length of {_chat}
-			if {_l} > 80:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
-				set {_st2} to "%subtext of {_chat} from characters 36 to 65%"
-				set {_st3} to "%subtext of {_chat} from characters 66 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.3, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
-				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st3}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-
-			else if {_l} > 50:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to 35%"
-				set {_st2} to "%subtext of {_chat} from characters 36 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 3.1, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st2}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-				
-			else if {_l} > 20:
-				set {_st} to "%subtext of {_chat} from characters 1 to 20%"
-				set {_st1} to "%subtext of {_chat} from characters 21 to (the length of {_chat})%"
-				bind hologram "%{_st}%" to player for 12 seconds offset by 0.0, 2.9, 0.0
-				bind hologram "%{_st1}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
-			else:
-				bind hologram "%{_chat}%" to player for 12 seconds offset by 0.0, 2.7, 0.0
+			invoke "holographic_chat" from player
 					
 		else:
 			message "&c&oVous n'avez pas activé le Chanel &aGlobal&c&o."
 			message "&d&oTapez &a/chanel aide &d&opour gérer vos Chanels de Discussion."
-			
-			
+
+#
+
+sub "holographic_chat":
+	set {_chatter} to "%parameter 1%" parsed as player
+	set {_l} to length of {chat.%{_chatter}%}
+	wait 5 ticks
+	if {_l} > 80:
+		set {_st} to "%subtext of {chat.%{_chatter}%} from characters 1 to 20%"
+		set {_st1} to "%subtext of {chat.%{_chatter}%} from characters 21 to 35%"
+		set {_st2} to "%subtext of {chat.%{_chatter}%} from characters 36 to 65%"
+		set {_st3} to "%subtext of {chat.%{_chatter}%} from characters 66 to (the length of {chat.%{_chatter}%})%"
+		bind hologram "%{_st}%" to {_chatter} for 12 seconds offset by 0.0, 3.3, 0.0
+		bind hologram "%{_st1}%" to {_chatter} for 12 seconds offset by 0.0, 3.1, 0.0
+		bind hologram "%{_st2}%" to {_chatter} for 12 seconds offset by 0.0, 2.9, 0.0
+		bind hologram "%{_st3}%" to {_chatter} for 12 seconds offset by 0.0, 2.7, 0.0
+
+	else if {_l} > 50:
+		set {_st} to "%subtext of {chat.%{_chatter}%} from characters 1 to 20%"
+		set {_st1} to "%subtext of {chat.%{_chatter}%} from characters 21 to 35%"
+		set {_st2} to "%subtext of {chat.%{_chatter}%} from characters 36 to (the length of {chat.%{_chatter}%})%"
+		bind hologram "%{_st}%" to {_chatter} for 12 seconds offset by 0.0, 3.1, 0.0
+		bind hologram "%{_st1}%" to {_chatter} for 12 seconds offset by 0.0, 2.9, 0.0
+		bind hologram "%{_st2}%" to {_chatter} for 12 seconds offset by 0.0, 2.7, 0.0
+				
+	else if {_l} > 20:
+		set {_st} to "%subtext of {chat.%{_chatter}%} from characters 1 to 20%"
+		set {_st1} to "%subtext of {chat.%{_chatter}%} from characters 21 to (the length of {chat.%{_chatter}%})%"
+		bind hologram "%{_st}%" to {_chatter} for 12 seconds offset by 0.0, 2.9, 0.0
+		bind hologram "%{_st1}%" to {_chatter} for 12 seconds offset by 0.0, 2.7, 0.0
+	else:
+		bind hologram "%{chat.%{_chatter}%}%" to {_chatter} for 12 seconds offset by 0.0, 2.7, 0.0
+		
+	delete {chat.%{_chatter}%}
+#
+#
+# Discord Chat Transmission
+#
+#		
 on discord guild message receive seen by "Gaia":
 	set {_discord_id} to event-user
 	set {_discord.message} to message
-#
-#THIS BREAKS {discord.message} WHICH BECOMES MESSAGE ID
-#	replace every "§1" and "§2" and "§3" and "§4" and "§5" and "§6" and "§7" and "§8" and "§9" and "§u" and "§l" and "§o" and "§u" with "" in {_discord.message}
-#	replace every "&1" and "&2" and "&3" and "&4" and "&5" and "&6" and "&7" and "&8" and "&9" and "&u" and "&l" and "&o" and "&u" with "" in {_discord.message}
-#	replace every "§a" and "§b" and "§c" and "§d" and "§e" and "§f" with "" in {_discord.message}
-#	replace every "&a" and "&b" and "&c" and "&d" and "&e" and "&f" with "" in {_discord.message}
-#
 	loop all players:
 		if {g.channel.%loop-player%} is set:
 			message "§6[§2Discord§6] §f%discord name of {_discord_id}% : §7%{_discord.message}%" to loop-player
@@ -333,14 +319,14 @@ command /chanel <text>:
 				message "&c&oVous désactivez le Chanel &aGlobal&d&o."
 			else:
 				set {g.channel.%player%} to 1
-				message "&a&oVous activez dans le Chanel &aGlobal&d&o."
+				message "&a&oVous activez le Chanel &aGlobal&d&o."
 		else if arg 1 is "l" or "local":
 			if {l.channel.%player%} is set:
 				delete {l.channel.%player%}
 				message "&c&oVous désactivez le Chanel &aLocal&d&o."
 			else:
 				set {l.channel.%player%} to 1
-				message "&a&oVous activez dans le Chanel &aLocal&d&o."
+				message "&a&oVous activez le Chanel &aLocal&d&o."
 				message "&d&oDiscutez avec les personnes dans un rayon de 75 autour de vous."
 				message "&d&oUtilisez &a!l &d&opour parler dans ce Chanel."
 		else if arg 1 is "c" or "commerce":
@@ -349,7 +335,7 @@ command /chanel <text>:
 				message "&c&oVous désactivez le Chanel &aCommerce&d&o."
 			else:
 				set {c.channel.%player%} to 1
-				message "&a&oVous activez dans le Chanel &aCommerce&d&o."
+				message "&a&oVous activez le Chanel &aCommerce&d&o."
 				message "&d&oDiscutez avec les personnes souhaitant faire du commerce."
 				message "&d&oUtilisez &a!c &d&opour parler dans ce Chanel."
 		else if arg 1 is "staff" or "admin":
@@ -359,7 +345,7 @@ command /chanel <text>:
 					message "&c&oVous désactivez le Chanel &aStaff&d&o."
 				else:
 					set {a.channel.%player%} to 1
-					message "&a&oVous activez dans le Chanel &aStaff&d&o."
+					message "&a&oVous activez le Chanel &aStaff&d&o."
 					message "&d&oUtilisez &a!a &d&opour parler dans ce Chanel."
 			else:
 				message "&c&oVous devez être Staff pour accéder à ce Chanel !"
@@ -400,6 +386,78 @@ command /chanel <text>:
 				message "&2Staff             &cDésactivé"
 			message "&d&o---------- &f~ &6¤ &f~ &d&o----------"
 			
+#
+#
+# Menu Compétences Dynamique
+#
+#
+command /competences:
+	aliases: /c, /compet, /competence, /compétence, /compétences
+	trigger:
+		loop yaml list "competences" from file "/plugins/Skript/scripts/config.yml":
+			set {_skill.%loop-value%} to placeholder parse "%%mcmmo_level_%loop-value%%%" as player parsed as integer
+		loop yaml list "metiers_competences" from file "/plugins/Skript/scripts/config.yml":
+			set {_skill.exp.%loop-value%} to placeholder parse "%%mcmmo_xp_%loop-value%%%" as player parsed as integer
+			set {_skill.exp.req.%loop-value%} to placeholder parse "%%mcmmo_xp_needed_%loop-value%%%" as player parsed as integer
+		wait 2 ticks
+		open chest with 5 rows named "&6&lCompétences de &2%player%" to player
+		wait 2 ticks
+		#
+		format slot 1 of player with gray stained glass pane named " " to be unstealable
+		format slot 7 of player with gray stained glass pane named " " to be unstealable
+		format slot 9 of player with gray stained glass pane named " " to be unstealable
+		format slot 10 of player with gray stained glass pane named " " to be unstealable
+		format slot 11 of player with gray stained glass pane named " " to be unstealable
+		format slot 12 of player with gray stained glass pane named " " to be unstealable
+		format slot 13 of player with gray stained glass pane named " " to be unstealable
+		format slot 14 of player with gray stained glass pane named " " to be unstealable
+		format slot 15 of player with gray stained glass pane named " " to be unstealable
+		format slot 16 of player with gray stained glass pane named " " to be unstealable
+		format slot 18 of player with gray stained glass pane named " " to be unstealable
+		format slot 19 of player with gray stained glass pane named " " to be unstealable
+		format slot 25 of player with gray stained glass pane named " " to be unstealable
+		format slot 26 of player with gray stained glass pane named " " to be unstealable
+		format slot 27 of player with gray stained glass pane named " " to be unstealable
+		format slot 28 of player with gray stained glass pane named " " to be unstealable
+		format slot 29 of player with gray stained glass pane named " " to be unstealable
+		format slot 30 of player with gray stained glass pane named " " to be unstealable
+		format slot 31 of player with gray stained glass pane named " " to be unstealable
+		format slot 32 of player with gray stained glass pane named " " to be unstealable
+		format slot 33 of player with gray stained glass pane named " " to be unstealable
+		format slot 34 of player with gray stained glass pane named " " to be unstealable
+		format slot 35 of player with gray stained glass pane named " " to be unstealable
+		format slot 37 of player with gray stained glass pane named " " to be unstealable
+		format slot 43 of player with gray stained glass pane named " " to be unstealable
+		format slot 44 of player with gray stained glass pane named " " to be unstealable
+		
+		format slot 8 of player with red wool with custom nbt "{HideFlags: 2}" named "&4Fermer" with lore "&7Ferme cette fenêtre." to close
+		format slot 17 of player with stick with custom nbt "{HideFlags: 2}" named "&aRetour" with lore "&7Retour au Menu Principal." to close then run [invoke "menu_opener" from "%player%"] 
+		# Combat
+		format slot 2 of player with Diamond Sword with custom nbt "{HideFlags: 2}" named "&6&lÉpées" with lore "&9&lNiveau : &3%{_skill.swords}%||&9Exp : &3%{_skill.exp.swords}%&f/&3%{_skill.exp.req.swords}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "épées"]
+		format slot 3 of player with Iron Axe with custom nbt "{HideFlags: 2}" named "&6&lHaches" with lore "&9&lNiveau : &3%{_skill.axes}%||&9Exp : &3%{_skill.exp.axes}%&f/&3%{_skill.exp.req.axes}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "axes"]
+		format slot 4 of player with Firework Star with custom nbt "{HideFlags: 2}" named "&6&lPoings" with lore "&9&lNiveau : &3%{_skill.unarmed}%||&9Exp : &3%{_skill.exp.unarmed}%&f/&3%{_skill.exp.req.unarmed}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "unarmed"]
+		format slot 5 of player with bow with custom nbt "{HideFlags: 2}" named "&6&lTir à l'Arc" with lore "&9&lNiveau : &3%{_skill.archery}%||&9Exp : &3%{_skill.exp.archery}%&f/&3%{_skill.exp.req.archery}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "archery"]
+		format slot 6 of player with bone with custom nbt "{HideFlags: 2}" named "&6&lApprivoisement" with lore "&9&lNiveau : &3%{_skill.taming}%||&9Exp : &3%{_skill.exp.taming}%&f/&3%{_skill.exp.req.taming}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "taming"]
+		# Gardinerie 
+		format slot 20 of player with stone pickaxe with custom nbt "{HideFlags: 2}" named "&6&lMinage" with lore "&9&lNiveau : &3%{_skill.mining}%||&9Exp : &3%{_skill.exp.mining}%&f/&3%{_skill.exp.req.mining}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "mining"]
+		format slot 21 of player with oak wood with custom nbt "{HideFlags: 2}" named "&6&lBûcheronnage" with lore "&9&lNiveau : &3%{_skill.woodcutting}%||&9Exp : &3%{_skill.exp.woodcutting}%&f/&3%{_skill.exp.req.woodcutting}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "woodcutting"]
+		format slot 22 of player with seeds with custom nbt "{HideFlags: 2}" named "&6&lHerboristerie" with lore "&9&lNiveau : &3%{_skill.herbalism}%||&9Exp : &3%{_skill.exp.herbalism}%&f/&3%{_skill.exp.req.herbalism}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "Herbalism"]
+		format slot 23 of player with golden shovel with custom nbt "{HideFlags: 2}" named "&6&lExcavation" with lore "&9&lNiveau : &3%{_skill.excavation}%||&9Exp : &3%{_skill.exp.excavation}%&f/&3%{_skill.exp.req.excavation}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "Excavation"]
+		format slot 24 of player with fishing rod with custom nbt "{HideFlags: 2}" named "&6&lPêche" with lore "&9&lNiveau : &3%{_skill.fishing}%||&9Exp : &3%{_skill.exp.fishing}%&f/&3%{_skill.exp.req.fishing}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "fishing"]
+		# Manufacture
+		format slot 42 of player with golden helmet with custom nbt "{HideFlags: 2}" named "&6&lRecyclage" with lore "&9&lNiveau : &3%{_skill.salvage}%||&7&oCompétence Enfant de||&7&oPêche et Réparation.||&7&o(moyenne des deux compétences)||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "salvage"]
+		format slot 40 of player with anvil with custom nbt "{HideFlags: 2}" named "&6&lRéparation" with lore "&9&lNiveau : &3%{_skill.repair}%||&9Exp : &3%{_skill.exp.repair}%&f/&3%{_skill.exp.req.repair}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "repair"]
+		format slot 41 of player with coal with custom nbt "{HideFlags: 2}" named "&6&lFonte" with lore "&9&lNiveau : &3%{_skill.smelting}%||&7&oCompétence Enfant de||&7&oMinage et Réparation.||&7&o(moyenne des deux compétences)||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "smelting"]
+		format slot 39 of player with potion of health with custom nbt "{HideFlags: 2}" named "&6&lAlchimie" with lore "&9&lNiveau : &3%{_skill.alchemy}%||&9Exp : &3%{_skill.exp.alchemy}%&f/&3%{_skill.exp.req.alchemy}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "alchemy"]
+		format slot 38 of player with leather boots with custom nbt "{HideFlags: 2}" named "&6&lAcrobatie" with lore "&9&lNiveau : &3%{_skill.acrobatics}%||&9Exp : &3%{_skill.exp.acrobatics}%&f/&3%{_skill.exp.req.acrobatics}% &2XP||&8&l> &a&oCliquez pour plus de détails." to close then run [make player execute command "acrobatics"]
+		#Afficher top 10 joueur
+		format slot 0 of player with golden ingot with custom nbt "{HideFlags: 2}" named "&6&lTop Scores" with lore "&9&lClassement du Top 10||||&8&l> &a&oCliquez pour plus de détails" to close then run [make player execute command "mctop"]
+		format slot 18 of player with skull of "%player%" parsed as offline player with custom nbt "{HideFlags: 2}" named "&6&lVotre Classement" with lore "&9&lConsultez votre classement||&9&ldans les différentes Compétences.||&8&l> &a&oCliquez pour plus de détails" to close then run [make player execute command "mcrank"]
+		format slot 36 of player with book with custom nbt "{HideFlags: 2}" named "&6&lGuide Complet" with lore "&9Affiche un Guide complet||&9en ligne." to close then run [execute console command "tellraw %player% {""text"":""Cliquez ici pour aller vers le guide."",""color"":""green"",""clickEvent"":{""action"":""open_url"",""value"":""https://gaia-craft.fr/guide.html""},""hoverEvent"":{""action"":""show_text"",""value"":""Cliquez ici pour être redirigé !""}}"]
+		
+sub "menu_opener":
+	wait 7 ticks
+	execute console command "cc open Menu.yml %parameter 1%"		
 #
 #		
 #
@@ -472,36 +530,126 @@ on vote:
 #
 On death of player:
 	if victim meets betonquest condition "player":
-		if attacker is a player:
-			Wait 7 ticks
-			set {_death_money.%player%} to victim's money
-			set {_01} to 0.1
-			set {_death_money_result.%player%} to {_death_money.%player%} * {_01}
-			Wait 7 ticks
-			give the victim's skull to the attacker
-			execute console command "eco take %victim% %{_death_money_result.%player%}%"
-			execute console command "eco give %attacker% %{_death_money_result.%player%}%"
-			send "&aVous volez &f¤&2%{_death_money_result.%victim%}% &ade &2%victim% &aen l'assasinant." to attacker
-			send "&cVous perdez &f¤&2%{_death_money_result.%victim%}% &crécupérés par &2%attacker%&c." to victim
-			execute console command "title %victim% times 60 100 60"
-			execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
-			execute console command "title %victim% subtitle {""text"":""-%{_death_money_result.%victim%}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
+		loop yaml list "penalty_free_regions" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_regions_list::*}
+		loop {_regions_list::*}:
+			set {_cycle_region} to "%{_regions_list::%loop-index%}%"
+			set {_player_region} to "%region at player%"
+			if {_player_region} contains {_cycle_region}:
+				set {_protected} to 1
+		if {_protected} is set:
+			stop
 		else:
-			Wait 7 ticks
-			set {_death_money.%player%} to victim's money
-			set {_01} to 0.1
-			set {_death_money_result.%player%} to {_death_money.%player%} * {_01}
-			execute console command "eco take %victim% %{_death_money_result.%player%}%"
-			send "&cVous perdez &f¤&2%{_death_money_result.%victim%}% &cen mourrant." to victim
-			execute console command "title %victim% times 60 100 60"
-			execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
-			execute console command "title %victim% subtitle {""text"":""-%{_death_money_result.%victim%}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
+			if attacker is a player:
+				Wait 7 ticks
+				set {_death_money} to victim's money
+				set {_01} to 0.1
+				set {_death_money_result} to {_death_money} * {_01}
+				Wait 7 ticks
+				give the victim's skull to the attacker
+				execute console command "eco take %victim% %{_death_money_result}%"
+				execute console command "eco give %attacker% %{_death_money_result}%"
+				send "&aVous volez &f¤&2%{_death_money_result}% &ade &2%victim% &aen l'assasinant." to attacker
+				send "&cVous perdez &f¤&2%{_death_money_result}% &crécupérés par &2%attacker%&c." to victim
+				execute console command "title %victim% times 60 100 60"
+				execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
+				execute console command "title %victim% subtitle {""text"":""-%{_death_money_result}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
+				set {_tempname} to attacker's name
+				if attacker meets betonquest condition "colisee.boo_p1":
+					execute console command "bq event %attacker% colisee.eastern_killcollect"
+			else:
+				Wait 7 ticks
+				set {_death_money} to victim's money
+				set {_01} to 0.1
+				set {_death_money_result} to {_death_money} * {_01}
+				execute console command "eco take %victim% %{_death_money_result}%"
+				send "&cVous perdez &f¤&2%{_death_money_result}% &cen mourrant." to victim
+				execute console command "title %victim% times 60 100 60"
+				execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
+				execute console command "title %victim% subtitle {""text"":""-%{_death_money_result}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
+#
+# Combat Logger
+#
+on damage of player:
+	if "%type of attacker%" is "player":
+		invoke "combat_tracker" from attacker
+		invoke "combat_tracker" from attacked
+	else:
+		stop
+		
+sub "combat_tracker":
+	if {incombat.%parameter 1%} is 10:
+		stop
+	else if {incombat.%parameter 1%} > 0:
+		set {incombat.%parameter 1%} to 10
+	else if {incombat.%parameter 1%} is not set:
+		set {incombat.%parameter 1%} to 10
+		set {_fighter} to parameter 1
+		while {incombat.%{_fighter}%} is set:
+			set {incombat.%{_fighter}%} to {incombat.%{_fighter}%} - 1
+			set action bar of {_fighter} to "&c&lEn Combat ! [ &4%{incombat.%{_fighter}%}% &c&l]"
+			wait 23 ticks
+			if {incombat.%{_fighter}%} is 0:
+				delete {incombat.%{_fighter}%}
+#
+#
+# Protection Animale
+#	
+# 	Réduction de lags en contrôlant 
+#	les exploitations de bétail.
+#
+#
+on rightclick on chicken:
+	if player is holding seeds:
+		invoke "animal_protection" from player and "chicken"
+	
+on rightclick on cow or sheep or mooshroom:
+	if player is holding wheat:	
+		invoke "animal_protection" from player and "cow"
+		
+on rightclick on sheep:
+	if player is holding wheat:	
+		invoke "animal_protection" from player and "sheep"
+		
+on rightclick on mooshroom:
+	if player is holding wheat:	
+		invoke "animal_protection" from player and "mooshroom"
+		
+on rightclick on pig:
+	if player is holding carrot:	
+		invoke "animal_protection" from player and "pig"
+		
+on rightclick on wolf:
+	if player is holding any food:	
+		invoke "animal_protection" from player and "wolf"
 
+#Non-utilisé, tout cheval spawné est remplacé par un MythicMob.		
+#on rightclick on horse:
+#	if player is holding golden carrot or golden apple:	
+#		invoke "animal_protection" from player and "horse"
+		
+sub "animal_protection":
+	loop entities in radius 16 around parameter 1:
+		if "%loop-entity%" is "%parameter 2%":
+			add 1 to {_loop.entities}
+	if {_loop.entities} > 20:
+		message "&d&oPour des raisons de protection de l'animal," to parameter 1
+		message "&d&oune limite réglementaire de &220 animaux &d&odu même type" to parameter 1
+		message "&d&odans un rayon de &216 blocs &d&oest en vigueur." to parameter 1
+		message "&c&oLe bétail excédentaire a été abattu." to parameter 1
+		loop entities in radius 16 around parameter 1:
+			if "%loop-entity%" is "%parameter 2%":
+				if {_loop.entities} > 20:
+					kill loop-entity
+					set {_loop.entities} to {_loop.entities} - 1
+				else:
+					stop
+				
 #
 # Disables rain & thunder in all worlds
 #			
 on weather change to rain or thunder:
-	wait 1 minute
+	wait 5 minute
 	set weather to sunny
 
 #
@@ -529,24 +677,9 @@ on enchant:
 #				allows to give MM Items to full inventories.
 #
 #
-# Use only "mm items give" in any automated console command.
-#   i.e. do not use "mm i give" => this is used to avoid a loop in this section
-#
-# Peut être amélioré en passant _t dans u::* et n'utiliser que des _u::x 
-#
-#
-on server command:
-	if "%event-string%" contains "inventorycheck":
-		stop
-	if "%event-string%" contains "mm items give":
-		cancel event
-		set {_t} to "%event-string%"
-		set {_s} to "%subtext of {_t} from characters 14 to (the length of {_t})%"
-		set {_u::*} to {_s} split at " "
-		execute console command "sudo %{_u::2}% inventorycheck %event-string%"
-#
-command /inventorycheck <text> <text> <text> <text> <text>:
+command /gaiaitemgiver <text>:
 	trigger:
+		set {_slot} to 0
 		loop 36 times:
 			if slot {_slot} of player's inventory is empty:
 				wait 1 tick
@@ -554,13 +687,12 @@ command /inventorycheck <text> <text> <text> <text> <text>:
 				add 1 to {_slot}
 				wait 1 tick
 		if {_slot} is 36:
-			message "&d&oVous n'avez pas assez de place dans votre inventaire."
+			message "&d&oVous n'avez pas assez de place dans votre inventaire." 
 			message "&d&oVidez une place dans votre inventaire pour recevoir l'objet."
 			wait 20 seconds
-			execute console command "sudo %arg 4% inventorycheck %arg 1% %arg 2% %arg 3% %arg 4% %arg 5%"
+			execute console command "sudo %player% gaiaitemgiver %arg 1%"
 		else:
-			execute console command "%arg 1% i %arg 3% %arg 4% %arg 5%"
-#
+			execute console command "mm items give %player% %arg 1%"
 #
 #
 # Alcool

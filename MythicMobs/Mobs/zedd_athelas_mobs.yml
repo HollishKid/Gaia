@@ -12,14 +12,15 @@ Shrek:
     Color: RED
     Style: SOLID
   Display: '&4Anton'
-  Health: 300
+  Health: 350
   Damage: 8
   Drops:
-  - shrek_drops
+  - bl_drops
+  - black_hole_scrolls
   Skills:
   - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
   - skill{s=MobHealth} ~onDamaged >0 1
-  - skill{s=MiniShrek} ~onTimer:400
+  - skill{s=MiniShrek} ~onTimer:600
   - skill{s=Tempest-Blast} @target ~onTimer:150
   - skill{s=Fart} ~onDamaged .1
   - heal{amount=1} @self ~onTimer:40
@@ -33,13 +34,9 @@ Shrek:
   - 1 attacker
   - 2 players
   Equipment:
-  - SwampHead:4
-  - SwampChestplate:3
-  - SwampLeggings:2
-  - SwampBoots:1
   - air:0
   Options:
-    MovementSpeed: 0.2
+    MovementSpeed: 0.3
     KnockbackResistance: 1
     MaxCombatDistance: 25
     PreventOtherDrops: true
@@ -91,6 +88,7 @@ acolyte:
   - 1 attacker
   - 2 players
   Options:
+    MaxCombatDistance: 25
     MovementSpeed: 0.3
     Collidable: false
     PreventOtherDrops: true
@@ -112,6 +110,7 @@ acolyteJr:
   - 1 attacker
   - 2 players
   Options:
+    MaxCombatDistance: 25
     MovementSpeed: 0.3
     Collidable: false
     PreventOtherDrops: true
@@ -139,6 +138,7 @@ acolyte_ranged:
   Equipment:
   - bow:0
   Options:
+    MaxCombatDistance: 25
     MovementSpeed: 0.2
     Collidable: false
     PreventOtherDrops: true
@@ -164,6 +164,7 @@ acolyte_rangedJr:
   Equipment:
   - bow:0
   Options:
+    MaxCombatDistance: 25
     MovementSpeed: 0.2
     Collidable: false
     PreventOtherDrops: true
@@ -282,7 +283,8 @@ Kara:
   Health: 300
   Damage: 8
   Drops:
-  - kara_drops
+  - bl_drops
+  - black_hole_scrolls
   Skills:
   - potion{t=FIRE_RESISTANCE;d=9999999;l=1} @Self ~onSpawn 1
   - skill{s=MobHealth} ~onDamaged >0 1
@@ -333,11 +335,11 @@ killer:
 erek_p1:
   Type: SKELETON
   Health: 800
-  Damage: 1
+  Damage: 3
   Disguise:
     Type: player
     Player: '&4Erek'
-    Skin: superman
+    Skin: The_Pro_HUNTER
   Skills:
   - potion{type=SLOW;d=999999;l=10} @self ~onSpawn
   - skill{s=MissileLauncher} ~onTimer:240
@@ -409,7 +411,7 @@ erek_p1:
     PreventOtherDrops: true
 erek_renfort:
   Type: PIG_ZOMBIE
-  Health: 30
+  Health: 35
   Damage: 4
   Disguise:
     Type: player
@@ -430,9 +432,6 @@ erek_renfort:
     PreventOtherDrops: true
     PreventRandomEquipment: true
   Equipment:
-  - ShrekChestplate:3
-  - ShrekLeggings:2
-  - ShrekBoots:1
   - air:0
   Modules:
     ThreatTable: true
@@ -484,13 +483,15 @@ erek:
     Color: RED
     Style: SOLID
   Health: 750
-  Damage: 4
+  Damage: 5
   Drops:
-  - erek_drops
+#  - bl_swords
+  - bl_drops
+  - black_hole_scrolls
   Disguise:
     Type: player
     Player: '&4Erek'
-    Skin: superman
+    Skin: The_Pro_HUNTER
   AIGoalSelectors:
   - 0 clear
   - 1 RandomStroll
@@ -500,9 +501,7 @@ erek:
   - 0 clear
   - 1 players
   Equipment:
-  - 298:4
-  DamageModifiers:
-  - ENTITY_EXPLOSION 250
+  - mc_leather_helmet:4
   Skills:
   - skill{s=MobHealth} ~onDamaged >0 1
   - skill{s=HealthPack} ~onDamaged >8 0.08
@@ -510,7 +509,7 @@ erek:
   - skill{s=castGuardian} ~onTimer:550
   - command{c="setblock -7411 46 3272 redstone_block"} ~onDeath 1
   Options:
-    MovementSpeed: 0.01
+    MovementSpeed: 0.3
     FollowRange: 40
     Collidable: true
     PreventOtherDrops: true
@@ -571,14 +570,14 @@ Tesla:
   DamageModifiers:
   - FALL 0
   Skills:
-  - skill {s=Firebolt} @target ~onTimer:180
+  - skill {s=Firebolt2} @target ~onTimer:180
   AIGoalSelectors:
   - 0 clear
   AITargetSelectors:
   - 0 clear
   - 1 players
   Equipment:
-  - 298:4
+  - mc_leather_helmet:4
   Options:
     AlwaysShowName: true
     KnockbackResistance: 10
@@ -591,7 +590,9 @@ Testmob:
   Health: 30
   Damage: 3
   Drops:
-  - testmobdrops
+  - bl_swords
+  - black_hole_scrolls
+  - bl_drops
   DamageModifiers:
   - FALL 0
   AIGoalSelectors:
@@ -600,7 +601,7 @@ Testmob:
   - 0 clear
   - 1 players
   Equipment:
-  - 298:4
+  - mc_leather_helmet:4
   Options:
     AlwaysShowName: true
     KnockbackResistance: 10

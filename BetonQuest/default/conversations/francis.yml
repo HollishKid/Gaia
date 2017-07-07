@@ -25,7 +25,7 @@ NPC_options:
     pointers: aide3_bis
 #
   occupe1:
-    text: 'Vous êtes là pour m''aider? Sinon, je vais retourner travailler... !'
+    text: 'Vous êtes là pour m''aider ? Sinon, je vais retourner travailler... !'
     conditions: 'francis1,!timer_francis,!tag_pain_francis,intendant_done'
     events: francis_cleaner
     pointers: aide1,non
@@ -33,7 +33,7 @@ NPC_options:
     text: 'C''est bien aimable ! Allez me chercher deux pains chez &fPaul&a&o, il sait que vous venez !'
     events: francis_occupe1
   aide1_bis_rep:
-    text: 'Parfait! Voici un peu d''argent pour vous dédommager.'
+    text: 'Parfait ! Voici un peu d''argent pour vous dédommager.'
     events: francis_ressources_done
   occupe2:
     text: 'Pourriez vous m''aider à livrer un de mes produits ?'
@@ -41,7 +41,7 @@ NPC_options:
     events: francis_cleaner
     pointers: aide2,non
   ressources_rep:
-    text: 'C''est gentil! Apportez ces &d10 carottes &a&ochez &fPaulette &a&oalors !'
+    text: 'C''est gentil ! Apportez ces &d10 carottes &a&ochez &fPaulette &a&oalors !'
     events: francis_occupe2
   occupe3:
     text: 'Vous n''auriez pas le temps d''aider à livrer ces betteraves par hasard ?'
@@ -52,8 +52,13 @@ NPC_options:
     text: 'Au chef de la cuisine du Château d''Athelas ! \nIl devrait vous donner une tarte qu''il m''a promis depuis longtemps !'
     events: francis_occupe3
   aide3_bis_rep:
-    text: 'Merci beaucoup, ça me fera un bon dessert! Voici un peu d''argent pour vous dédommager !'
+    text: 'Merci beaucoup, ça me fera un bon dessert ! Voici un peu d''argent pour vous dédommager !'
+    conditions: 'tag_tarte_chef,tarte_chef_have'
     events: betteraves_urgent_done
+  aide3_bis_rep_nope:
+    text: 'Vous n''avez plus le gâteau sur vous ! \nChercheriez vous à m''arnaquer ?'
+    conditions: '!tarte_chef_have'
+    events: reput_athelas1_negatif
 ###################
 #Options du joueur#
 ###################
@@ -72,8 +77,8 @@ player_options:
     text: 'Pas de problème ! Je les livre où ?'
     pointers: betteraves_rep
   aide3_bis:
-    text: 'Oui! J''ai même le gâteau du chef !'
+    text: 'Oui ! J''ai même le gâteau du chef !'
     conditions: 'tag_tarte_chef,tarte_chef_have'
-    pointers: aide3_bis_rep
+    pointers: aide3_bis_rep,aide3_bis_rep_nope
   non:
     text: 'Je suis occupé moi aussi ! Au revoir !'

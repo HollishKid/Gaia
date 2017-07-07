@@ -93,6 +93,13 @@ mailles_pioche:
   - '&e&osont bien plus robuste !'
   - ' '
   - '&7&oRareté : &aCommun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 1 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 274
   POSITION-X: 4
   POSITION-Y: 2
@@ -135,6 +142,13 @@ mailles_pelle:
   - '&e&osont bien plus robuste !'
   - ' '
   - '&7&oRareté : &aCommun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 2 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 273
   POSITION-X: 9
   POSITION-Y: 2
@@ -187,6 +201,13 @@ mailles_houe:
   - '&e&osont bien plus robuste !'
   - ' '
   - '&7&oRareté : &aCommun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 3 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 291
   POSITION-X: 4
   POSITION-Y: 6

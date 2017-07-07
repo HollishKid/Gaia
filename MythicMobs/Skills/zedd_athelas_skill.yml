@@ -31,10 +31,14 @@ Tempest-Blast-Hit:
   - damage{a=2}
   - throw{velocitiy=35;velocityY=15}
 acolyte_slow:
+  TargetConditions:
+  - lineofsight true
   Skills:
   - damage{a=2}
   - potion{type=SLOW;duration=50;lvl=3}
 SingleTargetFire:
+  TargetConditions:
+  - lineofsight true
   Skills:
   - effect:particles{p=flame;hs=1;vs=1;a=50;s=0.01;} @target  
   - damage{a=6;ignorearmor=true;}
@@ -42,7 +46,6 @@ SingleTargetFire:
 Darkness:
   Skills:
   - potion{type=SLOW;lvl=127;duration=40} @Self
-  - summon{mob=MarkerStand;amount=1;noise=0} @target
   - effect:smokeswirl{duration=60;interval=1} @Self
   - effect:particleline{particle=reddust;color=#000000;amount=10;ys=1.5} @target
   - damage{amount=3} @target
@@ -352,18 +355,18 @@ TpMissile:
   - message{msg="&4Erek:&7&o Meurs vermisseau!!"} @PlayersInRadius{r=35} >0 1
   - delay 1
   - skill{s=MissileLauncher}
-Firebolt:
+Firebolt2:
   Skills:
-  - projectile{onTick=IceBolt-Tick;onHit=FireBolt-Hit;v=8;syo=2;tyo=0.5;i=1;hR=1;vR=1}
-FireBolt-Tick:
+  - projectile{onTick=IceBolt-Tick2;onHit=FireBolt-Hit2;v=8;syo=2;tyo=0.5;i=1;hR=1;vR=1}
+FireBolt-Tick2:
   Skills:
   - effect:particles{p=flame;amount=25;speed=0;hS=0.2;vS=0.2} @origin
   - effect:particles{particle=dripLava;amount=10;vSpread=.1;hSpread=.25;Speed=25;y=0;s=2} @origin
   - effect:particles{p=lava;amount=10;speed=0;hS=0.2;vS=0.2} @origin
-IceBolt-Tick:
+IceBolt-Tick2:
   Skills:
   - effect:particles{p=snowballpoof;amount=20;speed=0;hR=0.2;vR=0.2} @origin
-FireBolt-Hit:
+FireBolt-Hit2:
   Skills:
   - ignite{t=10}
   - damage{a=3}

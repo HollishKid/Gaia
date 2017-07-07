@@ -19,7 +19,7 @@ NPC_options:
     events: tag_aang,journal_findaang_del,tag_moine_air_del,air_moine_tempo_del
     pointers: preuve,rentrer,temple,rienmerci
   temple_rep:
-    text: 'Cet endroit est vieux comme le monde de Gaïa ... Il flotte grâce à sa Magie, pour le protéger d''eventuels assaillants.'
+    text: 'Cet endroit est vieux comme le monde de Gaïa... Il flotte grâce à sa Magie, pour le protéger d''eventuels assaillants.'
   preuve_rep:
     text: 'Hm, je pourrais vous donner le livre regroupant tous les sorts qui nous sont connus. Je doute qu''ils les connaissent par chez vous !'
     pointers: book_give
@@ -37,7 +37,7 @@ NPC_options:
 #
   magic_rep:
     text: 'Je serais ravi d''être votre Maître de l''Air. \nIl vous faut d''abord une &dBaguette de l''Air&a&o. Pour en invoquer une, il va falloir de l''Air et un Bâton. \nCommence par fabriquer une fiole et amènes la moi.'
-    events: obj_milo_fiole,journal_milo_fiole,tag_milo_fiole
+    events: obj_milo_fiole,journal_milo_fiole,air_wand_title,air_continum_tag
   fiole_rep:
     text: 'Elle fera l''affaire. Il te faut caputrer de l''air particulier, pour avoir assez de puissance, il te faut de l''air du continent de l''Est. \nVas-y et clique droit sur ta fiole pour en capturer !'
     events: journal_milo_fiole_del,journal_milo_air_capture,obj_air_catcher,tag_remove_fiole
@@ -58,7 +58,7 @@ NPC_options:
     text: 'Il semblerait que vous vous soyez trompé dans le mot d''apparition...'
   air_wand:
     text: 'Parfait ! Voici votre Baguette de l''Air ! \nPour pouvoir l''améliorer, n''hésitez pas à me demander !'
-    events: air_wand_give,journal_aang_baton_del
+    events: air_wand_give,journal_aang_baton_del,journal_airtemple_magic_learning_del,air_continum_tag_del
   air_wand_upgrade_fine:
     text: 'Aucun souci, regardez ce que vous pouvez en faire !'
     events: air_wand_menu
@@ -95,7 +95,7 @@ player_options:
 #
   magic:
     text: 'Pouvez vous m''en apprendre plus sur la Magie de l''Air ?'
-    conditions: 'airtemple_magic_learning,!milo_fiole,!milo_fiole1,!tag_ardere_aang,!tag_aang_baton,!air_wand'
+    conditions: 'airtemple_magic_learning,!air_continum,!air_wand'
     pointers: magic_rep
   fiole:
     text: 'J''ai la fiole que vous m''avez demandé !'

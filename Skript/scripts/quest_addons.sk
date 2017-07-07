@@ -9,7 +9,45 @@ on death of player:
 		fire betonquest event "hollish.air_temple_lose" for victim
 	if victim meets betonquest condition "Zedd.thieftreasure_tempo_tag":
 		fire betonquest event "Zedd.thieftreasure_reset" for victim
-
+#
+#
+# Quêtes Journalières Athelas
+#
+#
+command /dailyquesterstart <player>:
+	executable by: console
+	trigger:
+		if "%{daily.questers::*}%" contains "%arg 1%":
+			stop
+		else:
+			add arg 1 to {daily.questers::*}
+		
+command /dailyquesterdone <player>:
+	executable by: console
+	trigger:
+		if arg 1 meets betonquest condition "daily_quester":
+			stop
+		else:
+			remove arg 1 from {daily.questers::*}
+			
+command /dailyquesterreset:
+	executable by: console
+	trigger:
+		loop {daily.questers::*}:
+			if loop-value is online:
+				message "&c&lVous n'avez pas rendu une quête journalière à temps." to loop-value
+				wait 2 ticks
+				fire event "reput_athelas1_negatif" for loop-value
+				wait 2 ticks
+				fire event "paulette_cleaner" for loop-value
+				wait 2 ticks
+				fire event "paul_cleaner" for loop-value
+				wait 2 ticks
+				fire event "francis_cleaner" for loop-value
+			else:
+				set {daily.quester.%loop-value%} to 1
+			delete {daily.questers::%loop-index%}
+		
 
 #
 #
@@ -83,9 +121,9 @@ command /thisisatopsecreteruditterrelocationcommand:
 	trigger:
 		if player is in the region "north":
 			if distance between player and {earth_temple_loc} is smaller than 10:
-				message "Cette borne porte une inscription mystérieuse..."
-				if player meets betonquest condition "terre_find":
-					fire betonquest event "folder_borne_found" for player
+				message "&d&oCette borne porte une inscription mystérieuse..."
+				if player meets betonquest condition "hollish.terre_find":
+					fire betonquest event "hollish.folder_borne_found" for player
 			else:
 				message "&d&oVous êtes à &2%distance between player's location and {earth_temple_loc}% &d&oblocs de la source de la Magie de la Terre."
 		else:
@@ -101,7 +139,7 @@ on rightclick on sign:
                     message "&d&oLa terre tremble sous vos pieds..."
                     wait 2 seconds
                     message "&d&o...elle s'est fendue en deux !"
-                    set the block at location at -7377, 41, 283 of the world "Gaia" to redstone block
+                    fire betonquest event "hollish.earth_passage" for player
     if line 1 of the clicked block is "~~~~~~":
         if line 4 of the clicked block is "~~~~~~":
             message "&d&oVous entendez un léger clic derrière le mur."
@@ -182,7 +220,138 @@ command /thisistheearthlockpadchecker <player>:
 			message "&cVous n'avez pas rentré la bonne combinaison." to arg 1
 			loop {earth_lockpad_%arg 1%::*}:
 				delete {earth_lockpad_%arg 1%::%loop-index%}
-			
+#		
+#
+# Wand Management
+#
+#
+#
+# 1 - Status teller
+command /wandstatusteller <player>:
+	executable by: console
+	trigger:
+		set {_apprentice} to arg 1
+		message "&3&o~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ &kk&r&3&o ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" to arg 1
+		if {_apprentice} meets betonquest condition "hollish.air_wand":
+			message "&d&oBaguette de l'Air - &aObtenue" to arg 1
+		else:
+			message "&d&oBaguette de l'Air - &cPas encore obtenue" to arg 1
+		if {_apprentice} meets betonquest condition "hollish.earth_wand":
+			message "&d&oBaguette de la Terre - &aObtenue" to arg 1
+		else:
+			message "&d&oBaguette de la Terre - &cPas encore obtenue" to arg 1
+		if {_apprentice} meets betonquest condition "hollish.fire_wand":
+			message "&d&oBaguette du Feu - &aObtenue" to arg 1
+		else:
+			message "&d&oBaguette du Feu - &cPas encore obtenue" to arg 1
+		if {_apprentice} meets betonquest condition "hollish.water_wand":
+			message "&d&oBaguette de l'Eau - &aObtenue" to arg 1
+		else:
+			message "&d&oBaguette de l'Eau - &cPas encore obtenue" to arg 1
+		message "&3&o~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ &kk&r&3&o ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" to arg 1
+#
+#
+# 2 - Wand "storer"
+command /wandstorer <player> <text>:
+	executable by: console
+	trigger:
+		set {_apprentice} to arg 1
+		if {_apprentice} meets betonquest condition "hollish.%arg 2%_wand":
+			if {_apprentice} meets betonquest condition "hollish.wand_store_%arg 2%":
+				message "&d&oVous avez déjà stocké cette Baguette." to {_apprentice}
+			else:
+				if {_apprentice} meets betonquest condition "hollish.wand_%arg 2%":
+					execute console command "wandp %{_apprentice}% unenchant"
+					fire event "hollish.wand_store_%arg 2%" for {_apprentice}
+					fire event "hollish.fountain" for {_apprentice}
+					wait 5 ticks
+					message "&a&oVous stockez votre Baguette." to {_apprentice}
+					fire event "hollish.%arg 2%_remover" for {_apprentice}
+				else:
+					message "&d&oVous devez tenir la Baguette en main avant de la stocker." to {_apprentice}
+		else:
+			message "&d&oVous n'êtes pas en possession de cette Baguette." to {_apprentice}
+#
+#
+# 3 - Wand "restorer"
+command /wandrestorer <player> <text> <text>:
+	executable by: console
+	trigger:
+		set {_apprentice} to arg 1
+		if {_apprentice} meets betonquest condition "hollish.%arg 2%_wand":
+			if {_apprentice} meets betonquest condition "hollish.wand_store_%arg 2%":
+				if {_apprentice} meets betonquest condition "hollish.wand%arg 3%_inventory":
+					message "&d&oVous avez déjà cette Baguette dans votre inventaire." to {_apprentice}
+					message "&d&oPour la mettre à jour, tenez la en main et cliquez sur le bouton 'Mettre à jour'." to {_apprentice}
+				else if {_apprentice} meets betonquest condition "hollish.empty_1":
+					message "&d&oVous recevez votre Baguette." to {_apprentice}
+					execute console command "wandp %arg 1% %arg 2%bender"
+					fire event "hollish.wand_unstore_%arg 2%" for {_apprentice}
+					wait 2 ticks
+					if {_apprentice} meets betonquest condition "hollish.wand_%arg 2%":
+						invoke "wandupdater" from arg 1 and arg 2
+					else:
+						message "&d&oVous devez tenir votre Baguette en main. Cliquez le bouton 'Mettre à jour' une fois que vous l'aurez en main." to {_apprentice}
+				else:
+					message "&d&oVous n'avez pas de place dans votre inventaire." to {_apprentice}
+			else:
+				if {_apprentice} meets betonquest condition "hollish.wand%arg 3%_inventory":
+					message "&d&oVous avez déjà cette Baguette dans votre inventaire." to {_apprentice}
+					message "&d&oPour la mettre à jour, tenez la en main et cliquez sur le bouton 'Mettre à jour'." to {_apprentice}
+				else:
+					message "&d&oIl semblerait que vous ayez perdu votre Baguette." to {_apprentice}
+					if {_apprentice} meets betonquest condition "hollish.empty_1":
+						message "&d&oElle vous a été correctement rendue." to {_apprentice}
+						execute console command "wandp %arg 1% %arg 2%bender"
+						wait 2 ticks
+						if {_apprentice} meets betonquest condition "hollish.wand_%arg 2%":
+							invoke "wandupdater" from arg 1 and arg 2
+						else:
+							message "&d&oVous devez tenir votre Baguette en main. Cliquez le bouton 'Mettre à jour' une fois que vous l'aurez en main." to {_apprentice}
+					else:
+						message "&d&oVous n'avez pas assez de place dans votre inventaire pour la récupérer." to {_apprentice}
+		else:
+			message "&d&oVous n'êtes pas en possession de cette Baguette." to {_apprentice}
+		
+		
+#
+#
+# 4 - Wand "updater"
+command /wandupdater <player> <text>:
+	executable by: console
+	trigger:
+		set {_apprentice} to arg 1
+		if {_apprentice} meets betonquest condition "hollish.%arg 2%_wand":
+			if {_apprentice} meets betonquest condition "hollish.wand_%arg 2%":
+				message "&d&oVotre Baguette a été mise à jour." to {_apprentice}
+				invoke "wandupdater" from arg 1 and arg 2
+			else:
+				message "&d&oTenez votre Baguette en main et cliquez à nouveau sur le bouton pour la mettre à jour." to {_apprentice}
+		else:
+			message "&d&oVous n'êtes pas en possession de cette Baguette." to {_apprentice}
+		
+sub "wandupdater":
+	set {_apprentice} to parameter 1
+	set {_element} to parameter 2
+	fire event "hollish.regenup_%{_element}%_exe3" for {_apprentice}
+	fire event "hollish.manaup_%{_element}%_exe3" for {_apprentice}
+	if parameter 2 is "air":
+		loop yaml list "air_spells" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_air_spells::*}
+		loop yaml list "air_spells_bq" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_air_spells_bq::*}
+		loop {_air_spells_bq::*}:
+			if {_apprentice} meets betonquest condition "hollish.%{_air_spells_bq::%loop-index%}%":
+				execute console command "wandp %{_apprentice}% add %{_air_spells::%loop-index%}%"
+	else if parameter 2 is "earth":
+		loop yaml list "earth_spells" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_earth_spells::*}
+		loop yaml list "earth_spells_bq" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_earth_spells_bq::*}
+		loop {_earth_spells_bq::*}:
+			if {_apprentice} meets betonquest condition "hollish.%{_earth_spells_bq::%loop-index%}%":
+				execute console command "wandp %{_apprentice}% add %{_earth_spells::%loop-index%}%"	
+				
 #
 #
 #
@@ -220,7 +389,6 @@ command /louvreweeklyreward <player>:
 			
 #	
 command /thisistheurukkilledcommand:
-	executable by: console
 	trigger:
 		if "%{louvre_registre::*}%" contains "%player%":
 			if "%{louvre_contributors}%" contains "%player%":
@@ -232,7 +400,6 @@ command /thisistheurukkilledcommand:
 			stop
 #
 command /thisistheurukakilledcommand:
-	executable by: console
 	trigger:
 		if "%{louvre_registre::*}%" contains "%player%":
 			if "%{louvre_contributors}%" contains "%player%":
@@ -242,3 +409,35 @@ command /thisistheurukakilledcommand:
 				add 1 to {louvre_uruka_kills}
 		else:
 			stop
+#
+#
+#
+#
+command /drisganignoretarget <player>:
+	executable by: console
+	trigger:
+		loop yaml list "drisgannpcs" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {_drisgan.npcs::*}
+		loop {_drisgan.npcs::*}:
+			execute console command "npc sel %loop-value%"
+			wait 2 ticks
+			execute console command "sentinel addignore player:%arg 1%"
+			wait 2 ticks
+#
+#
+#
+command /spawneventminion <text>:
+	trigger:
+		loop all entities in radius 40 around player:
+			if loop-entity is a mythicmob:
+				if altitude of loop-entity is higher than 60:
+					add 1 to {_mms}
+		if {_mms} is bigger than 50:
+			stop
+		else:
+			set {_player_loc} to location of the player
+			add a random integer between -10 and 10 to x coordinate of {_player_loc}
+			add a random integer between -10 and 10 to y coordinate of {_player_loc}
+			sharpsk spawn a mythicmob "worldboss_minion%arg 1%" at the {_player_loc} with level 1
+
+ 

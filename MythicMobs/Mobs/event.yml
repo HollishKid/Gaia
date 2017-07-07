@@ -28,18 +28,18 @@ worldbossalpha:
     PreventMobKillDrops: true
   Display: '&4&lKalphite'
   Health: 2500
-  Damage: 7
+  Damage: 5
   Skills:
-  - message{cooldown=20;m="<mob.name><&co> Je vous pulvériserais !"} @ThreatTablePlayers ~onCombat >0 0.1
-  - message{cooldown=20;m="<mob.name><&co> Je vais briser ce monde !"} @ThreatTablePlayers ~onCombat >0 0.1
-  - message{cooldown=20;m="<mob.name><&co> Vous vous proternerez devant moi !"} @ThreatTablePlayers ~onCombat >0 0.1
+  - message{cooldown=20;m="<mob.name><&co> Je vous pulvériserais !"} @ThreatTablePlayers ~onCombat >0 0.01
+  - message{cooldown=20;m="<mob.name><&co> Je vais briser ce monde !"} @ThreatTablePlayers ~onCombat >0 0.01
+  - message{cooldown=20;m="<mob.name><&co> Vous vous proternerez devant moi !"} @ThreatTablePlayers ~onCombat >0 0.01
   - message{m="<mob.name><&co> Une âme de plus à tourmenter !"} @ThreatTablePlayers ~onPlayerKill >0 1
-  - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged
-  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#8ad9ff} @self ~onDamaged
-  - summon{type=worldboss_minionalpha;amount=1;radius=15} ~onDamaged 0.20
+  - particles{p=portal;a=10;hs=0.5;vs=0.7;s=0;y=0.7} @self ~onDamaged 0.1
+  - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged 0.07
+  - command{c="sudo <target.name> spawneventminion alpha"} ~onDamaged 0.07
   - effect:particletornado{p=flame;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @self ~onDeath
-  - message{m="<mob.name><&co> Vous pensez que je vais en rester là ?! Vermine !"} @ThreatTablePlayers ~onPlayerKill >0 1
-  - summon{type=worldbossbeta;amount=1;radius=5} ~onDeath
+  - message{m="<mob.name><&co> Vous pensez que je vais en rester là ?! Vermine !"} @ThreatTablePlayers ~onDeath >0 1
+  - summon{type=worldbossbeta;amount=1;radius=5} ~onDeath 
   Equipment:
   - mc_gold_sword:0
   - mc_diamond_axe:5
@@ -51,14 +51,16 @@ worldbossalpha:
   - 1 meleeattack
   - 2 RandomStroll
   - 3 AvoidArrows
+  - 4 opendoors
   AITargetSelectors:
   - 0 clear
   - 1 Players
+  - 2 attacker
   Drops:
   - worldboss_drops
 
 worldboss_minionalpha:
-  Mobtype: IRON_GOLEM
+  Mobtype: SKELETON
   Disguise:
     Type: player
     Player: '&4&lMinion'
@@ -80,21 +82,24 @@ worldboss_minionalpha:
   Health: 250
   Equipment:
   - mc_bow:0
+  - mc_leather_helmet:4
   - shield:5
   Faction: netherien
   AIGoalSelectors:
   - 0 clear
-  - 1 skeletonbowattack
+  - 1 arrowattack
   - 2 RandomStroll
   - 3 AvoidArrows
+  - 4 opendoors
   AITargetSelectors:
   - 0 clear
   - 1 Players
+  - 2 attacker
   Drops:
   - worldboss_drops_minions
 
 worldbossbeta:
-  Mobtype: IRON_GOLEM
+  Mobtype: SKELETON
   BossBar:
     Enabled: true
     Title: '&4Kalphite'
@@ -118,33 +123,36 @@ worldbossbeta:
     PreventItemPickup: true
     KnockbackResistance: 0.97
     PreventMobKillDrops: true
-  Display: '&4&lArcher Kalphite'
+  Display: '&4&lKalphite'
   Health: 2500
   Skills:
-  - message{cooldown=20;m="<mob.name><&co> Je vais vous cribler de flèches !"} @ThreatTablePlayers ~onCombat >0 0.1
-  - message{cooldown=20;m="<mob.name><&co> Je dominerais ce monde !"} @ThreatTablePlayers ~onCombat >0 0.1
-  - message{cooldown=20;m="<mob.name><&co> Vous vous inclinerez devant ma toute puissance !"} @ThreatTablePlayers ~onCombat >0 0.1
+  - message{cooldown=20;m="<mob.name><&co> Je vais vous cribler de flèches !"} @ThreatTablePlayers ~onCombat >0 0.01
+  - message{cooldown=20;m="<mob.name><&co> Je dominerais ce monde !"} @ThreatTablePlayers ~onCombat >0 0.01
+  - message{cooldown=20;m="<mob.name><&co> Vous vous inclinerez devant ma toute puissance !"} @ThreatTablePlayers ~onCombat >0 0.01
   - message{m="<mob.name><&co> Mon tableau de chasse s'accroît !"} @ThreatTablePlayers ~onPlayerKill >0 1
-  - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged
-  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#8ad9ff} @self ~onDamaged
-  - summon{type=worldboss_minionbeta;amount=1;radius=15} ~onDamaged 0.20
+  - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged 0.07
+  - particles{p=portal;a=10;hs=0.5;vs=0.7;s=0;y=0.7} @self ~onDamaged 0.1
+  - command{c="sudo <target.name> spawneventminion beta"} ~onDamaged 0.07
   - effect:particletornado{p=flame;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @self ~onDeath
-  - message{m="<mob.name><&co> Je n'ai pas dit mon dernier mot !"} @ThreatTablePlayers ~onPlayerKill >0 1
+  - message{m="<mob.name><&co> Je n'ai pas dit mon dernier mot !"} @ThreatTablePlayers ~onDeath >0 1
   - summon{type=worldbosstres;amount=1;radius=5} ~onDeath
   Equipment:
   - mc_bow:0
+  - mc_leather_helmet:4
   - shield:5
   DamageModifiers:
   - ENTITY_ATTACK 0.1
   Faction: netherien
   AIGoalSelectors:
   - 0 clear
-  - 1 skeletonbowattack
+  - 1 arrowattack
   - 2 RandomStroll
   - 3 AvoidArrows
+  - 4 opendoors
   AITargetSelectors:
   - 0 clear
   - 1 Players
+  - 2 attacker
   Drops:
   - worldboss_drops
  
@@ -169,7 +177,7 @@ worldboss_minionbeta:
     PreventMobKillDrops: true
   Display: '&4&lMinion'
   Health: 250
-  Damage: 5
+  Damage: 3
   Equipment:
   - mc_gold_sword:0
   - mc_diamond_axe:5
@@ -179,9 +187,11 @@ worldboss_minionbeta:
   - 1 meleeattack
   - 2 RandomStroll
   - 3 AvoidArrows
+  - 4 opendoors
   AITargetSelectors:
   - 0 clear
   - 1 Players
+  - 2 attacker
   Drops:
   - worldboss_drops_minions
   
@@ -214,19 +224,19 @@ worldbosstres:
   Health: 3000
   Damage: 5
   Skills:
-  - message{cooldown=20;m="<mob.name><&co> Je vais vous absoudre !"} @ThreatTablePlayers ~onCombat >0 0.1
-  - message{cooldown=20;m="<mob.name><&co> Je marcherais sur ce monde !"} @ThreatTablePlayers ~onCombat >0 0.1
-  - message{cooldown=20;m="<mob.name><&co> Priez pour ma clémence !"} @ThreatTablePlayers ~onCombat >0 0.1
+  - message{cooldown=20;m="<mob.name><&co> Je vais vous absoudre !"} @ThreatTablePlayers ~onCombat >0 0.01
+  - message{cooldown=20;m="<mob.name><&co> Je marcherais sur ce monde !"} @ThreatTablePlayers ~onCombat >0 0.01
+  - message{cooldown=20;m="<mob.name><&co> Priez pour ma clémence !"} @ThreatTablePlayers ~onCombat >0 0.01
   - message{m="<mob.name><&co> Un esprit de plus dans ma collection !"} @ThreatTablePlayers ~onPlayerKill >0 1
-  - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged
-  - particles{p=reddust;a=150;hs=0.8;vs=1.2;s=0;y=1.0;c=#8ad9ff} @self ~onDamaged
-  - summon{type=worldboss_minionalpha;amount=1;radius=15} ~onDamaged 0.15
-  - summon{type=worldboss_minionbeta;amount=1;radius=15} ~onDamaged 0.15
+  - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged 0.07
+  - particles{p=portal;a=10;hs=0.5;vs=0.7;s=0;y=0.7} @self ~onDamaged 0.10
+  - command{c="sudo <target.name> spawneventminion alpha"} ~onDamaged 0.07
+  - command{c="sudo <target.name> spawneventminion beta"} ~onDamaged 0.07
   - summon{type=nether_cloud;amount=1;radius=15} ~onDamaged 0.17
   - skill{s=KarazschArcaneBolt} @target ~onTimer:50
   - summon{type=netherien_laser;amount=1;radius=5;os=true} ~onTimer:200
   - effect:particletornado{p=flame;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @self ~onDeath
-  - message{m="<mob.name><&co> Je reviendrais, soyez en sûr !"} @ThreatTablePlayers ~onPlayerKill >0 1
+  - message{m="<mob.name><&co> Je reviendrais, soyez en sûr !"} @ThreatTablePlayers ~onDeath >0 1
   Equipment:
   - mc_blaze_rod:0
   - mc_wooden_hoe:5
@@ -240,9 +250,11 @@ worldbosstres:
   - 1 meleeattack
   - 2 RandomStroll
   - 3 AvoidArrows
+  - 4 opendoors
   AITargetSelectors:
   - 0 clear
   - 1 Players
+  - 2 attacker
   Drops:
   - worldboss_drops
   
@@ -338,7 +350,7 @@ revarcher:
   AIGoalSelectors:
   - 0 clear
   - 1 RandomStroll
-  - 2 skeletonbowattack
+  - 2 arrowattack
   - 3 float
   AITargetSelectors:
   - 0 clear

@@ -43,6 +43,7 @@ maka_q3done: tag maka_q3done
 maka_rapport: or drisgan.eko_q2start,drisgan.eko_q2done
 maka_hascoffre: item coffre_mysterieux:1
 maka_end: tag maka_end
+maka_fix: or drisgan.eko_q3start,drisgan.eko_q3done
 #
 #
 ynv_inconvers: tag ynv_inconvers
@@ -85,6 +86,7 @@ var_pitch: tag var_pitch
 var_inconvers: tag var_inconvers
 var_q1start: tag var_q1start
 var_lavatear: item lava_tear:5
+var_ok: and var_lavatear,var_watertear
 #
 zae_lavatear: item lava_tear:3
 var_watertear: item water_tear:5
@@ -100,6 +102,7 @@ loc_chatal: region athelas_castle
 loc_biblio: region athelas_biblio
 loc_grande: region athelas_gm
 zae_noloc: and !loc_biblio,!loc_chatal,!loc_grande
+zae_all_loc: and loc_biblio,loc_chatal,loc_grande
 zae_loc1: tag zae_loc1
 zae_loc2: tag zae_loc2
 zae_loc3: tag zae_loc3
@@ -126,7 +129,7 @@ kal_inconvers: tag kal_inconvers
 kal_q1start: tag kal_q1start
 kal_q1done: tag kal_q1done
 ombre_jaune: item ombre_jaune
-kal_q2start: tag global.kal_q2start
+kal_q2start: tag kal_q2start
 kal_q2done: tag kal_q2done
 #
 #
@@ -139,13 +142,30 @@ its_r1done: tag its_r1done
 its_r1inprogress: tag its_r1inprogress
 its_r1timer: tag its_r1timer
 #
+its_r2done: tag its_r2done
+its_r2inprogress: tag its_r2inprogress
+its_r2timer: tag its_r2timer
+#
+its_noquest1: or its_r1q1,its_r1q2,its_r1q3,its_r1q4,its_r1q5
+#
+its_r1q1: tag its_r1q1
+its_r1q2: tag its_r1q2
+its_r1q3: tag its_r1q3
+its_r1q4: tag its_r1q4
+its_r1q5: tag its_r1q5
+#
+its_noquest2: or its_r2q1,its_r2q2,its_r2q3
+#
+its_r2q1: tag its_r2q1
+its_r2q2: tag its_r2q2
+its_r2q3: tag its_r2q3
 #
 #
+its_noquest: or its_noquest1,its_noquest2
+its_progress: or its_r1inprogress,its_r2inprogress
 #
 #
-#
-#
-#
+itsuki_reset: tag itsuki_reset
 #
 #
 #

@@ -6,6 +6,16 @@
 #
 #
 #############################################
+
+#
+# Hack while waiting for Lauvel
+#
+#############
+
+physicien_tag: tag physicien
+
+#############
+
 builder: tag builder
 builder_in: tag builder_in
 #
@@ -235,6 +245,7 @@ temple_cabin_full: party 200 in_temple_cabin count:1
 in_temple_cabin: region temple_cabin
 inv_place_1: empty 1
 mageentry_approved: tag mageentry_approved
+mage_entry_branching_out: journal mage_entry_branching_out
 #
 #
 #
@@ -250,6 +261,13 @@ wand_air: wand hand name:airbender
 wand_earth: wand hand name:earthbender
 wand_water: wand hand name:waterbender
 wand_fire: wand hand name:firebender
+#
+#
+wand_store_air: tag wand_store_air
+wand_store_earth: tag wand_store_earth
+wand_store_fire: tag wand_store_fire
+wand_store_water: tag wand_store_water
+#
 #
 air_airblast: tag air_airblast
 air_bomb: tag air_bomb
@@ -341,6 +359,7 @@ air_parcours_occupied_exe: region air_parcours
 tag_moine_air: tag moine_air
 tag_aang: tag aang
 livre_air: tag livre_air
+air_continum: tag air_continum
 milo_fiole: tag milo_fiole
 fiole_have: item fiole:1
 fiole_hand: hand fiole
@@ -391,11 +410,12 @@ earthtemple_magic_learning: tag earthtemple_magic_learning
 earth_fiole: tag earth_fiole
 earth_fiole_have: tag earth_fiole_have
 earth_fiole_fill: tag earth_fiole_fill
-earth_fiole_item: item fiole
+earth_fiole_item: item fiole:7
 earth_fiole_hand: hand fiole_earth
+earth_fiole_lost: item fiole_earth:7
 #
 and_ef: and ef_earth,ef_sand,ef_stone,ef_iron,ef_gold,ef_emerald,ef_diamond
-ef_earth: tag ef_earth
+ef_earth: tag ef_dirt
 ef_sand: tag ef_sand
 ef_stone: tag ef_stone
 ef_iron: tag ef_iron

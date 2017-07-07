@@ -11,10 +11,12 @@ NPC_options:
     text: 'En quoi puis-je vous aider &2%player% &a&o?'
     pointers: questions,out
   questions_accept:
-    text: 'Bien entendu ! Que souhaitez vous savoir ? Pour des informations complètes, visitez &b http://gaia-minecraft.enjin.com/guide'
+    text: 'Bien entendu ! Que souhaitez vous savoir ?'
+    event: redirect_guide
     pointers: survie,plot,dynmap,mcmmo,trade,magie,site,jelag,out
   jelag_rep:
-    text: 'Installez &2Optifine &a&oà l''aide de ce lien (cliquez directement sur le lien) &b http://gaia-minecraft.enjin.com/guide'
+    text: 'Installez &2Optifine &a&oà l''aide de ce guide.'
+    event: redirect_guide
   survie_rep:
     text: 'Il vous faut trouver une maison à louer, trouvez un &2Gestionnaire &a&oau &dChâteau &a&oou au &dGrand Marché&a&o. Vous pourrez aussi prendre le bâteau pour fonder votre Ville sur le continent dangereux de l''Est !'
   plot_rep:

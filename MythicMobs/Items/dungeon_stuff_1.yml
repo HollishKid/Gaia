@@ -8,7 +8,7 @@ casque_fer_dj1:
   Data: 0
   Display: '&9Heaume vaillant'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oLa tête haute.'
   - '&e&oLe regard droit.'
@@ -17,16 +17,18 @@ casque_fer_dj1:
   Amount: 1
   Attributes:
     Head:
-      Armor: 4
+      Armor: 6
       Health: 3
   Options:
     Unbreakable: true
+  Enchantments:
+  - projectile_protection:1
 plastron_fer_dj1:
   Id: 307
   Data: 0
   Display: '&9Plastron vaillant'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oInsuffle du courage'
   - '&e&oà son porteur.'
@@ -35,17 +37,18 @@ plastron_fer_dj1:
   Amount: 1
   Attributes:
     Chest:
-      Armor: 7
-      Health: 3
+      Armor: 10
+      Health: 4
   Options:
     Unbreakable: true
   Enchantments:
+  - protection:1
 jambes_fer_dj1:
   Id: 308
   Data: 0
   Display: '&9Jambières vaillantes'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oElles sont plus légère'
   - '&e&oqu''il n''y parait.'
@@ -54,17 +57,18 @@ jambes_fer_dj1:
   Amount: 1
   Attributes:
     Legs:
-      Armor: 6
-      Health: 2
+      Armor: 8
+      Health: 3
   Options:
     Unbreakable: true
   Enchantments:
+  - projectile_protection:1
 pieds_fer_dj1:
   Id: 309
   Data: 0
   Display: '&9Bottes vaillantes'
   Lore:
-  - 'soul_link'
+  - 'Lien d''âme'
   - ''
   - '&e&oOn pourrait marcher toute'
   - '&e&ola journée sans se fatiguer'
@@ -74,8 +78,136 @@ pieds_fer_dj1:
   Amount: 1
   Attributes:
     Feet:
-      Armor: 4
+      Armor: 6
       Health: 2
   Options:
     Unbreakable: true
   Enchantments:
+  - depth_strider:1
+épée_vaillante:
+  Id: 267
+  Data: 0
+  Display: '&9Épée vaillante'
+  Lore:
+  - 'Lien d''âme'
+  - ''
+  - '&aBonus de set: Régénération'
+  - '&e&oUne douce magie'
+  - '&e&oen émane...'
+  - ''
+  - '&7&oRareté : &9Rare' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 14
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - KNOCKBACK:1
+#
+#
+#  MAIL DONJON I
+#
+#
+casque_maille_dj1:
+  Id: 302
+  Data: 0
+  Display: '&9Casque ailé'
+  Lore:
+  - 'Lien d''âme'
+  - ''
+  - '&e&oLes ailettes rappellent'
+  - '&e&oun certain gaulois...'
+  - ''
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Head:
+      Armor: 5
+      Health: 4
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - thorns:1
+plastron_maille_dj1:
+  Id: 303
+  Data: 0
+  Display: '&9Maille annelée'
+  Lore:
+  - 'Lien d''âme'
+  - ''
+  - '&e&oPermet des'
+  - '&e&omouvement amples.'
+  - ' '
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Chest:
+      Armor: 8
+      Health: 5
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - thorns:1
+jambes_maille_dj1:
+  Id: 304
+  Data: 0
+  Display: '&9Jambières plaquées'
+  Lore:
+  - 'Lien d''âme'
+  - ''
+  - '&e&oSans doute prélevées'
+  - '&e&osur le cadavre de son'
+  - '&e&oprécédent propriétaire...'
+  - ''
+  - '&7&oRareté : &9Rare'
+  Amount: 1
+  Attributes:
+    Legs:
+      Armor: 7
+      Health: 4
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - thorns:1
+pieds_maille_dj1:
+  Id: 305
+  Data: 0
+  Display: '&9Bottes à éperons'
+  Lore:
+  - 'Lien d''âme'
+  - ''
+  - '&e&oUn aiguillon bien placé'
+  - '&e&ofais des merveilles sur'
+  - '&e&ola volonté.'
+  - ''
+  - '&7&oRareté : &9Rare'  
+  Amount: 1
+  Attributes:
+    Feet:
+      Armor: 5
+      Health: 3
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - thorns:1
+vive_épée:
+  Id: 267
+  Data: 0
+  Display: '&9Vive épée'
+  Lore:
+  - 'Lien d''âme'
+  - ''
+  - '&aBonus de set: Vitesse'
+  - '&e&oTranchant comme une'
+  - '&e&olame, puissant comme...'
+  - ''
+  - '&7&oRareté : &9Rare' 
+  Amount: 1
+  Attributes:
+    MainHand:
+      Damage: 14
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - KNOCKBACK:1

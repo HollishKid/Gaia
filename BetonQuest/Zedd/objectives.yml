@@ -53,7 +53,7 @@ zae_click3: action right any conditions:hypercap_inhand,loc_grande events:zae_cl
 zae_click4: action right any conditions:hypercap_inhand events:zae_click4
 zae_clichyperreg: action right any conditions:hyperreg_inhand events:zae_starthyperreg
 zae_shootpotion: action right any conditions:potion_closeportal_inhand,inregion_faille events:zae_q4event
-kal_click: action right GOLD_BLOCK conditions:kal_q1start events:kal_collapse loc:-6836;11;3304;Gaia range:2
+kal_click: action right WOOL:4 conditions:kal_q1start events:kal_collapse loc:-6836;11;3304;Gaia range:2
 ut_coffre: location -6836;13;3254;Gaia 3 events:ut_coffre
 ut_coffre1click: action right chest events:ut_coffre1loot loc:-6843;12;3252;Gaia range:2
 ut_coffre2click: action right chest events:ut_coffre2loot loc:-6843;12;3245;Gaia range:2
@@ -64,7 +64,8 @@ ut_coffre5click: action right chest events:ut_coffre5loot loc:-6829;12;3252;Gaia
 #
 ### Itsuki
 #
-its_r1delay: delay 120 events:its_r1timer_remove
+its_r1delay: delay 720 events:its_r1timer_remove
+its_r2delay: delay 1440 events:its_r2timer_remove
 #
 its_objr1q1: mmobkill bandit amount:8 events:its_objr1q1_complete
 its_objr1q2: mmobkill lava_elem amount:6 events:its_objr1q2_complete
@@ -72,6 +73,9 @@ its_objr1q3: mmobkill hol_add amount:8 events:its_objr1q3_complete
 its_objr1q4: mmobkill water_elem amount:6 events:its_objr1q4_complete
 its_objr1q5: mmobkill ghoule amount:8 events:its_objr1q5_complete
 #
+its_objr2q1: mmobkill Shrek amount:1 events:its_objr2q1_complete
+its_objr2q2: mmobkill Kara amount:1 events:its_objr2q2_complete
+its_objr2q3: mmobkill erek amount:1 events:its_objr2q3_complete
 #
 #
 #

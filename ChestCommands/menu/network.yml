@@ -90,7 +90,7 @@ discord:
   POSITION-Y: 3
   
 votegui:
-  COMMAND: 'thisistheopenvotemenucommand'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour être redirigé vers la page des votes.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/vote.html"},"hoverEvent":{"action":"show_text","value":"Lien direct vers la page de votes de Gaïa"}}'
   NAME: '&aVotez pour Gaïa'
   LORE:
     - '&fGagnez &21 &fpoint de vote'
@@ -104,7 +104,7 @@ votegui:
   POSITION-Y: 3
   
 facebook:
-  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le FaceBook.","color":"green","clickEvent":{"action":"open_url","value":"https://www.facebook.com/Ga%C3%8Fa-Serveur-Minecraft-Mmorpg-1183732731697812/"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le FaceBook.","color":"green","clickEvent":{"action":"open_url","value":"https://www.facebook.com/Ga%C3%AFa-Mmorpg-333418070394101/"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&9Page FaceBook'
   ID: '35:11'
   LORE:
@@ -114,7 +114,7 @@ facebook:
   POSITION-Y: 3
 
 twitter:
-  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le Twitter.","color":"green","clickEvent":{"action":"open_url","value":"https://twitter.com/Gaia_MMORPG"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour aller vers le Twitter.","color":"green","clickEvent":{"action":"open_url","value":"https://twitter.com/gaia_rpg"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
   NAME: '&bTwitter'
   ID: '35:3'
   LORE:

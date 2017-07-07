@@ -1,0 +1,89 @@
+######################
+#+                  +#
+#   MENU SETTINGS    #
+#+                  +#
+######################
+
+menu-settings:
+
+  # name - appears as the title - REQUIRED
+  name: '&dContrats de Guilde'
+
+  # rows - the number of rows of the chest - REQUIRED
+  rows: 5
+
+  # command - OPTIONAL (you can remove this or set it to '')
+  # Bind multiple commands using ; (command: 'menu; m; me')
+  command: ''
+
+  # auto-refresh - OPTIONAL
+  # How frequently the menu will be refreshed, in seconds.
+  # Useful if you have variables in items' descriptions.
+  auto-refresh: 1
+
+  # This command command will be execute when the menu is opened.
+  # Supports all the icon command types.
+  open-action: 'sound: block note pling'
+
+  # open-with-item - OPTIONAL
+  # The menu will open only right-clicking with orange wool [35:1]
+  open-with-item: ''
+
+
+######################
+#+                  +#
+#       ITEMS        #
+#+                  +#
+######################
+
+menu-close:
+  NAME: '&4Fermer'
+  ID: barrier
+  LORE:
+    - 'Ferme cette fenêtre.'
+  POSITION-X: 9
+  POSITION-Y: 1
+retour:
+  COMMAND: 'open: itsuki.yml'
+  NAME: '&aRetour'
+  ID: stick
+  LORE:
+    - 'Retour au menu précédent.'
+  POSITION-X: 8
+  POSITION-Y: 1  
+oui:
+  COMMAND: 'console: bq event {player} Zedd.its_r2quit'
+  NAME: '&4xxxxxxxxxxxxxxxx'
+  LORE:
+    - ''
+    - 'Abandonner le'
+    - 'contrat.'
+    - ''
+    - '&4xxxxxxxxxxxxxxxx'
+  ID: 'wool:14'
+  POSITION-X: 6
+  POSITION-Y: 4  
+non:
+  COMMAND: 'open: itsuki.yml'
+  NAME: '&aoooooooooooooooo'
+  LORE:
+    - ''
+    - 'Conserver le'
+    - 'contrat.'
+    - ''
+    - '&aooooooooooooooo'
+  ID: 'wool:5'
+  POSITION-X: 4
+  POSITION-Y: 4
+abandon:
+  NAME: '&3---------------------'
+  LORE:
+    - ''
+    - 'Voulez-vous vraiment'
+    - 'abandonner le contrat?'
+    - ''
+    - '&3---------------------'
+  ID: '155'
+  POSITION-X: 5
+  POSITION-Y: 2
+  KEEP-OPEN: true

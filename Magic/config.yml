@@ -1,0 +1,164 @@
+#
+# Modify this file to change the overall behavior of the Magic plugin.
+# only include the options you want to modify.
+#
+# To see all available options, look in the defaults/config.defaults.yml file.
+#
+# Options for sub-components (spells, wand templates, chest populator, etc) are 
+# found in separate files.
+#
+
+#
+# This is the general configuration file for the magic plugin.
+# 
+# Wand and Spell configurations are separate, in wands.yml and spells.yml.
+# Localizations are also separate, in messages.yml. 
+#
+# For more information, see: https://github.com/elBukkit/MagicPlugin/blob/master/CONFIGURATION.md
+#
+# More examples can be found at
+# 
+# https://github.com/elBukkit/MagicPlugin/tree/master/src/main/resources/examples
+#
+
+# Load one of the included example configurations instead of the defaults.
+# Current options: potter, safe, survival
+# Any customizations will still be loaded on top of the example configs.
+# example: potter
+
+# Add one or more of the included example configurations on top of the defaults.
+# The config.yml potion is not loaded, for sanity's sake.
+# add_examples:
+#   - potter
+#   - survival
+
+# Some common fields that you might like to override:
+
+# Give new players a wand when they first join
+#welcome_wand: beginner
+
+# Whether or not to show any messages (in chat) 
+#show_messages: true
+
+# Whether or not to show messages on every spell cast (in chat)
+#show_cast_messages: false
+
+# Enable/Disable Sound Effects
+#sounds: true
+
+# Prevent rapid sending of chat messages from the plugin (in milliseconds)
+#message_throttle: 3000
+
+# Set this to 1 to just turn costs off, or you can use it to scale costs down.
+#cost_reduction: 0.0
+
+# How much to reduce costs and cooldowns when using /cast (versus a wand)
+#cast_command_cost_reduction: 1.0
+#cast_command_cooldown_reduction: 0.0
+
+# Whether wands can be crafted on a crafting table
+#enable_crafting: true
+
+# Whether wands can be combined on an anvil
+#enable_combining: true
+
+# Whether wands can be upgraded on an enchanting table
+#enable_enchanting: true
+
+# Whether or not using a wand on an anvil will organize its inventory
+#enable_organizing: true
+
+# Enable/Disable automatic spell upgrades
+# enable_spell_upgrades: true
+
+# This can be used to scale spell and wand prices up and down without
+# Having to invidivudally configure "worth" for each spell.
+#
+# If you have a default Gringott's install, you may want to change this to "0.01" to make the emeralds
+# match up.
+# worth_base: 1
+#
+################################
+#
+# HOLLISH SETTINGS HENCEFORTH
+#
+################################
+# Show wands as dynmap markers, if dynmap is present
+dynmap_show_wands: false
+
+# Show spell casts as dynmap polylines, if dynmap is present
+dynmap_show_spells: false
+
+# Whether wands can be crafted on a crafting table
+enable_crafting: false
+
+# Whether wands can be upgraded on an enchanting table
+enable_enchanting: true
+
+# Enable spell upgrades. Turning this off will make all of the upgraded spells
+# unobtainable.
+enable_spell_upgrades: true
+
+# Automatically level up spells based on cast count
+enable_automatic_spell_upgrades: true
+
+# Whether wands can be combined on an anvil
+enable_combining: false
+
+
+
+# Set this to true to make wands "Unbreakable", regardless of the indestructible property
+wand_unbreakable: true
+
+# Set this to false to allow players to drop wands by dragging them out of their inventories
+# and to let players put wands in chests.
+# The Magic.wand.override_drop permission also allows players to do this.
+# Wands are droppable normally unless they are set to "undroppable: true"
+wand_undroppable: true
+
+# If true, wands will automatically bind to their owners
+enable_binding: true
+
+# If true, wands will automatically be set to keep when owned
+enable_keeping: true
+
+# Players keep their wands when they die
+keep_wands_on_death: true
+
+# Players can remove spells from their wands
+allow_spell_dropping: false
+
+# Wand appearance
+wand_item: blaze_rod
+
+# This resource pack will automatically be used if none is defined in your server.properties
+# Set this to "" if you have some other plugin or Bungee managing resource packs.
+default_resource_pack: ""
+
+# Whether or not to show messages on every spell cast (in chat)
+show_cast_messages: false
+
+# How to display SP. Options are "number" and "none"
+sp_display: number
+
+# Set this to false to disable the Skill Point system completely.
+sp_enabled: false
+
+# This controls what players will see when interacting with an enchantment table
+enchant_click: ''
+enchant_sneak_click: ''
+enchant_block: ''
+
+###########################
+# SET UP FOR AVATAR STYLE #
+###########################
+
+# This is a complete wand/spell overhaul
+load_default_spells: true
+disable_default_spells: false
+load_default_wands: false
+#load_default_enchanting: false
+load_default_crafting: false
+
+# Effects from from the hands
+wand_location_offset_vertical: -0.5

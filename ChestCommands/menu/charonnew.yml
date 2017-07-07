@@ -194,7 +194,7 @@ advids:
   POSITION-Y: 1
  
 votegui:
-  COMMAND: 'thisistheopenvotemenucommand'
+  COMMAND: 'console: tellraw {player} {"text":"Cliquez ici pour être redirigé vers la page des votes.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/vote.html"},"hoverEvent":{"action":"show_text","value":"Lien direct vers la page de votes de Gaïa"}}'
   NAME: '&aVotez pour Gaïa'
   LORE:
     - '&fGagnez &21 &fpoint de vote'
@@ -301,11 +301,11 @@ chicken:
   NAME: '&aCompagnon Poule'
   ID: '366'
   LORE:
-    - ' '
-    - '&fVélocité: &20.15'
-    - ' '
     - '&fCe Compagnon est débloqué'
     - '&fau 10ème vote !'
+    - ' '
+    - '&oUtilisez le /menu pour voir'
+    - '&ovos compagnons'
   POSITION-X: 3
   POSITION-Y: 5
   KEEP-OPEN: true
@@ -314,11 +314,11 @@ cow:
   NAME: '&aCompagnon Vâche'
   ID: '363'
   LORE:
-    - ' '
-    - '&fVélocité: &20.20'
-    - ' '
     - '&fCe Compagnon est débloqué'
     - '&fau 20ème vote !'
+    - ' '
+    - '&oUtilisez le /menu pour voir'
+    - '&ovos compagnons'
   POSITION-X: 4
   POSITION-Y: 5
   KEEP-OPEN: true
@@ -327,11 +327,11 @@ mutton:
   NAME: '&aCompagnon Mouton'
   ID: '424'
   LORE:
-    - ' '
-    - '&fVélocité: &20.25'
-    - ' '
     - '&fCe Compagnon est débloqué'
     - '&fau 30ème vote !'
+    - ' '
+    - '&oUtilisez le /menu pour voir'
+    - '&ovos compagnons'
   POSITION-X: 5
   POSITION-Y: 5
   KEEP-OPEN: true
@@ -340,11 +340,11 @@ pig:
   NAME: '&aCompagnon Cochon'
   ID: '319'
   LORE:
-    - ' '
-    - '&fVélocité: &20.30'
-    - ' '
     - '&fCe Compagnon est débloqué'
     - '&fau 40ème vote !'
+    - ' '
+    - '&oUtilisez le /menu pour voir'
+    - '&ovos compagnons'
   POSITION-X: 6
   POSITION-Y: 5
   KEEP-OPEN: true
@@ -353,11 +353,11 @@ rabbit:
   NAME: '&aCompagnon Lapin'
   ID: '411'
   LORE:
-    - ' '
-    - '&fVélocité: &20.35'
-    - ' '
     - '&fCe Compagnon est débloqué'
     - '&fau 50ème vote !'
+    - ' '
+    - '&oUtilisez le /menu pour voir'
+    - '&ovos compagnons'
   POSITION-X: 7
   POSITION-Y: 5
   KEEP-OPEN: true
@@ -366,11 +366,11 @@ villager:
   NAME: '&aCompagnon Villageois'
   ID: '397:3'
   LORE:
-    - ' '
-    - '&fVélocité: &20.30'
-    - ' '
     - '&fCe Compagnon est débloqué'
     - '&fau 75ème vote !'
+    - ' '
+    - '&oUtilisez le /menu pour voir'
+    - '&ovos compagnons'
   POSITION-X: 3
   POSITION-Y: 6
   KEEP-OPEN: true
@@ -379,11 +379,11 @@ gollem:
   NAME: '&aCompagnon Gollem'
   ID: '265'
   LORE:
-    - ' '
-    - '&fVélocité: &20.35'
-    - ' '
     - '&fCe Compagnon est débloqué'
     - '&fau 200ème vote !'
+    - ' '
+    - '&oUtilisez le /menu pour voir'
+    - '&ovos compagnons'
   POSITION-X: 6
   POSITION-Y: 6
   KEEP-OPEN: true
@@ -392,11 +392,11 @@ snowman:
   NAME: '&aCompagnon Bonhomme de Neige'
   ID: '332'
   LORE:
-    - ' '
-    - '&fVélocité: &20.30'
-    - ' '
     - '&fCe Compagnon est débloqué'
     - '&fau 150ème vote !'
+    - ' '
+    - '&oUtilisez le /menu pour voir'
+    - '&ovos compagnons'
   POSITION-X: 5
   POSITION-Y: 6
   KEEP-OPEN: true
@@ -405,11 +405,11 @@ witch:
   NAME: '&aCompagnon Sorcière'
   ID: '438'
   LORE:
-    - ' '
-    - '&fVélocité: &20.30'
-    - ' '
     - '&fCe Compagnon est débloqué'
     - '&fau 100ème vote !'
+    - ' '
+    - '&oUtilisez le /menu pour voir'
+    - '&ovos compagnons'
   POSITION-X: 4
   POSITION-Y: 6
   KEEP-OPEN: true

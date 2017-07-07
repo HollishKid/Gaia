@@ -73,6 +73,13 @@ fer_epee:
   - '&d&otrès dense !'
   - ' '
   - '&7&oRareté : &aCommun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 9 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 267
   POSITION-X: 4
   POSITION-Y: 2
@@ -135,6 +142,13 @@ fer_hache:
   - '&d&otrès dense !'
   - ' '
   - '&7&oRareté : &aCommun'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 10 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 258
   POSITION-X: 9
   POSITION-Y: 2

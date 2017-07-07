@@ -174,10 +174,27 @@ hol_residus_inhand: hand residus_de_poudre
 hol_residuscheck: item residus_de_poudre:5
 hol_residuscheck1: item residus_de_poudre:1
 hol_tnt_inhand: hand erek_tnt
+hol_hastnt: item erek_tnt
 hol_redblock: and hol_redblock1,hol_insalleb3
 hol_redblock1: testforblock -7435;51;3274;Gaia REDSTONE_BLOCK
 hol_insalleb3: region hol_salleb3
 #
+hol_salleb1_occupied: or hol_salleb1_occupied2,hol_salleb12_occupied
+hol_salleb1_occupied2: party 14000 hol_salleb1_exe count:1
+hol_salleb1_exe: region hol_erek_salleb1
+hol_salleb12_occupied: party 14000 hol_salleb12_exe count:1
+hol_salleb12_exe: region hol_salleb12
 #
+hol_salleb2_occupied: or hol_salleb2_occupied2,hol_salleb22_occupied
+hol_salleb2_occupied2: party 14000 hol_salleb2_exe count:1
+hol_salleb2_exe: region hol_salleb2
+hol_salleb22_occupied: party 14000 hol_salleb22_exe count:1
+hol_salleb22_exe: region hol_salleb22
+#
+hol_salleb3_occupied: or hol_salleb3_occupied2,hol_salleb32_occupied
+hol_salleb3_occupied2: party 14000 hol_salleb3_exe count:1
+hol_salleb3_exe: region hol_salleb3
+hol_salleb32_occupied: party 14000 hol_salleb32_exe count:1
+hol_salleb32_exe: region hol_salleb32
 #
 #

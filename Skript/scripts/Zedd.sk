@@ -5,21 +5,236 @@
 #
 #
 On pick up:
-	If lore of item contains "soul_link":
-		set the 1st line of the item's lore to "Lien d'âme %player%"
 	If lore of item contains "Lien d'âme":
-		if the 1st line of the item's lore is not "Lien d'âme %player%":
+		set the 1st line of the item's lore to "&3Appartient à %player%"
+	If lore of item contains "Appartient à":
+		if the 1st line of the item's lore is not "&3Appartient à %player%":
 			cancel event
 			wait 1 tick
 			message "&6&oVous n'êtes pas le propriétaire de cet objet."
-On unstore:
-	If lore of item contains "Lien d'âme":
-		if the 1st line of the item's lore is not "Lien d'âme %player%":
+On store:
+	If lore of event-item contains "Appartient à":
+		if the 1st line of the event-item's lore is not "&3Appartient à %player%":
 			cancel event
 			wait 1 tick
 			message "&6&oVous n'êtes pas le propriétaire de cet objet."
 On Hopper Pickup:
-	If lore of item contains "soul_link":
-		cancel event
 	If lore of item contains "Lien d'âme":
 		cancel event
+		wait 1 tick
+	If lore of item contains "Appartient à":
+		cancel event
+		wait 1 tick
+mor.inventory click:
+#	send "event-item, cursor-item, event-inventory, player"
+#	send "%event-item%, %cursor-item%, %event-inventory%, %player%"
+	If lore of event-item contains "Appartient à":
+		if the 1st line of the event-item's lore is not "&3Appartient à %player%":
+			cancel event
+			wait 1 tick
+			message "&6&oVous n'êtes pas le propriétaire de cet objet."
+		else:
+			wait 1 tick
+	else:
+		wait 1 tick
+#
+#
+# EXP SCROLLS
+#
+#
+On rightclick holding paper:
+	If the item's lore contains "expérience":
+		If the item's lore contains "Epées":
+			If the item's lore contains "faible":
+				command "bq event %player% scrolls.sword_scroll_1"
+				command "addxp %player% épées 500"
+			else:
+				if the item's lore contains "moyenne":
+					command "bq event %player% scrolls.sword_scroll_2"
+					command "addxp %player% épées 1000"
+				else:
+					command "bq event %player% scrolls.sword_scroll_3"
+					command "addxp %player% épées 2000"
+		else:
+			if the item's lore contains "Acrobatie":
+				If the item's lore contains "faible":
+					command "bq event %player% scrolls.acrobatic_scroll_1"
+					command "addxp %player% acrobatie 500"
+				else:
+					if the item's lore contains "moyenne":
+						command "bq event %player% scrolls.acrobatic_scroll_2"
+						command "addxp %player% acrobatie 1000"
+					else:
+						command "bq event %player% scrolls.acrobatic_scroll_3"
+						command "addxp %player% acrobatie 2000"
+			else:
+				if the item's lore contains "Bûcheronnage":
+					If the item's lore contains "faible":
+						command "bq event %player% scrolls.woodcutting_scroll_1"
+						command "addxp %player% bûcheronnage 500"
+					else:
+						if the item's lore contains "moyenne":
+							command "bq event %player% scrolls.woodcutting_scroll_2"
+							command "addxp %player% bûcheronnage 1000"
+						else:
+							command "bq event %player% scrolls.woodcutting_scroll_3"
+							command "addxp %player% bûcheronnage 2000"
+				else:
+					if the item's lore contains "Pêche":
+						If the item's lore contains "faible":
+							command "bq event %player% scrolls.fishing_scroll_1"
+							command "addxp %player% pêche 500"
+						else:
+							if the item's lore contains "moyenne":
+								command "bq event %player% scrolls.fishing_scroll_2"
+								command "addxp %player% pêche 1000"
+							else:
+								command "bq event %player% scrolls.fishing_scroll_3"
+								command "addxp %player% pêche 2000"
+					else:
+						if the item's lore contains "Minage":
+							If the item's lore contains "faible":
+								command "bq event %player% scrolls.mining_scroll_1"
+								command "addxp %player% minage 500"
+							else:
+								if the item's lore contains "moyenne":
+									command "bq event %player% scrolls.mining_scroll_2"
+									command "addxp %player% minage 1000"
+								else:
+									command "bq event %player% scrolls.mining_scroll_3"
+									command "addxp %player% minage 2000"
+						else:
+							if the item's lore contains "Excavation":
+								If the item's lore contains "faible":
+									command "bq event %player% scrolls.excavation_scroll_1"
+									command "addxp %player% excavation 500"
+								else:
+									if the item's lore contains "moyenne":
+										command "bq event %player% scrolls.excavation_scroll_2"
+										command "addxp %player% excavation 1000"
+									else:
+										command "bq event %player% scrolls.excavation_scroll_3"
+										command "addxp %player% excavation 2000"
+							else:
+								if the item's lore contains "Haches":
+									If the item's lore contains "faible":
+										command "bq event %player% scrolls.axes_scroll_1"
+										command "addxp %player% haches 500"
+									else:
+										if the item's lore contains "moyenne":
+											command "bq event %player% scrolls.axes_scroll_2"
+											command "addxp %player% haches 1000"
+										else:
+											command "bq event %player% scrolls.axes_scroll_3"
+											command "addxp %player% haches 2000"
+								else:
+									if the item's lore contains "Poings":
+										If the item's lore contains "faible":
+											command "bq event %player% scrolls.fisting_scroll_1"
+											command "addxp %player% poings 500"
+										else:
+											if the item's lore contains "moyenne":
+												command "bq event %player% scrolls.fisting_scroll_2"
+												command "addxp %player% poings 1000"
+											else:
+												command "bq event %player% scrolls.fisting_scroll_3"
+												command "addxp %player% poings 2000"
+									else:
+										if the item's lore contains "Tir":
+											If the item's lore contains "faible":
+												command "bq event %player% scrolls.archery_scroll_1"
+												command "addxp %player% arc 500"
+											else:
+												if the item's lore contains "moyenne":
+													command "bq event %player% scrolls.archery_scroll_2"
+													command "addxp %player% arc 1000"
+												else:
+													command "bq event %player% scrolls.archery_scroll_3"
+													command "addxp %player% arc 2000"
+										else:
+											if the item's lore contains "Apprivoisement":
+												If the item's lore contains "faible":
+													command "bq event %player% scrolls.taming_scroll_1"
+													command "addxp %player% apprivoisement 500"
+												else:
+													if the item's lore contains "moyenne":
+														command "bq event %player% scrolls.taming_scroll_2"
+														command "addxp %player% apprivoisement 1000"
+													else:
+														command "bq event %player% scrolls.taming_scroll_3"
+														command "addxp %player% apprivoisement 2000"
+											else:
+												if the item's lore contains "Fonte":
+													If the item's lore contains "faible":
+														command "bq event %player% scrolls.smelting_scroll_1"
+														command "addxp %player% fonte 500"
+													else:
+														if the item's lore contains "moyenne":
+															command "bq event %player% scrolls.smelting_scroll_2"
+															command "addxp %player% fonte 1000"
+														else:
+															command "bq event %player% scrolls.smelting_scroll_3"
+															command "addxp %player% fonte 2000"
+												else:
+													if the item's lore contains "Alchimie":
+														If the item's lore contains "faible":
+															command "bq event %player% scrolls.alchemy_scroll_1"
+															command "addxp %player% alchimie 500"
+														else:
+															if the item's lore contains "moyenne":
+																command "bq event %player% scrolls.alchemy_scroll_2"
+																command "addxp %player% alchimie 1000"
+															else:
+																command "bq event %player% scrolls.alchemy_scroll_3"
+																command "addxp %player% alchimie 3000"
+													else:
+														if the item's lore contains "Herboristerie":
+															If the item's lore contains "faible":
+																command "bq event %player% scrolls.herbalism_scroll_1"
+																command "addxp %player% herboristerie 500"
+															else:
+																if the item's lore contains "moyenne":
+																	command "bq event %player% scrolls.herbalism_scroll_2"
+																	command "addxp %player% herboristerie 1000"
+																else:
+																	command "bq event %player% scrolls.herbalism_scroll_3"
+																	command "addxp %player% herboristerie 2000"
+														else:
+															if the item's lore contains "Réparation":
+																If the item's lore contains "faible":
+																	command "bq event %player% scrolls.repair_scroll_1"
+																	command "addxp %player% réparation 500"
+																else:
+																	if the item's lore contains "moyenne":
+																		command "bq event %player% scrolls.repair_scroll_2"
+																		command "addxp %player% réparation 1000"
+																	else:
+																		command "bq event %player% scrolls.repair_scroll_3"
+																		command "addxp %player% réparation 2000"
+															else:
+																if the item's lore contains "Recyclage":
+																	If the item's lore contains "faible":
+																		command "bq event %player% scrolls.salvation_scroll_1"
+																		command "addxp %player% recyclage 500"
+																	else:
+																		if the item's lore contains "moyenne":
+																			command "bq event %player% scrolls.salvation_scroll_2"
+																			command "addxp %player% recyclage 1000"
+																		else:
+																			command "bq event %player% scrolls.salvation_scroll_3"
+																		command "addxp %player% recyclage 2000"
+																else:
+																	message "must be something wrong somewhere..."
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#

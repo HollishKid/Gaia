@@ -4,18 +4,21 @@
 #/liberer:
 #  permission: admin.prison
 #  message: '&cVous devez être modérateur pour exécuter cette commande.'
-/bug:
-  permission: admin.bug
-  message: '&cVous devez être administrateur pour exécuter cette commande.'
 /histoire:
-  permission: admin.histoire
+  permission: admin.prison
   message: '&cVous devez être Staff pour exécuter cette commande.'
 /plugins:
-  permission: permission.plugins
+  permission: admin.prison
   message: '&4You do not have permission for this Command'
 /louer:
   permission: worldguard.*
   message: '&4Réservé aux Admins'
+/louer2:
+  permission: worldguard.*
+  message: '&cVous devez être administrateur pour exécuter cette commande.'  
 /gaiapurge:
-  permission: essentials.vanish
+  permission: worldguard.*
   message: '&4Réservé aux Admins'
+/builderregionhelp:
+  permission: worldguard.*
+  message: '&cVous devez être administrateur pour exécuter cette commande.'

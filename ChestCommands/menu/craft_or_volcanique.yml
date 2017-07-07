@@ -103,6 +103,13 @@ or_casque:
   - '&e&od''un volcan actif.'
   - ' '
   - '&7&oRareté : &9Rare'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 12 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 314
   POSITION-X: 4
   POSITION-Y: 2
@@ -205,6 +212,13 @@ or_plastron:
   - '&e&od''un volcan actif.'
   - ' '
   - '&7&oRareté : &9Rare'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 13 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 315
   POSITION-X: 9
   POSITION-Y: 2
@@ -297,6 +311,13 @@ or_jambes:
   - '&e&od''un volcan actif.'
   - ' '
   - '&7&oRareté : &9Rare'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 14 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 316
   POSITION-X: 4
   POSITION-Y: 5
@@ -359,6 +380,13 @@ or_pieds:
   - '&e&od''un volcan actif.'
   - ' '
   - '&7&oRareté : &9Rare'
+  - ' '
+  - '&cRequiert :'
+  - '&o- Niveau 15 en Fonte.'
+  - ' '
+  - '&lVous perdez vos ressources'
+  - '&lsi vous n''avez pas le niveau'
+  - '&lrequis si vous craftez !'
   ID: 317
   POSITION-X: 9
   POSITION-Y: 5

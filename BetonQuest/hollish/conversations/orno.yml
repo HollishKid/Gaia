@@ -15,7 +15,7 @@ NPC_options:
   que_rep:
     text: 'J''assiste les Érudits dans leur travail de recherche documentaire. \nDe par l''âge de cet endroit, beaucoup de documents sont conservés ici. \nCertains pensent même que des salles inconnues se trouvent encore en profondeur sous le bâtiment.'
   connu:
-    text: 'Bien à vous &2%player% &a&o! Le &2Mage &a&om''a prévenu de votre visite. \nVous souhaiteriez donc vous soumettre à l''enseignement des Érudits, allez me chercher le livre intitulé &6"Histoire de l''Enseignement de la Magie"&a&o.'
+    text: 'Bien à vous &2%player% &a&o! Le &2Mage &a&om''a prévenu de votre visite. \nVous souhaiteriez donc vous soumettre à l''enseignement des Érudits, allez me chercher le livre intitulé "&6Histoire de l''Enseignement de la Magie&a&o".'
     conditions: 'tag_orno,!orno_book,!orno_book_tagged,!tag_orno_beta'
     pointers: dako,pourquoi,ou
   pourquoi_rep:
@@ -24,7 +24,7 @@ NPC_options:
   ou_rep:
     text: 'Dans la section Histoire de la &dPetite Salle &a&o!'
   livre_sans:
-    text: 'Vous n''avez pas encore trouvé le livre que je vous ai demandé ? \nIl s''appelle &6"Histoire de l''Enseignement de la Magie"&a&o.'
+    text: 'Vous n''avez pas encore trouvé le livre que je vous ai demandé ? \nIl s''appelle "&6Histoire de l''Enseignement de la Magie&a&o".'
     conditions: 'tag_orno,orno_book,!orno_book_tagged,!tag_orno_beta'
     pointers: ou,non
   livre:
@@ -69,7 +69,7 @@ NPC_options:
   terre_inc_no:
     text: Hmmm... \nJe ne connais aucune incantation en lien avec la Terre qui dit ça... \nÊtes-vous sûr ?
   terre_inc_ok:
-    text: Ah ! Cela me dit quelque chose... \nLes Mages de la Terre s'en servaient pour saluer leur élément. \nIls utilisaient des &2Emeraudes Polies &a&opour concentrer une grande Force Terrienne ! \nL'Érudit Kemen saura quoi faire de ces informations !
+    text: Ah ! Cela me dit quelque chose... \nLes Mages de la Terre s'en servaient pour saluer leur élément. \nIls utilisaient des &2Emeraudes Volcaniques &a&opour concentrer une grande Force Terrienne ! \nL'Érudit Kemen saura quoi faire de ces informations !
     events: folder_terre_orno_done
 player_options:
   bonjour:
@@ -169,17 +169,17 @@ player_options:
     condition: terre_orno
     pointer: terre_orno_rep
   terre_inc1:
-    text: '"Elan síla lúmenn'' omentielvo"'
+    text: 'Elan síla lúmenn'' omentielvo'
     pointer: terre_inc_no
   terre_inc2:
-    text: '"Elen síla lúmenn'' omentielva"'
+    text: 'Elen síla lúmenn'' omentielva'
     pointer: terre_inc_no
   terre_inc3:
-    text: '"Elen síla lúmenn'' omentielvo"'
+    text: 'Elen síla lúmenn'' omentielvo'
     pointer: terre_inc_ok
   terre_inc4:
-    text: '"Elen síla lúmann'' omentielvo"'
+    text: 'Elen síla lúmann'' omentielvo'
     pointer: terre_inc_no
   terre_inc5:
-    text: '"Elen síle lúmenn'' omentielvo"'
+    text: 'Elen síle lúmenn'' omentielvo'
     pointer: terre_inc_no

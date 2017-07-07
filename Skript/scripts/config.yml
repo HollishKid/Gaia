@@ -2,6 +2,132 @@
 #  Configuration
 #
 #
+penalty_free_regions:
+- minigames
+air_spells:
+- airblast
+- airbomb
+- suction
+- tornade
+- poussee
+- airshield
+- enhancedspeed
+- airscooter
+- breathofwind
+air_spells_bq:
+- air_airblast
+- air_bomb
+- air_suction
+- air_tornado
+- air_poussee
+- air_shield
+- air_enhancedspeed
+- air_scooter
+- air_breathofwind
+earth_spells:
+- tossi
+- earthblock
+- breche
+- compression
+- sandspout
+- earthsmash
+- earthquaki
+- collapsi
+- earthline
+- durci
+earth_spells_bq:
+- earth_tossi
+- earth_earthblock
+- earth_breche
+- earth_compression
+- earth_sandspout
+- earth_earthsmash
+- earth_earthquaki
+- earth_collapsi
+- earth_earthline
+- earth_durci
+grades_bq:
+- intendant_done
+- grade_ecuyer
+- grade_chevalier
+- grade_champion
+- grade_seigneur
+- grade_banneret
+- grade_baron
+- grade_vicomte
+- grade_comte
+- grade_marquis
+- grade_duc
+- grade_prince
+- grade_legende
+grades_noms:
+- Citoyen
+- Écuyer
+- Chevalier
+- Champion
+- Seigneur
+- Banneret
+- Baron
+- Vicomte
+- Comte
+- Marquis
+- Duc
+- Prince
+- Légende
+metiers_bq:
+- metier_poings
+- metier_epees
+- metier_haches
+- metier_arc
+- metier_alchimiste
+- metier_acrobate
+- metier_peche
+- metier_apprivoiseur
+- metier_herboriste
+- metier_mineur
+- metier_reparation
+- metier_excavation
+- metier_bucheron
+metiers_noms:
+- Pugiliste
+- Épéiste
+- Milicien
+- Archer
+- Alchimiste
+- Acrobate
+- Pêcheur
+- Apprivoiseur
+- Herboriste
+- Mineur
+- Réparateur
+- Excavateur
+- Bûcheron
+metiers_competences:
+- unarmed
+- swords
+- axes
+- archery
+- alchemy
+- acrobatics
+- fishing
+- taming
+- herbalism
+- mining
+- repair
+- excavation
+- woodcutting
+drisgannpcs: 
+- 138
+- 140
+- 141
+- 144
+- 145
+- 146
+- 147
+- 148
+- 150
+- 167
+- 168
 helmets:
 - leather_helmet
 - chainmail_helmet

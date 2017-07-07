@@ -68,10 +68,15 @@ tag_remover_begin: folder tag_remove_passeur,start_removemembre delay:5
 tag_remove_passeur: tag del passeur
 jac_fold: folder jac_mess1,title_athelas,tag_amiral_del,tag_player,j_entry_int,pex_debuttempo,journal_update delay:3
 jac_mess1: 'message &2Jacopo: &a&oEt gardez votre &dJournal de Progression &a&oproche de vous, &f/menu &a&osi vous l''avez perdu !'
-title_athelas: folder title_athelas1,title_athelas2,title_athelas3 delay:3
+title_athelas: folder title_athelas1,title_athelas2,title_athelas3,title_carte delay:3
 title_athelas1: 'command title %player% times 40 60 80'
 title_athelas2: 'command title %player% subtitle {"text":"Retrouver l''Intendant","color":"gold"}'
 title_athelas3: 'command title %player% title {"text":"Athelas","color":"purple"}'
+title_carte: folder title_carte1,title_carte2,title_carte3,title_carte4 delay:5
+title_carte1: 'command title %player% times 40 60 80'
+title_carte2: 'command title %player% subtitle {"text":"Utilisez la Carte","color":"gold"}'
+title_carte3: 'command title %player% title {"text":"carte.gaia-craft.fr","color":"purple"}'
+title_carte4: 'command tellraw %player% {"text":"Cliquez ici pour être redirigé vers la carte.","color":"green","clickEvent":{"action":"open_url","value":"https://carte.gaia-craft.fr/"},"hoverEvent":{"action":"show_text","value":"Lien direct vers la Carte de Gaïa"}}'
 j_entry_int: if j_entry_int journal_update else j_entry_int_exe
 j_entry_int_exe: journal add trouver_intendant
 pex_debuttempo: 'command pex user %player% group set debuttempo'
@@ -101,6 +106,13 @@ athelas_out_n1: 'message &d&lJe devrais d''abord aller voir l''&dIntendant &d&le
 athelas_out_n2: teleport -6945;65;2956;Gaia
 #
 #
+herboriste_testeur: if herboriste herboriste_farm_welcome else herboriste_farm_out
+herboriste_farm_welcome: 'message &a&oBienvenue dans la Ferme de votre Guilde &2%player% &a&o!'
+herboriste_farm_out: folder herboriste_farm_out1,herboriste_farm_out2
+herboriste_farm_out1: 'message &c&oCette ferme est réservée aux membres de la Guilde des Herboristes.'
+herboriste_farm_out2: teleport -6951;65;3010;Gaia
+
+
 #
 #
 arena_testeur: if arena_occupied arena_testeur_disallow else nothing
@@ -510,7 +522,7 @@ j_entry_intendant: journal add intendant_trouve
 tag_intendant: tag add intendant
 autorisation_bateau: tag add autorisation_bateau
 #
-navigation_give_contract: 'command give %player% written_book 1 0 {pages:["[\"\",{\"text\":\"\n       \"},{\"text\":\"Contrat\n     Navigation\",\"bold\":true},{\"text\":\"\n\n\n\n\",\"color\":\"reset\"},{\"text\":\"entre\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas,\nreprésentée par\nson Intendant.\n\n\",\"color\":\"reset\"},{\"text\":\"et\",\"italic\":true},{\"text\":\"\n%player%\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 1\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas n''est en aucun cas responsable des dégâts physiques ou matériels encourus.\nCeci est valabe pour tout voyage à bord d''un navire relié à la Flotte Royale d''Athelas.\n\n \",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe signataire payera ses dûs \",\"color\":\"reset\"},{\"text\":\"avant\",\"italic\":true},{\"text\":\" le voyage au Commandant.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nAucun remboursement ou dédommagement ne peut être donné.\nIl n''existe aucune exception possible.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 2\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas peut décider, sans prévenir ou avertir le Signataire, de supprimer ou rajouter des destinations atteignables.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLes conditions d''accès à certaines destinations sont susceptibles de varier.\n(Niveau de Réputation, entre autres.)\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nAucune accomodation particulière ne peut être demandée.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 3\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas est en aucun cas responsable du devenir du Signataire sur le \\\"\",\"color\":\"reset\"},{\"text\":\"Continent Est\",\"bold\":true},{\"text\":\"\\\".\n\n\",\"color\":\"reset\"},{\"text\":\"Ceci est particulièrement le cas concernant les morts subites et/ou douloureuses.\",\"italic\":true}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe Signataire déclare sur l''honneur d''avoir pris acte du guide complet concernant le \\\"\",\"color\":\"reset\"},{\"text\":\"Continent Est\",\"bold\":true},{\"text\":\"\\\".\n\n[\",\"color\":\"reset\"},{\"text\":\"Cliquez ici pour obtenir le lien vers le Guide\",\"italic\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"http://gaia-minecraft.enjin.com/guide/m/37321907/page/Home_Page\"}},{\"text\":\"]\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas n''est en aucun cas responsable des pertes matérielles à la mort du Signataire.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 4\",\"italic\":true},{\"text\":\"\nLe Signataire déclare s''informer avant de demander de l''aide.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 4\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa création, la gestion, l''entretien et les coûts liés d''une Ville, relèvent de la responsabilité du Signataire.\n\nLa Ville d''Athelas ne fournit aucune aide ni reconnaissance politique.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe Signataire déclare se comporter en personne \",\"color\":\"reset\"},{\"text\":\"responsable \",\"italic\":true},{\"text\":\"dans la gestion de sa Ville.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nLe Signataire respectera la Nature à tout moment.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Signature\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Je soussigné(e)\n\n%player%\n\ndéclare avoir pris connaissance du contrat présent.\",\"italic\":true},{\"text\":\"\n\n[\",\"color\":\"reset\"},{\"text\":\"Cliquez ici pour signer\",\"italic\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/thisisthesignaturecommand\"}},{\"text\":\"]\",\"color\":\"reset\"}]"],title:"Contrat de Navigation",author:"Intendant d''Athelas",display:{Lore:["Un contrat à signer","avant de le rendre","à l''Intendant"]}}'
+navigation_give_contract: 'command give %player% written_book 1 0 {pages:["[\"\",{\"text\":\"\n       \"},{\"text\":\"Contrat\n     Navigation\",\"bold\":true},{\"text\":\"\n\n\n\n\",\"color\":\"reset\"},{\"text\":\"entre\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas,\nreprésentée par\nson Intendant.\n\n\",\"color\":\"reset\"},{\"text\":\"et\",\"italic\":true},{\"text\":\"\n%player%\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 1\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas n''est en aucun cas responsable des dégâts physiques ou matériels encourus.\nCeci est valabe pour tout voyage à bord d''un navire relié à la Flotte Royale d''Athelas.\n\n \",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe signataire payera ses dûs \",\"color\":\"reset\"},{\"text\":\"avant\",\"italic\":true},{\"text\":\" le voyage au Commandant.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nAucun remboursement ou dédommagement ne peut être donné.\nIl n''existe aucune exception possible.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 2\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas peut décider, sans prévenir ou avertir le Signataire, de supprimer ou rajouter des destinations atteignables.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLes conditions d''accès à certaines destinations sont susceptibles de varier.\n(Niveau de Réputation, entre autres.)\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nAucune accomodation particulière ne peut être demandée.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 3\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas est en aucun cas responsable du devenir du Signataire sur le \\\"\",\"color\":\"reset\"},{\"text\":\"Continent Est\",\"bold\":true},{\"text\":\"\\\".\n\n\",\"color\":\"reset\"},{\"text\":\"Ceci est particulièrement le cas concernant les morts subites et/ou douloureuses.\",\"italic\":true}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe Signataire déclare sur l''honneur d''avoir pris acte du guide complet concernant le \\\"\",\"color\":\"reset\"},{\"text\":\"Continent Est\",\"bold\":true},{\"text\":\"\\\".\n\n[\",\"color\":\"reset\"},{\"text\":\"Cliquez ici pour obtenir le lien vers le Guide\",\"italic\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://gaia-craft.fr/mediawiki"}},{\"text\":\"]\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas n''est en aucun cas responsable des pertes matérielles à la mort du Signataire.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 4\",\"italic\":true},{\"text\":\"\nLe Signataire déclare s''informer avant de demander de l''aide.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 4\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa création, la gestion, l''entretien et les coûts liés d''une Ville, relèvent de la responsabilité du Signataire.\n\nLa Ville d''Athelas ne fournit aucune aide ni reconnaissance politique.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe Signataire déclare se comporter en personne \",\"color\":\"reset\"},{\"text\":\"responsable \",\"italic\":true},{\"text\":\"dans la gestion de sa Ville.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nLe Signataire respectera la Nature à tout moment.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Signature\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Je soussigné(e)\n\n%player%\n\ndéclare avoir pris connaissance du contrat présent.\",\"italic\":true},{\"text\":\"\n\n[\",\"color\":\"reset\"},{\"text\":\"Cliquez ici pour signer\",\"italic\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/thisisthesignaturecommand\"}},{\"text\":\"]\",\"color\":\"reset\"}]"],title:"Contrat de Navigation",author:"Intendant d''Athelas",display:{Lore:["Un contrat à signer","avant de le rendre","à l''Intendant"]}}'
 navigation_signing: tag add navigation_signing
 navigation_signature: if navigation_signing navigation_signature2 else navigation_not_wanted
 navigation_signature2: if navigation_signed navigation_done else navigation_signature_exe
@@ -532,7 +544,7 @@ int_fold2: folder int_mess3,int_fold3 delay:7
 int_mess3: 'message &2Intendant : &a&oAvant toute chose, allez trouver le &2Gestionnaire &a&oqui se trouve en sortant de cette grande porte à votre droite.'
 int_fold3: folder int_mess4,int_fold4 delay:7
 int_mess4: 'message &2Intendant : &a&oIl vous expliquera comment vous devrez procéder pour vous procurer une première résidence dans la ville.'
-int_fold4: folder ami_first_remove,int_conversdone,obj_salaire_timer,j_entry_gestionnaire delay:1
+int_fold4: folder ami_first_remove,int_conversdone,j_entry_gestionnaire delay:1
 int_inconvers: tag add int_inconvers
 int_conversdone: tag del int_inconvers
 #
@@ -550,8 +562,8 @@ intendant_done_mess32: 'command title %player% title {"text":"Bienvenue","bold":
 intendant_done_mess33: 'command title %player% subtitle {"text":"Citoyen d''Athelas","italic":true,"color":"light_purple"}'
 pex_citoyen: 'command pex user %player% group set aventurier'
 intendant_starter_stuff: folder intendant_starter_stuff1,intendant_starter_stuff2
-intendant_starter_stuff1: 'command mm items give %player% stuff_leatherchest'
-intendant_starter_stuff2: 'command mm items give %player% stuff_leatherlegs'
+intendant_starter_stuff1: 'command sudo %player% gaiaitemgiver stuff_leatherchest'
+intendant_starter_stuff2: 'command sudo %player% gaiaitemgiver stuff_leatherlegs'
 #
 #
 #
@@ -682,6 +694,43 @@ welcome_ecuyer_mess5: 'message &2Intendant &f: &a&oJe vous recommande d''aller l
 #
 open_grades_royaux: 'command cc open grades_royaux %player%'
 #
+grades_cleaner: folder gcl1,gcl2,gcl3,gcl4,gcl5,gcl6,gcl7,gcl8,gcl9,gcl10,gcl11
+#
+gcl1: tag del grade_chevalier
+gcl2: tag del grade_champion
+gcl3: tag del grade_seigneur
+gcl4: tag del grade_banneret
+gcl5: tag del grade_baron
+gcl6: tag del grade_vicomte
+gcl7: tag del grade_comte
+gcl8: tag del grade_marquis
+gcl9: tag del grade_duc
+gcl10: tag del grade_prince
+gcl11: tag del grade_legende
+#
+grade_chevalier: folder grade_chevalier_exe
+grade_champion: folder grade_chevalier,grade_champion_exe
+grade_seigneur: folder grade_champion,grade_seigneur_exe
+grade_banneret: folder grade_seigneur,grade_banneret_exe
+grade_baron: folder grade_banneret,grade_baron_exe
+grade_vicomte: folder grade_baron,grade_vicomte_exe
+grade_comte: folder grade_vicomte,grade_comte_exe
+grade_marquis: folder grade_comte,grade_marquis_exe
+grade_duc: folder grade_marquis,grade_duc_exe
+grade_prince: folder grade_duc,grade_prince_exe
+grade_legende: folder grade_prince,grade_legende_exe
+#
+grade_chevalier_exe: tag add grade_chevalier
+grade_champion_exe: tag add grade_champion
+grade_seigneur_exe: tag add grade_seigneur
+grade_banneret_exe: tag add grade_banneret
+grade_baron_exe: tag add grade_baron
+grade_vicomte_exe: tag add grade_vicomte
+grade_comte_exe: tag add grade_comte
+grade_marquis_exe: tag add grade_marquis
+grade_duc_exe: tag add grade_duc
+grade_prince_exe: tag add grade_prince
+grade_legende_exe: tag add grade_legende
 #
 #
 # Guildes
@@ -719,7 +768,6 @@ herboriste22: tag add herboriste
 bucheron: folder metier_cleaner,guilder_cleaner,bucheron2
 bucheron2: folder bucheron22 delay:2
 bucheron22: tag add bucheron
-#guilde_bucheron_bonus: 'command region addmember foret_athelas2 %player% -w Gaia'
 #
 guilder_cleaner: folder alchimiste3,acrobate3,guerrier3,pecheur3,mineur3,apprivoiseur3,herboriste3,bucheron3
 alchimiste3: tag del alchimiste
@@ -1500,7 +1548,7 @@ metier_bucheron_xpboost: 'command pex user %player% add mcmmo.perks.xp.10percent
 #
 # Cleaner
 #
-metier_cleaner: folder mp_clean_tag,mp_clean_xpboost,me_clean_tag,me_clean_xpboost,mh_clean_tag,mh_clean_xpboost,ma_clean_tag,ma_clean_xpboost,mal_clean_tag,mal_clean_xpboost,mf_clean_tag,mf_clean_xpboost,mac_clean_tag,mac_clean_xpboost,mt_clean_tag,mt_clean_xpboost,mher_clean_tag,mher_clean_xpboost,mm_clean_tag,mm_clean_xpboost,mr_clean_tag,mr_clean_xpboost,mex_clean_tag,mex_clean_xpboost,mb_clean_tag,mb_clean_xpboost,cagnotte_removal
+metier_cleaner: folder mp_clean_tag,mp_clean_xpboost,me_clean_tag,me_clean_xpboost,mh_clean_tag,mh_clean_xpboost,ma_clean_tag,ma_clean_xpboost,mal_clean_tag,mal_clean_xpboost,mf_clean_tag,mf_clean_xpboost,mac_clean_tag,mac_clean_xpboost,mt_clean_tag,mt_clean_xpboost,mher_clean_tag,mher_clean_xpboost,mm_clean_tag,mm_clean_xpboost,mr_clean_tag,mr_clean_xpboost,mex_clean_tag,mex_clean_xpboost,mb_clean_tag,mb_clean_xpboost,cagnotte_removal,basic_prefix
 #
 cagnotte_removal: 'command thisisthecagnotteremoval %player%'
 #
@@ -2070,6 +2118,7 @@ compte_ret_all: point compte *0
 # ¤ Salary ¤
 #
 #
+variable_giver: 'command variablegiver1 %player% %point.reput_athelas.amount%'
 obj_salaire_timer: objective start obj_salaire_timer
 #
 #
@@ -2170,7 +2219,7 @@ salaire_mess8: 'message &f|----------------------- ~ &6¤ &f~ ------------------
 # Checks for (in order): -Already on boat  -Reputation=>5  -Money=>100
 #  if passed, than -teleport to generic boat  -timer on
 #   PER DESTINATION
-######################################  THINK ON A TAG CHECKER FOR FURTHER DESTINATIONS (OR QUEST POINTS FOR THAT MATTER)
+######################################
 bateau_menu_opener: 'command cc open bateau %player%'
 #
 # Global
@@ -2183,7 +2232,7 @@ no_reput30_bat_mess: 'message &dVous n''avez pas assez de points de Réputation 
 no_money100_mess: 'message &dVous n''avez pas assez d''argent pour aller à cette destination ! (&f¤ &a%money.left:100% &f/ &f¤ &c100&d)'
 no_money200_mess: 'message &dVous n''avez pas assez d''argent pour aller à cette destination ! (&f¤ &a%money.left:100% &f/ &f¤ &c200&d)'
 no_grade_bat_mess: 'message &dVous n''avez pas le Grade requis pour accéder à cet endroit.'
-no_mysteria_bat_mess: 'message &dVous devez parler au &2Lieutenant Hashor &dau deuxième étage du château Royal d''Athelas avant de naviguer vers Mysteria.'
+dev_bat_mess: 'message &dCe port n''est pas accessible pour le moment.'
 #
 bat_generic_teleport: teleport -4620;62;3848;Gaia
 bat_generic_message: 'message &dVous partez pour un long voyage...'
@@ -2193,7 +2242,6 @@ bat_generic_message: 'message &dVous partez pour un long voyage...'
 #
 # Athelas Central
 bat_athelas_central: if on_bat_athelas_central on_bat_mess else bat_athelas_central2
-##bat_athelas_central1: if reput_athelas5 bat_athelas_central2 else no_reput5_bat_mess
 bat_athelas_central2: if money_100 bat_generic_athelas1 else no_money100_mess
 #
 bat_generic_athelas1: folder bat_generic_teleport,money_100,bat_generic_athelas1_timer,bat_generic_message delay:1
@@ -2203,7 +2251,6 @@ bat_generic_athelas1_teleport: teleport -6602;66;3170;Gaia
 #
 # Athelas East
 bat_athelas_east: if on_bat_athelas_east on_bat_mess else bat_athelas_east2
-##bat_athelas_east1: if reput_athelas5 bat_athelas_east2 else no_reput5_bat_mess
 bat_athelas_east2: if money_100 bat_generic_athelas2 else no_money100_mess
 #
 bat_generic_athelas2: folder bat_generic_teleport,money_100,bat_generic_athelas2_timer,bat_generic_message delay:1
@@ -2223,7 +2270,7 @@ bat_athelas_louvre22_teleport: teleport -10404;66;2996;Gaia
 #
 # Mysteria
 bat_mysteria: if on_bat_mysteria on_bat_mess else bat_mysteria1
-bat_mysteria1: if tempo_mysteria_access bat_mysteria2 else no_mysteria_bat_mess
+bat_mysteria1: if tempo_dev_access bat_mysteria2 else dev_bat_mess
 bat_mysteria2: if money_200 bat_mysteria22 else no_money200_mess
 #
 bat_mysteria22: folder bat_generic_teleport,money_200,bat_mysteria22_timer,bat_generic_message delay:1
@@ -2233,7 +2280,7 @@ bat_mysteria22_teleport: teleport -8994;65;4604;Gaia
 #
 # Historia
 bat_historia: if on_bat_historia on_bat_mess else bat_historia1
-bat_historia1: if grade_ecuyer bat_historia2 else no_grade_bat_mess
+bat_historia1: if tempo_dev_access bat_historia2 else dev_bat_mess
 bat_historia2: if money_200 bat_historia22 else no_money200_mess
 #
 bat_historia22: folder bat_generic_teleport,money_200,bat_historia22_timer,bat_generic_message delay:1
@@ -2243,7 +2290,7 @@ bat_historia22_teleport: teleport -7835;65;3683;Gaia
 #
 # Tortuga
 bat_tortuga: if on_bat_tortuga on_bat_mess else bat_tortuga1
-bat_tortuga1: if grade_ecuyer bat_tortuga2 else no_grade_bat_mess
+bat_tortuga1: if tempo_dev_access bat_tortuga2 else dev_bat_mess
 bat_tortuga2: if money_200 bat_tortuga22 else no_money200_mess
 #
 bat_tortuga22: folder bat_generic_teleport,money_200,bat_tortuga22_timer,bat_generic_message delay:1
@@ -2375,7 +2422,7 @@ take_tarte_ermite: take tarte:1
 obj_ermite_bat: objective start obj_ermite_bat
 tag_ermite_tarteur: tag add ermite_tarteur
 tag_tarteur_remove: tag del ermite_tarteur
-tag_voyage_air: tag add global.voyage_air
+tag_voyage_air: tag add hollish.voyage_air
 #
 #
 #
@@ -2411,10 +2458,13 @@ os_charge1: folder os_take1,os_give1
 os_take1: take bone:1
 os_give1: give bone_charged:1
 #
-os_chargeall: folder os_chargeall1,os_chargeall2
-os_chargeall1: give bone_charged:%item.bone.amount%
-os_chargeall2: folder os_chargeall3 delay:1
-os_chargeall3: take bone:%item.bone.amount%
+os_chargeall: folder os_chargeall1,os_chargeall2,os_chargeall3
+os_chargeall1: point os_charged %item.bone.amount%
+os_chargeall2: take bone:%item.bone.amount%
+os_chargeall3: folder os_chargeall4,os_chargeall5 delay:3
+os_chargeall4: give bone_charged:%point.os_charged.amount%
+os_chargeall5: folder os_chargeall6 delay:1
+os_chargeall6: 'command bq point %player% del os_charged'
 #
 #
 # Rituel
@@ -2974,47 +3024,8 @@ potion_ilse5: effect INVISIBILITY 60 1
 # RANDOMIZER
 #
 ####################################################################################
-randomizer: folder paulette_randomizer,paul_randomizer,francis_randomizer delay:1
-#
-# /xprate 2 true
-# /xprate reset
-#
-#  /mm s addcondition goblin_assault1 world Gaia_nether
-#  /mm s removecondition goblin_assault1 world Gaia_nether
-#
-#   Assault de Ingor - Petit Village
-#
-#  Donjon Spécial
-#
-#
-#
-# !! COMPLETELY UNSAFE AND UNSOUND !!
-#
-# Day Counter
-#
-#
-#day_counter: if monday go_tuesday else day_counter2
-#day_counter: if tuesday go_wednesday else day_counter2
-#day_counter: if wednesday go_thursday else day_counter2
-#day_counter: if thursday go_friday else day_counter2
-#day_counter: if friday go_saturday else day_counter2
-#day_counter: if saturday go_sunday else day_counter2
-#day_counter: if sunday go_monday else error_day_counting
-#
-#go_monday: folder day_resetter,go_monday_exe
-#go_monday_exe: folder go_monday_exe2 delay:2
-#
-#day_resetter: folder day_r1,day_r2,day_r3,day_r4,day_r5,day_r6,day_r7
-#day_r1: SETBLOCK GLOWSTONE -6768;61;2965;Gaia
-#tuesday: SETBLOCK GLOWSTONE -6767;61;2964;Gaia
-#wednesday: SETBLOCK GLOWSTONE -6766;61;2963;Gaia
-#thursday: SETBLOCK GLOWSTONE -6765;61;2962;Gaia
-#friday: SETBLOCK GLOWSTONE -6764;61;2961;Gaia
-#saturday: SETBLOCK GLOWSTONE -6763;61;2960;Gaia
-#sunday: SETBLOCK GLOWSTONE -6762;61;2959;Gaia
-#
-#error_day_counting: 'command mail send Hollish Une erreur dans le comptage de jours en survenue.'
-#
+randomizer: folder paulette_randomizer,paul_randomizer,francis_randomizer,daily_quester_reset
+daily_quester_reset: 'command dailyquesterreset'
 #
 # Paulette
 #
@@ -3033,27 +3044,58 @@ paulette_random31: setblock AIR -6750;55;2987;Gaia
 paulette_random32: setblock AIR -6751;55;2987;Gaia
 paulette_random33: setblock REDSTONE_TORCH_ON -6752;55;2987;Gaia
 #
-paulette_timer: folder obj_timer_paulette,tag_timer_paulette delay:0
+# Journal
+#
+journal_paulette1: journal add paulette1
+journal_paulette2: journal add paulette2
+journal_paulette3: journal add paulette3
+journal_paul1: journal add paul1
+journal_paul2: journal add paul2
+journal_paul3: journal add paul3
+journal_francis1: journal add francis1
+journal_francis2: journal add francis2
+journal_francis3: journal add francis3
+journal_paulette1_del: journal del paulette1
+journal_paulette2_del: journal del paulette2
+journal_paulette3_del: journal del paulette3
+journal_paul1_del: journal del paul1
+journal_paul2_del: journal del paul2
+journal_paul3_del: journal del paul3
+journal_francis1_del: journal del francis1
+journal_francis2_del: journal del francis2
+journal_francis3_del: journal del francis3
+#
+# Generic
+#
+daily_quester_on: folder daily_quester_on_exe delay:2
+daily_quester_on_exe: 'command dailyquesterstart %player%'
+daily_quester_off: folder daily_quester_off_exe delay:2
+daily_quester_off_exe: 'command dailyquesterdone %player%'
+#
+paulette_timer: folder obj_timer_paulette,tag_timer_paulette
 tag_timer_paulette: tag add timer_paulette
 obj_timer_paulette: objective start paulette_timer
 paulette_timer_up: tag del timer_paulette
 #
-paulette_occupe1: folder give_gateau_paulette,tag_fils_paulette delay:0
+paulette_occupe1: folder give_gateau_paulette,tag_fils_paulette,journal_paulette1,daily_quester_on
 give_gateau_paulette: give gateau_paulette
 tag_fils_paulette: tag add fils_paulette
-livraison_paulette_done: folder reput_athelas2_positif,take_gateau_paulette,paulette_cleaner,paulette_timer delay:0
+livraison_paulette_done: folder reput_athelas2_positif,take_gateau_paulette,paulette_cleaner,paulette_timer
 take_gateau_paulette: take gateau_paulette
 #
-paulette_occupe2: tag add paulette_oeuf
-paulette_ressources_done: folder reput_athelas2_positif,take_eggs,paulette_cleaner,paulette_timer delay:0
+paulette_occupe2: folder tag_paulette_oeuf,journal_paulette2,daily_quester_on
+tag_paulette_oeuf: tag add paulette_oeuf
+paulette_ressources_done: folder reput_athelas2_positif,take_eggs,paulette_cleaner,paulette_timer
 take_eggs: take egg:5
 #
-paulette_occupe3: tag add madame
+paulette_occupe3: folder tag_madame,journal_paulette3,daily_quester_on
+tag_madame: tag add madame
 madame_betteraves: tag add madame_betteraves
-betteraves_done: folder reput_athelas2_positif,take_betteraves,paulette_cleaner,paulette_timer delay:0
+betteraves_done: folder reput_athelas2_positif,take_betteraves,paulette_cleaner,paulette_timer
 take_betteraves: take soupe_betteraves
 #
-paulette_cleaner: folder tag_madame_remove,madame_betteraves_remove,tag_fils_paulette_remove,paulette_oeuf_remove delay:0
+paulette_cleaner: folder paulette_timer_up,daily_quester_off,obj_timer_paulette_del,tag_madame_remove,madame_betteraves_remove,tag_fils_paulette_remove,paulette_oeuf_remove,journal_paulette1_del,journal_paulette2_del,journal_paulette3_del
+obj_timer_paulette_del: objective delete paulette_timer
 tag_madame_remove: tag del madame
 madame_betteraves_remove: tag del madame_betteraves
 tag_fils_paulette_remove: tag del fils_paulette
@@ -3080,30 +3122,32 @@ paul_random33: setblock REDSTONE_TORCH_ON -6752;53;2987;Gaia
 #
 pain_paul: give pain_paul
 #
-paul_timer: folder obj_timer_paul,tag_timer_paul delay:0
+paul_timer: folder obj_timer_paul,tag_timer_paul
 tag_timer_paul: tag add timer_paul
 obj_timer_paul: objective start paul_timer
 paul_timer_up: tag del timer_paul
 #
-paul_occupe1: folder give_pain_paul,tag_pain_paul delay:0
+paul_occupe1: folder give_pain_paul,tag_pain_paul,journal_paul1,daily_quester_on
 give_pain_paul: give pain_paul:10
 tag_pain_paul: tag add pain_paul
-livraison_paul_done: folder reput_athelas2_positif,take_pain_paul,paul_cleaner,paul_timer delay:0
+livraison_paul_done: folder reput_athelas2_positif,take_pain_paul,paul_cleaner,paul_timer
 take_pain_paul: take pain_paul:10
 #
-paul_occupe2: tag add paul_ble
-paul_ressources_done: folder reput_athelas2_positif,take_ble_paul,paul_cleaner,paul_timer delay:0
+paul_occupe2: folder tag_paul_ble,journal_paul2,daily_quester_on
+tag_paul_ble: tag add paul_ble
+paul_ressources_done: folder reput_athelas2_positif,take_ble_paul,paul_cleaner,paul_timer
 take_ble_paul: take ble:10
 #
-paul_occupe3: folder tag_pain_urgent,obj_pain_urgent delay:0
+paul_occupe3: folder tag_pain_urgent,obj_pain_urgent,journal_paul3,daily_quester_on
 tag_pain_urgent: tag add pain_urgent
 obj_pain_urgent: objective start pain_urgent
 pain_urgent_mess: 'message &dJ''ai fini de faire les pains, je devrais les donner à &fPaul&d.'
 tag_pain_urgent_done: tag add pain_urgent_done
-pain_urgent_done: folder reput_athelas3_positif,take_urgent_bread,paul_cleaner,paul_timer delay:0
+pain_urgent_done: folder reput_athelas3_positif,take_urgent_bread,paul_cleaner,paul_timer
 take_urgent_bread: take bread:3
 #
-paul_cleaner: folder tag_pain_paul_rem,paul_occupe2_rem,tag_pain_urgent_rem,tag_pain_urgent_done_rem delay:0
+paul_cleaner: folder paul_timer_up,daily_quester_off,obj_timer_paul_del,tag_pain_paul_rem,paul_occupe2_rem,tag_pain_urgent_rem,tag_pain_urgent_done_rem,journal_paul1_del,journal_paul2_del,journal_paul3_del
+obj_timer_paul_del: objective delete paul_timer
 tag_pain_paul_rem: tag del pain_paul
 paul_occupe2_rem: tag del paul_ble
 tag_pain_urgent_rem: tag del pain_urgent
@@ -3128,41 +3172,42 @@ francis_random31: setblock AIR -6754;55;2987;Gaia
 francis_random32: setblock AIR -6755;55;2987;Gaia
 francis_random33: setblock REDSTONE_TORCH_ON -6756;55;2987;Gaia
 #
-francis_timer: folder obj_timer_francis,tag_timer_francis delay:0
+francis_timer: folder obj_timer_francis,tag_timer_francis
 tag_timer_francis: tag add timer_francis
 obj_timer_francis: objective start francis_timer
 francis_timer_up: tag del timer_francis
 #
-francis_occupe1: folder tag_pain_francis,obj_pain_francis delay:0
+francis_occupe1: folder tag_pain_francis,obj_pain_francis,journal_francis1,daily_quester_on
 tag_pain_francis: tag add pain_francis
 obj_pain_francis: objective start obj_pain_francis
-pain_francis_done: folder pain_message,give_francis_pain,tag_paul_francis delay:0
+pain_francis_done: folder pain_message,give_francis_pain,tag_paul_francis
 pain_message: 'message &fPaul: &a&oVoici le pain que &fFrancis &a&oa commandé!'
 give_francis_pain: give pain_paul:2
 tag_paul_francis: tag add paul_francis
-francis_ressources_done: folder reput_athelas2_positif,take_pain_francis,francis_cleaner,francis_timer,money_p25 delay:0
+francis_ressources_done: folder reput_athelas2_positif,take_pain_francis,francis_cleaner,francis_timer,money_p25
 take_pain_francis: take pain_paul:2
 #
-francis_occupe2: folder give_francis_carot,tag_francis_carot delay:0
+francis_occupe2: folder give_francis_carot,tag_francis_carot,journal_francis2,daily_quester_on
 give_francis_carot: give carrot:10
 tag_francis_carot: tag add francis_carot
-francis_livraison_done: folder reput_athelas2_positif,take_carrot_francis,francis_cleaner,francis_timer,money_p25 delay:0
+francis_livraison_done: folder reput_athelas2_positif,take_carrot_francis,francis_cleaner,francis_timer,money_p25
 take_carrot_francis: take carrot:10
 #
-francis_occupe3: folder tag_betteraves_urgent,give_francis_betteraves delay:0
+francis_occupe3: folder tag_betteraves_urgent,give_francis_betteraves,journal_francis3,daily_quester_on
 tag_betteraves_urgent: tag add betteraves_urgent
 give_francis_betteraves: give betteraves:7
 take_francis_betteraves: take betteraves:7
 tarte_chef: give tarte_chef
 tag_tarte_chef: tag add tarte_chef
-betteraves_urgent_done: folder reput_athelas3_positif,tarte_chef_take,francis_cleaner,francis_timer,money_p50 delay:0
+betteraves_urgent_done: folder reput_athelas3_positif,tarte_chef_take,francis_cleaner,francis_timer,money_p50
 tarte_chef_take: take tarte_chef
 #
-francis_cleaner: folder tag_pain_francis_rem,paul_francis_rem,francis_carot_rem,betteraves_urgent_rem,tag_tarte_chef_rem delay:0
+francis_cleaner: folder francis_timer_up,daily_quester_off,obj_timer_francis_del,tag_pain_francis_rem,paul_francis_rem,francis_carot_rem,betteraves_urgent_rem,tag_tarte_chef_rem,journal_francis1_del,journal_francis2_del,journal_francis3_del
+obj_timer_francis_del: objective delete francis_timer
 tag_pain_francis_rem: tag del pain_francis
 paul_francis_rem: tag del paul_francis
 francis_carot_rem: tag del francis_carot
-betteraves_urgent_rem: tag del pain_urgent_done
+betteraves_urgent_rem: tag del betteraves_urgent
 tag_tarte_chef_rem: tag del tarte_chef
 #
 # Gorick
@@ -3462,18 +3507,6 @@ foret_obj_logout_remove: objective delete foret_obj_logout
 #
 #
 #
-#                Voix de Gaïa
-#
-#
-#
-###############################################################################
-hollishpresentation: 'command jukebox sound %player% http://files.enjin.com/1186825/voices/welcomehollish.mp3'
-hollishcitation: 'command jukebox sound %player% http://files.enjin.com/1186825/voices/citationhollish.mp3'
-hollishrole: 'command jukebox sound %player% http://files.enjin.com/1186825/voices/hollishrole.mp3'
-#############################
-#
-#
-#
 #                Histoire de Gaïa
 #
 #
@@ -3548,7 +3581,7 @@ message11: 'message &2&oMalgré cela, la Révolution continua, et &6Ubu &2&oet s
 message12: 'message &6Ubu &2&ofut proclamé Roi pour ses exploits et se battra pour contenir l''ennemi pendant le restant de ses jours.'
 title_begin5: folder title_begin51,title_begin52,title_begin53 delay:0
 title_begin51: 'command title %player% times 20 100 20'
-title_begin52: 'command title %player% title {"text":"Troisième Ere","bold":true,"color":"dark_green"}'
+title_begin52: 'command title %player% title {"text":"Troisième Ère","bold":true,"color":"dark_green"}'
 title_begin53: 'command title %player% subtitle {"text":"Epoque Actuelle","italic":true,"color":"blue"}'
 message13: 'message &2&oDe nos jours, c''est le petit fils du Roi &6Ubu &2&oqui règne sur la ville d''Athelas fondée par son illustre aïeul.'
 message14: 'message &2&oIl se nomme &6Kahn&2&o. Ce Roi règne sur la ville et ses terres pour y faire respecter l''ordre et surtout pour maintenir les ennemis endehors de la ville.'

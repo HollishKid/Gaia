@@ -15,12 +15,14 @@ NPC_options:
     text: 'Les contrats de guilde sont des tâches courantes, qui nous sont transmises par les services royaux afin que des aventuriers les accomplissent.'
     events: its_beginnerfold,its_inconvers
   n2:
-    text: 'Contrats de guilde'
+    text: 'Bonjour %player%. Que puis-je faire pour toi cette fois?'
     conditions: '!its_inconvers,its_rang1'
-    pointers: rang1,non_merci
-  menu_rang1:
-    text: 'Rang 1'
-    pointers: rang1_go,rang1_claim,au_revoir
+    pointer: p1,p2,p3
+  menu:
+    text: 'Voici les contrats disponibles.'
+    events: its_menu
+  next_rank:
+    text: 'Tu pourras effectuer des quêtes de rang 2 après avoir prouvé ta valeur au maitre Makarov. Quant aux autres rangs, ils sont bien trop dangereux pour quelqu''un comme toi!'
 #
 ##########################
 #                        #
@@ -39,13 +41,11 @@ player_options:
     text: 'Non merci.'
   au_revoir:
     text: 'Au revoir'
-  rang1:
-    text: 'Rang 1'
-    pointers: menu_rang1
-  rang1_go:
-    text: 'Commencer un contrat &l(aucun contrat disponible pour le moment.)'
-#Tempoed out.
-#    event: its_checkstartr1
-  rang1_claim:
-    text: 'Récupérer une récompense'
-    events: its_checkclaimr1
+  p1:
+    text: 'Menu des missions de guilde.'
+    pointer: menu
+  p2:
+    text: 'Dites m''en plus sur les rangs suivants.'
+    pointer: next_rank
+  p3:
+    text: 'Je ne fais que passer, merci.'

@@ -1,0 +1,188 @@
+#     _____ _       _           _  _____ _               _    _____ _                 
+#    / ____| |     | |         | |/ ____| |             | |  / ____| |                
+#   | |  __| | ___ | |__   __ _| | |    | |__   ___  ___| |_| (___ | |__   ___  _ __  
+#   | | |_ | |/ _ \| '_ \ / _` | | |    | '_ \ / _ \/ __| __|\___ \| '_ \ / _ \| '_ \ 
+#   | |__| | | (_) | |_) | (_| | | |____| | | |  __/\__ \ |_ ____) | | | | (_) | |_) |
+#    \_____|_|\___/|_.__/ \__,_|_|\_____|_| |_|\___||___/\__|_____/|_| |_|\___/| .__/ 
+#                                                                              | |    
+#                                                                              |_|  
+Buttons:
+  SellPrice:
+    Title: '&6Prix de vente'
+    Description: '&7cliquer pour changer le prix de vente'
+  CancelAuction: '&cAnnuler cette offre de vente'
+  SearchButton:
+    Title: '&bChercher une offre de vente'
+    Description: ''
+  PageView:
+    SinglePage: 'Page: %arg0'
+    LastPage: Dernière Page
+    CurrentPage: 'Page: %arg0'
+    FirstPage: Première Page
+  DeleteShop: '&cSupprimer le magasin'
+  EditAdminShop:
+    Toggle:
+      'OFF':
+        Description: '&9cliquez pour &aactiver'
+        Title: '&7Magasin Commerçant &cdésactivé'
+      'ON':
+        Title: '&7Magasin Commerçant &aactivé'
+        Description: '&9cliquez pour &cdésactiver'
+    ExitSave:
+      Title: Enregistrer et Quitter
+      Description: '&7cliquez pour quitter'
+  PolarQuestion:
+    'YES': Oui
+    NoWithoutSave: '&cNon, quitter sans enregistrer'
+    SubmitBuy: '&cÊtes vous certain d''acheter?'
+    CreateAuction: '&cÊtes vous certain de créer cette offre de vente?'
+    SuretoBuy: '&cÊtes vous sûr de vouloir acheter?'
+    SubmitSell: '&cÊtes vous certain de vendre?'
+    'NO': Non
+    CancelAuction: '&cÊtes vous certain d''annuler?'
+  AuctionInfo:
+    SellPriceEach: '&cPrix de vente à l''unité:  &2%arg0'
+    Title:
+      ERROR: non disponible
+      AdminShop: Magasin de Commerçant
+      LocalShop: Magasin de Joueur
+    Seller: '&7Vendeur:  &9%arg0'
+    Status:
+      Ended: '&7Statut: &cterminé'
+      Expired: '&7Statut: &cexpiré'
+      Active: '&7Statut: &2actif'
+      Canceled: '&7Statut: &4annulé'
+    Amount: '&7Quantité: &6%arg0'
+    PriceEach: '&7Prix à l''unité:  &c%arg0'
+    PriceTotal: '&7Prix Total:  &c%arg0'
+    DateStarted: '&7commencé: %arg0'
+    BuyPriceEach: '&7Prix d''achat à l''unité:  &2%arg0'
+    DateEnded: '&7terminé: %arg0'
+    Buyer: '&7Acheteur:  &9%arg0'
+  AuctionHistory:
+    Title: Historique
+    Description: historique de vos offres de vente
+  BuyPrice:
+    Description: '&7cliquez pour changer le prix d''achat'
+    Title: '&6Prix d''achat'
+  EmptyListIcon:
+    Title: '&4Aucune offre'
+    Description: ''
+  SellButtons:
+    Title: '&9Vendre'
+  AuctionCreate:
+    Description: '&7cliquez ici pour vendre vos objets'
+    Title: '&2Créer une nouvelle offre de vente'
+  SetBuyPriceTitle: '&6Changer prix d''achat'
+  AmountButtons:
+    Description: '&7Utilisez SHIFT pour empiler les objets'
+    Title: '&6Quantité'
+  CreateAuction:
+    Description: '&7cliquer ici pour ventre votre objet'
+    Title: '&2Créer une nouvelle offre de vente'
+  Finish: '&aTERMINER - Vendre cet objet'
+  CloseButtons:
+    Description: Fermer cet inventaire
+    Title: QUITTER
+  CreateAdminShop:
+    Title: '&2Créer / éditer Magasin Commerçant'
+    Description: '&7cliquer pour créer / éditer le Magasin Commerçant'
+  MoneyButtons:
+    Title: '&6Votre argent en poche'
+  "SellAll\t": '&aVendre tous les stacks que je possède'
+  Next: '&aSuivant'
+  BuyButtons:
+    Title: '&9Acheter'
+  SellAllButtons:
+    Title: '&9Vendre tout'
+  SellSingle: '&aVendre cet ensemble d''objets'
+  FindSimillarAuctions:
+    Description: ''
+    Title: '&9trouver des offres similaires'
+  ChooseItem:
+    Description: '&aou maintenez SHIFT en cliquant sur l''objet'
+    Title: '&aGlissez un objet ici'
+  AllPlayerHistory:
+    Description: Historique Administrateur
+    Title: Historique Global des offres de vente
+  BackButtons:
+    Description: retour à l'inventaire précédent
+    Title: RETOUR
+  Free: '&aGratuit'
+  SearchButtonFindPlayer:
+    Title: '&bChercher un Joueur'
+GuiTitles:
+  Warning: '&cAvertissement'
+  AdminShop: '&6 Magasin Commerçant'
+  AllLocalChestShop: '&6Tous les Magasins Joueurs'
+  AllItemsInCategories: Catégories
+  AuctionSellItem: '&aVendre cet objet'
+  CancelAuction: '&cAnnulation de l''offre'
+  History:
+    CanceledAuctions: '&6Offres Annulées'
+    RunningAuctions: '&aOffres en cours'
+    BoughtAuctions: '&9Offres Achetées'
+    Expired: '&cOffres Expirées'
+    SoldAuctions: '&bOffres Vendues'
+  SetSellPrice: '&6Changer prix de vente'
+  LocalChestShop: '&0Magasin Joueur'
+  EndedAuctionTitle: '&7 Cette offre est terminée!'
+  AuctionPage: '&8Offres'
+  Search: '&0Résultat de recherche pour: "&2%arg0&0"'
+  CreateAdminShop: '&2Créer un nouveau Magasin Commerçant'
+  CreateAuction: '&aCréation de l''offre de vente'
+  AllAuctions: '&6Toutes les Offres de Vente'
+  EditAdminShop: '&6Editer Magasin Commerçant'
+  AuctionChangePrice: '&6Changement du prix'
+  BuyAuction: Achat d'une offre
+Messages:
+  MoneyDeposit: '&cVous avez reçu %arg0.'
+  WorldNotFound: '&cLe Grand Marché n''est pas accessible dans ce monde.'
+  ItemIsDamaged: '&cObjet endommagé'
+  MoneyDepositTax: '&cVous avez reçu  &2%arg0 &c(Dont  &2%arg1 &cde taxes)'
+  InformAboutBuy: '&2%arg0 &cvient d''acheter votre offre: &d%arg1 %arg1'
+  AdminShopIsDisabled: '&cCe Magasin n''est pas accessible.'
+  Inventory:
+    NoSpace: '&cVous n''avez pas assez de place dans votre inventaire.'
+    NoMoney: '&cVous n''avez pas assez d''argent!'
+    NoItem: '&cVous n''avez pas cet objet!'
+  SearchInstructionsAnvilGui: '&cVous cherchez:'
+  AuctionAllreadyEnded: '&cCette offre a déjà trouvé preneur.'
+  TooManyAuctions: '&cVous ne pouvez pas avoir plus de &f%arg0 &coffres de vente.'
+  NoChestFound: '&cVous devez placer la pancarte à 1 bloc de distance d''un coffre.'
+  SearchInstructions: '&cTapez le nom de l''objet que vous cherchez dans le tchat.
+    EN ANGLAIS!'
+  TooSlowAuctionEnded: '&cCette offre de vente n''est plus disponible.'
+  CreatedAuction: '&acVous avez créé une nouvelle offre de vente'
+  ItemSold: '&cVous venez de vendre un objet.'
+  PriceCantBeLessThanZero: '&cUn prix ne peut pas être négatif.'
+  BroadcastSell: '&2%arg0 &ca acheté &d%arg1 &cpour  &2%arg2 &cpar unité à &2%arg3&c.'
+  QuestionSaveChanges: '&cEnregistrer toutes les modifications?'
+  TooManyShops: '&cVous avez atteint le maximum de magasins autorisés.'
+  MoneyWithdrawn: ' &2%arg0 &cont été retirés de votre compte.'
+  ItemBought: '&cVous venez d''acheter un objet &d%arg0'
+  ChooseItem: '&cGlissez un objet au centre pour le mettre en vente.'
+  BuyCommandWrongUsage: '&7/GlobalChestShop buy &c<nom de l''objet | main>'
+  WarningBuyPriceGreaterSellPrice: '&cLe prix d''achat ne peut pas être supérieur
+    au prix de vente!'
+  PermissionWarning: '&cVous n''avez pas la permission de faire cela.'
+  RemovedAuction: '&cVente annulée'
+  BroadcastCreationOfNewAuction: '&2%arg0 &da créé une nouvelle offre globale: &6%arg1
+    %arg2 &dpour &6%arg3 &dl''unité.'
+  ItemNotAllowed: '&cVous ne pouvez pas vendre cet objet ici.'
+  CanNotDeleteShopTooManyAuctions: '&cCe magasin contient encore des offres de vente.
+    Pour supprimer votre magasin, vous devez d''abord annuler toutes ces offres.'
+  NoChestOwner: '&cIl semblerait que ce coffre ne soit pas le vôtre. Si c''est bien
+    le vôtre, placez le à nouveau.'
+DefaultCategories:
+  Miscellaneous: Divers
+  DecorationBlocks: Blocs de Décoration
+  Transportation: Transport
+  BuildingBlocks: Blocs de Construction
+  Materials: Matériaux
+  Redstone: Redstone
+  Combat: Combat
+  Tools: Outils
+  Foodstuff: Nourriture
+  Brewing: Concoction
+Version_DONT_CHANGE_THIS!: '1.0'

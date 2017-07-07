@@ -2,16 +2,41 @@ missiledrops:
   Drops:
   - residus_de_poudre 1 1
 testmobdrops:
+  TotalItems: 3
+  MinItems: 1
+  MaxItems: 1
   Drops:
-  - casque_fer_dj1 1 1
-shrek_drops:
+  - archery_scroll_1 1 0.33
+  - alchemy_scroll_1 1 0.5
+  - fisting_scroll_1 1 1
+bl_drops:
+  TotalItems: 1
+  MinItems: 1
+  MaxItems: 1
   Drops:
-  - exp 75
-  - pieds_fer_dj1 1 1
-kara_drops:
-  - exp 75
-  - jambes_fer_dj1 1 1
-erek_drops:
-  - exp 150
-  - plastron_fer_dj1 1 1
-  - casque_fer_dj1 1 0.2
+  - pieds_maille_dj1 1 0.042
+  - jambes_maille_dj1 1 0.048
+  - plastron_maille_dj1 1 0.056
+  - casque_maille_dj1 1 0.033
+  - pieds_fer_dj1 1 0.074
+  - jambes_fer_dj1 1 0.095
+  - plastron_fer_dj1 1 0.13
+  - casque_fer_dj1 1 0.25
+  - gold_nugget 1 1
+bl_swords:
+  TotalItems: 1
+  MinItems: 1
+  MaxItems: 1
+  Drops:
+  - pieds_fer_dj1 1 0.25
+  - jambes_fer_dj1 1 0.5
+  - gold_nugget 1 1
+black_hole_scrolls:
+  TotalItems: 1
+  MinItems: 1
+  MaxItems: 1
+  Drops:
+  - archery_scroll_1 1 0.33
+  - alchemy_scroll_1 1 0.5
+  - fisting_scroll_1 1 1
+ 

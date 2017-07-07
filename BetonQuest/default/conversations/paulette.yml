@@ -13,13 +13,13 @@ NPC_options:
     conditions: 'timer_paulette'
     pointers: boire,chambre,bonjour,francis_carrot
   chambre_rep:
-    text: 'Ah! Je suis navré de l''entendre, toutes mes chambres sont prises...'
+    text: 'Ah ! Je suis navré de l''entendre, toutes mes chambres sont prises...'
   boire_rep:
-    text: 'Vous êtes au bon endroit ! Qu''est-ce que je vous sers?'
+    text: 'Vous êtes au bon endroit ! Qu''est-ce que je vous sers ?'
     pointers: the,eau,rien
 #
   occupe_inprogress1:
-    text: 'J''espère que vous n''avez pas oublié de porter mon gâteau à mon fils ?!'
+    text: 'J''espère que vous n''avez pas oublié d''apporter mon gâteau à mon fils ?!'
     conditions: '!timer_paulette,tag_fils_paulette'
     pointers: francis_carrot
   occupe_inprogress2:
@@ -45,10 +45,11 @@ NPC_options:
     events: paulette_cleaner
     pointers: aide2,aide2_bis,non,francis_carrot
   ressources_rep:
-    text: 'C''est gentil! Apportez moi &d5 oeufs &a&oalors !'
+    text: 'C''est gentil ! Apportez moi &d5 oeufs &a&oalors !'
     events: paulette_occupe2
   aide2_bis_rep:
-    text: 'Merci beaucoup! J''espère que le gâteau sera bon... !'
+    text: 'Merci beaucoup ! J''espère que le gâteau sera bon... !'
+    conditions: 'paulette_oeuf'
     events: paulette_ressources_done
   occupe3:
     text: 'J''ai une cliente qui attends son repas dans sa chambre, je ne peux pas vous parler.'
@@ -56,16 +57,21 @@ NPC_options:
     events: paulette_cleaner
     pointers: aide3,non,francis_carrot
   madame_rep:
-    text: 'Merci! Il faut d''abord lui demander ce qu''elle veut. Madame est dans la Chambre 2.'
+    text: 'Merci ! Il faut d''abord lui demander ce qu''elle veut. Madame est dans la Chambre 2.'
     events: paulette_occupe3
   merci_carrot:
-    text: 'Merci beaucoup! Tenez, un peu d''argent pour vous !'
+    text: 'Merci beaucoup ! Tenez, un peu d''argent pour vous !'
+    conditions: 'francis_carrot_have'
+    events: francis_livraison_done
+  liar:
+    text: 'J''ai comme l''impression que vous me jouez un mauvais tour... !'
+    event: reput_athelas1_negatif
 ###################
 #Options du joueur#
 ###################
 player_options:
   bonjour:
-    text: 'Bonjour à vous! Et ... aurevoir !'
+    text: 'Bonjour à vous ! Et... aurevoir !'
   chambre:
     text: 'Je voudrais louer une chambre pour la nuit'
     pointers: chambre_rep
@@ -89,7 +95,7 @@ player_options:
   aide2_bis:
     text: 'J''ai les oeufs qu''il vous faut !'
     conditions: 'paulette_oeuf,paulette_oeuf_have'
-    pointers: aide2_bis_rep
+    pointers: aide2_bis_rep,liar
   aide3:
     text: 'Je peux m''en occuper si vous voulez !'
     pointers: madame_rep
@@ -98,5 +104,4 @@ player_options:
   francis_carrot:
     text: 'J''ai les 10 carrottes que Francis vous fait parvenir !'
     conditions: 'francis_carrot_have,tag_francis_carot'
-    events: francis_livraison_done
-    pointers: merci_carrot
+    pointers: merci_carrot,liar

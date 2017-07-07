@@ -13,7 +13,7 @@ NPC_options:
   qui_rep:
     text: 'Je travaille pour l''&2Intendant &a&oet je gère les Grades Royaux de la Ville d''&2Athelas&a&o.'
   com_rep:
-    text: 'Vous pourrez les acquérir avec des &2Points de Quête &a&oet de la &2Réputation&a&o. \nIl suffit de me demander de vous montrer le menu correspondant.'
+    text: 'Vous pourrez les acquérir avec des &2Points de Quête &a&oet de l''&2Ancienneté&a&o. \nIl suffit de me demander de vous montrer le menu correspondant.'
     pointer: grade,aurevoir
   grade_rep:
     text: 'Bien entendu, le voici.'
