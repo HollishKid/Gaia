@@ -123,17 +123,22 @@ on block damage:
 
 
 sub "treefeller":
-	loop blocks in radius 2 around parameter 1:
+	loop blocks above parameter 1:
 		if loop-block is wood:
-			if "%altitude of parameter 1%" is "%altitude of loop-block%":
-				add location of loop-block to {_feller.locations::*}
-	loop {_feller.locations::*}:
-		loop blocks above loop-value:
-			if loop-block is wood or leaves:
-				loop blocks in radius 3 around loop-block:
-					if loop-block-2 is wood or leaves:
-						if "%{break.location.%parameter 2%::*}%" does not contain "%location of loop-block-2%":
-							add location of loop-block-2 to {break.location.%parameter 2%::*}
-							add type of loop-block-2 to {break.type.%parameter 2%::*}
-			else:
-				exit loop
+			add location of loop-block to {break.location.%parameter 2%::*}
+			add type of loop-block to {break.type.%parameter 2%::*}
+		else if loop-block is leaves:
+			loop all blocks in radius 5 around loop-block:
+				if loop-block-2 is leaves or wood:
+					wait 1 tick
+					if "%{break.location.%parameter 2%::*}%" does not contain "%location of loop-block-2%":
+						add location of loop-block-2 to {break.location.%parameter 2%::*}
+						add type of loop-block-2 to {break.type.%parameter 2%::*}
+		else:
+			loop all blocks in radius 5 around loop-block:
+				if loop-block-2 is leaves or wood:
+					wait 1 tick
+					if "%{break.location.%parameter 2%::*}%" does not contain "%location of loop-block-2%":
+						add location of loop-block-2 to {break.location.%parameter 2%::*}
+						add type of loop-block-2 to {break.type.%parameter 2%::*}
+			exit loop
