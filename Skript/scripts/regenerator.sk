@@ -100,10 +100,17 @@ on place:
 			add location of event-block to {mini.skywars.place::*}
 
 on leaves decay:
-	if event-block is in the region "east":
-		add location of event-block to {break.location.%{day.index}%::*}
-		add type of event-block to {break.type.%{day.index}%::*}
-
+#	if event-block is in the region "east":
+#		add location of event-block to {break.location.%{day.index}%::*}
+#		add type of event-block to {break.type.%{day.index}%::*}
+	if event-block is in the region "foret_athelas":
+		add location of event-block to {break.location.foret::*}
+		add type of event-block to {break.type.foret_athelas::*}
+	else if event-block is in the region "foret_athelas2":
+		add location of event-block to {break.location.foret2::*}
+		add type of event-block to {break.type.foret2::*}
+	else:
+		stop
 #
 # Enregistre les arbres abattus avec TreeFeller
 #	dans la base adéquate.
@@ -112,15 +119,20 @@ on leaves decay:
 #
 on block damage:
 	if event-block is wood:
-		wait 1 tick
 		if mcmmo event-player's TREE FELLER is enabled:
-			if event-block is in the region "east":
-				invoke "treefeller" from event-block and "%{day.index}%"
-			else if event-block is in the region "foret_athelas":
-				invoke "treefeller" from event-block and "foret"
-			else if event-block is in the region "foret_athelas2":
-				invoke "treefeller" from event-block and "foret2"
-
+			if {treefeller.%player%} is not set:
+				set {treefeller.%player%} to true
+				if event-block is in the region "east":
+					if town at player exists:
+						stop
+					else:
+						invoke "treefeller" from event-block and "%{day.index}%" and "%player%"
+				else if event-block is in the region "foret_athelas":
+					invoke "treefeller" from event-block and "foret" and "%player%"
+				else if event-block is in the region "foret_athelas2":
+					invoke "treefeller" from event-block and "foret2" and "%player%"
+				else:
+					delete {treefeller.%player%}
 
 sub "treefeller":
 	loop blocks above parameter 1:
@@ -142,3 +154,4 @@ sub "treefeller":
 						add location of loop-block-2 to {break.location.%parameter 2%::*}
 						add type of loop-block-2 to {break.type.%parameter 2%::*}
 			exit loop
+	delete {treefeller.%parameter 3%}
