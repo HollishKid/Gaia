@@ -466,50 +466,49 @@ every 59 minutes in "Gaia":
 		else:
 			delete {_afk}
 		if {_afk} is not set:
-			else:
-				set {_salary.receiver} to loop-player
-				fire betonquest event "variable_giver" for loop-player
-				wait 2 ticks
-				set {_salaire.%loop-player%} to 100 + {reput_athelas.%loop-player%}
+			set {_salary.receiver} to loop-player
+			fire betonquest event "variable_giver" for loop-player
+			wait 2 ticks
+			set {_salaire.%loop-player%} to 100 + {reput_athelas.%loop-player%}
 				
-				loop {_grades_bq::*}:
-					if {_salary.receiver} meets betonquest condition "%{_grades_bq::%loop-index%}%":
-						add 50 to {_salaire.%{_salary.receiver}%}
-						add 50 to {_grade_salary.%loop-player%}
-						set {_grade_nom.%loop-player%} to {_grades_noms::%loop-index%}
+			loop {_grades_bq::*}:
+				if {_salary.receiver} meets betonquest condition "%{_grades_bq::%loop-index%}%":
+					add 50 to {_salaire.%{_salary.receiver}%}
+					add 50 to {_grade_salary.%loop-player%}
+					set {_grade_nom.%loop-player%} to {_grades_noms::%loop-index%}
 				
-				loop {_metiers_bq::*}:
-					if {_salary.receiver} meets betonquest condition "%{_metiers_bq::%loop-index%}%":
-						set {_skill.%loop-player%} to {_metiers_competences::%loop-index%}
-						set {_skill_salary.%loop-player%} to placeholder parse "%%mcmmo_level_%{_skill.%loop-player%}%%%" as loop-player parsed as integer
-						add {_skill_salary.%loop-player%} to {_salaire.%{_salary.receiver}%}
-						set {_metier_nom.%loop-player%} to {_metiers_noms::%loop-index%}
+			loop {_metiers_bq::*}:
+				if {_salary.receiver} meets betonquest condition "%{_metiers_bq::%loop-index%}%":
+					set {_skill.%loop-player%} to {_metiers_competences::%loop-index%}
+					set {_skill_salary.%loop-player%} to placeholder parse "%%mcmmo_level_%{_skill.%loop-player%}%%%" as loop-player parsed as integer
+					add {_skill_salary.%loop-player%} to {_salaire.%{_salary.receiver}%}
+					set {_metier_nom.%loop-player%} to {_metiers_noms::%loop-index%}
 				
-				if {_metier_nom.%loop-player%} is not set:
-					set {_metier_nom.%loop-player%} to "&7&oAucun métier adopté."
-					set {_skill_salary.%loop-player%} to 0
-				if {_grade_nom.%loop-player%} is not set:
-					set {_grade_nom.%loop-player%} to "&7&oVagabond"
-					set {_grade_salary.%loop-player%} to 0
+			if {_metier_nom.%loop-player%} is not set:
+				set {_metier_nom.%loop-player%} to "&7&oAucun métier adopté."
+				set {_skill_salary.%loop-player%} to 0
+			if {_grade_nom.%loop-player%} is not set:
+				set {_grade_nom.%loop-player%} to "&7&oVagabond"
+				set {_grade_salary.%loop-player%} to 0
 				
-				message "&f======================= ~ &6¤ &f~ =======================" to loop-player
-				message "  &6&o&nDétail de votre Salaire" to loop-player
-				message "&f" to loop-player
-				message "&fMétier : &a&o%{_metier_nom.%loop-player%}%" to loop-player
-				message "&fGrade : &a&o%{_grade_nom.%loop-player%}%" to loop-player
-				message "&f" to loop-player
-				message "&fBase :             &6¤&a100" to loop-player
-				message "&fRéputation :      &6¤&a%{reput_athelas.%loop-player%}%" to loop-player
-				message "&fMétier :           &6¤&a%{_skill_salary.%loop-player%}%" to loop-player
-				message "&fGrade :           &6¤&a%{_grade_salary.%loop-player%}%       &2+" to loop-player
-				message "&f                  -----------" to loop-player
-				message "&fTotal :            &6¤&a%{_salaire.%loop-player%}%" to loop-player
-				message "&f======================= ~ &6¤ &f~ =======================" to loop-player
+			message "&f======================= ~ &6¤ &f~ =======================" to loop-player
+			message "  &6&o&nDétail de votre Salaire" to loop-player
+			message "&f" to loop-player
+			message "&fMétier : &a&o%{_metier_nom.%loop-player%}%" to loop-player
+			message "&fGrade : &a&o%{_grade_nom.%loop-player%}%" to loop-player
+			message "&f" to loop-player
+			message "&fBase :             &6¤&a100" to loop-player
+			message "&fRéputation :      &6¤&a%{reput_athelas.%loop-player%}%" to loop-player
+			message "&fMétier :           &6¤&a%{_skill_salary.%loop-player%}%" to loop-player
+			message "&fGrade :           &6¤&a%{_grade_salary.%loop-player%}%       &2+" to loop-player
+			message "&f                  -----------" to loop-player
+			message "&fTotal :            &6¤&a%{_salaire.%loop-player%}%" to loop-player
+			message "&f======================= ~ &6¤ &f~ =======================" to loop-player
 				
-				execute console command "eco give %{_salary.receiver}% %{_salaire.%loop-player%}%"
-				delete {_salaire.%loop-player%}
-				delete {reput_athelas.%loop-player%}
-				wait 2 ticks
+			execute console command "eco give %{_salary.receiver}% %{_salaire.%loop-player%}%"
+			delete {_salaire.%loop-player%}
+			delete {reput_athelas.%loop-player%}
+			wait 2 ticks
 #
 #
 # Mine Manager
