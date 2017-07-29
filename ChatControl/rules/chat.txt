@@ -289,6 +289,9 @@ handle as vulgarite
 match \b(p+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+|)(\s+|\.+|\*+|)(d+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+|)\b
 handle as vulgarite
 
+#ntm
+match (n+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(m+)(\s+|\.+|\*+|)
+then replace *****
 
 ########################
 #
@@ -308,7 +311,7 @@ then warn &d&oVous pouvez &dcliquer &d&osur les réponses proposées.
 
 # Carte Dynamique
 match (dynmap|minimap|carte|dyn|map)
-then warn &d&oCarte Dynamique:&a https://carte.gaia-craft.fr/
+then warn &d&oCarte Dynamique :&a https://gaia-craft.fr/dynmap.html
 
 #Intendant Helper
 match (intendante|intendant|intendente|intendent|intendan\b|intendan\b)
@@ -318,12 +321,12 @@ then warn &d&oSi vous êtes à la recherche de l'&2Intendant&d&o, il se trouve e
 #Château Helper
 match (château|chateau|châto\b|châte\b|chate\b|chato\b)
 then replace &achâteau&7
-then warn &d&oSi vous êtes à la recherche du &aChâteau&d&o, il se trouve en (-6990,80,2955). &d&oCarte Dynamique :&a https://carte.gaia-craft.fr/
+then warn &d&oSi vous êtes à la recherche du &aChâteau&d&o, il se trouve en (-6990,80,2955). &d&oCarte Dynamique :&a https://gaia-craft.fr/dynmap.html
 
 #Guilde Helper
 match (guilde|guild\b)
 then replace &aguilde&7
-then warn &d&oSi vous êtes à la recherche d'une &aGuilde&d&o, utilisez la Carte Dynamique :&a https://carte.gaia-craft.fr/
+then warn &d&oSi vous êtes à la recherche d'une &aGuilde&d&o, utilisez la Carte Dynamique :&a https://gaia-craft.fr/dynmap.html
 
 #House Helper
 match (louer|loué|acheter|acheté|avoir) maison
@@ -336,22 +339,22 @@ then warn &d&oSi vous voulez louer une maison, demandez le l'aide au &2Gestionna
 #Sanctuaire Helper
 match (sanctuaire|sanctuere|sanctuer\b|sanctuair\b|senctuaire\b|senctuere\b|senctuair\b|senctuer\b|santuaire|santuere|santuer\b|santuair\b|sentuer\b|senktu\b|sanktu\b)
 then replace &asanctuaire&7
-then warn &d&oSi vous êtes à la recherche du &aSanctuaire&d&o, il se trouve en (-7111,70,2444). &d&oCarte Dynamique :&a https://carte.gaia-craft.fr/
+then warn &d&oSi vous êtes à la recherche du &aSanctuaire&d&o, il se trouve en (-7111,70,2444). &d&oCarte Dynamique :&a https://gaia-craft.fr/dynmap.html
 
 #Gare Helper
 match \bgare\b
 then replace &agare&7
-then warn &d&oSi vous êtes à la recherche de la &aGare&d&o, elle se trouve en (-6540,70,3160). &d&oCarte Dynamique :&a https://carte.gaia-craft.fr/
+then warn &d&oSi vous êtes à la recherche de la &aGare&d&o, elle se trouve en (-6540,70,3160). &d&oCarte Dynamique :&a https://gaia-craft.fr/dynmap.html
 
 #Grand Marché Helper
 match (grand marché|grand marche|grand marcher|grand exchange|grand échange|grand echange)
 then replace &aGrand Marché&7
-then warn &d&oSi vous êtes à la recherche du &aGrand Marché&d&o, il se trouve en (-6650,70,2940). &d&oCarte Dynamique :&a https://carte.gaia-craft.fr/
+then warn &d&oSi vous êtes à la recherche du &aGrand Marché&d&o, il se trouve en (-6650,70,2940). &d&oCarte Dynamique :&a https://gaia-craft.fr/dynmap.html
 
 #Bibliothèque Helper
 match (\bbibliotheque\b|\bbibliothèque\b|\blibrairie\b)
 then replace &aBibliothèque&7
-then warn &d&oSi vous êtes à la recherche de la &aBibliothèque&d&o, elle se trouve en (-6730,70,2885). &d&oCarte Dynamique :&a https://carte.gaia-craft.fr/
+then warn &d&oSi vous êtes à la recherche de la &aBibliothèque&d&o, elle se trouve en (-6730,70,2885). &d&oCarte Dynamique :&a https://gaia-craft.fr/dynmap.html
 
 #Trade Helper
 match (acheter|acheté|vendre|échange|échanger|échangé)
@@ -360,7 +363,7 @@ then warn &d&oSi vous cherchez à vendre ou acheter des affaires, rendez vous au
 #Banque Helper
 match (banque|bank|banqu\b|banq\b)
 then replace &abanque&7
-then warn &d&oSi vous êtes à la recherche de la &aBanque&d&o, elle se trouve en (-6565,70,3111). &d&oCarte Dynamique :&a https://carte.gaia-craft.fr/
+then warn &d&oSi vous êtes à la recherche de la &aBanque&d&o, elle se trouve en (-6565,70,3111). &d&oCarte Dynamique :&a https://gaia-craft.fr/dynmap.html
 
 #PNJ Helper
 match (pnj|npc)
@@ -404,11 +407,11 @@ then warn &d&oSi vous avez des problèmes de &alag ou de FPS&d&o, pensez à inst
 #
 match pa(c|)(k|) (de|d|2|) te(x|s|)tur(e|)
 then replace &apack de texture&70
-then warn &d&oSi vous cherchez le pack de texture du serveur, il se trouve sur le site de Gaïa, section "Guide". Rendez vous sur le site depuis votre &a/menu&d&o.
+then warn &d&oVous pouvez télécharger le Pack de Ressources ici :&a https://gaia-craft.fr/Ressources/Conquest.zip
 
 match te(x|s|)tur(e|) pa(c|)(k|)
 then replace &apack de texture&70
-then warn &d&oSi vous cherchez le pack de texture du serveur, il se trouve sur le site de Gaïa, section "Guide". Rendez vous sur le site depuis votre &a/menu&d&o.
+then warn &d&oVous pouvez télécharger le Pack de Ressources ici :&a https://gaia-craft.fr/Ressources/Conquest.zip
 
 
 #######################
