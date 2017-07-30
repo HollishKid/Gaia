@@ -336,21 +336,13 @@ sub "wandupdater":
 	fire event "hollish.regenup_%{_element}%_exe3" for {_apprentice}
 	fire event "hollish.manaup_%{_element}%_exe3" for {_apprentice}
 	if parameter 2 is "air":
-		loop yaml list "air_spells" from file "/plugins/Skript/scripts/config.yml":
-			add "%loop-value%" to {_air_spells::*}
-		loop yaml list "air_spells_bq" from file "/plugins/Skript/scripts/config.yml":
-			add "%loop-value%" to {_air_spells_bq::*}
-		loop {_air_spells_bq::*}:
-			if {_apprentice} meets betonquest condition "hollish.%{_air_spells_bq::%loop-index%}%":
-				execute console command "wandp %{_apprentice}% add %{_air_spells::%loop-index%}%"
+		loop {air_spells_bq::*}:
+			if {_apprentice} meets betonquest condition "hollish.%{air_spells_bq::%loop-index%}%":
+				execute console command "wandp %{_apprentice}% add %{air_spells::%loop-index%}%"
 	else if parameter 2 is "earth":
-		loop yaml list "earth_spells" from file "/plugins/Skript/scripts/config.yml":
-			add "%loop-value%" to {_earth_spells::*}
-		loop yaml list "earth_spells_bq" from file "/plugins/Skript/scripts/config.yml":
-			add "%loop-value%" to {_earth_spells_bq::*}
-		loop {_earth_spells_bq::*}:
-			if {_apprentice} meets betonquest condition "hollish.%{_earth_spells_bq::%loop-index%}%":
-				execute console command "wandp %{_apprentice}% add %{_earth_spells::%loop-index%}%"	
+		loop {earth_spells_bq::*}:
+			if {_apprentice} meets betonquest condition "hollish.%{earth_spells_bq::%loop-index%}%":
+				execute console command "wandp %{_apprentice}% add %{earth_spells::%loop-index%}%"	
 				
 #
 #

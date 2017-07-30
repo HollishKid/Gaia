@@ -74,18 +74,64 @@ command /playerinspector:
 #
 #
 on load:
+	set {_time.ignition} to now	
+#
 	execute console command "xprate reset"
 	execute console command "region removemember foret_athelas -a -w Gaia"
-#
-	loop {online.players::*}:
-		delete {online.players::%loop-index%}
 #
 	set {_tmpO} to now
 	set {day.index} to day of week from date {_tmpO}
 	set {event.breach} to 0
 	set {event.worldboss} to 0
-	set {event.double.xp} to 0
-	set {event.triple.xp} to 0
+	set {event.double.xp} to 0	
+#
+	loop {online.players::*}:
+		delete {online.players::%loop-index%}
+	loop {grades_bq::*}:
+		delete {grades_bq::%loop-index%}
+	loop {grades_noms::*}:
+		delete {grades_noms::%loop-index%}
+	loop {metiers_bq::*}:
+		delete {metiers_bq::%loop-index%}
+	loop {metiers_noms::*}:
+		delete {metiers_noms::%loop-index%}
+	loop {metiers_competences::*}:
+		delete {metiers_competences::%loop-index%}
+	loop {penalty_free_regions::*}:
+		delete {penalty_free_regions::%loop-index%}
+	loop {enchantment_spell_list::*}:
+		delete {enchantment_spell_list::%loop-index%}
+	loop {air_spells::*}:
+		delete {air_spells::%loop-index%}
+	loop {air_spells_bq::*}:
+		delete {air_spells_bq::%loop-index%}
+	loop {earth_spells::*}:
+		delete {earth_spells::%loop-index%}
+	loop {earth_spells_bq::*}:
+		delete {earth_spells_bq::%loop-index%}
+#
+	loop yaml list "grades_bq" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {grades_bq::*}
+	loop yaml list "grades_noms" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {grades_noms::*}	
+	loop yaml list "metiers_bq" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {metiers_bq::*}
+	loop yaml list "metiers_noms" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {metiers_noms::*}
+	loop yaml list "metiers_competences" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {metiers_competences::*}
+	loop yaml list "penalty_free_regions" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {penalty_free_regions::*}
+	loop yaml list "enchantments" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {enchantment_spell_list::*}
+	loop yaml list "air_spells" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {air_spells::*}
+	loop yaml list "air_spells_bq" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {air_spells_bq::*}
+	loop yaml list "earth_spells" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {earth_spells::*}
+	loop yaml list "earth_spells_bq" from file "/plugins/Skript/scripts/config.yml":
+		add "%loop-value%" to {earth_spells_bq::*}	
 #
 	set {cagnotte_miliciens} to location at -6532, 70, 3222 of the world "Gaia"
 	set {cagnotte_epeistes} to location at -6519, 70, 3223 of the world "Gaia"
@@ -111,6 +157,73 @@ on load:
 	set {louvre_uruk_total_sign} to location at -9754, 73, 2351 of the world "Gaia"
 	set {louvre_contributors_sign} to location at -9760, 73, 2354 of the world "Gaia"
 	set {louvre_total_amount_sign} to location at -9758, 73, 2352 of the world "Gaia"
+	log "[Initialization](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
+#
+# Chester
+#
+	wait 1 second
+	set {_time.ignition} to now
+	loop {random.item.list::*}:
+		delete {random.item.list::%loop-value%}
+		wait 1 tick
+#
+	add 7 wood to {random.item.list::*}
+	add 5 gravel to {random.item.list::*}
+	add 7 stone to {random.item.list::*}
+	add 5 gold ingot to {random.item.list::*}
+	add 7 iron ingot to {random.item.list::*}
+	add 2 beef to {random.item.list::*}
+	add 2 porkchop to {random.item.list::*}
+	add 2 rabbit to {random.item.list::*}
+	add 2 apple to {random.item.list::*}
+	add 2 carrot to {random.item.list::*}
+	add 2 bread to {random.item.list::*}
+	add 2 potato to {random.item.list::*}
+	add 4 seeds to {random.item.list::*}
+	add 1 wood axe to {random.item.list::*}
+	add 1 stone axe to {random.item.list::*}
+	add 1 iron axe to {random.item.list::*}
+	add 1 wood pickaxe to {random.item.list::*}
+	add 1 stone pickaxe to {random.item.list::*}
+	add 1 iron pickaxe to {random.item.list::*}
+	add 1 gold pickaxe to {random.item.list::*}
+	add 1 diamond pickaxe to {random.item.list::*}
+	add 1 diamond to {random.item.list::*}
+	add 4 lapis to {random.item.list::*}
+	add 2 emerald to {random.item.list::*}
+	add 1 gold axe to {random.item.list::*}
+	add 1 diamond axe to {random.item.list::*}
+	add 3 experience bottle to {random.item.list::*}
+	add 1 chest named "&2Objet Inconnu" with lore "&8&oJe devrais consulter||&8&oun expert pour identifier||&8&ocet objet.|| ||&8&oIl y a un marché||&8&odevant chez Paulette||&8&opeut être que quelqu'un||&8&opourrait me renseigner !" to {random.item.list::*}
+	add 1 bow to {random.item.list::*}
+	add 3 arrows to {random.item.list::*}
+	add 1 leather chestplate to {random.item.list::*}
+	add 1 leather helmet to {random.item.list::*}
+	add 1 leather boots to {random.item.list::*}
+	add 1 leather leggings to {random.item.list::*}
+	add 1 wood sword to {random.item.list::*}
+	add 1 chainmail chestplate to {random.item.list::*}
+	add 1 chainmail helmet to {random.item.list::*}
+	add 1 chainmail boots to {random.item.list::*}
+	add 1 chainmail leggings to {random.item.list::*}
+	add 1 stone sword to {random.item.list::*}
+	add 1 iron chestplate to {random.item.list::*}
+	add 1 iron helmet to {random.item.list::*}
+	add 1 iron boots to {random.item.list::*}
+	add 1 iron leggings to {random.item.list::*}
+	add 1 iron sword to {random.item.list::*}
+	add 1 gold chestplate to {random.item.list::*}
+	add 1 gold helmet to {random.item.list::*}
+	add 1 gold boots to {random.item.list::*}
+	add 1 gold leggings to {random.item.list::*}
+	add 1 gold sword to {random.item.list::*}
+	add 1 diamond chestplate to {random.item.list::*}
+	add 1 diamond helmet to {random.item.list::*}
+	add 1 diamond boots to {random.item.list::*}
+	add 1 diamond leggings to {random.item.list::*}
+	add 1 diamond sword to {random.item.list::*}
+#
+	log "[Chester Initialization](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
 
 #	
 #
@@ -174,6 +287,8 @@ every 3 minutes in "Gaia":
 	set {_louvre_uruk_total} to {_louvre_uruk_total} / 10
 	set {_louvre_weekly_reward} to {_block.total.louvre} + {_louvre_uruk_total}
 	set line 3 of block at {louvre_total_amount_sign} to "¤ %{_louvre_weekly_reward}%"
+#
+
 #		
 #
 #
@@ -264,14 +379,17 @@ every 5 minutes in "Gaia":
 				set {event.worldboss} to 0
 				loop all players:
 					send loop-player title "&c&lKalphite - WorldBoss" with subtitle "&cTerminé" for 10 seconds with 2 seconds fade in and 2 seconds fade out
-					
+#
+
 #
 #
 # Hour Checker in Gaïa
 #		(only executed once per hour)
 #
 #
-every 59 minutes in "Gaia":	
+every 59 minutes in "Gaia":
+	set {_time.ignition} to now
+#
 	set {_tmpO} to now
 	set {day.index} to day of week from date {_tmpO}
 	set {hour.system} to "%hour%"
@@ -289,11 +407,11 @@ every 59 minutes in "Gaia":
 # Eastern Reset
 #
 	if {hour.system} is "0":
-		broadcast "&c&oLe Continent de l'Est tremble..."
+		broadcast "&c&lLe Continent de l'Est tremble..."
 		wait 2 seconds
-		broadcast "&c&o...la terre semble se reconstituer..."
+		broadcast "&c&l...la terre semble se reconstituer..."
 		wait 2 seconds
-		broadcast "&c&o...méfiez vous de ne pas suffoquer dans un bloc !"
+		broadcast "&c&l...méfiez vous de ne pas suffoquer dans un bloc !"
 		wait 7 seconds
 		loop {place.location.%{day.index}%::*}:
 			set block at loop-value to air
@@ -407,10 +525,10 @@ every 59 minutes in "Gaia":
 			
 			wait 2 ticks
 			broadcast "&dLes Cagnottes d'expérience des Guildes ont été distribuées !"
-			wait 2 ticks
 			broadcast "&d&oPour recevoir votre part, reconnectez vous sur Gaïa."
 			
-		wait 22 ticks
+		wait 2 ticks
+
 #
 #
 # At 23H - Only on Sunday
@@ -426,64 +544,39 @@ every 59 minutes in "Gaia":
 				delete {louvre_contributors::%loop-index%}
 			loop {louvre_contribution_received::*}:
 				delete {louvre_contribution_received::%loop-index%}
-	wait 22 ticks
-
+	wait 2 ticks
+	log "[Interval - 1H](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
 #
 #
 # ¤ Salary ¤
 #
 #
-	loop yaml list "grades_bq" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {_grades_bq::*}
-		wait 1 tick
-	loop yaml list "grades_noms" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {_grades_noms::*}
-		wait 1 tick
-	loop yaml list "metiers_bq" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {_metiers_bq::*}
-		wait 1 tick
-	loop yaml list "metiers_noms" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {_metiers_noms::*}
-		wait 1 tick
-	loop yaml list "metiers_competences" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {_metiers_competences::*}
-		wait 1 tick
-
+	set {_time.ignition} to now
 	loop all players:
-		wait 2 ticks
-		if loop-player meets betonquest condition "default.ami_first":
+		set {_afk} to yaml value "afk" from file "plugins/Essentials/userdata/%loop-player's uuid%.yml"
+		if loop-player meets betonquest condition "ami_first":
 			message "&d&oParlez à l'Amiral pour commencer !" to loop-player
-		else if loop-player is in the region "start":
-			message "&d&oParlez à l'Amiral pour commencer !" to loop-player
-		else if loop-player meets betonquest condition "default.tempo_historique":	
-			wait 1 tick
-		else if yaml path "afk" in file "plugins/Essentials/userdata/%loop-player's uuid%.yml" exists:
-			set {_afk} to yaml value "afk" from file "plugins/Essentials/userdata/%loop-player's uuid%.yml"		
-			if "%{_afk}%" is "true":
-				message "&d&oVous êtes inactif et ne recevez donc pas de salaire." to loop-player
-			else:
-				delete {_afk}
+		else if "%{_afk}%" is "true":
+			message "&d&oVous êtes inactif et ne recevez donc pas de salaire." to loop-player
 		else:
-			delete {_afk}
-		if {_afk} is not set:
-			set {_salary.receiver} to loop-player
 			fire betonquest event "variable_giver" for loop-player
+			set {_salary.receiver} to loop-player
 			wait 2 ticks
-			set {_salaire.%loop-player%} to 100 + {reput_athelas.%loop-player%}
-				
-			loop {_grades_bq::*}:
-				if {_salary.receiver} meets betonquest condition "%{_grades_bq::%loop-index%}%":
-					add 50 to {_salaire.%{_salary.receiver}%}
+			set {_salaire.%loop-player%} to 100
+			
+			loop {grades_bq::*}:
+				if {_salary.receiver} meets betonquest condition "%{grades_bq::%loop-index%}%":
+					add 50 to {_salaire.%loop-player%}
 					add 50 to {_grade_salary.%loop-player%}
-					set {_grade_nom.%loop-player%} to {_grades_noms::%loop-index%}
-				
-			loop {_metiers_bq::*}:
-				if {_salary.receiver} meets betonquest condition "%{_metiers_bq::%loop-index%}%":
-					set {_skill.%loop-player%} to {_metiers_competences::%loop-index%}
+					set {_grade_nom.%loop-player%} to {grades_noms::%loop-index%}
+			
+			loop {metiers_bq::*}:
+				if {_salary.receiver} meets betonquest condition "%{metiers_bq::%loop-index%}%":
+					set {_skill.%loop-player%} to {metiers_competences::%loop-index%}
 					set {_skill_salary.%loop-player%} to placeholder parse "%%mcmmo_level_%{_skill.%loop-player%}%%%" as loop-player parsed as integer
-					add {_skill_salary.%loop-player%} to {_salaire.%{_salary.receiver}%}
-					set {_metier_nom.%loop-player%} to {_metiers_noms::%loop-index%}
-				
+					add {_skill_salary.%loop-player%} to {_salaire.%loop-player%}
+					set {_metier_nom.%loop-player%} to {metiers_noms::%loop-index%}
+			
 			if {_metier_nom.%loop-player%} is not set:
 				set {_metier_nom.%loop-player%} to "&7&oAucun métier adopté."
 				set {_skill_salary.%loop-player%} to 0
@@ -491,6 +584,8 @@ every 59 minutes in "Gaia":
 				set {_grade_nom.%loop-player%} to "&7&oVagabond"
 				set {_grade_salary.%loop-player%} to 0
 				
+			add {reput_athelas.%loop-player%} to {_salaire.%loop-player%}
+			
 			message "&f======================= ~ &6¤ &f~ =======================" to loop-player
 			message "  &6&o&nDétail de votre Salaire" to loop-player
 			message "&f" to loop-player
@@ -504,11 +599,11 @@ every 59 minutes in "Gaia":
 			message "&f                  -----------" to loop-player
 			message "&fTotal :            &6¤&a%{_salaire.%loop-player%}%" to loop-player
 			message "&f======================= ~ &6¤ &f~ =======================" to loop-player
-				
-			execute console command "eco give %{_salary.receiver}% %{_salaire.%loop-player%}%"
+			
+			execute console command "eco give %loop-player% %{_salaire.%loop-player%}%"
 			delete {_salaire.%loop-player%}
 			delete {reput_athelas.%loop-player%}
-			wait 2 ticks
+	log "[Salary](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
 #
 #
 # Mine Manager
@@ -518,8 +613,8 @@ every 59 minutes in "Gaia":
 #
 # Security
 #
+	set {_time.ignition} to now
 	loop all players:
-		wait 2 ticks
 		if loop-player is in the region "mine_athelas_mine":
 			teleport loop-player to location at -6803, 67, 2904 of the world "Gaia"
 			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
@@ -532,7 +627,7 @@ every 59 minutes in "Gaia":
 		else if loop-player is in the region "ingor_volcano":
 			teleport loop-player to location at -6501, 84, 2197 of the world "Gaia"
 			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
-	wait 7 ticks
+	wait 2 ticks
 
 #
 # Rollbacks
@@ -584,109 +679,23 @@ every 59 minutes in "Gaia":
 		delete {break.location.foret2::%loop-index%}
 		delete {break.type.foret2::%loop-index%}
 		wait 1 tick
-#
-# Chester
-#
-	loop 20 times:
-		add 32 wood to {_random.item.list::*}
-	loop 10 times:
-		add 5 gravel to {_random.item.list::*}
-	loop 10 times:
-		add 12 stone to {_random.item.list::*}
-	loop 10 times:
-		add 5 gold ingot to {_random.item.list::*}
-	loop 10 times:
-		add 12 iron ingot to {_random.item.list::*}
-	add 1 diamond to {_random.item.list::*}
-	add 4 lapis to {_random.item.list::*}
-	add 2 emerald to {_random.item.list::*}
-# Food & Seeds
-	loop 10 times:
-		add 1 beef to {_random.item.list::*}
-	loop 10 times:
-		add 2 porkchop to {_random.item.list::*}
-	loop 10 times:
-		add 2 rabbit to {_random.item.list::*}
-	loop 10 times:
-		add 2 apple to {_random.item.list::*}
-	loop 10 times:
-		add 2 carrot to {_random.item.list::*}
-	loop 10 times:
-		add 2 bread to {_random.item.list::*}
-	loop 10 times:
-		add 2 potato to {_random.item.list::*}
-	loop 10 times:
-		add 4 seeds to {_random.item.list::*}
-# Tools
-	loop 7 times:
-		add 1 wood axe to {_random.item.list::*}
-	loop 5 times:
-		add 1 stone axe to {_random.item.list::*}
-	loop 3 times:
-		add 1 iron axe to {_random.item.list::*}
-	add 1 gold axe to {_random.item.list::*}
-	add 1 diamond axe to {_random.item.list::*}
-	loop 7 times:
-		add 1 wood pickaxe to {_random.item.list::*}
-	loop 5 times:
-		add 1 stone pickaxe to {_random.item.list::*}
-	loop 3 times:
-		add 1 iron pickaxe to {_random.item.list::*}
-		add 1 gold pickaxe to {_random.item.list::*}
-		add 1 diamond pickaxe to {_random.item.list::*}
-#
-# New & Fun
-#
-	add 3 experience bottle to {_random.item.list::*}
-	add 1 chest named "&2Objet Inconnu" with lore "&8&oJe devrais consulter||&8&oun expert pour identifier||&8&ocet objet.|| ||&8&oIl y a un marché||&8&odevant chez Paulette||&8&opeut être que quelqu'un||&8&opourrait me renseigner !" to {_random.item.list::*}
-# Armor
-	loop 5 times:
-		add 1 bow to {_random.item.list::*}
-	loop 7 times:
-		add 3 arrows to {_random.item.list::*}
-	loop 10 times:
-		add 1 leather chestplate to {_random.item.list::*}
-		add 1 leather helmet to {_random.item.list::*}
-		add 1 leather boots to {_random.item.list::*}
-		add 1 leather leggings to {_random.item.list::*}
-		add 1 wood sword to {_random.item.list::*}
-	loop 7 times:
-		add 1 chainmail chestplate to {_random.item.list::*}
-		add 1 chainmail helmet to {_random.item.list::*}
-		add 1 chainmail boots to {_random.item.list::*}
-		add 1 chainmail leggings to {_random.item.list::*}
-		add 1 stone sword to {_random.item.list::*}
-	loop 5 times:
-		add 1 iron chestplate to {_random.item.list::*}
-		add 1 iron helmet to {_random.item.list::*}
-		add 1 iron boots to {_random.item.list::*}
-		add 1 iron leggings to {_random.item.list::*}
-		add 1 iron sword to {_random.item.list::*}
-	loop 3 times:
-		add 1 gold chestplate to {_random.item.list::*}
-		add 1 gold helmet to {_random.item.list::*}
-		add 1 gold boots to {_random.item.list::*}
-		add 1 gold leggings to {_random.item.list::*}
-		add 1 gold sword to {_random.item.list::*}
-	add 1 diamond chestplate to {_random.item.list::*}
-	add 1 diamond helmet to {_random.item.list::*}
-	add 1 diamond boots to {_random.item.list::*}
-	add 1 diamond leggings to {_random.item.list::*}
-	add 1 diamond sword to {_random.item.list::*}
-	loop 250 times:
-		add 1 air to {_random.item.list::*}
+	log "[Mines](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
+
 #
 #
 # Chester Operation
 #
 #
-	wait 7 ticks
-	loop {chester::*}:
-		remove all items from inventory of block at {chester::%loop-index%}
-	wait 7 ticks
-	loop 4 times:
+	set {_time.ignition} to now
+	add 1 to {chester.index}
+	if {chester.index} > 5:
+		set {chester.index} to 0
 		loop {chester::*}:
-			add a random item out of {_random.item.list::*} to the inventory of block at {chester::%loop-index%}
+			remove all items from inventory of block at {chester::%loop-index%}
+	wait 2 ticks
+	loop {chester::*}:
+		add a random item out of {random.item.list::*} to the inventory of block at {chester::%loop-index%}
+	log "[Chester](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
 #
 #
 # Complement Commands & Addons
