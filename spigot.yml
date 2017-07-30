@@ -1,0 +1,115 @@
+# This is the main configuration file for Spigot.
+# As you can see, there's tons to configure. Some options may impact gameplay, so use
+# with caution, and make sure you know what each option does before configuring.
+# For a reference for any variable inside this file, check out the Spigot wiki at
+# http://www.spigotmc.org/wiki/spigot-configuration/
+# 
+# If you need help with the configuration or have any questions related to Spigot,
+# join us at the IRC or drop by our forums and leave a post.
+# 
+# IRC: #spigot @ irc.spi.gt ( http://www.spigotmc.org/pages/irc/ )
+# Forums: http://www.spigotmc.org/
+
+config-version: 8
+messages:
+  whitelist: "§cMaintenance ou redémarrage en cours... \n§aMerci de retenter très bientôt !"
+  unknown-command: Unknown command. Type "/help" for help.
+  server-full: "§cTrop de personnes sont actuellement connectées. \n§aMerci de retenter\
+    \ très bientôt !"
+  outdated-client: "§cVotre version n'est pas à jour. \n§aUtilisez {0}"
+  outdated-server: §cLe monde de Gaïa utilise la version §a{0}
+  restart: "§cLe monde de Gaïa est entrain de charger. \n§aMerci de patienter quelques\
+    \ instants !"
+settings:
+  save-user-cache-on-stop-only: false
+  bungeecord: false
+  late-bind: false
+  sample-count: 12
+  player-shuffle: 0
+  moved-too-quickly-multiplier: 10.0
+  timeout-time: 60
+  restart-on-crash: false
+  restart-script: ./start.sh
+  netty-threads: 4
+  attribute:
+    maxHealth:
+      max: 5000.0
+    movementSpeed:
+      max: 2048.0
+    attackDamage:
+      max: 2048.0
+  filter-creative-items: true
+  user-cache-size: 1000
+  int-cache-limit: 1024
+  moved-wrongly-threshold: 10000
+  debug: false
+  item-dirty-ticks: 20
+commands:
+  tab-complete: -1
+  log: true
+  spam-exclusions:
+  - /skill
+  silent-commandblock-console: false
+  replace-commands:
+  - setblock
+  - summon
+  - testforblock
+  - tellraw
+stats:
+  disable-saving: false
+  forced-stats: {}
+world-settings:
+  default:
+    verbose: true
+    mob-spawn-range: 3
+    nerf-spawner-mobs: false
+    growth:
+      cactus-modifier: 60
+      cane-modifier: 20
+      melon-modifier: 40
+      mushroom-modifier: 30
+      pumpkin-modifier: 50
+      sapling-modifier: 100
+      wheat-modifier: 100
+      netherwart-modifier: 70
+      vine-modifier: 100
+      cocoa-modifier: 100
+    entity-activation-range:
+      animals: 6
+      monsters: 16
+      misc: 2
+    entity-tracking-range:
+      players: 48
+      animals: 48
+      monsters: 48
+      misc: 32
+      other: 64
+    ticks-per:
+      hopper-transfer: 24
+      hopper-check: 24
+    hopper-amount: 3
+    random-light-updates: false
+    save-structure-info: true
+    max-entity-collisions: 1
+    dragon-death-sound-radius: 0
+    seed-village: 10387312
+    seed-feature: 14357617
+    hunger:
+      walk-exhaustion: 0.2
+      sprint-exhaustion: 0.7
+      combat-exhaustion: 0.3
+      regen-exhaustion: 3.0
+    max-tnt-per-tick: 100
+    max-tick-time:
+      tile: 15
+      entity: 20
+    item-despawn-rate: 6000
+    merge-radius:
+      item: 3.0
+      exp: 2.5
+    arrow-despawn-rate: 100
+    enable-zombie-pigmen-portal-spawns: true
+    wither-spawn-sound-radius: 1
+    view-distance: 5
+    hanging-tick-frequency: 100
+    zombie-aggressive-towards-villager: true
