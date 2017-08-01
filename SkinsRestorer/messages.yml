@@ -1,0 +1,31 @@
+NOT_PLAYER: '&cVous devez être un joueur pour faire ça.'
+NOT_ONLINE: '&cCe joueur n''est pas connecté.'
+SKIN_COOLDOWN: '&dVous ne pouvez changer votre skin que toutes les &2%s &dsecondes.'
+SKIN_CHANGE_SUCCESS: '&aVotre skin a été mis à jour.'
+PLAYER_HAS_NO_PERMISSION: '&cVous ne pouvez pas faire cela.'
+SKIN_DISABLED: '&cCe skin a été désactivé.'
+UNKNOWN_COMMAND: '&cUnknown command. Type "/help" for help.'
+ALT_API_FAILED: '&cLe système de skins est surchargé. Merci de réessayer dans quelques instants.'
+NOT_PREMIUM: '&cAucun skin de ce nom n''existe. Vérifiez la bonne orthgraphe ou cherchez un skin sur &2mcskinsearch.com&d.'
+RATE_LIMITED: "&dUne limite de temps est imposé sur ce skin. Merci de réessayer dans 10 minutes."
+GENERIC_ERROR: '&cUne erreur est survenue lors de la récupération de votre skin. Merci de réessayer dans quelques instants.'
+SKIN_DATA_DROPPED: '&aSkin de %player a été enlevé.'
+SKIN_DATA_SAVED: '&aDonnées de skin correctement enregistrées.'
+SKIN_DATA_UPDATED: '&aDonnées de skin correctement mise à jour.'
+PLAYER_HELP: |-
+  &e&m-------------&r&8[ &aSkinsRestorer &8]&e&m-------------&r
+   &9/skin <skinname> &f-&a Sets your skin.
+   &9/clearskin &f-&a Removes your skin.
+ADMIN_SET_SKIN: '&aVous définissez le skin de %player'
+ADMIN_HELP: |-
+  &a&m-------------&r&8[ &9SkinsRestorer Admin &8]&a&m-------------&r
+   &9/skinsrestorer set <player> <skin name> &9-&a Sets Player's skin.
+  &9/skinsrestorer drop <player> &9-&a Drops player skin data.
+   &9/skinsrestorer reload &9- &aReloads the config and locale
+   &9/skinsrestorer props [player] &9- &aDisplays the players actual skin as properties
+RELOAD: '&aConfig and Locale has been reloaded!'
+NO_SKIN_DATA: '&cAucune donnée de skin obtenue. Est-ce que ce joueur possède un skin ?'
+OUTDATED: "&4You are running an outdated version of SKINSRESTORER!\n&cPlease update\
+  \ to latest version on Spigot: \n&ehttps://www.spigotmc.org/resources/skinsrestorer.2124/"
+SKIN_CHANGE_SUCCESS_DATABASE: '&aVotre skin a été mis à jour.'
+RELOAD_SKINS: '&aThe skins menu has been reloaded!'

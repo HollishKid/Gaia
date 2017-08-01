@@ -75,8 +75,8 @@ title_athelas3: 'command title %player% title {"text":"Athelas","color":"purple"
 title_carte: folder title_carte1,title_carte2,title_carte3,title_carte4 delay:5
 title_carte1: 'command title %player% times 40 60 80'
 title_carte2: 'command title %player% subtitle {"text":"Utilisez la Carte","color":"gold"}'
-title_carte3: 'command title %player% title {"text":"carte.gaia-craft.fr","color":"purple"}'
-title_carte4: 'command tellraw %player% {"text":"Cliquez ici pour être redirigé vers la carte.","color":"green","clickEvent":{"action":"open_url","value":"https://carte.gaia-craft.fr/"},"hoverEvent":{"action":"show_text","value":"Lien direct vers la Carte de Gaïa"}}'
+title_carte3: 'command title %player% title {"text":"gaia-craft.fr/dynmap.html","color":"purple"}'
+title_carte4: 'command tellraw %player% {"text":"Cliquez ici pour être redirigé vers la carte.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/dynmap.html"},"hoverEvent":{"action":"show_text","value":"Lien direct vers la Carte de Gaïa"}}'
 j_entry_int: if j_entry_int journal_update else j_entry_int_exe
 j_entry_int_exe: journal add trouver_intendant
 pex_debuttempo: 'command pex user %player% group set debuttempo'
@@ -469,47 +469,7 @@ uoex242: 'message &dVotre objet est une houe en diamant !'
 #
 #
 ###################################################################################################
-charon_store: 'command cc open charonnew.yml %player%'
-#
-# XP Boosters
-#
-xpboost2: if reput_athelas50 xp_boost_event2 else noxpboostreput
-xpboost3: if reput_athelas100 xp_boost_event3 else noxpboostreput
-xpboost4: if reput_athelas200 xp_boost_event4 else noxpboostreput
-xpboost_timer: 'command thisisthexpboosttimercommandforonehour'
-#
-#
-xpboosttake50reput: point reput_athelas -50
-xpboosttake100reput: point reput_athelas -100
-xpboosttake200reput: point reput_athelas -200
-#
-noxpboostreput: folder noxpboostreput1,noxpboostreput2
-noxpboostreput1: 'message &dVous n''avez pas assez de points de Réputation.'
-noxpboostreput2: 'message &dVous avez &2%point.reput_athelas.amount% &dPoint(s) de Réputation.'
-#
-xp_boost_event2: folder xp_boost_event2a,xp_boost_event2c,xpboosttake50reput,xpboost_timer
-xp_boost_event2a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l2 &dpendant &21 &dHeure !'
-xp_boost_event2c: 'command xprate 2 true'
-#
-xp_boost_event3: folder xp_boost_event3a,xp_boost_event3c,xpboosttake100reput,xpboost_timer
-xp_boost_event3a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l3 &dpendant &21 &dHeure !'
-xp_boost_event3c: 'command xprate 3 true'
-#
-xp_boost_event4: folder xp_boost_event4a,xp_boost_event4c,xpboosttake200reput,xpboost_timer
-xp_boost_event4a: 'command broadcast &2&l%player% &dvient de lancer un événement de Boost d''Expérience ! &dToute votre expérience gagnée est multipliée par &2&l4 &dpendant &21 &dHeure !'
-xp_boost_event4c: 'command xprate 4 true'
-#
-# Skins
-#
-skin_choisir: if reput_athelas10 skin_valider_exe else skin_no_fund
-skin_no_fund: folder skin_no_fund1,skin_no_fund2,skin_no_fund3
-skin_no_fund1: 'message &dVous n''avez pas assez de &2Points de Réputation'
-skin_no_fund2: 'message &dpour acheter un skin.'
-skin_no_fund3: 'message &dRéputation : &2%point.reput_athelas.amount% &d/ 10.'
-#
-skin_valider_exe: folder skin_pay_reput,skin_executor
-skin_pay_reput: point reput_athelas -10
-skin_executor: 'command vsign %player% skinsrestorer set %player% {data}'
+charon_store: 'command cc open charon.yml %player%'
 #
 #
 #
@@ -522,7 +482,7 @@ j_entry_intendant: journal add intendant_trouve
 tag_intendant: tag add intendant
 autorisation_bateau: tag add autorisation_bateau
 #
-navigation_give_contract: 'command give %player% written_book 1 0 {pages:["[\"\",{\"text\":\"\n       \"},{\"text\":\"Contrat\n     Navigation\",\"bold\":true},{\"text\":\"\n\n\n\n\",\"color\":\"reset\"},{\"text\":\"entre\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas,\nreprésentée par\nson Intendant.\n\n\",\"color\":\"reset\"},{\"text\":\"et\",\"italic\":true},{\"text\":\"\n%player%\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 1\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas n''est en aucun cas responsable des dégâts physiques ou matériels encourus.\nCeci est valabe pour tout voyage à bord d''un navire relié à la Flotte Royale d''Athelas.\n\n \",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe signataire payera ses dûs \",\"color\":\"reset\"},{\"text\":\"avant\",\"italic\":true},{\"text\":\" le voyage au Commandant.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nAucun remboursement ou dédommagement ne peut être donné.\nIl n''existe aucune exception possible.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 2\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas peut décider, sans prévenir ou avertir le Signataire, de supprimer ou rajouter des destinations atteignables.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLes conditions d''accès à certaines destinations sont susceptibles de varier.\n(Niveau de Réputation, entre autres.)\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nAucune accomodation particulière ne peut être demandée.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 3\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas est en aucun cas responsable du devenir du Signataire sur le \\\"\",\"color\":\"reset\"},{\"text\":\"Continent Est\",\"bold\":true},{\"text\":\"\\\".\n\n\",\"color\":\"reset\"},{\"text\":\"Ceci est particulièrement le cas concernant les morts subites et/ou douloureuses.\",\"italic\":true}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe Signataire déclare sur l''honneur d''avoir pris acte du guide complet concernant le \\\"\",\"color\":\"reset\"},{\"text\":\"Continent Est\",\"bold\":true},{\"text\":\"\\\".\n\n[\",\"color\":\"reset\"},{\"text\":\"Cliquez ici pour obtenir le lien vers le Guide\",\"italic\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://gaia-craft.fr/mediawiki"}},{\"text\":\"]\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas n''est en aucun cas responsable des pertes matérielles à la mort du Signataire.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 4\",\"italic\":true},{\"text\":\"\nLe Signataire déclare s''informer avant de demander de l''aide.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 4\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa création, la gestion, l''entretien et les coûts liés d''une Ville, relèvent de la responsabilité du Signataire.\n\nLa Ville d''Athelas ne fournit aucune aide ni reconnaissance politique.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe Signataire déclare se comporter en personne \",\"color\":\"reset\"},{\"text\":\"responsable \",\"italic\":true},{\"text\":\"dans la gestion de sa Ville.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nLe Signataire respectera la Nature à tout moment.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Signature\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Je soussigné(e)\n\n%player%\n\ndéclare avoir pris connaissance du contrat présent.\",\"italic\":true},{\"text\":\"\n\n[\",\"color\":\"reset\"},{\"text\":\"Cliquez ici pour signer\",\"italic\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/thisisthesignaturecommand\"}},{\"text\":\"]\",\"color\":\"reset\"}]"],title:"Contrat de Navigation",author:"Intendant d''Athelas",display:{Lore:["Un contrat à signer","avant de le rendre","à l''Intendant"]}}'
+navigation_give_contract: 'command give %player% written_book 1 0 {pages:["[\"\",{\"text\":\"\n       \"},{\"text\":\"Contrat\n     Navigation\",\"bold\":true},{\"text\":\"\n\n\n\n\",\"color\":\"reset\"},{\"text\":\"entre\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas,\nreprésentée par\nson Intendant.\n\n\",\"color\":\"reset\"},{\"text\":\"et\",\"italic\":true},{\"text\":\"\n%player%\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 1\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas n''est en aucun cas responsable des dégâts physiques ou matériels encourus.\nCeci est valabe pour tout voyage à bord d''un navire relié à la Flotte Royale d''Athelas.\n\n \",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe signataire payera ses dûs \",\"color\":\"reset\"},{\"text\":\"avant\",\"italic\":true},{\"text\":\" le voyage au Commandant.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nAucun remboursement ou dédommagement ne peut être donné.\nIl n''existe aucune exception possible.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 2\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas peut décider, sans prévenir ou avertir le Signataire, de supprimer ou rajouter des destinations atteignables.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLes conditions d''accès à certaines destinations sont susceptibles de varier.\n(Niveau de Réputation, entre autres.)\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nAucune accomodation particulière ne peut être demandée.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 3\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas est en aucun cas responsable du devenir du Signataire sur le \\\"\",\"color\":\"reset\"},{\"text\":\"Continent Est\",\"bold\":true},{\"text\":\"\\\".\n\n\",\"color\":\"reset\"},{\"text\":\"Ceci est particulièrement le cas concernant les morts subites et/ou douloureuses.\",\"italic\":true}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe Signataire déclare sur l''honneur d''avoir pris acte du guide complet concernant le \\\"\",\"color\":\"reset\"},{\"text\":\"Continent Est\",\"bold\":true},{\"text\":\"\\\".\n\n[\",\"color\":\"reset\"},{\"text\":\"Cliquez ici pour obtenir le lien vers le Guide\",\"italic\":true,\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://gaia-craft.fr/mediawiki\"}},{\"text\":\"]\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nLa Ville d''Athelas n''est en aucun cas responsable des pertes matérielles à la mort du Signataire.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 4\",\"italic\":true},{\"text\":\"\nLe Signataire déclare s''informer avant de demander de l''aide.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Section 4\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Article 1\",\"italic\":true},{\"text\":\"\nLa création, la gestion, l''entretien et les coûts liés d''une Ville, relèvent de la responsabilité du Signataire.\n\nLa Ville d''Athelas ne fournit aucune aide ni reconnaissance politique.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"\n\"},{\"text\":\"Article 2\",\"italic\":true},{\"text\":\"\nLe Signataire déclare se comporter en personne \",\"color\":\"reset\"},{\"text\":\"responsable \",\"italic\":true},{\"text\":\"dans la gestion de sa Ville.\n\n\",\"color\":\"reset\"},{\"text\":\"Article 3\",\"italic\":true},{\"text\":\"\nLe Signataire respectera la Nature à tout moment.\",\"color\":\"reset\"}]","[\"\",{\"text\":\"     \"},{\"text\":\"Signature\",\"bold\":true},{\"text\":\"\n\n\",\"color\":\"reset\"},{\"text\":\"Je soussigné(e)\n\n%player%\n\ndéclare avoir pris connaissance du contrat présent.\",\"italic\":true},{\"text\":\"\n\n[\",\"color\":\"reset\"},{\"text\":\"Cliquez ici pour signer\",\"italic\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/thisisthesignaturecommand\"}},{\"text\":\"]\",\"color\":\"reset\"}]"],title:"Contrat de Navigation",author:"Intendant d''Athelas",display:{Lore:["Un contrat à signer","avant de le rendre","à l''Intendant"]}}'
 navigation_signing: tag add navigation_signing
 navigation_signature: if navigation_signing navigation_signature2 else navigation_not_wanted
 navigation_signature2: if navigation_signed navigation_done else navigation_signature_exe
@@ -3209,6 +3169,36 @@ paul_francis_rem: tag del paul_francis
 francis_carot_rem: tag del francis_carot
 betteraves_urgent_rem: tag del betteraves_urgent
 tag_tarte_chef_rem: tag del tarte_chef
+#
+#
+# Aubergiste
+#
+#
+#
+tag_aubergiste: tag add tag_aubergiste
+point_aubergiste: point aubergiste 1
+#
+tag_aubergiste_del: tag del tag_aubergiste
+point_aubergiste_del: 'command bq point %player% del aubergiste'
+#
+tag_aubergiste_arthus: tag add tag_aubergiste_arthus
+tag_aubergiste_kilian: tag add tag_aubergiste_kilian
+tag_aubergiste_olaf: tag add tag_aubergiste_olaf
+tag_aubergiste_clelia: tag add tag_aubergiste_clelia
+tag_aubergiste_ronke: tag add tag_aubergiste_ronke
+tag_aubergiste_nimue: tag add tag_aubergiste_nimue
+#
+tag_aubergiste_arthus_del: tag del tag_aubergiste_arthus
+tag_aubergiste_kilian_del: tag del tag_aubergiste_kilian
+tag_aubergiste_olaf_del: tag del tag_aubergiste_olaf
+tag_aubergiste_clelia_del: tag del tag_aubergiste_clelia
+tag_aubergiste_ronke_del: tag del tag_aubergiste_ronke
+tag_aubergiste_nimue_del: tag del tag_aubergiste_nimue
+#
+aubergiste_clean: folder tag_aubergiste_del,point_aubergiste_del,tag_aubergiste_arthus_del,tag_aubergiste_kilian_del,tag_aubergiste_olaf_del,tag_aubergiste_clelia_del,tag_aubergiste_ronke_del,tag_aubergiste_nimue_del
+#
+auberge_tele_out: teleport -6789;67;2901;Gaia;-90;0
+auberge_damage: damage 1
 #
 # Gorick
 #

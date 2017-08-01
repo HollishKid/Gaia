@@ -52,6 +52,7 @@ random9: random 9-100
 random10: random 10-100
 random20: random 20-100
 random40: random 40-100
+random50: random 50-100
 random60: random 60-100
 random70: random 70-100
 random80: random 80-100
@@ -812,6 +813,17 @@ betteraves_urgent: tag betteraves_urgent
 betteraves_have: item betteraves:7
 tag_tarte_chef: tag tarte_chef
 tarte_chef_have: item tarte_chef
+#
+# Aubergiste
+#
+tag_aubergiste: tag tag_aubergiste
+aubergiste_point3: point aubergiste 3
+tag_aubergiste_arthus: tag tag_aubergiste_arthus
+tag_aubergiste_kilian: tag tag_aubergiste_kilian
+tag_aubergiste_olaf: tag tag_aubergiste_olaf
+tag_aubergiste_clelia: tag tag_aubergiste_clelia
+tag_aubergiste_ronke: tag tag_aubergiste_ronke
+tag_aubergiste_nimue: tag tag_aubergiste_nimue
 #############################
 #
 #
