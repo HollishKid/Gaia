@@ -52,12 +52,7 @@ on break:
 			add location of event-block to {break.location.foret2::*}
 			add type of event-block to {break.type.foret2::*}
 	else if event-block is in the region "residences":
-		if "%{louvre_registre::*}%" contains "%player%":
-			if "%{louvre_contributors::*}%" contains "%player%":
-				add 1 to {block.breaks.louvre}
-			else:
-				add player to {louvre_contributors::*}
-				add 1 to {block.breaks.louvre}
+		add 1 to {block.breaks.louvre}
 	else if event-block is in the region "skywars":
 		if player's gamemode is survival:
 			if "%{mini.skywars.place::*}%" contains "%location of event-block%":

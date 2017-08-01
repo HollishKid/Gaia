@@ -1,6 +1,7 @@
 #
 #
 #
+#
 # Skript for Gaïa Time
 #
 #
@@ -33,11 +34,9 @@ on join:
 		set {_money} to {_money} parsed as integer
 		set {_02} to 0.2
 		set {_money_result} to {_money} * {_02}
-		wait 7 ticks
+		wait 2 ticks
 		execute console command "eco take %player% %{_money_result}%"
-		wait 7 ticks
 		fire event "reput_athelas3_negatif" for player
-		wait 7 seconds
 	if {daily.quester.%player%} is set:
 		message "&c&lVous n'avez pas fini une quête journalière à temps !"
 		wait 2 ticks
@@ -46,6 +45,13 @@ on join:
 		fire event "paul_cleaner" for player
 		fire event "francis_cleaner" for player
 		delete {daily.quester.%player%}
+	if {louvre.contributor.%player%} is set:
+		message "&a&lVous recevez &2%{louvre.contributor.%player%}% &a&lpour avoir contribué aux travaux du Louvre !"
+		message "&a&lVous devez désormais vous réinscrire sur le registre auprès du Gestionnaire au Louvre."
+		wait 2 ticks
+		execute console command "eco give %player% %{louvre.contributor.%player%}%"
+		delete {louvre.contributor.%player%}
+		
 #
 	wait 20 seconds
 	if {event.double.xp} is 1:
@@ -279,7 +285,7 @@ every 3 minutes in "Gaia":
 	set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
 	set line 3 of block at {louvre_uruk_total_sign} to "%{_louvre_uruk_total}%"
 #
-	set line 3 of block at {louvre_contributors_sign} to "%size of {louvre_contributors::*}%"
+	set line 3 of block at {louvre_contributors_sign} to "%size of {louvre_registre::*}%"
 #
 	set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
 	set {_block.total.louvre} to {_block.total.louvre} / 100
@@ -540,10 +546,27 @@ every 59 minutes in "Gaia":
 			set {block.placed.louvre} to 0
 			set {louvre_uruk_kills} to 0
 			set {louvre_uruka_kills} to 0
+			loop {louvre_registre::*}:
+				set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
+				set {_divider1} to 100 + size of {louvre_registre::*}
+				set {_divider2} to 10 + size of {louvre_registre::*}
+				set {_block.total.louvre} to {_block.total.louvre} / {_divider1}
+				set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
+				set {_louvre_uruk_total} to {_louvre_uruk_total} / {_divider2}
+				set {_louvre_weekly_reward} to {_block.total.louvre} + {_louvre_uruk_total}
+				add {_louvre_weekly_reward} to {louvre.contributor.%player%}
+				delete {louvre_registre::%loop-index%}
+				wait 1 tick
+			execute console command "bq delete tag hollish.registre_ecuyer_louvre"
+			broadcast "&dLes Contributeurs aux travaux du Louvre ont été payés."
+			broadcast "&d&oPour recevoir votre part, reconnectez vous sur Gaïa."
+			broadcast "&dTous les Écuyers peuvent se réinscrire à nouveau au Louvre."
+#The following 4 lines have to be deleted after 07/08/2017
 			loop {louvre_contributors::*}:
 				delete {louvre_contributors::%loop-index%}
 			loop {louvre_contribution_received::*}:
 				delete {louvre_contribution_received::%loop-index%}
+#
 	wait 2 ticks
 	log "[Interval - 1H](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
 #
