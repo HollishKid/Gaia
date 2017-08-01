@@ -290,8 +290,12 @@ match \b(p+)(\s+|\.+|\*+|)(e+|è+|é+|ê+|ë+|)(\s+|\.+|\*+|)(d+)(\s+|\.+|\*+|)(
 handle as vulgarite
 
 #ntm
-match (n+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(m+)(\s+|\.+|\*+|)
-then replace *****
+match \b(n+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(m+)(\s+|\.+|\*+|)\b
+handle as vulgarite
+
+#ptn
+match \b(p+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(n+)(\s+|\.+|\*+|)\b
+handle as vulgarite
 
 ########################
 #

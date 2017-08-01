@@ -264,5 +264,5 @@ match (\bfdp\b|\bpd\b)
 then replace *****
 
 #ntm
-match (n+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(m+)(\s+|\.+|\*+|)
+match \b(n+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(m+)(\s+|\.+|\*+|)\b
 then replace *****
