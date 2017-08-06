@@ -1,0 +1,7 @@
+tag_beginquest_jon1: 'tag add jon1_beginquest'
+journal_add_jon1: 'journal add jjon1'
+take_objetsjon1: 'take lava_tear:5,briquet:1'
+argentjon1: 'command eco give %player% 200'
+journal_del_jon1: 'journal del jjon1'
+tag_endingquest_jon1: 'tag del jon1_beginquest'
+tag_questcomplete_jon1: 'tag add questcompleted_jon1'

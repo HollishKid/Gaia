@@ -1,0 +1,50 @@
+quester: 'Jon' #J'aimerais que ce PNJ habite en -6865 64 2858 Facing: -127/0
+first: 'inconnu,salut,salut2'
+stop: 'false'
+
+#Options PNJ#
+
+NPC_options:
+  'inconnu':
+    text: 'Je ne vous connais pas... Vous devriez aller voir l'Intendant au Château !'
+    conditions: '!default.intendant_done,!jon1_beginquest'
+  'salut':
+    text: 'Bonjour &2%player% &a&o! Je suis un apprenti Spiritualiste, j'essaie de communiquer avec notre mère Gaïa! Cependant, il me manque certains ingrédients pour mon premier Rituel...'
+    conditions: 'default.intendant_done,!jon1_beginquest' 
+    pointers: 'lesquelles,aurevoir'
+  'ing':
+    text: 'Il me faudrait un &3briquet&a&o, ainsi que 5 &3Gouttes de Lave&a&o, récupérables à High Garden, sur les monstres du même nom. Vous aurez bien entendu une récompense pour votre dur labeur !'
+    pointers:'oui,non,pourquoi'
+  'peur':
+    text: 'J'aimerais bien, mais ces monstres me font peur! Alors, vous acceptez ?'
+    pointers: 'oui,non'
+  'salut2':
+    text: 'Bon retour ! Avez-vous pu récupérer ce que je vous avais demandé ?'
+    conditions: 'jon1_beginquest'
+    pointers: 'non2,oui2'
+  'fin1':
+    text: 'Merci à vous jeune &2%player%&a&o !\nVoyons voir...\n.....\nRien ne se passe...\n Je suppose que ce Rituel-ci n'est pas fait pour moi..\n Je dois tout de même vous récompenser, vous n'êtes pas coupable de mon échec!\n Pensez à revenir me voir, j'aurais sans doute une mission pour vous, je comptes bien essayer différents Rituels!\n Mais en attendant, voici votre récompense!'
+    events: 'argentjon1,journal_del_jon1,tag_endingquest_jon1,tag_questcomplete_jon1,default.reput_athelas1_positif'
+#Options joueurs#
+
+player_options:
+  'lesquelles':
+    text: Quelles sont ces ingrédients dont vous manquez ?
+    pointers: 'ing'
+  'aurevoir':
+    text: 'Cela ne m'intéresse pas, au revoir.
+  'oui':
+    text: 'Entendu ! Préparez la récompense, je vais chercher vos Gouttes de Lave, ainsi que votre briquet!' #Je ne suis pas très sur de cette ligne de texte :3
+    events: 'journal_add_jon1,tag_beginquest_jon1'
+  'non':
+    text: 'Désolé, je ne pense pas pouvoir vous aider.'
+  'pourquoi':
+    text: 'Pourquoi n'y allez-vous pas vous-même ?'
+    pointers: 'peur'
+  'non2':
+    text: 'Non, pas encore.'
+  'oui2':
+    text: 'Oui, j'ai tout ce qu'il vous faut !'
+    conditions: 'objets_jon1'
+    events: 'take_objetsjon1'
+    pointers: 'fin1'
