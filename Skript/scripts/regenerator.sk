@@ -84,12 +84,7 @@ on place:
 		if player's gamemode is survival:
 			add location of event-block to {place.location.volcano::*}
 	else if event-block is in the region "residences":
-		if "%{louvre_registre::*}%" contains "%player%":
-			if "%{louvre_contributors::*}%" contains "%player%":
-				add 1 to {block.placed.louvre}
-			else:
-				add player to {louvre_contributors::*}
-				add 1 to {block.placed.louvre}
+		add 1 to {block.placed.louvre}
 	else if event-block is in the region "skywars":
 		if player's gamemode is survival:
 			add location of event-block to {mini.skywars.place::*}

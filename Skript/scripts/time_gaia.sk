@@ -546,15 +546,15 @@ every 59 minutes in "Gaia":
 			set {block.placed.louvre} to 0
 			set {louvre_uruk_kills} to 0
 			set {louvre_uruka_kills} to 0
+			set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
+			set {_divider1} to 100 + size of {louvre_registre::*}
+			set {_divider2} to 10 + size of {louvre_registre::*}
+			set {_block.total.louvre} to {_block.total.louvre} / {_divider1}
+			set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
+			set {_louvre_uruk_total} to {_louvre_uruk_total} / {_divider2}
+			set {_louvre_weekly_reward} to {_block.total.louvre} + {_louvre_uruk_total}			
 			loop {louvre_registre::*}:
-				set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
-				set {_divider1} to 100 + size of {louvre_registre::*}
-				set {_divider2} to 10 + size of {louvre_registre::*}
-				set {_block.total.louvre} to {_block.total.louvre} / {_divider1}
-				set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
-				set {_louvre_uruk_total} to {_louvre_uruk_total} / {_divider2}
-				set {_louvre_weekly_reward} to {_block.total.louvre} + {_louvre_uruk_total}
-				add {_louvre_weekly_reward} to {louvre.contributor.%player%}
+				add {_louvre_weekly_reward} to {louvre.contributor.%loop-value%}
 				delete {louvre_registre::%loop-index%}
 				wait 1 tick
 			execute console command "bq delete tag hollish.registre_ecuyer_louvre"
