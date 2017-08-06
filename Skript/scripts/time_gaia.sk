@@ -27,16 +27,21 @@ on join:
 	wait 10 seconds
 	if {traitor.%player%} is set:
 		delete {traitor.%player%}
-		message "&c&lVous avez été déloyal lors de votre "
+		message "&c&lVous avez été déloyal lors de votre"
 		message "&c&ldernier combat en vous déconnectant !"
-		message "&c&oVous êtes donc sanctionné."
+		message "&c&oVous êtes donc sanctionné :"
 		set {_money} to placeholder parse "%%vault_eco_balance_fixed%%" as player
 		set {_money} to {_money} parsed as integer
 		set {_02} to 0.2
 		set {_money_result} to {_money} * {_02}
 		wait 2 ticks
 		execute console command "eco take %player% %{_money_result}%"
-		fire event "reput_athelas3_negatif" for player
+		fire event "reput_athelas5_negatif" for player
+		wait 2 seconds
+		message "&c&oDe plus, vous allez être banni de Gaïa"
+		message "&c&opendant 1 heure à partir de maintenant."
+		wait 7 seconds
+		execute console command "tempban %player% 1h Déconnection déloyale en combat."
 	if {daily.quester.%player%} is set:
 		message "&c&lVous n'avez pas fini une quête journalière à temps !"
 		wait 2 ticks
