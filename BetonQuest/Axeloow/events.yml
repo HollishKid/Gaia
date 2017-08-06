@@ -1,7 +1,21 @@
+###Quête de Jon###
+
 tag_beginquest_jon1: 'tag add jon1_beginquest'
 journal_add_jon1: 'journal add jjon1'
 take_objetsjon1: 'take lava_tear:5,briquet:1'
-argentjon1: 'command eco give %player% 200'
 journal_del_jon1: 'journal del jjon1'
 tag_endingquest_jon1: 'tag del jon1_beginquest'
 tag_questcomplete_jon1: 'tag add questcompleted_jon1'
+folder_jon1_1: 'jonquest1_1 delay:1,jonquest1_2 delay:3,jonquest1_3 delay:6,jonquest1_4 delay:9,folder_jon1.2 delay:12'
+folder_jon1_2: 'jonquest1_5,recompense_argent_200 delay:1,default.reput_athelas1_positif delay:1,journal_del_jon1 delay:1,tag_endingquest_jon1 delay:1,tag_questcomplete_jon1 delay:1,jonquest1_6 delay:3'
+jonquest1_1: 'message &a&oVoyons voir...'
+jonquest1_2: 'message &a&o.....'
+jonquest1_3: 'message &a&oRien ne se passe...'
+jonquest1_4: 'message &a&oJe suppose que ce Rituel-ci n'est pas fait pour moi..'
+jonquest1_5: 'message &a&oJe dois tout de même vous récompenser, vous n''êtes pas coupable de mon échec!'
+jonquest1_6: 'message &a&oPensez à revenir me voir, j''aurais sans doute une mission pour vous, je comptes bien essayer différents Rituels!'
+
+###Récompenses###
+
+recompense_argent_200: 'command eco give %player% 200'
+

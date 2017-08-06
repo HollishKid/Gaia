@@ -25,8 +25,8 @@ NPC_options:
     conditions: 'jon1_beginquest'
     pointers: 'non2,oui2'
   'fin1':
-    text: 'Merci à vous jeune &2%player%&a&o !\nVoyons voir...\n.....\nRien ne se passe...\n Je suppose que ce Rituel-ci n'est pas fait pour moi..\n Je dois tout de même vous récompenser, vous n''êtes pas coupable de mon échec!\n Pensez à revenir me voir, j''aurais sans doute une mission pour vous, je comptes bien essayer différents Rituels!\n Mais en attendant, voici votre récompense!'
-    events: 'argentjon1,journal_del_jon1,tag_endingquest_jon1,tag_questcomplete_jon1,default.reput_athelas1_positif'
+    text: 'Merci à vous jeune &2%player%&a&o !
+    events: 'folder_jon1_1'
 #Options joueurs#
 
 player_options:
