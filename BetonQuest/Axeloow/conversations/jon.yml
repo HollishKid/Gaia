@@ -16,7 +16,7 @@ NPC_options:
     pointers: 'lesquels,aurevoir'
   'ing':
     text: 'Il me faudrait un &3briquet&a&o, ainsi que 5 &3Gouttes de Lave&a&o, récupérables à High Garden, sur les monstres du même nom. Vous aurez bien entendu une récompense pour votre dur labeur !'
-    pointers:'oui,non,pourquoi'
+    pointers: 'oui,non,pourquoi'
   'peur':
     text: 'J''aimerais bien, mais ces monstres me font peur! Alors, vous acceptez ?'
     pointers: 'oui,non'
@@ -25,8 +25,9 @@ NPC_options:
     conditions: 'jon1_beginquest'
     pointers: 'non2,oui2'
   'fin1':
-    text: 'Merci à vous jeune &2%player%&a&o !
+    text: 'Merci à vous jeune &2%player%&a&o !'
     events: 'folder_jon1_1'
+
 #Options joueurs#
 
 player_options:
@@ -36,7 +37,7 @@ player_options:
   'aurevoir':
     text: 'Cela ne m'intéresse pas, au revoir.'
   'oui':
-    text: 'Entendu ! Préparez la récompense, je vais chercher vos Gouttes de Lave, ainsi que votre briquet!'
+    text: 'Entendu ! Préparez la récompense, je vais chercher vos Gouttes de Lave, ainsi que votre briquet !'
     events: 'journal_add_jon1,tag_beginquest_jon1'
   'non':
     text: 'Désolé, je ne pense pas pouvoir vous aider.'
