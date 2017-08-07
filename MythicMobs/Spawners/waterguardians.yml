@@ -4,18 +4,18 @@ waterguardians:
   X: -8173
   Y: 54
   Z: 2818
-  Radius: 25
+  Radius: 5
   UseTimer: true
-  MaxMobs: 7
+  MaxMobs: 17
   MobLevel: 1
   MobsPerSpawn: 2
-  Cooldown: 30
+  Cooldown: 17
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40
-  LeashRange: 50
+  LeashRange: 40
   HealOnLeash: false
   ResetThreatOnLeash: true
   ShowFlames: false

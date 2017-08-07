@@ -10,21 +10,21 @@
 #
 # Garde Continent Est
 #
-eastguard:
+firstguard:
   Type: zombie
-  Display: '&aGarde Royal'
+  Display: '&bGarde Royal'
   Health: 50
   Damage: 3
   Faction: gardes
   Disguise:
     Type: player
-    Player: '&aGarde Royal'
-    Skin: Speed_MC
+    Player: '&bGarde Royal'
+    Skin: _ObitoUchiha_
   Options:
     AlwaysShowName: true
     Collidable: false
     Invincible: true
-    MovementSpeed: 0.19
+    MovementSpeed: 0.23
     PreventOtherDrops: true
     PreventMobKillDrops: true
     KnockbackResistance: 0.20
@@ -42,21 +42,60 @@ eastguard:
   - 0 clear
   - 1 meleeattack
   - 2 float
-  - 3 patrol 515,64,5649;515,64,5620
+  - 3 patrol 515,64,5649;515,64,5620;498,64,5637
+  - 4 randomlookaround
   AITargetSelectors:
   - 0 clear
   - 1 hurtbytarget 
   - 2 SpecificFaction zombies
-eastguardarcher:
-  Type: skeleton
-  Display: '&aGarde Royal'
+alphaguard:
+  Type: zombie
+  Display: '&bGarde Royal'
   Health: 50
   Damage: 3
   Faction: gardes
   Disguise:
     Type: player
-    Player: '&aGarde Royal'
-    Skin: Speed_MC
+    Player: '&bGarde Royal'
+    Skin: _ObitoUchiha_
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+    KnockbackResistance: 0.20
+    Silent: true
+    Despawn: true
+  Equipment:
+    - mc_diamond_helmet:4
+    - mc_diamond_chestplate:3
+    - mc_diamond_leggings:2
+    - mc_diamond_boots:1
+    - mc_diamond_sword:0
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 float
+  - 3 patrol 515,64,5620;534,64,5620;534,64,5652;534,64,5620;515,64,5620
+  - 4 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget 
+  - 2 SpecificFaction zombies
+secondguard:
+  Type: skeleton
+  Display: '&bGarde Royal'
+  Health: 50
+  Damage: 3
+  Faction: gardes
+  Disguise:
+    Type: player
+    Player: '&bGarde Royal'
+    Skin: holidays
   Options:
     AlwaysShowName: true
     Collidable: false
@@ -78,6 +117,7 @@ eastguardarcher:
   AIGoalSelectors:
   - 0 clear
   - 1 skeletonbowattack
+  - 2 randomlookaround
   AITargetSelectors:
   - 0 clear
   - 1 hurtbytarget 

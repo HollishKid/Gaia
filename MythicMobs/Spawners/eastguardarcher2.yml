@@ -1,9 +1,9 @@
-eastguard:
-  MobName: firstguard
+eastguardarcher2:
+  MobName: secondguard
   World: Gaia
-  X: 515
-  Y: 64
-  Z: 5649
+  X: 527
+  Y: 71
+  Z: 5645
   Radius: 1
   UseTimer: true
   MaxMobs: 1
@@ -15,9 +15,9 @@ eastguard:
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40
-  LeashRange: 30
-  HealOnLeash: true
-  ResetThreatOnLeash: true
+  LeashRange: 3
+  HealOnLeash: false
+  ResetThreatOnLeash: false
   ShowFlames: false
   Breakable: false
   Conditions: []
