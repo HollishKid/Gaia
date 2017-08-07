@@ -28,7 +28,7 @@ NPC_options:
     text: 'Merci à vous jeune &2%player%&a&o !'
     events: 'folder_jon1_1'
   'salut3':
-    text: 'Désolé &2%player%&a&o, mais je ne me suis pas encore remis du dernier Rituel. Cela demande beaucoup d'énergie spirituelle vous savez !'
+    text: 'Désolé &2%player%&a&o, mais je ne me suis pas encore remis du dernier Rituel. Cela demande beaucoup d''énergie spirituelle vous savez !'
     conditions: 'questdone_jon1,!jon1_beginquest,default.intendant_done'
 
 #Options joueurs#
@@ -38,7 +38,7 @@ player_options:
     text: 'Quelles sont ces ingrédients dont vous manquez ?'
     pointers: 'ing'
   'aurevoir':
-    text: 'Cela ne m'intéresse pas, au revoir.'
+    text: 'Cela ne m''intéresse pas, au revoir.'
   'oui':
     text: 'Entendu ! Préparez la récompense, je vais chercher vos Gouttes de Lave, ainsi que votre briquet !'
     events: 'journal_add_jon1,tag_beginquest_jon1'
@@ -50,7 +50,7 @@ player_options:
   'non2':
     text: 'Non, pas encore.'
   'oui2':
-    text: 'Oui, j'ai tout ce qu''il vous faut !'
+    text: 'Oui, j''ai tout ce qu''il vous faut !'
     conditions: 'objets_jon1'
     events: 'take_objetsjon1'
     pointers: 'fin1'
