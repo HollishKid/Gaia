@@ -1,5 +1,5 @@
 quester: 'Jon' 
-first: 'inconnu,salut,salut2'
+first: 'inconnu,salut,salut2,salut3'
 stop: 'false'
 
 #J'aimerais que ce PNJ habite en -6865 64 2858 Facing: -127/0
@@ -9,10 +9,10 @@ stop: 'false'
 NPC_options:
   'inconnu':
     text: 'Je ne vous connais pas... Vous devriez aller voir l''Intendant au Château !'
-    conditions: '!default.intendant_done,!jon1_beginquest'
+    conditions: '!default.intendant_done,!jon1_beginquest,!questdone_jon1'
   'salut':
     text: 'Bonjour &2%player% &a&o! Je suis un apprenti Spiritualiste, j''essaie de communiquer avec notre mère Gaïa! Cependant, il me manque certains ingrédients pour mon premier Rituel...'
-    conditions: 'default.intendant_done,!jon1_beginquest' 
+    conditions: 'default.intendant_done,!jon1_beginquest,!questdone_jon1' 
     pointers: 'lesquels,aurevoir'
   'ing':
     text: 'Il me faudrait un &3briquet&a&o, ainsi que 5 &3Gouttes de Lave&a&o, récupérables à High Garden, sur les monstres du même nom. Vous aurez bien entendu une récompense pour votre dur labeur !'
@@ -22,11 +22,14 @@ NPC_options:
     pointers: 'oui,non'
   'salut2':
     text: 'Bon retour ! Avez-vous pu récupérer ce que je vous avais demandé ?'
-    conditions: 'jon1_beginquest'
+    conditions: 'jon1_beginquest,!questdone_jon1'
     pointers: 'non2,oui2'
   'fin1':
     text: 'Merci à vous jeune &2%player%&a&o !'
     events: 'folder_jon1_1'
+  'salut3':
+    text: 'Désolé &2%player%&a&o, mais je ne me suis pas encore remis du dernier Rituel. Cela demande beaucoup d'énergie spirituelle vous savez !'
+    conditions: 'questdone_jon1,!jon1_beginquest,default.intendant_done'
 
 #Options joueurs#
 
