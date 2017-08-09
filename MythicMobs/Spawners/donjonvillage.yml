@@ -1,0 +1,24 @@
+donjonvillage:
+  MobName: legollemdefeu
+  World: Gaia
+  X: -6890
+  Y: 50
+  Z: 2500
+  Radius: 1
+  UseTimer: true
+  MaxMobs: 1
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 300
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 30
+  LeashRange: 20
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: true
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

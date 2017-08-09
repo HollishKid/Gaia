@@ -503,3 +503,60 @@ dummy3:
   - 1 attacker
   Drops:
   - exp 3 1
+# 
+#
+# Donjon du Village
+#
+#
+legollemdefeu:
+  Mobtype: BLAZE
+  Display: '&4&lGollem'
+  Faction: netherien
+  Health: 1000
+  Damage: 20
+  BossBar:
+    Enabled: true
+    Title: '&4Gollem de Feu'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Modules:
+    ThreatTable: false
+    ImmunityTable: true
+  Options:
+    Despawn: true
+    FollowRange: 0
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    KnockbackResistance: 1
+    Collidable: false
+  Skills:
+  - skill{s=GollemDoorCloseSkill} ~onSpawn
+#
+  - sound{s=entity.witch.death;p=0.8;v=0.8} @self ~onDamaged
+  - sound{s=entity.blaze.ambient;p=0.3;v=0.2} @self ~onTimer:60 0.25
+  - teleportto{location=-6890,50,2500} @self ~onDamaged
+#
+  - skill{s=RingOfFire} ~onTimer:20 =50%-100%
+  - skill{s=GollemFirstSkill} @PlayersInRadius{r=30} ~onTimer:60 0.33
+  - skill{s=GollemSecondSkill} @PlayersInRadius{r=30} ~onTimer:200 0.33
+  - skill{s=GollemThirdSkill} @PlayersInRadius{r=30} ~onTimer:80 =50%-100% 0.33
+  - skill{s=GollemTableSkill} @Ring{radius=25;points=27} ~onTimer:340 =0%-50%
+  - skill{s=GollemMissileSkill} @self ~onTimer:200 =0%-50% 0.5
+  - skill{s=GollemRegularSkill} @self ~onTimer:100 =0%-50% 0.5
+  - skill{s=GollemFloorSkill} ~onTimer:1000 =0%-50% 1
+#
+  - skill{s=GollemDoorOpenSkill} ~onDeath
+  DamageModifiers:
+  - PROJECTILE 0.5
+  - MAGIC 0.5
+  AITargetSelectors:
+  - 0 clear
+  - 1 Players
+  - 2 attacker
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 gotolocation -6890,50,2501
