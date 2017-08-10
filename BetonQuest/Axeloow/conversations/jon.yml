@@ -1,0 +1,56 @@
+quester: 'Jon' 
+first: 'inconnu,salut,salut2,salut3'
+stop: 'false'
+
+#J'aimerais que ce PNJ habite en -6865 64 2858 Facing: -127/0
+
+#Options PNJ#
+
+NPC_options:
+  'inconnu':
+    text: 'Je ne vous connais pas... Vous devriez aller voir l''Intendant au Château !'
+    conditions: '!default.intendant_done,!jon1_beginquest,!questdone_jon1'
+  'salut':
+    text: 'Bonjour &2%player% &a&o! Je suis un apprenti Spiritualiste, j''essaie de communiquer avec notre mère Gaïa! Cependant, il me manque certains ingrédients pour mon premier Rituel...'
+    conditions: 'default.intendant_done,!jon1_beginquest,!questdone_jon1' 
+    pointers: 'lesquels,aurevoir'
+  'ing':
+    text: 'Il me faudrait un &3briquet&a&o, ainsi que 5 &3Gouttes de Lave&a&o, récupérables à High Garden, sur les monstres du même nom. Vous aurez bien entendu une récompense pour votre dur labeur !'
+    pointers: 'oui,non,pourquoi'
+  'peur':
+    text: 'J''aimerais bien, mais ces monstres me font peur! Alors, vous acceptez ?'
+    pointers: 'oui,non'
+  'salut2':
+    text: 'Bon retour ! Avez-vous pu récupérer ce que je vous avais demandé ?'
+    conditions: 'jon1_beginquest,!questdone_jon1'
+    pointers: 'non2,oui2'
+  'fin1':
+    text: 'Merci à vous jeune &2%player%&a&o !'
+    events: 'folder_jon1_1'
+  'salut3':
+    text: 'Désolé &2%player%&a&o, mais je ne me suis pas encore remis du dernier Rituel. Cela demande beaucoup d''énergie spirituelle vous savez !'
+    conditions: 'questdone_jon1,!jon1_beginquest,default.intendant_done'
+
+#Options joueurs#
+
+player_options:
+  'lesquels':
+    text: 'Quelles sont ces ingrédients dont vous manquez ?'
+    pointers: 'ing'
+  'aurevoir':
+    text: 'Cela ne m''intéresse pas, au revoir.'
+  'oui':
+    text: 'Entendu ! Préparez la récompense, je vais chercher vos Gouttes de Lave, ainsi que votre briquet !'
+    events: 'journal_add_jon1,tag_beginquest_jon1'
+  'non':
+    text: 'Désolé, je ne pense pas pouvoir vous aider.'
+  'pourquoi':
+    text: 'Pourquoi n''y allez-vous pas vous-même ?'
+    pointers: 'peur'
+  'non2':
+    text: 'Non, pas encore.'
+  'oui2':
+    text: 'Oui, j''ai tout ce qu''il vous faut !'
+    conditions: 'objets_jon1'
+    events: 'take_objetsjon1'
+    pointers: 'fin1'

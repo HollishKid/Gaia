@@ -1,0 +1,31 @@
+###Quête de Jon###
+
+tag_beginquest_jon1: 'tag add jon1_beginquest'
+journal_add_jon1: 'journal add jjon1'
+take_objetsjon1: 'take lava_tear:5,briquet:1'
+journal_del_jon1: 'journal del jjon1'
+tag_endingquest_jon1: 'tag del jon1_beginquest'
+tag_questcomplete_jon1: 'tag add questdone_jon1'
+folder_jon1_1: 'folder folder_jon1_2,jonquest1_1 delay:2'
+folder_jon1_2: 'folder folder_jon1_3,hollish.star,jonquest1_2 delay:3'
+folder_jon1_3: 'folder folder_jon1_4,explosionjon1,jonquest1_3 delay:3'
+folder_jon1_4: 'folder folder_jon1_5,jonquest1_4 delay:3'
+folder_jon1_5: 'folder folder_jon1_6,jonquest1_5 delay:3'
+folder_jon1_6: 'folder recompense_argent_200,default.reput_athelas1_positif,journal_del_jon1,tag_endingquest_jon1,tag_questcomplete_jon1,jonquest1_6 delay:3'
+jonquest1_1: 'message &a&oVoyons voir...'
+jonquest1_2: 'message &a&o.....'
+jonquest1_3: 'message &a&oQue se passe-t-il ?!'
+jonquest1_4: 'message &a&oJe suppose que ce Rituel-ci n''est pas fait pour moi...'
+jonquest1_5: 'message &a&oMais je dois tout de même vous donner votre récompense, vous n''êtes pas responsable de mon échec !'
+jonquest1_6: 'message &a&oPensez à revenir me voir, j''aurais sans doute une nouvelle mission pour vous, je comptes bien essayer différents Rituels !'
+
+###Récompenses###
+
+recompense_argent_200: 'command eco give %player% 200'
+
+
+
+###Cosmétiques###
+
+explosionjon1: 'explosion 0 0 4 -6868;64;2856;Gaia'
+
