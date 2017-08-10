@@ -244,7 +244,7 @@ sub "restart":
 	message "&a&lGaïa va redémarrer dans &230 &a&lsecondes." to parameter 1
 	message "&a&lIl est recommandé de vous déconnecter." to parameter 1
 	wait 20 seconds
-	message "&a&oRedémarrage dans &210 &a&lsecondes..." to parameter 1
+	message "&a&lRedémarrage dans &210 &a&lsecondes..." to parameter 1
 	message "&a&lIl est recommandé de vous déconnecter." to parameter 1
 	set action bar of parameter 1 to "&a&oRedémarrage dans : &29 &a&osecondes"
 	wait 1 second
