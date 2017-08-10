@@ -6,17 +6,282 @@
 #
 #
 #
+command /mrproper:
+	executable by: console
+	trigger:
+		execute console command "whitelist on"
+		loop all players:
+			invoke "restart" from loop-player
+		wait 31 seconds
 #
-# On Logout
+#General security (xp rate, regions update, switch off events, prepare regular security checks)
 #
+		execute console command "xprate reset"
+		execute console command "region removemember foret_athelas -a -w Gaia"
+		set {event.breach} to 0
+		set {event.worldboss} to 0
+		set {event.double.xp} to 0
+		set {thief.treasure.security} to location at -6751, 54, 2963 of the world "Gaia"
 #
-on quit:
-	set {last.logout.%player%} to now
-	remove player from {online.players::*}
-	discord send message "%player% est parti de Gaïa." to channel with id "186938785026539523" as bot "Gaia"
-	if {incombat.%player%} is set:
-		set {traitor.%player%} to 1
-		broadcast "&2%player% &c&ls'est lâchement déconnecté pendant un combat."
+#Variables Remove - Add Variables from yml
+#		
+		set {_time.ignition} to now
+		loop {online.players::*}:
+			delete {online.players::%loop-index%}
+		loop {grades_bq::*}:
+			delete {grades_bq::%loop-index%}
+		loop {grades_noms::*}:
+			delete {grades_noms::%loop-index%}
+		loop {metiers_bq::*}:
+			delete {metiers_bq::%loop-index%}
+		loop {metiers_noms::*}:
+			delete {metiers_noms::%loop-index%}
+		loop {metiers_competences::*}:
+			delete {metiers_competences::%loop-index%}
+		loop {penalty_free_regions::*}:
+			delete {penalty_free_regions::%loop-index%}
+		loop {enchantment_spell_list::*}:
+			delete {enchantment_spell_list::%loop-index%}
+		loop {air_spells::*}:
+			delete {air_spells::%loop-index%}
+		loop {air_spells_bq::*}:
+			delete {air_spells_bq::%loop-index%}
+		loop {earth_spells::*}:
+			delete {earth_spells::%loop-index%}
+		loop {earth_spells_bq::*}:
+			delete {earth_spells_bq::%loop-index%}
+	#
+		loop yaml list "grades_bq" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {grades_bq::*}
+		loop yaml list "grades_noms" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {grades_noms::*}	
+		loop yaml list "metiers_bq" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {metiers_bq::*}
+		loop yaml list "metiers_noms" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {metiers_noms::*}
+		loop yaml list "metiers_competences" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {metiers_competences::*}
+		loop yaml list "penalty_free_regions" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {penalty_free_regions::*}
+		loop yaml list "enchantments" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {enchantment_spell_list::*}
+		loop yaml list "air_spells" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {air_spells::*}
+		loop yaml list "air_spells_bq" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {air_spells_bq::*}
+		loop yaml list "earth_spells" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {earth_spells::*}
+		loop yaml list "earth_spells_bq" from file "/plugins/Skript/scripts/config.yml":
+			add "%loop-value%" to {earth_spells_bq::*}
+#
+#Set Signs - Guildes & Louvre
+#
+		set {cagnotte_miliciens} to location at -6532, 70, 3222 of the world "Gaia"
+		set {cagnotte_epeistes} to location at -6519, 70, 3223 of the world "Gaia"
+		set {cagnotte_archers} to location at -6519, 70, 3227 of the world "Gaia"
+		set {cagnotte_pugilistes} to location at -6532, 70, 3228 of the world "Gaia"
+		
+		set {cagnotte_acrobates} to location at -6626, 78, 3204 of the world "Gaia"
+		set {cagnotte_apprivoiseurs} to location at -6725, 64, 3071 of the world "Gaia"
+		set {cagnotte_alchimistes} to location at -6906, 115, 3436 of the world "Gaia"
+		set {cagnotte_bucherons} to location at -7045, 71, 2800 of the world "Gaia"
+		set {cagnotte_mineurs} to location at -6816, 66, 2873 of the world "Gaia"
+		set {cagnotte_reparateurs} to location at -6804, 66, 2878 of the world "Gaia"
+		set {cagnotte_excavateurs} to location at -6804, 66, 2880 of the world "Gaia"
+		set {cagnotte_herboristes} to location at -6791, 65, 2851 of the world "Gaia"
+		set {cagnotte_pecheurs} to location at -6456, 74, 3040 of the world "Gaia"
+#
+		set {louvre_break_sign} to location at -9761, 73, 2357 of the world "Gaia"
+		set {louvre_place_sign} to location at -9761, 73, 2359 of the world "Gaia"
+		set {louvre_total_sign} to location at -9761, 73, 2358 of the world "Gaia"
+		set {louvre_uruk_sign} to location at -9755, 73, 2351 of the world "Gaia"
+		set {louvre_uruka_sign} to location at -9753, 73, 2351 of the world "Gaia"
+		set {louvre_uruk_total_sign} to location at -9754, 73, 2351 of the world "Gaia"
+		set {louvre_contributors_sign} to location at -9760, 73, 2354 of the world "Gaia"
+		set {louvre_total_amount_sign} to location at -9758, 73, 2352 of the world "Gaia"
+		log "[Variables & Signs](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
+#
+#Rollbacks (east, mines, forets)
+#
+	#Mines
+		set {_time.ignition} to now
+		loop {place.location.mine1::*}:
+			set block at loop-value to air
+			delete {place.location.mine1::%loop-index%}
+			wait 1 tick
+		loop {place.location.mine2::*}:
+			set block at loop-value to air
+			delete {place.location.mine2::%loop-index%}
+			wait 1 tick
+		loop {place.location.mine3::*}:
+			set block at loop-value to air
+			delete {place.location.mine3::%loop-index%}
+			wait 1 tick
+		loop {place.location.volcano::*}:
+			set block at loop-value to air
+			delete {place.location.volcano::%loop-index%}
+			wait 1 tick
+		loop {break.location.mine1::*}:
+			set block at loop-value to {break.type.mine1::%loop-index%}
+			delete {break.location.mine1::%loop-index%}
+			delete {break.type.mine1::%loop-index%}
+			wait 1 tick
+		loop {break.location.mine2::*}:
+			set block at loop-value to {break.type.mine2::%loop-index%}
+			delete {break.location.mine2::%loop-index%}
+			delete {break.type.mine2::%loop-index%}
+			wait 1 tick
+		loop {break.location.mine3::*}:
+			set block at loop-value to {break.type.mine3::%loop-index%}
+			delete {break.location.mine3::%loop-index%}
+			delete {break.type.mine3::%loop-index%}
+			wait 1 tick
+		loop {break.location.volcano::*}:
+			set block at loop-value to {break.type.volcano::%loop-index%}
+			delete {break.location.volcano::%loop-index%}
+			delete {break.type.volcano::%loop-index%}
+			wait 1 tick
+	#Foret
+		loop {break.location.foret::*}:
+			set block at loop-value to {break.type.foret::%loop-index%}
+			delete {break.location.foret::%loop-index%}
+			delete {break.type.foret::%loop-index%}
+			wait 1 tick
+		loop {break.location.foret2::*}:
+			set block at loop-value to {break.type.foret2::%loop-index%}
+			delete {break.location.foret2::%loop-index%}
+			delete {break.type.foret2::%loop-index%}
+			wait 1 tick
+		log "[Mines](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
+	#East
+		set {_time.ignition} to now
+		loop {place.location.%{day.index}%::*}:
+			set block at loop-value to air
+			delete {place.location.%{day.index}%::%loop-index%}
+			wait 1 tick
+		wait 22 ticks
+		loop {break.location.%{day.index}%::*}:
+			set block at loop-value to {break.type.%{day.index}%::%loop-index%}
+			delete {break.location.%{day.index}%::%loop-index%}
+			delete {break.type.%{day.index}%::%loop-index%}
+			wait 1 tick
+		log "[East Reset](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
+#		
+#Chest clean - Chest fill
+#
+		set {_time.ignition} to now
+		loop {chester::*}:
+			remove all items from inventory of block at {chester::%loop-index%}
+		log "[Chester Cleaner](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
+		
+		wait 1 second
+		
+		set {_time.ignition} to now
+		loop {random.item.list::*}:
+			delete {random.item.list::%loop-value%}
+			wait 1 tick
+#
+		add 7 wood to {random.item.list::*}
+		add 5 gravel to {random.item.list::*}
+		add 7 stone to {random.item.list::*}
+		add 5 gold ingot to {random.item.list::*}
+		add 7 iron ingot to {random.item.list::*}
+		add 2 beef to {random.item.list::*}
+		add 2 porkchop to {random.item.list::*}
+		add 2 rabbit to {random.item.list::*}
+		add 2 apple to {random.item.list::*}
+		add 2 carrot to {random.item.list::*}
+		add 2 bread to {random.item.list::*}
+		add 2 potato to {random.item.list::*}
+		add 4 seeds to {random.item.list::*}
+		add 1 wood axe to {random.item.list::*}
+		add 1 stone axe to {random.item.list::*}
+		add 1 iron axe to {random.item.list::*}
+		add 1 wood pickaxe to {random.item.list::*}
+		add 1 stone pickaxe to {random.item.list::*}
+		add 1 iron pickaxe to {random.item.list::*}
+		add 1 gold pickaxe to {random.item.list::*}
+		add 1 diamond pickaxe to {random.item.list::*}
+		add 1 diamond to {random.item.list::*}
+		add 4 lapis to {random.item.list::*}
+		add 2 emerald to {random.item.list::*}
+		add 1 gold axe to {random.item.list::*}
+		add 1 diamond axe to {random.item.list::*}
+		add 3 experience bottle to {random.item.list::*}
+		add 1 chest named "&2Objet Inconnu" with lore "&8&oJe devrais consulter||&8&oun expert pour identifier||&8&ocet objet.|| ||&8&oIl y a un marché||&8&odevant chez Paulette||&8&opeut être que quelqu'un||&8&opourrait me renseigner !" to {random.item.list::*}
+		add 1 bow to {random.item.list::*}
+		add 3 arrows to {random.item.list::*}
+		add 1 leather chestplate to {random.item.list::*}
+		add 1 leather helmet to {random.item.list::*}
+		add 1 leather boots to {random.item.list::*}
+		add 1 leather leggings to {random.item.list::*}
+		add 1 wood sword to {random.item.list::*}
+		add 1 chainmail chestplate to {random.item.list::*}
+		add 1 chainmail helmet to {random.item.list::*}
+		add 1 chainmail boots to {random.item.list::*}
+		add 1 chainmail leggings to {random.item.list::*}
+		add 1 stone sword to {random.item.list::*}
+		add 1 iron chestplate to {random.item.list::*}
+		add 1 iron helmet to {random.item.list::*}
+		add 1 iron boots to {random.item.list::*}
+		add 1 iron leggings to {random.item.list::*}
+		add 1 iron sword to {random.item.list::*}
+		add 1 gold chestplate to {random.item.list::*}
+		add 1 gold helmet to {random.item.list::*}
+		add 1 gold boots to {random.item.list::*}
+		add 1 gold leggings to {random.item.list::*}
+		add 1 gold sword to {random.item.list::*}
+		add 1 diamond chestplate to {random.item.list::*}
+		add 1 diamond helmet to {random.item.list::*}
+		add 1 diamond boots to {random.item.list::*}
+		add 1 diamond leggings to {random.item.list::*}
+		add 1 diamond sword to {random.item.list::*}
+		log "[Chester Preparation](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
+#	
+		execute console command "stop"
+			
+sub "restart":
+	message "&a&lGaïa va redémarrer dans &230 &a&lsecondes." to parameter 1
+	message "&a&lIl est recommandé de vous déconnecter." to parameter 1
+	wait 20 seconds
+	message "&a&oRedémarrage dans &210 &a&lsecondes..." to parameter 1
+	message "&a&lIl est recommandé de vous déconnecter." to parameter 1
+	set action bar of parameter 1 to "&a&oRedémarrage dans : &29 &a&osecondes"
+	wait 1 second
+	set action bar of parameter 1 to "&a&oRedémarrage dans : &28 &a&osecondes"
+	wait 1 second
+	set action bar of parameter 1 to "&a&oRedémarrage dans : &27 &a&osecondes"
+	wait 1 second
+	set action bar of parameter 1 to "&a&oRedémarrage dans : &26 &a&osecondes"
+	wait 1 second
+	set action bar of parameter 1 to "&a&oRedémarrage dans : &25 &a&osecondes"
+	wait 1 second
+	set action bar of parameter 1 to "&a&oRedémarrage dans : &24 &a&osecondes"
+	wait 1 second
+	set action bar of parameter 1 to "&a&oRedémarrage dans : &23 &a&osecondes"
+	wait 1 second
+	set action bar of parameter 1 to "&a&oRedémarrage dans : &22 &a&osecondes"
+	wait 1 second
+	set action bar of parameter 1 to "&a&oRedémarrage dans : &21 &a&osecondes"
+	wait 1 second
+	set action bar of parameter 1 to "&a&oRedémarrage en cours..."
+	wait 1 second
+	kick parameter 1 due to "Redémarrage en cours. Merci de vous reconnecter dans quelques instants..."
+	
+	
+on load:
+	wait 1 minute
+	broadcast "Le seveur a redémarré et la WhiteList est enlevée."
+	execute console command "whitelist off"
+#
+	discord login to user with token "MjkyODI4MDc5ODEyNzcxODQx.C69tDQ.0eb-o2euVhQRzgzUMKNZ1XWAC48" with name "Gaia"
+	discord send message "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ :sunrise_over_mountains:  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" to channel with id "186938785026539523" as bot "Gaia"
+	discord send message "Un nouveau jour se lève sur Gaïa." to channel with id "186938785026539523" as bot "Gaia"
+	discord send message "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ :sun_with_face:   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" to channel with id "186938785026539523" as bot "Gaia"
+
+#
+#  On Join
+#
 
 on join:
 	add player to {online.players::*}
@@ -67,7 +332,19 @@ on join:
 		message "&cRendez-vous à la Brèche en -7050;3200 pour soutenir les troupes d'Athelas !"	
 	else if {event.worldboss} is 1:
 		send player title "&c&lKalphite - WorldBoss" with subtitle "Village des Premiers Hommes" for 10 seconds with 2 seconds fade in and 2 seconds fade out
-		message "&cRendez-vous au Village des Premiers Hommes en -7235;2658 pour affronter le Kalphite !"		
+		message "&cRendez-vous au Village des Premiers Hommes en -7235;2658 pour affronter le Kalphite !"
+#
+# On Logout / Disconnect
+#
+on quit:
+	set {last.logout.%player%} to now
+	remove player from {online.players::*}
+	discord send message "%player% est parti de Gaïa." to channel with id "186938785026539523" as bot "Gaia"
+	if {incombat.%player%} is set:
+		set {traitor.%player%} to 1
+		broadcast "&2%player% &c&ls'est lâchement déconnecté pendant un combat."
+
+	
 #
 #
 # Inspector
@@ -79,163 +356,6 @@ command /playerinspector:
 		message "Joueurs connectés : %size of {online.players::*}%"
 		message "Liste complète :"
 		message "%{online.players::*}%"
-#
-#
-# On Load
-#
-#
-on load:
-	set {_time.ignition} to now	
-#
-	execute console command "xprate reset"
-	execute console command "region removemember foret_athelas -a -w Gaia"
-#
-	set {_tmpO} to now
-	set {day.index} to day of week from date {_tmpO}
-	set {event.breach} to 0
-	set {event.worldboss} to 0
-	set {event.double.xp} to 0	
-#
-	loop {online.players::*}:
-		delete {online.players::%loop-index%}
-	loop {grades_bq::*}:
-		delete {grades_bq::%loop-index%}
-	loop {grades_noms::*}:
-		delete {grades_noms::%loop-index%}
-	loop {metiers_bq::*}:
-		delete {metiers_bq::%loop-index%}
-	loop {metiers_noms::*}:
-		delete {metiers_noms::%loop-index%}
-	loop {metiers_competences::*}:
-		delete {metiers_competences::%loop-index%}
-	loop {penalty_free_regions::*}:
-		delete {penalty_free_regions::%loop-index%}
-	loop {enchantment_spell_list::*}:
-		delete {enchantment_spell_list::%loop-index%}
-	loop {air_spells::*}:
-		delete {air_spells::%loop-index%}
-	loop {air_spells_bq::*}:
-		delete {air_spells_bq::%loop-index%}
-	loop {earth_spells::*}:
-		delete {earth_spells::%loop-index%}
-	loop {earth_spells_bq::*}:
-		delete {earth_spells_bq::%loop-index%}
-#
-	loop yaml list "grades_bq" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {grades_bq::*}
-	loop yaml list "grades_noms" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {grades_noms::*}	
-	loop yaml list "metiers_bq" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {metiers_bq::*}
-	loop yaml list "metiers_noms" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {metiers_noms::*}
-	loop yaml list "metiers_competences" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {metiers_competences::*}
-	loop yaml list "penalty_free_regions" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {penalty_free_regions::*}
-	loop yaml list "enchantments" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {enchantment_spell_list::*}
-	loop yaml list "air_spells" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {air_spells::*}
-	loop yaml list "air_spells_bq" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {air_spells_bq::*}
-	loop yaml list "earth_spells" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {earth_spells::*}
-	loop yaml list "earth_spells_bq" from file "/plugins/Skript/scripts/config.yml":
-		add "%loop-value%" to {earth_spells_bq::*}	
-#
-	set {cagnotte_miliciens} to location at -6532, 70, 3222 of the world "Gaia"
-	set {cagnotte_epeistes} to location at -6519, 70, 3223 of the world "Gaia"
-	set {cagnotte_archers} to location at -6519, 70, 3227 of the world "Gaia"
-	set {cagnotte_pugilistes} to location at -6532, 70, 3228 of the world "Gaia"
-	
-	set {cagnotte_acrobates} to location at -6626, 78, 3204 of the world "Gaia"
-	set {cagnotte_apprivoiseurs} to location at -6725, 64, 3071 of the world "Gaia"
-	set {cagnotte_alchimistes} to location at -6906, 115, 3436 of the world "Gaia"
-	set {cagnotte_bucherons} to location at -7045, 71, 2800 of the world "Gaia"
-	set {cagnotte_mineurs} to location at -6816, 66, 2873 of the world "Gaia"
-	set {cagnotte_reparateurs} to location at -6804, 66, 2878 of the world "Gaia"
-	set {cagnotte_excavateurs} to location at -6804, 66, 2880 of the world "Gaia"
-	set {cagnotte_herboristes} to location at -6791, 65, 2851 of the world "Gaia"
-	set {cagnotte_pecheurs} to location at -6456, 74, 3040 of the world "Gaia"
-#
-	set {thief.treasure.security} to location at -6751, 54, 2963 of the world "Gaia"
-	set {louvre_break_sign} to location at -9761, 73, 2357 of the world "Gaia"
-	set {louvre_place_sign} to location at -9761, 73, 2359 of the world "Gaia"
-	set {louvre_total_sign} to location at -9761, 73, 2358 of the world "Gaia"
-	set {louvre_uruk_sign} to location at -9755, 73, 2351 of the world "Gaia"
-	set {louvre_uruka_sign} to location at -9753, 73, 2351 of the world "Gaia"
-	set {louvre_uruk_total_sign} to location at -9754, 73, 2351 of the world "Gaia"
-	set {louvre_contributors_sign} to location at -9760, 73, 2354 of the world "Gaia"
-	set {louvre_total_amount_sign} to location at -9758, 73, 2352 of the world "Gaia"
-	log "[Initialization](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
-#
-# Chester
-#
-	wait 1 second
-	set {_time.ignition} to now
-	loop {random.item.list::*}:
-		delete {random.item.list::%loop-value%}
-		wait 1 tick
-#
-	add 7 wood to {random.item.list::*}
-	add 5 gravel to {random.item.list::*}
-	add 7 stone to {random.item.list::*}
-	add 5 gold ingot to {random.item.list::*}
-	add 7 iron ingot to {random.item.list::*}
-	add 2 beef to {random.item.list::*}
-	add 2 porkchop to {random.item.list::*}
-	add 2 rabbit to {random.item.list::*}
-	add 2 apple to {random.item.list::*}
-	add 2 carrot to {random.item.list::*}
-	add 2 bread to {random.item.list::*}
-	add 2 potato to {random.item.list::*}
-	add 4 seeds to {random.item.list::*}
-	add 1 wood axe to {random.item.list::*}
-	add 1 stone axe to {random.item.list::*}
-	add 1 iron axe to {random.item.list::*}
-	add 1 wood pickaxe to {random.item.list::*}
-	add 1 stone pickaxe to {random.item.list::*}
-	add 1 iron pickaxe to {random.item.list::*}
-	add 1 gold pickaxe to {random.item.list::*}
-	add 1 diamond pickaxe to {random.item.list::*}
-	add 1 diamond to {random.item.list::*}
-	add 4 lapis to {random.item.list::*}
-	add 2 emerald to {random.item.list::*}
-	add 1 gold axe to {random.item.list::*}
-	add 1 diamond axe to {random.item.list::*}
-	add 3 experience bottle to {random.item.list::*}
-	add 1 chest named "&2Objet Inconnu" with lore "&8&oJe devrais consulter||&8&oun expert pour identifier||&8&ocet objet.|| ||&8&oIl y a un marché||&8&odevant chez Paulette||&8&opeut être que quelqu'un||&8&opourrait me renseigner !" to {random.item.list::*}
-	add 1 bow to {random.item.list::*}
-	add 3 arrows to {random.item.list::*}
-	add 1 leather chestplate to {random.item.list::*}
-	add 1 leather helmet to {random.item.list::*}
-	add 1 leather boots to {random.item.list::*}
-	add 1 leather leggings to {random.item.list::*}
-	add 1 wood sword to {random.item.list::*}
-	add 1 chainmail chestplate to {random.item.list::*}
-	add 1 chainmail helmet to {random.item.list::*}
-	add 1 chainmail boots to {random.item.list::*}
-	add 1 chainmail leggings to {random.item.list::*}
-	add 1 stone sword to {random.item.list::*}
-	add 1 iron chestplate to {random.item.list::*}
-	add 1 iron helmet to {random.item.list::*}
-	add 1 iron boots to {random.item.list::*}
-	add 1 iron leggings to {random.item.list::*}
-	add 1 iron sword to {random.item.list::*}
-	add 1 gold chestplate to {random.item.list::*}
-	add 1 gold helmet to {random.item.list::*}
-	add 1 gold boots to {random.item.list::*}
-	add 1 gold leggings to {random.item.list::*}
-	add 1 gold sword to {random.item.list::*}
-	add 1 diamond chestplate to {random.item.list::*}
-	add 1 diamond helmet to {random.item.list::*}
-	add 1 diamond boots to {random.item.list::*}
-	add 1 diamond leggings to {random.item.list::*}
-	add 1 diamond sword to {random.item.list::*}
-#
-	log "[Chester Initialization](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
-
 #	
 #
 #
@@ -293,9 +413,11 @@ every 3 minutes in "Gaia":
 	set line 3 of block at {louvre_contributors_sign} to "%size of {louvre_registre::*}%"
 #
 	set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
-	set {_block.total.louvre} to {_block.total.louvre} / 100
+	set {_divider1} to 100 + size of {louvre_registre::*}
+	set {_divider2} to 10 + size of {louvre_registre::*}
+	set {_block.total.louvre} to {_block.total.louvre} / {_divider1}
 	set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
-	set {_louvre_uruk_total} to {_louvre_uruk_total} / 10
+	set {_louvre_uruk_total} to {_louvre_uruk_total} / {_divider2}
 	set {_louvre_weekly_reward} to {_block.total.louvre} + {_louvre_uruk_total}
 	set line 3 of block at {louvre_total_amount_sign} to "¤ %{_louvre_weekly_reward}%"
 #
@@ -391,8 +513,6 @@ every 5 minutes in "Gaia":
 				loop all players:
 					send loop-player title "&c&lKalphite - WorldBoss" with subtitle "&cTerminé" for 10 seconds with 2 seconds fade in and 2 seconds fade out
 #
-
-#
 #
 # Hour Checker in Gaïa
 #		(only executed once per hour)
@@ -414,33 +534,19 @@ every 59 minutes in "Gaia":
 		execute console command "resettingnetherportal2"
 #
 #
-# At Midnight
-# Eastern Reset
+# Chester Operation
 #
-	if {hour.system} is "0":
-		broadcast "&c&lLe Continent de l'Est tremble..."
-		wait 2 seconds
-		broadcast "&c&l...la terre semble se reconstituer..."
-		wait 2 seconds
-		broadcast "&c&l...méfiez vous de ne pas suffoquer dans un bloc !"
-		wait 7 seconds
-		loop {place.location.%{day.index}%::*}:
-			set block at loop-value to air
-			delete {place.location.%{day.index}%::%loop-index%}
-			wait 1 tick
-		wait 22 ticks
-		loop {break.location.%{day.index}%::*}:
-			set block at loop-value to {break.type.%{day.index}%::%loop-index%}
-			delete {break.location.%{day.index}%::%loop-index%}
-			delete {break.type.%{day.index}%::%loop-index%}
-			wait 1 tick
-		broadcast "&c&oLes tremblements à l'Est semblent se calmer."
+#
+	set {_time.ignition} to now
+	loop {chester::*}:
+		add a random item out of {random.item.list::*} to the inventory of block at {chester::%loop-index%}
+	log "[Chester](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
 #
 #
 # At 22H - Only on Sunday
 #    Guild XP Distribution
 #
-	else if {hour.system} is "22":
+	if {hour.system} is "22":
 		if {day.index} is "7":
 
 			set {minage_total} to {minage_total} / size of {other_contributors::*}
@@ -566,11 +672,6 @@ every 59 minutes in "Gaia":
 			broadcast "&dLes Contributeurs aux travaux du Louvre ont été payés."
 			broadcast "&d&oPour recevoir votre part, reconnectez vous sur Gaïa."
 			broadcast "&dTous les Écuyers peuvent se réinscrire à nouveau au Louvre."
-#The following 4 lines have to be deleted after 07/08/2017
-			loop {louvre_contributors::*}:
-				delete {louvre_contributors::%loop-index%}
-			loop {louvre_contribution_received::*}:
-				delete {louvre_contribution_received::%loop-index%}
 #
 	wait 2 ticks
 	log "[Interval - 1H](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
@@ -639,91 +740,24 @@ every 59 minutes in "Gaia":
 #
 
 #
-# Security
+# Security (not used anymore, remove when mines fully updated; i.e. new regions and bigger size to fit daily reset ONLY)
 #
-	set {_time.ignition} to now
-	loop all players:
-		if loop-player is in the region "mine_athelas_mine":
-			teleport loop-player to location at -6803, 67, 2904 of the world "Gaia"
-			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
-		else if loop-player is in the region "mine_athelas_mine2":
-			teleport loop-player to location at -6803, 67, 2904 of the world "Gaia"
-			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
-		else if loop-player is in the region "dwarf_mine":
-			teleport loop-player to location at -6604, 64, 2736 of the world "Gaia"
-			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
-		else if loop-player is in the region "ingor_volcano":
-			teleport loop-player to location at -6501, 84, 2197 of the world "Gaia"
-			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
-	wait 2 ticks
+#	set {_time.ignition} to now
+#	loop all players:
+#		if loop-player is in the region "mine_athelas_mine":
+#			teleport loop-player to location at -6803, 67, 2904 of the world "Gaia"
+#			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
+#		else if loop-player is in the region "mine_athelas_mine2":
+#			teleport loop-player to location at -6803, 67, 2904 of the world "Gaia"
+#			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
+#		else if loop-player is in the region "dwarf_mine":
+#			teleport loop-player to location at -6604, 64, 2736 of the world "Gaia"
+#			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
+#		else if loop-player is in the region "ingor_volcano":
+#			teleport loop-player to location at -6501, 84, 2197 of the world "Gaia"
+#			message "&cLa mine était instable, elle semble se régénerer !" to loop-player
+#	wait 2 ticks
 
-#
-# Rollbacks
-#
-	loop {place.location.mine1::*}:
-		set block at loop-value to air
-		delete {place.location.mine1::%loop-index%}
-		wait 1 tick
-	loop {place.location.mine2::*}:
-		set block at loop-value to air
-		delete {place.location.mine2::%loop-index%}
-		wait 1 tick
-	loop {place.location.mine3::*}:
-		set block at loop-value to air
-		delete {place.location.mine3::%loop-index%}
-		wait 1 tick
-	loop {place.location.volcano::*}:
-		set block at loop-value to air
-		delete {place.location.volcano::%loop-index%}
-		wait 1 tick
-#
-	loop {break.location.mine1::*}:
-		set block at loop-value to {break.type.mine1::%loop-index%}
-		delete {break.location.mine1::%loop-index%}
-		delete {break.type.mine1::%loop-index%}
-		wait 1 tick
-	loop {break.location.mine2::*}:
-		set block at loop-value to {break.type.mine2::%loop-index%}
-		delete {break.location.mine2::%loop-index%}
-		delete {break.type.mine2::%loop-index%}
-		wait 1 tick
-	loop {break.location.mine3::*}:
-		set block at loop-value to {break.type.mine3::%loop-index%}
-		delete {break.location.mine3::%loop-index%}
-		delete {break.type.mine3::%loop-index%}
-		wait 1 tick
-	loop {break.location.volcano::*}:
-		set block at loop-value to {break.type.volcano::%loop-index%}
-		delete {break.location.volcano::%loop-index%}
-		delete {break.type.volcano::%loop-index%}
-		wait 1 tick
-	loop {break.location.foret::*}:
-		set block at loop-value to {break.type.foret::%loop-index%}
-		delete {break.location.foret::%loop-index%}
-		delete {break.type.foret::%loop-index%}
-		wait 1 tick
-	loop {break.location.foret2::*}:
-		set block at loop-value to {break.type.foret2::%loop-index%}
-		delete {break.location.foret2::%loop-index%}
-		delete {break.type.foret2::%loop-index%}
-		wait 1 tick
-	log "[Mines](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
-
-#
-#
-# Chester Operation
-#
-#
-	set {_time.ignition} to now
-	add 1 to {chester.index}
-	if {chester.index} > 5:
-		set {chester.index} to 0
-		loop {chester::*}:
-			remove all items from inventory of block at {chester::%loop-index%}
-	wait 2 ticks
-	loop {chester::*}:
-		add a random item out of {random.item.list::*} to the inventory of block at {chester::%loop-index%}
-	log "[Chester](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
 #
 #
 # Complement Commands & Addons

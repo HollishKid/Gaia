@@ -1,0 +1,7 @@
+critical.txt
+version.txt
+README.md
+spigot.yml
+bukkit.yml
+server.properties
+PermissionsEx/permissions.yml

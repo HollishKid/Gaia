@@ -132,14 +132,6 @@ on vehicle exit:
 #    Global, Silencieux, Local, Commerce & Staff
 #
 #
-#
-on load:
-	discord login to user with token "MjkyODI4MDc5ODEyNzcxODQx.C69tDQ.0eb-o2euVhQRzgzUMKNZ1XWAC48" with name "Gaia"
-	discord send message "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ :sunrise_over_mountains:  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" to channel with id "186938785026539523" as bot "Gaia"
-	discord send message "Un nouveau jour se lève sur Gaïa." to channel with id "186938785026539523" as bot "Gaia"
-	discord send message "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ :sun_with_face:   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" to channel with id "186938785026539523" as bot "Gaia"
-#
-#
 # Global Chat Management
 #
 #
