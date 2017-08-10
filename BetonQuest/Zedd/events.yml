@@ -60,13 +60,15 @@ sta_close2: door -6915;79;3194;Gaia off
 sta_delay: folder sta_close1,sta_close2 delay:10
 #
 bureau_maka_check: if !makarov_access maka_accessdenied else nothing
-maka_accessdenied: folder maka_tele,maka_deniedmess
+maka_accessdenied: folder default.pet_remover,maka_accessdenied1
+maka_accessdenied1: folder maka_tele,maka_deniedmess delay:1
 maka_tele: teleport -6917;79;3185;Gaia
 maka_deniedmess: 'message &dJe n''ai rien à faire ici.'
 #
 #Guild member
 check_guildmember: if !guild_member salonguild_denied else nothing
-salonguild_denied: folder salonguild_tele,salonguild_deniedmess
+salonguild_denied: folder default.pet_remover,salonguild_denied_exe
+salonguild_denied_exe: folder salonguild_tele,salonguild_deniedmess delay:1
 salonguild_tele: teleport -6914;71;3186;Gaia
 salonguild_deniedmess: 'message &dVous n''avez pas l''autorisation d''entrer ici.'
 #

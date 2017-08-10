@@ -25,6 +25,7 @@ journal_update: journal update
 sgv_message: 'message &d&oIl vous faut voter encore &a%point.votes.left:50% &d&ofois pour accéder à ce Salon !'
 sb_message: 'message &d&oIl vous faut voter encore &a%point.votes.left:100% &d&ofois pour accéder à ce Salon !'
 sbib_message: 'message &d&oIl vous faut voter encore &a%point.votes.left:200% &d&ofois et obtenir encore &a%point.reput_athelas.left:100% &d&opoints de réputation à Athelas pour accéder à ce Salon !'
+pet_remover: 'command sudo %player% pet remove'
 #
 redirect_site: 'command tellraw %player% {"text":"Cliquez ici pour aller vers le site.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
 redirect_guide: 'command tellraw %player% {"text":"Cliquez ici pour aller vers le guide.","color":"green","clickEvent":{"action":"open_url","value":"https://gaia-craft.fr/guide.html"},"hoverEvent":{"action":"show_text","value":"Cliquez ici pour être redirigé !"}}'
@@ -88,7 +89,9 @@ plume_etrange12: setblock AIR -6682;68;2922;Gaia
 plume_etrange2: folder plume_etrange21,plume_etrange22
 plume_etrange21: setblock LOG -6682;69;2922;Gaia
 plume_etrange22: setblock LOG -6682;68;2922;Gaia
-teleport_quai: 'run ^teleport -6577;64;3168;Gaia ^message &dJe ne devrais pas traîner autour de ce bateau...'
+teleport_quai: folder pet_remover,teleport_quai2
+teleport_quai2: folder teleport_quai3 delay:1
+teleport_quai3: 'run ^teleport -6577;64;3168;Gaia ^message &dJe ne devrais pas traîner autour de ce bateau...'
 #
 #
 # Athelas Tester
@@ -101,7 +104,8 @@ athelas_out_warn: 'message &d&lJe ne devrais pas encore quitter la Ville d''Athe
 athelas_out_warn2: 'message &c&lRentrez dans la ville dans les 60 secondes, ou vous serez téléporté au Château.'
 #
 athelas_out_checkerbis: if in_athelas nothing else athelas_out_checker_exe
-athelas_out_checker_exe: folder athelas_out_n1,athelas_out_n2
+athelas_out_checker_exe: folder pet_remover,athelas_out_checker_exe2
+athelas_out_checker_exe2: folder athelas_out_n1,athelas_out_n2 delay:1
 athelas_out_n1: 'message &d&lJe devrais d''abord aller voir l''&dIntendant &d&let / ou finir ce qu''il m''a demandé de faire. Avant cela je devrais rester en ville.'
 athelas_out_n2: teleport -6945;65;2956;Gaia
 #
@@ -116,7 +120,8 @@ herboriste_farm_out2: teleport -6951;65;3010;Gaia
 #
 #
 arena_testeur: if arena_occupied arena_testeur_disallow else nothing
-arena_testeur_disallow: folder arena_testeur_disallow1,arena_testeur_disallow2
+arena_testeur_disallow: folder pet_remover,arena_testeur_disallow_exe
+arena_testeur_disallow_exe: folder arena_testeur_disallow1,arena_testeur_disallow2 delay:1
 arena_testeur_disallow1: teleport -6981;64;3193;Gaia
 arena_testeur_disallow2: 'message &dL''Arène est occupée ! Revenez plus tard !'
 #
@@ -748,7 +753,8 @@ outer_mine_title: folder outer_mine_title2,outer_mine_title3,outer_mine_title4
 outer_mine_title2: 'command title %player% times 20 100 20'
 outer_mine_title3: 'command title %player% title {"text":"Mine","color":"dark_purple"}'
 outer_mine_title4: 'command title %player% subtitle {"text":"Perte d''Inventaire si vous mourrez !","bold":true,"color":"red"}'
-outer_mine_denied: folder outer_mine_denied_mess,outer_mine_denied_tele
+outer_mine_denied: folder pet_remover,outer_mine_denied_exe
+outer_mine_denied_exe: folder outer_mine_denied_mess,outer_mine_denied_tele delay:1
 outer_mine_denied_mess: 'message &d&lL''accès à cette mine est réservée aux Membres de la Guilde des Mineurs qui ont le métier de Mineur.'
 outer_mine_denied_tele: teleport -6602;63;2734;Gaia
 #
@@ -758,7 +764,8 @@ foret_athelas2_title2: 'command title %player% times 20 100 20'
 foret_athelas2_title3: 'command title %player% title {"text":"Forêt","color":"dark_purple"}'
 foret_athelas2_title4: 'command title %player% subtitle {"text":"Perte d''Inventaire si vous mourrez !","bold":true,"color":"red"}'
 foret_athelas2_perk: 'command pex user %player% add -keepitems.keep'
-foret_athelas2_teleout: folder foret_athelas2_teleout1,foret_athelas2_teleout2
+foret_athelas2_teleout: folder pet_remover,foret_athelas2_teleout_exe
+foret_athelas2_teleout_exe: folder foret_athelas2_teleout1,foret_athelas2_teleout2 delay:1
 foret_athelas2_teleout1: teleport -6769;67;2678;Gaia
 foret_athelas2_teleout2: 'message &d&lL''accès à cette forêt est réservée aux Membres de la Guilde des Bûcherons.'
 #
@@ -1901,9 +1908,10 @@ casque1_give2: folder money_25000
 client: tag add client
 client_coffre: tag add client_coffre
 vault_tester: if client_coffre nothing else client_coffre_out
-client_coffre_out: folder client_coffre_out1,client_coffre_out2
-client_coffre_out1: teleport -6564;75;3081;Gaia
+client_coffre_out: folder pet_remover,client_coffre_out1
+client_coffre_out1: folder client_coffre_out2,client_coffre_out3 delay:1
 client_coffre_out2: 'message &d&lVous n''êtes pas client de la Banque ! &dParlez au Maître de Clé !'
+client_coffre_out3: teleport -6564;75;3081;Gaia
 #
 # Bank GUI
 #

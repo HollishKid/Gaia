@@ -129,7 +129,8 @@ las_j2_del: journal del las_j2
 #
 #
 las_entrycheck: if lascave_occupied las_entrydenied else nothing
-las_entrydenied: folder las_tele,las_mess0
+las_entrydenied: folder default.pet_remover,las_entrydenied1
+las_entrydenied1: folder las_tele,las_mess0 delay:1
 las_tele: teleport -7160;63;3540;Gaia
 las_mess0: 'message &dVeuillez attendre votre tour !'
 #
@@ -436,12 +437,14 @@ nothing: tag del wazagaga
 #
 #
 check_cine: if balcony_occupied balcony_folder else nothing
-balcony_folder: folder bal_tele,bal_telemess
+balcony_folder: folder default.pet_remover,balcony_folder1
+balcony_folder1: folder bal_tele,bal_telemess delay:1
 bal_tele: teleport -7160;82;3495;Gaia
 bal_telemess: 'message &dCette zone est occupée, revenez plus tard.'
 #
 check_indrisgan: if indrisgan_infilt infilt_telefolder else nothing
-infilt_telefolder: folder infilt_tele,infilt_telemess
+infilt_telefolder: folder default.pet_remover,infilt_telefolder1
+infilt_telefolder1: folder infilt_tele,infilt_telemess delay:1
 infilt_tele: teleport -7109;69;3503;Gaia
 infilt_telemess: 'message &dJe devrais éviter de me faire remarquer dans le village pour le moment...'
 #
@@ -453,30 +456,34 @@ infilt_telemess: 'message &dJe devrais éviter de me faire remarquer dans le vil
 #                        #
 ##########################
 #
-hol_foldertele: folder hol_tele,hol_mess0
-hol_tele: teleport -7348;71;3264;Gaia
-hol_mess0: 'message &d&oOuups! C''est un peu haut tout de même...'
+hol_foldertele: folder default.pet_remover,hol_tele1
+hol_tele1: folder hol_tele2,hol_mess0 delay:1
+hol_tele2: teleport -7348;71;3264;Gaia
+hol_mess0: 'message &d&oOuups ! C''est un peu haut tout de même...'
 #
 #### Protection des salles de boss
 #
 ## B1 Anton
 #
 hol_enterb1check: if hol_salleb1_occupied hol_enterb1deny else nothing
-hol_enterb1deny: folder hol_enterb1deny_tele,hol_enterb1deny_mess
+hol_enterb1deny: folder default.pet_remover,hol_enterb1deny1
+hol_enterb1deny1: folder hol_enterb1deny_tele,hol_enterb1deny_mess delay:1
 hol_enterb1deny_tele: teleport -7417;41;3355;Gaia
 hol_enterb1deny_mess: 'message &d&oMieux vaut ne pas intervenir dans ce combat...'
 #
 ## B2 Kara
 #
 hol_enterb2check: if hol_salleb2_occupied hol_enterb2deny else nothing
-hol_enterb2deny: folder hol_enterb2deny_tele,hol_enterb2deny_mess
+hol_enterb2deny: folder default.pet_remover,hol_enterb2deny1
+hol_enterb2deny1: folder hol_enterb2deny_tele,hol_enterb2deny_mess delay:1
 hol_enterb2deny_tele: teleport -7401;43;3236;Gaia
 hol_enterb2deny_mess: 'message &d&oMieux vaut ne pas intervenir dans ce combat...'
 #
 ## B3 Erek
 #
 hol_enterb3check: if hol_salleb3_occupied hol_enterb3deny else nothing
-hol_enterb3deny: folder hol_enterb3deny_tele,hol_enterb3deny_mess
+hol_enterb3deny: folder default.pet_remover,hol_enterb3deny1
+hol_enterb3deny1: folder hol_enterb3deny_tele,hol_enterb3deny_mess delay:1
 hol_enterb3deny_tele: teleport -7370;51;3273;Gaia
 hol_enterb3deny_mess: 'message &d&oMieux vaut ne pas intervenir dans ce combat...'
 #
