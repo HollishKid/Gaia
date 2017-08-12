@@ -1,0 +1,2 @@
+10zombies: 'mobkill ZOMBIE 10 events:untag_10zombies,tag_endquestlvl1,messagemobs_end'
+10skeletons: 'mobkill SKELETON 10 events:untag_10skeletons,tag_endquestlvl1,messagemobs_end'

@@ -1,0 +1,93 @@
+quester: 'Grand Gardien'
+first: 'waiting,josephquest,ironingots_complete,goldingots_complete,ironingotsquest,goldingotsquest,10zombiesquest,10skeletonsquest,questended1,bonjour,rencontre'
+stop: 'false'
+NPC_options:
+  'rencontre':
+    text: 'Bienvenue en ces hauts lieux, voyageur.'
+    pointers: 'reponse1'
+  'bonjour':
+    text: 'Salutation, voyageur.'
+    condition: 'tag_visite'
+    pointers: 'reponse1,reponse2,reponse3'
+  'presentation':
+    text: 'Je suis le Grand Gardien du Sanctuaire. Je protège ce lieu contre les forces maléfiques qui tentent de le faire tomber.'
+    pointers: 'reponseaide1'
+  'explicationaide':
+    text: 'Mhhh... Vous pourriez accomplir quelques quêtes en but de nous aider. Vous seriez récompensé par une partie de notre sagesse.'
+    pointers: 'reponseaide2'
+  'missions4':
+    text: 'Bien. Quelle difficulté voulez-vous?'
+    condition: 'level3'
+    pointers: 'niveau1,niveau2,niveau3,niveau4'
+  'missions3':
+    text: 'Bien. Quelle difficulté voulez-vous?'
+    condition: 'level2'
+    pointers: 'niveau1,niveau2,niveau3'
+  'missions2':
+    text: 'Bien. Quelle difficulté voulez-vous?'
+    condition: 'level1'
+    pointers: 'niveau1,niveau2'
+  'missions1':
+    text: 'Bien. Quelle difficulté voulez-vous?'
+    pointers: 'niveau1'
+  'questended1':
+    text: 'Merci! Voici votre récompense!'
+    condition: 'tag_endquestlvl1'
+    event: 'questreward1'
+  'josephquest':
+    text: 'Apportez ce paquet au Chateau royal.'
+    condition: 'tag_joseph'
+  'ironingotsquest':
+    text: 'Apportez-nous 20 lingots de fer.'
+    condition: 'tag_ironingots'
+  'goldingotsquest':
+    text: 'Apportez-nous 10 lingots d''or.'
+    condition: 'tag_goldingots'
+  'ironingots_complete':
+    text: 'Merci! Voici votre récompense!'
+    condition: 'tag_ironingots,ironingots_items'
+    event: 'ironingotsquest_ending'
+  'goldingots_complete':
+    text: 'Merci! Voici votre récompense!'
+    condition: 'tag_goldingots,goldingots_items'
+    event: 'goldingotsquest_ending'
+  'waiting': 
+    text: 'Vous ne pouvez accomplir qu''une quête toutes les 12 heures.'
+    condition: 'tag_wait12h'
+  '10zombiesquest':
+    text: 'Abattez 10 zombies.'
+    condition: 'tag_10zombies'
+  '10skeletonsquest':
+    text: 'Abattez 10 squelettes.'
+    condition: 'tag_10skeletons'
+  #              #
+  #Options joueur#
+  #              #
+player_options:
+  'reponse1':
+    text: 'Qui êtes vous?'
+    pointer: 'presentation'
+  'reponse2':
+    text: 'Je souhaite accèder aux missions du Sanctuaire.'
+    pointer: 'missions4,missions3,missions2,missions1'
+  'reponse3':
+    text: 'Salut à vous!'
+  'reponseaide1':
+    text: 'C''est une noble tâche. Comment puis-je vous aider?'
+    pointer: 'explicationaide'
+  'reponseaide2':
+    text: 'J''en suis!'
+    event: 'tag_visite'
+    pointer: 'missions4,missions3,missions2,missions1'
+  'niveau1':
+    text: 'Difficulté 1!'
+    event: 'lvl1folder'
+  'niveau2':
+    text: 'Difficulté 2!'
+    event: 'lvl2folder'
+  'niveau3':
+    text: 'Difficulté 3!'
+    event: 'lvl3folder'
+  'niveau4':
+    text: 'Difficulté 4!'
+    event: 'lvl4folder'
