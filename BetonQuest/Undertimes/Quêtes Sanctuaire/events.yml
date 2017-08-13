@@ -32,8 +32,7 @@ untag_bonequest: 'tag del bonequest'
   #Folders de missions#
 lvl1folder: 'folder lvl1mission1,lvl1mission2,lvl1mission3 random:1'
 lvl2folder: 'folder lvl2mission2,lvl2mission3 random:1'
-lvl3folder: 'folder lvl3mission1,lvl3mission2,lvl3mission3 random:1'
-lvl4folder: 'folder lvl4mission1,lvl4mission2,lvl4mission3 random:1'
+lvl3folder: 'message &2 Ces missions sont trop dangereuses pour vous. Retentez plus tard.'
   #Mission 1.1#
 lvl1mission1: 'folder lvl1mission1text,givepackage,tag_joseph'
 lvl1mission1text: 'message &2Apportez ce paquet à Joseph, au Chateau royal.'
