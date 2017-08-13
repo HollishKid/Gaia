@@ -68,7 +68,7 @@ NPC_options:
     condition: 'tag_endquestlvl2'
     event: 'questreward2'
   'bonequest':
-    text: 'Effectuez un rituel avec cet os aux coordonnées suivantes:\n x=6660 y=73 z=3010'
+    text: 'Effectuez un rituel avec cet os aux coordonnées suivantes:\n x=-6660 y=73 z=3010'
     condition: 'tag_bonequest'
   #              #
   #Options joueur#
@@ -100,4 +100,3 @@ player_options:
     event: 'lvl3folder'
   'niveau4':
     text: 'Difficulté 4!'
-    event: 'lvl4folder'
