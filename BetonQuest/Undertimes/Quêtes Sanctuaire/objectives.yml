@@ -1,2 +1,5 @@
 10zombies: 'mobkill ZOMBIE 10 events:untag_10zombies,tag_endquestlvl1,messagemobs_end'
 10skeletons: 'mobkill SKELETON 10 events:untag_10skeletons,tag_endquestlvl1,messagemobs_end'
+20zombies: 'mobkill ZOMBIE 20 events:untag_20zombies,tag_endquestlvl2,messagemobs_end'
+20skeletons: 'mobkill SKELETON 20 events:untag_20skeletons,tag_endquestlvl2,messagemobs_end'
+bonerituel: 'location 6660;73;3010;gaia 5 conditions:held_questbone,sneak events:rituelmessage1,delay10rituel'

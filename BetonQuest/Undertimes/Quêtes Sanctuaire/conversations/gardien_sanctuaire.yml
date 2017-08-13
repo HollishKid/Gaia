@@ -1,7 +1,10 @@
 quester: 'Grand Gardien'
-first: 'waiting,josephquest,ironingots_complete,goldingots_complete,ironingotsquest,goldingotsquest,10zombiesquest,10skeletonsquest,questended1,bonjour,rencontre'
+first: 'testecuyer,waiting,questended2,questended1,bonequest,josephquest,ironingots_complete,goldingots_complete,ironingotsquest,goldingotsquest,10zombiesquest,10skeletonsquest,bonjour,rencontre'
 stop: 'false'
 NPC_options:
+  'testecuyer':
+    text: 'Revenez me voir quand vous serez écuyer.'
+    condition: '!tag_ecuyer'
   'rencontre':
     text: 'Bienvenue en ces hauts lieux, voyageur.'
     pointers: 'reponse1'
@@ -60,6 +63,13 @@ NPC_options:
   '10skeletonsquest':
     text: 'Abattez 10 squelettes.'
     condition: 'tag_10skeletons'
+  'questended2':
+    text: 'Merci! Voici votre récompense!'
+    condition: 'tag_endquestlvl2'
+    event: 'questreward2'
+  'bonequest':
+    text: 'Effectuez un rituel avec cet os aux coordonnées suivantes:\n x=6660 y=73 z=3010'
+    condition: 'tag_bonequest'
   #              #
   #Options joueur#
   #              #

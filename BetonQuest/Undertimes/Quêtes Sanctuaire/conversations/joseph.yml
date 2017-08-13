@@ -4,7 +4,7 @@ stop: 'false'
 NPC_options:
   bonjourquest:
     text: 'Bonjour!'
-    condition: 'tag_joseph'
+    condition: 'tag_joseph,held_package'
     pointers: 'quest'
   bonjour: 
     text: 'Bonjour!'
