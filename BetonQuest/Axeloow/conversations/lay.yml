@@ -1,0 +1,35 @@
+quester: 'Lay'
+first: 'salut'
+stop: 'false'
+
+###Options PNJ###
+
+NPC_options:
+  'salut':
+    text: 'Bonjour jeune écuyer !
+    conditions: 'default.grade_ecuyer'
+    pointers: 'qui'
+  'qui':
+    text: 'Je suis le représentant d'une petite ville du sud, nommée &2Alcyone&a&o. C'est une ville agréable à vivre, sanctuaire des antiques dragons.
+    pointers:: 'dragons,quoi'
+  'oui':
+    text: 'Oui, mais ils sont extremements dangereux ! &2Alcyone&a&o est actuellement soumise à ces féroces monstres, et ce, malgré leur nombre très limité ! '
+    pointers: 'pourquoi,aide'
+    
+    
+    
+    
+    
+###Options joueur###
+
+player_options:
+  'qui':
+    text: 'Qui êtes-vous ?'
+  'dragons':
+    text: 'Des dragons ? Ces bêtes existent-elles encore ?'
+    pointers: 'oui'
+  'pourquoi':
+    text: 'Pourquoi s'en prennent-ils à cette ville en particulier ?'
+    pointers: 'sanctuaire,culte'
+  'aide':
+    text: 'Alors, si vous êtes venu à Athelas, c'est pour recevoir de l'aide d'écuyers compétents ayant déjà faits leurs preuves ?'
