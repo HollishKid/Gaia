@@ -73,13 +73,5 @@ ville:
   ID: paper
   POSITION-X: 5
   POSITION-Y: 2
+
   
-nation:
-  COMMAND: 'thisisthenationcommand'
-  NAME: '&aNation'
-  LORE:
-    - 'Affiche le Menu Nation'
-    - '&omenu réservé aux Chefs de Nations'
-  ID: paper
-  POSITION-X: 6
-  POSITION-Y: 2 
