@@ -2958,13 +2958,9 @@ delay_ilse3_up: tag del delay_ilse3
 tag_sam: tag add sam
 tag_marie: tag add marie
 obj_find_sam: objective start obj_find_sam
-sam_found: folder sam_message,tag_marie,reput_athelas_marie,sam_despawn delay:0
-sam_message: 'message &2%player%&f: Rentres à la maison tout de suite &2Sam&f! Ta mère t''y attends!'
+sam_found: folder sam_message,tag_marie,reput_athelas_marie delay:0
+sam_message: 'message &2%player% &a&o: Rentres à la maison tout de suite &2Sam &a&o! Ta mère t''y attends !'
 reput_athelas_marie: point reput_athelas 3
-sam_despawn: folder sam_despawn_exe,sam_spawn delay:5
-sam_despawn_exe: 'command npc despawn 305'
-sam_spawn: folder sam_spawn_exe delay:12
-sam_spawn_exe: 'command npc spawn 305'
 #
 # Nimue
 #
@@ -3145,11 +3141,9 @@ tag_timer_francis: tag add timer_francis
 obj_timer_francis: objective start francis_timer
 francis_timer_up: tag del timer_francis
 #
-francis_occupe1: folder tag_pain_francis,obj_pain_francis,journal_francis1,daily_quester_on
+francis_occupe1: folder tag_pain_francis,journal_francis1,daily_quester_on
 tag_pain_francis: tag add pain_francis
-obj_pain_francis: objective start obj_pain_francis
-pain_francis_done: folder pain_message,give_francis_pain,tag_paul_francis
-pain_message: 'message &fPaul: &a&oVoici le pain que &fFrancis &a&oa commandé!'
+pain_francis_done: folder give_francis_pain,tag_paul_francis
 give_francis_pain: give pain_paul:2
 tag_paul_francis: tag add paul_francis
 francis_ressources_done: folder reput_athelas2_positif,take_pain_francis,francis_cleaner,francis_timer,money_p25

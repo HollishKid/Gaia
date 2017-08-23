@@ -118,7 +118,7 @@ maka_etape2fold2: folder maka_mess2,maka_etape2fold3 delay:6
 maka_mess2: 'message &2Makarov:&a&o Puisque tu es impliqué, je vais te demander de mener cette affaire jusqu''à son terme. &2Zael&a&o m''a dit que la ville de &dDrisgan&a&o semblait concernée.'
 maka_etape2fold3: folder maka_mess3,maka_etape2fold4 delay:7
 maka_mess3: 'message &2Makarov:&a&o Nous gardions un oeil sur leurs activités à la limite du légal, cela nous a permi d''apprendre que la ville abritait un groupe de contrebandiers. En plus de cela, ma source m''a confirmé que des réunions avaient lieu à la nuit tombée.'
-maka_etape2fold4: folder maka_mess4,maka_outconvers,maka_q1start,maka_title1,targetupdate6,makarov_denyaccess delay:8
+maka_etape2fold4: folder maka_mess4,maka_outconvers,maka_q1start,maka_title1,makarov_denyaccess delay:8
 maka_mess4: 'message &2Makarov:&a&o Tu va aller à sa rencontre. Il est de garde sur le mur Est de la ville, tu n''as qu''à grimper au lierre pour être sur son chemin de garde. Quand tu auras établi le contact il te donnera plus d''informations.'
 maka_title1: folder maka_title11,maka_title12,maka_title13
 maka_title11: 'command title %player% times 40 60 80'
@@ -127,10 +127,6 @@ maka_title13: 'command title %player% title {"text":"A la conquête de Drisgan",
 maka_etape1remove: tag del maka_etape1
 maka_etape2: tag add maka_etape2
 maka_q1start: tag add maka_q1start
-targetupdate6: folder targetupdate6_exe,targetupdate6_fold delay:0
-targetupdate6_exe: 'command npc sel 144'
-targetupdate6_fold: folder targetupdate6_exe2 delay:1
-targetupdate6_exe2: 'command sentinel addignore player:%player%'
 maka_q2startfold: folder maka_mess8,maka_fold2 delay:5
 maka_mess8: 'message &2Makarov:&a&o Je crois savoir qu''ils leur arrivent de fréquenter l''établissement &dChez Paulette&a&o. Une fois que tu auras trouvé l''un de leurs représentants, propose de lui tes services.'
 maka_fold2: folder maka_mess9,maka_fold3 delay:5
@@ -397,20 +393,20 @@ ynv_objclean: objective delete obj_thiefkey
 # Logout
 #
 fold_depop: folder mm_bandit_depop,mm_lieutenant_depop,ynv_depop
-ynv_depop: 'command npc despawn 256'
+ynv_depop: 'command mm mobs kill pnj_256'
 mm_bandit_depop: 'command mm mobs kill quest_bandit'
 mm_lieutenant_depop: 'command mm mobs kill lieutenant'
 #
 # Lancé par le Feu d'artifice
 #
 ynv_popfolder: folder ynv_pop1,ynv_pop1mess delay:2
-ynv_pop1: 'command npc spawn 256'
-ynv_pop1mess: 'message &2Srg Ynvgard: &a&oBien joué &2%player% &a&o! Aide moi à fouiller ces coffres et garde les ennemis éloignés !'
+ynv_pop1: mspawnmob -7601;57;3063;Gaia pnj_256:1 1
+ynv_pop1mess: 'message &2Srg Ynvgard : &a&oBien joué &2%player% &a&o! Aide moi à fouiller ces coffres et garde les ennemis éloignés !'
 #
 # Lancé par le Relai
 yre_startfight: tag add yre_startfight
 yre_event: folder yre_mess1,yre_pop1,yre_poptick2,yre_poptick3,yre_tick1 delay:6
-yre_mess1: 'message &2Bandit:&4&o ALERTE !! ALERTE !! Des intrus ont pénétrés dans la cache secrète !!'
+yre_mess1: 'message &2Bandit :&4&o ALERTE !! ALERTE !! Des intrus ont pénétrés dans la cache secrète !!'
 yre_pop1: 'command mm mobs spawn quest_bandit 1 Gaia,-7592,58,3060'
 yre_poptick2: folder yre_pop2 delay:5
 yre_pop2: 'command mm mobs spawn quest_bandit 1 Gaia,-7594,58,3060'
@@ -418,7 +414,7 @@ yre_poptick3: folder yre_pop3 delay:10
 yre_pop3: 'command mm mobs spawn quest_bandit 1 Gaia,-7594,58,3060'
 #
 yre_tick1: folder yre_mess2,yre_pop4,yre_pop5,yre_objkill delay:30
-yre_mess2: 'message &2Lieutenant:&a&o Vous allez sortir d''ici! LES PIEDS DEVANTS !!'
+yre_mess2: 'message &2Lieutenant :&a& Vous allez sortir d''ici... LES PIEDS DEVANTS !!'
 yre_pop4: 'command mm mobs spawn lieutenant 1 Gaia,-7593,58,3059'
 yre_pop5: 'command mm mobs spawn lieutenant 1 Gaia,-7592,58,3059'
 yre_objkill: objective start yre_objkill
@@ -429,31 +425,30 @@ yre_convers: conversation ynvgardrelai
 #
 # Interventation de Orion
 #
-yre_ending: folder yre_telecine,ynv_depop,orion_slow,ynv2_pop,yre_depop_ticker,orion_gateclose,orionpoptick,ynv_q32_journal_del,ynv_q32_journal delay:5
+yre_ending: folder yre_telecine,ynv_depop,orion_slow,yre_depop_ticker,orion_gateclose,orionpoptick,ynv_q32_journal_del,ynv_q32_journal delay:5
 yre_telecine: teleport -7598;58;3060;Gaia
 orion_slow: effect SLOW 24 10
-ynv2_pop: 'command npc spawn 264'
 orion_gateclose: setblock REDSTONE_BLOCK -7592;58;3052;Gaia
 orionpoptick: folder orion_expl,orionpop,orion_depop_ticker,orion_mess1,orion_tick1 delay:3
 orion_expl: explosion 0 0 2 -7593;58;3058;Gaia
-orionpop: 'command npc spawn 265'
-orion_mess1: 'message &6Orion:&a&o Alors voilà les intrus... On dirait que je me suis déplacé pour rien!'
+orionpop: mspawnmob -7593;57;3058;Gaia zedd_orion:1 1
+orion_mess1: 'message &6Orion : &a&oAlors voilà les intrus... On dirait que je me suis déplacé pour rien !'
 orion_tick1: folder orion_mess2,orion_tick2 delay:8
-orion_mess2: 'message &6Orion:&a&o Vous ne pensiez quand même pas trouver ce que vous cherchez si facilement?'
+orion_mess2: 'message &6Orion : &a&oVous ne pensiez quand même pas trouver ce que vous cherchez si facilement ?'
 orion_tick2: folder orion_mess3,orion_tick3 delay:8
-orion_mess3: 'message &6Orion:&a&o Je me suis déjà chargé de la cacher dans un endroit connu de moi seul. Et nous ne nous reverrons plus.'
+orion_mess3: 'message &6Orion : &a&oJe me suis déjà chargé de la cacher dans un endroit connu de moi seul. Et nous ne nous reverrons plus.'
 orion_tick3: folder orion_mess4,orion_blind,orion_gateopen,orion_expl,orion_depop,yre_tick3 delay:5
-orion_mess4: 'message &6Orion:&a&o A plus les loosers!'
+orion_mess4: 'message &6Orion : &a&oA plus les loosers!'
 orion_blind: effect BLINDNESS 30 1 --ambient
 orion_gateopen: setblock AIR -7592;58;3052;Gaia
 orion_depop_ticker: folder orion_depop delay:25
-orion_depop: 'command npc despawn 265'
+orion_depop: 'command mm mobs kill zedd_orion'
 yre_tick3: folder yre_mess3,yre_tickdepop,yre_eventdone,yre_clean delay:5
-yre_mess3: 'message &2Srg Ynvgard:&a&o Voilà qui est inquiétant... On va se retirer pour le moment ! Retrouve moi à Athelas dès que tu pourras !'
+yre_mess3: 'message &2Srg Ynvgard :&a& Voilà qui est inquiétant... On va se retirer pour le moment ! Retrouve moi à Athelas dès que tu pourras !'
 yre_tickdepop: folder yre_depop,yre_expl delay:3
 yre_expl: explosion 0 0 1 -7598;58;3058;Gaia
 yre_depop_ticker: folder yre_depop delay:35
-yre_depop: 'command npc despawn 264'
+yre_depop: 'command mm mobs kill pnj_256'
 yre_eventdone: tag add yre_eventdone
 yre_clean: folder yre_npckillremove,yre_startfightremove
 yre_npckillremove: tag del yre_npckill
@@ -501,15 +496,7 @@ or_money1: 'command eco give %player% 500'
 or_q1done: tag add or_q1done
 or_endq1: tag del or_q1start
 or_removeobj: objective delete or_obj1
-or_hostile: folder or_targetadd,or_targetfolder
-or_targetadd: folder or_targetadd_exe,or_targetadd_fold delay:0
-or_targetadd_exe: 'command npc sel 242'
-or_targetadd_fold: folder or_targetadd_fold_exe delay:1
-or_targetadd_fold_exe: 'command sentinel addtarget player:%player%'
-or_targetfolder: folder or_removetarget_exe,or_removetarget_fold delay:10
-or_removetarget_exe: 'command npc sel 242'
-or_removetarget_fold: folder or_removetarget_fold_exe delay:1
-or_removetarget_fold_exe: 'command sentinel removetarget player:%player%'
+or_hostile: damage 3
 or_etape2: tag add or_etape2
 or_end: folder give_thiefkey,or_mess1,ynv_q21_journal,ynv_q22_journal,or_etape3,or_deestape2,obj_thiefkey delay:3
 give_thiefkey: give thief_key:1
@@ -774,8 +761,7 @@ kal_clean1: tag del kal_q1start
 #
 kal_q2startfold: folder kal_mess6,kal_fold3 delay:8
 kal_mess6: 'message &2Kali Jones &f:&a&o Il souhaite donc te faire une proposition. Si cela t''intéresse, rend toi à &dDrisgan&a&o, et présente toi aux gardes de la porte nord.'
-kal_fold3: folder kal_mess7,kal_q2start,kal_conversdone,kal_j3,drisganignore delay:8
-drisganignore: 'command drisganignoretarget %player%'
+kal_fold3: folder kal_mess7,kal_q2start,kal_conversdone,kal_j3 delay:8
 kal_mess7: 'message &2Kali Jones &f:&a&o Une fois dans la ville, cherche &2Eko&a&o. C''est mon supérieur dans le syndicat.'
 kal_q2start: tag add kal_q2start
 #

@@ -115,7 +115,7 @@ meca14: folder meca15,message14,npc_erudit delay:11
 meca15: folder meca16,message15,npc_moine delay:9
 meca16: folder meca17,message16,npc_minion delay:9
 meca17: folder meca18,message17 delay:8
-meca18: folder meca19,npc_mage_off,npc_erudit_off,npc_moine_off,npc_minion_off delay:7
+meca18: folder meca19,npcs_cine_off,npc_all_effects delay:7
 meca19: folder meca20,image_biblio_off delay:6
 meca20: folder teleport_back delay:6
 message_welcome: 'message &2Mage &f: &a&oN''ayez pas peur &2%player%&a&o, vous êtes toujours vivant ! Je suis entré dans votre esprit pour mieux vous conter mon histoire...'
@@ -142,7 +142,7 @@ histoire_security: objective start histoire_security
 histoire_security_exe: folder teleport_back conditions:in_temple_cabin
 #
 #
-mage_entry_story_leaver: folder image_world_eff,image_ftemp_eff,image_wtemp_eff,image_etemp_eff,image_atemp_eff,monde_off,image_biblio_off,npc_mage_off,npc_moine_off,npc_erudit_off,npc_minion_off
+mage_entry_story_leaver: folder image_world_eff,image_ftemp_eff,image_wtemp_eff,image_etemp_eff,image_atemp_eff,monde_off,image_biblio_off,npc_all_effects,npcs_cine_off
 image_world: setblock REDSTONE_TORCH_ON -7142;101;2417;Gaia
 image_world_eff: explosion 0 0 5 -7110;134;2436;Gaia
 image_ftemp: setblock REDSTONE_TORCH_ON -7142;101;2409;Gaia
@@ -163,27 +163,19 @@ image_atemp_off: setblock AIR -7144;101;2409;Gaia
 monde_off_eff: explosion 0 0 5 -7110;134;2436;Gaia
 image_biblio_off: setblock AIR -7144;101;2417;Gaia
 npc_mage: folder npc_mage191_on,npc_mage191_eff delay:0
-npc_mage191_on: 'command npc spawn 191'
+npc_mage191_on: mspawnmob -7110;135;2428;Gaia sanctuary_mages:1 1
 npc_erudit: folder npc_erudit192_on,npc_erudit193_on,npc_erudit192_eff,npc_erudit193_eff delay:0
-npc_erudit192_on: 'command npc spawn 192'
-npc_erudit193_on: 'command npc spawn 193'
+npc_erudit192_on: mspawnmob -7112;133;2428;Gaia sanctuary_erudits1:1 1
+npc_erudit193_on: mspawnmob -7108;133;2428;Gaia sanctuary_erudits2:1 1
 npc_moine: folder npc_moine194_on,npc_moine195_on,npc_moine194_eff,npc_moine195_eff delay:0
-npc_moine194_on: 'command npc spawn 194'
-npc_moine195_on: 'command npc spawn 195'
+npc_moine194_on: mspawnmob -7114;131;2428;Gaia sanctuary_moines:1 1
+npc_moine195_on: mspawnmob -7106;131;2428;Gaia sanctuary_moines:1 1
 npc_minion: folder npc_minion196_on,npc_minion197_on,npc_minion196_eff,npc_minion197_eff delay:0
-npc_minion196_on: 'command npc spawn 196'
-npc_minion197_on: 'command npc spawn 197'
-npc_mage_off: folder npc_mage191_off,npc_mage191_eff delay:0
-npc_mage191_off: 'command npc despawn 191'
-npc_erudit_off: folder npc_erudit192_off,npc_erudit193_off,npc_erudit192_eff,npc_erudit193_eff delay:0
-npc_erudit192_off: 'command npc despawn 192'
-npc_erudit193_off: 'command npc despawn 193'
-npc_moine_off: folder npc_moine194_off,npc_moine195_off,npc_moine194_eff,npc_moine195_eff delay:0
-npc_moine194_off: 'command npc despawn 194'
-npc_moine195_off: 'command npc despawn 195'
-npc_minion_off: folder npc_minion196_off,npc_minion197_off,npc_minion196_eff,npc_minion197_eff delay:0
-npc_minion196_off: 'command npc despawn 196'
-npc_minion197_off: 'command npc despawn 197'
+npc_minion196_on: mspawnmob -7116;130;2427;Gaia sanctuary_minions:1 1
+npc_minion197_on: mspawnmob -7104;130;2427;Gaia sanctuary_minions:1 1
+#
+npcs_cine_off: 'command mm mobs kill sanctuary_'
+npc_all_effects: folder npc_mage191_eff,npc_erudit192_eff,npc_erudit193_eff,npc_moine194_eff,npc_moine195_eff,npc_minion196_eff,npc_minion197_eff
 npc_mage191_eff: explosion 0 0 1 -7110;136;2428;Gaia
 npc_erudit192_eff: explosion 0 0 1 -7112;132;2428;Gaia
 npc_erudit193_eff: explosion 0 0 1 -7108;132;2428;Gaia
@@ -371,12 +363,12 @@ air_book_inspection7: 'message &4Érudit de l''Air &f: &a&oEn attendant retourne
 voyage_ermite_folder: folder air_temple_voyage,journal_ermite_bateau_del delay:1
 tag_ermite_voyage: tag add ermite_voyage
 air_temple_voyage: folder mequa1,ermite_spawn,messa1,ermite_boat_on,tag_voyage_air_remove,tag_done_voyage_air,tag_air_loser_remove delay:2
-mequa1: folder mequa2,teleport_waiter,ermite2_spawn delay:5
+mequa1: folder mequa2,teleport_waiter delay:5
 mequa2: folder mequa3,ermite_despawn,water_access_on delay:3
 mequa3: folder mequa4,messa2,ermite_boat2_on delay:20
-mequa4: folder mequa5,messa3,ermite3_spawn delay:7
+mequa4: folder mequa5,messa3 delay:7
 mequa5: folder mequa6,teleport_chute delay:7
-mequa6: folder mequa7,messa4,ermite2_despawn delay:5
+mequa6: folder mequa7,messa4 delay:5
 mequa7: folder mequa8,messa5,ermite_boat_off delay:5
 mequa8: folder mequa9,messa6 delay:9
 mequa9: folder mequa10,messa7 delay:8
@@ -384,21 +376,17 @@ mequa10: folder messa8,obj_air_mill,journal_obj_airmill delay:8
 tag_voyage_air_remove: tag del voyage_air
 tag_done_voyage_air: tag add voyage_air_done
 tag_air_loser_remove: tag del air_temple_loser
-ermite_spawn: 'command npc spawn 343'
-ermite_despawn: 'command npc despawn 343'
-ermite2_spawn: 'command npc spawn 344'
-ermite2_despawn: 'command npc despawn 344'
-ermite3_spawn: 'command npc spawn 345'
-ermite3_despawn: 'command npc despawn 345'
+ermite_spawn: mspawnmob -6208;63;3321;Gaia ermite_boat:1 1
+ermite_despawn: 'command mm mobs kill ermite_boat'
 ermite_boat_on: setblock AIR -6193;65;3329;Gaia
 ermite_boat_off: setblock REDSTONE_TORCH_ON -6193;65;3329;Gaia
 ermite_boat2_on: setblock AIR -6191;65;3329;Gaia
 ermite_boat2_off: setblock REDSTONE_TORCH_ON -6191;65;3329;Gaia
-messa1: 'message &2Ermite&f: &a&oNous voilà prêts pour le départ, j''espère que vous vous sentez prêt ! Ceci va durer un petit moment... !'
+messa1: 'message &2Ermite &f: &a&oNous voilà prêts pour le départ, j''espère que vous vous sentez prêt ! Ceci va durer un petit moment... !'
 messa2: 'message &a&oNous nous approchons du point où il me semble l''avoir vu...'
 messa3: 'message &a&oJ''ai remarqué que le crépuscule y était permament dans les parages, le soleil semblait fixe dans le ciel !'
 messa4: 'message &a&oNous y voilà !'
-messa5: 'message &2Ermite&f: &a&oJ''ai comme l''impression de voir quelque chose dans le ciel, quelque chose de grand !'
+messa5: 'message &2Ermite &f: &a&oJ''ai comme l''impression de voir quelque chose dans le ciel, quelque chose de grand !'
 messa6: 'message &a&oC''est incroyable !! La chute d''eau semble être le seul contact avec la mer et une île flottante !'
 messa7: 'message &a&oIl doit y avoir un moyen de la rejoindre... ! Je suis trop âgé pour faire ça, mais essayez de remonter le courant de la chute, vers le haut !'
 messa8: 'message &a&oUne fois que vous serez en haut, je retournerais à mon île, pour prévenir l''&2Érudit de l''Air &a&o de cette découverte grandiose !'
@@ -413,7 +401,7 @@ teleport_chute: teleport -2909;64;2860;Gaia
 water_access_on: setblock AIR -2906;185;2865;Gaia
 water_access_off: setblock DIRT -2906;185;2865;Gaia
 #
-air_mill_attained: folder ermite3_despawn,ermite_boat2_off,water_access_off,air_moine_tempo delay:0
+air_mill_attained: folder ermite_boat2_off,water_access_off,air_moine_tempo delay:0
 #
 # Parcours
 #
@@ -581,9 +569,10 @@ terre_find_exe: folder obj_terre_find_delayed,obj_terre_sudo
 obj_terre_find_delayed: folder obj_terre_finder delay:3 
 obj_terre_finder: if terre_found nothing else obj_terre_find
 obj_terre_sudo: sudo thisisatopsecreteruditterrelocationcommand
-earth_temple_fall: folder earth_temple_fall1,earth_temple_fall2
-earth_temple_fall1: teleport -7411;64;360;Gaia
-earth_temple_fall2: 'message &d&oUne Force s''empare de vous...'
+earth_temple_fall: folder default.pet_remover,earth_temple_fall1,earth_temple_fall2
+earth_temple_fall1: folder earth_temple_fall2,earth_temple_fall3 delay:1
+earth_temple_fall2: teleport -7411;64;360;Gaia
+earth_temple_fall3: 'message &d&oUne Force s''empare de vous...'
 #
 pierre_perdu_give: folder pierre_perdu_give1,pierre_terre
 pierre_perdu_give1: 'message &2Érudit &f: &a&oPrenez en soin cette fois !'
@@ -729,10 +718,43 @@ tag_earth_wand: tag add earth_wand
 give_earth_wand: 'command wandp %player% earthbender' 
 #
 #
+# Érudit de l'Eau
 #
 #
+journal_eau_cristal: journal add journal_eau_cristal
+journal_eau_cristal_del: journal del journal_eau_cristal
 #
 tag_erudit_eau: tag add erudit_eau
+erudit_eau_instruction: folder eau_instruc1,eau_instruc_meka1
+eau_instruc_meka1: folder eau_instruc_meka2,eau_instruc2 delay:7
+eau_instruc_meka2: folder eau_instruc_meka3,eau_instruc3 delay:7
+eau_instruc_meka3: folder eau_instruc_meka4,eau_instruc4 delay:5
+eau_instruc_meka4: folder eau_instruc_meka5,eau_instruc5 delay:5
+eau_instruc_meka5: folder eau_instruc6,journal_eau_cristal,tag_eau_cristal,obj_eau_cristal,cristal_eau,title_eau_instruc delay:5
+eau_instruc1: 'message &a&oLa localisation du Temple de l''Eau n''est pas encore connue.'
+eau_instruc2: 'message &a&oEn revanche nous maîtrisons déjà beaucoup de sorts liés à l''Eau.'
+eau_instruc3: 'message &a&oNous avons appris notamment à canaliser l''énergie liquide dans des cristaux.'
+eau_instruc4: 'message &a&oIl nous a toujours semblé indiquer le même endroit mystérieux, mais au-delà de ce dôme... nous ne savons pas exactement quoi faire...'
+eau_instruc5: 'message &a&oLe rituel pour obtenir un cristal enchanté est relativement simple. Récupérez d''abord 16 boules de neige et un bloc de Lapis Lazuli.'
+eau_instruc6: 'message &a&oVous devez être endessous de y=20, placer le bloc de Lapis Lazuli et cliquer dessus avec ce Cristal Banal en main et en ayant 16 boules de neige dans votre inventaire.'
+#
+tag_eau_cristal: tag add eau_cristal
+tag_eau_cristal_del: tag del eau_cristal
+obj_eau_cristal: objective start obj_eau_cristal
+cristal_eau: give cristal_eau_banal
+cristal_eau_take: take cristal_eau_banal
+#
+obj_cristal_done: folder journal_eau_cristal_del,tag_eau_cristal_del,cristal_eau_take
+#
+title_eau_instruc: folder title_eau_temp1,title_eau_temp2,title_eau_temp3
+title_eau_temp1: 'command title %player% times 20 100 20'
+title_eau_temp2: 'command title %player% subtitle {"text":"Enchantement","italic":true,"color":"gold"}'
+title_eau_temp3: 'command title %player% title {"text":"Le Temple de l''Eau","color":"blue"}'
+#
+
+
+#
+#
 tag_erudit_feu: tag add erudit_feu
 #
 #
@@ -1059,7 +1081,8 @@ dwarf_castle_tester7: if or_dwarf_castle_phase0_sancossi dwarf_castle_phase0 els
 dwarf_castle_tester8: if tag_sancossi sancossi_enabler else dwarf_castle_unallowed
 #
 #
-dwarf_castle_occupied_exe: folder dwarf_castle_occupied_exe1,dwarf_castle_out
+dwarf_castle_occupied_exe: folder default.pet_remover,dwarf_castle_occupied_executor
+dwarf_castle_occupied_executor: folder dwarf_castle_occupied_exe1,dwarf_castle_out delay:1
 dwarf_castle_occupied_exe1: 'message &dQuelqu''un est déjà dans ce château, vous devriez revenir plus tard.'
 dwarf_castle_unallowed: folder dwarf_castle_out,dwarf_castle_out_mess
 dwarf_castle_out: teleport -6348;91;2687;Gaia
@@ -1098,7 +1121,8 @@ dwarf_bridge1_open: setblock REDSTONE_TORCH_ON -6323;80;2684;Gaia
 dwarf_bridge1_close: setblock AIR -6323;80;2684;Gaia
 dwarf_bridge2_tester: if dwarf_bridge2_tag dwarf_bridge2_open else dwarf_bridge2_close
 dwarf_bridge2_open: setblock REDSTONE_TORCH_ON -6323;80;2672;Gaia
-dwarf_bridge2_close: folder dwarf_bridge2_close1,dwarf_bridge2_close2,dwarf_bridge2_close3
+dwarf_bridge2_close: folder default.pet_remover,dwarf_bridge2_close_exe
+dwarf_bridge2_close_exe: folder dwarf_bridge2_close1,dwarf_bridge2_close2,dwarf_bridge2_close3 delay:1
 dwarf_bridge2_close1: setblock AIR -6323;80;2672;Gaia
 dwarf_bridge2_close2: 'message &dJe devrais aider les Nains avec leur château à l''Est avant de traverser ce pont.'
 dwarf_bridge2_close3: teleport -6371;92;2674;Gaia
@@ -1108,7 +1132,8 @@ dwarf_hall_welcome: folder dwarf_hall_welcome1,dwarf_hall_welcome2,dwarf_hall_we
 dwarf_hall_welcome1: 'command title %player% times 40 140 40'
 dwarf_hall_welcome2: 'command title %player% title {"text":" ","bold":true,"italic":true,"color":"dark_purple"}'
 dwarf_hall_welcome3: 'command title %player% subtitle {"text":"Hall d''Ingor","italic":true,"color":"gray"}'
-dwarf_hall_unwelcome: folder dwarf_hall_unwelcome1,dwarf_hall_unwelcome2
+dwarf_hall_unwelcome: folder default.pet_remover,dwarf_hall_unwelcome_exe
+dwarf_hall_unwelcome_exe: folder dwarf_hall_unwelcome1,dwarf_hall_unwelcome2 delay:1
 dwarf_hall_unwelcome1: 'message &dVous n''avez pas encore accès au Hall des Nains. Aidez Casar d''abord !'
 dwarf_hall_unwelcome2: teleport -6434;91;2686;Gaia
 #
@@ -1251,9 +1276,11 @@ entry_north_allow: 'command pex user %player% group add north'
 #
 #
 ingor_forge_entry: if ingor_mine_access nothing else ingor_mine_out
-ingor_mine_out: folder ingor_mine_out1,ingor_mine_out2
-ingor_mine_out1: message &d&oCe Volcan semble trop dangereux, je devrais parler à Hrota d'abord !
-ingor_mine_out2: teleport -6501;85;2194;Gaia
+ingor_mine_out: folder default.pet_remover,ingor_mine_out1
+ingor_mine_out1: folder ingor_mine_out2,ingor_mine_out3 delay:1
+ingor_mine_out2: message &d&oCe Volcan semble trop dangereux, je devrais parler à Hrota d'abord !
+ingor_mine_out3: teleport -6501;85;2194;Gaia
+
 #
 journal_hrota: journal add journal_hrota
 journal_hrota_del: journal del journal_hrota
@@ -1287,7 +1314,6 @@ ingor_mine_access: tag add ingor_mine_access
 inscription_reg_ecuyer_louvre: folder registre_ecuyer_louvre,add_louvre_register
 registre_ecuyer_louvre: tag add registre_ecuyer_louvre
 add_louvre_register: 'command addlouvreregister %player%'
-add_louvre_contribution: 'command louvreweeklyreward %player%'
 #
 #
 # Mine Athelas
@@ -1295,7 +1321,8 @@ add_louvre_contribution: 'command louvreweeklyreward %player%'
 #
 ###################################################################
 mine_athelas_tester: if !autorisation_mineur voleur else nothing
-voleur: folder mine_teleport_out,voleur_message delay:0
+voleur: folder default.pet_remover,voleur_exe
+voleur_exe: folder mine_teleport_out,voleur_message delay:1
 voleur_message: 'message &d&oVous ne pouvez pas entrer dans la mine sans l''autorisation du &2Gardien &d&o!'
 #
 mine_acces_folder: folder mine_pay,mine_acces,mine_chrono,mine_message_in1,mine_message_in2,mine_message_in3,mine_obj_distance,mine_obj_logout delay:0
@@ -1404,8 +1431,9 @@ tag_remove_global_louvre1: 'command bq delete tag hollish.global_hollish.louvre_
 # Grand Voyageur
 #
 salon_grand_voyageur: if !votes50 salon_grand_voyageur_out else sgv_welcome
-salon_grand_voyageur_out: folder salon_grand_voyageur_tele,sgv_message delay:0
-salon_grand_voyageur_tele: teleport -6535;74;3161;Gaia
+salon_grand_voyageur_out: folder default.pet_remover,salon_grand_voyageur_tele,sgv_message delay:0
+salon_grand_voyageur_tele: folder salon_grand_voyageur_tele_exe delay:1
+salon_grand_voyageur_tele_exe: teleport -6535;74;3161;Gaia
 sgv_message: 'command bq event %player% default.sgv_message'
 sgv_welcome: folder sgv_welcome1,sgv_welcome2,sgv_welcome3
 sgv_welcome1: 'command title %player% times 20 100 20'
@@ -1415,8 +1443,9 @@ sgv_welcome3: 'command title %player% subtitle {"text":"Bienvenue à vous","colo
 # Banquiers
 #
 salon_banquier: if !votes100 salon_banquier_out else sb_welcome
-salon_banquier_out: folder salon_banquier_tele,sb_message delay:0
-salon_banquier_tele: teleport -6577;75;3092;Gaia
+salon_banquier_out: folder default.pet_remover,salon_banquier_tele,sb_message delay:0
+salon_banquier_tele: folder salon_banquier_tele_exe delay:1
+salon_banquier_tele_exe: teleport -6577;75;3092;Gaia
 sb_message: 'command bq event %player% default.sb_message'
 sb_welcome: folder sb_welcome1,sb_welcome2,sb_welcome3
 sb_welcome1: 'command title %player% times 20 100 20'
@@ -1426,8 +1455,9 @@ sb_welcome3: 'command title %player% subtitle {"text":"Bienvenue à vous","color
 # Bibliothèque
 #
 salon_bibliotheque: if salon_biblio salon_biblio_out else sbib_welcome
-salon_biblio_out: folder salon_biblio_tele,sbib_message delay:0
-salon_biblio_tele: teleport -6651;115;2883;Gaia
+salon_biblio_out: folder default.pet_remover,salon_biblio_tele,sbib_message delay:0
+salon_biblio_tele: folder salon_biblio_tele_exe delay:1
+salon_biblio_tele_exe: teleport -6651;115;2883;Gaia
 sbib_message: 'command bq event %player% default.sbib_message'
 sbib_welcome: folder sbib_welcome1,sbib_welcome2,sbib_welcome3
 sbib_welcome1: 'command title %player% times 20 100 20'

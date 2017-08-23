@@ -96,6 +96,8 @@ ef_6: action right EMERALD_ORE conditions:earth_fiole_hand events:ef_emerald,fio
 ef_7: action right DIAMOND_ORE conditions:earth_fiole_hand events:ef_diamond,fiole_earth_tester loc:-5000;60;5000;Gaia range:7000 
 earth_stick: craft baton 1 events:earth_baton_obj_done
 #
+obj_eau_cristal: action right LAPIS_BLOCK conditions:water_cristal1,water_cristal2,water_cristal3 events:obj_cristal_done loc:-5000;60;5000;Gaia range:7000
+#
 obj_gros_os: action right GRASS conditions:os3_hand events:burried_gros_os loc:-5000;60;5000;Gaia range:7000
 #
 # Ingor

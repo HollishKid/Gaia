@@ -346,8 +346,8 @@ las_closedoor: setblock AIR -7141;68;3519;Gaia
 interact_folder: folder sentry1_folder,sentry2_folder,interact_folder_2 delay:0
 sentry1_folder: folder sentry1_spawn delay:3
 sentry2_folder: folder sentry2_spawn delay:6
-sentry1_spawn: 'command npc spawn 290'
-sentry2_spawn: 'command npc spawn 153'
+sentry1_spawn: mspawnmob -7161;79;3508;Gaia drisgan_cine_erek:1 1
+sentry2_spawn: mspawnmob -7161;79;3505;Gaia drisgan_cine_frank:1 1
 sentry1_exp: explosion 0 0 1 -7159;79;3507;Gaia
 interact_folder_2: folder message1,message1bis delay:0
 message1bis: folder message2,message2bis delay:8
@@ -358,23 +358,23 @@ message5bis: folder message6,message6bis delay:4
 message6bis: folder message7,message7bis delay:5
 message7bis: folder message8,message8bis,fold_taunt delay:3
 message8bis: folder folder_succes delay:0
-message1: 'message &dVous entendez un craquement de parquet derrière la fenêtre ...'
+message1: 'message &dVous entendez un craquement de parquet derrière la fenêtre...'
 message2: 'message &6Frank &f: Au rapport Chef &6Erek &f! Je vous apporte les nouvelles, le commerce avec Tortuga se passe très bien. Notre allié &2Zatara &fnous ouvre beaucoup d''opportunités'
 message3: 'message &4Erek &f: Parfait ! Qu''en est-il de notre petit &6Trésor &f?'
-message4: 'message &6Frank &f: Je n''ai pas réussi à retrouver l''&6Objet. &4Orion &fétait trop bien gardé ... Il a considérablement augmenté le nombre de gardes ...'
-message5: 'message &4Erek &f: Tu n''es qu''un bon à rien &6Frank &f! Tu ne parviens même pas à t''approcher d''un misérable voleur!'
-message6: 'message &6Frank &f: Mais, Chef ... ! J''ai fait ce que j''ai pu ... !'
+message4: 'message &6Frank &f: Je n''ai pas réussi à retrouver l''&6Objet. &4Orion &fétait trop bien gardé... Il a considérablement augmenté le nombre de gardes...'
+message5: 'message &4Erek &f: Tu n''es qu''un bon à rien &6Frank &f! Tu ne parviens même pas à t''approcher d''un misérable voleur !'
+message6: 'message &6Frank &f: Mais, Chef... ! J''ai fait ce que j''ai pu... !'
 message7: 'message &4Erek &f: Non &6Frank &f, pour tant de médiocrité, tu vas payer la peine capitale !'
-message8: 'message &6Frank &f: S''il vous plaît! Je vous en supplie! Non, ayez pitié!!'
-message9: 'message &4Erek &f: Meurt &6Frank&f!'
+message8: 'message &6Frank &f: S''il vous plaît ! Je vous en supplie ! Non, ayez pitié !!'
+message9: 'message &4Erek &f: Meurt &6Frank &f!'
 folder_attack: folder folder_attack_expl,frank_depop,end_message
 folder_attack_expl: explosion 0 0 3 -7160;79;3506;Gaia
-frank_depop: 'command npc despawn 153'
+frank_depop: 'command mm mobs kill drisgan_cine_frank'
 fold_taunt: folder message9,folder_attack,sentry1_despawn delay:4
 end_message: folder end_message_exe delay:7
-end_message_exe: 'message &4Erek: &fIl va me falloir quelqu''un de plus compétent pour m''occuper de ces voleurs ...!'
+end_message_exe: 'message &4Erek &f: Il va me falloir quelqu''un de plus compétent pour m''occuper de ces voleurs... !'
 sentry1_despawn: folder sentry1_despawn_exe,sentry1_exp delay:10
-sentry1_despawn_exe: 'command npc despawn 290'
+sentry1_despawn_exe: 'command mm mobs kill drisgan_cine_erek'
 folder_succes: folder tag_succes,succes_message,Zedd.makarov_access,drisgan_infiltremove,Zedd.maka_q1_journal_del,Zedd.maka_j2 delay:13
 tag_succes: tag add succes
 tag_succesremove: tag del succes
@@ -442,7 +442,7 @@ balcony_folder1: folder bal_tele,bal_telemess delay:1
 bal_tele: teleport -7160;82;3495;Gaia
 bal_telemess: 'message &dCette zone est occupée, revenez plus tard.'
 #
-check_indrisgan: if indrisgan_infilt infilt_telefolder else nothing
+check_indrisgan: if drisgan_infilt infilt_telefolder else nothing
 infilt_telefolder: folder default.pet_remover,infilt_telefolder1
 infilt_telefolder1: folder infilt_tele,infilt_telemess delay:1
 infilt_tele: teleport -7109;69;3503;Gaia

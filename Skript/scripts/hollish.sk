@@ -1,4 +1,139 @@
 #
+# Utiliser une seule fois !
+#
+command /conversionregions:
+	executable by: console
+	trigger:
+#
+# Suppression régions obsolètes
+#
+		execute console command "region remove -w Gaia_the_end skywars_end"
+		execute console command "region remove -w Gaia_the_end ba-skywars"
+		execute console command "region remove -w Gaia cell1a"
+		execute console command "region remove -w Gaia cell1b"
+		
+#
+# MAJ de flags inadéquats
+#
+		execute console command "region flag residence_1 mob-spawning -w Gaia"
+#
+# Régions qui bloquent le mob-spawning, sont updatées avec deny-spawn
+#
+		execute console command "region flag athelas deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag athelas mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port1 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port1 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port2 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port2 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port3 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port3 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port4 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port4 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port5 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port5 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port6 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port6 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag start deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag start mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag start2 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag start2 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag louvre deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag louvre mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag drisgan deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag drisgan mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag dwarf_hall deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag dwarf_hall mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag earth_temple deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag earth_temple mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag air_temple deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag air_temple mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag sanctuaire deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag sanctuaire mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag chateau_louvre deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag chateau_louvre mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag lasswell_cave deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag lasswell_cave mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag water_temple deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag water_temple mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag fire_temple deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag fire_temple mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag ingor deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag ingor mob-spawning -w Gaia"
+		wait 2 ticks
+#
+# Régions qui autorisent le spawn, sont updatées avec un deny-spawn "bidon", pour override le deny-spawn des contenants
+#	
+		execute console command "region flag athelas_mobspawning deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag athelas_mobspawning mob-spawning -w Gaia"
+
+		execute console command "region flag under_temple deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag under_temple mob-spawning -w Gaia"
+		
+		execute console command "region flag highgarden deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag highgarden mob-spawning -w Gaia"
+		
+		execute console command "region flag mirkwood deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag mirkwood mob-spawning -w Gaia"
+
+		execute console command "region flag ut_expand deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag ut_expand mob-spawning -w Gaia"
+		
+		execute console command "region flag tableau3_bis deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag tableau3_bis mob-spawning -w Gaia"
+		
+		execute console command "region flag hol_salleb2x deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag hol_salleb2x mob-spawning -w Gaia"
+		
+		execute console command "region flag hol_salleb3x deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag hol_salleb3x mob-spawning -w Gaia"
+		
+		execute console command "region flag hol_salleb3 deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag hol_salleb3 mob-spawning -w Gaia"
+		
+		execute console command "region flag dwarf_castle deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag dwarf_castle mob-spawning -w Gaia"
+		
+		execute console command "region flag spiderspot1 deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag spiderspot1 mob-spawning -w Gaia"
+		
+		execute console command "region flag training_grounds deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag training_grounds mob-spawning -w Gaia"
+
+#
 #
 # Hollish Skripts
 #
