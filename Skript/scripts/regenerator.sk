@@ -1,20 +1,18 @@
-#
-#
-# East 7 Day Resetter
-#
-#
-#                       Launched from gaia_time.sk
-
 on break:
 	if event-block is in the region "east":
 		if player's gamemode is survival:
 			if town at player exists:
 				stop
-			if "%{place.location.%{day.index}%::*}%" contains "%location of event-block%":
-				stop
+			else if event-block is not any log:
+				if "%{place.location.east::*}%" contains "%location of event-block%":
+					stop
+				else:
+					add location of event-block to {break.location.east::*}
+					add type of event-block to {break.type.east::*}
 			else:
-				add location of event-block to {break.location.%{day.index}%::*}
-				add type of event-block to {break.type.%{day.index}%::*}
+				if block below event-block is dirt or grass:
+					add location of event-block to {break.location.wood.east::*}
+					add type of event-block to {break.type.wood.east::*}
 	else if event-block is in the region "mine_athelas_mine":
 		if "%{place.location.mine1::*}%" contains "%location of event-block%":
 			stop
@@ -36,6 +34,9 @@ on break:
 			if player's gamemode is survival:
 				add location of event-block to {break.location.mine3::*}
 				add type of event-block to {break.type.mine3::*}
+	else if event-block is in the region "foret_athelas" or "foret_athelas2":
+		if "%event-block%" contains "sapling":
+			cancel event
 	else if event-block is in the region "ingor_volcano":
 		if "%{place.location.volcano::*}%" contains "%location of event-block%":
 			stop
@@ -43,14 +44,6 @@ on break:
 			if player's gamemode is survival:
 				add location of event-block to {break.location.volcano::*}
 				add type of event-block to {break.type.volcano::*}
-	else if event-block is in the region "foret_athelas":
-		if player's gamemode is survival:
-			add location of event-block to {break.location.foret::*}
-			add type of event-block to {break.type.foret::*}
-	else if event-block is in the region "foret_athelas2":
-		if player's gamemode is survival:
-			add location of event-block to {break.location.foret2::*}
-			add type of event-block to {break.type.foret2::*}
 	else if event-block is in the region "residences":
 		add 1 to {block.breaks.louvre}
 	else if event-block is in the region "skywars":
@@ -61,13 +54,33 @@ on break:
 				add location of event-block to {mini.skywars.location::*}
 				add type of event-block to {mini.skywars.type::*}
 
+				
+# Il manque acacia et dark oak ; leurs alias sont mal définis dans Skript (=162 pour les deux)			
+on break of any logs:
+	if event-block is in the region "foret_athelas" or "foret_athelas2":
+		if player's gamemode is survival:
+			if block below event-block is dirt or grass:
+				if "%event-block%" contains "oak":
+					wait 1 second
+					set block at location of event-block to normal sapling
+				else if "%event-block%" contains "spruce":
+					wait 1 second
+					set block at location of event-block to pine sapling
+				else if "%event-block%" contains "birch":
+					wait 1 second
+					set block at location of event-block to birch sapling
+				else if "%event-block%" contains "jungle":
+					wait 1 second
+					set block at location of event-block to jungle sapling
+
+
 on place:
 	if event-block is in the region "east":
 		if player's gamemode is survival:
 			if town at player exists:
 				stop
 			else:
-				add location of event-block to {place.location.%{day.index}%::*}
+				add location of event-block to {place.location.east::*}
 	else if event-block is in the region "mine_athelas_mine":
 		if player's gamemode is survival:
 			add location of event-block to {place.location.mine1::*}
@@ -88,60 +101,3 @@ on place:
 	else if event-block is in the region "skywars":
 		if player's gamemode is survival:
 			add location of event-block to {mini.skywars.place::*}
-
-on leaves decay:
-#	if event-block is in the region "east":
-#		add location of event-block to {break.location.%{day.index}%::*}
-#		add type of event-block to {break.type.%{day.index}%::*}
-	if event-block is in the region "foret_athelas":
-		add location of event-block to {break.location.foret::*}
-		add type of event-block to {break.type.foret_athelas::*}
-	else if event-block is in the region "foret_athelas2":
-		add location of event-block to {break.location.foret2::*}
-		add type of event-block to {break.type.foret2::*}
-	else:
-		stop
-#
-# Enregistre les arbres abattus avec TreeFeller
-#	dans la base adéquate.
-#
-#	Ne fonctionne pas avec l'acacia.
-#
-on block damage:
-	if event-block is wood:
-		if mcmmo event-player's TREE FELLER is enabled:
-			if {treefeller.%player%} is not set:
-				set {treefeller.%player%} to true
-				if event-block is in the region "east":
-					if town at player exists:
-						stop
-					else:
-						invoke "treefeller" from event-block and "%{day.index}%" and "%player%"
-				else if event-block is in the region "foret_athelas":
-					invoke "treefeller" from event-block and "foret" and "%player%"
-				else if event-block is in the region "foret_athelas2":
-					invoke "treefeller" from event-block and "foret2" and "%player%"
-				else:
-					delete {treefeller.%player%}
-
-sub "treefeller":
-	loop blocks above parameter 1:
-		if loop-block is wood:
-			add location of loop-block to {break.location.%parameter 2%::*}
-			add type of loop-block to {break.type.%parameter 2%::*}
-		else if loop-block is leaves:
-			loop all blocks in radius 5 around loop-block:
-				if loop-block-2 is leaves or wood:
-					wait 1 tick
-					if "%{break.location.%parameter 2%::*}%" does not contain "%location of loop-block-2%":
-						add location of loop-block-2 to {break.location.%parameter 2%::*}
-						add type of loop-block-2 to {break.type.%parameter 2%::*}
-		else:
-			loop all blocks in radius 5 around loop-block:
-				if loop-block-2 is leaves or wood:
-					wait 1 tick
-					if "%{break.location.%parameter 2%::*}%" does not contain "%location of loop-block-2%":
-						add location of loop-block-2 to {break.location.%parameter 2%::*}
-						add type of loop-block-2 to {break.type.%parameter 2%::*}
-			exit loop
-	delete {treefeller.%parameter 3%}

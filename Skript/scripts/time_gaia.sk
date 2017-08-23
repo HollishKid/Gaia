@@ -141,30 +141,33 @@ command /mrproper:
 			delete {break.location.volcano::%loop-index%}
 			delete {break.type.volcano::%loop-index%}
 			wait 1 tick
-	#Foret
-		loop {break.location.foret::*}:
-			set block at loop-value to {break.type.foret::%loop-index%}
-			delete {break.location.foret::%loop-index%}
-			delete {break.type.foret::%loop-index%}
-			wait 1 tick
-		loop {break.location.foret2::*}:
-			set block at loop-value to {break.type.foret2::%loop-index%}
-			delete {break.location.foret2::%loop-index%}
-			delete {break.type.foret2::%loop-index%}
-			wait 1 tick
 		log "[Mines](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
 	#East
 		set {_time.ignition} to now
-		loop {place.location.%{day.index}%::*}:
+		loop {place.location.east::*}:
 			set block at loop-value to air
-			delete {place.location.%{day.index}%::%loop-index%}
+			delete {place.location.east::%loop-index%}
 			wait 1 tick
 		wait 22 ticks
-		loop {break.location.%{day.index}%::*}:
-			set block at loop-value to {break.type.%{day.index}%::%loop-index%}
-			delete {break.location.%{day.index}%::%loop-index%}
-			delete {break.type.%{day.index}%::%loop-index%}
+		loop {break.location.east::*}:
+			set block at loop-value to {break.type.east::%loop-index%}
+			delete {break.location.east::%loop-index%}
+			delete {break.type.east::%loop-index%}
 			wait 1 tick
+#
+		loop {break.location.wood.east::*}:
+			if block at {break.location.wood.east::%loop-index%} is air:
+				if "%{break.type.wood.east::%loop-index%}%" contains "oak":
+					set block at loop-value to normal sapling
+				else if "%{break.type.wood.east::%loop-index%}%" contains "spruce":
+					set block at loop-value to pine sapling
+				else if "%{break.type.wood.east::%loop-index%}%" contains "birch":
+					set block at loop-value to birch sapling
+				else if "%{break.type.wood.east::%loop-index%}%" contains "jungle":
+					set block at loop-value to jungle sapling
+				wait 1 tick
+			delete {break.location.wood.east::%loop-index%}
+			delete {break.type.wood.east::%loop-index%}
 		log "[East Reset](%hour%H%minutes%m%seconds%) : %difference between {_time.ignition} and now%" to "process.log"
 #		
 #Chest clean - Chest fill
@@ -771,7 +774,7 @@ command /variablegiver1 <player> <number>:
 	trigger:
 		set {reput_athelas.%arg 1%} to arg 2
 #
-# East Rollback
+# East Rollback (à supprimer après dernière utilisation pour 1.1)
 #
 command /rollbackeast <text>:
 	executable by: console
