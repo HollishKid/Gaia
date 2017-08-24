@@ -510,13 +510,13 @@ dummy3:
 #
 legollemdefeu:
   Mobtype: BLAZE
-  Display: '&4&lGollem'
+  Display: '&4&lGolem'
   Faction: netherien
   Health: 1000
   Damage: 20
   BossBar:
     Enabled: true
-    Title: '&4Gollem de Feu'
+    Title: '&4Golem de Feu'
     Range: 20
     Color: RED
     Style: SOLID
