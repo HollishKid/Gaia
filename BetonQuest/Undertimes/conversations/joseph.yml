@@ -3,15 +3,15 @@ first: 'bonjourquest, bonjour'
 stop: 'false'
 NPC_options:
   bonjourquest:
-    text: 'Bonjour!'
+    text: 'Bonjour !'
     condition: 'tag_joseph,held_package'
     pointers: 'quest'
   bonjour: 
-    text: 'Bonjour!'
+    text: 'Bonjour !'
   endquest:
-    text: 'Parfait, merci beaucoup!'
+    text: 'Parfait, merci beaucoup !'
     event: 'josephfolder'
 player_options:
   quest:
-    text: 'Le Grand Gardien vous envoie ceci!'
+    text: 'Le Grand Gardien vous envoie ceci !'
     pointer: 'endquest'
