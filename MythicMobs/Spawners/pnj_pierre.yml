@@ -1,0 +1,25 @@
+#default.pnj_pierre
+pnj_pierre:
+  MobName: pnj_pierre
+  World: Gaia
+  X: -6645
+  Y: 79
+  Z: 2957
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 1
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 1
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

@@ -5192,3 +5192,235 @@ pnj_463:
   - 0 clear
   Skills:
   - command{c="bq event <trigger.name> hollish.conversation_pnj_463"} @trigger ~onInteract
+#
+# Grand Marché
+#
+pnj_priseur:
+  Type: cow
+  Display: '&dPriseur'
+  Disguise:
+    Type: player
+    Player: '&dPriseur'
+    Skin: karl_l
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> hollish.conversation_pnj_gm"} @trigger ~onInteract
+  
+pnj_pierre:
+  Type: cow
+  Display: '&dPierre'
+  Disguise:
+    Type: player
+    Player: '&dPierre'
+    Skin: pierre
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> hollish.conversation_pnj_gm"} @trigger ~onInteract
+  
+pnj_zelina:
+  Type: cow
+  Display: '&dZélina'
+  Disguise:
+    Type: player
+    Player: '&dZélina'
+    Skin: daxxx
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> hollish.conversation_pnj_gm"} @trigger ~onInteract
+  
+pnj_bob:
+  Type: cow
+  Display: '&dBob'
+  Disguise:
+    Type: player
+    Player: '&dBob'
+    Skin: brustus5
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> hollish.conversation_pnj_gm"} @trigger ~onInteract
+  
+pnj_smith:
+  Type: cow
+  Display: '&dSmith'
+  Disguise:
+    Type: player
+    Player: '&dSmith'
+    Skin: smith
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> hollish.conversation_pnj_gm"} @trigger ~onInteract
+  
+pnj_edison:
+  Type: cow
+  Display: '&dEdison'
+  Disguise:
+    Type: player
+    Player: '&dEdison'
+    Skin: edison
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> hollish.conversation_pnj_gm"} @trigger ~onInteract
+  
+pnj_decker:
+  Type: cow
+  Display: '&dDecker'
+  Disguise:
+    Type: player
+    Player: '&dDecker'
+    Skin: azrail_iroa
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> hollish.conversation_pnj_gm"} @trigger ~onInteract
+  
+pnj_onyx:
+  Type: cow
+  Display: '&dOnyx'
+  Disguise:
+    Type: player
+    Player: '&dOnyx'
+    Skin: onyx
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> hollish.conversation_pnj_gm"} @trigger ~onInteract
+  
+pnj_allan:
+  Type: cow
+  Display: '&dAllan'
+  Disguise:
+    Type: player
+    Player: '&dAllan'
+    Skin: jgarland
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> hollish.conversation_pnj_gm"} @trigger ~onInteract
+  
+pnj_hassan:
+  Type: cow
+  Display: '&dHassan'
+  Disguise:
+    Type: player
+    Player: '&dHassan'
+    Skin: tasarov
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> hollish.conversation_pnj_gm"} @trigger ~onInteract
