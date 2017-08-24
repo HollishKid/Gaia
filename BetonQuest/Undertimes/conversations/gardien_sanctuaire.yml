@@ -16,7 +16,7 @@ NPC_options:
     text: 'Je suis le Grand Gardien du Sanctuaire. Je protège ce lieu contre les forces maléfiques qui tentent de le faire tomber.'
     pointers: 'reponseaide1'
   'explicationaide':
-    text: 'Mhhh... Vous pourriez accomplir quelques quêtes en but de nous aider. Vous seriez récompensé par une partie de notre sagesse.'
+    text: 'Mhhh ... Vous pourriez accomplir quelques quêtes en but de nous aider. Vous seriez récompensé par une partie de notre sagesse.'
     pointers: 'reponseaide2'
   'missions4':
     text: 'Bien. Quelle difficulté voulez-vous?'
@@ -38,7 +38,7 @@ NPC_options:
     condition: 'tag_endquestlvl1'
     event: 'questreward1'
   'josephquest':
-    text: 'Apportez ce paquet au Chateau royal.'
+    text: 'Apportez ce paquet au Château royal.'
     condition: 'tag_joseph'
   'ironingotsquest':
     text: 'Apportez-nous 20 lingots de fer.'
