@@ -387,4 +387,28 @@ miz_ran7_del: tag del its_rang7
 miz_rang8: tag add its_rang8
 miz_rang8_del: tag del its_rang8
 miz_rang9: tag add its_rang9
-miz_rang9_del: tag del its_rang9
+miz_rang9_del: tag del its_rang9#====================CONVERSATIONS===================
+conversation_pnj_388: conversation Sir_James
+conversation_pnj_390: conversation Garde
+conversation_pnj_391: conversation Garde
+conversation_pnj_392: conversation Garde_Superieur
+conversation_pnj_393: conversation Commandant
+conversation_pnj_394: conversation Soldat_Deprimer
+conversation_pnj_395: conversation Soldat_Ryan
+conversation_pnj_396: conversation Mike
+conversation_pnj_397: conversation Soldat_Anxieux
+conversation_pnj_398: conversation Professeur
+conversation_pnj_400: conversation Recruteur
+conversation_pnj_401: conversation Garde
+conversation_pnj_402: conversation Garde
+conversation_pnj_403: conversation Physicien_Drizz
+conversation_pnj_407: conversation Chef_Escadron
+conversation_pnj_408: conversation Claire
+conversation_pnj_448: conversation Alchimiste
+conversation_pnj_449: conversation Jiang_Chen
+conversation_pnj_456: conversation Garde_Forestier
+conversation_pnj_457: conversation Chef-Mineur
+conversation_pnj_458: conversation Menuisier
+conversation_pnj_459: conversation Mineur
+conversation_pnj_460: conversation Mineur
+conversation_pnj_461: conversation Mineur

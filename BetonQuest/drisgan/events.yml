@@ -685,3 +685,19 @@ hol_taketnt: take erek_tnt:64
 #
 #
 #
+#====================CONVERSATIONS===================
+conversation_pnj_138: conversation gardealeatoire
+conversation_pnj_140: conversation garde1
+conversation_pnj_141: conversation garde1
+conversation_pnj_142: conversation garde2
+conversation_pnj_143: conversation garde2
+conversation_pnj_144: conversation milicien
+conversation_pnj_145: conversation gardealeatoire2
+conversation_pnj_146: conversation gardealeatoire3
+conversation_pnj_147: conversation gardealeatoire4
+conversation_pnj_151: conversation obrien
+conversation_pnj_206: conversation Eko
+conversation_pnj_292: conversation shifoumi
+conversation_pnj_340: conversation lasswell
+conversation_pnj_444: conversation aldwin
+conversation_pnj_445: conversation lasswell2

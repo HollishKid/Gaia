@@ -29,3 +29,5 @@ recompense_argent_200: 'command eco give %player% 200'
 
 explosionjon1: 'explosion 0 0 4 -6868;64;2856;Gaia'
 
+#====================CONVERSATIONS===================
+conversation_pnj_43: conversation Jon

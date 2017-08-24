@@ -1318,4 +1318,17 @@ bplace16: setblock DIAMOND_BLOCK -6768;2;2972;Gaia
 bwin16: objective start bwin16
 btick16: folder breplace16,bdewin16,remove_diamond,pre_roulette delay:1
 breplace16: setblock WOOL -6768;2;2972;Gaia
-bdewin16: objective delete bwin16
+bdewin16: objective delete bwin16#====================CONVERSATIONS===================
+conversation_pnj_36: conversation oldseaman
+conversation_pnj_222: conversation jimbo
+conversation_pnj_230: conversation maximus
+conversation_pnj_233: conversation stacy
+conversation_pnj_234: conversation makarov
+conversation_pnj_239: conversation ynvgard
+conversation_pnj_242: conversation vieuxbandit
+conversation_pnj_256: conversation ynvgardrelai
+conversation_pnj_283: conversation varko
+conversation_pnj_284: conversation zael
+conversation_pnj_336: conversation kali
+conversation_pnj_446: conversation itsuki
+conversation_pnj_245: conversation croupier
