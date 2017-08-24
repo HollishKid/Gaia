@@ -11,20 +11,35 @@ NPC_options:
   hostile:
     text: 'Crocodile ! Je n''en peux plus des Aventuriers qui squatent la ville !'
     conditions: '!neutre,!delay_ilse3'
-    pointers: ville,mechant
+    pointers: ville,mechant,aubergiste
   neutre:
     text: 'Je ne comprends pas pourquoi tout le monde s''inquiète autant à propos des Forces du Mal !'
     conditions: 'neutre,!amical,!delay_ilse3'
+    pointers: aubergiste
   amical:
     text: 'On m''a dit qu''il allait faire beau cette semaine ! Temps parfait pour prendre la mer !'
     conditions: 'amical,!honore,!delay_ilse3'
+    pointers: aubergiste
   honore:
     text: 'J''aimerais beaucoup partir lors d''une de vos aventures avec vous &2%player% &a&o!'
     conditions: 'honore,!exalte,!delay_ilse3'
-    pointers: ravi,non
+    pointers: ravi,non,aubergiste
   exalte:
     text: 'Je suis vraiment content d''être en votre présence &2%player% &a&o!'
     conditions: 'exalte,!delay_ilse3'
+    pointers: aubergiste
+  agree:
+    text: 'J''irais avec plaisir ! Merci de la suggestion !'
+    conditions: 'random70,!tag_aubergiste_kilian'
+    event: 'tag_aubergiste_kilian,point_aubergiste'
+  nothanks:
+    text: 'Non merci ça ne me parle pas !'
+    conditions: '!tag_aubergiste_kilian'
+    event: 'tag_aubergiste_kilian'
+  stopthat:
+    text: 'Arrêtez de me harceler avec ça !'
+    conditions: 'tag_aubergiste_kilian'
+    events: 'reput_athelas1_negatif'
 #Options du joueur
 player_options:
   ville:
@@ -39,3 +54,7 @@ player_options:
   non:
     text: 'Non mais vous vous prenez pour qui ?! Vous ne ferais que me ralentir !'
     events: reput_athelas3_negatif,delay_ilse3
+  aubergiste:
+    text: 'Voudriez vous loger au Baraquement des Mines ?'
+    conditions: 'tag_aubergiste'
+    pointer: 'agree,nothanks,stopthat'

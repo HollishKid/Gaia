@@ -235,7 +235,6 @@ groups:
     - towny.town.resident
     - townywands.gui.resident
     - townywands.gui.mayor
-    - townywands.gui.nation
     - modifyworld.digestion
     options:
       rank: '800'

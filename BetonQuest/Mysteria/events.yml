@@ -376,3 +376,14 @@ porte1_timer_close: folder porte1_close_testeur delay:2
 porte1_close_testeur: if porte1_door_check porte1_timer_close else porte1_close
 porte1_close: setblock AIR -8970;76;4676;Gaia
 
+#====================CONVERSATIONS===================
+conversation_pnj_447: conversation Andrish
+conversation_pnj_62: conversation Komyl
+conversation_pnj_90: conversation Ronke
+conversation_pnj_271: conversation Garderos
+conversation_pnj_270: conversation Roi_Ubu
+conversation_pnj_275: conversation General_Kinsot
+conversation_pnj_280: conversation Lieutenant_Hashor
+conversation_pnj_268: conversation Aktarion
+conversation_pnj_278: conversation Loukran
+conversation_pnj_201: conversation Tatsu

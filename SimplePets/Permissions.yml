@@ -1,0 +1,39 @@
+# DO NOT EDIT WILL NOT EFFECT PLUGIN THIS IS FOR YOUR USE TO SEE THE PERMISSIONS!
+
+ - Pet.snowman - Allows players to access the snowman pet
+ - Pet.rabbit - Allows players to access the rabbit pet
+ - Pet.cow - Allows players to access the cow pet
+ - Pet.pig - Allows players to access the pig pet
+ - Pet.blaze - Allows players to access the blaze pet
+ - Pet.pigman - Allows players to access the pigman pet
+ - Pet.mooshroom - Allows players to access the mooshroom pet
+ - Pet.chicken- Allows players to access the chicken pet
+ - Pet.irongolem - Allows players to access the irongolem pet
+ - Pet.sheep - Allows players to access the sheep pet
+ - Pet.wolf - Allows players to access the wolf pet
+ - Pet.villager - Allows players to access the villager pet
+ - Pet.zombie- Allows players to access the zombie pet
+ - Pet.spider- Allows players to access the spider pet
+ - Pet.enderman- Allows players to access the enderman pet
+ - Pet.skeleton- Allows players to access the skeleton pet
+ - Pet.wither- Allows players to access the wither pet
+ - Pet.creeper- Allows players to access the creeper pet
+ - Pet.horse - Allows players to access the horse pet
+ - Pet.ocelot - Allows players to access the ocelot pet
+ - Pet.squid - Allows players to access the squid pet
+ - Pet.endermite - Allows players to access the endermite pet
+ - Pet.giant - Allows players to access the giant pet
+ - Pet.ghast - Allows players to access the ghast pet
+ - Pet.witch - Allows players to access the witch pet
+ - Pet.bat - Allows players to access the bat pet
+ - Pet.PetToHat - gives user permission to put their pet as a hat
+ - Pet.PetToMount- gives user permission to ride/control their pet
+
+ - Pet.summon- gives user permission to the pet summon command
+ - Pet.help- gives user permission to the pet help command
+
+ - Pet.* - gives all permissions to the plugin
+ - Pet.commands.* - gives all permissions to the plugin commands
+ - Pet.types.* - gives all permissions to pets
+ - Pet.passive- gives user permission to all passive pets
+ - Pet.hostile- gives user permission to all the hostile pets

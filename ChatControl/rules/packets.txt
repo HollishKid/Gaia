@@ -43,17 +43,17 @@ then deny
 #Unknown
 match ^Unknown command.|^Something wrong
 dont verbose
-then rewrite &cOption indisponible.                                                                                           &dUtilisez &2/menu &dpour toutes les options.                                                            &d&oOu rengagez la conversation avec le PNJ auquel vous souhaitez parler.
+then rewrite &cOption indisponible. &dUtilisez &2/menu &dpour toutes les options. &d&oOu rengagez la conversation avec le PNJ auquel vous souhaitez parler.
 
 # Permissions
 match ^Sorry, you don't have enough permissions.*|^I'm sorry, but you do not have permission to perform this.*|^You do not have access to that command.|^Use the command|^This server is running|^Vous ne pouvez pas voir la page|^You are not permitted to do that. Are you in the right mode?|^You don't have permission|^Invalid Permissions|^You don't have permission to execute that command.|^Vous n'avez pas accès à cette commande.|^I'm sorry, but you do not have permission to perform this command.|^You do not have access to that command.|^You don't have permission.|^You do not have permissions for that command.|^You do not have any of the required|^You do not have sufficient permissions.|^You do not have permission to do that.
 dont verbose
-then rewrite &cVous ne pouvez pas exécuter cette commande.                                                   &dUtilisez &2/menu &dpour toutes les options.
+then rewrite &cVous ne pouvez pas exécuter cette commande. &dUtilisez &2/menu &dpour toutes les options.
 
 # ChestCommands
 match \[ChestCommands\]
 dont verbose
-then rewrite &cVous ne pouvez pas exécuter cette commande.                                                   &dUtilisez &2/menu &dpour toutes les options.
+then rewrite &cVous ne pouvez pas exécuter cette commande. &dUtilisez &2/menu &dpour toutes les options.
 
 # ChestCommands Bis
 match Developer|Commands
@@ -87,31 +87,6 @@ then deny
 
 # "X died" message Canceller
 match died$
-dont verbose
-then deny
-
-# Mailer
-match ^Set email subject!|^Sent!|^Set email to|^Set email body!
-dont verbose
-then deny
-
-# Twitter
-match Tweet has been created
-dont verbose
-then deny
-
-# Twitter 1
-match Twitter
-dont verbose
-then deny
-
-# Twitter 2
-match to send it or
-dont verbose
-then deny
-
-# Twitter 3
-match Je viens de rejoindre le serveur !
 dont verbose
 then deny
 
@@ -286,4 +261,8 @@ then replace *****
 # Raccourcis Individuels
 #
 match (\bfdp\b|\bpd\b)
+then replace *****
+
+#ntm
+match \b(n+)(\s+|\.+|\*+|)(t+)(\s+|\.+|\*+|)(m+)(\s+|\.+|\*+|)\b
 then replace *****

@@ -1,0 +1,46 @@
+quester: 'Watt'
+first: unknown,hostile,neutre,amical,honore,exalte
+stop: 'false'
+#Options du NPC
+NPC_options:
+  unknown:
+    text: 'Vous êtes inconnu dans cette ville. Parlez à l''&2Intendant &a&o!'
+    conditions: '!intendant_done'
+  hostile:
+    text: 'Qu''est-ce que tu me veux toi ?!'
+    conditions: '!neutre'
+    pointers: aubergiste
+  neutre:
+    text: 'Bonjour.'
+    conditions: 'neutre,!amical'
+    pointers: aubergiste
+  amical:
+    text: 'Bonjour à vous &2%player% &a&o!'
+    conditions: 'amical,!honore'
+    pointers: aubergiste
+  honore:
+    text: 'Bonjour à vous &2%player% &a&o! Je suis enchantée de vous voir !'
+    conditions: 'honore,!exalte'
+    pointers: aubergiste
+  exalte:
+    text: 'Par Gaïa et toute la Spiritualité en ce bas monde... Est-ce bien vous &2%player% &a&o?! \nJe suis enchanté de vous voir !!'
+    conditions: 'exalte'
+    pointers: aubergiste
+  agree:
+    text: 'J''irais avec plaisir ! Merci de la suggestion !'
+    conditions: 'random30,!tag_aubergiste_ronke'
+    event: 'tag_aubergiste_ronke,point_aubergiste'
+  nothanks:
+    text: 'Non merci ça ne me parle pas !'
+    conditions: '!tag_aubergiste_ronke'
+    event: 'tag_aubergiste_ronke'
+  stopthat:
+    text: 'Arrêtez de me harceler avec ça !'
+    conditions: 'tag_aubergiste_ronke'
+    events: 'reput_athelas1_negatif'
+#Options du joueur
+player_options:
+  aubergiste:
+    text: 'Voudriez vous loger au Baraquement des Mines ?'
+    conditions: 'tag_aubergiste'
+    pointer: 'agree,nothanks,stopthat'

@@ -8,7 +8,7 @@ NPC_options:
   normal:
     text: 'Bonjour ! Vous êtes à la recherche d''un bon pain ? Il vous coûtera seulement &f¤&2100 &a&o!'
     conditions: 'timer_paul'
-    pointers: pain,bonjour
+    pointers: pain_francis,pain,bonjour
   pain_buy_rep:
     text: 'Tenez, profitez en bien !'
     conditions: 'money_100'
@@ -16,24 +16,28 @@ NPC_options:
   pain_rep_funds:
     text: 'Vous n''avez pas assez d''argent...'
     conditions: '!money_100'
+  pain_francis_give:
+    text: 'Très bien, le voici !'
+    events: pain_francis_done
 #
   occupe_inprogress1:
     text: 'J''espère que vous n''avez pas oublié de porter le pain au Chef du Château ?!'
     conditions: '!timer_paul,tag_pain_paul'
+    pointers: pain_francis
   occupe_inprogress2:
     text: 'J''espère que vous n''avez pas oublié mon &d10 blé&a&o ?!'
     conditions: '!timer_paul,paul_ble'
-    pointers: aide2_bis
+    pointers: pain_francis,aide2_bis
   occupe_inprogress3:
     text: 'J''espère que vous êtes entrain de faire les &d3 pains&a&o ?!'
     conditions: '!timer_paul,pain_urgent'
-    pointers: aide3_bis
+    pointers: pain_francis,aide3_bis
 #
   occupe1:
     text: 'Je n''ai pas le temps, je dois livrer du pain au château !'
     conditions: 'paul1,!timer_paul,!tag_pain_paul'
     events: paul_cleaner
-    pointers: aide1,non
+    pointers: pain_francis,aide1,non
   livraison_rep:
     text: 'Ca m''arrange! Il faut amener ces 10 pains au Chef du Château, dans la cuisine.'
     events: paul_occupe1
@@ -41,7 +45,7 @@ NPC_options:
     text: 'Je suis trop occupé, j''ai besoin d''aller chercher le blé pour faire ma pâte !'
     conditions: 'paul2,!timer_paul,!paul_ble'
     events: paul_cleaner
-    pointers: aide2,aide2_bis,non
+    pointers: pain_francis,aide2,aide2_bis,non
   ressources_rep:
     text: 'C''est gentil ! Apportez moi &d10 blé &a&oalors !'
     events: paul_occupe2
@@ -53,7 +57,7 @@ NPC_options:
     text: 'Je ne peux pas vous parler. J''ai du pain à faire en urgence !'
     conditions: 'paul3,!timer_paul,!pain_urgent'
     events: paul_cleaner
-    pointers: aide3,non
+    pointers: pain_francis,aide3,non
   pain_rep:
     text: 'Merci ! Il faut que les pains soient chauds, donc faites &d3 pains. \n&a&oUtilisez mon établi derrière si vous voulez.'
     events: paul_occupe3
@@ -73,6 +77,10 @@ player_options:
   pain:
     text: 'Absolument !'
     pointers: pain_buy_rep,pain_rep_funds
+  pain_francis:
+    text: 'Je viens chercher le pain pour Francis !'
+    conditions: tag_pain_francis
+    pointer: pain_francis_give
 #
 #
   aide1:

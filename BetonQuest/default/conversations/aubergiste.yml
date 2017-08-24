@@ -1,0 +1,61 @@
+quester: 'Billy'
+first: inconnu,bienvenue,quete
+stop: 'false'
+#
+# NPC
+#
+NPC_options:
+  inconnu:
+    text: 'Je ne vous ai jamais vu ici, vous devriez aller voir l''&2Intendant &a&o!'
+    conditions: '!intendant_done'
+  bienvenue:
+    text: 'Bienvenue au &dBaraquement des Mines &2%player% &a&o!'
+    conditions: 'intendant_done'
+    pointers: 'bonjour,qui,personne'
+  aubergiste:
+    text: 'Je m''appelle Billy et je suis l''heureux propriétaire de cette auberge depuis bien des années !'
+#
+  help:
+    text: 'C''est vrai que la clientèle se fait très rare ces derniers temps... \nIl est difficile de faire concurrence avec &fPaulette &a&o!'
+    pointer: 'jemenfous,aide'
+  degage:
+    text: 'Alors retournez chez Paulette, fichez le camp de mon établissement !'
+    events: 'auberge_tele_out,auberge_damage,reput_athelas1_negatif'
+#
+  debut_quete:
+    text: 'Vous feriez ça pour moi ? \nIl me faudrait plus de clients, pourriez vous convaincre 3 habitants d''Athelas de venir séjourner dans mon établissement ?'
+    events: 'tag_aubergiste'
+#
+  quete:
+    text: 'Alors, comment avance votre recherche de clients ?'
+    conditions: 'tag_aubergiste'
+    pointers: 'trouve,pasencore'
+  quete_finie:
+    text: 'Merci infiniment ! Tenez cette petite somme pour vous dédommager de votre temps !'
+    events: 'reput_athelas2_positif,money_p250,aubergiste_clean'
+#
+# Joueur
+#
+player_options:
+  bonjour:
+    text: 'Bonjour à vous... eh... aubergiste !'
+  qui:
+    text: 'Qui êtes vous ?'
+    pointer: 'aubergiste'
+  personne:
+    text: 'Il n''y a pas foule dans votre auberge...'
+    pointer: 'help'
+  jemenfous:
+    text: 'C''est vrai que chez Paulette on y est bien !'
+    pointer: 'degage'
+  aide:
+    text: 'Je pourrais peut-être vous aider ?'
+    pointer: 'debut_quete'
+  trouve:
+    text: 'J''ai trouvé tous les clients qu''il vous faut !'
+    conditions: 'aubergiste_point3'
+    pointer: 'quete_finie'
+  pasencore:
+    text: 'Je suis toujours à la recherche de 3 clients...'
+    conditions: '!aubergiste_point3'
+    

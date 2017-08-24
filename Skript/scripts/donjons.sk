@@ -177,3 +177,35 @@ on sign change:
                 if player's gamemode is survival:
                     cancel event
                     message "&dVous ne parvenez pas à créer cette Pancarte."	
+#
+#
+# Donjon Village
+#
+#
+command /donjonvillageglassremove:
+	executable by: console
+	trigger:
+		set {_session} to new editsession in world "Gaia" with limit 1000
+		set {_grounder} to location at -6894, 50, 2507 of the world "Gaia"
+		paste schem "plugins/WorldEdit/schematics/donjon_floor_empty" at {_grounder} using {_session}
+		
+command /donjonvillageglassadd:
+	executable by: console
+	trigger:
+		set {_session} to new editsession in world "Gaia" with limit 1000
+		set {_grounder} to location at -6894, 50, 2507 of the world "Gaia"
+		paste schem "plugins/WorldEdit/schematics/donjon_floor_full" at {_grounder} using {_session}
+
+command /donjonvillagedoorclose:
+	executable by: console
+	trigger:
+		set {_session} to new editsession in world "Gaia" with limit 1000
+		set {_grounder} to location at -6889, 50, 2490 of the world "Gaia"
+		paste schem "plugins/WorldEdit/schematics/donjon_village_door_closed" at {_grounder} using {_session}
+	
+command /donjonvillagedooropen:
+	executable by: console
+	trigger:
+		set {_session} to new editsession in world "Gaia" with limit 1000
+		set {_grounder} to location at -6889, 50, 2490 of the world "Gaia"
+		paste schem "plugins/WorldEdit/schematics/donjon_village_door_open" at {_grounder} using {_session}

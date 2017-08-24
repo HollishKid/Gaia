@@ -42,6 +42,7 @@ npcs:
   '80': heraut
   '81': banker
   '89': adelaide
+  '90': Ronke
   '93': survivant
   '94': survivant
   '95': commandant
@@ -60,6 +61,7 @@ npcs:
   '118': paulette
   '119': sofia
   '125': officier2
+  '129': watt
   '135': brook
   '202': ingolmo
   '204': gardesathelas
@@ -67,6 +69,7 @@ npcs:
   '228': gardesathelas
   '229': gardesathelas
   '272': crashozz
+  '273': aubergiste
   '274': lauvel
   '251': sophie
   '286': ermite
@@ -87,6 +90,7 @@ npcs:
   '359': paul
   '360': madame
   '361': banker_nains
+  '363': lumbar
   '364': francis
   '365': chef
   '366': charon

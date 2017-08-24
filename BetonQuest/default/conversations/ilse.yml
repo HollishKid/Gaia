@@ -9,17 +9,38 @@ NPC_options:
   hostile:
     text: 'Qu''est-ce que tu me veux toi ?!'
     conditions: '!neutre'
+    pointers: aubergiste
   neutre:
     text: 'Bonjour.'
     conditions: 'neutre,!amical'
+    pointers: aubergiste
   amical:
     text: 'Bonjour à vous &2%player% &a&o!'
     conditions: 'amical,!honore'
+    pointers: aubergiste
   honore:
     text: 'Bonjour à vous &2%player% &a&o! Je suis enchantée de vous voir !'
     conditions: 'honore,!exalte'
+    pointers: aubergiste
   exalte:
-    text: 'Par Gaïa et toute la Spiritualité en ce bas monde ... Est-ce bien vous &2%player% &a&o?! Je suis enchantée de vous voir !!'
+    text: 'Par Gaïa et toute la Spiritualité en ce bas monde... Est-ce bien vous &2%player% &a&o?! \nJe suis enchantée de vous voir !!'
     conditions: 'exalte'
+    pointers: aubergiste
+  agree:
+    text: 'J''irais avec plaisir ! Merci de la suggestion !'
+    conditions: 'random80,!tag_aubergiste_clelia'
+    event: 'tag_aubergiste_clelia,point_aubergiste'
+  nothanks:
+    text: 'Non merci ça ne me parle pas !'
+    conditions: '!tag_aubergiste_clelia'
+    event: 'tag_aubergiste_clelia'
+  stopthat:
+    text: 'Arrêtez de me harceler avec ça !'
+    conditions: 'tag_aubergiste_clelia'
+    events: 'reput_athelas1_negatif'
 #Options du joueur
 player_options:
+  aubergiste:
+    text: 'Voudriez vous loger au Baraquement des Mines ?'
+    conditions: 'tag_aubergiste'
+    pointer: 'agree,nothanks,stopthat'

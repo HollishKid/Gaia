@@ -1,4 +1,139 @@
 #
+# Utiliser une seule fois !
+#
+command /conversionregions:
+	executable by: console
+	trigger:
+#
+# Suppression régions obsolètes
+#
+		execute console command "region remove -w Gaia_the_end skywars_end"
+		execute console command "region remove -w Gaia_the_end ba-skywars"
+		execute console command "region remove -w Gaia cell1a"
+		execute console command "region remove -w Gaia cell1b"
+		
+#
+# MAJ de flags inadéquats
+#
+		execute console command "region flag residence_1 mob-spawning -w Gaia"
+#
+# Régions qui bloquent le mob-spawning, sont updatées avec deny-spawn
+#
+		execute console command "region flag athelas deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag athelas mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port1 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port1 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port2 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port2 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port3 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port3 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port4 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port4 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port5 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port5 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag east_port6 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag east_port6 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag start deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag start mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag start2 deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag start2 mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag louvre deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag louvre mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag drisgan deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag drisgan mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag dwarf_hall deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag dwarf_hall mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag earth_temple deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag earth_temple mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag air_temple deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag air_temple mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag sanctuaire deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag sanctuaire mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag chateau_louvre deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag chateau_louvre mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag lasswell_cave deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag lasswell_cave mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag water_temple deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag water_temple mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag fire_temple deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag fire_temple mob-spawning -w Gaia"
+		wait 2 ticks
+		execute console command "region flag ingor deny-spawn -w Gaia CAVE_SPIDER,CHICKEN,CREEPER,ENDERMAN,HORSE,IRON_GOLEM,MAGMA_CUBE,MUSHROOM_COW,OCELOT,PIG,SHEEP,SILVERFISH,SKELETON,SLIME,SPIDER,VILLAGER,WITCH,WITHER,WOLF,ZOMBIE"
+		execute console command "region flag ingor mob-spawning -w Gaia"
+		wait 2 ticks
+#
+# Régions qui autorisent le spawn, sont updatées avec un deny-spawn "bidon", pour override le deny-spawn des contenants
+#	
+		execute console command "region flag athelas_mobspawning deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag athelas_mobspawning mob-spawning -w Gaia"
+
+		execute console command "region flag under_temple deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag under_temple mob-spawning -w Gaia"
+		
+		execute console command "region flag highgarden deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag highgarden mob-spawning -w Gaia"
+		
+		execute console command "region flag mirkwood deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag mirkwood mob-spawning -w Gaia"
+
+		execute console command "region flag ut_expand deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag ut_expand mob-spawning -w Gaia"
+		
+		execute console command "region flag tableau3_bis deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag tableau3_bis mob-spawning -w Gaia"
+		
+		execute console command "region flag hol_salleb2x deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag hol_salleb2x mob-spawning -w Gaia"
+		
+		execute console command "region flag hol_salleb3x deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag hol_salleb3x mob-spawning -w Gaia"
+		
+		execute console command "region flag hol_salleb3 deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag hol_salleb3 mob-spawning -w Gaia"
+		
+		execute console command "region flag dwarf_castle deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag dwarf_castle mob-spawning -w Gaia"
+		
+		execute console command "region flag spiderspot1 deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag spiderspot1 mob-spawning -w Gaia"
+		
+		execute console command "region flag training_grounds deny-spawn -w Gaia bat"
+		wait 2 ticks
+		execute console command "region flag training_grounds mob-spawning -w Gaia"
+
+#
 #
 # Hollish Skripts
 #
@@ -56,10 +191,13 @@ command /sanction <text> <player>:
 	permission: admin.prison
 	permission message: &cVous devez être modérateur pour exécuter cette commande.
 	trigger:
-		execute console command "bq event %arg 2% hollish.prison_god_tester%arg 1%"
-		message "&2%arg 2% &d&oa été sanctionné niveau : &2%arg 1%"
-		message "&d&oUtilisez &aliberer [nom du joueur] &d&opour la/le libérer,"
-		message "&d&oou lorsque la personne est bloquée en prison."
+		if arg 1 is "fer" or "or" or "diamant":
+			execute console command "bq event %arg 2% hollish.prison_god_tester%arg 1%"
+			message "&2%arg 2% &d&oa été sanctionné niveau : &2%arg 1%"
+			message "&d&oUtilisez &aliberer [nom du joueur] &d&opour la/le libérer,"
+			message "&d&oou lorsque la personne est bloquée en prison."
+		else:
+			message "&d&lUtilisation : /sanction [fer/or/diamant] [joueur]"
 #
 command /liberer <player>:
 	executable by: players and console
@@ -127,15 +265,6 @@ on vehicle exit:
 # Chanels de Discussion
 #
 #    Global, Silencieux, Local, Commerce & Staff
-#
-#
-#
-on load:
-	discord login to user with token "MjkyODI4MDc5ODEyNzcxODQx.C69tDQ.0eb-o2euVhQRzgzUMKNZ1XWAC48" with name "Gaia"
-	broadcast "&aLoggé sur Discord !"
-	discord send message "Le Monde de Gaïa vient de s'ouvrir." to channel with id "186938785026539523" as bot "Gaia"
-	discord send message "Merci de ne pas vous ""spam-connecter""." to channel with id "186938785026539523" as bot "Gaia"
-
 #
 #
 # Global Chat Management
@@ -394,9 +523,8 @@ command /chanel <text>:
 command /competences:
 	aliases: /c, /compet, /competence, /compétence, /compétences
 	trigger:
-		loop yaml list "competences" from file "/plugins/Skript/scripts/config.yml":
+		loop {metiers_competences::*}:
 			set {_skill.%loop-value%} to placeholder parse "%%mcmmo_level_%loop-value%%%" as player parsed as integer
-		loop yaml list "metiers_competences" from file "/plugins/Skript/scripts/config.yml":
 			set {_skill.exp.%loop-value%} to placeholder parse "%%mcmmo_xp_%loop-value%%%" as player parsed as integer
 			set {_skill.exp.req.%loop-value%} to placeholder parse "%%mcmmo_xp_needed_%loop-value%%%" as player parsed as integer
 		wait 2 ticks
@@ -531,9 +659,9 @@ on vote:
 On death of player:
 	if victim meets betonquest condition "player":
 		loop yaml list "penalty_free_regions" from file "/plugins/Skript/scripts/config.yml":
-			add "%loop-value%" to {_regions_list::*}
-		loop {_regions_list::*}:
-			set {_cycle_region} to "%{_regions_list::%loop-index%}%"
+			add "%loop-value%" to {penalty_free_regions::*}
+		loop {penalty_free_regions::*}:
+			set {_cycle_region} to "%{penalty_free_regions::%loop-index%}%"
 			set {_player_region} to "%region at player%"
 			if {_player_region} contains {_cycle_region}:
 				set {_protected} to 1
@@ -541,11 +669,9 @@ On death of player:
 			stop
 		else:
 			if attacker is a player:
-				Wait 7 ticks
 				set {_death_money} to victim's money
 				set {_01} to 0.1
 				set {_death_money_result} to {_death_money} * {_01}
-				Wait 7 ticks
 				give the victim's skull to the attacker
 				execute console command "eco take %victim% %{_death_money_result}%"
 				execute console command "eco give %attacker% %{_death_money_result}%"
@@ -554,11 +680,9 @@ On death of player:
 				execute console command "title %victim% times 60 100 60"
 				execute console command "title %victim% title {""text"":""Vous êtes mort!"",""bold"":true,""color"":""red""}"
 				execute console command "title %victim% subtitle {""text"":""-%{_death_money_result}% d'argent en poche"",""italic"":true,""color"":""light_purple""}"
-				set {_tempname} to attacker's name
-				if attacker meets betonquest condition "colisee.boo_p1":
-					execute console command "bq event %attacker% colisee.eastern_killcollect"
+#				if attacker meets betonquest condition "colisee.boo_p1":
+#					execute console command "bq event %attacker% colisee.eastern_killcollect"
 			else:
-				Wait 7 ticks
 				set {_death_money} to victim's money
 				set {_01} to 0.1
 				set {_death_money_result} to {_death_money} * {_01}
@@ -649,7 +773,7 @@ sub "animal_protection":
 # Disables rain & thunder in all worlds
 #			
 on weather change to rain or thunder:
-	wait 5 minute
+	wait 5 minutes
 	set weather to sunny
 
 #
@@ -664,12 +788,8 @@ on enchant:
 		message "&d&oVous ne parvenez pas à enchanter cet objet."
 		message "&d&oÉtant incassable, il possède déjà trop de Spiritualité."
 	else:
-		loop yaml list "enchantments" from file "/plugins/Skript/scripts/config.yml":
-			add "%loop-value%" to {enchantment_spell_list::*}
 		set {enchantment_spell} to a random element out of {enchantment_spell_list::*}
-		message "&2murmures &f: &6&o%{enchantment_spell}%"
-		loop {enchantment_spell_list::*}:
-			delete {enchantment_spell_list::%loop-index%}
+		message "&2Murmures &f: &6&o%{enchantment_spell}%"
 #
 #
 # MythicMobs Items Fixer
