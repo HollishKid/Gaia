@@ -28,15 +28,15 @@ NPC_options:
     text: 'Je suis vraiment content d''être en votre présence &2%player% &a&o!'
     conditions: 'exalte,!delay_ilse3'
     pointers: aubergiste
-  yes:
+  agree:
     text: 'J''irais avec plaisir ! Merci de la suggestion !'
     conditions: 'random70,!tag_aubergiste_kilian'
     event: 'tag_aubergiste_kilian,point_aubergiste'
-  no:
+  nothanks:
     text: 'Non merci ça ne me parle pas !'
     conditions: '!tag_aubergiste_kilian'
     event: 'tag_aubergiste_kilian'
-  stop:
+  stopthat:
     text: 'Arrêtez de me harceler avec ça !'
     conditions: 'tag_aubergiste_kilian'
     events: 'reput_athelas1_negatif'
@@ -57,4 +57,4 @@ player_options:
   aubergiste:
     text: 'Voudriez vous loger au Baraquement des Mines ?'
     conditions: 'tag_aubergiste'
-    pointer: 'yes,no,stop'
+    pointer: 'agree,nothanks,stopthat'

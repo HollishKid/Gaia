@@ -38,15 +38,15 @@ NPC_options:
     conditions: 'the_demande,exalte'
     events: potion_ilse5
     pointers: aubergiste
-  yes:
+  agree:
     text: 'J''irais avec plaisir ! Merci de la suggestion !'
     conditions: 'random60,!tag_aubergiste_nimue'
     event: 'tag_aubergiste_nimue,point_aubergiste'
-  no:
+  nothanks:
     text: 'Non merci ça ne me parle pas !'
     conditions: '!tag_aubergiste_nimue'
     event: 'tag_aubergiste_nimue'
-  stop:
+  stopthat:
     text: 'Arrêtez de me harceler avec ça !'
     conditions: 'tag_aubergiste_nimue'
     events: 'reput_athelas1_negatif'
@@ -65,4 +65,4 @@ player_options:
   aubergiste:
     text: 'Voudriez vous loger au Baraquement des Mines ?'
     conditions: 'tag_aubergiste'
-    pointer: 'yes,no,stop'
+    pointer: 'agree,nothanks,stopthat'

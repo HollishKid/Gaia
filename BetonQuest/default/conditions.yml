@@ -51,6 +51,7 @@ random8: random 8-100
 random9: random 9-100
 random10: random 10-100
 random20: random 20-100
+random30: random 30-100
 random40: random 40-100
 random50: random 50-100
 random60: random 60-100

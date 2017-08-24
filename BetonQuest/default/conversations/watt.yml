@@ -26,15 +26,15 @@ NPC_options:
     text: 'Par Gaïa et toute la Spiritualité en ce bas monde... Est-ce bien vous &2%player% &a&o?! \nJe suis enchanté de vous voir !!'
     conditions: 'exalte'
     pointers: aubergiste
-  yes:
+  agree:
     text: 'J''irais avec plaisir ! Merci de la suggestion !'
     conditions: 'random30,!tag_aubergiste_ronke'
     event: 'tag_aubergiste_ronke,point_aubergiste'
-  no:
+  nothanks:
     text: 'Non merci ça ne me parle pas !'
     conditions: '!tag_aubergiste_ronke'
     event: 'tag_aubergiste_ronke'
-  stop:
+  stopthat:
     text: 'Arrêtez de me harceler avec ça !'
     conditions: 'tag_aubergiste_ronke'
     events: 'reput_athelas1_negatif'
@@ -43,4 +43,4 @@ player_options:
   aubergiste:
     text: 'Voudriez vous loger au Baraquement des Mines ?'
     conditions: 'tag_aubergiste'
-    pointer: 'yes,no,stop'
+    pointer: 'agree,nothanks,stopthat'
