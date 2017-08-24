@@ -3,3 +3,4 @@
 20zombies: 'mobkill ZOMBIE 20 events:untag_20zombies,tag_endquestlvl2,messagemobs_end'
 20skeletons: 'mobkill SKELETON 20 events:untag_20skeletons,tag_endquestlvl2,messagemobs_end'
 bonerituel: 'location -6660;73;3010;gaia 5 condition:folder_objectivebone events:rituelmessage1,delay10rituel'
+wait12h: 'delay 720 events:untag_wait12h'
