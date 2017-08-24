@@ -3584,7 +3584,8 @@ message18: 'message &2&oLe mot est alors passé à tous les Aventuriers courageu
 message19: 'message &2&oBeaucoup répondent à l''appel et des navires entiers débarquent à Athelas pour rejoindre le combat.'
 message20: 'message &2&oVous embarquez vous aussi à bord d''un grand navire pour la ville Royale d''Athelas.'
 tempo_historique_tag: tag add tempo_historique
-tempo_historique_tag_del: tag del tempo_historique#====================CONVERSATIONS===================
+tempo_historique_tag_del: tag del tempo_historique
+#====================CONVERSATIONS===================
 conversation_pnj_1: conversation amiral
 conversation_pnj_8: conversation man
 conversation_pnj_12: conversation pattefol
