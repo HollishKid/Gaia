@@ -1,0 +1,25 @@
+#Zedd.stacy
+pnj_233:
+  MobName: pnj_233
+  World: Gaia
+  X: -6922
+  Y: 79
+  Z: 3192
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 1
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 1
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

@@ -130,7 +130,6 @@ paulette_timer: delay 60 events:paulette_timer_up interval:1200
 paul_timer: delay 60 events:paul_timer_up interval:1200
 francis_timer: delay 60 events:francis_timer_up interval:1200
 pain_urgent: craft bread 3 events:pain_urgent_mess,tag_pain_urgent_done
-obj_pain_francis: npcinteract 359 cancel conditions:tag_pain_francis events:pain_francis_done
 #
 # Training Camp
 #

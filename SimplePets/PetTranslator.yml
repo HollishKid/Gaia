@@ -1,0 +1,271 @@
+Pets:
+  Blaze:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.3
+    DefaultName: '&a&lCompagnon Blaze de &2%player%'
+    DisplayName: '&f&lCompagnon Blaze'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Blaze.
+  Bat:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Chauve Souris de &2%player%'
+    DisplayName: '&f&lCompagnon Chauve Souris'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Chauve Souris.
+  Chicken:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.15
+    DefaultName: '&a&lCompagnon Poulet de &2%player%'
+    DisplayName: '&f&lCompagnon Poulet'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Poulet.
+  Cow:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.2
+    DefaultName: '&a&lCompagnon Vâche de &2%player%'
+    DisplayName: '&f&lCompagnon Vâche'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Vâche.
+  Creeper:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Creeper de &2%player%'
+    DisplayName: '&f&lCompagnon Creeper'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Creeper.
+  Enderman:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Enderman de &2%player%'
+    DisplayName: '&f&lCompagnon Enderman'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Enderman.
+  Giant:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Géant de &2%player%'
+    DisplayName: '&f&lCompagnon Géant'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Géant.
+  Horse:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.37
+    DefaultName: '&a&lCompagnon Cheval de &2%player%'
+    DisplayName: '&f&lCompagnon Cheval'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Cheval.
+  IronGolem:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.35
+    DefaultName: '&a&lCompagnon Gollem de &2%player%'
+    DisplayName: '&f&lCompagnon Gollem'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Gollem.
+  Mooshroom:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Vâche Champignon de &2%player%'
+    DisplayName: '&f&lCompagnon Vâche Champignon'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Vâche Champignon.
+  Ocelot:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Ocelot de &2%player%'
+    DisplayName: '&f&lCompagnon Ocelot'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Ocelot.
+  Pig:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.3
+    DefaultName: '&a&lCompagnon Cochon de &2%player%'
+    DisplayName: '&f&lCompagnon Cochon'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Cochon.
+  Pigman:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Cochon Zombie de &2%player%'
+    DisplayName: '&f&lCompagnon Cochon Zombie'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Pig Zombie.
+  Rabbit:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.35
+    DefaultName: '&a&lCompagnon Lapin de &2%player%'
+    DisplayName: '&f&lCompagnon Lapin'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Lapin.
+  Sheep:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.25
+    DefaultName: '&a&lCompagnon Mouton de &2%player%'
+    DisplayName: '&f&lCompagnon Mouton'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Mouton.
+  Silverfish:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Poisson d''Argent de &2%player%'
+    DisplayName: '&f&lCompagnon Poisson d''Argent'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Poisson d'Argent.
+  Skeleton:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Squelette de &2%player%'
+    DisplayName: '&f&lCompagnon Squelette'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Squelette.
+  SnowMan:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.3
+    DefaultName: '&a&lCompagnon Bonhomme de Neige de &2%player%'
+    DisplayName: '&f&lCompagnon Bonhomme de Neige'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Bonhomme de Neige.
+  Spider:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Araignée de &2%player%'
+    DisplayName: '&f&lCompagnon Araignée'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Araignée.
+  Villager:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.3
+    DefaultName: '&a&lCompagnon Villageois de &2%player%'
+    DisplayName: '&f&lCompagnon Villageois'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Villageois.
+  Wolf:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Loup de &2%player%'
+    DisplayName: '&f&lCompagnon Loup'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Loup.
+  Zombie:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Zombie de &2%player%'
+    DisplayName: '&f&lCompagnon Zombie'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Zombie.
+  Squid:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Poulpe de &2%player%'
+    DisplayName: '&f&lCompagnon Pouple'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Pouple.
+  Ghast:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Ghast de &2%player%'
+    DisplayName: '&f&lCompagnon Ghast'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Ghast.
+  Endermite:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Endermite de &2%player%'
+    DisplayName: '&f&lCompagnon Endermite'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Endermite.
+  Wither:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.6000000238418579
+    DefaultName: '&a&lCompagnon Wither de &2%player%'
+    DisplayName: '&f&lCompagnon Wither'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Wither.
+  Witch:
+    Enabled: true
+    Hat: true
+    Mount: true
+    WalkSpeed: 0.3
+    DefaultName: '&a&lCompagnon Sorcière de &2%player%'
+    DisplayName: '&f&lCompagnon Sorcière'
+    Description:
+    - Cliquez ici pour sélectionner
+    - le Compagnon Sorcière.

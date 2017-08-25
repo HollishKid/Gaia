@@ -1,0 +1,25 @@
+#default.pnj_allan
+pnj_allan:
+  MobName: pnj_allan
+  World: Gaia
+  X: -6643
+  Y: 89
+  Z: 2962
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 1
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 1
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

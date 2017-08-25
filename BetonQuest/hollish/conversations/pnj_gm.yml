@@ -1,0 +1,10 @@
+quester: 'Information'
+first: clic
+stop: 'false'
+#Options du NPC
+NPC_options:
+  clic:
+    text: 'Pour ouvrir le magasin, cliquez sur l''hologramme. \nPour en apprendre plus sur le commerce, consultez un &dCourtier&a&o.'
+#Options du joueur
+player_options:
+

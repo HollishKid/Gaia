@@ -1,0 +1,40 @@
+# 
+# Called When your pets' name changes.
+File Version: 1
+Prefix: '&d'
+No-Permission: '&cVous n''avez pas accès à cet Compagnon.'
+Unknown-Command: '&cCommande inconnue.'
+Player-Not-Found: '%player% is not valid.'
+Pet-Remove-Self-Removed: ''
+Pet-Remove-Self-No-Pet: ''
+Pet-Remove-Other-Remover: '%player%''s pet was successfully removed.'
+Pet-Remove-Other-Target: '%player% removed your pet.'
+Pet-Remove-Other-No-Pet: '%player% does not have a pet to remove.'
+Invalid-PetType: Invalid pet type.
+No-Pet-Permission: '&cVous n''avez pas accès à cet Compagnon. Consultez &2Charon &dau
+  Grand Marché.'
+Select-Pet: '&dVous avez sélectionné le Compagnon &2%pet%&d.'
+Select-Pet-Other: '%player% force selected the pet %pet% for you.'
+Select-Pet-Sender: You have set %player%'s pet to %pet%
+Other-No-Pet-Permission: '%player% does not have permission to this pet.'
+Type-Not-Supported: '&cCet Compagnon n''est pas disponible pour cette version.'
+Type-Not-Enabled: Cet Compagnon est désactivé.
+Pet-Name-Changed: '&dNouveau nom de votre Compagnon : &2%petname%'
+Menu-Name: '&a&lSélectionner Compagnon :'
+Hat:
+  Set-Hat: '&e&lMettre comme Chapeau'
+  Remove-Hat: '&e&lEnlever votre Chapeau'
+Mount-Pet: '&e&lMontez sur votre Compagnon'
+Remove-Pet: '&4&lEnlever Compagnon'
+Name-Pet: '&a&lRenommer Compagnon'
+Data-Menu:
+  Main-Name: '&a&lModification des données'
+  Age-Name: '&a&lModification de l''âge'
+  Color-Name: '&a&lModification de la couleur'
+  Item:
+    Age:
+      Main: Âge
+      To-Baby: Enfant
+      To-Adult: Adulte
+    Color:
+      Main: Couleur

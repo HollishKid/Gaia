@@ -383,6 +383,7 @@ water_wand: tag water_wand
 # Érudit de la Terre
 #
 #
+tag_erudit_terre: tag erudit_terre
 pierre_terre_hand: hand pierre_terre
 pierre_terre_have: item pierre_terre
 region_north: region north
@@ -425,12 +426,20 @@ ef_diamond: tag ef_diamond
 earth_baton_obj_tag: tag earth_baton_obj
 #
 #
+# Water Temple
+#
+#
+
+water_cristal1: height 21
+water_cristal2: hand cristal_eau_banal
+water_cristal3: item snowball:16
+watertemple_magic_learning: tag watertemple_magic_learning
+#
+#
 # Érudits (autres, tempo)
 #
 firetemple_magic_learning: tag firetemple_magic_learning
-watertemple_magic_learning: tag watertemple_magic_learning
 
-tag_erudit_terre: tag erudit_terre
 tag_erudit_eau: tag erudit_eau
 tag_erudit_feu: tag erudit_feu
 #

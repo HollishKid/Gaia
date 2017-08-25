@@ -9,25 +9,40 @@ NPC_options:
   delay_ilse2:
     text: 'Je trouve que vous me parlez un peu souvent... !'
     conditions: 'delay_ilse2'
+    pointers: aubergiste
   hostile:
     text: 'Tu cherches la bagarre toi ? Vas-t-en de là avant que je te mette une autre giffle!'
     conditions: '!neutre,!delay_ilse2'
     events: baffe
+    pointers: aubergiste
   neutre:
     text: 'Bonjour &2%player%&a&o ! Comment allez vous ?'
     conditions: 'neutre,!amical,!delay_ilse2'
-    pointers: bonjour,tagueule
+    pointers: bonjour,tagueule,aubergiste
   amical:
     text: 'J''espère que vous avez une maison avec de solides murs ! Les rumeurs sur les nouveaux &dPortails Magiques &a&osont de plus en plus inquiétantes !'
     conditions: 'amical,!honore,!delay_ilse2'
-    pointers: nopb,pd
+    pointers: nopb,pd,aubergiste
   honore:
     text: 'On dit que vous êtes un vaillant Aventurier ! Votre présence ici me rassure énormément !'
     conditions: 'honore,!exalte,!delay_ilse2'
-    pointers: merci,pd2
+    pointers: merci,pd2,aubergiste
   exalte:
     text: 'Heureusement que de vaillants Aventuriers comme vous soient ici pour prêter main forte contre les Forces du Mal !'
     conditions: 'exalte,!delay_ilse2'
+    pointers: aubergiste
+  agree:
+    text: 'J''irais avec plaisir ! Merci de la suggestion !'
+    conditions: 'random60,!tag_aubergiste_olaf'
+    event: 'tag_aubergiste_olaf,point_aubergiste'
+  nothanks:
+    text: 'Non merci ça ne me parle pas !'
+    conditions: '!tag_aubergiste_olaf'
+    event: 'tag_aubergiste_olaf'
+  stopthat:
+    text: 'Arrêtez de me harceler avec ça !'
+    conditions: 'tag_aubergiste_olaf'
+    events: 'reput_athelas1_negatif'
 #Options du joueur
 player_options:
   bonjour:
@@ -47,3 +62,7 @@ player_options:
   pd2:
     text: 'On dirait que vous êtes amoureux ! Vous voulez mon portrait ?!'
     events: reput_athelas3_negatif,delay_ilse2
+  aubergiste:
+    text: 'Voudriez vous loger au Baraquement des Mines ?'
+    conditions: 'tag_aubergiste'
+    pointer: 'agree,nothanks,stopthat'

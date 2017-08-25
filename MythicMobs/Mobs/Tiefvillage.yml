@@ -95,7 +95,7 @@ moinevoleur:
   Disguise:
     Type: player
     Player: "&6Moine voleur"
-    Skin: drhuehue808
+    Skin: KingdomNetwork
   Drops:
   - moinevoleurDrops
   AIGoalSelectors:

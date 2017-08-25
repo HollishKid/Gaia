@@ -336,21 +336,13 @@ sub "wandupdater":
 	fire event "hollish.regenup_%{_element}%_exe3" for {_apprentice}
 	fire event "hollish.manaup_%{_element}%_exe3" for {_apprentice}
 	if parameter 2 is "air":
-		loop yaml list "air_spells" from file "/plugins/Skript/scripts/config.yml":
-			add "%loop-value%" to {_air_spells::*}
-		loop yaml list "air_spells_bq" from file "/plugins/Skript/scripts/config.yml":
-			add "%loop-value%" to {_air_spells_bq::*}
-		loop {_air_spells_bq::*}:
-			if {_apprentice} meets betonquest condition "hollish.%{_air_spells_bq::%loop-index%}%":
-				execute console command "wandp %{_apprentice}% add %{_air_spells::%loop-index%}%"
+		loop {air_spells_bq::*}:
+			if {_apprentice} meets betonquest condition "hollish.%{air_spells_bq::%loop-index%}%":
+				execute console command "wandp %{_apprentice}% add %{air_spells::%loop-index%}%"
 	else if parameter 2 is "earth":
-		loop yaml list "earth_spells" from file "/plugins/Skript/scripts/config.yml":
-			add "%loop-value%" to {_earth_spells::*}
-		loop yaml list "earth_spells_bq" from file "/plugins/Skript/scripts/config.yml":
-			add "%loop-value%" to {_earth_spells_bq::*}
-		loop {_earth_spells_bq::*}:
-			if {_apprentice} meets betonquest condition "hollish.%{_earth_spells_bq::%loop-index%}%":
-				execute console command "wandp %{_apprentice}% add %{_earth_spells::%loop-index%}%"	
+		loop {earth_spells_bq::*}:
+			if {_apprentice} meets betonquest condition "hollish.%{earth_spells_bq::%loop-index%}%":
+				execute console command "wandp %{_apprentice}% add %{earth_spells::%loop-index%}%"	
 				
 #
 #
@@ -363,52 +355,21 @@ command /addlouvreregister <player>:
 	executable by: console
 	trigger:
 		add arg 1 to {louvre_registre::*}
-		message "&2Gestionnaire &f: &a&oVous avez été correction inscit sur le" to arg 1
+		message "&2Gestionnaire &f: &a&oVous avez été correctement inscrit sur le" to arg 1
 		message "&2Registre des Écuyers du Louvre !" to arg 1
-		message "&a&oBienvenue à vous !" to arg 1
-#
-command /louvreweeklyreward <player>:
-	executable by: console
-	trigger:
-		if "%{louvre_contribution_received::*}%" contains "%arg 1%":
-			message "&2Gestionnaire &f: &a&oVous avez déjà reçu votre paiement cette semaine !" to arg 1
-			message "&a&oLa nouvelle semaine commence Dimanche à 23 heures." to arg 1
-		else if "%{louvre_contributors::*}%" contains "%arg 1%":
-			set {_block.total.louvre} to {block.breaks.louvre} + {block.placed.louvre}
-			set {_block.total.louvre} to {_block.total.louvre} / 100
-			set {_louvre_uruk_total} to {louvre_uruk_kills} + {louvre_uruka_kills}
-			set {_louvre_uruk_total} to {_louvre_uruk_total} / 10
-			set {_louvre_weekly_reward} to {_block.total.louvre} + {_louvre_uruk_total}
-			message "&2Gestionnaire &f: &a&oLe montant s'élève actuellement à &f¤ &2%{_louvre_weekly_reward}%&a&o." to arg 1
-			message "&2Gestionnaire &f: &a&oVoici votre paiement de la semaine." to arg 1
-			execute console command "eco give %arg 1% %{_louvre_weekly_reward}%"
-			add arg 1 to {louvre_contribution_received::*}
-		else:
-			message "&2Gestionnaire &f: &a&oIl semblerait que vous n'ayez contribué à aucun projet !" to arg 1
-			message "&a&oPour pouvoir prétendre à votre paiement, vous devez contribuer à au moins un projet." to arg 1
-			
+		message "&a&oVous serez inscrit jusqu'à dimanche 23 Heures," to arg 1
+		message "&a&oaprès quoi les récompenses seront distribuées" to arg 1
+		message "&a&oet vous serez désincrit." to arg 1
 #	
 command /thisistheurukkilledcommand:
+	executable by: console
 	trigger:
-		if "%{louvre_registre::*}%" contains "%player%":
-			if "%{louvre_contributors}%" contains "%player%":
-				add 1 to {louvre_uruk_kills}
-			else:
-				add player to {louvre_contributors::*}
-				add 1 to {louvre_uruk_kills}
-		else:
-			stop
+		add 1 to {louvre_uruk_kills}
 #
 command /thisistheurukakilledcommand:
+	executable by: console
 	trigger:
-		if "%{louvre_registre::*}%" contains "%player%":
-			if "%{louvre_contributors}%" contains "%player%":
-				add 1 to {louvre_uruka_kills}
-			else:
-				add player to {louvre_contributors::*}
-				add 1 to {louvre_uruka_kills}
-		else:
-			stop
+		add 1 to {louvre_uruka_kills}
 #
 #
 #

@@ -126,3 +126,137 @@ SummonZombies:
   - sendtitle{title="";subtitle="&cSancossi Appelle des Renforts !";d=40} @PlayersNearOrigin{r=10}
   - delay 30
   - summon{mob=gardessancossi;amount=1;noise=5} @Self
+#
+#
+# Donjon Village
+#
+#
+#
+# Stage I
+#
+
+RingOfFire:
+  Skills:
+  - effect:particlering{particle=flame;radius=3;points=300;amount=1;hS=1;vS=0.2} @self
+  - damage{amount=12} @PlayersNearOrigin{r=3}
+  - explosion{yield=3}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=3}
+
+#
+# Fireball
+#
+GollemFirstSkill:
+  Skills:
+  - shootfireball{y=1;v=1;ft=10}
+  - delay 10
+  - shootfireball{y=1;v=1;ft=10}
+  - delay 10
+  - shootfireball{y=1;v=1;ft=10}
+
+#
+# Missile
+#
+GollemSecondSkill:
+  Skills:
+  - missile{Inertia=1.5;onTick=GollemFeuTick;onHit=GollemFeuHit;Velocity=5;HorizontalRadius=1;VerticalRadius=1;Interval=2}
+GollemFeuTick:
+  Skills:
+  - effect:particles{p=angryVillager;amount=10;hSpread=0.2;vSpread=0.2} @origin
+GollemFeuHit:
+  Skills:
+  - explosion{yield=3}
+  - damage{amount=20} @PlayersNearOrigin{r=2}
+  - ignite{ticks=100} @PlayersNearOrigin{r=2}
+  - effect:geyser{type=LAVA;height=3;speed=10}
+#
+# Ground Attack
+# 
+GollemThirdSkill:
+  Skills:
+  - projectile{onTick=GollemGroundTick;onHit=GollemGroundHit;Velocity=5;HorizontalRadius=1;VerticalRadius=1;Interval=2;HugSurface=true}  
+GollemGroundTick:
+  Skills:
+  - effect:particles{p=flame;amount=5;hSpread=0.3;vSpread=0.1} @origin
+GollemGroundHit:
+  Skills:
+  - explosion{yield=3}
+  - damage{amount=20} @PlayersNearOrigin{r=4}
+  - ignite{ticks=150} @PlayersNearOrigin{r=4}
+  - effect:particles{p=fireworksSpark;amount=30;hSpread=0.5;vSpread=0.8;yOffset=1.0}
+#
+# Ring
+#
+GollemTableSkill:
+  Skills:
+  - projectile{onTick=GollemTableTick;onHit=GollemTableHit;onEnd=GollemTableHit;Velocity=5;HorizontalRadius=1;VerticalRadius=1;Interval=2;HugSurface=true;MaxRange=20}  
+GollemTableTick:
+  Skills:
+  - effect:particles{p=flame;amount=10;hSpread=0.1;vSpread=0.1} @origin
+GollemTableHit:
+  Skills:
+  - damage{amount=15} @PlayersNearOrigin{r=3}
+  - ignite{ticks=40} @PlayersNearOrigin{r=3}
+  - effect:particles{p=reddust;c=#f46f00;amount=20;hSpread=2.0;vSpread=2.0;yOffset=1.0}
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=0.01}
+#
+#
+# Multiple Missile
+#
+# 
+GollemMissileSkill:
+  Skills:
+  - teleportto{location=-6890,50,2500} @self
+  - actionmessage{m="<mob.name>&f lance de multiples missiles !"} @PlayersInRadius{r=30}
+#
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6865,80,2484}
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6865,80,2488}
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6865,80,2496}
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6865,80,2492} 
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6865,80,2500} 
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6865,80,2504} 
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6865,80,2508}
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6865,80,2512}
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6865,80,2516}
+#
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6914,80,2484}
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6914,80,2488}
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6914,80,2496}
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6914,80,2492} 
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6914,80,2500} 
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6914,80,2504} 
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6914,80,2508}
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6914,80,2512}
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6914,80,2516}
+#
+GollemRegularSkill:
+  Skills:
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6914,100,2535}  
+  - projectile{onTick=GollemTableTick;onHit=GollemMissileHit;onEnd=GollemMissileHit;Velocity=7;HorizontalRadius=1;VerticalRadius=1;Interval=2;gravity=0.2} @Location{c=-6865,100,2535}
+#
+GollemMissileHit:
+  Skills:
+  - explosion{yield=5}  
+  - damage{amount=12} @PlayersNearOrigin{r=3}
+  - effect:particles{p=reddust;c=#f46f00;amount=20;hSpread=1.0;vSpread=1.0;yOffset=1.0}
+  
+#
+#
+#
+GollemFloorSkill:
+  Skills:
+  - sendtitle{title="";subtitle="Le verre se casse !";d=60} @PlayersInRadius{r=30}
+  - delay 60
+  - command{c="donjonvillageglassremove"}
+  - delay 250
+  - command{c="donjonvillageglassadd"}
+  
+GollemDoorOpenSkill:
+  Skills:
+  - sendtitle{title="";subtitle="&aLes Grilles s'ouvrent !";d=100} @PlayersInRadius{r=30}
+  - command{c="donjonvillagedooropen"}
+  - command{c="donjonvillageglassadd"}
+GollemDoorCloseSkill:
+  Skills:
+  - sendtitle{title="&cGollem de Feu";subtitle="";d=100} @PlayersInRadius{r=30}
+  - command{c="donjonvillagedoorclose"}
+  - command{c="donjonvillageglassadd"}

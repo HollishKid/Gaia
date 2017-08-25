@@ -41,7 +41,6 @@ towns:
         - towny.command.town.*
         - towny.command.plot.*
         - towny.claimed.owntown.*
-        - towny.command.nation.new
 
     ranks:
         # Ranks contain additional permissions residents will be

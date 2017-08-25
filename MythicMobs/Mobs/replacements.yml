@@ -8,6 +8,121 @@
 #
 ###########################################################
 #
+# Garde Continent Est
+#
+firstguard:
+  Type: zombie
+  Display: '&bGarde Royal'
+  Health: 50
+  Damage: 3
+  Faction: gardes
+  Disguise:
+    Type: player
+    Player: '&bGarde Royal'
+    Skin: _ObitoUchiha_
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    MovementSpeed: 0.23
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+    KnockbackResistance: 0.20
+    Silent: true
+    Despawn: true
+  Equipment:
+    - mc_diamond_helmet:4
+    - mc_diamond_chestplate:3
+    - mc_diamond_leggings:2
+    - mc_diamond_boots:1
+    - mc_diamond_sword:0
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 float
+  - 3 patrol 515,64,5649;515,64,5620;498,64,5637
+  - 4 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget 
+  - 2 SpecificFaction zombies
+alphaguard:
+  Type: zombie
+  Display: '&bGarde Royal'
+  Health: 50
+  Damage: 3
+  Faction: gardes
+  Disguise:
+    Type: player
+    Player: '&bGarde Royal'
+    Skin: _ObitoUchiha_
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+    KnockbackResistance: 0.20
+    Silent: true
+    Despawn: true
+  Equipment:
+    - mc_diamond_helmet:4
+    - mc_diamond_chestplate:3
+    - mc_diamond_leggings:2
+    - mc_diamond_boots:1
+    - mc_diamond_sword:0
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 float
+  - 3 patrol 515,64,5620;534,64,5620;534,64,5652;534,64,5620;515,64,5620
+  - 4 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget 
+  - 2 SpecificFaction zombies
+secondguard:
+  Type: skeleton
+  Display: '&bGarde Royal'
+  Health: 50
+  Damage: 3
+  Faction: gardes
+  Disguise:
+    Type: player
+    Player: '&bGarde Royal'
+    Skin: holidays
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    MovementSpeed: 0.15
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+    KnockbackResistance: 0.20
+    Silent: true
+    Despawn: true
+  Equipment:
+    - mc_diamond_helmet:4
+    - mc_diamond_chestplate:3
+    - mc_diamond_leggings:2
+    - mc_diamond_boots:1
+    - mc_bow:0
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 skeletonbowattack
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  - 1 hurtbytarget 
+  - 2 SpecificFaction zombies
+#
 # Zombies
 #
 zombielvl:
@@ -301,7 +416,7 @@ uruklevelzombie:
   Skills:
   - particles{p=portal;a=10;hs=0.5;vs=0.7;s=0;y=0.7} @self ~onDamaged
   - particles{p=portal;a=500;hs=0.7;vs=1.0;s=0;y=1.0} @self ~onDeath
-  - command{c="sudo <target.name> thisistheurukkilledcommand"} @trigger ~onDeath
+  - command{c="thisistheurukkilledcommand"} @trigger ~onDeath
   LevelModifiers:
     Health: 5
     Damage: 1
@@ -411,6 +526,21 @@ apig:
   Options:
     AlwaysShowName: false
     Despawn: true
+    
+#
+# Sam
+#
+sammaryson:
+  Type: BABY_ZOMBIE
+  Display: '&2Sam'
+  Options:
+    Invincible: true
+    AlwaysShowName: false
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
 #
 #
 # Massive Villager
@@ -479,3 +609,229 @@ villager_priest:
     PreventOtherDrops: true
     Despawn: true
     VillagerType: PRIEST
+#
+#
+# Guardians
+#
+#
+waterguardian:
+  Type: guardian
+  Health: 40
+  Options:
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 0.20
+    Despawn: true
+  Modules:
+    ThreatTable: false
+  AIGoalSelectors:
+  - 0 clear
+  - 1 fleeplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  Drops:
+  - prismarine_crystals 1-3 0.30
+  - fishing_scroll_1 1-2 0.05
+#
+# Added following mobs to replace Citizens in other plugins
+#
+
+#
+# Hollish Questing
+#
+ermite_boat:
+  Type: cow
+  Display: '&2Ermite'
+  Disguise:
+    Type: player
+    Player: '&2Ermite'
+    Skin: nevec
+  Options:
+    Invincible: true
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+
+ermite_final:
+  Type: cow
+  Display: '&2Ermite'
+  Disguise:
+    Type: player
+    Player: '&2Ermite'
+    Skin: nevec
+  Options:
+    Invincible: true
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  
+sanctuary_mages:
+  Type: cow
+  Display: '&aMage'
+  Disguise:
+    Type: player
+    Player: '&aMage'
+    Skin: dumbledore
+  Options:
+    Invincible: true
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  
+sanctuary_erudits1:
+  Type: cow
+  Display: '&aErudit'
+  Disguise:
+    Type: player
+    Player: '&aErudit'
+    Skin: mikeell
+  Options:
+    Invincible: true
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  
+sanctuary_erudits2:
+  Type: cow
+  Display: '&aErudit'
+  Disguise:
+    Type: player
+    Player: '&aErudit'
+    Skin: lava
+  Options:
+    Invincible: true
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  
+sanctuary_moines:
+  Type: cow
+  Display: '&aMoine'
+  Disguise:
+    Type: player
+    Player: '&aMoine'
+    Skin: buddha
+  Options:
+    Invincible: true
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  
+sanctuary_minions:
+  Type: cow
+  Display: '&aMinion'
+  Disguise:
+    Type: player
+    Player: '&aMinion'
+    Skin: ron
+  Options:
+    Invincible: true
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+#
+# Zedd Questing
+#
+drisgan_cine_erek:
+  Type: player
+  Display: '&4Erek'
+  Disguise:
+    Type: player
+    Player: '&4Erek'
+    Skin: The_Pro_HUNTER
+  Options:
+    Invincible: true
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+# 
+drisgan_cine_frank:
+  Type: player
+  Display: '&6Frank'
+  Disguise:
+    Type: player
+    Player: '&6Frank'
+    Skin: SchmiddyyyDE
+  Options:
+    Invincible: true
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+# 
+zedd_orion:
+  Type: player
+  Display: '&6Orion'
+  Disguise:
+    Type: player
+    Player: '&6Orion'
+    Skin: criticalimpact
+  Options:
+    Invincible: true
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear

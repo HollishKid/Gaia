@@ -1,4 +1,4 @@
-quester: 'arthus'
+quester: 'Arthus'
 first: n0,n1
 stop: 'false'
 NPC_options:
@@ -8,7 +8,7 @@ NPC_options:
   n1:
     text: 'Salut ! Toi aussi tu aimes goûter de nouvelles choses ?'
     conditions: 'intendant_done'
-    pointers: oui,non,temple
+    pointers: oui,non,temple,aubergiste
   repoui:
     text: 'C''est l''esprit ! Quand j''étais plus jeune j''ai vu une &6Carotte dorée &a&o! Je ne l''ai jamais gouté, mais il parait que cela fait un jus excellent !'
     conditions: '!gret_q2done'
@@ -18,6 +18,18 @@ NPC_options:
     text: 'Ah, dommage...'
   rep1:
     text: 'Jamais entendu parler, désolé...'
+  agree:
+    text: 'J''irais avec plaisir ! Merci de la suggestion !'
+    conditions: 'random70,!tag_aubergiste_arthus'
+    event: 'tag_aubergiste_arthus,point_aubergiste'
+  nothanks:
+    text: 'Non merci ça ne me parle pas !'
+    conditions: '!tag_aubergiste_arthus'
+    event: 'tag_aubergiste_arthus'
+  stopthat:
+    text: 'Arrêtez de me harceler avec ça !'
+    conditions: 'tag_aubergiste_arthus'
+    events: 'reput_athelas1_negatif'
 player_options:
   oui:
     text: 'Oui !'
@@ -29,3 +41,7 @@ player_options:
     text: 'En fait, je suis à la recherche d''un temple souterrain, vous connaissez ?'
     conditions: 'Zedd.kal_q1start'
     pointers: rep1
+  aubergiste:
+    text: 'Voudriez vous loger au Baraquement des Mines ?'
+    conditions: 'tag_aubergiste'
+    pointer: 'agree,nothanks,stopthat'

@@ -141,7 +141,7 @@ Messages:
   ItemIsDamaged: '&cObjet endommagé'
   MoneyDepositTax: '&cVous avez reçu  &2%arg0 &c(Dont  &2%arg1 &cde taxes)'
   InformAboutBuy: '&2%arg0 &cvient d''acheter votre offre: &d%arg1 %arg1'
-  AdminShopIsDisabled: '&cCe Magasin n''est pas accessible.'
+  AdminShopIsDisabled: '&cCet objet ne peux pas être acheté.'
   Inventory:
     NoSpace: '&cVous n''avez pas assez de place dans votre inventaire.'
     NoMoney: '&cVous n''avez pas assez d''argent!'
