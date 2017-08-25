@@ -35,7 +35,7 @@ on break:
 				add location of event-block to {break.location.mine3::*}
 				add type of event-block to {break.type.mine3::*}
 	else if event-block is in the region "foret_athelas" or "foret_athelas2":
-		if "%event-block%" contains "sapling":
+		if event-block is not any logs or any leaves:
 			cancel event
 	else if event-block is in the region "ingor_volcano":
 		if "%{place.location.volcano::*}%" contains "%location of event-block%":
