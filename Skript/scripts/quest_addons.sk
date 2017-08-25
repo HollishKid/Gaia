@@ -367,7 +367,6 @@ command /thisistheurukkilledcommand:
 		add 1 to {louvre_uruk_kills}
 #
 command /thisistheurukakilledcommand:
-	trigger:
 	executable by: console
 	trigger:
 		add 1 to {louvre_uruka_kills}

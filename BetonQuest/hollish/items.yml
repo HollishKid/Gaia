@@ -64,4 +64,4 @@ fish2: RAW_FISH data:2
 fish3: RAW_FISH data:1
 fish4: RAW_FISH data:3
 cristal_eau_banal: PRISMARINE_CRYSTALS name:§2§lCristal_Banal lore:_;§8§oCe_cristal_est;§8§opas_très_joli...;_;§2Objet_de_Quête
-snowball: SNOWBALL lore:none
+snowball: SNOW_BALL lore:none
