@@ -324,7 +324,7 @@ on join:
 		wait 2 ticks
 		execute console command "eco give %player% %{louvre.contributor.%player%}%"
 		delete {louvre.contributor.%player%}
-	if event-player is "Zedd" or "crashoz" or "Hollish":
+	if event-player is "Zedd" or "crashozz" or "Hollish":
 		set {_s} to placeholder parse "%%server_online%%" as player
 		set {_s1} to placeholder parse "%%server_unique_joins%%" as player
 		set {_s2} to placeholder parse "%%server_uptime%%" as player
