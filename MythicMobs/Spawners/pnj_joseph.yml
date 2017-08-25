@@ -16,7 +16,7 @@ pnj_joseph:
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40
-  LeashRange: 50
+  LeashRange: 1
   HealOnLeash: true
   ResetThreatOnLeash: true
   ShowFlames: false
