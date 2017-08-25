@@ -1,4 +1,7 @@
-  #Grand Gardien#
+  #PNJ#
+conversation_gardien: 'conversation gardien_sanctuaire'
+conversation_joseph: 'conversation joseph'
+            #remplacer 'gardien' et 'joseph' par le numéro du pnj sur le prod#
 tag_visite: 'tag add visite'
 tag_lvl1: 'tag add level1'
 tag_lvl2: 'tag add level2'
