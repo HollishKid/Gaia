@@ -324,7 +324,19 @@ on join:
 		wait 2 ticks
 		execute console command "eco give %player% %{louvre.contributor.%player%}%"
 		delete {louvre.contributor.%player%}
-		
+	if event-player is "Zedd" or "crashozz" or "Hollish":
+		set {_s} to placeholder parse "%%server_online%%" as player
+		set {_s1} to placeholder parse "%%server_unique_joins%%" as player
+		set {_s2} to placeholder parse "%%server_uptime%%" as player
+		set {_s3} to placeholder parse "%%server_ram_used%%" as player
+		set {_s4} to placeholder parse "%%server_ram_total%%" as player
+		message "&f========== &c~ &6¤ &c~ &f=========="
+		message "    &6Informations Serveur"
+		message "&aJoueurs : &2&l%{_s}%"
+		message "&aComptes : &2&l%{_s1}%"
+		message "&aUptime : &2&l%{_s2}%"
+		message "&aRAM : &2&l%{_s3}% &a/ &2&l%{_s4}%"
+		message "&f========== &c~ &6¤ &c~ &f=========="		
 #
 	wait 20 seconds
 	if {event.double.xp} is 1:

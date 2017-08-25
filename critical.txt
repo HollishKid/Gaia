@@ -5,3 +5,4 @@ spigot.yml
 bukkit.yml
 server.properties
 PermissionsEx/permissions.yml
+BetonQuest/Mysteria
