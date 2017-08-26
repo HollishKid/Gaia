@@ -1,0 +1,25 @@
+#Undertimes.gardien_sanctuaire
+pnj_gardien:
+  MobName: pnj_gardien
+  World: Gaia
+  X: -7109
+  Y: 67
+  Z: 2430
+  Radius: 1
+  UseTimer: true
+  MaxMobs: 1
+  MobLevel: 1
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  LeashRange: 1
+  HealOnLeash: true
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0
