@@ -783,7 +783,7 @@ sanctuary_minions:
 # Zedd Questing
 #
 drisgan_cine_erek:
-  Type: player
+  Type: cow
   Display: '&4Erek'
   Disguise:
     Type: player
@@ -801,7 +801,7 @@ drisgan_cine_erek:
   - 0 clear
 # 
 drisgan_cine_frank:
-  Type: player
+  Type: cow
   Display: '&6Frank'
   Disguise:
     Type: player
@@ -819,7 +819,7 @@ drisgan_cine_frank:
   - 0 clear
 # 
 zedd_orion:
-  Type: player
+  Type: cow
   Display: '&6Orion'
   Disguise:
     Type: player
