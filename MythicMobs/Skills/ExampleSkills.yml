@@ -38,7 +38,7 @@ IceBolt-Hit:
   Skills:
   - damage{a=3}
   - potion{type=SLOW;duration=100;lvl=2}
-  - message{cooldown=50;m="&6&oRalenti!"} @target
+  - message{cooldown=50;m="&c&oRalenti !"} @target
 FireBolt:
   Skills:
   - projectile{onTick=FireBolt-Tick;onHit=FireBolt-Hit;v=10;i=1;hR=1;vR=1}
@@ -51,11 +51,11 @@ FireBolt-Hit:
 weakness1:
   Skills:
   - potion{type=WEAKNESS;d=200;lvl=2}
-  - message{cooldown=50;m="&6&oFaiblesse!"} @target
+  - message{cooldown=50;m="&c&oFaiblesse !"} @target
 tpkick:
   Skills:
   - teleport{sh=2;vh=1} @target
-  - message{cooldown=1;m="&6&oDéplacement instantané!"} @target
+  - message{cooldown=1;m="&c&oDéplacement instantané !"} @target
   - potion{type=SLOW;duration=100;lvl=2}
   - damage{amount=2}
   - effect:boss particles cloud:1:1:25:0.1:-2 >0 1
@@ -63,14 +63,14 @@ firekick:
   Conditions:
   - targetwithin 3
   Skills:
-  - message{cooldown=1;m="&6&oPoing enflammé!!"} @target
+  - message{cooldown=1;m="&c&oPoing enflammé !!"} @target
   - effect:explosion @target
   - damage{amount=5} @target
   - throw{v=9;vy=2} @target
   - ignite{ticks=50} @target
 tpheal:
   Skills:
-  - message{cooldown=1;m="&6&oTakeo se soigne!"} @target
+  - message{cooldown=1;m="&c&oTakeo se soigne !"} @target
   - heal{a=25} self
   - effect:particles{particle=heart;amount=30;hS=1;vS=1;speed=5} @self
 takeotaunt:
@@ -78,13 +78,13 @@ takeotaunt:
   - randomskill {skills=tt1,tt2,tt3}
 tt1:
   Skills:
-  - message{cooldown=1;m="&4Takeo:&7 Je vais t'étriper!"} @target
+  - message{cooldown=1;m="&cTakeo:&a&o Je vais t'étriper !"} @target
 tt2:
   Skills:
-  - message{cooldown=1;m="&4Takeo:&7 Tu fais pas le poids!"} @target
+  - message{cooldown=1;m="&cTakeo:&a&o Tu fais pas le poids !"} @target
 tt3:
   Skills:
-  - message{cooldown=1;m="&4Takeo:&7 Tu ne peux pas m'échapper!"} @target
+  - message{cooldown=1;m="&cTakeo:&a&o Tu ne peux pas m'échapper !"} @target
 orion_stun:
   Skills:
   - potion{type=SLOW;duration=100;lvl=10}
