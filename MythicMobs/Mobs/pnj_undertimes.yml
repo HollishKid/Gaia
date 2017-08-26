@@ -18,7 +18,7 @@ pnj_gardien:
   AITargetSelectors:
   - 0 clear
   Skills:
-  - command{c="bq event <trigger.name> Undertimes.conversation_gardien"} @trigger ~onInteract
+  - command{c="bq event <trigger.name> Undertimes.conversation_pnj_gardien"} @trigger ~onInteract
 
 pnj_joseph:
   Type: cow
@@ -40,4 +40,4 @@ pnj_joseph:
   AITargetSelectors:
   - 0 clear
   Skills:
-  - command{c="bq event <trigger.name> Undertimes.conversation_joseph"} @trigger ~onInteract
+  - command{c="bq event <trigger.name> Undertimes.conversation_pnj_joseph"} @trigger ~onInteract

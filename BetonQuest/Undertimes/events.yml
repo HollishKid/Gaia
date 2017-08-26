@@ -1,11 +1,10 @@
   #PNJ#
-conversation_gardien: 'conversation gardien_sanctuaire'
-conversation_joseph: 'conversation joseph'
-            #remplacer 'gardien' et 'joseph' par le numéro du pnj sur le prod#
+conversation_pnj_gardien: 'conversation gardien_sanctuaire'
+conversation_pnj_joseph: 'conversation joseph'
 tag_visite: 'tag add visite'
 tag_lvl1: 'tag add level1'
 tag_lvl2: 'tag add level2'
-tag_lvl3: 'tag add level3' 
+tag_lvl3: 'tag add level3'
   #Waiting et endquest#
 tag_wait12h: 'tag add wait12h'
 untagfolder_wait12h: 'objective start wait12h'
