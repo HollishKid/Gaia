@@ -311,6 +311,7 @@ groups:
     - admin.prison
     - essentials.gamemode
     - chatcontrol.bypass.spectator
+    - essentials.vanish
     - essentials.ban
     - essentials.banip
     - essentials.tempban
