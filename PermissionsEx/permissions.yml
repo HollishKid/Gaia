@@ -309,6 +309,8 @@ groups:
     - authme.admin.register
     - authme.vip
     - admin.prison
+    - essentials.gamemode
+    - chatcontrol.bypass.spectator
     - essentials.ban
     - essentials.banip
     - essentials.tempban
@@ -378,6 +380,7 @@ groups:
     permissions:
     - towny.*
     - chatcontrol.bypass.rules
+    - chatcontrol.bypass.spectator
     - authme.vip
     - essentials.sudo.exempt
     - authme.vip
