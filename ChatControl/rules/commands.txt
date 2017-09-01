@@ -24,14 +24,7 @@ then notify chatcontrol.commandes &f[&cNote Admin&f] &2%player &ca exécuté: &f
 then deny
 then log
 
-match ^/(gm|gamemode) 3\b
-ignore perm chatcontrol.bypass.spectator
-then warn &cNe tentez pas d'exécuter ce type de commandes.
-then notify chatcontrol.commandes &f[&cNote Admin&f] &2%player &ca exécuté: &f%message &c. Est-ce normal?
-then deny
-then log
-
-match ^/(gm|gamemode) 0\b
+match ^/(gm|gamemode) (0|3)
 ignore perm chatcontrol.bypass.spectator
 then warn &cNe tentez pas d'exécuter ce type de commandes.
 then notify chatcontrol.commandes &f[&cNote Admin&f] &2%player &ca exécuté: &f%message &c. Est-ce normal?
