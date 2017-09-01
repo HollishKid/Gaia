@@ -6,30 +6,42 @@ stop: 'false'
 
 NPC_options:
   'salut':
-    text: 'Bonjour jeune écuyer !
+    text: 'Bonjour jeune écuyer !'
     conditions: 'default.grade_ecuyer'
     pointers: 'qui'
-  'qui':
-    text: 'Je suis le représentant d'une petite ville du sud, nommée &2Alcyone&a&o. C'est une ville agréable à vivre, sanctuaire des antiques dragons.
-    pointers:: 'dragons,quoi'
+  'qui2':
+    text: 'Je suis le représentant d''une petite ville au sud, nommée &2Alcyone&a&o. C''est une ville agréable à vivre, sanctuaire des antiques dragons.'
+    pointers: 'dragons'
   'oui':
-    text: 'Oui, mais ils sont extremements dangereux ! &2Alcyone&a&o est actuellement soumise à ces féroces monstres, et ce, malgré leur nombre très limité ! '
-    pointers: 'pourquoi,aide'
+    text: 'Oui, mais ils sont extremements dangereux ! &2Alcyone &a&oest actuellement soumise à ces féroces monstres, bien que leur espèce ne compte qu''une poignée de membres...'
+    pointers: 'pourquoi, aide'
+  'oui2':
+    text: 'En effet. &2Alcyone&a&o est une grande ville, vous pourrez facilement trouver une maison à louer le temps de votre passage, et pourquoi pas y habiter si la vie là-bas vous convient : la location y est nettement plus abordable qu''à Athelas, et la ville dispose de tout ce dont vous pouvez avoir besoin.\n Acceptez-vous de nous fournir votre aide ?'
+    pointers: 'info,dquetelay,non'
+  'culte':
+    text: 'Ce village abrite une sorte de culte des dragons, qui fait régulièrement des offrandes plutôt... macabres. Ce culte incite les dragons à attaquer &2Alcyone&a&o, sans doute afin de prendre possession de la ville.\n Pour sauver &2Alcyone&a&o, il faudra donc intégrer le culte, et le détruire de l''intérieur, dans le meilleur des cas. Les attaquer de front serait extremement dangereux, pour vous comme pour la ville. Il faudra ensuite exterminer l''un de leurs chefs, les &cPrêtres-Dragons&a&o, de dangereux individus disposants de masques enchantés avec la magie des dragons eux-même. Les dragons devraient arrêter leurs attaques une fois l''un des chefs tués.\n Vous êtes désormais conscient des risques, acceptez-vous cette mission ?'
+    pointers: 'dquetelay,non'
     
-    
-    
-    
-    
-###Options joueur###
+###Options Joueur###
 
 player_options:
   'qui':
     text: 'Qui êtes-vous ?'
+    pointers: 'qui2'
   'dragons':
     text: 'Des dragons ? Ces bêtes existent-elles encore ?'
     pointers: 'oui'
   'pourquoi':
-    text: 'Pourquoi s'en prennent-ils à cette ville en particulier ?'
-    pointers: 'sanctuaire,culte'
+    text: 'Pourquoi ces dragons s''en prennent-ils à cette ville en particulier ?'
+    pointers: 'culte'
   'aide':
-    text: 'Alors, si vous êtes venu à Athelas, c'est pour recevoir de l'aide d'écuyers compétents ayant déjà faits leurs preuves ?'
+    text: 'Alors, si vous êtes venu à Athelas, c''est pour demander l''aide d''écuyer ayant déjà faits leurs preuves ?'
+    pointers: 'oui2'
+  'info':
+    text: 'Auriez-vous plus d''informations sur ces dragons ?'
+    pointers: 'culte'
+  'dquetelay':
+    text: 'Avec plaisir ! Pourriez-vous prévenir le capitaine du bateau de mon arrivée, je pars dès que je suis prêt !'
+    events: 'dquetelay,bateau_alcyone'
+  'non':
+    text: 'Je ne suis malheureusement pas interessé, demandez à un autre écuyer.'
