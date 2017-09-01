@@ -1,3 +1,4 @@
 objets_jon1: 'item briquet:1,lava_tear:5'
 jon1_beginquest: 'tag jon1_beginquest'
 questdone_jon1: 'tag questdone_jon1'
+objets_jon2: 'item fiole_eau:1, water_tear:5'

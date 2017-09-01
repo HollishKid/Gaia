@@ -1,5 +1,5 @@
 quester: 'Jon' 
-first: 'inconnu,salut,salut2,salut3'
+first: 'inconnu,salut,salut2,salut3,salut4'
 stop: 'false'
 
 #J'aimerais que ce PNJ habite en -6865 64 2858 Facing: -127/0
@@ -18,7 +18,7 @@ NPC_options:
     text: 'Il me faudrait un &3briquet&a&o, ainsi que 5 &3Gouttes de Lave&a&o, récupérables à High Garden, sur les monstres du même nom. Vous aurez bien entendu une récompense pour votre dur labeur !'
     pointers: 'oui,non,pourquoi'
   'peur':
-    text: 'J''aimerais bien, mais ces monstres me font peur! Alors, vous acceptez ?'
+    text: 'J''aimerais bien, mais ces monstres me font peur ! Alors, vous acceptez ?'
     pointers: 'oui,non'
   'salut2':
     text: 'Bon retour ! Avez-vous pu récupérer ce que je vous avais demandé ?'
@@ -28,14 +28,23 @@ NPC_options:
     text: 'Merci à vous jeune &2%player%&a&o !'
     events: 'folder_jon1_1'
   'salut3':
-    text: 'Désolé &2%player%&a&o, mais je ne me suis pas encore remis du dernier Rituel. Cela demande beaucoup d''énergie spirituelle vous savez !'
+    text: 'Bonjour à vous &2%player%&a&o! Vous tombez bien, je venais justement de trouver un nouveau Rituel à essayer. M''accorderiez-vous votre aide une nouvelle fois ?
     conditions: 'questdone_jon1,!jon1_beginquest,default.intendant_done'
+    pointers: 'oui3,non3'
+  'ing2':
+    text: 'Aujourd''hui, il me faudra 5 &3Gouttes d''eau&a&o, récupérables une nouvelle fois à High Garden, ainsi qu''une &3fiole d''eau&a&o. Profitez bien de ce voyage à High Garden, ce sera le dernier que vous effectuerez pour moi. Sur ce, je vous souhaite bon courage &2%player%&a&o !'
+    events: 'journal_add_jon2,tag_beginquest_jon2'
+  'salut4':
+    text: ' Vous revoila &2%player%&a&o ! Avez-vous récuperé les ingrédients ?'
+    conditions: 'jon2_beginquest,!jon1_beginquest'
+    pointers: 'oui4,non4'
+   
 
 #Options joueurs#
 
 player_options:
   'lesquels':
-    text: 'Quelles sont ces ingrédients dont vous manquez ?'
+    text: 'Quels sont ces ingrédients dont vous manquez ?'
     pointers: 'ing'
   'aurevoir':
     text: 'Cela ne m''intéresse pas, au revoir.'
@@ -54,3 +63,13 @@ player_options:
     conditions: 'objets_jon1'
     events: 'take_objetsjon1'
     pointers: 'fin1'
+  'oui3':
+    text: 'Bien sur ! Que faut-il faire cette fois-ci ?
+    pointers: 'ing2'
+  'non3':
+    text: 'Désolé, je ne pense pas pouvoir vous aider.'
+  'oui4':
+    text: 'Oui ! Les voila !'
+    conditions: 'objets_jon2'
+    events: 'take_objetsjon2'
+    pointers: 'fin2'

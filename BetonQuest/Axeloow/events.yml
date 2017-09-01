@@ -18,7 +18,9 @@ jonquest1_3: 'message &a&oQue se passe-t-il ?!'
 jonquest1_4: 'message &a&oJe suppose que ce Rituel-ci n''est pas fait pour moi...'
 jonquest1_5: 'message &a&oMais je dois tout de même vous donner votre récompense, vous n''êtes pas responsable de mon échec !'
 jonquest1_6: 'message &a&oPensez à revenir me voir, j''aurais sans doute une nouvelle mission pour vous, je comptes bien essayer différents Rituels !'
-
+journal_add_jon2: 'journal add jjon2'
+tag_beginquest_jon2: 'tag add jon2_beginquest'
+take_objetsjon2: 'take water_tear:5,fiole_eau:1'
 ###Récompenses###
 
 recompense_argent_200: 'command eco give %player% 200'
@@ -29,3 +31,7 @@ recompense_argent_200: 'command eco give %player% 200'
 
 explosionjon1: 'explosion 0 0 4 -6868;64;2856;Gaia'
 
+###Alcyone###
+
+dquetelay: 'tag add dquetelay'
+bateau_alcyone: 'tag add bateau_alcyone'

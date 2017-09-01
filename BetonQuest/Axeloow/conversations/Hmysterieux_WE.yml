@@ -1,0 +1,28 @@
+quester: 'Homme Mystérieux'
+first: 'inconnu,histoire'
+stop: 'false'
+
+#Options PNJ#
+
+NPC_options:
+  'inconnu':
+    text: 'Je ne suis peut-être pas de la région, mais vous me semblez perdu. Allez voir l''Intendant au Château.'
+    conditions: '!default.intendant_done'
+  'histoire':
+    text: 'Il parait qu''une arme extremement puissante à été égarée quelque part dans ce monde. Si seulement je pouvais jeter un oeil à la &2lame qui choisit les rois&a&o...'
+    pointers: 'qui,roi'
+  'reponsequi':
+    text: 'Qui je suis importe peu, je ne suis que de passage à Athelas. Je suppose que vous pouvez me décrire comme étant un vagabond ?'
+  'reponseroi':
+    text: 'Ne prêtez pas attention aux dires d''un vieil homme tel que moi... Vous devriez continuer votre route, tant que votre jeunesse vous porte mon enfant !'
+
+
+#Options Joueur#
+
+player_options:
+  'qui':
+    text: 'Qui-êtes vous ?'
+    pointers: 'reponsequi'
+  'roi':
+    text: 'La lame qui choisit les rois ? Que voulez-vous dire ?'
+    pointers: 'reponseroi'
