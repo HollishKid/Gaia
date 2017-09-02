@@ -1,0 +1,66 @@
+pnj_jon:
+  Type: cow
+  Display: '&7Jon'
+  Disguise:
+    Type: player
+    Player: '&7Jon'
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> Axeloow.conversation_jon"} @trigger ~onInteract
+###  
+pnj_lay:
+  Type: cow
+  Display: '&7Lay'
+  Disguise: 
+  Type: player
+  Player: '&7Lay'
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> Axeloow.conversation_lay"} @trigger ~onInteract
+###
+pnj_hmysterieux:
+  Type: cow
+  Display: '&7Homme Mystérieux'
+  Disguise: 
+  Type: player
+  Player: '&7Homme Mystérieux'
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> Axeloow.conversation_HmysterieuxWE"} @trigger ~onInteract
+###

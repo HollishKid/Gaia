@@ -19,11 +19,28 @@ jonquest1_4: 'message &a&oJe suppose que ce Rituel-ci n''est pas fait pour moi..
 jonquest1_5: 'message &a&oMais je dois tout de même vous donner votre récompense, vous n''êtes pas responsable de mon échec !'
 jonquest1_6: 'message &a&oPensez à revenir me voir, j''aurais sans doute une nouvelle mission pour vous, je comptes bien essayer différents Rituels !'
 journal_add_jon2: 'journal add jjon2'
+journal_del_jon2: 'journal del jjon2'
+tag_endingquest_jon2: 'tag del jon2_beginquest'
 tag_beginquest_jon2: 'tag add jon2_beginquest'
+tag_questcomplete_jon2: 'tag add questdone_jon2'
 take_objetsjon2: 'take water_tear:5,fiole_eau:1'
+jonquest2_1: 'message &a&oCette fois, on doit mettre ça comme ça...'
+jonquest2_2: 'message &a&oEt...'
+jonquest2_3: 'message &a&o...'
+jonquest2_4: 'message &a&oQuel est le problème encore !'
+jonquest2_5: 'message &a&oCe Rituel est également un échec...'
+jonquest2_6: 'message &a&oTant pis ! Il faut rester optimiste ! \n &a&oVoici votre récompense ! \n Il me reste trois Rituels à essayer, je compte sur vous pour m''aider !'
+folder_jon2_1: 'folder folder_jon2_2,jonquest2_1 delay:2'
+folder_jon2_2: 'folder folder_jon2_3,jonquest2_2 delay:2'
+folder_jon2_3: 'folder folder_jon2_4,hollish.star,jonquest2_3 delay:2'
+folder_jon2_4: 'folder folder_jon2_5,hollish.Foutain,jonquest2_4 delay:2'
+folder_jon2_5: 'folder folder_jon2_6,jonquest2_5 delay:2'
+folder_jon2_6: 'folder recompense_argent_500,default.reput_athelas1_positif,journal_del_jon2,tag_endingquest_jon2,tag_questcomplete_jon2, jonquest2_6 delay:2'
+
 ###Récompenses###
 
 recompense_argent_200: 'command eco give %player% 200'
+recompense_argent_500: 'command eco give %player% 500'
 
 
 
@@ -35,3 +52,4 @@ explosionjon1: 'explosion 0 0 4 -6868;64;2856;Gaia'
 
 dquetelay: 'tag add dquetelay'
 bateau_alcyone: 'tag add bateau_alcyone'
+jlay: 'journal add jlay'

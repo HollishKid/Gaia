@@ -38,6 +38,9 @@ NPC_options:
     text: ' Vous revoila &2%player%&a&o ! Avez-vous récuperé les ingrédients ?'
     conditions: 'jon2_beginquest,!jon1_beginquest'
     pointers: 'oui4,non4'
+  'fin2':
+    text: 'Parfait ! Commençons ce nouveau Rituel !'
+    events: 'folder_jon_2_1'
    
 
 #Options joueurs#
