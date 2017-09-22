@@ -1,3 +1,11 @@
+conversation_pnj_jon: 'conversation jon'
+conversation_pnj_lay: 'conversation lay'
+conversation_pnj_HmysterieuxWE: 'conversation HmysterieuxWE'
+conversation_pnj_mahiro: 'conversation mahiro'
+
+
+
+
 ###Quête de Jon###
 
 tag_beginquest_jon1: 'tag add jon1_beginquest'
@@ -30,17 +38,24 @@ jonquest2_3: 'message &a&o...'
 jonquest2_4: 'message &a&oQuel est le problème encore !'
 jonquest2_5: 'message &a&oCe Rituel est également un échec...'
 jonquest2_6: 'message &a&oTant pis ! Il faut rester optimiste ! \n &a&oVoici votre récompense ! \n Il me reste trois Rituels à essayer, je compte sur vous pour m''aider !'
-folder_jon2_1: 'folder folder_jon2_2,jonquest2_1 delay:2'
+folder_jon_2_1: 'folder folder_jon2_2,jonquest2_1 delay:2'
 folder_jon2_2: 'folder folder_jon2_3,jonquest2_2 delay:2'
 folder_jon2_3: 'folder folder_jon2_4,hollish.star,jonquest2_3 delay:2'
-folder_jon2_4: 'folder folder_jon2_5,hollish.Foutain,jonquest2_4 delay:2'
+folder_jon2_4: 'folder folder_jon2_5,jonquest2_4 delay:2'
 folder_jon2_5: 'folder folder_jon2_6,jonquest2_5 delay:2'
-folder_jon2_6: 'folder recompense_argent_500,default.reput_athelas1_positif,journal_del_jon2,tag_endingquest_jon2,tag_questcomplete_jon2, jonquest2_6 delay:2'
+folder_jon2_6: 'folder recompense_argent_500,default.reput_athelas1_positif,journal_del_jon2,tag_endingquest_jon2,tag_questcomplete_jon2,jonquest2_6 delay:2'
 
 ###Récompenses###
 
 recompense_argent_200: 'command eco give %player% 200'
 recompense_argent_500: 'command eco give %player% 500'
+recompense_argent_750: 'command eco give %player% 750'
+
+
+###Réputation###
+
+reput_alcyone: 'point reput_alcyone 1'
+
 
 
 
@@ -53,3 +68,59 @@ explosionjon1: 'explosion 0 0 4 -6868;64;2856;Gaia'
 dquetelay: 'tag add dquetelay'
 bateau_alcyone: 'tag add bateau_alcyone'
 jlay: 'journal add jlay'
+
+###Quête de Mahiro###
+
+tagadd_mahiro1: 'tag add mahiroquest1'
+tagadd_mahiro2: 'tag add mahiroquest2'
+tagadd_mahiro3: 'tag add mahiroquest3'
+tagadd_mahiro4: 'tag add mahiroquest4'
+tagadd_mahiro5: 'tag add mahiroquest5'
+tagadd_mahiro6: 'tag add mahiroquest6'
+tagadd_mahiro7: 'tag add mahiroquest7'
+tagadd_mahiro8: 'tag add mahiroquest8'
+tagadd_mahiro9: 'tag add mahiroquest9'
+tagadd_mahiro10: 'tag add mahiroquest10'
+folder_quetemahiro1: 'folder messagemahiro1,jmahiro1,tagadd_mahiro1'
+folder_quetemahiro2: 'folder messagemahiro2,jmahiro2,tagadd_mahiro2'
+folder_quetemahiro3: 'folder messagemahiro3,jmahiro3,tagadd_mahiro3'
+folder_quetemahiro4: 'folder messagemahiro4,jmahiro4,tagadd_mahiro4'
+folder_quetemahiro5: 'folder messagemahiro5,jmahiro5,tagadd_mahiro5'
+folder_quetemahiro6: 'folder messagemahiro6,jmahiro6,tagadd_mahiro6'
+folder_quetemahiro7: 'folder messagemahiro7,jmahiro7,tagadd_mahiro7'
+folder_quetemahiro8: 'folder messagemahiro8,jmahiro8,tagadd_mahiro8'
+folder_quetemahiro9: 'folder messagemahiro9,jmahiro9,tagadd_mahiro9'
+folder_quetemahiro10: 'folder messagemahiro10,jmahiro10,tagadd_mahiro10'
+folder_quetesmahiro1: 'folder folder_quetemahiro1,folder_quetemahiro2,folder_quetemahiro3,folder_quetemahiro4,folder_quetemahiro5,folder_quetemahiro6,folder_quetemahiro7,folder_quetemahiro8,folder_quetemahiro9,folder_quetemahiro10 random:1'
+jmahiro1: 'journal add mahiro1'
+jmahiro2: 'journal add mahiro2'
+jmahiro3: 'journal add mahiro3'
+jmahiro4: 'journal add mahiro4'
+jmahiro5: 'journal add mahiro5'
+jmahiro6: 'journal add mahiro6'
+jmahiro7: 'journal add mahiro7'
+jmahiro8: 'journal add mahiro8'
+jmahiro9: 'journal add mahiro9'
+jmahiro10: journal add mahiro10'
+messagemahiro1: 'message &a&oSi vous pouviez me ramener 5 stacks de pierre taillée, vous aurez une récompense !'
+messagemahiro2: 'message &a&oSi vous pouviez me ramener 3 stacks de buche de chêne, vous aurez une récompense !'
+messagemahiro3: 'message &a&oSi vous pouviez me ramener 7 stacks de cobblestone, vous aurez une récompense !'
+messagemahiro4: 'message &a&oSi vous pouviez me ramener 1 stack de steaks cuits, vous aurez une récompense !'
+messagemahiro5: 'message &a&oSi vous pouviez me ramener 1 stack de porcs cuits, vous aurez une récompense !'
+messagemahiro6: 'message &a&oSi vous pouviez me ramener 1 stack de poulets cuits, vous aurez une récompense !'
+messagemahiro7: 'message &a&oSi vous pouviez me ramener 20 blocs de fer, vous aurez une récompense !'
+messagemahiro8: 'message &a&oSi vous pouviez me ramener 10 blocs d''or, vous aurez une récompense !'
+messagemahiro9: 'message &a&oSi vous pouviez me ramener 5 blocs de diamant, vous aurez une récompense !'
+messagemahiro10: 'message &a&oSi vous pouviez me ramener 2 blocs d''émeraude, vous aurez une récompense !'
+folder_recompensemahiro: 'folder recompense_argent_750'
+takeobjetsmahiro1: 'take stonebricks:320'
+takeobjetsmahiro2: 'take buche_chene:192'
+takeobjetsmahiro3: 'take cobblestone:448'
+takeobjetsmahiro4: 'take steak:64'
+takeobjetsmahiro5: 'take porc_cuit:64'
+takeobjetsmahiro6: 'take poulet_cuit:64'
+takeobjetsmahiro7: 'take bloc_fer:20'
+takeobjetsmahiro8: 'take bloc_or:10'
+takeobjetsmahiro9: 'take bloc_diamant:5'
+takeobjetsmahiro10: 'take bloc_emeraude:2'
+
