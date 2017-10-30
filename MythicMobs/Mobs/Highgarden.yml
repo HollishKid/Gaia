@@ -1,12 +1,10 @@
 lava_elem:
-  Mobtype: BABY_ZOMBIE
+  Mobtype: cow
   Display: '&6Goutte de lave'
   Health: 80
   Damage: 4
-#  Equipment:
-#  - 0:0
   Skills:
-  - skill {s=Firebolt} @target ~onTimer:25 <70% 0.5
+  - skill {s=Firebolt2} @target ~onTimer:25 <70% 0.5
   Disguise:
     Type: player
     Player: '&6Goutte de lave'
@@ -28,15 +26,18 @@ lava_elem:
     PreventOtherDrops: true
     PreventRandomEquipment: true
     ShowHealth: true
+    Silent: true
+  DamageModifiers:
+  - FIRE -1
+  - LAVA -1
+  - FIRE_TICK 0
   Modules:
     ThreatTable: true
 water_elem:
-  Mobtype: BABY_ZOMBIE
+  Mobtype: cow
   Display: "&6Goutte d'eau"
   Health: 80
   Damage: 4
-#  Equipment:
-#  - 0:0
   Skills:
   - skill {s=IceBolt} @target ~onTimer:25 <70% 0.5
   Disguise:
@@ -60,6 +61,7 @@ water_elem:
     PreventOtherDrops: true
     PreventRandomEquipment: true
     ShowHealth: true
+    Silent: true
   Modules:
     ThreatTable: true
 ghoule:

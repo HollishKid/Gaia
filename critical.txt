@@ -1,5 +1,6 @@
 critical.txt
 version.txt
+patches.txt
 README.md
 spigot.yml
 bukkit.yml
