@@ -1,7 +1,17 @@
 on break:
 	if event-block is in the region "east":
+		if player has permission "skript.bypass_regenerator":
+			if town at event-location exists:
+				stop
+			loop {break.location.east::*}:
+				if loop-value is event-location:
+					delete {break.location.east::%loop-index%}
+					delete {break.type.east::%loop-index%}
+					exit loop
+			message "&cBloc supprimé du regenerator" to player
+			stop
 		if player's gamemode is survival:
-			if town at player exists:
+			if town at event-location exists:
 				stop
 			else if event-block is not any log:
 				if "%{place.location.east::*}%" contains "%location of event-block%":
@@ -76,8 +86,17 @@ on break of any logs:
 
 on place:
 	if event-block is in the region "east":
+		if player has permission "skript.bypass_regenerator":
+			if town at event-location exists:
+				stop
+			loop {place.location.east::*}:
+				if loop-value is event-location:
+					delete {place.location.east::%loop-index%}
+					exit loop
+			message "&cBloc placé dans le regenerator" to player
+			stop
 		if player's gamemode is survival:
-			if town at player exists:
+			if town at event-location exists:
 				stop
 			else:
 				add location of event-block to {place.location.east::*}
@@ -101,3 +120,21 @@ on place:
 	else if event-block is in the region "skywars":
 		if player's gamemode is survival:
 			add location of event-block to {mini.skywars.place::*}
+
+			
+command /eastgod:
+	description: Permet d'éditer le terrain de base à l'est.
+	usage: /eastgod
+	permission: skript.eastgod
+	permission message: Vous n'avez pas les permissions nécessaires.
+	executable by: players
+	trigger:
+		if player has permission "skript.bypass_regenerator":
+			pex remove permission "skript.bypass_regenerator" from player
+			message "&c&oVous redevenez un simple mortel."
+		else:
+			pex add timed permission "skript.bypass_regenerator" to player duration 5 minutes
+			message "&c&oVous êtes un dieu à l'est pour 5 minutes, un grand pouvoir implique une grande responsabilité."
+			wait 5 minutes 5 seconds
+			if player doesn't have permission "skript.bypass_regenerator":
+				message "&c&oVous redevenez un simple mortel."

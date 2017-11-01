@@ -358,12 +358,16 @@ groups:
   horloger:
     inheritance:
     - moderator
+    permissions:
+    - skript.eastgod
     options:
       rank: '50'
       prefix: §6[§aHorloger§6]§f
   horloger_est:
     inheritance:
     - moderator_est
+    permissions:
+    - skript.eastgod
     options:
       rank: '49'
       prefix: §6[§aHorloger§6]§f
