@@ -424,7 +424,7 @@ sub "holographic_chat":
 #		
 on discord guild message receive seen by "Gaia":
 	set {_discord_id} to event-user
-	set {_discord.message} to message
+	set {_discord.message} to event-string #D'après la doc, c'est mieux -Eclipse
 	loop all players:
 		if {g.channel.%loop-player%} is set:
 			message "§6[§2Discord§6] §f%discord name of {_discord_id}% : §7%{_discord.message}%" to loop-player
