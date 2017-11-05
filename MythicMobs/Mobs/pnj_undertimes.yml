@@ -1,0 +1,43 @@
+pnj_gardien:
+  Type: cow
+  Display: 'Grand Gardien'
+  Disguise:
+    Type: player
+    Player: 'Grand Gardien'
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> Undertimes.conversation_pnj_gardien"} @trigger ~onInteract
+
+pnj_joseph:
+  Type: cow
+  Display: '&dJoseph'
+  Disguise:
+    Type: player
+    Player: '&dJoseph'
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> Undertimes.conversation_pnj_joseph"} @trigger ~onInteract

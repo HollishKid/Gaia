@@ -309,6 +309,9 @@ groups:
     - authme.admin.register
     - authme.vip
     - admin.prison
+    - essentials.gamemode
+    - chatcontrol.bypass.spectator
+    - essentials.vanish
     - essentials.ban
     - essentials.banip
     - essentials.tempban
@@ -355,12 +358,16 @@ groups:
   horloger:
     inheritance:
     - moderator
+    permissions:
+    - skript.eastgod
     options:
       rank: '50'
       prefix: §6[§aHorloger§6]§f
   horloger_est:
     inheritance:
     - moderator_est
+    permissions:
+    - skript.eastgod
     options:
       rank: '49'
       prefix: §6[§aHorloger§6]§f
@@ -378,6 +385,7 @@ groups:
     permissions:
     - towny.*
     - chatcontrol.bypass.rules
+    - chatcontrol.bypass.spectator
     - authme.vip
     - essentials.sudo.exempt
     - authme.vip
