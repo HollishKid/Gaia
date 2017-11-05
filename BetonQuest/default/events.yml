@@ -368,103 +368,103 @@ taxation_mess21: 'message &d&oVous êtes &2&lExempté &d&ode taxes sur vos avoir
 #                Fill with other object; armour, tools, MM third age armour.
 unknown_object_exchange: folder unknown_object_ex1,unknown_object_ex2
 unknown_object_ex1: take unknow_object
-unknown_object_ex2: folder uoex1,uoex2,uoex3,uoex4,uoex5,uoex6,uoex7,uoex8,uoex9,uoex10,uoex11,uoex12,uoex13,uoex14,uoex15,uoex16,uoex17,uoex18,uoex19,uoex20,uoex21,uoex22,uoex23,uoex24 random:1
+unknown_object_ex2: folder uoex1,uoex2,uoex3,uoex4,uoex5,uoex6,uoex7,uoex8,uoex9,uoex10,uoex11,uoex12,uoex13,uoex14,uoex15,uoex16,uoex17,uoex18,uoex19,uoex20,uoex21,uoex22,uoex23,uoex24 random:1 delay:2
 #
 uoex1: folder uoex1a,uoex1b
 uoex1a: give ironpickaxe
-uoex1b: 'message &dVotre objet est une pioche en fer !'
+uoex1b: 'message &a&oVotre objet est une pioche en fer !'
 #
 uoex2: folder uoex2a,uoex2b
-uoex2a: 'command mm item give %player% stonesword_common'
-uoex2b: 'message &dVotre objet est une épée en pierre !'
+uoex2a: 'command sudo %player% gaiaitemgiver stonesword_common'
+uoex2b: 'message &a&oVotre objet est une épée en pierre !'
 #
 uoex3: folder uoex31,uoex32
-uoex31: 'command mm item give %player% stuff_leatherfeet'
-uoex32: 'message &dVotre objet sont des bottes en cuir !'
+uoex31: 'command sudo %player% gaiaitemgiver stuff_leatherfeet'
+uoex32: 'message &a&oVotre objet sont des bottes en cuir !'
 #
 uoex4: folder uoex41,uoex42
-uoex41: 'command mm item give %player% stuff_leatherlegs'
-uoex42: 'message &dVotre objet s''avère être un pantalon de cuir !'
+uoex41: 'command sudo %player% gaiaitemgiver stuff_leatherlegs'
+uoex42: 'message &a&oVotre objet s''avère être un pantalon de cuir !'
 #
 uoex5: folder uoex51,uoex52
-uoex51: 'command mm item give %player% stuff_leatherchest'
-uoex52: 'message &dVotre objet s''avère être une Tunique en Cuir !'
+uoex51: 'command sudo %player% gaiaitemgiver stuff_leatherchest'
+uoex52: 'message &a&oVotre objet s''avère être une tunique en Cuir !'
 #
 uoex6: folder uoex61,uoex62
-uoex61: 'command mm item give %player% stuff_leatherhead'
-uoex62: 'message &dVotre objet s''avère être un chapeau de Cuir !'
+uoex61: 'command sudo %player% gaiaitemgiver stuff_leatherhead'
+uoex62: 'message &a&oVotre objet s''avère être un chapeau de Cuir !'
 #
 uoex7: folder uoex71,uoex72
-uoex71: 'command mm item give %player% stonesaxe_common'
-uoex72: 'message &dVotre objet s''avère être une hache en pierre !'
+uoex71: 'command sudo %player% gaiaitemgiver stonesaxe_common'
+uoex72: 'message &a&oVotre objet s''avère être une hache en pierre !'
 #
 uoex8: folder uoex81,uoex82
 uoex81: give iron_helmet
-uoex82: 'message &dVotre objet est un casque en fer !'
+uoex82: 'message &a&oVotre objet est un casque en fer !'
 #
 uoex9: folder uoex91,uoex92
 uoex91: give iron_chestplate
-uoex92: 'message &dVotre objet est un plastron en fer !'
+uoex92: 'message &a&oVotre objet est un plastron en fer !'
 #
 uoex10: folder uoex101,uoex102
 uoex101: give iron_legs
-uoex102: 'message &dVotre objet s''avère être des jambières en fer !'
+uoex102: 'message &a&oVotre objet s''avère être des jambières en fer !'
 #
 uoex11: folder uoex111,uoex112
 uoex111: give iron_boots
-uoex112: 'message &dVotre objet s''avère être des bottes en fer !'
+uoex112: 'message &a&oVotre objet s''avère être des bottes en fer !'
 #
 uoex12: folder uoex121,uoex122
 uoex121: give iron_sword
-uoex122: 'message &dVotre objet est une épée en fer !'
+uoex122: 'message &a&oVotre objet est une épée en fer !'
 #
 uoex13: folder uoex131,uoex132
 uoex131: give gold_helmet
-uoex132: 'message &dVotre objet est un casque en or !'
+uoex132: 'message &a&oVotre objet est un casque en or !'
 #
 uoex14: folder uoex141,uoex142
 uoex141: give gold_plate
-uoex142: 'message &dVotre objet est un plastron en or !'
+uoex142: 'message &a&oVotre objet est un plastron en or !'
 #
 uoex15: folder uoex151,uoex152
 uoex151: give gold_legs
-uoex152: 'message &dVotre objet s''avère être des jambièred en or !'
+uoex152: 'message &a&oVotre objet s''avère être des jambièred en or !'
 #
 uoex16: folder uoex161,uoex162
 uoex161: give gold_boots
-uoex162: 'message &dVotre objet s''avère être des bottes en or !'
+uoex162: 'message &a&oVotre objet s''avère être des bottes en or !'
 #
 uoex17: folder uoex171,uoex172
 uoex171: give soupe_betteraves
-uoex172: 'message &dVotre objet est une soupe de betteraves ! Délicieux !'
+uoex172: 'message &a&oVotre objet est une soupe de betteraves ! Délicieux !'
 #
 uoex18: folder uoex181,uoex182
 uoex181: give tarte
-uoex182: 'message &dVotre objet est une tarte à la citrouille !'
+uoex182: 'message &a&oVotre objet est une tarte à la citrouille !'
 #
 uoex19: folder uoex191,uoex192
 uoex191: give fishing_rod
-uoex192: 'message &dVotre objet est une canne à pêche !'
+uoex192: 'message &a&oVotre objet est une canne à pêche !'
 #
 uoex20: folder uoex201,uoex202
 uoex201: give wooden_hoe
-uoex202: 'message &dVotre objet est une houe en bois !'
+uoex202: 'message &a&oVotre objet est une houe en bois !'
 #
 uoex21: folder uoex211,uoex212
 uoex211: give stone_hoe
-uoex212: 'message &dVotre objet est une houe en pierre !'
+uoex212: 'message &a&oVotre objet est une houe en pierre !'
 #
 uoex22: folder uoex221,uoex222
 uoex221: give iron_hoe
-uoex222: 'message &dVotre objet est une houe en fer !'
+uoex222: 'message &a&oVotre objet est une houe en fer !'
 #
 uoex23: folder uoex231,uoex232
 uoex231: give gold_hoe
-uoex232: 'message &dVotre objet est une houe en or !'
+uoex232: 'message &a&oVotre objet est une houe en or !'
 #
 uoex24: folder uoex241,uoex242
 uoex241: give diamond_hoe
-uoex242: 'message &dVotre objet est une houe en diamant !'
+uoex242: 'message &a&oVotre objet est une houe en diamant !'
 #
 #
 #
