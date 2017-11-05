@@ -59,14 +59,12 @@ regions:
         leaveMessage: ''
     'earth_temple':
         enterConsoleCommands:
-        - 'pex user %player% remove Magic.bypass_build'
-        - 'pex user %player% remove Magic.bypass_break'
+        - 'pex user %player% add -Magic.cast.*'
         enterPlayerCommands: ''
         sendJoinMessage: false
         joinMessage: ''
         leaveConsoleCommands:
-        - 'pex user %player% add Magic.bypass_build'
-        - 'pex user %player% add Magic.bypass_break'
+        - 'pex remove %player% add -Magic.cast.*'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
