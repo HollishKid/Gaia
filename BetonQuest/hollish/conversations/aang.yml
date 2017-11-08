@@ -13,7 +13,7 @@ NPC_options:
     pointers: raconter
   welcomebis:
     text: 'Que puis-je pour vous ?'
-    pointers: preuve,rentrer,temple,preuve_perdue,magic,fiole,fiole_air,fiole_air_done,aang_baton_done,air_wand_upgrade,rienmerci
+    pointers: preuve,rentrer,temple,preuve_perdue,magic,fiole,fiole_lost,fiole_air,fiole_lost2,fiole_air_done,aang_baton_done,air_wand_upgrade,rienmerci
   raconter_rep:
     text: 'Je ne sens aucun mensonge en vous... Vous devez dire vrai. Que puis-je pour vous ?'
     events: tag_aang,journal_findaang_del,tag_moine_air_del,air_moine_tempo_del
@@ -41,9 +41,14 @@ NPC_options:
   fiole_rep:
     text: 'Elle fera l''affaire. Il te faut caputrer de l''air particulier, pour avoir assez de puissance, il te faut de l''air du continent de l''Est. \nVas-y et clique droit sur ta fiole pour en capturer !'
     events: journal_milo_fiole_del,journal_milo_air_capture,obj_air_catcher,tag_remove_fiole
+  fiole_lost_rep:
+    text: 'Il ne vous reste plus qu''à en refaire une...'
   fiole_air_rep:
     text: 'Je vois ça, agitée cette fiole n''est-ce pas ? Maintenant que tu as ça, il suffit d''apprendre à canaliser son énergie. \nRends toi au &dSpiritualium &a&odu &2Moine Ardere&a&o, au Nord de la ville que vous appellez &dAthelas&a&o.'
     events: journal_milo_air_capture_del,journal_milo_ardere,tag_milo_ardere,milo_fiole1_remove
+  fiole_lost_rep2:
+    text: 'Vous devriez vous soucier davantage d''objets précieux jeune apprenti ! \nJe vous en redonne une, ne la perdez pas cette fois-ci !'
+    events: 'give_fiole_air_est'
   fiole_air_done_rep:
     text: 'Très bien ! Il faut maintenant un contenant pour recevoir cette énergie ! \nTailles un un bâton d''un arbre de ton choix et je t''aiderais pour faire la fusion de l''énergie pour en faire une Baguette de l''Air !'
     events: tag_ardere_aang_del,aang_baton_obj,journal_aang_baton,journal_fiole_for_wand_del
@@ -101,10 +106,18 @@ player_options:
     text: 'J''ai la fiole que vous m''avez demandé !'
     conditions: 'milo_fiole,fiole_have'
     pointers: fiole_rep
+  fiole_lost:
+    text: 'J''ai perdu ma fiole pour capturer l''Air !'
+    conditions: 'journal_milo_air_capture,!fiole_have'
+    pointers: 'fiole_lost_rep'
   fiole_air:
     text: 'J''ai capturé de l''air du Continent Est !'
     conditions: 'milo_fiole1'
     pointers: fiole_air_rep
+  fiole_lost2:
+    text: 'J''ai perdu ma fiole d''Air agité de l''Est !'
+    conditions: 'tag_milo_ardere,!fiole_air_have'
+    pointers: 'fiole_lost_rep2'
   fiole_air_done:
     text: 'J''ai réussi à canaliser l''énergie de la fiole.'
     conditions: 'tag_ardere_aang'

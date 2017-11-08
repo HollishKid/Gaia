@@ -64,25 +64,6 @@ on break:
 				add location of event-block to {mini.skywars.location::*}
 				add type of event-block to {mini.skywars.type::*}
 
-				
-# Il manque acacia et dark oak ; leurs alias sont mal définis dans Skript (=162 pour les deux)			
-on break of any logs:
-	if event-block is in the region "foret_athelas" or "foret_athelas2":
-		if player's gamemode is survival:
-			if block below event-block is dirt or grass:
-				if "%event-block%" contains "oak":
-					wait 1 second
-					set block at location of event-block to normal sapling
-				else if "%event-block%" contains "spruce":
-					wait 1 second
-					set block at location of event-block to pine sapling
-				else if "%event-block%" contains "birch":
-					wait 1 second
-					set block at location of event-block to birch sapling
-				else if "%event-block%" contains "jungle":
-					wait 1 second
-					set block at location of event-block to jungle sapling
-
 
 on place:
 	if event-block is in the region "east":

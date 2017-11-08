@@ -45,7 +45,7 @@ stuff_leatherlegs:
     Legs:
       Armor: 2
       Health: 1
-stuff_leatherfeet :
+stuff_leatherfeet:
   Id: 301
   Data: 0
   Display: '&fBottes en cuir'

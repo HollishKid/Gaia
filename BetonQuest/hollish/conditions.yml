@@ -361,6 +361,7 @@ tag_aang: tag aang
 livre_air: tag livre_air
 air_continum: tag air_continum
 milo_fiole: tag milo_fiole
+journal_milo_air_capture: journal journal_milo_air_capture
 fiole_have: item fiole:1
 fiole_hand: hand fiole
 fiole_air_have: item fiole_air:1

@@ -22,6 +22,8 @@ command /mrproper:
 		set {event.worldboss} to 0
 		set {event.double.xp} to 0
 		set {thief.treasure.security} to location at -6751, 54, 2963 of the world "Gaia"
+		set {forest.athelas.reset1} to location at -6759, 54, 2963 of the world "Gaia"
+		set {forest.athelas.reset2} to location at -6763, 54, 2963 of the world "Gaia"
 #
 #Variables Remove - Add Variables from yml
 #		
@@ -539,6 +541,17 @@ every 59 minutes in "Gaia":
 	set {_tmpO} to now
 	set {day.index} to day of week from date {_tmpO}
 	set {hour.system} to "%hour%"
+#
+# Forest Reset
+#
+#
+	set block at {forest.athelas.reset1} to redstone torch on
+	wait 1 second
+	set block at {forest.athelas.reset1} to air
+	wait 3 seconds
+	set block at {forest.athelas.reset2} to redstone torch on
+	wait 1 second
+	set block at {forest.athelas.reset2} to air
 #
 # Auto Debug
 #
