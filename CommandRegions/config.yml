@@ -64,7 +64,7 @@ regions:
         sendJoinMessage: false
         joinMessage: ''
         leaveConsoleCommands:
-        - 'pex remove %player% add -Magic.cast.*'
+        - 'pex user %player% remove -Magic.cast.*'
         leavePlayerCommands: ''
         sendLeaveMessage: false
         leaveMessage: ''
