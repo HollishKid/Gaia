@@ -1,2 +1,4 @@
 # Joueurs pour lesquels "Hypercapaciteur Bidulotron" lore: "Réglé sur la sensibilité maximum" ne fonctionne plus, i.e. en cliquant droit il n'affiche rien concernant la faille.
 /bq e %player% Zedd.zae_obj4
+# Joueur qui ont leur magie bloquée dans des endroits où ils devraient pouvoir lancer des (au moins certains) sorts.
+/pex user %player% remove -Magic.cast.*
