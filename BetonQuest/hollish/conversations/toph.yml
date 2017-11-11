@@ -41,7 +41,7 @@ NPC_options:
     text: 'Veille à ne pas les perdre cette fois !'
     events: give_earth_fiole1
   fiole_earth_have:
-    text: 'De parfaits échantillons ! Je vais les garder pour vous. \nPour terminer, il te faut un récipient pour absorber cette spiritualité. \nVa crafter un bâton et ramènes le moi !'
+    text: 'De parfaits échantillons ! Je vais les garder pour toi. \nPour terminer, il te faut un récipient pour absorber cette spiritualité. \nVa crafter un bâton et ramènes le moi !'
     events: folder_earth_stick
   stick_have_rep:
     text: 'Excellent ! \nTu te souviens du mot d''apparition ?'
