@@ -1,0 +1,49 @@
+quester: 'Importeur'
+first: 'inconnu,salut,quete,finquete,salut2'
+stop: 'false'
+
+###Options PNJ###
+
+NPC_options:
+  'inconnu':
+    text: 'Je ne vous connais pas ! Vous devriez aller voir l''Intendant au Château d''Athelas !'
+    conditions: '!default.intendant_done'
+  'salut':
+    text: 'Bonjour Ecuyer ! Je suis l''Importeur numéro 1 de la région, en ce qui concerne la nourriture en tout cas !'
+    pointers: 'aide, presenter'
+    conditions: '!queteimporteur,!tagwait3h,!importeurfini'
+  'quete':
+    text: 'Ce serait avec plaisir ! Si vous pourriez me rapporter 2 stacks de blé, je vous donnerais une belle récompense !'
+    pointers: 'oui,non'
+    conditions: '!queteimporteur,!tagwait3h,!importeurfini'
+  'finquete':
+    text: 'Avez-vous ce que je vous ai demandé ?'
+    conditions: 'queteimporteur,!tagwait3h,!importeurfini'
+    pointers: 'oui2,non2'
+  'fin':
+    text: 'Merci beaucoup de votre aide ! Je vous laisse ça en récompense, faites en bon usage !'
+    events: 'queteimporteurfin,importeurfini,folder_repA1,recompense_argent_500,tagwait3h'
+  'salut2':
+    text: 'Bonjour %player% ! Revenez me voir dans 3 heures, je vous redemanderais sans doute du blé !'
+    conditions: 'tagwait3h,importeurfini'
+###Options joueur~###
+
+player_options:
+  'aide':
+    text: 'Vraiment ? Je suppose qu''un peu d''aide ne vous serais pas de refus, pas vrai ?'
+    pointers: 'quete'
+  'presenter': 
+    text: 'Et moi je suis %player%, vénérable Ecuyer en provenance d''Athelas !'
+  'oui':
+    text: 'Laissez moi m''en occuper !'
+    events: 'queteimporteur'
+  'non': 
+    text: 'Désolé, je ne suis plus interessé en fait.'
+  'non2':
+    text: 'Non, je reviendrais que ce sera le cas'
+  'oui2':
+    text: 'Oui, les voila !'
+    conditions: 'objets_importeur'
+    events: 'take_objetsimporteur'
+    pointers: 'fin'
+  

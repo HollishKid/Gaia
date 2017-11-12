@@ -1,10 +1,12 @@
+tagwait3h: 'tag wait3h'
+##
 objets_jon1: 'item briquet:1,lava_tear:5'
 jon1_beginquest: 'tag jon1_beginquest'
 questdone_jon1: 'tag questdone_jon1'
 objets_jon2: 'item fiole_eau:1, water_tear:5'
 jon2_beginquest: 'tag jon2_beginquest'
 questdone_jon2: 'tag questdone_jon2'
-
+##
 mahiroquest1: 'tag mahiroquest1'
 mahiroquest2: 'tag mahiroquest2'
 mahiroquest3: 'tag mahiroquest3'
@@ -26,3 +28,7 @@ objetmahiro7: 'item bloc_fer:20'
 objetmahiro8: 'item bloc_or:10'
 objetmahiro9: 'item bloc_diamant:5'
 objetmahiro10: 'item bloc_emeraude:2'
+##
+objets_importeur: 'item ble:128'
+queteimporteur: 'tag importeur'
+importeurfini: 'tag importeurfini'

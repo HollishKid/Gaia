@@ -2,6 +2,7 @@ conversation_pnj_jon: 'conversation jon'
 conversation_pnj_lay: 'conversation lay'
 conversation_pnj_HmysterieuxWE: 'conversation HmysterieuxWE'
 conversation_pnj_mahiro: 'conversation mahiro'
+conversation_pnj_importeur: 'conversation importeur'
 
 
 
@@ -51,11 +52,16 @@ recompense_argent_200: 'command eco give %player% 200'
 recompense_argent_500: 'command eco give %player% 500'
 recompense_argent_750: 'command eco give %player% 750'
 
+###Attente###
+
+wait3h: 'objective start wait3h'
+
 
 ###Réputation###
 
-reput_alcyone: 'point reput_alcyone 1'
-
+reput_alcyone1: 'point reput_alcyone 1'
+mess_reputA1: 'message &dVous gagnez &a&l1 &dpoint de réputation auprès d''Alcyone.'
+folder_repA1: 'folder reput_alcyone1,mess_reputA1'
 
 
 
@@ -123,4 +129,12 @@ takeobjetsmahiro7: 'take bloc_fer:20'
 takeobjetsmahiro8: 'take bloc_or:10'
 takeobjetsmahiro9: 'take bloc_diamant:5'
 takeobjetsmahiro10: 'take bloc_emeraude:2'
+
+###Importeur###
+
+queteimporteur: 'tag add importeur'
+queteimporteurfin: 'tag del importeur'
+importeurfini: 'tag add importeurfini'
+take_objetsimporteur: 'take ble:128'
+tagwait3h: 'tag add wait3h'
 

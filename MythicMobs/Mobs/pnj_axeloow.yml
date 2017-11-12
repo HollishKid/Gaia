@@ -85,3 +85,25 @@ pnj_mahiro:
   - 0 clear
   Skills:
   - command{c="bq event <trigger.name> Axeloow.conversation_pnj_mahiro"} @trigger ~onInteract
+###
+pnj_importeur:
+  Type: cow
+  Display: '&7Importeur'
+  Disguise: 
+    Type: player
+    Player: '&7Importeur'
+  Options:
+    AlwaysShowName: true
+    Collidable: false
+    Invincible: true
+    PreventMobKillDrops: true
+    Silent: true
+    Despawn: true
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomlookaround
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - command{c="bq event <trigger.name> Axeloow.conversation_pnj_importeur"} @trigger ~onInteract
