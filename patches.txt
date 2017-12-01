@@ -2,3 +2,6 @@
 /bq e %player% Zedd.zae_obj4
 # Joueur qui ont leur magie bloquée dans des endroits où ils devraient pouvoir lancer des (au moins certains) sorts.
 /pex user %player% remove -Magic.cast.*
+# Joueur qui se retrouve avec un doublon de quête déjà terminée (peux surgir quand ils sont aux même endroit qu'un nouveau joueur qui fait sa quête)
+/bq journal %player% list # obtenir la liste des pointeurs de quête
+/bq journal %player% del [package.pointer] #retire un des pointeurs du journal (prévenir qu'il faut se regive le journal après)
